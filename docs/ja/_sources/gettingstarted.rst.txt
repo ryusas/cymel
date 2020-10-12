@@ -40,25 +40,26 @@ cymel の機能は以下の3つを選択してインポートできます。
 ====================================
 ノードオブジェクトの取得
 -------------------------------------------
-cymel は、プラグインも含まれる全てのノードタイプにラッパークラスを提供します。
+cymel は、プラグインも含まれる全てのノードタイプのラッパークラスを提供します。
 
 全てのノードクラスは `.CyObject` を基底クラスとし、ノードタイプのツリーに沿って継承されています。
-ノードをラップしたオブジェクトを得るには `.CyObject` を利用するのが簡単です。
-以下のように名前を指定します。
+ノードをラップしたオブジェクトを得るには `.CyObject` コンストラクタを利用するのが簡単です。
+
+たとえば、以下のようにノード名を指定します。
 
 >>> cm.CyObject('persp')
 Transform('persp')
 
 pymel をご存知なら PyNode に相当するのが `.CyObject` です。
 
-`.CyObject` は、別名 `.O` でもアクセスできます。
+`.CyObject` には、別名 `.O` でもアクセスできます。
 
 >>> cm.O('persp')
 Transform('persp')
 
 選択されているノードの場合はもっと簡単です。
 
-選択ノードを1つ得るには `~.ModuleForSel.sel` を使います（複数選択されていても、最初の1つとなります）。
+選択ノードを1つ得るには `~.ModuleForSel.sel` を使います（複数選択されていても最初の1つとなります）。
 
 >>> cmds.select(['persp', 'side'])
 >>> cm.sel
@@ -77,9 +78,12 @@ Transform('side')
 [Transform('persp'), Transform('side')]
 
 
+.. _gettingstarted-nodes-command:
+
 ノードクラスによる操作
 -------------------------------------------
-全てのノードクラスは `.NodeTypes` のインスタンスである ``cm.nt`` からアクセスできます（ごく一部の代表的なノードクラスは `cm <cymel.main>` からでもアクセスできます）。
+全てのノードクラスは `.NodeTypes` のインスタンスである `cm.nt <.NodeTypes>` からアクセスできます
+（ごく一部の代表的なノードクラスは `cm <cymel.main>` からでもアクセスできます）。
 クラス名は、ノードタイプ名の先頭を大文字にした名前となります。
 
 >>> cm.nt.Joint
@@ -90,25 +94,27 @@ Transform('side')
 >>> cm.nt.Joint()
 Joint('joint1')
 
-これには :mayacmd:`createNode` コマンドのオプション引数を全て指定できます。
+これには :mayacmd:`createNode` コマンドのオプション引数を指定できます。
 
 >>> cm.nt.Joint(n='foo#')
 Joint('foo1')
 
-ノードクラスは :mayacmd:`ls` コマンドのラッパーとしても機能します。
+また、ノードクラスは :mayacmd:`ls` コマンドのラッパーとしても機能します。
 
 >>> cm.nt.Joint.ls()
 [Joint('foo1'), Joint('joint1')]
 
-:mayacmd:`ls` コマンドに -type オプションが自動的に指定された結果を得られますが、その他のオプションや引数は自由に指定できます。
+:mayacmd:`ls` コマンドに -type オプションが自動的に指定された結果を得られますが、その他のオプション引数は自由に指定できます。
 
 >>> cm.nt.Joint.ls('foo*')
 [Joint('foo1')]
 
 
-ノードクラスを指定したオブジェクト取得
+.. _gettingstarted-nodes-class:
+
+ノードクラスを明示したオブジェクト取得
 -------------------------------------------
-既存のノードの名前を指定してラッパーオブジェクトを得るとき `.CyObject` ではないノードクラスを直接指定することもできます。
+既存のノード名を指定してラッパーオブジェクトを得るとき `.CyObject` ではないノードクラスを直接指定することもできます。
 
 >>> cm.nt.Joint('foo1')
 Joint('foo1')
@@ -122,7 +128,7 @@ Transform('foo1')
 たとえば、 :mayanode:`joint` は :mayanode:`transform` でもありますが :mayanode:`shape` ではないので、 `.Shape` クラスを指定するとエラーになります。
 
 やはり、通常は、クラスを明示するよりも `.CyObject` を指定するのが簡単で確実です。
-クラスの明示は、 :ref:`customclass` を作り未登録のまま使う場合や、あえて抽象的な振る舞いをさせたいような場合に使用します。
+クラスの明示は、 :ref:`customclass-node` を作り未登録のまま使う場合や、あえて抽象的な振る舞いをさせたいような場合に使用します。
 たとえば、 `.DagNode` 派生クラスは DAGパスを含んでいるため、同一ノードのインスタンスでもパスが異なれば違うものとして扱われます。
 しかし、より抽象的な `.Node` インスタンスとして扱えば、DAGパスは含まれないため、同じものになります。
 
@@ -136,6 +142,35 @@ u'untitled'
 False
 >>> cm.Node('pCube1|pCubeShape1') == cm.Node('pCube2|pCubeShape1')
 True
+
+あるノードがあるノードタイプの派生タイプかどうかを調べたい場合、以下のように Python の insinstance が利用できると思われるかもしれません。
+
+>>> isinstance(cm.O('initialShadingGroup'), cm.nt.ObjectSet)
+True
+
+しかし、先に説明したように、抽象的なノードクラスを明示してそのインスタンスを取得できるということは、
+以下のように isinstance ではノードタイプを厳密に判別できないことにもなります。
+
+>>> isinstance(cm.nt.Node('initialShadingGroup'), cm.nt.ObjectSet)
+False
+
+この弱点は設計段階から把握された上で、あえてそのようになっています。
+
+何故かというと、 :ref:`customclass-node` を自由に作れるという仕組みによって、
+isinstance でタイプ判別ができるという前提は既に崩れているからです。
+pymel も然りです。
+
+そこで、確実にノードタイプを判別するには、
+isinstance ではなく、以下のように `~.Node_c.isType` か `~.Node_c.hasFn` メソッドを利用してください。
+
+>>> cm.nt.Node('initialShadingGroup').isType('objectSet')
+True
+>>> cm.nt.Node('initialShadingGroup').hasFn(api.MFn.kSet)
+True
+
+とはいえ、純粋にノードタイプを判別したいという用途ではなく、文字通り、派生クラスのインスタンスかどうかを判別したいのならば
+isinstance は有用です。
+たとえば、 :ref:`customclass-node` ではノードタイプ以外の条件も加味してクラスを決定できるため、そういった条件込みで判別したい場合などには有用です。
 
 
 
@@ -160,18 +195,27 @@ Plug('transform1.t')
 >>> cm.sel.translate
 Plug('transform1.t')
 
+また、MELコマンドの場合と同様に、
+:mayanode:`transform` から :mayanode:`shape` のアトリビュートに直接アクセスもできます。
+
+>>> cm.O('persp').focalLength
+Plug('perspShape.fl')
+
 アトリビュート名は、まれに Pythonのキーワードや、ノードオブジェクトのメソッド名などと衝突する場合もあります。
 そういった場合のために `~.Node_c.plug` メソッドでもアクセスできます。
 
 >>> cm.sel.plug('t')
 Plug('transform1.t')
 
-コンパウンドの子アトリビュートにも直接アクセス可能です。
+コンパウンドアトリビュートから子アトリビュートを得ることもできますが、
+ノードから直接得ることもできます。
 
+>>> cm.sel.t.tx
+Plug('transform1.tx')
 >>> cm.sel.tx
 Plug('transform1.tx')
 
-しかし、コンパウンドのマルチの場合、いきなり子プラグを得るとインデックスが未解決となります。
+しかし、コンパウンドのマルチの場合、いきなり子プラグを得るとインデックスが未解決となってしまいます。
 
 >>> cmds.file(f=True, new=True)
 u'untitled'
@@ -186,7 +230,7 @@ Plug('pCubeShape1.iog[-1].og[-1].gcl')
 >>> cm.sel.iog[0].og[0].gcl
 Plug('pCubeShape1.iog[0].og[0].gcl')
 
-様々な方法でアクセスできます。
+他にも様々な方法でアクセスできます。
 
 >>> cm.sel.plug('iog[0].og[0].gcl')
 Plug('pCubeShape1.iog[0].og[0].gcl')
@@ -195,17 +239,13 @@ Plug('pCubeShape1.iog[0].og[0].gcl')
 >>> cm.O('.iog[0].og[0].gcl')
 Plug('pCubeShape1.iog[0].og[0].gcl')
 
-MELの場合と同様に、
-:mayanode:`transform` から :mayanode:`shape` のアトリビュートに直接アクセスできます。
 
->>> cm.O('persp').focalLength
-Plug('perspShape.fl')
-
+.. _gettingstarted-plugs-value:
 
 値のセットとゲット
 -------------------------
 `.Plug` クラスにも様々なメソッドがありますが、
-たとえば `~.Plug.set` や `~.Plug_c.get` メソッドで値のセットやゲットも簡単です。
+たとえば `~.Plug.set` や `~.Plug_c.get` メソッドでは値のセットやゲットができます。
 
 >>> cm.sel.t.get()
 [0.0, 0.0, 0.0]
@@ -214,7 +254,7 @@ Plug('perspShape.fl')
 [1.0, 2.0, 3.0]
 
 ここで、ひとつ重要な注意点があります。
-単位付きタイプの場合、 `~.Plug.set` や `~.Plug_c.get` では「内部単位」で扱われるという点です。
+それは、単位付きタイプの場合、 `~.Plug.set` や `~.Plug_c.get` では「内部単位」で扱われるという点です。
 
 単位付きタイプには「距離」(doubleLinear)、「角度」(doubleAngle)、「時間」(time) がありますが、
 内部単位は、それぞれ Centimeter、Radians、Second となっています。
@@ -238,6 +278,8 @@ Plug('perspShape.fl')
 スクリプトエディターでちょっとタイプして結果を得るようなインスタントなスクリプトに留めるのが無難です。
 
 
+.. _gettingstarted-plugs-connection:
+
 コネクション編集
 -------------------------
 ``>>`` や ``<<`` や `~.Plug.connect` メソッドで、プラグの接続ができます。
@@ -246,8 +288,8 @@ Plug('perspShape.fl')
 `.Plug` の `~.Plug_c.inputs` や `~.Plug_c.outputs` メソッドが利用できます。
 
 >>> cmds.file(f=True, new=True)
->>> a = cm.Transform(n='a')
->>> b = cm.Transform(n='b')
+>>> a = cm.nt.Transform(n='a')
+>>> b = cm.nt.Transform(n='b')
 >>> a.t >> b.t
 >>> a.t.isSource(), a.t.isDestination()
 (True, False)
@@ -257,7 +299,7 @@ Plug('perspShape.fl')
 [(Plug('b.t'), Plug('a.t'))]
 
 `~.Plug.connect` メソッドは pymel と指定順序が逆なので注意してください。
-これは `~.Plug.disconnect` メソッドと統一するためです。
+これは `~.Plug.disconnect` メソッドと指定順を統一するためです。
 
 そのため、演算子は ``>>`` よりも ``<<`` の利用を推奨します。
 
@@ -277,19 +319,23 @@ Plug('perspShape.fl')
 ``//`` は pymel と同じく左から右への接続の切断なので `~.Plug.disconnect` メソッドを利用した方が統一感があります。
 
 
+.. _gettingstarted-plugs-worldspace:
+
 ワールドスペースプラグ
 -------------------------
 アトリビュートには、ワールドスペースの値を出力するマルチアトリビュートがあります。
-これは `~.Plug` の `~.Plug_c.isWorldSpace` が True を返すものです。
-たとえば :mayanode:`dagNode` の worldMatrix (wm) や :mayanode:`locator` の worldPosition など、様々なものがあります。
+それは `~.Plug` の `~.Plug_c.isWorldSpace` が True を返すものです。
+
+たとえば :mayanode:`dagNode` の worldMatrix (wm) や :mayanode:`locator` の worldPosition (wp) など、様々なものがあります。
 
 ワールドスペースプラグのインデックスは、DAGノードインスタンスの番号に依存して決められる必要があります。
 インスタンス番号は、DAGノードインスタンスの削除時に自動で欠番が詰められるなど動的に変化するため、
 ワールドスペースプラグのインデックスも動的に変化します。
-そのため、MELでは、ワールドスペースプラグをインデックス付き要素で直接扱うことは推奨されず、Mayaによって自動補完されるようになっています。
+そのため、MELコマンドでは、ワールドスペースプラグをインデックス指定した要素で直接扱うことは推奨されず、
+DAGパスと矛盾のないインデックスが Maya によって自動補完されるようになっています。
 cymel でもその仕様を踏襲し、ワールドスペースプラグは要素にしないで扱うことを推奨します。
 
-以下は使用例で、ロケータをインスタンスコピーし、その worldPosition をインデックスを指定せずに参照しています。
+以下は使用例で、ロケータをインスタンスコピーし、その worldPosition をインデックス指定せずに参照しています。
 
 >>> cmds.file(f=True, new=True)
 >>> a = cm.nt.Locator(n='a').transform()
@@ -321,9 +367,10 @@ cymelは、pymelのように全てのMayaコマンドのラッパーを提供し
 しかし、ノードやプラグを扱う上での主要な機能は整っているので、それで足りない部分はコマンドやAPIを併用してください。
 
 `.CyObject` を文字列として評価するとその名前になるので、Mayaコマンドの引数にそのまま渡すことができます。
+
 また、コマンドの返す結果を `.O` や `.Os` で受ければ、すぐに `.Node` や `.Plug` として扱えます。
 
-APIを使用する場合、
+`.CyObject` には、同じものを示す API オブジェクトを得るメソッドがあるので、API を併用する場合に便利です。
 `Node.mnode <.Node_c.mnode>` では API2 の :mayaapi2:`MObject` 、
 `Node.mpath <.Node_c.mpath>` では API2 の :mayaapi2:`MDagPath` 、
 `Plug.mplug <.Plug_c.mplug>` では API2 の :mayaapi2:`MPlug` が得られます。
@@ -354,8 +401,9 @@ cymelは以下の数学クラスを提供します。カッコ内は別名です
 - :ref:`gettingstarted-datatypes-eulerrotation` (`.E`)  ... オイラー角回転
 - :ref:`gettingstarted-datatypes-transformation` (`.X`)  ... トランスフォーメーション情報
 
-それらは `.Plug` の値として直接セットしたり、また、ものによっては直接ゲットしたりすることができます。
-また、異なる型の変換もサポートされています。
+それらの中には `.Plug` の値として直接セットしたり、直接ゲットしたりすることができるものもあります。
+
+また、異なる型同士の変換操作もサポートされています。
 
 
 .. _gettingstarted-datatypes-boundingbox:
@@ -375,16 +423,16 @@ Vector
 -------------------------
 `.Vector` (`.V`) は3次元ベクトルクラスで、
 Maya API の :mayaapi2:`MPoint` と :mayaapi2:`MVector` に相当します。
-API では位置を表すか方向を表すかでその2種類を使いわける必要がありますが、cymelでは `.Vector` のみに統一されています。
+API では、位置を表すか方向を表すかで2種類を使いわける必要がありますが、cymelでは `.Vector` のみに統一されています。
 
 `.Vector` は :mayaapi2:`MPoint` と同じく同次座標表現が可能な w を持っていますが、
 デフォルトの 1.0 である限りは隠蔽され、ほとんど意識する必要はありません。
 また、方向ベクトルとして扱う場合も 0.0 にする必要はなく、メソッドの種類に応じて適切に扱われます。
 
 たとえば、
-``*`` 演算子か `.Vector.dot` メソッドで、3次元ベクトルの内積を計算しますが、
+``*`` 演算子か `~.Vector.dot` メソッドで、3次元ベクトルの内積を計算しますが、
 `.Vector.dot4` メソッドは4次元ベクトルの内積です。
-また、 `.Vector.dot4r` メソッドは、ベクトルが4x1行列と1x4行列であるものとして、行列の積を計算します。
+また、 `~.Vector.dot4r` メソッドは、ベクトルが4x1行列と1x4行列であるものとして、行列の積を計算します。
 
 >>> cm.V(1, 2, 3) * cm.V(4, 5, 6)
 32.0
@@ -395,21 +443,23 @@ API では位置を表すか方向を表すかでその2種類を使いわける
 >>> cm.V(1, 2, 3).dot4r(cm.V(4, 5, 6))
 Matrix(((4, 5, 6, 1), (8, 10, 12, 2), (12, 15, 18, 3), (4, 5, 6, 1)))
 
-また、 ``^`` 演算子か `.Vector.cross` メソッドでは、3次元ベクトルの外積を計算します。
+また、 ``^`` 演算子か `~.Vector.cross` メソッドでは、3次元ベクトルの外積を計算します。
 
 >>> cm.V(1, 2, 3) ^ cm.V(4, 5, 6)
 Vector(-3.000000, 6.000000, -3.000000)
 >>> cm.V(1, 2, 3).cross(cm.V(4, 5, 6))
 Vector(-3.000000, 6.000000, -3.000000)
 
-他にも様々なメソッドがあります。
+他にも様々なメソッドがありますので、ドキュメントを参照してください。
 
 `.Vector` は w を持っていますが、それがデフォルトの 1.0 である限り、長さ 3 のシーケンスとして振る舞います。
 よって、4次元ベクトル値としては扱いにくいですが、3次元ベクトル値としては扱いやすいものになっています。
-たとえば、double3型アトリビュートの値にセットしたり、ゲットした値を得たりすることができます。
+
+たとえば、double3型アトリビュートの値に直接セットすることができます。
+ゲットで得られるのは `list` ですが、そこからすぐに `.Vector` にすることもできます。
 
 >>> v = cm.V(1, 2, 3)
->>> cm.Transform()
+>>> cm.nt.Transform()
 >>> cm.sel.t.set(v)
 >>> v + cm.V(cm.sel.t.get())
 Vector(2.000000, 4.000000, 6.000000)
@@ -423,8 +473,11 @@ Matrix
 
 matrix型アトリビュートのゲットやセットや `.DagNode` の `~.DagNodeMixin.getM` や `~.TransformMixin.setM` で直接サポートされます。
 
+以下は、ローカルマトリックスを取得する例です。
+プラグから得ることでも `~.DagNodeMixin.getM` を使用することでも、同じものが得られます。
+
 >>> cmds.file(f=True, new=True)
->>> a = cm.Transform(n='a')
+>>> a = cm.nt.Transform(n='a')
 >>> a.t.set((1, 2, 3))
 >>> a.r.setu((10, 20, 30))
 >>> a.s.set((1.2, 1.4, 1.6))
@@ -433,7 +486,12 @@ Matrix(((0.976557, 0.563816, -0.410424, 0), (-0.617357, 1.23559, 0.228446, 0), (
 >>> a.getM()
 Matrix(((0.976557, 0.563816, -0.410424, 0), (-0.617357, 1.23559, 0.228446, 0), (0.605636, 0.0288453, 1.48067, 0), (1, 2, 3, 1)))
 
->>> b = cm.Transform(n='b', p=a)
+以下は、ワールドマトリックスを取得する例です。
+`既に説明済み`__ ですが、 wm にはインデックスを指定しないことが推奨されます。
+
+__ #gettingstarted-plugs-worldspace
+
+>>> b = cm.nt.Transform(n='b', p=a)
 >>> b.t.set((4, 5, 6))
 >>> b.r.set((-10, -20, -30))
 >>> b.wm.get()
@@ -441,7 +499,9 @@ Matrix(((0.365467, 0.560012, 1.41804, 0), (1.25209, -0.335616, -0.121765, 0), (0
 >>> b.getM(ws=True)
 Matrix(((0.365467, 0.560012, 1.41804, 0), (1.25209, -0.335616, -0.121765, 0), (0.0174783, 1.19128, -0.622367, 0), (5.45326, 10.6063, 11.3845, 1)))
 
->>> c = cm.Transform(n='c')
+以下は `~.TransformMixin.setM` の使用例です。
+
+>>> c = cm.nt.Transform(n='c')
 >>> c.setM(b.getM(ws=True))
 >>> c.m.get()
 Matrix(((0.365467, 0.560012, 1.41804, 0), (1.25209, -0.335616, -0.121765, 0), (0.0174783, 1.19128, -0.622367, 0), (5.45326, 10.6063, 11.3845, 1)))
@@ -468,7 +528,8 @@ Vector(2.922072, 3.462623, -0.692589, 0.000000)
 Vector(2.922072, 3.462623, -0.692589)
 
 `.Matrix` を他の型に変換する操作もサポートされています。
-平行移動を取り出す `~.Matrix.asTM` や `~.Matrix.asT` 、
+
+平行移動値を取り出す `~.Matrix.asTM` や `~.Matrix.asT` 、
 回転を取り出す `~.Matrix.asRM` や `~.Matrix.asQ` や `~.Matrix.asE` や `~.Matrix.asD` 、
 スケールやシアーを取り出す `~.Matrix.asSM` や `~.Matrix.asS` や `~.Matrix.asSh` 、
 全部まとめて分解（ `.Transformation` を得る）する `~.Matrix.asX` などがあります。
@@ -483,7 +544,9 @@ Quaternion
 長さ 4 のシーケンスとしても振る舞います。
 
 ノードの `~.DagNodeMixin.getQ` メソッドで、ノードの回転値を `.Quaternion` で得ることができます。
-以下は :ref:`gettingstarted-datatypes-matrix` の説明で使用した例の続きです。
+
+以下のコードは :ref:`gettingstarted-datatypes-matrix` で説明した例の続きで、
+`~.DagNodeMixin.getQ` の使用例です。
 
 >>> a.getQ()
 Quaternion(0.0381346, 0.189308, 0.239298, 0.951549)
@@ -513,7 +576,8 @@ a の scale を初期化すれば等しくなります。
 >>> b.getQ(ws=True)
 Quaternion(-0.678253, -0.5056, -0.367246, 0.386616)
 
-回転情報を扱う他の型との変換もできます。
+回転情報を扱う他の型との変換操作もサポートされています。
+
 `.Matrix` とは、その `~.Matrix.asQ` と `.Quaternion` の `~.Quaternion.asM` とで相互に変換ができます。
 また、
 `.EulerRotation` とは、その `~.EulerRotation.asQ` と `.Quaternion` の `~.Quaternion.asE` とで相互に変換ができます。
@@ -528,7 +592,7 @@ EulerRotation
 `.EulerRotation` (`.E`) はオイラー角回転クラスで、Maya API の :mayaapi2:`MEulerRotation` に相当します。
 
 rotateOrder も持っていますが、単なる長さ 3 のシーケンスとしても振る舞いますので、
-オイラー角回転値を持つ rotate 、 rotateAxis 、 jointOrient などのアトリビュートでのセットやゲットに便利です。
+オイラー角回転値を持つ rotate 、 rotateAxis 、 jointOrient などのアトリビュートのセットやゲットに便利です。
 
 >>> cm.E(a.r.get(), a.ro.get())
 EulerRotation(0.174533, 0.349066, 0.523599, XYZ)
@@ -540,7 +604,8 @@ EulerRotation(0.174533, 0.349066, 0.523599, XYZ)
 >>> cm.degrot(10, 20, 30)
 EulerRotation(0.174533, 0.349066, 0.523599, XYZ)
 
-回転情報を扱う他の型との変換もできます。
+回転情報を扱う他の型との変換操作もサポートされています。
+
 `.Matrix` とは、その `~.Matrix.asE` と `.EulerRotation` の `~.EulerRotation.asM` とで相互に変換ができます。
 また、
 `.Quaternion` とは、その `~.Quaternion.asE` と `.EulerRotation` の `~.EulerRotation.asQ` とで相互に変換ができます。
@@ -556,11 +621,10 @@ Transformation
 
 Mayaのmatrix型アトリビュートは、単なる「マトリックス」か「トランスフォーメーション情報」かの2種類の形式で情報を持てるようになっています。
 cymelのクラスでいうと `.Matrix` か `.Transformation` です。
-つまり、 `.Transformation` も、matrix型アトリビュートでの直接ゲットやセットがサポートされます。
 
 そして、 `~.Transformation` は、
-:mayanode:`transform` ノードと :mayanode:`joint` ノードのローカルマトリックスに影響を与えるアトリビュートをオブジェクト属性として完全にサポートし、
-`.Matrix` や `.Quaternion` との相互変換もサポートされます。
+:mayanode:`transform` ノードと :mayanode:`joint` ノードのローカルマトリックスに影響を与えるアトリビュートを
+オブジェクト属性として扱えるようにしつつ、`.Matrix` の合成・分解操作をサポートします。
 
 トランスフォーメーションを `.Matrix` として扱うと、元のアトリビュート値は維持されませんが
 （translate、rotate、scale、shearには分解できますが、ピボットや複数の回転アトリビュートなどの元の状態の完全な復元はできません）、
@@ -569,14 +633,14 @@ cymelのクラスでいうと `.Matrix` か `.Transformation` です。
 なお、2020から追加された offsetParentMatrix はローカルマトリックスには含まれず parentMatrix に含まれる扱いとなるため、
 `.Transformation` のオブジェクト属性としてはサポートされません。
 
-では、ノードを1つ作り、アトリビュートを細かく設定してみましょう。
+では、その働きを見るために、まず、ノードを1つ作り、アトリビュートを細かく設定します。
 
 >>> cmds.file(f=True, new=True)
->>> a = cm.Transform(n='a')
+>>> a = cm.nt.Transform(n='a')
 >>> a.t.set((1, 2, 3))
 >>> a.rp.set((2, 3, 4))
 >>> a.r.setu((10, 20, 30))
->>> a.ro.setu(YXZ)
+>>> a.ro.set(YXZ)
 >>> a.ra.setu((3, 6, 9))
 >>> a.sp.set((5, 6, 7))
 >>> a.s.set((1.2, 1.4, 1.6))
@@ -590,7 +654,8 @@ Matrix(((0.784932, 0.76995, -0.480686, 0), (-0.818564, 1.07082, 0.378546, 0), (0
 >>> a.xm.get()
 Transformation(rp=Vector(2.000000, 3.000000, 4.000000), sp=Vector(5.000000, 6.000000, 7.000000), sh=Vector(0.000000, 0.000000, 0.000000), s=Vector(1.200000, 1.400000, 1.600000), r=EulerRotation(0.185486, 0.343542, 0.586718, XYZ), ra=Quaternion(0.0219557, 0.0542077, 0.0769589, 0.995317), t=Vector(1.000000, 2.000000, 3.000000))
 
-m も xm も同じmatrix型アトリビュートですが、m には単なるマトリックスが出力され、xm にはトランスフォーメーション情報が出力されていますので、cymelはそれをそのまま取得できます。
+m も xm も同じmatrix型アトリビュートですが、m には単なるマトリックスが出力され、xm にはトランスフォーメーション情報が出力されています。
+そして、cymel はそれらをそのまま取得できます。
 
 トランスフォーメーション情報を持っているアトリビュートでも単なるマトリックスとして評価することもできます（ :mayanode:`getAttr` コマンドではそうなります）。
 その場合は、明示的に `~.Plug_c.getM` メソッドを使うか、得られた `.Transformation` の属性 ``m`` を参照します。
@@ -601,9 +666,9 @@ Matrix(((0.784932, 0.76995, -0.480686, 0), (-0.818564, 1.07082, 0.378546, 0), (0
 Matrix(((0.784932, 0.76995, -0.480686, 0), (-0.818564, 1.07082, 0.378546, 0), (0.767799, 0.091752, 1.40074, 0), (0.260018, -1.52541, -0.437171, 1))) 
 
 ノードから `.Transformation` を得るには `~.DagNodeMixin.getX` メソッドも利用できます。
-xm アトリビュートからゲットすることと等しいですが、 `~.DagNodeMixin.getX` ではワールドスペースの値も得ることができます。
+xm アトリビュートからゲットすることと等しいですが、 `~.DagNodeMixin.getX` ではワールドスペースの値を得ることもできます。
 
->>> b = cm.Transform(n='b', p=a)
+>>> b = cm.nt.Transform(n='b', p=a)
 >>> b.t.set((4, 5, 6))
 >>> b.r.set((-10, -20, -30))
 >>> b.xm.get()
@@ -613,12 +678,13 @@ Transformation(s=Vector(1.000000, 1.000000, 1.000000), sh=Vector(0.000000, 0.000
 >>> b.getX(ws=True)
 Transformation(q=Quaternion(-0.651708, -0.507318, -0.329514, 0.457521), s=Vector(1.567808, 1.300522, 1.318314), sh=Vector(0.047563, -0.101130, -0.171420), t=Vector(3.913720, 7.459003, 7.937241))
 
-`.Transformation` 情報をセットするには `~.TransformMixin.setX` メソッドが便利です。
-それは `.Transformation` がサポートしている全てのアトリビュートをそのままセットすることに相当します。
+一方、`.Transformation` 情報をセットするには `~.TransformMixin.setX` メソッドが便利です。
+それは `.Transformation` が持っている全ての属性値を、
+:mayanode:`transform` や :mayanode:`joint` ノードのプラグに、そのままセットすることに相当します。
 
-たとえば、以下のように `~.TransformMixin.setM` でマトリックスを完全に一致させることができますが、個々のアトリビュート値までは一致しません。
+たとえば、以下に示すように `~.TransformMixin.setM` メソッドではマトリックスを完全に一致させることができますが、個々のプラグ値までは一致しません。
 
->>> c = cm.Transform(n='c')
+>>> c = cm.nt.Transform(n='c')
 >>> c.setM(a.getM())
 >>> c.m.get().isEquivalent(a.m.get())
 True
@@ -637,8 +703,8 @@ False
 >>> cm.V(c.s.get()).isEquivalent(cm.V(a.s.get()))
 True
 
-しかし、 `~.TransformMixin.setX` では、以下のように、アトリビュート値を全て一致させることができます。
-アトリビュート値の完全なコピーができるので、個々の値に誤差もなく、単純に == で比較して一致しています。
+しかし、 `~.TransformMixin.setX` では、プラグ値を全て一致させることができます。
+プラグ値の完全なコピーができるので、個々の値に誤差もないため、この例では単純に == で比較しています。
 
 >>> c.setX(a.getX())
 >>> c.m.get() == a.m.get()
@@ -658,12 +724,12 @@ True
 >>> c.s.get() == a.s.get()
 True
 
-:mayanode:`joint` と :mayanode:`transform` のように、使用できるアトリビュートが異なるノード間でも `.Transformation` をコピーできます。
+:mayanode:`joint` ノードと :mayanode:`transform` ノードのように、使用できるアトリビュートが異なるノード間でも `.Transformation` をコピーできます。
 :mayanode:`joint` には jointOrient や inverseScale などの :mayanode:`transform` には無いアトリビュートが追加されている一方、ピボットは変更できません。
-shear は隠されていますが変更可能です（2019 から 2020.0 まで shear が変更できない問題がありましたが修正されました）。
+shear は隠されていますが変更可能です（Maya 2019 から 2020.0 まで shear が変更できない問題がありましたが修正されました）。
 
-以下の例では、これまでと同じ `.Transformation` を :mayanode:`joint` にセットしています。
-ピボットは変更せずに維持しされつつ、マトリックスが一致するように translate 値が調整されるのが確認できます。
+以下の例では、これまでと同じ `.Transformation` を :mayanode:`joint` ノードにセットしています。
+ピボットは変更せずに維持しされつつ、マトリックスが一致するように translate 値が調整されているのを確認できます。
 
 >>> d = cm.nt.Joint(n='d')
 >>> d.setX(a.getX())
@@ -702,8 +768,12 @@ Transformation(r=EulerRotation(0.174533, 0.349066, 0.523599, YXZ), t=Vector(1.00
 >>> cm.X(q=cm.degrot(10, 20, 30, YXZ).asQ(), ro=YXZ, t=(1, 2, 3))
 Transformation(q=Quaternion(0.0381346, 0.189308, 0.268536, 0.943714), ro=4, t=Vector(1.000000, 2.000000, 3.000000))
 
-また、コンストラクタには `.Matrix` をそのまま渡せます。それは `~.Matrix.asX` メソッドを使用することと同じです
+また、コンストラクタには `.Matrix` をそのまま渡せます。
+
+それは `~.Matrix.asX` メソッドを使用することと同じです
 （割愛しますが、属性名を指定せずに `.EulerRotation` や `.Quaternion` をそのまま指定することも同様に可能です）。
+
+以下の例では、 `~.Matrix` から `.Transformation` を得るとともに、その属性値を参照しています。
 
 >>> r = cm.degrot(10, 20, 30, YXZ)
 >>> m = r.asM() * cm.M.makeT((1, 2, 3))
@@ -711,6 +781,11 @@ Transformation(q=Quaternion(0.0381346, 0.189308, 0.268536, 0.943714), ro=4, t=Ve
 Transformation(q=Quaternion(0.0381346, 0.189308, 0.268536, 0.943714), s=Vector(1.000000, 1.000000, 1.000000), sh=Vector(0.000000, 0.000000, 0.000000), t=Vector(1.000000, 2.000000, 3.000000))
 >>> m.asX()
 Transformation(q=Quaternion(0.0381346, 0.189308, 0.268536, 0.943714), s=Vector(1.000000, 1.000000, 1.000000), sh=Vector(0.000000, 0.000000, 0.000000), t=Vector(1.000000, 2.000000, 3.000000))
+>>> x = m.asX()
+>>> x.t
+Vector(1.000000, 2.000000, 3.000000)
+>>> x.r
+EulerRotation(0.185486, 0.343542, 0.586718, XYZ)
 
 得られた `.Transformation` から q や r や s や sh や t などの値を得ることができますので、
 この操作はマトリックスをトランスフォーメーション要素に分解することと等しいわけです。
@@ -735,7 +810,7 @@ Vector(1.000000, 1.000000, 1.000000)
 Vector(0.000000, 0.000000, 0.000000)
 
 上記の例では、最初にピボットや jointOrient などを設定し（コンストラクタの引数で指定することもできます）、最後に matrix を代入しています。
-そして、補助属性を維持しながらセットしたマトリックスを得られる t と r (または q ) と s と sh が分解されています。
+そして、補助属性とマトリックスから逆算される t と r (または q ) と s と sh が分解されているのです。
 
 
 
@@ -743,18 +818,18 @@ Vector(0.000000, 0.000000, 0.000000)
 
 アトリビュートとデータタイプのさらなる使用例
 --------------------------------------------------
-`.Transformation` の例で使用した m や xm などのアトリビュートは出力専用アトリビュートですので、
+`.Transformation` の例で使用した m や xm などのアトリビュートは出力専用アトリビュートでしたので、
 ダイナミックアトリビュートを使って、もう少し試してみましょう。
 
-`.Node` の `~.Node.addAttr` メソッドは :mayacmd:`addAttr` コマンドのラッパーで、かなり簡単に使うことができます。
+`.Node` の `~.Node.addAttr` メソッドは :mayacmd:`addAttr` コマンドを簡単に使用できるようにしたラッパーです。
 
-たとえば、double3 型アトリビュートの追加も簡単です。
+たとえば、double3 型アトリビュートの追加も、以下のように簡単です。
 
-cmds.file(f=True, new=True)
-a = cm.Transform(n='a')
-a.addAttr('testrot', 'double3', 'doubleAngle', cb=True)
+>>> cmds.file(f=True, new=True)
+>>> a = cm.nt.Transform(n='a')
+>>> a.addAttr('testrot', 'double3', 'doubleAngle', cb=True)
 
-では、matrix型アトリビュートを追加してみます。
+それでは、matrix型アトリビュートを追加してみます。
 
 >>> a.addAttr('foo', 'matrix')
 >>> a.foo.get()
@@ -762,28 +837,31 @@ a.addAttr('testrot', 'double3', 'doubleAngle', cb=True)
 追加したアトリビュートの初期値は値を返しません（None）。
 データ型アトリビュートの初期値は null だからです。
 
+以下のように、 `.Matrix` をセットすれば、その値を返すようになります。
+
 >>> a.foo.set(cm.M())
 >>> a.foo.get()
 Matrix(((1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1)))
 
-このように、 `.Matrix` をセットすれば、その値を返すようになります。
+または、 `.Transformation` をセットしても同様です。
 
 >>> a.foo.set(cm.X())
 >>> a.foo.get()
 Transformation(s=Vector(1.000000, 1.000000, 1.000000), sh=Vector(0.000000, 0.000000, 0.000000), r=EulerRotation(0, 0, 0, XYZ), t=Vector(0.000000, 0.000000, 0.000000))
 
-または、 `.Transformation` をセットしても同様です。
-
 matrix型は、どちらの形式でも値を保持できます。
 
 `.Plug` は本来のコマンドでは不可能な `~.Plug.reset` メソッドも持っています（もちろん undo も可能です）。
-初期値は null なので、そうリセットされます。
+初期値は null でしたので、リセットすると null に戻ります（Python では None）。
 
 >>> a.foo.reset()
 >>> a.foo.get()
 
-そして、実は `~.Node.addAttr` 時にデフォルト値を指定することもできます。
+そして、実は、 `~.Node.addAttr` の際にデフォルト値を指定することもできます。
+
 本来のコマンドでは、デフォルト値の指定は数値型のアトリビュートでしかサポートされていませんが、cymel なら可能です（もちろん undo も可能です）。
+
+以下の例では、デフォルト値に `.Transformation` を指定したアトリビュートを追加しています。
 
 >>> a.addAttr('bar', 'matrix', dv=cm.X())
 >>> a.bar.get()
