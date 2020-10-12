@@ -1,0 +1,58 @@
+cymel.core.datatypes.eulerrotation
+==================================
+
+.. automodule:: cymel.core.datatypes.eulerrotation
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        EulerRotation
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions:
+
+    .. autosummary::
+    
+        degrot
+
+
+
+
+
+
+
+    .. rubric:: Aliases:
+
+    
+    .. autodata:: E
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions Details:
+
+    
+    .. autofunction:: degrot
+
+

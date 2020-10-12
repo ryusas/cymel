@@ -1,0 +1,42 @@
+cymel.core.typeregistry
+=======================
+
+.. automodule:: cymel.core.typeregistry
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        NodeTypes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

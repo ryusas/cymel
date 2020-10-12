@@ -1,0 +1,46 @@
+class cymel.core.cyobjects.cyobject.ModuleForSel
+================================================
+
+.. currentmodule:: cymel.core.cyobjects.cyobject
+
+
+.. inheritance-diagram:: ModuleForSel
+    :parts: 1
+
+
+
+.. autoclass:: ModuleForSel
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        __init__
+        selected
+        selobj
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: sel
+    .. autoattribute:: selection
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: __init__
+    .. automethod:: selected
+    .. automethod:: selobj
+
+

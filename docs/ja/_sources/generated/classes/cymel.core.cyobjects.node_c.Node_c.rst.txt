@@ -1,0 +1,130 @@
+class cymel.core.cyobjects.node_c.Node_c
+========================================
+
+.. currentmodule:: cymel.core.cyobjects.node_c
+
+
+.. inheritance-diagram:: Node_c
+    :parts: 1
+
+
+
+.. autoclass:: Node_c
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        connections
+        createNode
+        hasAttr
+        hasFn
+        hasUniqueName
+        inputs
+        isDagNode
+        isDefaultNode
+        isFromReferencedFile
+        isInstanceOf
+        isJoint
+        isLocked
+        isRenamable
+        isShape
+        isShared
+        isTransform
+        isType
+        mfn
+        mfn1
+        mfn1_
+        mfn_
+        mnode
+        mnode1
+        mnode1_
+        mnode_
+        mpath
+        mpath1
+        mpath1_
+        mpath_
+        mtypeId
+        namespace
+        newObject
+        node
+        nodeName
+        nodeName_
+        outputs
+        plug
+        plugClass
+        plug_
+        pluginName
+        plugsAffectsWorldSpace
+        setPlugClass
+        thisPlugClass
+        type
+        worldSpacePlugs
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: CLASS_TYPE
+    .. autoattribute:: TYPE_BITS
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: connections
+    .. automethod:: createNode
+    .. automethod:: hasAttr
+    .. automethod:: hasFn
+    .. automethod:: hasUniqueName
+    .. automethod:: inputs
+    .. automethod:: isDagNode
+    .. automethod:: isDefaultNode
+    .. automethod:: isFromReferencedFile
+    .. automethod:: isInstanceOf
+    .. automethod:: isJoint
+    .. automethod:: isLocked
+    .. automethod:: isRenamable
+    .. automethod:: isShape
+    .. automethod:: isShared
+    .. automethod:: isTransform
+    .. automethod:: isType
+    .. automethod:: mfn
+    .. automethod:: mfn1
+    .. automethod:: mfn1_
+    .. automethod:: mfn_
+    .. automethod:: mnode
+    .. automethod:: mnode1
+    .. automethod:: mnode1_
+    .. automethod:: mnode_
+    .. automethod:: mpath
+    .. automethod:: mpath1
+    .. automethod:: mpath1_
+    .. automethod:: mpath_
+    .. automethod:: mtypeId
+    .. automethod:: namespace
+    .. automethod:: newObject
+    .. automethod:: node
+    .. automethod:: nodeName
+    .. automethod:: nodeName_
+    .. automethod:: outputs
+    .. automethod:: plug
+    .. automethod:: plugClass
+    .. automethod:: plug_
+    .. automethod:: pluginName
+    .. automethod:: plugsAffectsWorldSpace
+    .. automethod:: setPlugClass
+    .. automethod:: thisPlugClass
+    .. automethod:: type
+    .. automethod:: worldSpacePlugs
+
+

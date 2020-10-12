@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.FloatSlider2
+===================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: FloatSlider2
+    :parts: 1
+
+
+
+.. autoclass:: FloatSlider2
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

@@ -1,0 +1,53 @@
+cymel.constants
+===============
+
+.. automodule:: cymel.constants
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Constants:
+
+    
+    .. autodata:: AVOID_ZERO_DIV_PRECISION
+    .. autodata:: AXIS_NEG_X
+    .. autodata:: AXIS_NEG_Y
+    .. autodata:: AXIS_NEG_Z
+    .. autodata:: AXIS_X
+    .. autodata:: AXIS_Y
+    .. autodata:: AXIS_Z
+    .. autodata:: TO_DEG
+    .. autodata:: TO_RAD
+    .. autodata:: XYZ
+    .. autodata:: XZY
+    .. autodata:: YXZ
+    .. autodata:: YZX
+    .. autodata:: ZXY
+    .. autodata:: ZYX
+
+
+
+
+
+
+
+
+
+

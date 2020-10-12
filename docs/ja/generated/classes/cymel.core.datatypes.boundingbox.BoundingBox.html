@@ -1,0 +1,331 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>class cymel.core.datatypes.boundingbox.BoundingBox &#8212; cymel 0.0.0 ドキュメント</title>
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="cymel.core.datatypes.eulerrotation" href="../cymel.core.datatypes.eulerrotation.html" />
+    <link rel="prev" title="cymel.core.datatypes.boundingbox" href="../cymel.core.datatypes.boundingbox.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.eulerrotation.html" title="cymel.core.datatypes.eulerrotation"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.boundingbox.html" title="cymel.core.datatypes.boundingbox"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.boundingbox.html" accesskey="U">cymel.core.datatypes.boundingbox</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="../cymel.core.datatypes.boundingbox.html"
+                        title="前の章へ">cymel.core.datatypes.boundingbox</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="../cymel.core.datatypes.eulerrotation.html"
+                        title="次の章へ">cymel.core.datatypes.eulerrotation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="class-cymel-core-datatypes-boundingbox-boundingbox">
+<h1>class cymel.core.datatypes.boundingbox.BoundingBox<a class="headerlink" href="#class-cymel-core-datatypes-boundingbox-boundingbox" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-dc1f6f60a216a221ca02818f027873ea5208bdde.png" alt="Inheritance diagram of BoundingBox" usemap="#inheritance1aafb4a4e0" class="inheritance graphviz" /></div>
+<map id="inheritance1aafb4a4e0" name="inheritance1aafb4a4e0">
+<area shape="rect" id="node1" href="#cymel.core.datatypes.boundingbox.BoundingBox" target="_top" title="3Dバウンディングボックスクラス。" alt="" coords="5,5,92,29"/>
+</map><dl class="class">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox">
+<em class="property">class </em><code class="descclassname">cymel.core.datatypes.boundingbox.</code><code class="descname">BoundingBox</code><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>3Dバウンディングボックスクラス。</p>
+<p class="rubric">Methods:</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.clear" title="cymel.core.datatypes.boundingbox.BoundingBox.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.contains" title="cymel.core.datatypes.boundingbox.BoundingBox.contains"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contains</span></code></a>(p)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.cornerPoints" title="cymel.core.datatypes.boundingbox.BoundingBox.cornerPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cornerPoints</span></code></a>()</td>
+<td>コーナーの8点を得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.depth" title="cymel.core.datatypes.boundingbox.BoundingBox.depth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">depth</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween" title="cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween"><code class="xref py py-obj docutils literal notranslate"><span class="pre">distanceBetween</span></code></a>(bb)</td>
+<td>別のボックスとの距離を得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint" title="cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">distanceToPoint</span></code></a>(pnt)</td>
+<td>点との距離を得る。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.expand" title="cymel.core.datatypes.boundingbox.BoundingBox.expand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expand</span></code></a>(v)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.height" title="cymel.core.datatypes.boundingbox.BoundingBox.height"><code class="xref py py-obj docutils literal notranslate"><span class="pre">height</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox" title="cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersectedBox</span></code></a>(bb)</td>
+<td>別のボックスとの交差領域を新しいボックスとして得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume" title="cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersectedVolume</span></code></a>(bb)</td>
+<td>別のボックスとの交差領域の体積を得る。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance" title="cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersectedVolumeOrDistance</span></code></a>(bb)</td>
+<td>別のボックスとの交差領域の体積、又は距離の反転を得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersects" title="cymel.core.datatypes.boundingbox.BoundingBox.intersects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersects</span></code></a>(bb[,&nbsp;tol])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.max" title="cymel.core.datatypes.boundingbox.BoundingBox.max"><code class="xref py py-obj docutils literal notranslate"><span class="pre">max</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.min" title="cymel.core.datatypes.boundingbox.BoundingBox.min"><code class="xref py py-obj docutils literal notranslate"><span class="pre">min</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.transformUsing" title="cymel.core.datatypes.boundingbox.BoundingBox.transformUsing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transformUsing</span></code></a>(m)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.width" title="cymel.core.datatypes.boundingbox.BoundingBox.width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">width</span></code></a>()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Details:</p>
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.clear" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.contains">
+<code class="descname">contains</code><span class="sig-paren">(</span><em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.contains" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.cornerPoints">
+<code class="descname">cornerPoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.cornerPoints" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>コーナーの8点を得る。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.depth">
+<code class="descname">depth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.depth" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween">
+<code class="descname">distanceBetween</code><span class="sig-paren">(</span><em>bb</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>別のボックスとの距離を得る。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>bb</strong> (<a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox" title="cymel.core.datatypes.boundingbox.BoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundingBox</span></code></a>) -- 別のバウンディングボックス。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint">
+<code class="descname">distanceToPoint</code><span class="sig-paren">(</span><em>pnt</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>点との距離を得る。</p>
+<p>ボックス内に位置する場合は 0. が返される。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>pnt</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 参照する点。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.expand">
+<code class="descname">expand</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.expand" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.height">
+<code class="descname">height</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.height" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox">
+<code class="descname">intersectedBox</code><span class="sig-paren">(</span><em>bb</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>別のボックスとの交差領域を新しいボックスとして得る。</p>
+<p>交差していなければ None となる。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>bb</strong> (<a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox" title="cymel.core.datatypes.boundingbox.BoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundingBox</span></code></a>) -- 別のバウンディングボックス。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox" title="cymel.core.datatypes.boundingbox.BoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundingBox</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume">
+<code class="descname">intersectedVolume</code><span class="sig-paren">(</span><em>bb</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>別のボックスとの交差領域の体積を得る。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>bb</strong> (<a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox" title="cymel.core.datatypes.boundingbox.BoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundingBox</span></code></a>) -- 別のバウンディングボックス。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance">
+<code class="descname">intersectedVolumeOrDistance</code><span class="sig-paren">(</span><em>bb</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>別のボックスとの交差領域の体積、又は距離の反転を得る。</p>
+<p>交差していればその領域の体積が返され、
+していなければ距離が負数で返される。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>bb</strong> (<a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox" title="cymel.core.datatypes.boundingbox.BoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundingBox</span></code></a>) -- 別のバウンディングボックス。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.intersects">
+<code class="descname">intersects</code><span class="sig-paren">(</span><em>bb</em>, <em>tol=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersects" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.max">
+<code class="descname">max</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.max" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.min">
+<code class="descname">min</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.min" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.transformUsing">
+<code class="descname">transformUsing</code><span class="sig-paren">(</span><em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.transformUsing" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.boundingbox.BoundingBox.width">
+<code class="descname">width</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.width" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.eulerrotation.html" title="cymel.core.datatypes.eulerrotation"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.boundingbox.html" title="cymel.core.datatypes.boundingbox"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.boundingbox.html" >cymel.core.datatypes.boundingbox</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, ryusas.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 で生成しました。
+    </div>
+  </body>
+</html>

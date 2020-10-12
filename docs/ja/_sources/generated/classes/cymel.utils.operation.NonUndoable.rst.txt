@@ -1,0 +1,36 @@
+class cymel.utils.operation.NonUndoable
+=======================================
+
+.. currentmodule:: cymel.utils.operation
+
+
+.. inheritance-diagram:: NonUndoable
+    :parts: 1
+
+
+
+.. autoclass:: NonUndoable
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        __init__
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: __init__
+
+

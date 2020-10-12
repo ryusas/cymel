@@ -1,0 +1,78 @@
+cymel.pyutils.pyutils
+=====================
+
+.. automodule:: cymel.pyutils.pyutils
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        Singleton
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions:
+
+    .. autosummary::
+    
+        avoidZeroDiv
+        boundAngle
+        donothing
+        gettrue
+        insertEnvPath
+        insertSysPath
+        iterTreeBreadthFirst
+        iterTreeDepthFirst
+        parentClasses
+        ucToStrList
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Constants:
+
+    
+    .. autodata:: ENV_SEPARATOR
+    .. autodata:: IS_WINDOWS
+    .. autodata:: USER_DOC_PATH
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions Details:
+
+    
+    .. autofunction:: avoidZeroDiv
+    .. autofunction:: boundAngle
+    .. autofunction:: donothing
+    .. autofunction:: gettrue
+    .. autofunction:: insertEnvPath
+    .. autofunction:: insertSysPath
+    .. autofunction:: iterTreeBreadthFirst
+    .. autofunction:: iterTreeDepthFirst
+    .. autofunction:: parentClasses
+    .. autofunction:: ucToStrList
+
+

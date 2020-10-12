@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.AttrEnumOptionMenuGrp
+============================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: AttrEnumOptionMenuGrp
+    :parts: 1
+
+
+
+.. autoclass:: AttrEnumOptionMenuGrp
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

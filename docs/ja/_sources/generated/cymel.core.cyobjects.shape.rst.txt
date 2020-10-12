@@ -1,0 +1,42 @@
+cymel.core.cyobjects.shape
+==========================
+
+.. automodule:: cymel.core.cyobjects.shape
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        Shape
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

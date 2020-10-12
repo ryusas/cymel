@@ -1,0 +1,36 @@
+class cymel.ui.window.DockControl
+=================================
+
+.. currentmodule:: cymel.ui.window
+
+
+.. inheritance-diagram:: DockControl
+    :parts: 1
+
+
+
+.. autoclass:: DockControl
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

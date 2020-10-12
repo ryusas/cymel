@@ -1,0 +1,4 @@
+<map id="inheritance9e1b9516ed" name="inheritance9e1b9516ed">
+<area shape="rect" id="node1" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" target="_top" title="Mayaラッパーオブジェクトの抽象基底クラス。" alt="" coords="5,5,77,29"/>
+<area shape="rect" id="node2" href="#cymel.core.cyobjects.objectref.ObjectRef" target="_top" title="`.CyObject` の参照が切れていても再取得が可能な弱参照ラッパー。" alt="" coords="5,44,77,68"/>
+</map>

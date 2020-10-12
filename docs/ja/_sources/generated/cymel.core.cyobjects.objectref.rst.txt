@@ -1,0 +1,42 @@
+cymel.core.cyobjects.objectref
+==============================
+
+.. automodule:: cymel.core.cyobjects.objectref
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        ObjectRef
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

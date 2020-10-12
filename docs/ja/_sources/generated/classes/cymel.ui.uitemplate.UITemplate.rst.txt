@@ -1,0 +1,48 @@
+class cymel.ui.uitemplate.UITemplate
+====================================
+
+.. currentmodule:: cymel.ui.uitemplate
+
+
+.. inheritance-diagram:: UITemplate
+    :parts: 1
+
+
+
+.. autoclass:: UITemplate
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        __init__
+        define
+        delete
+        exists
+        name
+        pop
+        push
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: __init__
+    .. automethod:: define
+    .. automethod:: delete
+    .. automethod:: exists
+    .. automethod:: name
+    .. automethod:: pop
+    .. automethod:: push
+
+

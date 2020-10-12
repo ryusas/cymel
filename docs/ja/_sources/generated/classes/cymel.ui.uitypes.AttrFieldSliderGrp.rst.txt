@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.AttrFieldSliderGrp
+=========================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: AttrFieldSliderGrp
+    :parts: 1
+
+
+
+.. autoclass:: AttrFieldSliderGrp
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

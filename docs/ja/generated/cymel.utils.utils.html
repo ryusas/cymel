@@ -1,0 +1,291 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>cymel.utils.utils &#8212; cymel 0.0.0 ドキュメント</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="cymel.pyutils.finalizer" href="cymel.pyutils.finalizer.html" />
+    <link rel="prev" title="class cymel.utils.optionvar.OptionVar" href="classes/cymel.utils.optionvar.OptionVar.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="cymel.pyutils.finalizer.html" title="cymel.pyutils.finalizer"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="classes/cymel.utils.optionvar.OptionVar.html" title="class cymel.utils.optionvar.OptionVar"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="classes/cymel.utils.optionvar.OptionVar.html"
+                        title="前の章へ">class cymel.utils.optionvar.OptionVar</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="cymel.pyutils.finalizer.html"
+                        title="次の章へ">cymel.pyutils.finalizer</a></p>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.utils.utils.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-cymel.utils.utils">
+<span id="cymel-utils-utils"></span><h1>cymel.utils.utils<a class="headerlink" href="#module-cymel.utils.utils" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Maya用の様々なヘルパー。</p>
+<p class="rubric">Functions:</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.utils.utils.affectedAttrNames" title="cymel.utils.utils.affectedAttrNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">affectedAttrNames</span></code></a>(nodetype,&nbsp;attrname)</td>
+<td>ノードタイプ名とアトリビュート名を指定して、それが影響を与える同一ノードのアトリビュート名リストを得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.utils.utils.affectingAttrNames" title="cymel.utils.utils.affectingAttrNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">affectingAttrNames</span></code></a>(nodetype,&nbsp;attrname)</td>
+<td>ノードタイプ名とアトリビュート名を指定して、それが影響を受ける同一ノードのアトリビュート名リストを得る。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.utils.utils.correctNodeName" title="cymel.utils.utils.correctNodeName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">correctNodeName</span></code></a>(name)</td>
+<td>任意の名前をネームスペースを含まないノード名として問題ない形に修正する。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.utils.utils.correctNodeNameNS" title="cymel.utils.utils.correctNodeNameNS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">correctNodeNameNS</span></code></a>(name)</td>
+<td>任意の名前をノード名として問題ない形に修正する。ネームスペースを許容。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.utils.utils.enablePlugin" title="cymel.utils.utils.enablePlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enablePlugin</span></code></a>(name[,&nbsp;proc])</td>
+<td>プラグインを利用可能にする。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.utils.utils.listEnum" title="cymel.utils.utils.listEnum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listEnum</span></code></a>(name[,&nbsp;attrname,&nbsp;reverse])</td>
+<td>enum アトリビュートの名前と値のペアのリストを得る。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.utils.utils.loadPlugin" title="cymel.utils.utils.loadPlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadPlugin</span></code></a>(name)</td>
+<td>プラグインがロードされていなければロードする。</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Functions Details:</p>
+<dl class="function">
+<dt id="cymel.utils.utils.affectedAttrNames">
+<code class="descclassname">cymel.utils.utils.</code><code class="descname">affectedAttrNames</code><span class="sig-paren">(</span><em>nodetype</em>, <em>attrname</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.affectedAttrNames" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードタイプ名とアトリビュート名を指定して、それが影響を与える同一ノードのアトリビュート名リストを得る。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) -- ノードタイプ名。</li>
+<li><strong>attrname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) -- アトリビュート名。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cymel.utils.utils.affectingAttrNames">
+<code class="descclassname">cymel.utils.utils.</code><code class="descname">affectingAttrNames</code><span class="sig-paren">(</span><em>nodetype</em>, <em>attrname</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.affectingAttrNames" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードタイプ名とアトリビュート名を指定して、それが影響を受ける同一ノードのアトリビュート名リストを得る。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) -- ノードタイプ名。</li>
+<li><strong>attrname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) -- アトリビュート名。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cymel.utils.utils.correctNodeName">
+<code class="descclassname">cymel.utils.utils.</code><code class="descname">correctNodeName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.correctNodeName" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>任意の名前をネームスペースを含まないノード名として問題ない形に修正する。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) -- 任意の名前。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cymel.utils.utils.correctNodeNameNS">
+<code class="descclassname">cymel.utils.utils.</code><code class="descname">correctNodeNameNS</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.correctNodeNameNS" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>任意の名前をノード名として問題ない形に修正する。ネームスペースを許容。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) -- 任意の名前。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cymel.utils.utils.enablePlugin">
+<code class="descclassname">cymel.utils.utils.</code><code class="descname">enablePlugin</code><span class="sig-paren">(</span><em>name</em>, <em>proc=&lt;function loadPlugin&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.enablePlugin" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>プラグインを利用可能にする。</p>
+<p>プラグインが存在しない場合もエラーにはしたくない場合に利用する。</p>
+<p>成功したかどうかの <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> 値が返される。</p>
+<p>デフォルトでは <a class="reference internal" href="#cymel.utils.utils.loadPlugin" title="cymel.utils.utils.loadPlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadPlugin</span></code></a> が呼び出されるので、
+プラグインがロードされていなければロードされるが、
+プラグインが存在しない場合はエラーにはならず
+同名プラグインの２度目以降の呼び出し時のリトライは抑制される。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) -- プラグイン名。</li>
+<li><strong>proc</strong> (<em>callable</em>) -- プラグインのロードするために利用する関数。
+デフォルトでは <a class="reference internal" href="#cymel.utils.utils.loadPlugin" title="cymel.utils.utils.loadPlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadPlugin</span></code></a> が利用される。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cymel.utils.utils.listEnum">
+<code class="descclassname">cymel.utils.utils.</code><code class="descname">listEnum</code><span class="sig-paren">(</span><em>name</em>, <em>attrname=None</em>, <em>reverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.listEnum" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>enum アトリビュートの名前と値のペアのリストを得る。</p>
+<p>スタティックアトリビュートか
+ダイナミックアトリビュートか
+によって指定方法が異なる。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) -- ダイナミックアトリビュートの場合はプラグ名、
+スタティックアトリビュートの場合はノードタイプ。</li>
+<li><strong>attrname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) -- スタティックアトリビュートの場合のアトリビュート名。</li>
+<li><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- ペアの並び順を入れ替え、
+(名前, 値) ではなく (値, 名前) にする。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cymel.utils.utils.loadPlugin">
+<code class="descclassname">cymel.utils.utils.</code><code class="descname">loadPlugin</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.loadPlugin" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>プラグインがロードされていなければロードする。</p>
+<p>新規にロードされた場合にのみプラグイン名が返される。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) -- プラグイン名。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="cymel.pyutils.finalizer.html" title="cymel.pyutils.finalizer"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="classes/cymel.utils.optionvar.OptionVar.html" title="class cymel.utils.optionvar.OptionVar"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, ryusas.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 で生成しました。
+    </div>
+  </body>
+</html>

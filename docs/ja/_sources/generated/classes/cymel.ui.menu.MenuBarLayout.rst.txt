@@ -1,0 +1,46 @@
+class cymel.ui.menu.MenuBarLayout
+=================================
+
+.. currentmodule:: cymel.ui.menu
+
+
+.. inheritance-diagram:: MenuBarLayout
+    :parts: 1
+
+
+
+.. autoclass:: MenuBarLayout
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+        clear
+        menu
+        menuNames
+        menus
+        numMenus
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+    .. automethod:: clear
+    .. automethod:: menu
+    .. automethod:: menuNames
+    .. automethod:: menus
+    .. automethod:: numMenus
+
+

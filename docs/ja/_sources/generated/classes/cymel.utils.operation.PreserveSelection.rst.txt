@@ -1,0 +1,41 @@
+class cymel.utils.operation.PreserveSelection
+=============================================
+
+.. currentmodule:: cymel.utils.operation
+
+
+.. inheritance-diagram:: PreserveSelection
+    :parts: 1
+
+
+
+.. autoclass:: PreserveSelection
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        __init__
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: ascmd
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: __init__
+
+

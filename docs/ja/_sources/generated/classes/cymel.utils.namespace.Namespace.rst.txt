@@ -1,0 +1,54 @@
+class cymel.utils.namespace.Namespace
+=====================================
+
+.. currentmodule:: cymel.utils.namespace
+
+
+.. inheritance-diagram:: Namespace
+    :parts: 1
+
+
+
+.. autoclass:: Namespace
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        children
+        create
+        current
+        exists
+        isCurrent
+        iterBreadthFirst
+        iterDepthFirst
+        ls
+        parent
+        setCurrent
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: children
+    .. automethod:: create
+    .. automethod:: current
+    .. automethod:: exists
+    .. automethod:: isCurrent
+    .. automethod:: iterBreadthFirst
+    .. automethod:: iterDepthFirst
+    .. automethod:: ls
+    .. automethod:: parent
+    .. automethod:: setCurrent
+
+

@@ -1,0 +1,134 @@
+class cymel.core.cyobjects.dagnode_c.DagNodeMixin
+=================================================
+
+.. currentmodule:: cymel.core.cyobjects.dagnode_c
+
+
+.. inheritance-diagram:: DagNodeMixin
+    :parts: 1
+
+
+
+.. autoclass:: DagNodeMixin
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        allRoots
+        boundingBox
+        child
+        children
+        fullPath
+        getJOQ
+        getM
+        getMatrix
+        getQ
+        getQuaternion
+        getS
+        getScaling
+        getSh
+        getShearing
+        getT
+        getTransformation
+        getTranslation
+        getX
+        hasUnderWorldNodes
+        inUnderWorld
+        instance
+        instanceIndex
+        instances
+        isAncestorOf
+        isInstanceable
+        isInstanced
+        isIntermediateObject
+        isParentOf
+        isRoot
+        leaves
+        lengthAndSiblingIndices
+        numChildren
+        numInstances
+        numParents
+        numShapes
+        objectColor
+        parent
+        parentWorld
+        parents
+        partialPath
+        pathLength
+        root
+        shape
+        shapes
+        siblingIndex
+        siblingIndices
+        siblings
+        transform
+        underWorldNodes
+        useObjectColor
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: allRoots
+    .. automethod:: boundingBox
+    .. automethod:: child
+    .. automethod:: children
+    .. automethod:: fullPath
+    .. automethod:: getJOQ
+    .. automethod:: getM
+    .. automethod:: getMatrix
+    .. automethod:: getQ
+    .. automethod:: getQuaternion
+    .. automethod:: getS
+    .. automethod:: getScaling
+    .. automethod:: getSh
+    .. automethod:: getShearing
+    .. automethod:: getT
+    .. automethod:: getTransformation
+    .. automethod:: getTranslation
+    .. automethod:: getX
+    .. automethod:: hasUnderWorldNodes
+    .. automethod:: inUnderWorld
+    .. automethod:: instance
+    .. automethod:: instanceIndex
+    .. automethod:: instances
+    .. automethod:: isAncestorOf
+    .. automethod:: isInstanceable
+    .. automethod:: isInstanced
+    .. automethod:: isIntermediateObject
+    .. automethod:: isParentOf
+    .. automethod:: isRoot
+    .. automethod:: leaves
+    .. automethod:: lengthAndSiblingIndices
+    .. automethod:: numChildren
+    .. automethod:: numInstances
+    .. automethod:: numParents
+    .. automethod:: numShapes
+    .. automethod:: objectColor
+    .. automethod:: parent
+    .. automethod:: parentWorld
+    .. automethod:: parents
+    .. automethod:: partialPath
+    .. automethod:: pathLength
+    .. automethod:: root
+    .. automethod:: shape
+    .. automethod:: shapes
+    .. automethod:: siblingIndex
+    .. automethod:: siblingIndices
+    .. automethod:: siblings
+    .. automethod:: transform
+    .. automethod:: underWorldNodes
+    .. automethod:: useObjectColor
+
+

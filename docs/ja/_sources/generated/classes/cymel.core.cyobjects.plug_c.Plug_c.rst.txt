@@ -1,0 +1,293 @@
+class cymel.core.cyobjects.plug_c.Plug_c
+========================================
+
+.. currentmodule:: cymel.core.cyobjects.plug_c
+
+
+.. inheritance-diagram:: Plug_c
+    :parts: 1
+
+
+
+.. autoclass:: Plug_c
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        addProxy
+        affectedAttrs
+        affectingAttrs
+        alias
+        apiGetSetNullProc
+        apiGetUndoSetProc
+        apiSetDefault
+        apiSetDefaultu
+        apiSetLocked
+        array
+        attrName
+        child
+        childNames
+        children
+        connectedElement
+        connectedElements
+        connections
+        default
+        defaultu
+        disconnectBehavior
+        element
+        elementExists
+        elements
+        enumName
+        enumValue
+        evaluate
+        evaluateNumElements
+        evaluator
+        get
+        getEnumName
+        getM
+        getProxies
+        getu
+        hasMax
+        hasMin
+        hasNodeFn
+        hasProxy
+        hasSoftMax
+        hasSoftMin
+        hasTransformation
+        index
+        indices
+        inputs
+        isAffectsAppearance
+        isAffectsWorldSpace
+        isArray
+        isAttrFromReferencedFile
+        isCached
+        isCaching
+        isChannelBox
+        isChild
+        isCompound
+        isConnectable
+        isConnected
+        isConnectedTo
+        isDestination
+        isDynamic
+        isElement
+        isExtension
+        isFreeToChange
+        isFromReferencedFile
+        isHidden
+        isIgnoredWhenRendering
+        isIndeterminant
+        isIndexMatters
+        isInternal
+        isKeyable
+        isLocked
+        isMulti
+        isNewAttr
+        isNodeFromReferencedFile
+        isNodeType
+        isNotInstanced
+        isProcedural
+        isProxy
+        isReadable
+        isRenderSource
+        isSource
+        isStorable
+        isUsedArrayDataBuilder
+        isUsedAsColor
+        isUsedAsFilename
+        isValidWorldElement
+        isWorldSpace
+        isWritable
+        isWritableNow
+        leaves
+        longName
+        max
+        maxu
+        mfn
+        mfn1
+        mfn1_
+        mfn_
+        min
+        minu
+        mplug
+        mplug1
+        mplug1_
+        mplug_
+        multi
+        newObject
+        nextAvailable
+        niceName
+        node
+        nodeName
+        nodeType
+        noderef
+        numChildren
+        numConnectedElements
+        numElements
+        outputs
+        parent
+        plug
+        plugName
+        plug_
+        proxyMaster
+        root
+        setAlias
+        shortName
+        softMax
+        softMaxu
+        softMin
+        softMinu
+        subType
+        type
+        worldElement
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: CLASS_TYPE
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: addProxy
+    .. automethod:: affectedAttrs
+    .. automethod:: affectingAttrs
+    .. automethod:: alias
+    .. automethod:: apiGetSetNullProc
+    .. automethod:: apiGetUndoSetProc
+    .. automethod:: apiSetDefault
+    .. automethod:: apiSetDefaultu
+    .. automethod:: apiSetLocked
+    .. automethod:: array
+    .. automethod:: attrName
+    .. automethod:: child
+    .. automethod:: childNames
+    .. automethod:: children
+    .. automethod:: connectedElement
+    .. automethod:: connectedElements
+    .. automethod:: connections
+    .. automethod:: default
+    .. automethod:: defaultu
+    .. automethod:: disconnectBehavior
+    .. automethod:: element
+    .. automethod:: elementExists
+    .. automethod:: elements
+    .. automethod:: enumName
+    .. automethod:: enumValue
+    .. automethod:: evaluate
+    .. automethod:: evaluateNumElements
+    .. automethod:: evaluator
+    .. automethod:: get
+    .. automethod:: getEnumName
+    .. automethod:: getM
+    .. automethod:: getProxies
+    .. automethod:: getu
+    .. automethod:: hasMax
+    .. automethod:: hasMin
+    .. automethod:: hasNodeFn
+    .. automethod:: hasProxy
+    .. automethod:: hasSoftMax
+    .. automethod:: hasSoftMin
+    .. automethod:: hasTransformation
+    .. automethod:: index
+    .. automethod:: indices
+    .. automethod:: inputs
+    .. automethod:: isAffectsAppearance
+    .. automethod:: isAffectsWorldSpace
+    .. automethod:: isArray
+    .. automethod:: isAttrFromReferencedFile
+    .. automethod:: isCached
+    .. automethod:: isCaching
+    .. automethod:: isChannelBox
+    .. automethod:: isChild
+    .. automethod:: isCompound
+    .. automethod:: isConnectable
+    .. automethod:: isConnected
+    .. automethod:: isConnectedTo
+    .. automethod:: isDestination
+    .. automethod:: isDynamic
+    .. automethod:: isElement
+    .. automethod:: isExtension
+    .. automethod:: isFreeToChange
+    .. automethod:: isFromReferencedFile
+    .. automethod:: isHidden
+    .. automethod:: isIgnoredWhenRendering
+    .. automethod:: isIndeterminant
+    .. automethod:: isIndexMatters
+    .. automethod:: isInternal
+    .. automethod:: isKeyable
+    .. automethod:: isLocked
+    .. automethod:: isMulti
+    .. automethod:: isNewAttr
+    .. automethod:: isNodeFromReferencedFile
+    .. automethod:: isNodeType
+    .. automethod:: isNotInstanced
+    .. automethod:: isProcedural
+    .. automethod:: isProxy
+    .. automethod:: isReadable
+    .. automethod:: isRenderSource
+    .. automethod:: isSource
+    .. automethod:: isStorable
+    .. automethod:: isUsedArrayDataBuilder
+    .. automethod:: isUsedAsColor
+    .. automethod:: isUsedAsFilename
+    .. automethod:: isValidWorldElement
+    .. automethod:: isWorldSpace
+    .. automethod:: isWritable
+    .. automethod:: isWritableNow
+    .. automethod:: leaves
+    .. automethod:: longName
+    .. automethod:: max
+    .. automethod:: maxu
+    .. automethod:: mfn
+    .. automethod:: mfn1
+    .. automethod:: mfn1_
+    .. automethod:: mfn_
+    .. automethod:: min
+    .. automethod:: minu
+    .. automethod:: mplug
+    .. automethod:: mplug1
+    .. automethod:: mplug1_
+    .. automethod:: mplug_
+    .. automethod:: multi
+    .. automethod:: newObject
+    .. automethod:: nextAvailable
+    .. automethod:: niceName
+    .. automethod:: node
+    .. automethod:: nodeName
+    .. automethod:: nodeType
+    .. automethod:: noderef
+    .. automethod:: numChildren
+    .. automethod:: numConnectedElements
+    .. automethod:: numElements
+    .. automethod:: outputs
+    .. automethod:: parent
+    .. automethod:: plug
+    .. automethod:: plugName
+    .. automethod:: plug_
+    .. automethod:: proxyMaster
+    .. automethod:: root
+    .. automethod:: setAlias
+    .. automethod:: shortName
+    .. automethod:: softMax
+    .. automethod:: softMaxu
+    .. automethod:: softMin
+    .. automethod:: softMinu
+    .. automethod:: subType
+    .. automethod:: type
+    .. automethod:: worldElement
+
+

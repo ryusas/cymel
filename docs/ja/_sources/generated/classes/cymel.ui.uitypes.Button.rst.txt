@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.Button
+=============================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: Button
+    :parts: 1
+
+
+
+.. autoclass:: Button
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

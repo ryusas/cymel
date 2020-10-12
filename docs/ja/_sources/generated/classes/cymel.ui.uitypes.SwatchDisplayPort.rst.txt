@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.SwatchDisplayPort
+========================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: SwatchDisplayPort
+    :parts: 1
+
+
+
+.. autoclass:: SwatchDisplayPort
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

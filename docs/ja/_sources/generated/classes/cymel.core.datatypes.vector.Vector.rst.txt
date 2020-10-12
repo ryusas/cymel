@@ -1,0 +1,114 @@
+class cymel.core.datatypes.vector.Vector
+========================================
+
+.. currentmodule:: cymel.core.datatypes.vector
+
+
+.. inheritance-diagram:: Vector
+    :parts: 1
+
+
+
+.. autoclass:: Vector
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        angle
+        cartesianize
+        cross
+        distanceSqTo
+        distanceTo
+        div
+        divIt
+        dot
+        dot4
+        dot4r
+        findNearestAxis
+        homogenize
+        isEquivalent
+        isParallel
+        isZero
+        length
+        lengthSq
+        maxAxis
+        minAxis
+        mul
+        mulIt
+        normal
+        normalize
+        normalizeIt
+        orthogonal
+        orthogonalize
+        rationalize
+        rotateBy
+        rotateTo
+        set
+        transformAsNormal
+        xform3
+        xform4
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: AXIS_VECTOR_DICT
+    .. autoattribute:: One
+    .. autoattribute:: Tolerance
+    .. autoattribute:: XAxis
+    .. autoattribute:: XNegAxis
+    .. autoattribute:: YAxis
+    .. autoattribute:: YNegAxis
+    .. autoattribute:: ZAxis
+    .. autoattribute:: ZNegAxis
+    .. autoattribute:: Zero
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: angle
+    .. automethod:: cartesianize
+    .. automethod:: cross
+    .. automethod:: distanceSqTo
+    .. automethod:: distanceTo
+    .. automethod:: div
+    .. automethod:: divIt
+    .. automethod:: dot
+    .. automethod:: dot4
+    .. automethod:: dot4r
+    .. automethod:: findNearestAxis
+    .. automethod:: homogenize
+    .. automethod:: isEquivalent
+    .. automethod:: isParallel
+    .. automethod:: isZero
+    .. automethod:: length
+    .. automethod:: lengthSq
+    .. automethod:: maxAxis
+    .. automethod:: minAxis
+    .. automethod:: mul
+    .. automethod:: mulIt
+    .. automethod:: normal
+    .. automethod:: normalize
+    .. automethod:: normalizeIt
+    .. automethod:: orthogonal
+    .. automethod:: orthogonalize
+    .. automethod:: rationalize
+    .. automethod:: rotateBy
+    .. automethod:: rotateTo
+    .. automethod:: set
+    .. automethod:: transformAsNormal
+    .. automethod:: xform3
+    .. automethod:: xform4
+
+

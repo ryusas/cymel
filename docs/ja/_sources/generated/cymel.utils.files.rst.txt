@@ -1,0 +1,53 @@
+cymel.utils.files
+=================
+
+.. automodule:: cymel.utils.files
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions:
+
+    .. autosummary::
+    
+        exportSceneFile
+        importSceneFile
+        openSceneFile
+        referenceSceneFile
+        saveSceneFile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions Details:
+
+    
+    .. autofunction:: exportSceneFile
+    .. autofunction:: importSceneFile
+    .. autofunction:: openSceneFile
+    .. autofunction:: referenceSceneFile
+    .. autofunction:: saveSceneFile
+
+

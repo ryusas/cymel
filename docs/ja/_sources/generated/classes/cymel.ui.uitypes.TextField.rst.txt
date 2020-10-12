@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.TextField
+================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: TextField
+    :parts: 1
+
+
+
+.. autoclass:: TextField
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

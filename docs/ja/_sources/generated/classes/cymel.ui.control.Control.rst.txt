@@ -1,0 +1,68 @@
+class cymel.ui.control.Control
+==============================
+
+.. currentmodule:: cymel.ui.control
+
+
+.. inheritance-diagram:: Control
+    :parts: 1
+
+
+
+.. autoclass:: Control
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+        call
+        delete
+        exists
+        get
+        getCurrent
+        getValue
+        makeWeakCB
+        name
+        parent
+        ref
+        relativeName
+        set
+        setValue
+        shortName
+        type
+        window
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+    .. automethod:: call
+    .. automethod:: delete
+    .. automethod:: exists
+    .. automethod:: get
+    .. automethod:: getCurrent
+    .. automethod:: getValue
+    .. automethod:: makeWeakCB
+    .. automethod:: name
+    .. automethod:: parent
+    .. automethod:: ref
+    .. automethod:: relativeName
+    .. automethod:: set
+    .. automethod:: setValue
+    .. automethod:: shortName
+    .. automethod:: type
+    .. automethod:: window
+
+

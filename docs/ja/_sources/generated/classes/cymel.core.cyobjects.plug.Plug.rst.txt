@@ -1,0 +1,88 @@
+class cymel.core.cyobjects.plug.Plug
+====================================
+
+.. currentmodule:: cymel.core.cyobjects.plug
+
+
+.. inheritance-diagram:: Plug
+    :parts: 1
+
+
+
+.. autoclass:: Plug
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        addElement
+        animCurve
+        animCurves
+        animLayers
+        belongsToLayer
+        connect
+        connectTo
+        createAnimCurve
+        delete
+        disconnect
+        iterElements
+        iterHierarchy
+        layeredPlug
+        listEnum
+        pairBlendPlug
+        removeAllElements
+        removeElement
+        reset
+        set
+        setCached
+        setCaching
+        setChannelBox
+        setKeyable
+        setLocked
+        setu
+        toggle
+        unlock
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: addElement
+    .. automethod:: animCurve
+    .. automethod:: animCurves
+    .. automethod:: animLayers
+    .. automethod:: belongsToLayer
+    .. automethod:: connect
+    .. automethod:: connectTo
+    .. automethod:: createAnimCurve
+    .. automethod:: delete
+    .. automethod:: disconnect
+    .. automethod:: iterElements
+    .. automethod:: iterHierarchy
+    .. automethod:: layeredPlug
+    .. automethod:: listEnum
+    .. automethod:: pairBlendPlug
+    .. automethod:: removeAllElements
+    .. automethod:: removeElement
+    .. automethod:: reset
+    .. automethod:: set
+    .. automethod:: setCached
+    .. automethod:: setCaching
+    .. automethod:: setChannelBox
+    .. automethod:: setKeyable
+    .. automethod:: setLocked
+    .. automethod:: setu
+    .. automethod:: toggle
+    .. automethod:: unlock
+
+

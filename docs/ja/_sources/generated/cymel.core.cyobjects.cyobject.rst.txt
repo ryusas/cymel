@@ -1,0 +1,78 @@
+cymel.core.cyobjects.cyobject
+=============================
+
+.. automodule:: cymel.core.cyobjects.cyobject
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        CyObject
+        ModuleForSel
+
+
+
+
+
+    .. rubric:: Exceptions:
+
+    .. autosummary::
+    
+        CymelInvalidHandle
+
+
+
+
+
+    .. rubric:: Functions:
+
+    .. autosummary::
+    
+        cyObjects
+
+
+
+
+
+
+
+    .. rubric:: Aliases:
+
+    
+    .. autodata:: O
+    .. autodata:: Os
+
+
+
+
+
+    .. rubric:: Constants:
+
+    
+    .. autodata:: BIT_DAGNODE
+    .. autodata:: BIT_SHAPE
+    .. autodata:: BIT_TRANSFORM
+
+
+
+
+
+    .. rubric:: Exceptions Details:
+
+    
+    .. autoexception:: CymelInvalidHandle
+
+
+
+
+
+    .. rubric:: Functions Details:
+
+    
+    .. autofunction:: cyObjects
+
+

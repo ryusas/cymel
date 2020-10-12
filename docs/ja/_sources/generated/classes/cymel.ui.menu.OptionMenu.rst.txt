@@ -1,0 +1,40 @@
+class cymel.ui.menu.OptionMenu
+==============================
+
+.. currentmodule:: cymel.ui.menu
+
+
+.. inheritance-diagram:: OptionMenu
+    :parts: 1
+
+
+
+.. autoclass:: OptionMenu
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+        getValue
+        setValue
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+    .. automethod:: getValue
+    .. automethod:: setValue
+
+

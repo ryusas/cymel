@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.ColumnLayout
+===================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: ColumnLayout
+    :parts: 1
+
+
+
+.. autoclass:: ColumnLayout
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

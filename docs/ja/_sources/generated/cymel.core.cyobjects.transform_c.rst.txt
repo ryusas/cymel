@@ -1,0 +1,42 @@
+cymel.core.cyobjects.transform_c
+================================
+
+.. automodule:: cymel.core.cyobjects.transform_c
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        TransformMixin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

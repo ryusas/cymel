@@ -1,0 +1,41 @@
+class cymel.core.cyobjects.transform.Transform
+==============================================
+
+.. currentmodule:: cymel.core.cyobjects.transform
+
+
+.. inheritance-diagram:: Transform
+    :parts: 1
+
+
+
+.. autoclass:: Transform
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        addChild
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: TYPE_BITS
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: addChild
+
+

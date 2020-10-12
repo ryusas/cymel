@@ -1,0 +1,45 @@
+class cymel.core.cyobjects.dagnode.DagNode
+==========================================
+
+.. currentmodule:: cymel.core.cyobjects.dagnode
+
+
+.. inheritance-diagram:: DagNode
+    :parts: 1
+
+
+
+.. autoclass:: DagNode
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        iterBreadthFirst
+        iterDepthFirst
+        setParent
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: TYPE_BITS
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: iterBreadthFirst
+    .. automethod:: iterDepthFirst
+    .. automethod:: setParent
+
+

@@ -1,0 +1,36 @@
+class cymel.utils.operation.WaitCursor
+======================================
+
+.. currentmodule:: cymel.utils.operation
+
+
+.. inheritance-diagram:: WaitCursor
+    :parts: 1
+
+
+
+.. autoclass:: WaitCursor
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        __init__
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: __init__
+
+

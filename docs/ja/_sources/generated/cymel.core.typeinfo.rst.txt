@@ -1,0 +1,51 @@
+cymel.core.typeinfo
+===================
+
+.. automodule:: cymel.core.typeinfo
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions:
+
+    .. autosummary::
+    
+        dumpNodetypeTree
+        getInheritedNodeTypes
+        isAbstractType
+        isDerivedNodeType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions Details:
+
+    
+    .. autofunction:: dumpNodetypeTree
+    .. autofunction:: getInheritedNodeTypes
+    .. autofunction:: isAbstractType
+    .. autofunction:: isDerivedNodeType
+
+

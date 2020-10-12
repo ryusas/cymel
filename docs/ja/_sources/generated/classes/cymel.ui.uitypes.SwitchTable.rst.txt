@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.SwitchTable
+==================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: SwitchTable
+    :parts: 1
+
+
+
+.. autoclass:: SwitchTable
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

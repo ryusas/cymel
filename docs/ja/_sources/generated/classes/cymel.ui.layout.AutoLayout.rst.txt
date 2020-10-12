@@ -1,0 +1,38 @@
+class cymel.ui.layout.AutoLayout
+================================
+
+.. currentmodule:: cymel.ui.layout
+
+
+.. inheritance-diagram:: AutoLayout
+    :parts: 1
+
+
+
+.. autoclass:: AutoLayout
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        __init__
+        redistribute
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: __init__
+    .. automethod:: redistribute
+
+

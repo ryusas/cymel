@@ -1,0 +1,47 @@
+cymel.core.datatypes.quaternion
+===============================
+
+.. automodule:: cymel.core.datatypes.quaternion
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        Quaternion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Aliases:
+
+    
+    .. autodata:: Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+

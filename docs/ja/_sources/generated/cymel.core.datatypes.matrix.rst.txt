@@ -1,0 +1,47 @@
+cymel.core.datatypes.matrix
+===========================
+
+.. automodule:: cymel.core.datatypes.matrix
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        Matrix
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Aliases:
+
+    
+    .. autodata:: M
+
+
+
+
+
+
+
+
+
+
+
+
+
+

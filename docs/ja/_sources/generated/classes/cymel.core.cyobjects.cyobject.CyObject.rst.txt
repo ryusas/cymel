@@ -1,0 +1,63 @@
+class cymel.core.cyobjects.cyobject.CyObject
+============================================
+
+.. currentmodule:: cymel.core.cyobjects.cyobject
+
+
+.. inheritance-diagram:: CyObject
+    :parts: 1
+
+
+
+.. autoclass:: CyObject
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        checkValid
+        fromUUID
+        globalPlugClass
+        internalData
+        isAlive
+        isValid
+        ls
+        name
+        name_
+        newObject
+        node
+        setGlobalPlugClass
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: CLASS_TYPE
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: checkValid
+    .. automethod:: fromUUID
+    .. automethod:: globalPlugClass
+    .. automethod:: internalData
+    .. automethod:: isAlive
+    .. automethod:: isValid
+    .. automethod:: ls
+    .. automethod:: name
+    .. automethod:: name_
+    .. automethod:: newObject
+    .. automethod:: node
+    .. automethod:: setGlobalPlugClass
+
+

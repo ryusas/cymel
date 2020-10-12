@@ -1,0 +1,42 @@
+class cymel.ui.menu.OptionMenuGrp
+=================================
+
+.. currentmodule:: cymel.ui.menu
+
+
+.. inheritance-diagram:: OptionMenuGrp
+    :parts: 1
+
+
+
+.. autoclass:: OptionMenuGrp
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+        getValue
+        menu
+        setValue
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+    .. automethod:: getValue
+    .. automethod:: menu
+    .. automethod:: setValue
+
+

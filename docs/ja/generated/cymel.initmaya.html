@@ -1,0 +1,227 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>cymel.initmaya &#8212; cymel 0.0.0 ドキュメント</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="cymel.main" href="cymel.main.html" />
+    <link rel="prev" title="cymel.constants" href="cymel.constants.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="cymel.main.html" title="cymel.main"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="cymel.constants.html" title="cymel.constants"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="cymel.constants.html"
+                        title="前の章へ">cymel.constants</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="cymel.main.html"
+                        title="次の章へ">cymel.main</a></p>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.initmaya.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-cymel.initmaya">
+<span id="cymel-initmaya"></span><h1>cymel.initmaya<a class="headerlink" href="#module-cymel.initmaya" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>スタンドアロン python (mayapy) からの Maya の初期化。</p>
+<p>cymel 内の Maya に依存するモジュールがインポートされる際に
+<a class="reference internal" href="#cymel.initmaya.initialize" title="cymel.initmaya.initialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialize</span></code></a> が呼び出されるため、
+このモジュールを明示的に使用する必要はほとんどないが、
+初期化プロセスをカスタマイズしたい場合などに利用できる。</p>
+<p class="rubric">Functions:</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.initmaya.callUserSetupMel" title="cymel.initmaya.callUserSetupMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callUserSetupMel</span></code></a>()</td>
+<td>最優先の MEL パスに在る <code class="docutils literal notranslate"><span class="pre">userSetup.mel</span></code> を呼び出す。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.initmaya.initCymelPluginsPath" title="cymel.initmaya.initCymelPluginsPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initCymelPluginsPath</span></code></a>()</td>
+<td>cymel が同梱する Maya プラグインのパスを設定する。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a>()</td>
+<td>Maya が未初期化なら初期化し True を返す。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.initmaya.initialize" title="cymel.initmaya.initialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialize</span></code></a>()</td>
+<td>必要な初期化を全て行う。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.initmaya.isMayaInitialized" title="cymel.initmaya.isMayaInitialized"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMayaInitialized</span></code></a>()</td>
+<td>Maya が初期化済みかどうか。</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Constants:</p>
+<dl class="data">
+<dt id="cymel.initmaya.IS_UIMODE">
+<code class="descclassname">cymel.initmaya.</code><code class="descname">IS_UIMODE</code><em class="property"> = False</em><a class="headerlink" href="#cymel.initmaya.IS_UIMODE" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>MayaがUIモードかどうか。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cymel.initmaya.MAYA_PRODUCT_VERSION">
+<code class="descclassname">cymel.initmaya.</code><code class="descname">MAYA_PRODUCT_VERSION</code><em class="property"> = '2020'</em><a class="headerlink" href="#cymel.initmaya.MAYA_PRODUCT_VERSION" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>別々に存在できるMayaバージョン名（ '2020' や '2016.5' など）。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cymel.initmaya.MAYA_VERSION">
+<code class="descclassname">cymel.initmaya.</code><code class="descname">MAYA_VERSION</code><em class="property"> = (2020, 2, 0)</em><a class="headerlink" href="#cymel.initmaya.MAYA_VERSION" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Mayaバージョンを表すタプル。アップデートを判別できるのは2017以降。 (majorVersion, minorVersion, patchVersion)</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cymel.initmaya.MAYA_VERSION_STR">
+<code class="descclassname">cymel.initmaya.</code><code class="descname">MAYA_VERSION_STR</code><em class="property"> = '2020.2'</em><a class="headerlink" href="#cymel.initmaya.MAYA_VERSION_STR" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Mayaバージョンの表記。</p>
+</dd></dl>
+
+<p class="rubric">Functions Details:</p>
+<dl class="function">
+<dt id="cymel.initmaya.callUserSetupMel">
+<code class="descclassname">cymel.initmaya.</code><code class="descname">callUserSetupMel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.callUserSetupMel" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>最優先の MEL パスに在る <code class="docutils literal notranslate"><span class="pre">userSetup.mel</span></code> を呼び出す。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cymel.initmaya.initCymelPluginsPath">
+<code class="descclassname">cymel.initmaya.</code><code class="descname">initCymelPluginsPath</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.initCymelPluginsPath" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>cymel が同梱する Maya プラグインのパスを設定する。</p>
+<p>繰り返し呼び出しても重複して設定されることはない。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cymel.initmaya.initMaya">
+<code class="descclassname">cymel.initmaya.</code><code class="descname">initMaya</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.initMaya" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Maya が未初期化なら初期化し True を返す。</p>
+<p>いずれにせよ、
+<a class="reference internal" href="#cymel.initmaya.MAYA_VERSION" title="cymel.initmaya.MAYA_VERSION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAYA_VERSION</span></code></a> などの cymel の定数は初期化される。</p>
+<p>初期化時に、パス上の全ての <code class="docutils literal notranslate"><span class="pre">userSetup.py</span></code> が呼び出されるが、
+<code class="docutils literal notranslate"><span class="pre">userSetup.mel</span></code> は呼び出されない。</p>
+<p>繰り返し呼び出しても問題はない。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cymel.initmaya.initialize">
+<code class="descclassname">cymel.initmaya.</code><code class="descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.initialize" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>必要な初期化を全て行う。</p>
+<p>以下が行われる。</p>
+<p>初期化済みなら何もされないので、
+繰り返し呼び出しても問題はない。</p>
+<ul class="simple">
+<li><a class="reference internal" href="#cymel.initmaya.initCymelPluginsPath" title="cymel.initmaya.initCymelPluginsPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initCymelPluginsPath</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> and <a class="reference internal" href="#cymel.initmaya.callUserSetupMel" title="cymel.initmaya.callUserSetupMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callUserSetupMel</span></code></a></li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="cymel.initmaya.isMayaInitialized">
+<code class="descclassname">cymel.initmaya.</code><code class="descname">isMayaInitialized</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.isMayaInitialized" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Maya が初期化済みかどうか。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="cymel.main.html" title="cymel.main"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="cymel.constants.html" title="cymel.constants"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, ryusas.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 で生成しました。
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+class cymel.pyutils.ordereddict.CleanOrderedDict
+================================================
+
+.. currentmodule:: cymel.pyutils.ordereddict
+
+
+.. inheritance-diagram:: CleanOrderedDict
+    :parts: 1
+
+
+
+.. autoclass:: CleanOrderedDict
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        __init__
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: __init__
+
+

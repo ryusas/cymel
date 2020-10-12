@@ -1,0 +1,103 @@
+class cymel.core.datatypes.quaternion.Quaternion
+================================================
+
+.. currentmodule:: cymel.core.datatypes.quaternion
+
+
+.. inheritance-diagram:: Quaternion
+    :parts: 1
+
+
+
+.. autoclass:: Quaternion
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        asAA
+        asAxisAngle
+        asD
+        asDegrees
+        asE
+        asEulerRotation
+        asM
+        asMatrix
+        asTransformation
+        asX
+        conjugate
+        conjugateIt
+        dot
+        exp
+        inverse
+        invertIt
+        isEquivalent
+        isSignedEquivalent
+        log
+        negateIt
+        normal
+        normalize
+        normalizeIt
+        set
+        setToXAxis
+        setToYAxis
+        setToZAxis
+        setValue
+        slerp
+        squad
+        squadPt
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: Identity
+    .. autoattribute:: Tolerance
+    .. autoattribute:: Zero
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: asAA
+    .. automethod:: asAxisAngle
+    .. automethod:: asD
+    .. automethod:: asDegrees
+    .. automethod:: asE
+    .. automethod:: asEulerRotation
+    .. automethod:: asM
+    .. automethod:: asMatrix
+    .. automethod:: asTransformation
+    .. automethod:: asX
+    .. automethod:: conjugate
+    .. automethod:: conjugateIt
+    .. automethod:: dot
+    .. automethod:: exp
+    .. automethod:: inverse
+    .. automethod:: invertIt
+    .. automethod:: isEquivalent
+    .. automethod:: isSignedEquivalent
+    .. automethod:: log
+    .. automethod:: negateIt
+    .. automethod:: normal
+    .. automethod:: normalize
+    .. automethod:: normalizeIt
+    .. automethod:: set
+    .. automethod:: setToXAxis
+    .. automethod:: setToYAxis
+    .. automethod:: setToZAxis
+    .. automethod:: setValue
+    .. automethod:: slerp
+    .. automethod:: squad
+    .. automethod:: squadPt
+
+

@@ -1,0 +1,61 @@
+cymel.initmaya
+==============
+
+.. automodule:: cymel.initmaya
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions:
+
+    .. autosummary::
+    
+        callUserSetupMel
+        initCymelPluginsPath
+        initMaya
+        initialize
+        isMayaInitialized
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Constants:
+
+    
+    .. autodata:: IS_UIMODE
+    .. autodata:: MAYA_PRODUCT_VERSION
+    .. autodata:: MAYA_VERSION
+    .. autodata:: MAYA_VERSION_STR
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions Details:
+
+    
+    .. autofunction:: callUserSetupMel
+    .. autofunction:: initCymelPluginsPath
+    .. autofunction:: initMaya
+    .. autofunction:: initialize
+    .. autofunction:: isMayaInitialized
+
+

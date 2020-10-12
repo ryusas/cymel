@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.FloatField
+=================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: FloatField
+    :parts: 1
+
+
+
+.. autoclass:: FloatField
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

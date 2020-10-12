@@ -1,0 +1,25 @@
+class cymel.utils.operation.UndoChunk
+=====================================
+
+.. currentmodule:: cymel.utils.operation
+
+
+.. inheritance-diagram:: UndoChunk
+    :parts: 1
+
+
+
+.. autoclass:: UndoChunk
+    :show-inheritance:
+
+
+
+
+
+
+
+
+
+
+
+

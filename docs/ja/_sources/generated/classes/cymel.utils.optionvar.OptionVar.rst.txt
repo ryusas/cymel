@@ -1,0 +1,84 @@
+class cymel.utils.optionvar.OptionVar
+=====================================
+
+.. currentmodule:: cymel.utils.optionvar
+
+
+.. inheritance-diagram:: OptionVar
+    :parts: 1
+
+
+
+.. autoclass:: OptionVar
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        __init__
+        clear
+        defaultItems
+        defaultKeys
+        defaultValues
+        get
+        getDefault
+        hasDefault
+        hasNonDefaultValue
+        has_key
+        items
+        keys
+        nonDefaultItems
+        nonDefaultKeys
+        nonDefaultValues
+        pop
+        prefix
+        removeDefault
+        reset
+        resetAll
+        setDefault
+        setDefaults
+        setTranslator
+        update
+        values
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: __init__
+    .. automethod:: clear
+    .. automethod:: defaultItems
+    .. automethod:: defaultKeys
+    .. automethod:: defaultValues
+    .. automethod:: get
+    .. automethod:: getDefault
+    .. automethod:: hasDefault
+    .. automethod:: hasNonDefaultValue
+    .. automethod:: has_key
+    .. automethod:: items
+    .. automethod:: keys
+    .. automethod:: nonDefaultItems
+    .. automethod:: nonDefaultKeys
+    .. automethod:: nonDefaultValues
+    .. automethod:: pop
+    .. automethod:: prefix
+    .. automethod:: removeDefault
+    .. automethod:: reset
+    .. automethod:: resetAll
+    .. automethod:: setDefault
+    .. automethod:: setDefaults
+    .. automethod:: setTranslator
+    .. automethod:: update
+    .. automethod:: values
+
+

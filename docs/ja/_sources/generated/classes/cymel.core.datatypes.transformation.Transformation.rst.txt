@@ -1,0 +1,46 @@
+class cymel.core.datatypes.transformation.Transformation
+========================================================
+
+.. currentmodule:: cymel.core.datatypes.transformation
+
+
+.. inheritance-diagram:: Transformation
+    :parts: 1
+
+
+
+.. autoclass:: Transformation
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        asPosition
+        clear
+        fromSetAttrCmds
+        getSetAttrCmds
+        hasValue
+        isEquivalent
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: asPosition
+    .. automethod:: clear
+    .. automethod:: fromSetAttrCmds
+    .. automethod:: getSetAttrCmds
+    .. automethod:: hasValue
+    .. automethod:: isEquivalent
+
+

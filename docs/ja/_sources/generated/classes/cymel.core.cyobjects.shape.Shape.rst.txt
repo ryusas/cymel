@@ -1,0 +1,41 @@
+class cymel.core.cyobjects.shape.Shape
+======================================
+
+.. currentmodule:: cymel.core.cyobjects.shape
+
+
+.. inheritance-diagram:: Shape
+    :parts: 1
+
+
+
+.. autoclass:: Shape
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        createNode
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: TYPE_BITS
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: createNode
+
+

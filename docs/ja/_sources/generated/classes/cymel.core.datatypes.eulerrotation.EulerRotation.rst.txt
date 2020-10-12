@@ -1,0 +1,111 @@
+class cymel.core.datatypes.eulerrotation.EulerRotation
+======================================================
+
+.. currentmodule:: cymel.core.datatypes.eulerrotation
+
+
+.. inheritance-diagram:: EulerRotation
+    :parts: 1
+
+
+
+.. autoclass:: EulerRotation
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        alternateSolution
+        asD
+        asDegrees
+        asM
+        asMatrix
+        asQ
+        asQuaternion
+        asTransformation
+        asV
+        asVector
+        asX
+        bound
+        boundIt
+        closestCut
+        closestSolution
+        computeAlternateSolution
+        computeBound
+        computeClosestCut
+        computeClosestSolution
+        decompose
+        incrementalRotateBy
+        inverse
+        invertIt
+        isEquivalent
+        isZero
+        orderStr
+        reorder
+        reorderIt
+        set
+        setToAlternateSolution
+        setToClosestCut
+        setToClosestSolution
+        setValue
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: AXES_TO_ORDER
+    .. autoattribute:: ORDER_TO_AXES
+    .. autoattribute:: ORDER_TO_STR
+    .. autoattribute:: REVERSE_ORDER
+    .. autoattribute:: STR_TO_ORDER
+    .. autoattribute:: Tolerance
+    .. autoattribute:: Zero
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: alternateSolution
+    .. automethod:: asD
+    .. automethod:: asDegrees
+    .. automethod:: asM
+    .. automethod:: asMatrix
+    .. automethod:: asQ
+    .. automethod:: asQuaternion
+    .. automethod:: asTransformation
+    .. automethod:: asV
+    .. automethod:: asVector
+    .. automethod:: asX
+    .. automethod:: bound
+    .. automethod:: boundIt
+    .. automethod:: closestCut
+    .. automethod:: closestSolution
+    .. automethod:: computeAlternateSolution
+    .. automethod:: computeBound
+    .. automethod:: computeClosestCut
+    .. automethod:: computeClosestSolution
+    .. automethod:: decompose
+    .. automethod:: incrementalRotateBy
+    .. automethod:: inverse
+    .. automethod:: invertIt
+    .. automethod:: isEquivalent
+    .. automethod:: isZero
+    .. automethod:: orderStr
+    .. automethod:: reorder
+    .. automethod:: reorderIt
+    .. automethod:: set
+    .. automethod:: setToAlternateSolution
+    .. automethod:: setToClosestCut
+    .. automethod:: setToClosestSolution
+    .. automethod:: setValue
+
+

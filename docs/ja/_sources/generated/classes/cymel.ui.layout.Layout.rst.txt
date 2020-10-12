@@ -1,0 +1,54 @@
+class cymel.ui.layout.Layout
+============================
+
+.. currentmodule:: cymel.ui.layout
+
+
+.. inheritance-diagram:: Layout
+    :parts: 1
+
+
+
+.. autoclass:: Layout
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+        child
+        childNames
+        children
+        clear
+        delete
+        exists
+        makeCurrent
+        numChildren
+        pop
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+    .. automethod:: child
+    .. automethod:: childNames
+    .. automethod:: children
+    .. automethod:: clear
+    .. automethod:: delete
+    .. automethod:: exists
+    .. automethod:: makeCurrent
+    .. automethod:: numChildren
+    .. automethod:: pop
+
+
