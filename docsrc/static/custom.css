@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+body {
+    margin: 0 5px 0 5px;
+}
+
+pre, cite, code, tt {
+    font-family: 'Consolas', 'Deja Vu Sans Mono',
+                 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'sans-serif';
+}
+i, cite, em, var, address, dfn {
+    font-style: normal;
+    font-weight: bold;
+}
+
+h1 {
+    padding: 0.7em 0 0.3em 0.2em;
+    margin-bottom: 0.6em;
+    color: #11557C;
+    border-bottom: 3px solid #11557C;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0.2em 0 0.3em 0.2em;
+    margin-bottom: 0.6em;
+    color: #656565;
+    border-bottom: 1px dotted #999;
+}
+
+h2 {
+    border-bottom: 3px solid #BBB;
+}
+
+h3 {
+    border-bottom: 1px solid #AAA;
+}
+
