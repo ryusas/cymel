@@ -32,6 +32,16 @@ cymel の機能は以下の3つを選択してインポートできます。
 
     from cymel.main import *
 
+スタンドアロン Python (mayapy) で cymel をインポートすると、
+`cymel.initmaya` モジュールの働きによって Maya が初期化されます。
+
+.. note::
+    本来の maya.standalone モジュールの initialize では userSetup.py は呼ばれますが userSetup.mel は呼ばれません。
+    cymel による初期化ではそれを補い、 userSetup.mel も呼ばれるようにしています。
+
+    ちなみに、pymel.core をインポートすると Maya UI を起動したのに近い、さらに多くのことがされます（たとえば、プラグインの自動ロードなど）。
+    cymel では、あえてそこまではやらず、ごく最低限のことに留めています。
+
 
 
 .. _gettingstarted-nodes:

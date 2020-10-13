@@ -132,6 +132,15 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cymel.main</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
+<p>スタンドアロン Python (mayapy) で cymel をインポートすると、
+<a class="reference internal" href="generated/cymel.initmaya.html#module-cymel.initmaya" title="cymel.initmaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cymel.initmaya</span></code></a> モジュールの働きによって Maya が初期化されます。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p>本来の maya.standalone モジュールの initialize では userSetup.py は呼ばれますが userSetup.mel は呼ばれません。
+cymel による初期化ではそれを補い、 userSetup.mel も呼ばれるようにしています。</p>
+<p class="last">ちなみに、pymel.core をインポートすると Maya UI を起動したのに近い、さらに多くのことがされます（たとえば、プラグインの自動ロードなど）。
+cymel では、あえてそこまではやらず、ごく最低限のことに留めています。</p>
+</div>
 </div>
 <div class="section" id="gettingstarted-nodes">
 <span id="id2"></span><h2>ノードのラッパークラス<a class="headerlink" href="#gettingstarted-nodes" title="このヘッドラインへのパーマリンク">¶</a></h2>
