@@ -627,7 +627,8 @@ EulerRotation(0.174533, 0.349066, 0.523599, XYZ)
 
 Transformation
 -------------------------
-`.Transformation` (`.X`) はトランスフォーメーション情報クラスで、Maya API の :mayaapi2:`MTransformation` に似ていますが、もっと洗練されています。
+`.Transformation` (`.X`) はトランスフォーメーション情報クラスで、
+Maya API の :mayaapi2:`MTransformationMatrix` に似ていますが、もっと洗練されています。
 
 Mayaのmatrix型アトリビュートは、単なる「マトリックス」か「トランスフォーメーション情報」かの2種類の形式で情報を持てるようになっています。
 cymelのクラスでいうと `.Matrix` か `.Transformation` です。
