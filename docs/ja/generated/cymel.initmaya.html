@@ -93,16 +93,19 @@
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.initmaya.callUserSetupMel" title="cymel.initmaya.callUserSetupMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callUserSetupMel</span></code></a>()</td>
 <td>最優先の MEL パスに在る <code class="docutils literal notranslate"><span class="pre">userSetup.mel</span></code> を呼び出す。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.initmaya.initCymelPluginsPath" title="cymel.initmaya.initCymelPluginsPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initCymelPluginsPath</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.initmaya.initApiImmutables" title="cymel.initmaya.initApiImmutables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initApiImmutables</span></code></a>()</td>
+<td>Maya API の数学クラスを <a class="reference internal" href="cymel.pyutils.immutable.html#cymel.pyutils.immutable" title="cymel.pyutils.immutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code></a> ラップのための定義をする。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.initmaya.initCymelPluginsPath" title="cymel.initmaya.initCymelPluginsPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initCymelPluginsPath</span></code></a>()</td>
 <td>cymel が同梱する Maya プラグインのパスを設定する。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a>()</td>
 <td>Maya が未初期化なら初期化し True を返す。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.initmaya.initialize" title="cymel.initmaya.initialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialize</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.initmaya.initialize" title="cymel.initmaya.initialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialize</span></code></a>()</td>
 <td>必要な初期化を全て行う。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.initmaya.isMayaInitialized" title="cymel.initmaya.isMayaInitialized"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMayaInitialized</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.initmaya.isMayaInitialized" title="cymel.initmaya.isMayaInitialized"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMayaInitialized</span></code></a>()</td>
 <td>Maya が初期化済みかどうか。</td>
 </tr>
 </tbody>
@@ -137,6 +140,12 @@
 <dt id="cymel.initmaya.callUserSetupMel">
 <code class="descclassname">cymel.initmaya.</code><code class="descname">callUserSetupMel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.callUserSetupMel" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>最優先の MEL パスに在る <code class="docutils literal notranslate"><span class="pre">userSetup.mel</span></code> を呼び出す。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cymel.initmaya.initApiImmutables">
+<code class="descclassname">cymel.initmaya.</code><code class="descname">initApiImmutables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.initApiImmutables" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Maya API の数学クラスを <a class="reference internal" href="cymel.pyutils.immutable.html#cymel.pyutils.immutable" title="cymel.pyutils.immutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code></a> ラップのための定義をする。</p>
 </dd></dl>
 
 <dl class="function">
@@ -175,6 +184,7 @@
 <ul class="simple">
 <li><a class="reference internal" href="#cymel.initmaya.initCymelPluginsPath" title="cymel.initmaya.initCymelPluginsPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initCymelPluginsPath</span></code></a></li>
 <li><a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> and <a class="reference internal" href="#cymel.initmaya.callUserSetupMel" title="cymel.initmaya.callUserSetupMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callUserSetupMel</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.initApiImmutables" title="cymel.initmaya.initApiImmutables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initApiImmutables</span></code></a></li>
 </ul>
 </dd></dl>
 

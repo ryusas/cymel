@@ -3,9 +3,11 @@ u"""
 4x4 マトリックスクラス。
 """
 from ...common import *
+from ...pyutils.immutable import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
+from .vector import V
 import maya.api.OpenMaya as _api2
 
-__all__ = ['Matrix', 'M']
+__all__ = ['Matrix', 'M', 'ImmutableMatrix']
 
 _MM = _api2.MMatrix
 _MQ = _api2.MQuaternion
@@ -16,8 +18,11 @@ _MX = _api2.MTransformationMatrix
 _MSpace_kTransform = _api2.MSpace.kTransform
 _MV_Zero = _MV.kZeroVector
 _MQ_Identity = _MQ.kIdentity
+_MM_Identity = _MM.kIdentity
 
 _TOLERANCE = _MM.kTolerance
+
+_ZERO3 = (0., 0., 0.)
 
 
 #------------------------------------------------------------------------------
@@ -27,13 +32,38 @@ class Matrix(object):
 
     コンストラクタでは以下の値を指定可能。
 
-    - `Matrix`
-    - 16値のシーケンス
+    * `Matrix`
+    * 16値のシーケンス
+
+    * 3つの `.Vector` による 3x3 部分の行ベクトル指定。
+
+      - 追加で4つめの `.Vector` で translate 値の指定。
+      - transpose=True オプションの指定で 3x3 部分の転置。
     """
     __slots__ = ('__data',)
     __hash__ = None
 
-    def __new__(cls, *args):
+    def __new__(cls, *args, **kwargs):
+        n = len(args)
+        if n >= 3:
+            vx = args[0]._Vector__data
+            vy = args[1]._Vector__data
+            vz = args[2]._Vector__data
+            vt = args[3]._Vector__data if n >= 4 else _ZERO3
+            if kwargs.get('transpose'):
+                return _newM(_MM([
+                    vx[0], vy[0], vz[0], 0.,
+                    vx[1], vy[1], vz[1], 0.,
+                    vx[2], vy[2], vz[2], 0.,
+                    vt[0], vt[1], vt[2], 1.,
+                ]), cls)
+            else:
+                return _newM(_MM([
+                    vx[0], vx[1], vx[2], 0.,
+                    vy[0], vy[1], vy[2], 0.,
+                    vz[0], vz[1], vz[2], 0.,
+                    vt[0], vt[1], vt[2], 1.,
+                ]), cls)
         return _newM(_MM(*args), cls)
 
     def __reduce__(self):
@@ -162,6 +192,15 @@ class Matrix(object):
         except:
             return False
 
+    def isIdentity(self, tol=_TOLERANCE):
+        u"""
+        ほぼ単位行列かどうか。
+
+        :param `float` tol: 許容誤差。
+        :rtype: `bool`
+        """
+        return self.__data.isEquivalent(_MM_Identity, tol)
+
     def isSingular(self):
         u"""
         特異行列かどうか。
@@ -185,7 +224,54 @@ class Matrix(object):
         self.__data += _MM([s - d for s, d in zip(v, self.__data)])
         return self
 
-    def getelem(self, row, col):
+    def setToIdentity(self):
+        u"""
+        単位行列をセットする。
+
+        :rtype: `self`
+        """
+        self.__data.setToIdentity()
+        return self
+
+    def init3x3(self):
+        u"""
+        3x3 部分を初期化する。
+
+        4x4 全て初期化する場合は `setToIdentity` が利用できる。
+
+        平行移動成分のみの行列を新規に得たい場合は
+        `asTranslationMatrix` が利用できる。
+
+        :rtype: `Matrix` (self)
+        """
+        dt = self.__data
+        # Fix DoubleAccessorBug:
+        dt -= _MM([
+            dt[0] - 1., dt[1], dt[2], 0.,
+            dt[4], dt[5] - 1., dt[6], 0.,
+            dt[8], dt[9], dt[10] - 1., 0.,
+            0., 0., 0., 0.,
+        ])
+        return self
+
+    def initTranslation(self):
+        u"""
+        4行目の平行移動成分をクリアする。
+
+        3x3 以外を初期化したマトリクスを新規に得たい場合は
+        `as3x3` が利用できる。
+
+        :rtype: `Matrix` (self)
+        """
+        dt = self.__data
+        dt[12] = 0.
+        dt[13] = 0.
+        dt[14] = 0.
+        return self
+
+    initT = initTranslation  #: `initTranslation` の別名。
+
+    def getElem(self, row, col):
         u"""
         指定位置の要素を得る。
 
@@ -195,7 +281,7 @@ class Matrix(object):
         """
         return self[row * 4 + col]
 
-    def setelem(self, row, col, val):
+    def setElem(self, row, col, val):
         u"""
         指定位置の要素をセットする。
 
@@ -211,7 +297,7 @@ class Matrix(object):
 
         :rtype: `.Transformation`
         """
-        return _newX(dict(m=_newM(_MM(self.__data))))
+        return _newX(dict(m=_newM(_MM(self.__data), ImmutableMatrix)))
 
     asX = asTransformation  #: `asTransformation` の別名。
 
@@ -277,7 +363,7 @@ class Matrix(object):
 
     def asScaling(self):
         u"""
-        スケール成分を得る。
+        スケーリング成分を得る。
 
         :rtype: `.Vector`
         """
@@ -287,7 +373,7 @@ class Matrix(object):
 
     def asShearing(self):
         u"""
-        せん断成分を得る。
+        シアー成分を得る。
 
         :rtype: `.Vector`
         """
@@ -476,6 +562,54 @@ class Matrix(object):
             _newV(_MP(d[12], d[13], d[14], d[15])),
         )
 
+    def setRow(self, i, v):
+        u"""
+        行ベクトルをセットする。
+
+        :param `int` i: 行インデックス（0～3）。
+        :type v: `.Vector`
+        :param v: セットする4次元ベクトル。
+        """
+        # Fix DoubleAccessorBug
+        vals = [
+            0., 0., 0., 0.,
+            0., 0., 0., 0.,
+            0., 0., 0., 0.,
+            0., 0., 0., 0.,
+        ]
+        data = self.__data
+        i *= 4
+        vals[i] = v[0] - data[i]
+        i += 1
+        vals[i] = v[1] - data[i]
+        i += 1
+        vals[i] = v[2] - data[i]
+        i += 1
+        vals[i] = v[3] - data[i]
+        data += _MM(vals)
+
+    def setRows(self, v0, v1, v2, v3):
+        u"""
+        行ベクトルを4つ全てセットする。
+
+        :type v0: `.Vector`
+        :param v0: 1行目の4次元ベクトル。
+        :type v1: `.Vector`
+        :param v1: 2行目の4次元ベクトル。
+        :type v2: `.Vector`
+        :param v2: 3行目の4次元ベクトル。
+        :type v3: `.Vector`
+        :param v3: 4行目の4次元ベクトル。
+        """
+        # Fix DoubleAccessorBug
+        m = _MM([
+            v0[0], v0[1], v0[2], v0[3],
+            v1[0], v1[1], v1[2], v1[3],
+            v2[0], v2[1], v2[2], v2[3],
+            v3[0], v3[1], v3[2], v3[3],
+        ])
+        self.__data += m - self.__data
+
     def column(self, i):
         u"""
         列ベクトルを得る。
@@ -499,6 +633,53 @@ class Matrix(object):
             _newV(_MP(d[2], d[6], d[10], d[14])),
             _newV(_MP(d[3], d[7], d[11], d[15])),
         )
+
+    def setColumn(self, i, v):
+        u"""
+        列ベクトルをセットする。
+
+        :param `int` i: 列インデックス（0～3）。
+        :type v: `.Vector`
+        :param v: セットする4次元ベクトル。
+        """
+        # Fix DoubleAccessorBug
+        vals = [
+            0., 0., 0., 0.,
+            0., 0., 0., 0.,
+            0., 0., 0., 0.,
+            0., 0., 0., 0.,
+        ]
+        data = self.__data
+        vals[i] = v[0] - data[i]
+        i += 4
+        vals[i] = v[1] - data[i]
+        i += 4
+        vals[i] = v[2] - data[i]
+        i += 4
+        vals[i] = v[3] - data[i]
+        data += _MM(vals)
+
+    def setColumns(self, v0, v1, v2, v3):
+        u"""
+        列ベクトルを4つ全てセットする。
+
+        :type v0: `.Vector`
+        :param v0: 1列目の4次元ベクトル。
+        :type v1: `.Vector`
+        :param v1: 2列目の4次元ベクトル。
+        :type v2: `.Vector`
+        :param v2: 3列目の4次元ベクトル。
+        :type v3: `.Vector`
+        :param v3: 4列目の4次元ベクトル。
+        """
+        # Fix DoubleAccessorBug
+        m = _MM([
+            v0[0], v1[0], v2[0], v3[0],
+            v0[1], v1[1], v2[1], v3[1],
+            v0[2], v1[2], v2[2], v3[2],
+            v0[3], v1[3], v2[3], v3[3],
+        ])
+        self.__data += m - self.__data
 
     def axis(self, i, transpose=False):
         u"""
@@ -543,6 +724,192 @@ class Matrix(object):
             _newV(_MP(m[8], m[9], m[10])),
         )
 
+    def setAxis(self, i, v, transpose=False):
+        u"""
+        3x3部分の行や列のベクトルをセットする。
+
+        :param `int` i: 軸指定(0=X, 1=Y, 2=Z)。
+        :type v: `.Vector`
+        :param v:
+            セットする軸ベクトル。
+        :param `bool` transpose:
+            転置行列の軸ベクトルをセットする。
+            言い換えると False では行ベクトルを
+            True では列ベクトルをセットすることになる。
+        """
+        # Fix DoubleAccessorBug
+        vals = [
+            0., 0., 0., 0.,
+            0., 0., 0., 0.,
+            0., 0., 0., 0.,
+            0., 0., 0., 0.,
+        ]
+        data = self.__data
+        if transpose:
+            vals[i] = v[0] - data[i]
+            i += 4
+            vals[i] = v[1] - data[i]
+            i += 4
+            vals[i] = v[2] - data[i]
+        else:
+            i *= 4
+            vals[i] = v[0] - data[i]
+            i += 1
+            vals[i] = v[1] - data[i]
+            i += 1
+            vals[i] = v[2] - data[i]
+        data += _MM(vals)
+
+    def setAxes(self, i, vx, vy, vz, vt=V.Zero, transpose=False):
+        u"""
+        3x3部分の行や列と4行目の平行移動ベクトルをセットする。
+
+        :type vx: `.Vector`
+        :param vx: セットするX軸ベクトル。
+        :type vy: `.Vector`
+        :param vy: セットするY軸ベクトル。
+        :type vz: `.Vector`
+        :param vz: セットするZ軸ベクトル。
+        :type vt: `.Vector`
+        :param vt:
+            セットする平行移動ベクトル。
+            これだけは transpose オプションの影響を受けない。
+        :param `bool` transpose:
+            3x3部分には転置行列の軸ベクトルをセットする。
+            言い換えると False では行ベクトルを
+            True では列ベクトルをセットすることになる。
+        """
+        # Fix DoubleAccessorBug
+        if transpose:
+            m = _MM([
+                vx[0], vy[0], vz[0], 0.,
+                vx[1], vy[1], vz[1], 0.,
+                vx[2], vy[2], vz[2], 0.,
+                vt[0], vt[1], vt[2], 1.,
+            ])
+        else:
+            m = _MM([
+                vx[0], vx[1], vx[2], 0.,
+                vy[0], vy[1], vy[2], 0.,
+                vz[0], vz[1], vz[2], 0.,
+                vt[0], vt[1], vt[2], 1.,
+            ])
+        self.__data += m - self.__data
+
+    def mul(self, m):
+        u"""
+        マトリックス要素同士を乗算する。
+
+        :type m: `Matrix`
+        :param m: 乗じるマトリックス。
+        :rtype: `Matrix`
+        """
+        a = self.__data
+        b = m.__data
+        return _newM(_MM([
+            a[0] * b[0], a[1] * b[1], a[2] * b[2], a[3] * b[3],
+            a[4] * b[4], a[5] * b[5], a[6] * b[6], a[7] * b[7],
+            a[8] * b[8], a[9] * b[9], a[10] * b[10], a[11] * b[11],
+            a[12] * b[12], a[13] * b[13], a[14] * b[14], a[15] * b[15],
+        ]))
+
+    def mulIt(self, m):
+        u"""
+        マトリックス要素同士を乗算してセットする。
+
+        :type m: `Matrix`
+        :param m: 乗じるマトリックス。
+        :rtype: `Matrix` (self)
+        """
+        a = self.__data
+        b = m.__data
+        # Fix DoubleAccessorBug:
+        a += _MM([
+            a[0] * b[0] - a[0],
+            a[1] * b[1] - a[1],
+            a[2] * b[2] - a[2],
+            a[3] * b[3] - a[3],
+            a[4] * b[4] - a[4],
+            a[5] * b[5] - a[5],
+            a[6] * b[6] - a[6],
+            a[7] * b[7] - a[7],
+            a[8] * b[8] - a[8],
+            a[9] * b[9] - a[9],
+            a[10] * b[10] - a[10],
+            a[11] * b[11] - a[11],
+            a[12] * b[12] - a[12],
+            a[13] * b[13] - a[13],
+            a[14] * b[14] - a[14],
+            a[15] * b[15] - a[15],
+        ])
+        return self
+
+    def div(self, m, pre=AVOID_ZERO_DIV_PRECISION):
+        u"""
+        マトリックス要素同士を除算する。
+
+        ゼロ除算を避ける為、分母が `.avoidZeroDiv`
+        でフィルタされてから実行される。
+
+        :type m: `Matrix`
+        :param m: 分母のマトリックス。
+        :param `float` pre: ゼロ除算を避ける為の許容誤差。
+        :rtype: `Matrix`
+        """
+        a = self.__data
+        b = m.__data
+        return _newM(_MM([
+            a[0] / avoidZeroDiv(b[0], pre),
+            a[1] / avoidZeroDiv(b[1], pre),
+            a[2] / avoidZeroDiv(b[2], pre),
+            a[3] / avoidZeroDiv(b[3], pre),
+            a[4] / avoidZeroDiv(b[4], pre),
+            a[5] / avoidZeroDiv(b[5], pre),
+            a[6] / avoidZeroDiv(b[6], pre),
+            a[7] / avoidZeroDiv(b[7], pre),
+            a[8] / avoidZeroDiv(b[8], pre),
+            a[9] / avoidZeroDiv(b[9], pre),
+            a[10] / avoidZeroDiv(b[10], pre),
+            a[11] / avoidZeroDiv(b[11], pre),
+            a[12] / avoidZeroDiv(b[12], pre),
+            a[13] / avoidZeroDiv(b[13], pre),
+            a[14] / avoidZeroDiv(b[14], pre),
+            a[15] / avoidZeroDiv(b[15], pre),
+        ]))
+
+    def divIt(self, m, pre=AVOID_ZERO_DIV_PRECISION):
+        u"""
+        各要素同士を除算し自身を更新する。
+
+        ゼロ除算を避ける為、分母が `~Happy.util.avoidZeroDiv`
+        でフィルタされてから実行される。
+
+        :param iterable v: 要素数16個以上のシーケンス。
+        :param `float` pre: ゼロ除算を避ける為の許容誤差。
+        """
+        a = self.__data
+        b = m.__data
+        # Fix DoubleAccessorBug:
+        a += _MM([
+            a[0] / avoidZeroDiv(b[0], pre) - a[0],
+            a[1] / avoidZeroDiv(b[1], pre) - a[1],
+            a[2] / avoidZeroDiv(b[2], pre) - a[2],
+            a[3] / avoidZeroDiv(b[3], pre) - a[3],
+            a[4] / avoidZeroDiv(b[4], pre) - a[4],
+            a[5] / avoidZeroDiv(b[5], pre) - a[5],
+            a[6] / avoidZeroDiv(b[6], pre) - a[6],
+            a[7] / avoidZeroDiv(b[7], pre) - a[7],
+            a[8] / avoidZeroDiv(b[8], pre) - a[8],
+            a[9] / avoidZeroDiv(b[9], pre) - a[9],
+            a[10] / avoidZeroDiv(b[10], pre) - a[10],
+            a[11] / avoidZeroDiv(b[11], pre) - a[11],
+            a[12] / avoidZeroDiv(b[12], pre) - a[12],
+            a[13] / avoidZeroDiv(b[13], pre) - a[13],
+            a[14] / avoidZeroDiv(b[14], pre) - a[14],
+            a[15] / avoidZeroDiv(b[15], pre) - a[15],
+        ])
+        return self
+
     def hasNonUniformScaling(self, tol=_TOLERANCE):
         u"""
         非一様スケーリングが含まれているかどうか。
@@ -557,54 +924,65 @@ class Matrix(object):
         v = xm.scale(_MSpace_kTransform)
         return abs(v[0] - v[1]) > tol or abs(v[0] - v[2]) > tol
 
-    def setT(self, v):
+    def setTranslation(self, v):
         u"""
         平行移動値をセットする。
 
-        :param v: 平行移動ベクトル。
+        :type v: `.Vector`
+        :param v: 平行移動の3次元ベクトル。
         """
         # Fix DoubleAccessorBug
-        self.__data += _MM((
+        data = self.__data
+        data += _MM([
             0., 0., 0., 0.,
             0., 0., 0., 0.,
             0., 0., 0., 0.,
-            v[0] - self.__data[12], v[1] - self.__data[13], v[2] - self.__data[14], 0.,
-        ))
+            v[0] - data[12], v[1] - data[13], v[2] - data[14], 0.,
+        ])
 
-    def addT(self, v):
+    setT = setTranslation  #: `setTranslation` の別名。
+
+    def addTranslation(self, v):
         u"""
         平行移動値を加算する。
 
-        :param v: 平行移動ベクトル。
+        :type v: `.Vector`
+        :param v: 平行移動の3次元ベクトル。
         """
         # Fix DoubleAccessorBug
-        self.__data += _MM((
+        self.__data += _MM([
             0., 0., 0., 0.,
             0., 0., 0., 0.,
             0., 0., 0., 0.,
             v[0], v[1], v[2], 0.,
-        ))
+        ])
 
-    def subT(self, v):
+    addT = addTranslation  #: `addTranslation` の別名。
+
+    def subTranslation(self, v):
         u"""
         平行移動値を減算する。
 
-        :param v: 平行移動ベクトル。
+        :type v: `.Vector`
+        :param v: 平行移動の3次元ベクトル。
         """
         # Fix DoubleAccessorBug
-        self.__data -= _MM((
+        self.__data -= _MM([
             0., 0., 0., 0.,
             0., 0., 0., 0.,
             0., 0., 0., 0.,
             v[0], v[1], v[2], 0.,
-        ))
+        ])
+
+    subT = subTranslation  #: `subTranslation` の別名。
 
     @classmethod
-    def makeT(cls, v):
+    def makeTranslation(cls, v):
         u"""
         平行移動行列を作成する。
 
-        :param v: translate値 (x, y, z)
+        :type v: `.Vector`
+        :param v: 平行移動の3次元ベクトル。
         :rtype: `Matrix`
         """
         return cls([
@@ -614,12 +992,15 @@ class Matrix(object):
             v[0], v[1], v[2], 1.,
         ])
 
+    makeT = makeTranslation  #: `makeTranslation` の別名。
+
     @classmethod
-    def makeInvT(cls, v):
+    def makeInverseTranslation(cls, v):
         u"""
         平行移動の逆行列を作成する。
 
-        :param v: translate値 (x, y, z)
+        :type v: `.Vector`
+        :param v: 平行移動の3次元ベクトル。
         :rtype: `Matrix`
         """
         return cls([
@@ -629,12 +1010,15 @@ class Matrix(object):
             -v[0], -v[1], -v[2], 1.,
         ])
 
-    @classmethod
-    def makeS(cls, v):
-        u"""
-        スケール行列を作成する。
+    makeInvT = makeInverseTranslation  #: `makeInverseTranslation` の別名。
 
-        :param v: scale値 (x, y, z)
+    @classmethod
+    def makeScaling(cls, v):
+        u"""
+        スケーリング行列を作成する。
+
+        :type v: `.Vector`
+        :param v: スケール値の3次元ベクトル。
         :rtype: `Matrix`
         """
         return cls([
@@ -644,12 +1028,15 @@ class Matrix(object):
             0., 0., 0., 1.,
         ])
 
-    @classmethod
-    def makeInvS(cls, v, pre=AVOID_ZERO_DIV_PRECISION):
-        u"""
-        スケールの逆行列を作成する。
+    makeS = makeScaling  #: `makeScaling` の別名。
 
-        :param v: scale値 (x, y, z)
+    @classmethod
+    def makeInverseScaling(cls, v, pre=AVOID_ZERO_DIV_PRECISION):
+        u"""
+        スケーリングの逆行列を作成する。
+
+        :type v: `.Vector`
+        :param v: スケール値の3次元ベクトル。
         :param `float` pre: ゼロ除算を避ける為の許容誤差。
         :rtype: `Matrix`
         """
@@ -660,12 +1047,15 @@ class Matrix(object):
             0., 0., 0., 1.,
         ])
 
-    @classmethod
-    def makeSh(cls, v):
-        u"""
-        せん断行列を作成する。
+    makeInvS = makeInverseScaling  #: `makeInverseScaling` の別名。
 
-        :param v: Shear値 (xy, yz, yx)
+    @classmethod
+    def makeShearing(cls, v):
+        u"""
+        シアー行列を作成する。
+
+        :type v: `.Vector`
+        :param v: シアー値 (xy, yz, yx)
         :rtype: `Matrix`
         """
         return cls([
@@ -675,12 +1065,15 @@ class Matrix(object):
             0., 0., 0., 1.,
         ])
 
-    @classmethod
-    def makeInvSh(cls, v):
-        u"""
-        せん断の逆行列を作成する。
+    makeSh = makeShearing  #: `makeShearing` の別名。
 
-        :param v: Shear値 (xy, yz, yx)
+    @classmethod
+    def makeInverseShearing(cls, v):
+        u"""
+        シアーの逆行列を作成する。
+
+        :type v: `.Vector`
+        :param v: シアー値 (xy, yz, yx)
         :rtype: `Matrix`
         """
         return cls([
@@ -690,7 +1083,82 @@ class Matrix(object):
             0., 0., 0., 1.,
         ])
 
+    makeInvSh = makeInverseShearing  #: `makeInverseShearing` の別名。
+
+    def mirror(self, mirrorAxis=AXIS_X, negAxis=True, t=True):
+        u"""
+        指定軸方向でミラーしたマトリックスを得る。
+
+        :param `int` mirrorAxis:
+            ミラーする基準軸。
+            `.AXIS_X` 、 `.AXIS_Y` 、 `.AXIS_Z` のいずれかを指定する。
+        :param `int` negAxis:
+            行列式（スケール）が反転しないように、
+            ミラー結果の逆を向けるローカル軸。
+            `.AXIS_X` 、 `.AXIS_Y` 、 `.AXIS_Z` の他に、
+            None 、 False 、 True を指定可能。
+
+            省略時(True)はミラー基準軸と同じになる。
+            False では 3x3 部は反転しない。
+            None ではミラー結果から全軸を逆に向ける。
+        :param `bool` t:
+            平行移動値（4行目）も反転するかどうか。
+        :rtype: `Matrix`
+        """
+        return _newM(_mirror(self.__data, mirrorAxis, negAxis, t))
+
+    def mirrorIt(self, mirrorAxis=AXIS_X, negAxis=True, t=True):
+        u"""
+        指定軸方向でミラーしたマトリックスをセットする。
+
+        :param `int` mirrorAxis:
+            ミラーする基準軸。
+            `.AXIS_X` 、 `.AXIS_Y` 、 `.AXIS_Z` のいずれかを指定する。
+        :param `int` negAxis:
+            行列式（スケール）が反転しないように、
+            ミラー結果の逆を向けるローカル軸。
+            `.AXIS_X` 、 `.AXIS_Y` 、 `.AXIS_Z` の他に、
+            None 、 False 、 True を指定可能。
+
+            省略時(True)はミラー基準軸と同じになる。
+            False では 3x3 部は反転しない。
+            None ではミラー結果から全軸を逆に向ける。
+        :param `bool` t:
+            平行移動値（4行目）も反転するかどうか。
+        :rtype: `Matrix` (self)
+        """
+        self.__data = _mirror(self.__data, mirrorAxis, negAxis, t)
+        return self
+
 M = Matrix  #: `Matrix` の別名。
+
+_MUTATOR_DICT[M] = (
+    'set',
+    'setToIdentity',
+    'init3x3',
+    'initTranslation',
+    'initT',
+    'setElem',
+    'transposeIt',
+    'invertIt',
+    'adjointIt',
+    'homogenizeIt',
+    'setRow',
+    'setRows',
+    'setColumn',
+    'setColumns',
+    'setAxis',
+    'setAxes',
+    'mulIt'
+    'divIt'
+    'setTranslation',
+    'setT',
+    'addTranslation',
+    'addT',
+    'subTranslation',
+    'subT',
+)
+ImmutableMatrix = immutableType(M)  #: `Matrix` の `immutable` ラッパー。
 
 
 def _newM(data, cls=M):
@@ -703,6 +1171,48 @@ _M_setdata = M._Matrix__data.__set__
 
 M.Tolerance = _TOLERANCE  #: 同値とみなす許容誤差。
 
-M.Identity = immutable(M())  #: 単位行列。
-M.Zero = immutable(M([0] * 16))  #: ゼロ。
+M.Identity = ImmutableMatrix()  #: 単位行列。
+M.Zero = ImmutableMatrix([0] * 16)  #: ゼロ。
+
+
+#------------------------------------------------------------------------------
+def _mirror(d, mirrorAxis, negAxis, t):
+    if mirrorAxis is AXIS_X:
+        t = -d[12] if t else d[12]
+        if negAxis is mirrorAxis or negAxis is True:
+            return _MM([d[0], -d[1], -d[2], 0., -d[4], d[5], d[6], 0., -d[8], d[9], d[10], 0., t, d[13], d[14], 1.])
+        elif negAxis is None:
+            return _MM([d[0], -d[1], -d[2], 0., d[4], -d[5], -d[6], 0., d[8], -d[9], -d[10], 0., t, d[13], d[14], 1.])
+        elif negAxis is AXIS_Y:
+            return _MM([-d[0], d[1], d[2], 0., d[4], -d[5], -d[6], 0., -d[8], d[9], d[10], 0., t, d[13], d[14], 1.])
+        elif negAxis is AXIS_Z:
+            return _MM([-d[0], d[1], d[2], 0., -d[4], d[5], d[6], 0., d[8], -d[9], -d[10], 0., t, d[13], d[14], 1.])
+        else:
+            return _MM([d[0], d[1], d[2], 0., d[4], d[5], d[6], 0., d[8], d[9], d[10], 0., t, d[13], d[14], 1.])
+
+    elif mirrorAxis is AXIS_Y:
+        t = -d[13] if t else d[13]
+        if negAxis is mirrorAxis or negAxis is True:
+            return _MM([d[0], -d[1], d[2], 0., -d[4], d[5], -d[6], 0., d[8], -d[9], d[10], 0., d[12], t, d[14], 1.])
+        elif negAxis is None:
+            return _MM([-d[0], d[1], -d[2], 0., -d[4], d[5], -d[6], 0., -d[8], d[9], -d[10], 0., d[12], t, d[14], 1.])
+        elif negAxis is AXIS_X:
+            return _MM([-d[0], d[1], -d[2], 0., d[4], -d[5], d[6], 0., d[8], -d[9], d[10], 0., d[12], t, d[14], 1.])
+        elif negAxis is AXIS_Z:
+            return _MM([d[0], -d[1], d[2], 0., d[4], -d[5], d[6], 0., -d[8], d[9], -d[10], 0., d[12], t, d[14], 1.])
+        else:
+            return _MM([d[0], d[1], d[2], 0., d[4], d[5], d[6], 0., d[8], d[9], d[10], 0., d[12], t, d[14], 1.])
+
+    else:  # AXIS_Z
+        t = -d[14] if t else d[14]
+        if negAxis is mirrorAxis or negAxis is True:
+            return _MM([d[0], d[1], -d[2], 0., d[4], d[5], -d[6], 0., -d[8], -d[9], d[10], 0., d[12], d[13], t, 1.])
+        elif negAxis is None:
+            return _MM([-d[0], -d[1], d[2], 0., -d[4], -d[5], d[6], 0., -d[8], -d[9], d[10], 0., d[12], d[13], t, 1.])
+        elif negAxis is AXIS_X:
+            return _MM([-d[0], -d[1], d[2], 0., d[4], d[5], -d[6], 0., d[8], d[9], -d[10], 0., d[12], d[13], t, 1.])
+        elif negAxis is AXIS_Y:
+            return _MM([d[0], d[1], -d[2], 0., -d[4], -d[5], d[6], 0., d[8], d[9], -d[10], 0., d[12], d[13], t, 1.])
+        else:
+            return _MM([d[0], d[1], d[2], 0., d[4], d[5], d[6], 0., d[8], d[9], d[10], 0., d[12], d[13], t, 1.])
 

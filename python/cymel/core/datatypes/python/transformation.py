@@ -3,13 +3,20 @@ u"""
 トランスフォーメーション情報クラス。
 """
 from ...common import *
-from .eulerrotation import E, _newE
-from .matrix import M, _newM
-from .quaternion import Q, _newQ
-from .vector import V, _newV
+from ...pyutils.immutable import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
+from .eulerrotation import E, ImmutableEulerRotation, _newE
+from .matrix import M, ImmutableMatrix, _newM
+from .quaternion import Q, ImmutableQuaternion, _newQ
+from .vector import V, ImmutableVector, _newV
 import maya.api.OpenMaya as _api2
 
-__all__ = ['Transformation', 'X']
+__all__ = ['Transformation', 'X', 'ImmutableTransformation']
+
+_newIE = partial(_newE, cls=ImmutableEulerRotation)
+_newIM = partial(_newM, cls=ImmutableMatrix)
+_newIQ = partial(_newQ, cls=ImmutableQuaternion)
+_newIV = partial(_newV, cls=ImmutableVector)
+del _newE, _newM, _newQ, _newV
 
 _MP = _api2.MPoint
 _MV = _api2.MVector
@@ -26,6 +33,9 @@ _M_makeSh = M.makeSh
 _M_makeInvS = M.makeInvS
 
 _Q_Identity = Q.Identity
+_E_Zero = E.Zero
+_V_Zero = V.Zero
+_V_One = V.One
 _TOLERANCE = M.Tolerance
 
 
@@ -38,11 +48,11 @@ class Transformation(object):
     マトリックスの値そのものの他に、
     トランスフォーメーション情報をストアすることができる。
     本クラスではそれに対応し、
-    アトリビュートがデータを持っていれば、
+    プラグがデータを持っていれば、
     このオブジェクトを直接 `~.Plug.get` することができる
     （持っている情報に応じて `.Matrix` や
     `Transformation` 、あるいは None が得られる）。
-    また、このオブジェクトを直接 `~.Plug.set` することもできる。
+    また、このオブジェクトをプラグに直接 `~.Plug.set` することもできる。
 
     さらに、本クラスは、
     トランスフォーメーション要素をマトリックスに合成したり、
@@ -108,6 +118,13 @@ class Transformation(object):
       合成されたマトリックス値。
 
       - matrix (m) (`.Matrix`)
+
+    各属性値は、自由に参照したり、セットしたりすることができるが、
+    `.immutable` でラップされた変更不可な値となっている。
+    つまり、それ自身を変更するメソッドを使用することはできない。
+    たとえば ``r`` をリオーダーするには `.EulerRotation.reorderIt`
+    を呼ぶとエラーになるので `.EulerRotation.reorder` で得たものを
+    セットし直すか ``ro`` をセットする。
 
     基本トランスフォーメーション要素属性か
     トランスフォーメーション修飾属性をセットすると、
@@ -189,7 +206,7 @@ class Transformation(object):
         if e:
             ro = data.get('ro')
             if ro is not None and e.order != ro:
-                e.reorderIt(ro)
+                data['r'] = _newIE(e._EulerRotation__data.reorder(ro))
 
         # デフォルト値のトランスフォーメーション修飾属性は削除。
         return _newX(dict([kv for kv in data.items() if kv[1] != _MOD_ATTR_DICT_get(kv[0])]), cls)
@@ -250,11 +267,8 @@ class Transformation(object):
         if hasattr(v, '_Transformation__data'):
             v = v.m
         x = self.__copy()
-        if True:
-        #try:
+        if not v.isIdentity():
             _multMatrix(x.__data, v._Matrix__data)
-        #except:
-        #    raise ValueError("%s * %r" % (type(self).__name__, v))
         return x
 
     def isEquivalent(self, v, tol=_TOLERANCE):
@@ -310,7 +324,7 @@ class Transformation(object):
             - 4 以上だと matrix の位置。
         """
         if at < 1:
-            return _newV(_MP())
+            return _V_Zero
 
         data = self.__data
         get = data.get
@@ -321,8 +335,8 @@ class Transformation(object):
             if at < 4:
                 p = get('sp')
                 if p:
-                    return _newV(p._Vector__data * m)
-            return _newV(_MP(m[12], m[13], m[14]))
+                    return _newIV(p._Vector__data * m)
+            return _newIV(_MP(m[12], m[13], m[14]))
 
         p = _MP(_decomposeM(data, 't'))
 
@@ -344,7 +358,7 @@ class Transformation(object):
                         v *= _MM_makeInvS(s)
                 p += v
 
-        return _newV(p)
+        return _newIV(p)
 
     def getSetAttrCmds(self):
         u"""
@@ -393,6 +407,11 @@ class Transformation(object):
         return cls(**kwargs)
 
 X = Transformation  #: `Transformation` の別名。
+
+_MUTATOR_DICT[X] = (
+    'clear',
+)
+ImmutableTransformation = immutableType(X)  #: `Transformation` の `immutable` ラッパー。
 
 
 def _newX(data, cls=X):
@@ -443,28 +462,28 @@ _ATTRS_TO_COMPARE_NO_IS = tuple([x for x in _ATTRS_TO_COMPARE_NO_SSC if x != 'is
 
 
 def _inputQ(v):
-    return _newQ(_ME(v).asQuaternion()) if len(v) is 3 else Q(v)
+    return _newIQ(_ME(v).asQuaternion()) if len(v) is 3 else ImmutableQuaternion(v)
 
 _SRC_FILTER_DICT = {
-    'm': M,
+    'm': ImmutableMatrix,
 
-    't': V,
+    't': ImmutableVector,
     'q': _inputQ,
-    'r': E,
-    'sh': V,
-    's': V,
+    'r': ImmutableEulerRotation,
+    'sh': ImmutableVector,
+    's': ImmutableVector,
 
     #'ro': int,
 
     #'ssc': bool,
-    'is': V,
+    'is': ImmutableVector,
     'jo': _inputQ,
     'ra': _inputQ,
-    'rp': V,
-    'rpt': V,
-    'sp': V,
-    'spt': V,
-}
+    'rp': ImmutableVector,
+    'rpt': ImmutableVector,
+    'sp': ImmutableVector,
+    'spt': ImmutableVector,
+}  #: 属性セット時のフィルタ。
 _SRC_FILTER_DICT.update([
     (_TO_LONGNAME[x], y) for x, y in _SRC_FILTER_DICT.items()])
 _SRC_FILTER_DICT['is_'] = _SRC_FILTER_DICT['is']
@@ -472,14 +491,14 @@ _SRC_FILTER_DICT_get = _SRC_FILTER_DICT.get
 
 _MOD_ATTR_DICT = {
     'ssc': True,
-    'is': V(1., 1., 1.),
-    'jo': Q(),
-    'ra': Q(),
-    'rp': V(),
-    'rpt': V(),
-    'sp': V(),
-    'spt': V(),
-}
+    'is': _V_One,
+    'jo': _Q_Identity,
+    'ra': _Q_Identity,
+    'rp': _V_Zero,
+    'rpt': _V_Zero,
+    'sp': _V_Zero,
+    'spt': _V_Zero,
+}  #: 修飾属性のデフォルト辞書。
 _MOD_ATTR_DICT_get = _MOD_ATTR_DICT.get
 
 
@@ -587,18 +606,18 @@ def _multMatrix(data, pm):
     m = _MM(m._Matrix__data) if m else _compute_api2_M(get)
 
     # 維持したい現在の local translate 位置。
-    sp, spt_rp, rp_offset, sscm, sscim = _prepareToComputeT(get)
-    last_t = _computeT(m, sp, spt_rp, rp_offset, sscm, sscim)[0]
+    sp, spt_rp, rp_offset, sscm, sscim = _prepareTo_compute_api2_T(get)
+    last_t = _compute_api2_T(m, sp, spt_rp, rp_offset, sscm, sscim)[0]
     #last_t = _MP(_decomposeM(data, 't'))
 
     # 現在のマトリックスに指定されたマトリックスを乗じる。
     m *= pm
-    mat = _newM(m)
+    mat = _newIM(m)
     #_clearElemAttrs(data)
     #data['m'] = mat
 
     # マトリックスを乗じた後の仮の local translate 位置。
-    cur_t, rim = _computeT(m, sp, spt_rp, rp_offset, sscm, sscim)
+    cur_t, rim = _compute_api2_T(m, sp, spt_rp, rp_offset, sscm, sscim)
     #cur_t = _MP(_decomposeM(data, 't'))
 
     # spt を調整して rotatePivot 位置を合わせる。matrix を維持すれば scalePivot 位置はずれない。
@@ -617,7 +636,7 @@ def _multMatrix(data, pm):
         if _MP_Origin_isEquivalent(spt):
             data.pop('spt', None)
         else:
-            data['spt'] = _newV(spt)
+            data['spt'] = _newIV(spt)
 
     # rpt を調整して translate 位置を合わせる。matrix を維持すれば rotatePivot 位置はずれない。
     v = _MV(last_t * pm - cur_t)
@@ -631,16 +650,16 @@ def _multMatrix(data, pm):
     if _MP_Origin_isEquivalent(rpt):
         data.pop('rpt', None)
     else:
-        data['rpt'] = _newV(rpt)
+        data['rpt'] = _newIV(rpt)
 
     # matrix を維持。
     _clearElemAttrs(data)
     data['m'] = mat
 
 
-def _prepareToComputeT(get):
+def _prepareTo_compute_api2_T(get):
     u"""
-    補助属性から computeT のための情報を事前に計算する。
+    補助属性から _compute_api2_T のための情報を事前に計算する。
     """
     # ssc
     ssc = get('ssc', True) and get('is')
@@ -688,7 +707,7 @@ def _prepareToComputeT(get):
     return sp, spt_rp, rp_offset, sscm, sscim
 
 
-def _computeT(m, sp, spt_rp, rp_offset, sscm, sscim):
+def _compute_api2_T(m, sp, spt_rp, rp_offset, sscm, sscim):
     u"""
     マトリックスと補助属性から t を計算する。
 
@@ -754,10 +773,10 @@ def _decomposeM(data, name):
         xm = _MX(m)
 
     s = xm.scale(_MSpace_kTransform)
-    data['s'] = _newV(_MP(s))
+    data['s'] = _newIV(_MP(s))
 
     sh = xm.shear(_MSpace_kTransform)
-    data['sh'] = _newV(_MP(sh))
+    data['sh'] = _newIV(_MP(sh))
 
     q = xm.rotation(True)
 
@@ -800,7 +819,7 @@ def _decomposeM(data, name):
     # ピボットによる効果を差し引いて translate を分解。
     t = _MP(m[12], m[13], m[14])  # ssc 無視した値。
     t -= pv
-    data['t'] = _newV(t)
+    data['t'] = _newIV(t)
 
     # quaternion (rotate) を分解。
     ra = get('ra')
@@ -809,7 +828,7 @@ def _decomposeM(data, name):
     jo = get('jo')
     if jo:
         q *= jo._Quaternion__data.conjugate()
-    data['q'] = _newQ(q)
+    data['q'] = _newIQ(q)
 
     return data[name]
 
@@ -820,21 +839,17 @@ def _getM(data):
     matrix 属性値を得るか、要素から合成する。
     """
     get = data.get
-
     m = get('m')
-    if m:
-        return M(m)
-
-    m = _compute_api2_M(get)
-    if m:
-        data['m'] = _newM(m)
-        return _newM(_MM(m))
-    else:
-        data['m'] = _newM(_MM())
-        return _newM(_MM())
+    if not m:
+        m = _newIM(_compute_api2_M(get))
+        data['m'] = m
+    return m
 
 
 def _compute_api2_M(get):
+    u"""
+    トランスフォーメーション属性から MMatrix を計算する。
+    """
     # -sp s sh sp spt -rp ra r jo rp rpt -is t
 
     # scale と shear を計算。
@@ -935,88 +950,73 @@ def _getQ(data):
     u"""
     quaternion 属性値を得るか、マトリックスから分解する。
     """
-    get = data.get
-    q = get('q')
+    q = data.get('q')
     if q:
-        return Q(q)
+        return q
 
-    e = get('r')
+    e = data.get('r')
     if e:
-        q = e.asQ()
-        data['q'] = q
-        return Q(q)
-
-    q = _decomposeM(data, 'q')
-    if q:
-        return Q(q)
-    data['q'] = Q()
-    return Q()
+        q = _newIQ(e._EulerRotation__data.asQuaternion())
+    else:
+        q = _decomposeM(data, 'q') or _Q_Identity
+    data['q'] = q
+    return q
 
 
 def _getR(data):
     u"""
     rotate 属性値を得るか、マトリックスから分解する。
     """
-    get = data.get
-    e = get('r')
+    e = data.get('r')
     if e:
-        return E(e)
+        return e
 
+    ro = data.pop('ro', XYZ)  # r に持たせるので ro は削除。
     q = _decomposeM(data, 'q')
     if q:
-        e = q.asE(data.pop('ro', XYZ))
-        data['r'] = e
-        return E(e)
-
-    data['r'] = E()
-    return E()
+        if ro == XYZ:
+            e = _newIE(q._Quaternion__data.asEulerRotation())
+        else:
+            e = _ME(0., 0., 0., ro)
+            e.setValue(q._Quaternion__data)
+            e = _newIE(e)
+    else:
+        if ro == XYZ:
+            return _E_Zero
+        e = _newIE(_ME(0., 0., 0., ro))
+    data['r'] = e
+    return e
 
 
 def _getT(data):
     u"""
     translate 属性値を得るか、マトリックスから分解する。
     """
-    t = _decomposeM(data, 't')
-    if t:
-        return V(t)
-    data['t'] = V()
-    return V()
+    return _decomposeM(data, 't') or _V_Zero
 
 
 def _getS(data):
     u"""
     scale 属性値を得るか、マトリックスから分解する。
     """
-    s = _decomposeM(data, 's')
-    if s:
-        return V(s)
-    data['s'] = V(1., 1., 1.)
-    return V(1., 1., 1.)
+    return _decomposeM(data, 's') or _V_One
 
 
 def _getSh(data):
     u"""
     shear 属性値を得るか、マトリックスから分解する。
     """
-    sh = _decomposeM(data, 'sh')
-    if sh:
-        return V(sh)
-    data['sh'] = V()
-    return V()
+    return _decomposeM(data, 'sh') or _V_Zero
 
 
 def _getRO(data):
     u"""
     rotateOrder 属性値を得る。
     """
-    ro = data.get('ro')
-    if ro is None:
-        e = data.get('r')
-        if e is None:
-            data['ro'] = XYZ
-            return XYZ
+    e = data.get('r')
+    if e:
         return e.order
-    return ro
+    return data.get('ro', XYZ)
 
 
 _GETTER_DICT = {
@@ -1031,13 +1031,13 @@ _GETTER_DICT = {
     'ro': _getRO,
 
     'ssc': lambda d: d.get('ssc', True),
-    'is': lambda d: (d.get('spt') or V(1., 1., 1.)),
-    'jo': lambda d: (d.get('jo') or Q()),
-    'ra': lambda d: (d.get('ra') or Q()),
-    'rp': lambda d: (d.get('rp') or V()),
-    'rpt': lambda d: (d.get('rpt') or V()),
-    'sp': lambda d: (d.get('sp') or V()),
-    'spt': lambda d: (d.get('spt') or V()),
+    'is': lambda d: d.get('spt', _V_One),
+    'jo': lambda d: d.get('jo', _Q_Identity),
+    'ra': lambda d: d.get('ra', _Q_Identity),
+    'rp': lambda d: d.get('rp', _V_Zero),
+    'rpt': lambda d: d.get('rpt', _V_Zero),
+    'sp': lambda d: d.get('sp', _V_Zero),
+    'spt': lambda d: d.get('spt', _V_Zero),
 }
 _GETTER_DICT.update([
     (_TO_LONGNAME[x], y) for x, y in _GETTER_DICT.items()])
@@ -1066,9 +1066,8 @@ def _setQ(data, v):
     if not (_decomposeM(data, 'q') or _Q_Identity).isEquivalent(v):
         data.pop('m', None)
         r = data.pop('r', None)
-        ro = r.order if r else data.get('ro')
-        if ro:
-            data['ro'] = ro
+        if r and r.order:
+            data['ro'] = r.order
     data['q'] = v
 
 
@@ -1076,7 +1075,7 @@ def _setR(data, v):
     u"""
     rotate 属性のセット処理。
     """
-    v = E(v)
+    v = ImmutableEulerRotation(v)
     if not (_decomposeM(data, 'q') or _Q_Identity).isEquivalent(v.asQ()):
         data.pop('m', None)
         data.pop('q', None)
@@ -1087,7 +1086,7 @@ def _setM(data, v):
     u"""
     matrix 属性のセット処理。
     """
-    v = M(v)
+    v = ImmutableMatrix(v)
     m = data.get('m')
     if not(m and m.isEquivalent(v)):
         _clearElemAttrs(data)
@@ -1101,9 +1100,8 @@ def _clearElemAttrs(data):
     pop('sh', None)
     pop('s', None)
     r = pop('r', None)
-    ro = r.order if r else data.get('ro')
-    if ro:
-        data['ro'] = ro
+    if r and r.order:
+        data['ro'] = r.order
 
 
 def _makeSetAttrProc(name):
@@ -1124,10 +1122,12 @@ def _makeSetAttrProc(name):
         v = toVal(v)
         val = data.get(name)
         if val is None:
+            # 値を持っておらず、セットされる値もデフォルト値ならスルーする。
             if default_isEquivalent(v):
                 return
             data[name] = v
         else:
+            # セットする値が今の値と同じならスルーする。
             if isEquivalent(val, v):
                 return
             if default_isEquivalent(v):
@@ -1145,7 +1145,8 @@ def _setRO(data, v=XYZ):
     """
     e = data.get('r')
     if e:
-        e.reorderIt(v)
+        if e.order != v:
+            data['r'] = _newIE(e._EulerRotation__data.reorder(v))
     elif v == XYZ:
         data.pop('ro', None)
     else:
@@ -1158,11 +1159,11 @@ def _setRO(data, v=XYZ):
 _SETTER_DICT = {
     'm': _setM,
 
-    't': _makeSetElemProc('t', V()),
+    't': _makeSetElemProc('t', _V_Zero),
     'q': _setQ,
     'r': _setR,
-    'sh': _makeSetElemProc('sh', V()),
-    's': _makeSetElemProc('s', V(1., 1., 1.)),
+    'sh': _makeSetElemProc('sh', _V_Zero),
+    's': _makeSetElemProc('s', _V_One),
 
     'ro': _setRO,
 

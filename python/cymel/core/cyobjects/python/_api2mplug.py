@@ -983,8 +983,8 @@ _ATTR_TO_VAL_DICT = {
     'string': lambda x: (None if x.isNull() else _dataTo_string(x)),
 
     'matrix': lambda x: (None if x.isNull() else _dataTo_xformmatrix(x)),
-    'at:matrix': lambda x: (None if x.isNull() else _dataTo_matrix(x)),
-    'fltMatrix': lambda x: (None if x.isNull() else _dataTo_matrix(x)),
+    'at:matrix': Matrix,  #lambda x: (None if x.isNull() else _dataTo_matrix(x)),
+    'fltMatrix': Matrix,  #lambda x: (None if x.isNull() else _dataTo_matrix(x)),
 
     'short2': list,
     'short3': list,
@@ -1112,8 +1112,10 @@ def _dataFrom_xformmatrix(val):
         return _2_MFnMatrixData().create(val._Matrix__data if val else _2_MMatrix())
 
 
-def _dataFrom_matrix(val):
-    return _2_MFnMatrixData().create(val._Matrix__data if val else _2_MMatrix())
+#def _dataFrom_matrix(val):
+#    return _2_MFnMatrixData().create(val._Matrix__data if val else _2_MMatrix())
+def _valueFrom_matrix(val):
+    return val._Matrix__data if val else _2_MMatrix()
 
 
 def _dataFrom_string(val):
@@ -1170,8 +1172,8 @@ _VAL_TO_ATTR_DICT = {
     'string': _dataFrom_string,
 
     'matrix': _dataFrom_xformmatrix,
-    'at:matrix': _dataFrom_matrix,
-    'fltMatrix': _dataFrom_matrix,
+    'at:matrix': _valueFrom_matrix,
+    'fltMatrix': _valueFrom_matrix,
 
     'stringArray': _dataFrom_stringArray,
     'doubleArray': _dataFrom_doubleArray,
@@ -1326,6 +1328,10 @@ def _setApiVal_mobject(mplug, v):
     mplug.setMObject(v)
 
 
+def _setApiVal_mmatrix(mplug, v):
+    mplug.setMObject(_2_MFnMatrixData().create(v))
+
+
 def _setApiVal_bool(mplug, v):
     mplug.setBool(v)
 
@@ -1372,6 +1378,9 @@ def _makeNumDataSetter(numType):
 
 
 _MPLUG_SETAPIVAL_DICT = {
+    'at:matrix': _setApiVal_mmatrix,
+    'fltMatrix': _setApiVal_mmatrix,
+
     'bool': _setApiVal_bool,
     'char': _setApiVal_char,
     'byte': _setApiVal_char,

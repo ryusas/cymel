@@ -48,11 +48,13 @@ def initialize():
 
     - `initCymelPluginsPath`
     - `initMaya` and `callUserSetupMel`
+    - `initApiImmutables`
     """
     global _NOT_INITIALIZED
     if _NOT_INITIALIZED:
         initCymelPluginsPath()
         initMaya() and callUserSetupMel()
+        initApiImmutables()
         _NOT_INITIALIZED = False
 _NOT_INITIALIZED = True
 
@@ -112,6 +114,64 @@ def callUserSetupMel():
     if mel_eval('exists userSetup'):
         mel_eval('source userSetup')
         print('# userSetup.mel is done.')
+
+
+def initApiImmutables():
+    u"""
+    Maya API の数学クラスを `.immutable` ラップのための定義をする。
+    """
+    from .pyutils.immutable import OPTIONAL_MUTATOR_DICT
+    import maya.api.OpenMaya as api2
+    import maya.OpenMaya as api1
+
+    def setApiNames(name, attrs, api1ignores=None):
+        cls = getattr(api2, name)
+        #for x in attrs:
+        #    if not hasattr(cls, x):
+        #        warning("API2 %s does not have '%s'" % (name, x))
+        OPTIONAL_MUTATOR_DICT[cls] = attrs
+
+        cls = getattr(api1, name)
+        if api1ignores:
+            attrs = [x for x in attrs if x not in api1ignores]
+        #for x in attrs:
+        #    if not hasattr(cls, x):
+        #        warning("API1 %s does not have '%s'" % (name, x))
+        OPTIONAL_MUTATOR_DICT[cls] = attrs
+
+    setApiNames('MVector', (
+        'normalize',
+    ))
+    setApiNames('MPoint', (
+        'cartesianize',
+        'rationalize',
+        'homogenize',
+    ))
+    setApiNames('MEulerRotation', (
+        'boundIt',
+        'incrementalRotateBy',
+        'invertIt',
+        'reorderIt',
+        'setToAlternateSolution',
+        'setToClosestCut',
+        'setToClosestSolution',
+        'setValue',
+    ))
+    setApiNames('MQuaternion', (
+        'conjugateIt',
+        'invertIt',
+        'negateIt',
+        'normalizeIt',
+        'setToXAxis',
+        'setToYAxis',
+        'setToZAxis',
+        'setValue',
+    ), ('setValue',))
+    setApiNames('MMatrix', (
+        'setElement',
+        'setToIdentity',
+        'setToProduct',
+    ), ('setElement',))
 
 
 #------------------------------------------------------------------------------

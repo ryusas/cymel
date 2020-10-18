@@ -55,16 +55,20 @@ def _makeImmutableWrapper(cls, clsname):
     """
     attrDict = {}
 
+    # クラスごとに決められた追加ミューテーターを封じる。
+    nameSet = set()
+    for base in cls.mro()[:-1]:
+        names = OPTIONAL_MUTATOR_DICT.get(base)
+        if names:
+            nameSet.update(names)
+    for name in nameSet:
+        func = _immutableFunc(name)
+        attrDict[name] = func
+
     # __特殊名__ のミューテーターを封じる。
     for name in _SPECIAL_MUTATOR_NAMES:
         if hasattr(cls, name):
             attrDict[name] = _immutableFunc(name)
-
-    # クラスごとに決められた追加ミューテーターを封じる。
-    for basecls in OPTIONAL_MUTATOR_DICT:
-        if issubclass(cls, basecls):
-            for name in OPTIONAL_MUTATOR_DICT[basecls]:
-                attrDict[name] = _immutableFunc(name)
 
     # 属性の削除を封じる。
     attrDict['__delattr__'] = _immutableFunc('__delattr__')
@@ -91,7 +95,7 @@ def _makeImmutableWrapper(cls, clsname):
 
     # ハッシュ関数が実装されていなければ、簡単にサポートして hashable にする。
     h = getattr(cls, '__hash__', None)
-    if h is None or h is _OBJECT__HASH__:
+    if h is None or h is _object_hash:
         # ラップするクラスインスタンス全てに一致させる。
         h = hash(cls)
         attrDict['__hash__'] = lambda s: h
@@ -122,7 +126,7 @@ def _immutableFunc(name):
     return func
 
 
-_OBJECT__HASH__ = object.__hash__
+_object_hash = object.__hash__
 
 _SPECIAL_MUTATOR_NAMES = (
     '__set__',
@@ -167,11 +171,17 @@ if not _IS_PYTHON2 or sys.version_info[1] >= 6:
 #------------------------------------------------------------------------------
 def immutable(type_or_obj, *args, **kwargs):
     u"""
-    イミュータブルなオブジェクトを生成する（完璧ではない）。
+    オブジェクトが変更不可になるラッパーを生成する。
 
     `immutableType` を呼び出し、
     デフォルト名のラッパークラスを得て、
     それでラップした新規インスタンスが返される。
+
+    .. warning:
+        本機能は、変更してはならないものを
+        うっかり変更してしまうミスを防ぐことを目的としており、
+        絶対に変更不可能なオブジェクトを作れるわけではない。
+        やろうと思えば、いくらでも抜け道を作れるだろう。
 
     :param type_or_obj:
         ラップするオブジェクトのクラス、又はインスタンス。
@@ -211,7 +221,13 @@ def immutable(type_or_obj, *args, **kwargs):
 
 def immutableType(cls, name=None):
     u"""
-    イミュータブル化されたラッパークラスを得る（完璧ではない）。
+    オブジェクトが変更不可になるラッパークラスを生成する。
+
+    .. warning:
+        本機能は、変更してはならないものを
+        うっかり変更してしまうミスを防ぐことを目的としており、
+        絶対に変更不可能なオブジェクトを作れるわけではない。
+        やろうと思えば、いくらでも抜け道を作れるだろう。
 
     ラッパークラスはそのクラス名とともにキャッシュされ再利用される。
 
@@ -232,7 +248,7 @@ def immutableType(cls, name=None):
         イミュータブル化する元のクラス。
     :param `str` name:
         ラッパークラスの名前。
-        省略時は ``'_Immutable_元のクラス名'`` となるが、
+        省略時は ``'Immutable元のクラス名'`` となるが、
         最初にその型で生成されたキャッシュがあれば再利用される。
     :rtype: `type`
 
@@ -255,7 +271,7 @@ def immutableType(cls, name=None):
         newcls = _immutable_class_cache.get(cls)
         if newcls:
             return newcls
-        key = (cls, '_Immutable_%s' % cls.__name__)
+        key = (cls, 'Immutable%s' % cls.__name__)
 
     newcls = _immutable_class_cache.get(key)
     if newcls:

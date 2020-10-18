@@ -231,8 +231,9 @@ class Node(Node_c):
 
         # -at の場合。
         if isAttributeType:
-            # time はデフォルト値がセットできないのでサポートする。
-            if type == 'time':
+            # addAttr と同時にデフォルト値がセットできないタイプはあとで行う。
+            type = kwargs['at']
+            if type in _COMPLEX_AT_TYPENAME_SET:
                 default = kwargs_pop('defaultValue', kwargs_pop('dv', None))
                 nChildren = 0
 
@@ -350,7 +351,6 @@ class Node(Node_c):
             default = kwargs_pop('defaultValue', kwargs_pop('dv', None))
 
         # アトリビュート生成。
-        #print(nodename, kwargs)
         _addAttr(nodename, **kwargs)
         plug = None
 
@@ -483,4 +483,10 @@ _ATTR_APIVAL_OPTS = (
     ('softMinValue', 'smn'),
     ('softMaxValue', 'smx'),
 )  #: addAttr で数値コンパウンドを生成する際に子に指定するオプション値。
+
+_COMPLEX_AT_TYPENAME_SET = frozenset([
+    'time',
+    'matrix',
+    'fltMatrix',
+])
 

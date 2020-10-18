@@ -94,7 +94,7 @@ class TransformMixin(object):
 
     def setShearing(self, v, ws=False, safe=False, get=False):
         u"""
-        ノードのせん断の値をセットする。
+        ノードのシアーの値をセットする。
 
         ws=False の場合は、
         単に shear アトリビュートの値を意味し、

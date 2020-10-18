@@ -7,7 +7,7 @@ from .cyobject import _newNodeObjByMPath
 from .objectref import _getObjectRef
 from ._api2mplug import mplug_get_nums, mplug_get_xformmatrix
 from ..datatypes.boundingbox import _newBB
-from ..datatypes.matrix import _newM
+from ..datatypes.matrix import _newM, ImmutableMatrix
 from ..datatypes.quaternion import _newQ
 from ..datatypes.vector import _newV
 from ..datatypes.transformation import _newX
@@ -1032,7 +1032,7 @@ class DagNodeMixin(object):
             return x
         else:
             if ws:
-                return _newX(dict(m=_newM(self._mpath().exclusiveMatrix())))
+                return _newX(dict(m=_newM(self._mpath().exclusiveMatrix(), ImmutableMatrix)))
             else:
                 return _newX({})
 
@@ -1060,7 +1060,7 @@ class DagNodeMixin(object):
 
     def getShearing(self, ws=False):
         u"""
-        ノードのせん断の値を得る。
+        ノードのシアーの値を得る。
 
         ws=False の場合は、
         単に shear アトリビュートから得られ、

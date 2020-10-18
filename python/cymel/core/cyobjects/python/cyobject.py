@@ -36,7 +36,7 @@ _MFn_kShape = _MFn.kShape
 _2_getAPathTo = _2_MDagPath.getAPathTo
 _2_getAllPathsTo = _2_MDagPath.getAllPathsTo
 _2_getActiveSelectionList = _api2.MGlobal.getActiveSelectionList
-#_2_getSelectionListByName = _api2.MGlobal.getSelectionListByName
+_2_getSelectionListByName = _api2.MGlobal.getSelectionListByName
 
 _ls = cmds.ls
 
@@ -284,6 +284,7 @@ class CyObject(object):
         if isNode:
             typs = _relatedNodeTypes(cls)
             kwargs['type'] = typs
+            # o=True が必要なら、オプションで指定されるものとする。
 
         names = _ls(*args, **kwargs)
         num = len(names)
@@ -957,13 +958,18 @@ class ModuleForSel(types.ModuleType):
         u"""
         現在選択されている最初の `.CyObject` を得るプロパティ。
 
-        `selobj` を引数無し(i=0)で呼び出すことと等しい。
+        `selobj` を引数無し(i=0)で呼び出すこととほぼ等しいが、
+        何も選択されていない状態だと None となり、エラーにはならない。
 
         :rtype: `.CyObject` or None
         """
         sel = _2_getActiveSelectionList()
         if sel.length():
-            return _getObjectBySelIdx(sel, 0)
+        #    return _getObjectBySelIdx(sel, 0)
+            return _getSel0WithCache(sel)
+        # 選択無しで参照したら、キャッシュをクリアするようにする（明示的に解放できるようにする意図）。
+        global _LAST_SEL
+        _LAST_SEL = None
 
     @property
     def selection(self):
@@ -975,7 +981,7 @@ class ModuleForSel(types.ModuleType):
         return self.selected()
 
     @staticmethod
-    def selobj(self, i=0):
+    def selobj(i=0):
         u"""
         現在選択されている i 番目の `.CyObject` を得る。
 
@@ -983,7 +989,10 @@ class ModuleForSel(types.ModuleType):
         :rtype: `.CyObject`
         """
         sel = _2_getActiveSelectionList()
-        if 0 <= i < sel.length():
+        if not i:
+            if sel.length():
+                return _getSel0WithCache(sel)
+        elif 0 <= i < sel.length():
             return _getObjectBySelIdx(sel, i)
         raise IndexError('invalid selection index: ' + str(i))
 
@@ -1006,14 +1015,14 @@ class ModuleForSel(types.ModuleType):
         :rtype: `list`
         """
         if not sel:
+            objMap = _objMapFor_getObjectBySelIdx()
             sel = _2_getActiveSelectionList()
-            objMap = {}
             return [_getObjectBySelIdx(sel, i, objMap) for i in range(sel.length())]
 
         if isinstance(sel, CyObject):
             return [sel]
 
-        objMap = {}
+        objMap = _objMapFor_getObjectBySelIdx()
 
         if isinstance(sel, BASESTR):
             sel = _2_getSelectionListByName(sel)
@@ -1039,13 +1048,121 @@ class ModuleForSel(types.ModuleType):
 
 
 #------------------------------------------------------------------------------
+def _getSel0WithCache(sel):
+    global _LAST_SEL
+
+    # MPlug を取得。
+    try:
+        mplug = sel.getPlug(0)
+    except TypeError:
+        mplug = None
+    else:
+        if mplug.isNull:
+            mplug = None
+
+    # MPlug が得られたら、プラグとする。
+    if mplug:
+        # セレクションからは MDagPath は得られないので MPlug からノードを得る。
+        mpath, mnode = _getMPlugNode(mplug)
+
+        # キャッシュがあれば再利用する。
+        if _LAST_SEL and _LAST_SEL.isValid():
+            dt = _LAST_SEL._CyObject__data
+
+            # キャッシュがプラグなら、それを再利用できればする。またはノードだけでも再利用できればする。
+            if _LAST_SEL.CLASS_TYPE is 2:
+                noderef = dt['noderef']
+                if _isSameNodeData(noderef._CyObject__data, mpath, mnode):
+                    if dt['attrname'][1:] != mplug.partialName(includeNonMandatoryIndices=True, includeInstancedIndices=True):
+                        #print("### reusing cached plug's node, and new plug ###");
+                        _LAST_SEL = _newNodeRefPlug(CyObject._CyObject__glbpcls, noderef, mplug)
+                    #else:
+                    #    print("### reusing cached plug ###");
+                    return _LAST_SEL
+
+            # キャッシュがノードなら、ノードだけでも再利用できればする。
+            elif _isSameNodeData(dt, mpath, mnode):
+                _LAST_SEL = _newNodePlug(CyObject._CyObject__glbpcls, _LAST_SEL, mplug)
+                #print("### reusing cached node, and new plug ###");
+                return _LAST_SEL
+
+        # キャッシュが利用できなければ新規に生成。
+        _LAST_SEL = _newNodeRefPlug(
+            CyObject._CyObject__glbpcls,
+            _newNodeRefFromData(_makeNodeData(mpath, mnode, _mnodeFn(mpath or mnode, mnode))),
+            mplug)
+
+    # MPlug が得られなかったら、ノードとする。
+    else:
+        # ノードの MDagPath や MObject を取得。
+        try:
+            mpath = sel.getDagPath(0)
+        except TypeError:
+            mnode = sel.getDependNode(0)
+        else:
+            mnode = mpath.node()
+
+        # キャッシュがあれば再利用する。
+        if _LAST_SEL and _LAST_SEL.isValid():
+            dt = _LAST_SEL._CyObject__data
+
+            # キャッシュがプラグなら、そのノードを再利用できればする。
+            if _LAST_SEL.CLASS_TYPE is 2:
+                noderef = dt['noderef']
+                if _isSameNodeData(noderef._CyObject__data, mpath, mnode):
+                    _LAST_SEL = noderef()
+                    #print("### reusing cached plug's node ###");
+                    return _LAST_SEL
+
+            # キャッシュがノードなら、それを再利用できればする。
+            elif _isSameNodeData(dt, mpath, mnode):
+                #print("### reusing cached node ###");
+                return _LAST_SEL
+
+        # キャッシュが利用できなければ新規に生成。
+        if mpath:
+            _LAST_SEL = _newNodeObjByArgs((mpath, mnode, _mnodeFn(mpath, mnode), mpath.partialPathName()))
+        else:
+            mfn = _mnodeFn(mnode, mnode)
+            _LAST_SEL = _newNodeObjByArgs((mpath, mnode, mfn, mfn.name()))
+
+    return _LAST_SEL
+
+_LAST_SEL = None
+
+
+def _isSameNodeData(data, mpath, mnode):
+    if mpath:
+        mp = data.get('mpath')
+        return mp and mp == mpath
+    return mnode == data['mnode']
+
+
+def _objMapFor_getObjectBySelIdx():
+    if _LAST_SEL and _LAST_SEL.isValid():
+        if _LAST_SEL.CLASS_TYPE is 2:
+            #ref = _LAST_SEL.noderef()
+            #return {ref.name_(): (ref, [_LAST_SEL])}
+
+            # _getObjectBySelIdx は重複アイテムの再利用を考慮した実装ではないため、
+            # プラグを再利用させるために、ノード実体化してプラグキャッシュ化する。
+            node = _LAST_SEL.node()
+            return {node.name_(): (node, None)}
+        else:
+            return {_LAST_SEL.name_(): (_LAST_SEL, None)}
+    return {}
+
+
+#------------------------------------------------------------------------------
 def _getObjectBySelIdx(sel, idx, objMap=None):
     u"""
     検証済みセレクションインデックスから Node か Plug オブジェクトインスタンスを得る。
 
-    objMap には Node ごとに、ノードとプラグをキャッシュし、
-    同じノードのプラグは同じ ObjectRef をシェアし、
-    さらにそのノードも実体化されるなら、その中に Plug もキャッシュされる。
+    objMap には Node ごとに、ノードとプラグをキャッシュする。
+    MSelectionList にアイテムが重複することはないので、
+    同じアイテムの再利用を目的とするわけではない。
+    Plug 間で同じノードの ObjectRef をシェアし、さらにその Node も
+    実体化される際にはその中に Plug もキャッシュされることを仕向ける。
     """
     try:
         mplug = sel.getPlug(idx)
@@ -1057,12 +1174,15 @@ def _getObjectBySelIdx(sel, idx, objMap=None):
 
     if objMap is None:
         if mplug:
-            return _newNodeRefPlug(CyObject._CyObject__glbpcls, _newNodeRefFromData(_makeNodeData(*_node3ArgsBySelIdx(sel, idx))), mplug)
+            return _newNodeRefPlug(CyObject._CyObject__glbpcls, _newNodeRefFromData(_makeNodeData(*_node3ArgsByMPlug(mplug))), mplug)
         else:
             return _newNodeObjByArgs(_node4ArgsBySelIdx(sel, idx))
 
     else:
-        nodeArgs = _node4ArgsBySelIdx(sel, idx)
+        if mplug:
+            nodeArgs = _node4ArgsByMPlug(mplug)
+        else:
+            nodeArgs = _node4ArgsBySelIdx(sel, idx)
         name = nodeArgs[-1]
         obj = objMap.get(name)
 
@@ -1114,7 +1234,7 @@ def _getObjRefBySelIdx(sel, idx, cls, objMap=None):
                 mplug = None
 
         if mplug:
-            return _newPlugRefFromData(_makePlugData(_newNodeRefFromData(_makeNodeData(*_node3ArgsBySelIdx(sel, idx))), mplug), cls)
+            return _newPlugRefFromData(_makePlugData(_newNodeRefFromData(_makeNodeData(*_node3ArgsByMPlug(mplug))), mplug), cls)
         else:
             return _newNodeRefFromData(_makeNodeData(*_node3ArgsBySelIdx(sel, idx)), cls)
 
@@ -1130,7 +1250,17 @@ def _getNodeObjBySelIdx(sel, idx, basecls=None):
 
     MSelectionList 内での重複はありえないため共有キャッシュは不要。
     """
-    nodeArgs = _node4ArgsBySelIdx(sel, idx)
+    try:
+        mplug = sel.getPlug(idx)
+    except TypeError:
+        mplug = None
+    else:
+        if mplug.isNull:
+            mplug = None
+    if mplug:
+        nodeArgs = _node4ArgsByMPlug(mplug)
+    else:
+        nodeArgs = _node4ArgsBySelIdx(sel, idx)
 
     name = nodeArgs[-1]
     mfn = nodeArgs[-2]
@@ -1156,10 +1286,10 @@ def _getPlugObjBySelIdx(sel, idx, pcls, objMap=None):
         return
 
     if objMap is None:
-        return _newNodeRefPlug(pcls, _newNodeRefFromData(_makeNodeData(*_node3ArgsBySelIdx(sel, idx))), mplug)
+        return _newNodeRefPlug(pcls, _newNodeRefFromData(_makeNodeData(*_node3ArgsByMPlug(mplug))), mplug)
 
     else:
-        nodeArgs = _node4ArgsBySelIdx(sel, idx)
+        nodeArgs = _node4ArgsByMPlug(mplug)
         name = nodeArgs[-1]
         noderef = objMap.get(name)
         if not noderef:
@@ -1169,6 +1299,18 @@ def _getPlugObjBySelIdx(sel, idx, pcls, objMap=None):
 
 
 #------------------------------------------------------------------------------
+#def _node3ArgsByObj(mpath, mnode):
+#    return mpath, mnode, _mnodeFn(mpath or mnode, mnode)
+
+
+#def _node4ArgsByObj(mpath, mnode):
+#    if mpath:
+#        return mpath, mnode, _mnodeFn(mpath, mnode), mpath.partialPathName()
+#    else:
+#        mfn = _mnodeFn(mnode, mnode)
+#        return None, mnode, mfn, mfn.name()
+
+
 def _node3ArgsBySelIdx(sel, idx):
     u"""
     検証済みセレクションインデックスから、ノード用の3個の引数を得る。
@@ -1204,18 +1346,8 @@ def _node3ArgsByMPlug(mplug):
 
     worldSpace プラグならインスタンスインデックが加味される。
     """
-    mnode = mplug.node()
-    if mnode.hasFn(_MFn_kDagNode):
-        if _2_MFnAttribute(mplug.attribute()).worldSpace:
-            mpaths = _2_getAllPathsTo(mnode)
-            if len(mpaths) > 2:
-                while mplug.isChild:
-                    mplug = mplug.parent()
-                mpath = mpaths[max(0, mplug.logicalIndex())]
-            else:
-                mpath = mpaths[0]
-        else:
-            mpath = _2_getAPathTo(mnode)
+    mpath, mnode = _getMPlugNode(mplug)
+    if mpath:
         return mpath, mnode, _mnodeFn(mpath, mnode)
     else:
         mfn = _mnodeFn(mnode, mnode)
@@ -1228,20 +1360,33 @@ def _node4ArgsByMPlug(mplug):
 
     worldSpace プラグならインスタンスインデックが加味される。
     """
-    mnode = mplug.node()
-    if mnode.hasFn(_MFn_kDagNode):
-        if _2_MFnAttribute(mplug.attribute()).worldSpace:
-            mpaths = _2_getAllPathsTo(mnode)
-            if len(mpaths) > 2:
-                while mplug.isChild:
-                    mplug = mplug.parent()
-                mpath = mpaths[max(0, mplug.logicalIndex())]
-            else:
-                mpath = mpaths[0]
-        else:
-            mpath = _2_getAPathTo(mnode)
+    mpath, mnode = _getMPlugNode(mplug)
+    if mpath:
         return mpath, mnode, _mnodeFn(mpath, mnode), mpath.partialPathName()
     else:
         mfn = _mnodeFn(mnode, mnode)
         return None, mnode, mfn, mfn.name()
+
+
+def _getMPlugNode(mplug):
+    u"""
+    MPlug からノードを得る。
+
+    worldSpace プラグならインスタンスインデックが加味される。
+
+    :returns: MDagPath, MObject
+    """
+    mnode = mplug.node()
+    if mnode.hasFn(_MFn_kDagNode):
+        if _2_MFnAttribute(mplug.attribute()).worldSpace:
+            mpaths = _2_getAllPathsTo(mnode)
+            if len(mpaths) < 2:
+                return mpaths[0], mnode
+            while mplug.isChild:
+                mplug = mplug.parent()
+            return mpaths[max(0, mplug.logicalIndex())], mnode
+        else:
+            return _2_getAPathTo(mnode), mnode
+    else:
+        return None, mnode
 

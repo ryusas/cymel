@@ -3,19 +3,24 @@ u"""
 クォータニオンクラス。
 """
 from ...common import *
+from ...pyutils.immutable import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
+from .vector import V
 import maya.api.OpenMaya as _api2
-from math import acos, sin
+from math import sin, cos, tan, acos, atan2
 
-__all__ = ['Quaternion', 'Q']
+__all__ = ['Quaternion', 'Q', 'ImmutableQuaternion']
 
 _MQ = _api2.MQuaternion
 _MV = _api2.MVector
 _MP = _api2.MPoint
 _ME = _api2.MEulerRotation
 _MX = _api2.MTransformationMatrix
+_MQ_Identity = _MQ.kIdentity
 
 _2_squadPt = _MQ.squadPt
 _TOLERANCE = _MQ.kTolerance
+
+_2PI = PI + PI
 
 
 #------------------------------------------------------------------------------
@@ -198,6 +203,17 @@ class Quaternion(object):
             except:
                 return False
 
+        def isIdentity(self, tol=_TOLERANCE):
+            u"""
+            ほぼ単位クォータニオンかどうか。
+
+            単位クォータニオンと `isSignedEquivalent` で比較することと等しい。
+
+            :param `float` tol: 許容誤差。
+            :rtype: `bool`
+            """
+            return self.__data.isEquivalent(_MQ_Identity, tol)
+
     else:
         def isEquivalent(self, q, tol=_TOLERANCE):
             u"""
@@ -244,6 +260,17 @@ class Quaternion(object):
             except:
                 return False
 
+        def isIdentity(self, tol=_TOLERANCE):
+            u"""
+            ほぼ単位クォータニオンかどうか。
+
+            単位クォータニオンと `isSignedEquivalent` で比較することと等しい。
+
+            :param `float` tol: 許容誤差。
+            :rtype: `bool`
+            """
+            return self.__data[3] > 0. and self.__data.isEquivalent(_MQ_Identity, tol)
+
     def set(self, *args):
         u"""
         他の値をセットする。
@@ -288,6 +315,15 @@ class Quaternion(object):
         return self
 
     setValue = set
+
+    def setToIdentity(self):
+        u"""
+        単位クォータニオンをセットする。
+
+        :rtype: `self`
+        """
+        self.__data.setValue(_MQ_Identity)
+        return self
 
     def setToXAxis(self, angle):
         u"""
@@ -342,11 +378,16 @@ class Quaternion(object):
             度数法で得たい場合は `asDegrees` を使用すると良い。
         """
         if order is XYZ:
-            return _newE(self.__data.asEulerRotation())
+            r = self.__data.asEulerRotation()
         else:
-            e = _ME(0., 0., 0., order)
-            e.setValue(self.__data)
-            return _newE(e)
+            r = _ME(0., 0., 0., order)
+            r.setValue(self.__data)
+
+        # w の符号に忠実な回転に補正する。
+        qw = r.asQuaternion().w
+        if qw * self.__data.w < 0.:
+            return _newE(_reverseRotation(r, qw))
+        return _newE(r)
 
     asE = asEulerRotation  #: `asEulerRotation` の別名。
 
@@ -385,9 +426,58 @@ class Quaternion(object):
 
         :rtype: `.Transformation`
         """
-        return _newX(dict(q=_newQ(_MQ(self.__data))))
+        return _newX(dict(q=_newQ(_MQ(self.__data), ImmutableQuaternion)))
 
     asX = asTransformation  #: `asTransformation` の別名。
+
+    def asAngle(self, naxis=None, bound=False):
+        u"""
+        クォータニオンの持つ回転角度を得る。
+
+        `asAxisAngle` では 0 になるような微小な角度も取得出来るが、
+        その場合は `asAxisAngle` で得られる軸
+        （おそらく 0 度扱いの場合は常に (0,0,1) となる）
+        には対応しない。
+
+        また、回転軸があらかじめ分かっている場合は
+        指定した方が精度の良い値を得られる。
+
+        :type naxis: `.Vector`
+        :param naxis:
+            回転軸が分かっている場合はそれを指定する。
+            `asAxisAngle` で得られるベクトルと平行でなければならない。
+            反転した軸も指定可能で、その場合、反転した角度が得られる。
+        :param `bool` bound:
+            ±π の範囲に収めた角度を得るかどうか。
+        :rtype: `float`
+        """
+        return _asAngle(self.__data, naxis, bound)
+
+    def setAngle(self, theta, correctAxis=False):
+        u"""
+        クォータニオンの持つ回転角度を書き換える。
+
+        :param `float` theta: 角度。
+        :param `bool` correctAxis:
+            現在の w が負
+            （πより大きい回転角度を持っている）
+            なら、軸を反転補正させた上での角度をセットする。
+        :rtype: `Quaternion` (self)
+        """
+        data = self.__data
+        w = data[3]
+        if 1. - abs(w) >= _TOLERANCE:
+            half = theta * .5
+            w = min(1., max(-1., w))
+            if correctAxis and w < 0.:
+                w = -(sin(half) / sin(acos(-w)))
+            else:
+                w = sin(half) / sin(acos(w))
+            data[0] *= w
+            data[1] *= w
+            data[2] *= w
+            data[3] = cos(half)
+        return self
 
     def conjugate(self):
         u"""
@@ -559,7 +649,102 @@ class Quaternion(object):
         """
         return _newQ(_2_squadPt(q0.__data, q1.__data, q2.__data))
 
+    def asBend(self, aim=V.XAxis):
+        u"""
+        ボーン回転とした場合の曲げ成分を得る。
+
+        :type aim: `.Vector`
+        :param aim: ボーン方向ベクトル。
+        :rtype: `Quaternion`
+        """
+        aim = _MV(aim._Vector__data)
+        return _newQ(_MQ(aim, aim.rotateBy(self.__data)))
+
+    def asRoll(self, aim=V.XAxis):
+        u"""
+        ボーン回転とした場合の捻り成分を得る。
+
+        :type aim: `.Vector`
+        :param aim: ボーン方向ベクトル。
+        :rtype: `Quaternion`
+        """
+        aim = _MV(aim._Vector__data)
+        return _newQ(self.__data * _MQ(aim.rotateBy(self.__data), aim))
+
+    def asRollBendHV(self, aim=V.XAxis, upv=V.YAxis):
+        u"""
+        ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。
+
+        :type aim: `.Vector`
+        :param aim: ボーン方向ベクトル。
+        :type upv: `.Vector`
+        :param upv: ボーンアップベクトル。
+        :returns: [roll, bendH, bendV]
+        """
+        aim = _MV(aim._Vector__data).normalize()
+        upv = _MV(upv._Vector__data)
+        dep = (aim ^ upv).normalize()
+        upv = (dep ^ aim).normalize()
+
+        vec = aim.rotateBy(self.__data)
+        qBend = _MQ(aim, vec)
+
+        f = (aim * vec) + 1.
+        rollQ = self.__data * qBend.conjugate()
+        return [
+            _asAngle(rollQ, aim, True),
+            atan2(dep * vec, f) * -2.,
+            atan2(upv * vec, f) * 2.,
+        ]
+
+    asRHV = asRollBendHV  #: `asRollBendHV` の別名。
+
+    @classmethod
+    def makeRollBendHV(cls, rhv, aim=V.XAxis, upv=V.YAxis):
+        u"""
+        ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。
+
+        :param rhv: [roll, bendH, bendV]
+        :type aim: `.Vector`
+        :param aim: ボーン方向ベクトル。
+        :type upv: `.Vector`
+        :param upv: ボーンアップベクトル。
+        :rtype: `Quaternion`
+        """
+        aim = _MV(aim._Vector__data).normalize()
+        upv = _MV(upv._Vector__data)
+        dep = (aim ^ upv).normalize()
+        upv = (dep ^ aim).normalize()
+
+        half = .5 * rhv[0]
+        f = sin(half)
+        q = _MQ(aim[0] * f, aim[1] * f, aim[2] * f, cos(half))
+
+        h = tan(-.5 * rhv[1])
+        v = tan(.5 * rhv[2])
+        f = 2. / (h * h + v * v + 1.)
+        q *= _MQ(aim, aim * (f - 1.) + upv * (v * f) + dep * (h * f))
+        return _newQ(q, cls)
+
+    makeRHV = makeRollBendHV  #: `makeRollBendHV` の別名。
+
 Q = Quaternion  #: `Quaternion` の別名。
+
+_MUTATOR_DICT[Q] = (
+    'set',
+    'setValue',
+    'setToIdentity',
+    'setToXAxis',
+    'setToYAxis',
+    'setToZAxis',
+    'setAngle',
+    'conjugateIt',
+    'invertIt',
+    'normalize',
+    'normalizeIt',
+    'negateIt',
+)
+ImmutableQuaternion = immutableType(Q)  #: `Quaternion` の `immutable` ラッパー。
 
 
 def _newQ(data, cls=Q):
@@ -571,8 +756,30 @@ _object_new = object.__new__
 _Q_setdata = Q._Quaternion__data.__set__
 
 Q.Tolerance = _TOLERANCE  #: 同値とみなす許容誤差。
-Q.Identity = immutable(Q())  #: 単位クォータニオン。
-Q.Zero = immutable(Q(0., 0., 0., 0.))  #: ゼロ。
+Q.Identity = ImmutableQuaternion()  #: 単位クォータニオン。
+Q.Zero = ImmutableQuaternion(0., 0., 0., 0.)  #: ゼロ。
 
 _slerp = Q.slerp
+
+
+#------------------------------------------------------------------------------
+def _asAngle(data, naxis, bound):
+    if naxis:
+        ax = abs(naxis[0])
+        ay = abs(naxis[1])
+        az = abs(naxis[2])
+        if ax > ay:
+            s = (data[0] / naxis[0]) if ax > az else (data[2] / naxis[2])
+        else:
+            s = (data[1] / naxis[1]) if ay > az else (data[2] / naxis[2])
+        ang = atan2(s, data[3]) * 2.
+    else:
+        w = data[3]
+        ang = (acos(w) * 2.) if (-1. < w < 1.) else 0.
+    if bound:
+        if ang < -PI:
+            ang += _2PI
+        elif PI < ang:
+            ang -= _2PI
+    return ang
 

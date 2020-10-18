@@ -18,6 +18,8 @@ class cymel.core.datatypes.vector.Vector
 
     .. autosummary::
     
+        abs
+        absIt
         angle
         cartesianize
         cross
@@ -61,6 +63,7 @@ class cymel.core.datatypes.vector.Vector
     
     .. autoattribute:: AXIS_VECTOR_DICT
     .. autoattribute:: One
+    .. autoattribute:: Origin
     .. autoattribute:: Tolerance
     .. autoattribute:: XAxis
     .. autoattribute:: XNegAxis
@@ -69,6 +72,7 @@ class cymel.core.datatypes.vector.Vector
     .. autoattribute:: ZAxis
     .. autoattribute:: ZNegAxis
     .. autoattribute:: Zero
+    .. autoattribute:: Zero4
 
 
 
@@ -77,6 +81,8 @@ class cymel.core.datatypes.vector.Vector
     .. rubric:: Methods Details:
 
     
+    .. automethod:: abs
+    .. automethod:: absIt
     .. automethod:: angle
     .. automethod:: cartesianize
     .. automethod:: cross

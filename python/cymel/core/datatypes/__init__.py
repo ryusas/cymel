@@ -23,6 +23,7 @@ quaternion._newE = eulerrotation._newE
 quaternion._newM = matrix._newM
 quaternion._newV = vector._newV
 quaternion._newX = transformation._newX
+quaternion._reverseRotation = eulerrotation._reverseRotation
 
 vector._newE = eulerrotation._newE
 vector._newM = matrix._newM

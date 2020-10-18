@@ -3,10 +3,11 @@ u"""
 3Dベクトルクラス。
 """
 from ...common import *
+from ...pyutils.immutable import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
 import maya.api.OpenMaya as _api2
 from math import sqrt
 
-__all__ = ['Vector', 'V']
+__all__ = ['Vector', 'V', 'ImmutableVector']
 
 _MP = _api2.MPoint
 _MV = _api2.MVector
@@ -477,6 +478,28 @@ class Vector(object):
         """
         return _newV(self.__data.__mul__(m._Matrix__data))
 
+    def abs(self):
+        u"""
+        4次元ベクトルの各要素を絶対値にしたベクトルを得る。
+
+        :rtype: `Vector`
+        """
+        v = self.__data
+        return _newV(_MP(abs(v[0]), abs(v[1]), abs(v[2]), abs(v[3])))
+
+    def absIt(self):
+        u"""
+        4次元ベクトルの各要素を絶対値にする。
+
+        :rtype: `Vector` (self)
+        """
+        v = self.__data
+        v[0] = abs(v[0])
+        v[1] = abs(v[1])
+        v[2] = abs(v[2])
+        v[3] = abs(v[3])
+        return self
+
     def mul(self, v):
         u"""
         4次元ベクトルの各要素を乗算したベクトルを得る。
@@ -626,6 +649,20 @@ class Vector(object):
 
 V = Vector  #: `Vector` の別名。
 
+_MUTATOR_DICT[V] = (
+    'set',
+    'normalize',
+    'normalizeIt',
+    'cartesianize',
+    'rationalize',
+    'homogenize',
+    'absIt',
+    'mulIt',
+    'divIt',
+    'orthogonalize',
+)
+ImmutableVector = immutableType(V)  #: `Vector` の `immutable` ラッパー。
+
 
 def _newV(data, cls=V):
     obj = _object_new(cls)
@@ -637,14 +674,16 @@ _V_setdata = V._Vector__data.__set__
 
 V.Tolerance = _TOLERANCE  #: 同値とみなす許容誤差。
 
-V.Zero = immutable(V())  #: ゼロベクトル。
-V.One = immutable(V(1., 1., 1.))  #: 各要素が 1.0 のベクトル。
-V.XAxis = immutable(V(1., 0., 0.))  #: X軸ベクトル。
-V.YAxis = immutable(V(0., 1., 0.))  #: Y軸ベクトル。
-V.ZAxis = immutable(V(0., 0., 1.))  #: Z軸ベクトル。
-V.XNegAxis = immutable(V(-1., 0., 0.))  #: -X軸ベクトル。
-V.YNegAxis = immutable(V(0., -1., 0.))  #: -Y軸ベクトル。
-V.ZNegAxis = immutable(V(0., 0., -1.))  #: -Z軸ベクトル。
+V.Zero4 = ImmutableVector(0., 0., 0., 0.)  #: 4次元ゼロベクトル。
+V.Zero = ImmutableVector()  #: ゼロベクトル。
+V.Origin = V.Zero  #: `Zero` と同じ。
+V.One = ImmutableVector(1., 1., 1.)  #: 各要素が 1.0 のベクトル。
+V.XAxis = ImmutableVector(1., 0., 0.)  #: X軸ベクトル。
+V.YAxis = ImmutableVector(0., 1., 0.)  #: Y軸ベクトル。
+V.ZAxis = ImmutableVector(0., 0., 1.)  #: Z軸ベクトル。
+V.XNegAxis = ImmutableVector(-1., 0., 0.)  #: -X軸ベクトル。
+V.YNegAxis = ImmutableVector(0., -1., 0.)  #: -Y軸ベクトル。
+V.ZNegAxis = ImmutableVector(0., 0., -1.)  #: -Z軸ベクトル。
 
 _AXIS_VECTOR_DICT = ImmutableDict({
     AXIS_X: V.XAxis,

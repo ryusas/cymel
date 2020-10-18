@@ -3,11 +3,12 @@ u"""
 3Dバウンディングボックスクラス。
 """
 from ...common import *
+from ...pyutils.immutable import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
 from .vector import _newV
 import maya.api.OpenMaya as _api2
 from math import sqrt
 
-__all__ = ['BoundingBox', 'BB']
+__all__ = ['BoundingBox', 'BB', 'ImmutableBoundingBox']
 
 _MBB = _api2.MBoundingBox
 _MP = _api2.MPoint
@@ -241,6 +242,13 @@ class BoundingBox(object):
         ]
 
 BB = BoundingBox  #: `BoundingBox` の別名。
+
+_MUTATOR_DICT[BB] = (
+    'clear',
+    'transformUsing',
+    'expand',
+)
+ImmutableBoundingBox = immutableType(BB)  #: `BoundingBox` の `immutable` ラッパー。
 
 
 def _newBB(data, cls=BB):

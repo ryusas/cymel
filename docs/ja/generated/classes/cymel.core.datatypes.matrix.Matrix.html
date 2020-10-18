@@ -91,6 +91,11 @@
 <ul class="simple">
 <li><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></li>
 <li>16値のシーケンス</li>
+<li>3つの <a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> による 3x3 部分の行ベクトル指定。<ul>
+<li>追加で4つめの <a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> で translate 値の指定。</li>
+<li>transpose=True オプションの指定で 3x3 部分の転置。</li>
+</ul>
+</li>
 </ul>
 <p class="rubric">Methods:</p>
 <table border="1" class="longtable docutils">
@@ -100,109 +105,127 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.addT" title="cymel.core.datatypes.matrix.Matrix.addT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addT</span></code></a>(v)</td>
+<td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.addTranslation" title="cymel.core.datatypes.matrix.Matrix.addTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addTranslation</span></code></a> の別名。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.addTranslation" title="cymel.core.datatypes.matrix.Matrix.addTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addTranslation</span></code></a>(v)</td>
 <td>平行移動値を加算する。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.adjoint" title="cymel.core.datatypes.matrix.Matrix.adjoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjoint</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.adjoint" title="cymel.core.datatypes.matrix.Matrix.adjoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjoint</span></code></a>()</td>
 <td>余因子行列を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.adjointIt" title="cymel.core.datatypes.matrix.Matrix.adjointIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjointIt</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.adjointIt" title="cymel.core.datatypes.matrix.Matrix.adjointIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjointIt</span></code></a>()</td>
 <td>余因子行列をセットする。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.as3x3" title="cymel.core.datatypes.matrix.Matrix.as3x3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">as3x3</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.as3x3" title="cymel.core.datatypes.matrix.Matrix.as3x3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">as3x3</span></code></a>()</td>
 <td>3x3部分以外を初期化した行列を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asD" title="cymel.core.datatypes.matrix.Matrix.asD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asD</span></code></a>([order])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asD" title="cymel.core.datatypes.matrix.Matrix.asD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asD</span></code></a>([order])</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asDegrees" title="cymel.core.datatypes.matrix.Matrix.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asDegrees" title="cymel.core.datatypes.matrix.Matrix.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a>([order])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asDegrees" title="cymel.core.datatypes.matrix.Matrix.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a>([order])</td>
 <td>オイラー角回転を度数法の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> として得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asE" title="cymel.core.datatypes.matrix.Matrix.asE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asE</span></code></a>([order])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asE" title="cymel.core.datatypes.matrix.Matrix.asE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asE</span></code></a>([order])</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asEulerRotation" title="cymel.core.datatypes.matrix.Matrix.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asEulerRotation" title="cymel.core.datatypes.matrix.Matrix.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a>([order])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asEulerRotation" title="cymel.core.datatypes.matrix.Matrix.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a>([order])</td>
 <td>オイラー角回転を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asQ" title="cymel.core.datatypes.matrix.Matrix.asQ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asQ</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asQ" title="cymel.core.datatypes.matrix.Matrix.asQ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asQ</span></code></a>()</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asQuaternion" title="cymel.core.datatypes.matrix.Matrix.asQuaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asQuaternion</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asQuaternion" title="cymel.core.datatypes.matrix.Matrix.asQuaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asQuaternion</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asQuaternion" title="cymel.core.datatypes.matrix.Matrix.asQuaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asQuaternion</span></code></a>()</td>
 <td>クォータニオンを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asRM" title="cymel.core.datatypes.matrix.Matrix.asRM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRM</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asRM" title="cymel.core.datatypes.matrix.Matrix.asRM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRM</span></code></a>()</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asRotationMatrix" title="cymel.core.datatypes.matrix.Matrix.asRotationMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRotationMatrix</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asRotationMatrix" title="cymel.core.datatypes.matrix.Matrix.asRotationMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRotationMatrix</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asRotationMatrix" title="cymel.core.datatypes.matrix.Matrix.asRotationMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRotationMatrix</span></code></a>()</td>
 <td>回転のみの行列を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asS" title="cymel.core.datatypes.matrix.Matrix.asS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asS</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asS" title="cymel.core.datatypes.matrix.Matrix.asS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asS</span></code></a>()</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asScaling" title="cymel.core.datatypes.matrix.Matrix.asScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asScaling</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asSM" title="cymel.core.datatypes.matrix.Matrix.asSM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asSM</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asSM" title="cymel.core.datatypes.matrix.Matrix.asSM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asSM</span></code></a>()</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asScalingMatrix" title="cymel.core.datatypes.matrix.Matrix.asScalingMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asScalingMatrix</span></code></a> の別名。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asScaling" title="cymel.core.datatypes.matrix.Matrix.asScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asScaling</span></code></a>()</td>
-<td>スケール成分を得る。</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asScaling" title="cymel.core.datatypes.matrix.Matrix.asScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asScaling</span></code></a>()</td>
+<td>スケーリング成分を得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asScalingMatrix" title="cymel.core.datatypes.matrix.Matrix.asScalingMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asScalingMatrix</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asScalingMatrix" title="cymel.core.datatypes.matrix.Matrix.asScalingMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asScalingMatrix</span></code></a>()</td>
 <td>スケーリング成分(scale+shear)のみの行列を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asSh" title="cymel.core.datatypes.matrix.Matrix.asSh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asSh</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asSh" title="cymel.core.datatypes.matrix.Matrix.asSh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asSh</span></code></a>()</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asShearing" title="cymel.core.datatypes.matrix.Matrix.asShearing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asShearing</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asShearing" title="cymel.core.datatypes.matrix.Matrix.asShearing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asShearing</span></code></a>()</td>
-<td>せん断成分を得る。</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asShearing" title="cymel.core.datatypes.matrix.Matrix.asShearing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asShearing</span></code></a>()</td>
+<td>シアー成分を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asT" title="cymel.core.datatypes.matrix.Matrix.asT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asT</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asT" title="cymel.core.datatypes.matrix.Matrix.asT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asT</span></code></a>()</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTranslation" title="cymel.core.datatypes.matrix.Matrix.asTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTranslation</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTM" title="cymel.core.datatypes.matrix.Matrix.asTM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTM</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTM" title="cymel.core.datatypes.matrix.Matrix.asTM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTM</span></code></a>()</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTranslationMatrix" title="cymel.core.datatypes.matrix.Matrix.asTranslationMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTranslationMatrix</span></code></a> の別名。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTransformation" title="cymel.core.datatypes.matrix.Matrix.asTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTransformation</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTransformation" title="cymel.core.datatypes.matrix.Matrix.asTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTransformation</span></code></a>()</td>
 <td>トランスフォーメーションとして得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTranslation" title="cymel.core.datatypes.matrix.Matrix.asTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTranslation</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTranslation" title="cymel.core.datatypes.matrix.Matrix.asTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTranslation</span></code></a>()</td>
 <td>平行移動成分を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTranslationMatrix" title="cymel.core.datatypes.matrix.Matrix.asTranslationMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTranslationMatrix</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTranslationMatrix" title="cymel.core.datatypes.matrix.Matrix.asTranslationMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTranslationMatrix</span></code></a>()</td>
 <td>平行移動のみの行列を得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTransposed3x3" title="cymel.core.datatypes.matrix.Matrix.asTransposed3x3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTransposed3x3</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTransposed3x3" title="cymel.core.datatypes.matrix.Matrix.asTransposed3x3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTransposed3x3</span></code></a>()</td>
 <td>3x3部分は転置、それ以外の部分は初期化した行列を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asX" title="cymel.core.datatypes.matrix.Matrix.asX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asX</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asX" title="cymel.core.datatypes.matrix.Matrix.asX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asX</span></code></a>()</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTransformation" title="cymel.core.datatypes.matrix.Matrix.asTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTransformation</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.axes" title="cymel.core.datatypes.matrix.Matrix.axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axes</span></code></a>([transpose])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.axes" title="cymel.core.datatypes.matrix.Matrix.axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axes</span></code></a>([transpose])</td>
 <td>3x3部分の行や列の軸ベクトルを3つ得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.axis" title="cymel.core.datatypes.matrix.Matrix.axis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axis</span></code></a>(i[,&nbsp;transpose])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.axis" title="cymel.core.datatypes.matrix.Matrix.axis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axis</span></code></a>(i[,&nbsp;transpose])</td>
 <td>3x3部分の行や列を軸ベクトルとして得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.column" title="cymel.core.datatypes.matrix.Matrix.column"><code class="xref py py-obj docutils literal notranslate"><span class="pre">column</span></code></a>(i)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.column" title="cymel.core.datatypes.matrix.Matrix.column"><code class="xref py py-obj docutils literal notranslate"><span class="pre">column</span></code></a>(i)</td>
 <td>列ベクトルを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.columns" title="cymel.core.datatypes.matrix.Matrix.columns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">columns</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.columns" title="cymel.core.datatypes.matrix.Matrix.columns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">columns</span></code></a>()</td>
 <td>列ベクトルを4つ全て得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.det3x3" title="cymel.core.datatypes.matrix.Matrix.det3x3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">det3x3</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.det3x3" title="cymel.core.datatypes.matrix.Matrix.det3x3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">det3x3</span></code></a>()</td>
 <td>3x3部分の行列式を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.det4x4" title="cymel.core.datatypes.matrix.Matrix.det4x4"><code class="xref py py-obj docutils literal notranslate"><span class="pre">det4x4</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.det4x4" title="cymel.core.datatypes.matrix.Matrix.det4x4"><code class="xref py py-obj docutils literal notranslate"><span class="pre">det4x4</span></code></a>()</td>
 <td>行列式を得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.getelem" title="cymel.core.datatypes.matrix.Matrix.getelem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getelem</span></code></a>(row,&nbsp;col)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.div" title="cymel.core.datatypes.matrix.Matrix.div"><code class="xref py py-obj docutils literal notranslate"><span class="pre">div</span></code></a>(m[,&nbsp;pre])</td>
+<td>マトリックス要素同士を除算する。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.divIt" title="cymel.core.datatypes.matrix.Matrix.divIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">divIt</span></code></a>(m[,&nbsp;pre])</td>
+<td>各要素同士を除算し自身を更新する。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.getElem" title="cymel.core.datatypes.matrix.Matrix.getElem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElem</span></code></a>(row,&nbsp;col)</td>
 <td>指定位置の要素を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.hasNonUniformScaling" title="cymel.core.datatypes.matrix.Matrix.hasNonUniformScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasNonUniformScaling</span></code></a>([tol])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.hasNonUniformScaling" title="cymel.core.datatypes.matrix.Matrix.hasNonUniformScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasNonUniformScaling</span></code></a>([tol])</td>
 <td>非一様スケーリングが含まれているかどうか。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.homogenize" title="cymel.core.datatypes.matrix.Matrix.homogenize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">homogenize</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.homogenize" title="cymel.core.datatypes.matrix.Matrix.homogenize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">homogenize</span></code></a>()</td>
 <td>3x3部分を正規直交化した行列を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.homogenizeIt" title="cymel.core.datatypes.matrix.Matrix.homogenizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">homogenizeIt</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.homogenizeIt" title="cymel.core.datatypes.matrix.Matrix.homogenizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">homogenizeIt</span></code></a>()</td>
 <td>3x3部分を正規直交化した行列をセットする。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.init3x3" title="cymel.core.datatypes.matrix.Matrix.init3x3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init3x3</span></code></a>()</td>
+<td>3x3 部分を初期化する。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.initT" title="cymel.core.datatypes.matrix.Matrix.initT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initT</span></code></a>()</td>
+<td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.initTranslation" title="cymel.core.datatypes.matrix.Matrix.initTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initTranslation</span></code></a> の別名。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.initTranslation" title="cymel.core.datatypes.matrix.Matrix.initTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initTranslation</span></code></a>()</td>
+<td>4行目の平行移動成分をクリアする。</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.inverse" title="cymel.core.datatypes.matrix.Matrix.inverse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inverse</span></code></a>()</td>
 <td>逆行列を得る。</td>
@@ -213,43 +236,103 @@
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.isEquivalent" title="cymel.core.datatypes.matrix.Matrix.isEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isEquivalent</span></code></a>(m[,&nbsp;tol])</td>
 <td>ほぼ同値かどうか。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.isSingular" title="cymel.core.datatypes.matrix.Matrix.isSingular"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSingular</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.isIdentity" title="cymel.core.datatypes.matrix.Matrix.isIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isIdentity</span></code></a>([tol])</td>
+<td>ほぼ単位行列かどうか。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.isSingular" title="cymel.core.datatypes.matrix.Matrix.isSingular"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSingular</span></code></a>()</td>
 <td>特異行列かどうか。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInvS" title="cymel.core.datatypes.matrix.Matrix.makeInvS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInvS</span></code></a>(v[,&nbsp;pre])</td>
-<td>スケールの逆行列を作成する。</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInvS" title="cymel.core.datatypes.matrix.Matrix.makeInvS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInvS</span></code></a>(v[,&nbsp;pre])</td>
+<td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInverseScaling" title="cymel.core.datatypes.matrix.Matrix.makeInverseScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInverseScaling</span></code></a> の別名。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInvSh" title="cymel.core.datatypes.matrix.Matrix.makeInvSh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInvSh</span></code></a>(v)</td>
-<td>せん断の逆行列を作成する。</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInvSh" title="cymel.core.datatypes.matrix.Matrix.makeInvSh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInvSh</span></code></a>(v)</td>
+<td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInverseShearing" title="cymel.core.datatypes.matrix.Matrix.makeInverseShearing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInverseShearing</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInvT" title="cymel.core.datatypes.matrix.Matrix.makeInvT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInvT</span></code></a>(v)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInvT" title="cymel.core.datatypes.matrix.Matrix.makeInvT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInvT</span></code></a>(v)</td>
+<td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInverseTranslation" title="cymel.core.datatypes.matrix.Matrix.makeInverseTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInverseTranslation</span></code></a> の別名。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInverseScaling" title="cymel.core.datatypes.matrix.Matrix.makeInverseScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInverseScaling</span></code></a>(v[,&nbsp;pre])</td>
+<td>スケーリングの逆行列を作成する。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInverseShearing" title="cymel.core.datatypes.matrix.Matrix.makeInverseShearing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInverseShearing</span></code></a>(v)</td>
+<td>シアーの逆行列を作成する。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInverseTranslation" title="cymel.core.datatypes.matrix.Matrix.makeInverseTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInverseTranslation</span></code></a>(v)</td>
 <td>平行移動の逆行列を作成する。</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeS" title="cymel.core.datatypes.matrix.Matrix.makeS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeS</span></code></a>(v)</td>
-<td>スケール行列を作成する。</td>
+<td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeScaling" title="cymel.core.datatypes.matrix.Matrix.makeScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeScaling</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeSh" title="cymel.core.datatypes.matrix.Matrix.makeSh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeSh</span></code></a>(v)</td>
-<td>せん断行列を作成する。</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeScaling" title="cymel.core.datatypes.matrix.Matrix.makeScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeScaling</span></code></a>(v)</td>
+<td>スケーリング行列を作成する。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeSh" title="cymel.core.datatypes.matrix.Matrix.makeSh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeSh</span></code></a>(v)</td>
+<td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeShearing" title="cymel.core.datatypes.matrix.Matrix.makeShearing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeShearing</span></code></a> の別名。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeShearing" title="cymel.core.datatypes.matrix.Matrix.makeShearing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeShearing</span></code></a>(v)</td>
+<td>シアー行列を作成する。</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeT" title="cymel.core.datatypes.matrix.Matrix.makeT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeT</span></code></a>(v)</td>
+<td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeTranslation" title="cymel.core.datatypes.matrix.Matrix.makeTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeTranslation</span></code></a> の別名。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeTranslation" title="cymel.core.datatypes.matrix.Matrix.makeTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeTranslation</span></code></a>(v)</td>
 <td>平行移動行列を作成する。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.row" title="cymel.core.datatypes.matrix.Matrix.row"><code class="xref py py-obj docutils literal notranslate"><span class="pre">row</span></code></a>(i)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.mirror" title="cymel.core.datatypes.matrix.Matrix.mirror"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mirror</span></code></a>([mirrorAxis,&nbsp;negAxis,&nbsp;t])</td>
+<td>指定軸方向でミラーしたマトリックスを得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.mirrorIt" title="cymel.core.datatypes.matrix.Matrix.mirrorIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mirrorIt</span></code></a>([mirrorAxis,&nbsp;negAxis,&nbsp;t])</td>
+<td>指定軸方向でミラーしたマトリックスをセットする。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.mul" title="cymel.core.datatypes.matrix.Matrix.mul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mul</span></code></a>(m)</td>
+<td>マトリックス要素同士を乗算する。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.mulIt" title="cymel.core.datatypes.matrix.Matrix.mulIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mulIt</span></code></a>(m)</td>
+<td>マトリックス要素同士を乗算してセットする。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.row" title="cymel.core.datatypes.matrix.Matrix.row"><code class="xref py py-obj docutils literal notranslate"><span class="pre">row</span></code></a>(i)</td>
 <td>行ベクトルを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.rows" title="cymel.core.datatypes.matrix.Matrix.rows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rows</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.rows" title="cymel.core.datatypes.matrix.Matrix.rows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rows</span></code></a>()</td>
 <td>行ベクトルを4つ全て得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.set" title="cymel.core.datatypes.matrix.Matrix.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(v)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.set" title="cymel.core.datatypes.matrix.Matrix.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(v)</td>
 <td>他の値をセットする。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setT" title="cymel.core.datatypes.matrix.Matrix.setT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setT</span></code></a>(v)</td>
-<td>平行移動値をセットする。</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setAxes" title="cymel.core.datatypes.matrix.Matrix.setAxes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAxes</span></code></a>(i,&nbsp;vx,&nbsp;vy,&nbsp;vz[,&nbsp;vt,&nbsp;transpose])</td>
+<td>3x3部分の行や列と4行目の平行移動ベクトルをセットする。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setelem" title="cymel.core.datatypes.matrix.Matrix.setelem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setelem</span></code></a>(row,&nbsp;col,&nbsp;val)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setAxis" title="cymel.core.datatypes.matrix.Matrix.setAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAxis</span></code></a>(i,&nbsp;v[,&nbsp;transpose])</td>
+<td>3x3部分の行や列のベクトルをセットする。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setColumn" title="cymel.core.datatypes.matrix.Matrix.setColumn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setColumn</span></code></a>(i,&nbsp;v)</td>
+<td>列ベクトルをセットする。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setColumns" title="cymel.core.datatypes.matrix.Matrix.setColumns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setColumns</span></code></a>(v0,&nbsp;v1,&nbsp;v2,&nbsp;v3)</td>
+<td>列ベクトルを4つ全てセットする。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setElem" title="cymel.core.datatypes.matrix.Matrix.setElem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setElem</span></code></a>(row,&nbsp;col,&nbsp;val)</td>
 <td>指定位置の要素をセットする。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.subT" title="cymel.core.datatypes.matrix.Matrix.subT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subT</span></code></a>(v)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setRow" title="cymel.core.datatypes.matrix.Matrix.setRow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRow</span></code></a>(i,&nbsp;v)</td>
+<td>行ベクトルをセットする。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setRows" title="cymel.core.datatypes.matrix.Matrix.setRows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRows</span></code></a>(v0,&nbsp;v1,&nbsp;v2,&nbsp;v3)</td>
+<td>行ベクトルを4つ全てセットする。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setT" title="cymel.core.datatypes.matrix.Matrix.setT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setT</span></code></a>(v)</td>
+<td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setTranslation" title="cymel.core.datatypes.matrix.Matrix.setTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTranslation</span></code></a> の別名。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setToIdentity" title="cymel.core.datatypes.matrix.Matrix.setToIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToIdentity</span></code></a>()</td>
+<td>単位行列をセットする。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setTranslation" title="cymel.core.datatypes.matrix.Matrix.setTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTranslation</span></code></a>(v)</td>
+<td>平行移動値をセットする。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.subT" title="cymel.core.datatypes.matrix.Matrix.subT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subT</span></code></a>(v)</td>
+<td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.subTranslation" title="cymel.core.datatypes.matrix.Matrix.subTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subTranslation</span></code></a> の別名。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.subTranslation" title="cymel.core.datatypes.matrix.Matrix.subTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subTranslation</span></code></a>(v)</td>
 <td>平行移動値を減算する。</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.transpose" title="cymel.core.datatypes.matrix.Matrix.transpose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transpose</span></code></a>()</td>
@@ -263,7 +346,7 @@
 <p class="rubric">Attributes:</p>
 <dl class="attribute">
 <dt id="cymel.core.datatypes.matrix.Matrix.Identity">
-<code class="descname">Identity</code><em class="property"> = _Immutable_Matrix(((1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1)))</em><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.Identity" title="この定義へのパーマリンク">¶</a></dt>
+<code class="descname">Identity</code><em class="property"> = ImmutableMatrix(((1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1)))</em><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.Identity" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -273,19 +356,25 @@
 
 <dl class="attribute">
 <dt id="cymel.core.datatypes.matrix.Matrix.Zero">
-<code class="descname">Zero</code><em class="property"> = _Immutable_Matrix(((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)))</em><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.Zero" title="この定義へのパーマリンク">¶</a></dt>
+<code class="descname">Zero</code><em class="property"> = ImmutableMatrix(((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)))</em><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.Zero" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
 <p class="rubric">Methods Details:</p>
 <dl class="method">
 <dt id="cymel.core.datatypes.matrix.Matrix.addT">
 <code class="descname">addT</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.addT" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.addTranslation" title="cymel.core.datatypes.matrix.Matrix.addTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addTranslation</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.addTranslation">
+<code class="descname">addTranslation</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.addTranslation" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>平行移動値を加算する。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> -- 平行移動ベクトル。</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 平行移動の3次元ベクトル。</td>
 </tr>
 </tbody>
 </table>
@@ -441,7 +530,7 @@
 <dl class="method">
 <dt id="cymel.core.datatypes.matrix.Matrix.asScaling">
 <code class="descname">asScaling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.asScaling" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>スケール成分を得る。</p>
+<dd><p>スケーリング成分を得る。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -475,7 +564,7 @@
 <dl class="method">
 <dt id="cymel.core.datatypes.matrix.Matrix.asShearing">
 <code class="descname">asShearing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.asShearing" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>せん断成分を得る。</p>
+<dd><p>シアー成分を得る。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -662,8 +751,51 @@ True では列ベクトルを得ることになる。</li>
 </dd></dl>
 
 <dl class="method">
-<dt id="cymel.core.datatypes.matrix.Matrix.getelem">
-<code class="descname">getelem</code><span class="sig-paren">(</span><em>row</em>, <em>col</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.getelem" title="この定義へのパーマリンク">¶</a></dt>
+<dt id="cymel.core.datatypes.matrix.Matrix.div">
+<code class="descname">div</code><span class="sig-paren">(</span><em>m</em>, <em>pre=1e-13</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.div" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>マトリックス要素同士を除算する。</p>
+<p>ゼロ除算を避ける為、分母が <a class="reference internal" href="../cymel.pyutils.pyutils.html#cymel.pyutils.pyutils.avoidZeroDiv" title="cymel.pyutils.pyutils.avoidZeroDiv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">avoidZeroDiv</span></code></a>
+でフィルタされてから実行される。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>m</strong> (<a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a>) -- 分母のマトリックス。</li>
+<li><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) -- ゼロ除算を避ける為の許容誤差。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.divIt">
+<code class="descname">divIt</code><span class="sig-paren">(</span><em>m</em>, <em>pre=1e-13</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.divIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>各要素同士を除算し自身を更新する。</p>
+<p>ゼロ除算を避ける為、分母が <code class="xref py py-obj docutils literal notranslate"><span class="pre">avoidZeroDiv</span></code>
+でフィルタされてから実行される。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>v</strong> (<em>iterable</em>) -- 要素数16個以上のシーケンス。</li>
+<li><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) -- ゼロ除算を避ける為の許容誤差。</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.getElem">
+<code class="descname">getElem</code><span class="sig-paren">(</span><em>row</em>, <em>col</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.getElem" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>指定位置の要素を得る。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -727,6 +859,45 @@ True では列ベクトルを得ることになる。</li>
 </dd></dl>
 
 <dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.init3x3">
+<code class="descname">init3x3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.init3x3" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>3x3 部分を初期化する。</p>
+<p>4x4 全て初期化する場合は <a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setToIdentity" title="cymel.core.datatypes.matrix.Matrix.setToIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToIdentity</span></code></a> が利用できる。</p>
+<p>平行移動成分のみの行列を新規に得たい場合は
+<a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.asTranslationMatrix" title="cymel.core.datatypes.matrix.Matrix.asTranslationMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTranslationMatrix</span></code></a> が利用できる。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.initT">
+<code class="descname">initT</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.initT" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.initTranslation" title="cymel.core.datatypes.matrix.Matrix.initTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initTranslation</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.initTranslation">
+<code class="descname">initTranslation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.initTranslation" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>4行目の平行移動成分をクリアする。</p>
+<p>3x3 以外を初期化したマトリクスを新規に得たい場合は
+<a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.as3x3" title="cymel.core.datatypes.matrix.Matrix.as3x3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">as3x3</span></code></a> が利用できる。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="cymel.core.datatypes.matrix.Matrix.inverse">
 <code class="descname">inverse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.inverse" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>逆行列を得る。</p>
@@ -776,6 +947,22 @@ True では列ベクトルを得ることになる。</li>
 </dd></dl>
 
 <dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.isIdentity">
+<code class="descname">isIdentity</code><span class="sig-paren">(</span><em>tol=1e-10</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.isIdentity" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ほぼ単位行列かどうか。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) -- 許容誤差。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="cymel.core.datatypes.matrix.Matrix.isSingular">
 <code class="descname">isSingular</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.isSingular" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>特異行列かどうか。</p>
@@ -792,13 +979,31 @@ True では列ベクトルを得ることになる。</li>
 <dl class="classmethod">
 <dt id="cymel.core.datatypes.matrix.Matrix.makeInvS">
 <em class="property">classmethod </em><code class="descname">makeInvS</code><span class="sig-paren">(</span><em>v</em>, <em>pre=1e-13</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeInvS" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>スケールの逆行列を作成する。</p>
+<dd><p><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInverseScaling" title="cymel.core.datatypes.matrix.Matrix.makeInverseScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInverseScaling</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="cymel.core.datatypes.matrix.Matrix.makeInvSh">
+<em class="property">classmethod </em><code class="descname">makeInvSh</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeInvSh" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInverseShearing" title="cymel.core.datatypes.matrix.Matrix.makeInverseShearing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInverseShearing</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="cymel.core.datatypes.matrix.Matrix.makeInvT">
+<em class="property">classmethod </em><code class="descname">makeInvT</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeInvT" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeInverseTranslation" title="cymel.core.datatypes.matrix.Matrix.makeInverseTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeInverseTranslation</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="cymel.core.datatypes.matrix.Matrix.makeInverseScaling">
+<em class="property">classmethod </em><code class="descname">makeInverseScaling</code><span class="sig-paren">(</span><em>v</em>, <em>pre=1e-13</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeInverseScaling" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>スケーリングの逆行列を作成する。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>v</strong> -- scale値 (x, y, z)</li>
+<li><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- スケール値の3次元ベクトル。</li>
 <li><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) -- ゼロ除算を避ける為の許容誤差。</li>
 </ul>
 </td>
@@ -811,14 +1016,14 @@ True では列ベクトルを得ることになる。</li>
 </dd></dl>
 
 <dl class="classmethod">
-<dt id="cymel.core.datatypes.matrix.Matrix.makeInvSh">
-<em class="property">classmethod </em><code class="descname">makeInvSh</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeInvSh" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>せん断の逆行列を作成する。</p>
+<dt id="cymel.core.datatypes.matrix.Matrix.makeInverseShearing">
+<em class="property">classmethod </em><code class="descname">makeInverseShearing</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeInverseShearing" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>シアーの逆行列を作成する。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> -- Shear値 (xy, yz, yx)</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- シアー値 (xy, yz, yx)</td>
 </tr>
 <tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></td>
 </tr>
@@ -827,14 +1032,14 @@ True では列ベクトルを得ることになる。</li>
 </dd></dl>
 
 <dl class="classmethod">
-<dt id="cymel.core.datatypes.matrix.Matrix.makeInvT">
-<em class="property">classmethod </em><code class="descname">makeInvT</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeInvT" title="この定義へのパーマリンク">¶</a></dt>
+<dt id="cymel.core.datatypes.matrix.Matrix.makeInverseTranslation">
+<em class="property">classmethod </em><code class="descname">makeInverseTranslation</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeInverseTranslation" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>平行移動の逆行列を作成する。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> -- translate値 (x, y, z)</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 平行移動の3次元ベクトル。</td>
 </tr>
 <tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></td>
 </tr>
@@ -845,12 +1050,18 @@ True では列ベクトルを得ることになる。</li>
 <dl class="classmethod">
 <dt id="cymel.core.datatypes.matrix.Matrix.makeS">
 <em class="property">classmethod </em><code class="descname">makeS</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeS" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>スケール行列を作成する。</p>
+<dd><p><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeScaling" title="cymel.core.datatypes.matrix.Matrix.makeScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeScaling</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="cymel.core.datatypes.matrix.Matrix.makeScaling">
+<em class="property">classmethod </em><code class="descname">makeScaling</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeScaling" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>スケーリング行列を作成する。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> -- scale値 (x, y, z)</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- スケール値の3次元ベクトル。</td>
 </tr>
 <tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></td>
 </tr>
@@ -861,12 +1072,18 @@ True では列ベクトルを得ることになる。</li>
 <dl class="classmethod">
 <dt id="cymel.core.datatypes.matrix.Matrix.makeSh">
 <em class="property">classmethod </em><code class="descname">makeSh</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeSh" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>せん断行列を作成する。</p>
+<dd><p><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeShearing" title="cymel.core.datatypes.matrix.Matrix.makeShearing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeShearing</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="cymel.core.datatypes.matrix.Matrix.makeShearing">
+<em class="property">classmethod </em><code class="descname">makeShearing</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeShearing" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>シアー行列を作成する。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> -- Shear値 (xy, yz, yx)</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- シアー値 (xy, yz, yx)</td>
 </tr>
 <tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></td>
 </tr>
@@ -877,14 +1094,112 @@ True では列ベクトルを得ることになる。</li>
 <dl class="classmethod">
 <dt id="cymel.core.datatypes.matrix.Matrix.makeT">
 <em class="property">classmethod </em><code class="descname">makeT</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeT" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.makeTranslation" title="cymel.core.datatypes.matrix.Matrix.makeTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeTranslation</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="cymel.core.datatypes.matrix.Matrix.makeTranslation">
+<em class="property">classmethod </em><code class="descname">makeTranslation</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.makeTranslation" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>平行移動行列を作成する。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> -- translate値 (x, y, z)</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 平行移動の3次元ベクトル。</td>
 </tr>
 <tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.mirror">
+<code class="descname">mirror</code><span class="sig-paren">(</span><em>mirrorAxis=0</em>, <em>negAxis=True</em>, <em>t=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.mirror" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定軸方向でミラーしたマトリックスを得る。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>mirrorAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- ミラーする基準軸。
+<a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_X" title="cymel.constants.AXIS_X"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_X</span></code></a> 、 <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_Y" title="cymel.constants.AXIS_Y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_Y</span></code></a> 、 <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_Z" title="cymel.constants.AXIS_Z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_Z</span></code></a> のいずれかを指定する。</li>
+<li><strong>negAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- <p>行列式（スケール）が反転しないように、
+ミラー結果の逆を向けるローカル軸。
+<a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_X" title="cymel.constants.AXIS_X"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_X</span></code></a> 、 <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_Y" title="cymel.constants.AXIS_Y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_Y</span></code></a> 、 <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_Z" title="cymel.constants.AXIS_Z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_Z</span></code></a> の他に、
+None 、 False 、 True を指定可能。</p>
+<p>省略時(True)はミラー基準軸と同じになる。
+False では 3x3 部は反転しない。
+None ではミラー結果から全軸を逆に向ける。</p>
+</li>
+<li><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- 平行移動値（4行目）も反転するかどうか。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.mirrorIt">
+<code class="descname">mirrorIt</code><span class="sig-paren">(</span><em>mirrorAxis=0</em>, <em>negAxis=True</em>, <em>t=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.mirrorIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定軸方向でミラーしたマトリックスをセットする。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>mirrorAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- ミラーする基準軸。
+<a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_X" title="cymel.constants.AXIS_X"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_X</span></code></a> 、 <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_Y" title="cymel.constants.AXIS_Y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_Y</span></code></a> 、 <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_Z" title="cymel.constants.AXIS_Z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_Z</span></code></a> のいずれかを指定する。</li>
+<li><strong>negAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- <p>行列式（スケール）が反転しないように、
+ミラー結果の逆を向けるローカル軸。
+<a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_X" title="cymel.constants.AXIS_X"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_X</span></code></a> 、 <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_Y" title="cymel.constants.AXIS_Y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_Y</span></code></a> 、 <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_Z" title="cymel.constants.AXIS_Z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_Z</span></code></a> の他に、
+None 、 False 、 True を指定可能。</p>
+<p>省略時(True)はミラー基準軸と同じになる。
+False では 3x3 部は反転しない。
+None ではミラー結果から全軸を逆に向ける。</p>
+</li>
+<li><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- 平行移動値（4行目）も反転するかどうか。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.mul">
+<code class="descname">mul</code><span class="sig-paren">(</span><em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.mul" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>マトリックス要素同士を乗算する。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>m</strong> (<a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a>) -- 乗じるマトリックス。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.mulIt">
+<code class="descname">mulIt</code><span class="sig-paren">(</span><em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.mulIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>マトリックス要素同士を乗算してセットする。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>m</strong> (<a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a>) -- 乗じるマトリックス。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</td>
 </tr>
 </tbody>
 </table>
@@ -940,22 +1255,91 @@ True では列ベクトルを得ることになる。</li>
 </dd></dl>
 
 <dl class="method">
-<dt id="cymel.core.datatypes.matrix.Matrix.setT">
-<code class="descname">setT</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.setT" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>平行移動値をセットする。</p>
+<dt id="cymel.core.datatypes.matrix.Matrix.setAxes">
+<code class="descname">setAxes</code><span class="sig-paren">(</span><em>i</em>, <em>vx</em>, <em>vy</em>, <em>vz</em>, <em>vt=ImmutableVector(0.000000</em>, <em>0.000000</em>, <em>0.000000)</em>, <em>transpose=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.setAxes" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>3x3部分の行や列と4行目の平行移動ベクトルをセットする。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> -- 平行移動ベクトル。</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>vx</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- セットするX軸ベクトル。</li>
+<li><strong>vy</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- セットするY軸ベクトル。</li>
+<li><strong>vz</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- セットするZ軸ベクトル。</li>
+<li><strong>vt</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- セットする平行移動ベクトル。
+これだけは transpose オプションの影響を受けない。</li>
+<li><strong>transpose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- 3x3部分には転置行列の軸ベクトルをセットする。
+言い換えると False では行ベクトルを
+True では列ベクトルをセットすることになる。</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="method">
-<dt id="cymel.core.datatypes.matrix.Matrix.setelem">
-<code class="descname">setelem</code><span class="sig-paren">(</span><em>row</em>, <em>col</em>, <em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.setelem" title="この定義へのパーマリンク">¶</a></dt>
+<dt id="cymel.core.datatypes.matrix.Matrix.setAxis">
+<code class="descname">setAxis</code><span class="sig-paren">(</span><em>i</em>, <em>v</em>, <em>transpose=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.setAxis" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>3x3部分の行や列のベクトルをセットする。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>i</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- 軸指定(0=X, 1=Y, 2=Z)。</li>
+<li><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- セットする軸ベクトル。</li>
+<li><strong>transpose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- 転置行列の軸ベクトルをセットする。
+言い換えると False では行ベクトルを
+True では列ベクトルをセットすることになる。</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.setColumn">
+<code class="descname">setColumn</code><span class="sig-paren">(</span><em>i</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.setColumn" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>列ベクトルをセットする。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>i</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- 列インデックス（0～3）。</li>
+<li><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- セットする4次元ベクトル。</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.setColumns">
+<code class="descname">setColumns</code><span class="sig-paren">(</span><em>v0</em>, <em>v1</em>, <em>v2</em>, <em>v3</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.setColumns" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>列ベクトルを4つ全てセットする。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>v0</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 1列目の4次元ベクトル。</li>
+<li><strong>v1</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 2列目の4次元ベクトル。</li>
+<li><strong>v2</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 3列目の4次元ベクトル。</li>
+<li><strong>v3</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 4列目の4次元ベクトル。</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.setElem">
+<code class="descname">setElem</code><span class="sig-paren">(</span><em>row</em>, <em>col</em>, <em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.setElem" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>指定位置の要素をセットする。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -973,14 +1357,92 @@ True では列ベクトルを得ることになる。</li>
 </dd></dl>
 
 <dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.setRow">
+<code class="descname">setRow</code><span class="sig-paren">(</span><em>i</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.setRow" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>行ベクトルをセットする。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>i</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- 行インデックス（0～3）。</li>
+<li><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- セットする4次元ベクトル。</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.setRows">
+<code class="descname">setRows</code><span class="sig-paren">(</span><em>v0</em>, <em>v1</em>, <em>v2</em>, <em>v3</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.setRows" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>行ベクトルを4つ全てセットする。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>v0</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 1行目の4次元ベクトル。</li>
+<li><strong>v1</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 2行目の4次元ベクトル。</li>
+<li><strong>v2</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 3行目の4次元ベクトル。</li>
+<li><strong>v3</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 4行目の4次元ベクトル。</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.setT">
+<code class="descname">setT</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.setT" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.setTranslation" title="cymel.core.datatypes.matrix.Matrix.setTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTranslation</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.setToIdentity">
+<code class="descname">setToIdentity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.setToIdentity" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>単位行列をセットする。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><code class="xref py py-obj docutils literal notranslate"><span class="pre">self</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.setTranslation">
+<code class="descname">setTranslation</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.setTranslation" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>平行移動値をセットする。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 平行移動の3次元ベクトル。</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="cymel.core.datatypes.matrix.Matrix.subT">
 <code class="descname">subT</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.subT" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="#cymel.core.datatypes.matrix.Matrix.subTranslation" title="cymel.core.datatypes.matrix.Matrix.subTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subTranslation</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.matrix.Matrix.subTranslation">
+<code class="descname">subTranslation</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.Matrix.subTranslation" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>平行移動値を減算する。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> -- 平行移動ベクトル。</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 平行移動の3次元ベクトル。</td>
 </tr>
 </tbody>
 </table>

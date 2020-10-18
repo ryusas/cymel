@@ -91,11 +91,11 @@
 マトリックスの値そのものの他に、
 トランスフォーメーション情報をストアすることができる。
 本クラスではそれに対応し、
-アトリビュートがデータを持っていれば、
+プラグがデータを持っていれば、
 このオブジェクトを直接 <code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code> することができる
 （持っている情報に応じて <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> や
 <a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> 、あるいは None が得られる）。
-また、このオブジェクトを直接 <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug.set" title="cymel.core.cyobjects.plug.Plug.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a> することもできる。</p>
+また、このオブジェクトをプラグに直接 <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug.set" title="cymel.core.cyobjects.plug.Plug.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a> することもできる。</p>
 <p>さらに、本クラスは、
 トランスフォーメーション要素をマトリックスに合成したり、
 マトリックスからトランスフォーメーション要素に分解したり
@@ -156,6 +156,12 @@ rotate (<a class="reference internal" href="cymel.core.datatypes.eulerrotation.E
 </ul>
 </li>
 </ul>
+<p>各属性値は、自由に参照したり、セットしたりすることができるが、
+<a class="reference internal" href="../cymel.pyutils.immutable.html#cymel.pyutils.immutable" title="cymel.pyutils.immutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code></a> でラップされた変更不可な値となっている。
+つまり、それ自身を変更するメソッドを使用することはできない。
+たとえば <code class="docutils literal notranslate"><span class="pre">r</span></code> をリオーダーするには <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reorderIt" title="cymel.core.datatypes.eulerrotation.EulerRotation.reorderIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reorderIt</span></code></a>
+を呼ぶとエラーになるので <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reorder" title="cymel.core.datatypes.eulerrotation.EulerRotation.reorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reorder</span></code></a> で得たものを
+セットし直すか <code class="docutils literal notranslate"><span class="pre">ro</span></code> をセットする。</p>
 <p>基本トランスフォーメーション要素属性か
 トランスフォーメーション修飾属性をセットすると、
 マトリックス属性がクリアされ、

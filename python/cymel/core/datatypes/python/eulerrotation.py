@@ -3,9 +3,11 @@ u"""
 オイラー角回転クラス。
 """
 from ...common import *
+from ...pyutils.immutable import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
 import maya.api.OpenMaya as _api2
+from math import sqrt, atan2
 
-__all__ = ['EulerRotation', 'E', 'degrot']
+__all__ = ['EulerRotation', 'E', 'ImmutableEulerRotation', 'degrot']
 
 _ME = _api2.MEulerRotation
 _MV = _api2.MVector
@@ -18,6 +20,9 @@ _2_computeClosestSolution = _ME.computeClosestSolution
 _2_decompose = _ME.decompose
 
 _TOLERANCE = _ME.kTolerance
+
+_PI_2 = PI * .5
+_2PI = PI + PI
 
 
 #------------------------------------------------------------------------------
@@ -252,7 +257,7 @@ class EulerRotation(object):
 
         :rtype: `.Transformation`
         """
-        return _newX(dict(r=_newE(_ME(self.__data))))
+        return _newX(dict(r=_newE(_ME(self.__data), ImmutableEulerRotation)))
 
     asX = asTransformation  #: `asTransformation` の別名。
 
@@ -412,7 +417,73 @@ class EulerRotation(object):
         """
         return _ORDER_TO_STR[self.__data.order]
 
+    def isGimbalLocked(self, tol=_TOLERANCE):
+        u"""
+        ジンバルロック状態かどうかを得る。
+
+        ピッチ回転が±πの状態
+        （ロール軸とヨー軸が重なった状態）
+        をジンバルロックとする。
+
+        :param `float` tolerance: 許容誤差。
+        :rtype: `bool`
+        """
+        return -tol < abs(boundAngle(self.__data[_ORDER_TO_AXES[self.__data.order][1]])) - _PI_2 < tol
+
+    def reverseDirection(self):
+        u"""
+        同じ姿勢の逆周り回転を得る。
+
+        `asQuaternion` で得られるクォータニオンが反転する。
+
+        :rtype: `EulerRotation`
+        """
+        return _newE(_reverseRotation(_ME(self.__data), self.__data.asQuaternion().w))
+
+    def setToReverseDirection(self):
+        u"""
+        同じ姿勢の逆周り回転をセットする。
+
+        `asQuaternion` で得られるクォータニオンが反転する。
+
+        :rtype: `EulerRotation` (self)
+        """
+        self.__data = _reverseRotation(self.__data, self.__data.asQuaternion().w)
+        return self
+
+    @classmethod
+    def makeYawPitch(cls, vec, order=XYZ):
+        u"""
+        球面上のベクトルからヨーとピッチの2軸回転を得る。
+
+        基準軸を指定方向へ向けるヨー、ピッチの回転が得られる。
+
+        回転オーダーは、そのまま
+        初期方向を表す基準軸、ピッチ回転軸、ヨー回転軸
+        を表す。
+
+        :type vec: `.Vector`
+        :param vec: 球面上の位置を表す単位ベクトル。
+        :param `int` order: 回転オーダー。
+        :rtype: `EulerRotation`
+        """
+        return cls(_MAKE_YAW_PITCH[order](vec), order)
+
 E = EulerRotation  #: `EulerRotation` の別名。
+
+_MUTATOR_DICT[E] = (
+    'set',
+    'setValue',
+    'incrementalRotateBy',
+    'invertIt',
+    'reorderIt',
+    'boundIt',
+    'setToAlternateSolution',
+    'setToClosestSolution',
+    'setToClosestCut',
+    'setToReverseDirection',
+)
+ImmutableEulerRotation = immutableType(E)  #: `EulerRotation` の `immutable` ラッパー。
 
 
 def _newE(data, cls=E):
@@ -422,6 +493,8 @@ def _newE(data, cls=E):
 _object_new = object.__new__
 
 _E_setdata = E._EulerRotation__data.__set__
+
+E.Zero = ImmutableEulerRotation()  #: ゼロ。
 
 E.Tolerance = _TOLERANCE  #: 同値とみなす許容誤差。
 
@@ -446,9 +519,76 @@ _AXES_TO_ORDER = ImmutableDict([(v, i) for i, v in enumerate(_ORDER_TO_AXES)])
 E.ORDER_TO_AXES = _ORDER_TO_AXES  #: 回転オーダーから軸IDが3つ並んだtupleを得るテーブル。
 E.AXES_TO_ORDER = _AXES_TO_ORDER  #: 軸IDが3つ並んだtupleから回転オーダーを得る辞書。
 
-del i, v
-
 #_ROLL_AXES, _PITCH_AXES, YAW_AXES = zip(*_ORDER_TO_AXES)
 
-E.Zero = immutable(E())  #: ゼロ。
+del i, v
+
+
+#------------------------------------------------------------------------------
+def _init_make_yaw_pitch():
+    def _pch_yaw(d, h, v):
+        return atan2(v, sqrt(d * d + h * h)), atan2(h, d)
+
+    def _yawpitch_XYZ(vec):
+        pch, yaw = _pch_yaw(vec[0], vec[1], -vec[2])
+        return 0., pch, yaw
+
+    def _yawpitch_YZX(vec):
+        pch, yaw = _pch_yaw(vec[1], vec[2], -vec[0])
+        return yaw, 0., pch
+
+    def _yawpitch_ZXY(vec):
+        pch, yaw = _pch_yaw(vec[2], vec[0], -vec[1])
+        return pch, yaw, 0.
+
+    def _yawpitch_XZY(vec):
+        pch, yaw = _pch_yaw(vec[0], -vec[2], vec[1])
+        return 0., yaw, pch
+
+    def _yawpitch_YXZ(vec):
+        pch, yaw = _pch_yaw(vec[1], -vec[0], vec[2])
+        return pch, 0., yaw
+
+    def _yawpitch_ZYX(vec):
+        pch, yaw = _pch_yaw(vec[2], -vec[1], vec[0])
+        return yaw, pch, 0.
+
+    return (
+        _yawpitch_XYZ,
+        _yawpitch_YZX,
+        _yawpitch_ZXY,
+        _yawpitch_XZY,
+        _yawpitch_YXZ,
+        _yawpitch_ZYX,
+    )
+_MAKE_YAW_PITCH = _init_make_yaw_pitch()  #: 球面上の指定方向を表すヨーピッチ回転を得る関数辞書。
+
+
+#------------------------------------------------------------------------------
+def _reverseRotation(r0, qw):
+    r1 = r0.alternateSolution()
+    if qw * r1.asQuaternion().w < 0.:
+        s1 = abs(r1.x) + abs(r1.y) + abs(r1.z)
+    else:
+        s1 = _reverse(r1)
+    return r1 if s1 < _reverse(r0) else r0
+
+
+def _reverse(rot):
+    ax = abs(rot.x)
+    ay = abs(rot.y)
+    az = abs(rot.z)
+    if ax >= ay:
+        if ax >= az:
+            rot.x += _2PI if rot.x < 0. else -_2PI
+            return abs(rot.x) + ay + az
+        else:
+            rot.z += _2PI if rot.z < 0. else -_2PI
+            return abs(rot.z) + ax + ay
+    elif ay >= az:
+        rot.y += _2PI if rot.y < 0. else -_2PI
+        return abs(rot.y) + ax + az
+    else:
+        rot.z += _2PI if rot.z < 0. else -_2PI
+        return abs(rot.z) + ax + ay
 

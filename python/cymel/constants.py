@@ -11,7 +11,7 @@ TO_RAD = PI / 180.  #: Degrees を Radians に変換するための係数。
 
 #TOLERANCE = 1. / (2 ** 30)  #: DCCツールなどで一般的に使用する想定の許容誤差。
 #LOOSE_TOLERANCE = 1. / (2 ** 18)  #: DCCツールなどでの緩めの許容誤差。
-AVOID_ZERO_DIV_PRECISION = 1.e-13  #: Maya では scale=0 を設定しても matrix 値は 1.e-12 くらいで潰れずに保持するようなので、それを意識したリミット。
+AVOID_ZERO_DIV_PRECISION = 1.e-13  #: Maya では scale=0 を設定しても matrix 値は 1.e-12 くらいで潰れずに保持するようなので、それを意識した極小値。
 
 XYZ = 0  #: Rotaion order XYZ (0)
 YZX = 1  #: Rotaion order YZX (1)

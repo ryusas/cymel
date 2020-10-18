@@ -173,8 +173,14 @@
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.isEquivalent" title="cymel.core.datatypes.eulerrotation.EulerRotation.isEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isEquivalent</span></code></a>(v[,&nbsp;tol])</td>
 <td>ほぼ同値かどうか。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.isZero" title="cymel.core.datatypes.eulerrotation.EulerRotation.isZero"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isZero</span></code></a>([tol])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.isGimbalLocked" title="cymel.core.datatypes.eulerrotation.EulerRotation.isGimbalLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isGimbalLocked</span></code></a>([tol])</td>
+<td>ジンバルロック状態かどうかを得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.isZero" title="cymel.core.datatypes.eulerrotation.EulerRotation.isZero"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isZero</span></code></a>([tol])</td>
 <td>ほぼゼロかどうか。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.makeYawPitch" title="cymel.core.datatypes.eulerrotation.EulerRotation.makeYawPitch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeYawPitch</span></code></a>(vec[,&nbsp;order])</td>
+<td>球面上のベクトルからヨーとピッチの2軸回転を得る。</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.orderStr" title="cymel.core.datatypes.eulerrotation.EulerRotation.orderStr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orderStr</span></code></a>()</td>
 <td>回転オーダーを文字列で得る。</td>
@@ -185,17 +191,23 @@
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.reorderIt" title="cymel.core.datatypes.eulerrotation.EulerRotation.reorderIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reorderIt</span></code></a>(order)</td>
 <td>回転結果を維持しつつ、オーダーを変更した値をセットする。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.set" title="cymel.core.datatypes.eulerrotation.EulerRotation.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(*args)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reverseDirection</span></code></a>()</td>
+<td>同じ姿勢の逆周り回転を得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.set" title="cymel.core.datatypes.eulerrotation.EulerRotation.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(*args)</td>
 <td>他の値をセットする。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.setToAlternateSolution" title="cymel.core.datatypes.eulerrotation.EulerRotation.setToAlternateSolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToAlternateSolution</span></code></a>(src)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.setToAlternateSolution" title="cymel.core.datatypes.eulerrotation.EulerRotation.setToAlternateSolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToAlternateSolution</span></code></a>(src)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.setToClosestCut" title="cymel.core.datatypes.eulerrotation.EulerRotation.setToClosestCut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToClosestCut</span></code></a>(srcOrDst[,&nbsp;dst])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.setToClosestCut" title="cymel.core.datatypes.eulerrotation.EulerRotation.setToClosestCut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToClosestCut</span></code></a>(srcOrDst[,&nbsp;dst])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.setToClosestSolution" title="cymel.core.datatypes.eulerrotation.EulerRotation.setToClosestSolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToClosestSolution</span></code></a>(srcOrDst[,&nbsp;dst])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.setToClosestSolution" title="cymel.core.datatypes.eulerrotation.EulerRotation.setToClosestSolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToClosestSolution</span></code></a>(srcOrDst[,&nbsp;dst])</td>
 <td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.setToReverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.setToReverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToReverseDirection</span></code></a>()</td>
+<td>同じ姿勢の逆周り回転をセットする。</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.setValue" title="cymel.core.datatypes.eulerrotation.EulerRotation.setValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValue</span></code></a>(*args)</td>
 <td>他の値をセットする。</td>
@@ -235,7 +247,7 @@
 
 <dl class="attribute">
 <dt id="cymel.core.datatypes.eulerrotation.EulerRotation.Zero">
-<code class="descname">Zero</code><em class="property"> = _Immutable_EulerRotation(0, 0, 0, XYZ)</em><a class="headerlink" href="#cymel.core.datatypes.eulerrotation.EulerRotation.Zero" title="この定義へのパーマリンク">¶</a></dt>
+<code class="descname">Zero</code><em class="property"> = ImmutableEulerRotation(0, 0, 0, XYZ)</em><a class="headerlink" href="#cymel.core.datatypes.eulerrotation.EulerRotation.Zero" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
 <p class="rubric">Methods Details:</p>
@@ -482,6 +494,25 @@ The rotation is broken down and performed in smaller steps so that the angles up
 </dd></dl>
 
 <dl class="method">
+<dt id="cymel.core.datatypes.eulerrotation.EulerRotation.isGimbalLocked">
+<code class="descname">isGimbalLocked</code><span class="sig-paren">(</span><em>tol=1e-10</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.eulerrotation.EulerRotation.isGimbalLocked" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ジンバルロック状態かどうかを得る。</p>
+<p>ピッチ回転が±πの状態
+（ロール軸とヨー軸が重なった状態）
+をジンバルロックとする。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>tolerance</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) -- 許容誤差。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="cymel.core.datatypes.eulerrotation.EulerRotation.isZero">
 <code class="descname">isZero</code><span class="sig-paren">(</span><em>tol=1e-10</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.eulerrotation.EulerRotation.isZero" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ほぼゼロかどうか。</p>
@@ -492,6 +523,31 @@ The rotation is broken down and performed in smaller steps so that the angles up
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) -- 許容誤差。</td>
 </tr>
 <tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="cymel.core.datatypes.eulerrotation.EulerRotation.makeYawPitch">
+<em class="property">classmethod </em><code class="descname">makeYawPitch</code><span class="sig-paren">(</span><em>vec</em>, <em>order=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.eulerrotation.EulerRotation.makeYawPitch" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>球面上のベクトルからヨーとピッチの2軸回転を得る。</p>
+<p>基準軸を指定方向へ向けるヨー、ピッチの回転が得られる。</p>
+<p>回転オーダーは、そのまま
+初期方向を表す基準軸、ピッチ回転軸、ヨー回転軸
+を表す。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>vec</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 球面上の位置を表す単位ベクトル。</li>
+<li><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- 回転オーダー。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a></p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -544,6 +600,21 @@ The rotation is broken down and performed in smaller steps so that the angles up
 </dd></dl>
 
 <dl class="method">
+<dt id="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection">
+<code class="descname">reverseDirection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>同じ姿勢の逆周り回転を得る。</p>
+<p><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.asQuaternion" title="cymel.core.datatypes.eulerrotation.EulerRotation.asQuaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asQuaternion</span></code></a> で得られるクォータニオンが反転する。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="cymel.core.datatypes.eulerrotation.EulerRotation.set">
 <code class="descname">set</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.eulerrotation.EulerRotation.set" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>他の値をセットする。</p>
@@ -579,6 +650,21 @@ The rotation is broken down and performed in smaller steps so that the angles up
 <dt id="cymel.core.datatypes.eulerrotation.EulerRotation.setToClosestSolution">
 <code class="descname">setToClosestSolution</code><span class="sig-paren">(</span><em>srcOrDst</em>, <em>dst=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.eulerrotation.EulerRotation.setToClosestSolution" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.eulerrotation.EulerRotation.setToReverseDirection">
+<code class="descname">setToReverseDirection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.eulerrotation.EulerRotation.setToReverseDirection" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>同じ姿勢の逆周り回転をセットする。</p>
+<p><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation.asQuaternion" title="cymel.core.datatypes.eulerrotation.EulerRotation.asQuaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asQuaternion</span></code></a> で得られるクォータニオンが反転する。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a> (self)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="method">
 <dt id="cymel.core.datatypes.eulerrotation.EulerRotation.setValue">

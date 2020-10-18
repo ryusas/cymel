@@ -101,7 +101,7 @@
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.ModuleForSel.selected" title="cymel.core.cyobjects.cyobject.ModuleForSel.selected"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selected</span></code></a>([sel])</td>
 <td>セレクションから <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> リストを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.ModuleForSel.selobj" title="cymel.core.cyobjects.cyobject.ModuleForSel.selobj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selobj</span></code></a>(self[,&nbsp;i])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.ModuleForSel.selobj" title="cymel.core.cyobjects.cyobject.ModuleForSel.selobj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selobj</span></code></a>([i])</td>
 <td>現在選択されている i 番目の <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> を得る。</td>
 </tr>
 </tbody>
@@ -111,7 +111,8 @@
 <dt id="cymel.core.cyobjects.cyobject.ModuleForSel.sel">
 <code class="descname">sel</code><a class="headerlink" href="#cymel.core.cyobjects.cyobject.ModuleForSel.sel" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>現在選択されている最初の <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> を得るプロパティ。</p>
-<p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.ModuleForSel.selobj" title="cymel.core.cyobjects.cyobject.ModuleForSel.selobj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selobj</span></code></a> を引数無し(i=0)で呼び出すことと等しい。</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.ModuleForSel.selobj" title="cymel.core.cyobjects.cyobject.ModuleForSel.selobj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selobj</span></code></a> を引数無し(i=0)で呼び出すこととほぼ等しいが、
+何も選択されていない状態だと None となり、エラーにはならない。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -161,7 +162,7 @@
 
 <dl class="staticmethod">
 <dt id="cymel.core.cyobjects.cyobject.ModuleForSel.selobj">
-<em class="property">static </em><code class="descname">selobj</code><span class="sig-paren">(</span><em>self</em>, <em>i=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.ModuleForSel.selobj" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property">static </em><code class="descname">selobj</code><span class="sig-paren">(</span><em>i=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.ModuleForSel.selobj" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>現在選択されている i 番目の <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> を得る。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

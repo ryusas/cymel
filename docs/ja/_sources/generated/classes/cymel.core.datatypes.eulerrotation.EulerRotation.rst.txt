@@ -42,14 +42,18 @@ class cymel.core.datatypes.eulerrotation.EulerRotation
         inverse
         invertIt
         isEquivalent
+        isGimbalLocked
         isZero
+        makeYawPitch
         orderStr
         reorder
         reorderIt
+        reverseDirection
         set
         setToAlternateSolution
         setToClosestCut
         setToClosestSolution
+        setToReverseDirection
         setValue
 
 
@@ -98,14 +102,18 @@ class cymel.core.datatypes.eulerrotation.EulerRotation
     .. automethod:: inverse
     .. automethod:: invertIt
     .. automethod:: isEquivalent
+    .. automethod:: isGimbalLocked
     .. automethod:: isZero
+    .. automethod:: makeYawPitch
     .. automethod:: orderStr
     .. automethod:: reorder
     .. automethod:: reorderIt
+    .. automethod:: reverseDirection
     .. automethod:: set
     .. automethod:: setToAlternateSolution
     .. automethod:: setToClosestCut
     .. automethod:: setToClosestSolution
+    .. automethod:: setToReverseDirection
     .. automethod:: setValue
 
 

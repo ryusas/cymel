@@ -17,7 +17,7 @@ import maya.cmds as cmds
 from .constants import *
 from .pyutils.pyutils import *
 from .pyutils import (
-    immutable, ImmutableDict,
+    immutable, immutableType, ImmutableDict,
     trackDestruction,
 )
 from .initmaya import (

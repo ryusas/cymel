@@ -19,13 +19,18 @@ class cymel.core.datatypes.quaternion.Quaternion
     .. autosummary::
     
         asAA
+        asAngle
         asAxisAngle
+        asBend
         asD
         asDegrees
         asE
         asEulerRotation
         asM
         asMatrix
+        asRHV
+        asRoll
+        asRollBendHV
         asTransformation
         asX
         conjugate
@@ -35,13 +40,18 @@ class cymel.core.datatypes.quaternion.Quaternion
         inverse
         invertIt
         isEquivalent
+        isIdentity
         isSignedEquivalent
         log
+        makeRHV
+        makeRollBendHV
         negateIt
         normal
         normalize
         normalizeIt
         set
+        setAngle
+        setToIdentity
         setToXAxis
         setToYAxis
         setToZAxis
@@ -69,13 +79,18 @@ class cymel.core.datatypes.quaternion.Quaternion
 
     
     .. automethod:: asAA
+    .. automethod:: asAngle
     .. automethod:: asAxisAngle
+    .. automethod:: asBend
     .. automethod:: asD
     .. automethod:: asDegrees
     .. automethod:: asE
     .. automethod:: asEulerRotation
     .. automethod:: asM
     .. automethod:: asMatrix
+    .. automethod:: asRHV
+    .. automethod:: asRoll
+    .. automethod:: asRollBendHV
     .. automethod:: asTransformation
     .. automethod:: asX
     .. automethod:: conjugate
@@ -85,13 +100,18 @@ class cymel.core.datatypes.quaternion.Quaternion
     .. automethod:: inverse
     .. automethod:: invertIt
     .. automethod:: isEquivalent
+    .. automethod:: isIdentity
     .. automethod:: isSignedEquivalent
     .. automethod:: log
+    .. automethod:: makeRHV
+    .. automethod:: makeRollBendHV
     .. automethod:: negateIt
     .. automethod:: normal
     .. automethod:: normalize
     .. automethod:: normalizeIt
     .. automethod:: set
+    .. automethod:: setAngle
+    .. automethod:: setToIdentity
     .. automethod:: setToXAxis
     .. automethod:: setToYAxis
     .. automethod:: setToZAxis

@@ -18,6 +18,7 @@ cymel.initmaya
     .. autosummary::
     
         callUserSetupMel
+        initApiImmutables
         initCymelPluginsPath
         initMaya
         initialize
@@ -53,6 +54,7 @@ cymel.initmaya
 
     
     .. autofunction:: callUserSetupMel
+    .. autofunction:: initApiImmutables
     .. autofunction:: initCymelPluginsPath
     .. autofunction:: initMaya
     .. autofunction:: initialize
