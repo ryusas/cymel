@@ -1157,6 +1157,7 @@ _MUTATOR_DICT[M] = (
     'addT',
     'subTranslation',
     'subT',
+    'mirrorIt',
 )
 ImmutableMatrix = immutableType(M)  #: `Matrix` の `immutable` ラッパー。
 
