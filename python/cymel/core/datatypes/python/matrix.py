@@ -134,31 +134,56 @@ class Matrix(object):
             return True
 
     def __neg__(self):
-        return _newM(self.__data.__mul__(-1.))
+        return _newM(self.__data * -1.)
 
     def __add__(self, v):
         try:
-            return _newM(self.__data.__add__(v.__data))
+            return _newM(self.__data + v.__data)
         except:
             raise ValueError("%s + %r" % (type(self).__name__, v))
 
+    def __iadd__(self, v):
+        try:
+            self.__data += v.__data
+        except:
+            raise ValueError("%s += %r" % (type(self).__name__, v))
+        return self
+
     def __sub__(self, v):
         try:
-            return _newM(self.__data.__sub__(v.__data))
+            return _newM(self.__data - v.__data)
         except:
             raise ValueError("%s - %r" % (type(self).__name__, v))
 
+    def __isub__(self, v):
+        try:
+            self.__data -= v.__data
+        except:
+            raise ValueError("%s -= %r" % (type(self).__name__, v))
+        return self
+
     def __mul__(self, v):
         if isinstance(v, Number):
-            return _newM(self.__data.__mul__(v))
+            return _newM(self.__data * v)
         elif hasattr(v, '_Transformation__data'):
-            v = v._Transformation__copy()
-            v.m = self * v.m
-            return v
-        try:
-            return _newM(self.__data.__mul__(v.__data))
-        except:
-            raise ValueError("%s * %r" % (type(self).__name__, v))
+            return _newM(self.__data * v.m.__data)
+        else:
+            try:
+                return _newM(self.__data * v.__data)
+            except:
+                raise ValueError("%s * %r" % (type(self).__name__, v))
+
+    def __imul__(self, v):
+        if isinstance(v, Number):
+            self.__data *= v
+        elif hasattr(v, '_Transformation__data'):
+            self.__data *= v.m.__data
+        else:
+            try:
+                self.__data *= v.__data
+            except:
+                raise ValueError("%s *= %r" % (type(self).__name__, v))
+        return self
 
     def __rmul__(self, v):
         try:
@@ -168,9 +193,16 @@ class Matrix(object):
 
     def __div__(self, v):
         try:
-            return _newM(self.__data.__mul__(1. / v))
+            return _newM(self.__data * (1. / v))
         except:
             raise ValueError("%s / %r" % (type(self).__name__, v))
+
+    def __idiv__(self, v):
+        try:
+            self.__data *= (1. / v)
+        except:
+            raise ValueError("%s /= %r" % (type(self).__name__, v))
+        return self
 
     def __rdiv__(self, v):
         try:
@@ -813,7 +845,7 @@ class Matrix(object):
             a[12] * b[12], a[13] * b[13], a[14] * b[14], a[15] * b[15],
         ]))
 
-    def mulIt(self, m):
+    def imul(self, m):
         u"""
         マトリックス要素同士を乗算してセットする。
 
@@ -877,7 +909,7 @@ class Matrix(object):
             a[15] / avoidZeroDiv(b[15], pre),
         ]))
 
-    def divIt(self, m, pre=AVOID_ZERO_DIV_PRECISION):
+    def idiv(self, m, pre=AVOID_ZERO_DIV_PRECISION):
         u"""
         各要素同士を除算し自身を更新する。
 
@@ -1149,8 +1181,8 @@ _MUTATOR_DICT[M] = (
     'setColumns',
     'setAxis',
     'setAxes',
-    'mulIt'
-    'divIt'
+    'imul'
+    'idiv'
     'setTranslation',
     'setT',
     'addTranslation',

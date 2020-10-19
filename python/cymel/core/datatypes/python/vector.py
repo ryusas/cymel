@@ -138,39 +138,86 @@ class Vector(object):
         except:
             raise ValueError("%s + %r" % (type(self).__name__, v))
 
-    def __sub__(self, v):
-        try:
-            v = self.__data.__sub__(v.__data)
-            return _newV(_MP(v[0], v[1], v[2], self.__data[3]))
-        except:
-            raise ValueError("%s - %r" % (type(self).__name__, v))
-
-    def __mul__(self, v):
-        if hasattr(v, '_Matrix__data'):
-            return _newV(self.__data.__mul__(v._Matrix__data))
-        if hasattr(v, '_Quaternion__data'):
-            v = _MV(self.__data).rotateBy(v._Quaternion__data)
-            return _newV(_MP(v[0], v[1], v[2], self.__data[3]))
-        if isinstance(v, Number):
-            return _newV(self.__data.__mul__(v))
+    def __iadd__(self, v):
         try:
             d = self.__data
             s = v.__data
-            return d[0] * s[0] + d[1] * s[1] + d[2] * s[2]
+            d[0] += s[0]
+            d[1] += s[1]
+            d[2] += s[2]
         except:
-            raise ValueError("%s * %r" % (type(self).__name__, v))
+            raise ValueError("%s += %r" % (type(self).__name__, v))
+        return self
+
+    def __sub__(self, v):
+        try:
+            d = self.__data
+            s = v.__data
+            return _newV(_MP(d[0] - s[0], d[1] - s[1], d[2] - s[2], d[3]))
+        except:
+            raise ValueError("%s - %r" % (type(self).__name__, v))
+
+    def __isub__(self, v):
+        try:
+            d = self.__data
+            s = v.__data
+            d[0] -= s[0]
+            d[1] -= s[1]
+            d[2] -= s[2]
+        except:
+            raise ValueError("%s -= %r" % (type(self).__name__, v))
+        return self
+
+    def __mul__(self, v):
+        if hasattr(v, '_Matrix__data'):
+            return _newV(self.__data * v._Matrix__data)
+        elif hasattr(v, '_Quaternion__data'):
+            v = _MV(self.__data).rotateBy(v._Quaternion__data)
+            return _newV(_MP(v[0], v[1], v[2], self.__data[3]))
+        elif isinstance(v, Number):
+            return _newV(self.__data * v)
+        else:
+            try:
+                d = self.__data
+                s = v.__data
+                return d[0] * s[0] + d[1] * s[1] + d[2] * s[2]
+            except:
+                raise ValueError("%s * %r" % (type(self).__name__, v))
+
+    def __imul__(self, v):
+        if hasattr(v, '_Matrix__data'):
+            self.__data *= v._Matrix__data
+        elif hasattr(v, '_Quaternion__data'):
+            d = self.__data
+            v = _MV(d).rotateBy(v._Quaternion__data)
+            d[0] = v[0]
+            d[1] = v[1]
+            d[2] = v[2]
+        else:
+            try:
+                self.__data *= v
+            except:
+                raise ValueError("%s *= %r" % (type(self).__name__, v))
+        return self
 
     def __rmul__(self, v):
         try:
-            return _newV(self.__data.__mul__(v))  # MPoint のスカラー倍は __mul__ のみ。
+            return _newV(self.__data * v)  # MPoint のスカラー倍は __mul__ のみ。
         except:
             raise ValueError("%r * %s" % (v, type(self).__name__))
 
     def __div__(self, v):
         try:
-            return _newV(self.__data.__div__(v))
+            return _newV(self.__data / v)
         except:
             raise ValueError("%s / %r" % (type(self).__name__, v))
+
+    def __idiv__(self, v):
+        try:
+            self.__data /= v
+        except:
+            raise ValueError("%s /= %r" % (type(self).__name__, v))
+        return self
 
     def __rdiv__(self, v):
         try:
@@ -181,10 +228,25 @@ class Vector(object):
 
     def __xor__(self, v):
         try:
-            v = _MV(self.__data).__xor__(_MV(v.__data))
+            v = _MV(self.__data) ^ _MV(v.__data)
             return _newV(_MP(v[0], v[1], v[2], self.__data[3]))
         except:
             raise ValueError("%s ^ %r" % (type(self).__name__, v))
+
+    def __ixor__(self, v):
+        try:
+            d = self.__data
+            v = _MV(d) ^ _MV(v.__data)
+            d[0] = v[0]
+            d[1] = v[1]
+            d[2] = v[2]
+        except:
+            raise ValueError("%s ^= %r" % (type(self).__name__, v))
+        return self
+
+    def __abs__(self):
+        v = self.__data
+        return _newV(_MP(abs(v[0]), abs(v[1]), abs(v[2]), abs(v[3])))
 
     def isEquivalent(self, v, tol=_TOLERANCE):
         u"""
@@ -476,18 +538,20 @@ class Vector(object):
         :param m: 変換マトリックス。
         :rtype: `Vector`
         """
-        return _newV(self.__data.__mul__(m._Matrix__data))
+        return _newV(self.__data * m._Matrix__data)
 
     def abs(self):
         u"""
         4次元ベクトルの各要素を絶対値にしたベクトルを得る。
+
+        abs 組み込み関数を使用する場合と等価。
 
         :rtype: `Vector`
         """
         v = self.__data
         return _newV(_MP(abs(v[0]), abs(v[1]), abs(v[2]), abs(v[3])))
 
-    def absIt(self):
+    def iabs(self):
         u"""
         4次元ベクトルの各要素を絶対値にする。
 
@@ -512,7 +576,7 @@ class Vector(object):
         b = v.__data
         return _newV(_MP(a[0] * b[0], a[1] * b[1], a[2] * b[2], a[3] * b[3]))
 
-    def mulIt(self, v):
+    def imul(self, v):
         u"""
         4次元ベクトルの各要素を乗算したベクトルをセットする。
 
@@ -546,7 +610,7 @@ class Vector(object):
             a[3] / avoidZeroDiv(b[3], pre),
         ))
 
-    def divIt(self, v, pre=AVOID_ZERO_DIV_PRECISION):
+    def idiv(self, v, pre=AVOID_ZERO_DIV_PRECISION):
         u"""
         4次元ベクトルの各要素を除算したベクトルをセットする。
 
@@ -656,9 +720,9 @@ _MUTATOR_DICT[V] = (
     'cartesianize',
     'rationalize',
     'homogenize',
-    'absIt',
-    'mulIt',
-    'divIt',
+    'iabs',
+    'imul',
+    'idiv',
     'orthogonalize',
 )
 ImmutableVector = immutableType(V)  #: `Vector` の `immutable` ラッパー。

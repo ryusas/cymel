@@ -51,11 +51,12 @@ class cymel.core.datatypes.matrix.Matrix
         det3x3
         det4x4
         div
-        divIt
         getElem
         hasNonUniformScaling
         homogenize
         homogenizeIt
+        idiv
+        imul
         init3x3
         initT
         initTranslation
@@ -79,7 +80,6 @@ class cymel.core.datatypes.matrix.Matrix
         mirror
         mirrorIt
         mul
-        mulIt
         row
         rows
         set
@@ -149,11 +149,12 @@ class cymel.core.datatypes.matrix.Matrix
     .. automethod:: det3x3
     .. automethod:: det4x4
     .. automethod:: div
-    .. automethod:: divIt
     .. automethod:: getElem
     .. automethod:: hasNonUniformScaling
     .. automethod:: homogenize
     .. automethod:: homogenizeIt
+    .. automethod:: idiv
+    .. automethod:: imul
     .. automethod:: init3x3
     .. automethod:: initT
     .. automethod:: initTranslation
@@ -177,7 +178,6 @@ class cymel.core.datatypes.matrix.Matrix
     .. automethod:: mirror
     .. automethod:: mirrorIt
     .. automethod:: mul
-    .. automethod:: mulIt
     .. automethod:: row
     .. automethod:: rows
     .. automethod:: set

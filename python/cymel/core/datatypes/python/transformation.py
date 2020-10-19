@@ -271,6 +271,13 @@ class Transformation(object):
             _multMatrix(x.__data, v._Matrix__data)
         return x
 
+    def __imul__(self, v):
+        if hasattr(v, '_Transformation__data'):
+            v = v.m
+        if not v.isIdentity():
+            _multMatrix(self.__data, v._Matrix__data)
+        return self
+
     def isEquivalent(self, v, tol=_TOLERANCE):
         u"""
         各属性値がほぼ同値かどうか。

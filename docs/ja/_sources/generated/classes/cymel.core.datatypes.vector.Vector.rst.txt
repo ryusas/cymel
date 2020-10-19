@@ -19,19 +19,20 @@ class cymel.core.datatypes.vector.Vector
     .. autosummary::
     
         abs
-        absIt
         angle
         cartesianize
         cross
         distanceSqTo
         distanceTo
         div
-        divIt
         dot
         dot4
         dot4r
         findNearestAxis
         homogenize
+        iabs
+        idiv
+        imul
         isEquivalent
         isParallel
         isZero
@@ -40,7 +41,6 @@ class cymel.core.datatypes.vector.Vector
         maxAxis
         minAxis
         mul
-        mulIt
         normal
         normalize
         normalizeIt
@@ -82,19 +82,20 @@ class cymel.core.datatypes.vector.Vector
 
     
     .. automethod:: abs
-    .. automethod:: absIt
     .. automethod:: angle
     .. automethod:: cartesianize
     .. automethod:: cross
     .. automethod:: distanceSqTo
     .. automethod:: distanceTo
     .. automethod:: div
-    .. automethod:: divIt
     .. automethod:: dot
     .. automethod:: dot4
     .. automethod:: dot4r
     .. automethod:: findNearestAxis
     .. automethod:: homogenize
+    .. automethod:: iabs
+    .. automethod:: idiv
+    .. automethod:: imul
     .. automethod:: isEquivalent
     .. automethod:: isParallel
     .. automethod:: isZero
@@ -103,7 +104,6 @@ class cymel.core.datatypes.vector.Vector
     .. automethod:: maxAxis
     .. automethod:: minAxis
     .. automethod:: mul
-    .. automethod:: mulIt
     .. automethod:: normal
     .. automethod:: normalize
     .. automethod:: normalizeIt

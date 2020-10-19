@@ -116,39 +116,79 @@ class Quaternion(object):
             return True
 
     def __neg__(self):
-        return _newQ(self.__data.__neg__())
+        return _newQ(-self.__data)
 
     def __add__(self, v):
         try:
-            return _newQ(self.__data.__add__(v.__data))
+            return _newQ(self.__data + v.__data)
         except:
             raise ValueError("%s + %r" % (type(self).__name__, v))
 
+    def __iadd__(self, v):
+        try:
+            self.__data += v.__data
+        except:
+            raise ValueError("%s += %r" % (type(self).__name__, v))
+        return self
+
     def __sub__(self, v):
         try:
-            return _newQ(self.__data.__sub__(v.__data))
+            return _newQ(self.__data - v.__data)
         except:
             raise ValueError("%s - %r" % (type(self).__name__, v))
 
+    def __isub__(self, v):
+        try:
+            self.__data -= v.__data
+        except:
+            raise ValueError("%s -= %r" % (type(self).__name__, v))
+        return self
+
     def __mul__(self, v):
         if isinstance(v, Number):
-            return _newQ(self.__data.__rmul__(v))  # MQuaternion のスカラー倍は __rmul__ のみ。
+            return _newQ(v * self.__data)  # MQuaternion のスカラー倍は __rmul__ のみ。
         try:
-            return _newQ(self.__data.__mul__(v.__data))
+            return _newQ(self.__data * v.__data)
         except:
             raise ValueError("%s * %r" % (type(self).__name__, v))
 
+    def __imul__(self, v):
+        if isinstance(v, Number):
+            d = self.__data  # MQuaternion のスカラー倍は __rmul__ のみ。
+            d[0] *= v
+            d[1] *= v
+            d[2] *= v
+            d[3] *= v
+        else:
+            try:
+                self.__data *= v.__data
+            except:
+                raise ValueError("%s *= %r" % (type(self).__name__, v))
+        return self
+
     def __rmul__(self, v):
         try:
-            return _newQ(self.__data.__rmul__(v))
+            return _newQ(v * self.__data)
         except:
             raise ValueError("%r * %s" % (v, type(self).__name__))
 
     def __div__(self, v):
         try:
-            return _newQ(self.__data.__rmul__(1. / v))
+            return _newQ((1. / v) * self.__data)
         except:
             raise ValueError("%s / %r" % (type(self).__name__, v))
+
+    def __idiv__(self, v):
+        try:
+            v = 1. / v
+            d = self.__data
+            d[0] *= v
+            d[1] *= v
+            d[2] *= v
+            d[3] *= v
+        except:
+            raise ValueError("%s /= %r" % (type(self).__name__, v))
+        return self
 
     def __rdiv__(self, v):
         try:
