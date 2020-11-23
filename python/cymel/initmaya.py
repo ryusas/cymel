@@ -7,12 +7,14 @@ cymel 内の Maya に依存するモジュールがインポートされる際�
 このモジュールを明示的に使用する必要はほとんどないが、
 初期化プロセスをカスタマイズしたい場合などに利用できる。
 """
+import sys
 import os
 import os.path as _os_path
 import re
 from .pyutils import (
     USER_DOC_PATH as _USER_DOC_PATH,
     insertEnvPath as _insertEnvPath,
+    execfile as _execfile,
 )
 
 __all__ = [
@@ -32,6 +34,7 @@ __all__ = [
 _os_path_join = _os_path.join
 #_os_path_split = _os_path.split
 _os_path_isdir = _os_path.isdir
+_os_path_isfile = _os_path.isfile
 _os_path_normpath = _os_path.normpath
 _os_path_dirname = _os_path.dirname
 
@@ -211,7 +214,7 @@ def _initMayaStandalone():
     u"""
     Maya standalone を初期化する。
     """
-    # この時点の sys.path に在る userSetup.py が先頭から順に execfile される。
+    # 2020以前なら、この時点の sys.path に在る userSetup.py が先頭から順に _execfile される。
     print('# Initializing Maya...')
     import maya.standalone as _maya_standalone
     _maya_standalone.initialize(name='cymel')
@@ -227,7 +230,30 @@ def _initMayaStandalone():
         import atexit
         atexit.register(_uninitialize)
 
+    # 2021以降の場合は userSetup.py を呼び出す。
+    try:
+        import maya.cmds as cmds
+        v = int(cmds.about(mjv=True))
+    except:
+        pass
+    else:
+        if v >= 2021:
+            _call_userSetup_pys()
+
     print('# OK, done.')
+
+
+def _call_userSetup_pys():
+    u"""
+    userSetup.py を全てコールする。
+    """
+    for path in list(sys.path):
+        file = _os_path_join(path, 'userSetup.py')
+        if _os_path_isfile(file):
+            try:
+                _execfile(file)
+            except:
+                pass
 
 
 def _initCymelConstants():

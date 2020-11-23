@@ -159,18 +159,17 @@ def _compareFArr(a, b, tol=1.e-6):
 
 
 #------------------------------------------------------------------------------
-def _randI(mn=-sys.maxint, mx=sys.maxint):
+def _randI(mn=-cm.MAXINT32, mx=cm.MAXINT32):
     return randrange(mn, mx)
 
 
-def _randIArr(n, mn=-sys.maxint, mx=sys.maxint):
+def _randIArr(n, mn=-cm.MAXINT32, mx=cm.MAXINT32):
     return [randrange(mn, mx) for i in range(n)]
 
 
 def _randL():
-    return randrange(_MAXINT_1, _MAXINT64)
-_MAXINT_1 = sys.maxint + 1
-_MAXINT64 = 9223372036854775807L
+    return randrange(_MAXINT32_1, cm.MAXINT64)
+_MAXINT32_1 = int(cm.MAXINT32 + 1)
 
 
 def _randLArr(n):

@@ -625,7 +625,7 @@ class Plug(Plug_c):
                 removedElems.append(plug)
 
         # エラー発生時の処理。
-        except Exception, err:
+        except Exception as err:
             # 既に削除したものを復元。
             if removedElems:
                 removedElems.reverse()
@@ -718,7 +718,7 @@ class Plug(Plug_c):
             _deleteAttr(self.name_())
 
         # エラー発生時の処理。
-        except Exception, err:
+        except Exception as err:
             # 既に削除したものを復元。
             if removedElems:
                 removedElems.reverse()

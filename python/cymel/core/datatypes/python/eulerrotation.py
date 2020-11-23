@@ -552,7 +552,8 @@ E.AXES_TO_ORDER = _AXES_TO_ORDER  #: 軸IDが3つ並んだtupleから回転オ�
 
 #_ROLL_AXES, _PITCH_AXES, YAW_AXES = zip(*_ORDER_TO_AXES)
 
-del i, v
+if IS_PYTHON2:
+    del i, v
 
 
 #------------------------------------------------------------------------------

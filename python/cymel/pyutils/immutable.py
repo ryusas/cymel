@@ -73,24 +73,25 @@ def _makeImmutableWrapper(cls, clsname):
     # 属性の削除を封じる。
     attrDict['__delattr__'] = _immutableFunc('__delattr__')
 
-    # 把握しているシンプルなクラスなら、単に __setattr__ を封じる。
-    if cls in _MUTABLE_BUILTIN_TYPES:
+    # 把握しているシンプルなクラスや __init__ が無いなら、単に __setattr__ を封じる。
+    if cls in _MUTABLE_BUILTIN_TYPES or cls.__init__ is _object_init:
         attrDict['__setattr__'] = _immutableFunc('__setattr__')
         attrDict['__slots__'] = tuple()   # 親方向のクラス全てで徹底されていないと意味がないが一応。
 
-    # 把握していないクラスなら、初期化時の属性セットは許容しつつその後の __setattr__ を封じる。
+    # __init__ が無いクラスなら、初期化時の属性セットは許容しつつその後の __setattr__ を封じる。
     else:
+        cls_init = cls.__init__
+        cls_setattr = cls.__setattr__
+
         def __init__(self, *args, **kwargs):
             cls_init(self, *args, **kwargs)  # この中での __setattr__ は許す。
             self.__dict__['_cymelImmutable'] = True
-        cls_init = cls.__init__
         attrDict['__init__'] = __init__
 
         def __setattr__(self, name, val):
             if self.__dict__.get('_cymelImmutable'):
                 raise CymelImmutableError('%s.__setattr__' % repr(self))
             cls_setattr(self, name, val)
-        cls_setattr = cls.__setattr__
         attrDict['__setattr__'] = __setattr__
 
     # ハッシュ関数が実装されていなければ、簡単にサポートして hashable にする。
@@ -115,6 +116,9 @@ def _makeImmutableWrapper(cls, clsname):
     newcls_tuple = (newcls,)
     return newcls
 
+_object_init = object.__init__
+_object_hash = object.__hash__
+
 
 def _immutableFunc(name):
     u"""
@@ -125,8 +129,6 @@ def _immutableFunc(name):
     func.__name__ = name
     return func
 
-
-_object_hash = object.__hash__
 
 _SPECIAL_MUTATOR_NAMES = (
     '__set__',

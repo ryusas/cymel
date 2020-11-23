@@ -11,7 +11,7 @@ _optionVar = cmds.optionVar
 _STR_NONE = '___None___'
 _STR_TRUE = '___True___'
 _STR_FALSE = '___False___'
-_IntTypes = (int, long)
+_IntType = (int, long) if IS_PYTHON2 else int
 
 
 #------------------------------------------------------------------------------
@@ -112,7 +112,7 @@ class OptionVar(object):
             _optionVar(sv=(k, val))
         elif isinstance(val, float):
             _optionVar(fv=(k, val))
-        elif isinstance(val, _IntTypes):
+        elif isinstance(val, _IntType):
             _optionVar(iv=(k, val))
 
         elif hasattr(val, '__getitem__') or hasattr(val, '__iter__'):
@@ -126,7 +126,7 @@ class OptionVar(object):
                     _optionVar(rm=k)
                     for v in val:
                         _optionVar(fva=(k, v))
-                elif isinstance(v, _IntTypes):
+                elif isinstance(v, _IntType):
                     _optionVar(rm=k)
                     for v in val:
                         _optionVar(iva=(k, v))

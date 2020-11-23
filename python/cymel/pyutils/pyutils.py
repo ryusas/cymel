@@ -29,6 +29,10 @@ EMPTY_DICT = _ImmutableDict()  # 空 `.ImmutableDict`
 LIST_OR_TUPLE = (list, tuple)
 
 #------------------------------------------------------------------------------
+MAXINT32 = int(2**31 - 1)  #: 32bit符号付き整数の最大値。Maya の python 2.x の sys.maxint はこれ。
+MAXINT64 = int(2**63 - 1)  #: 64bit符号付き整数の最大値。Maya の python 3.x の sys.maxsize はこれ。
+
+#------------------------------------------------------------------------------
 IS_WINDOWS = _sys.platform == 'win32'  #: OS が Windows かどうか。
 if IS_WINDOWS:
     #IS_X64 = _os.environ['PROCESSOR_ARCHITECTURE'] == 'AMD64'  #: 64bit OS かどうか。
@@ -73,6 +77,8 @@ if IS_PYTHON2:
     #dict_get_keys = lambda d: d.keys()
     #dict_get_values = lambda d: d.values()
 
+    execfile = execfile
+
     def ucToStrList(xx):
         u"""
         `unicode` の可能性のある `list` をすべて `str` にする。
@@ -102,6 +108,16 @@ else:
     #dict_get_items = lambda d: list(d.items())
     #dict_get_keys = lambda d: list(d.keys())
     #dict_get_values = lambda d: list(d.values())
+
+    def execfile(fname, globals=None, locals=None):
+        if globals is None:
+            globals = {}
+        globals.update({
+            '__file__': fname,
+            '__name__': '__main__',
+        })
+        with open(fname, 'rb') as f:
+            exec(compile(f.read(), fname, 'exec'), globals, locals)
 
     def ucToStrList(xx):
         u"""

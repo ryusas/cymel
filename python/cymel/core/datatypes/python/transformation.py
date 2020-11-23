@@ -1213,5 +1213,6 @@ _CLEARER_DICT.update([
     (_TO_LONGNAME[x], y) for x, y in _CLEARER_DICT.items()])
 _CLEARER_DICT['is_'] = _CLEARER_DICT['is']
 
-del x, y
+if IS_PYTHON2:
+    del x, y
 
