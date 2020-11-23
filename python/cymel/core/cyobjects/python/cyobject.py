@@ -329,6 +329,8 @@ _defaultPlugCls = None  #: Plug が import 後にセットされる。
 
 O = CyObject  #: `CyObject` の別名。
 
+_O_ls = O.ls
+
 
 def cyObjects(val):
     u"""
@@ -997,7 +999,7 @@ class ModuleForSel(types.ModuleType):
         raise IndexError('invalid selection index: ' + str(i))
 
     @staticmethod
-    def selected(sel=None):
+    def selected(sel=None, **kwargs):
         u"""
         セレクションから `CyObject` リストを得る。
 
@@ -1012,8 +1014,13 @@ class ModuleForSel(types.ModuleType):
             シーケンスを指定すると、
             セレクションとして解釈された上で `CyObject` リストが得られる。
             シーケンス内は文字列か `CyObject` を混在できる。
+        :param kwargs:
+            その他に :mayacmd:`ls` コマンドのオプションを指定可能。
         :rtype: `list`
         """
+        if kwargs:
+            return _O_ls(sel, **kwargs) if sel else _O_ls(**kwargs)
+
         if not sel:
             objMap = _objMapFor_getObjectBySelIdx()
             sel = _2_getActiveSelectionList()
