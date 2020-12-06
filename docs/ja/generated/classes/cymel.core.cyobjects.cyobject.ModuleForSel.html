@@ -139,22 +139,27 @@
 
 <dl class="staticmethod">
 <dt id="cymel.core.cyobjects.cyobject.ModuleForSel.selected">
-<em class="property">static </em><code class="descname">selected</code><span class="sig-paren">(</span><em>sel=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.ModuleForSel.selected" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property">static </em><code class="descname">selected</code><span class="sig-paren">(</span><em>sel=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.ModuleForSel.selected" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>セレクションから <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> リストを得る。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>sel</strong> -- <p>セレクション情報。
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>sel</strong> -- <p>セレクション情報。
 省略時は現在のセレクションから取得される。</p>
 <p>1つの文字列か <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> を指定すると、それが <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> 化されて得られる。</p>
 <p>API2 の <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MSelectionList.html">MSelectionList</a> も指定できる。</p>
 <p>シーケンスを指定すると、
 セレクションとして解釈された上で <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> リストが得られる。
 シーケンス内は文字列か <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> を混在できる。</p>
+</li>
+<li><strong>kwargs</strong> -- その他に <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/ls.html">ls</a> コマンドのオプションを指定可能。</li>
+</ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></td>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</td>
 </tr>
 </tbody>
 </table>

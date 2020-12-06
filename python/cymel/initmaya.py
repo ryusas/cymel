@@ -3,7 +3,7 @@ u"""
 スタンドアロン python (mayapy) からの Maya の初期化。
 
 cymel 内の Maya に依存するモジュールがインポートされる際に
-`initialize` が呼び出されるため、
+`initialize` がデフォルト設定で呼び出されるため、
 このモジュールを明示的に使用する必要はほとんどないが、
 初期化プロセスをカスタマイズしたい場合などに利用できる。
 """
@@ -12,6 +12,7 @@ import os
 import os.path as _os_path
 import re
 from .pyutils import (
+    IS_WINDOWS as _IS_WINDOWS,
     USER_DOC_PATH as _USER_DOC_PATH,
     insertEnvPath as _insertEnvPath,
     execfile as _execfile,
@@ -27,38 +28,66 @@ __all__ = [
     'initialize',
     'initCymelPluginsPath',
     'isMayaInitialized',
+    'getUserPrefsDir',
     'initMaya',
+    'initMels',
     'callUserSetupMel',
+    'initAutoPlugins',
+    'initApiImmutables',
 ]
 
 _os_path_join = _os_path.join
 #_os_path_split = _os_path.split
 _os_path_isdir = _os_path.isdir
 _os_path_isfile = _os_path.isfile
+_os_path_isabs = os.path.isabs
 _os_path_normpath = _os_path.normpath
 _os_path_dirname = _os_path.dirname
 
 
 #------------------------------------------------------------------------------
-def initialize():
+def initialize(mels=False, plugins=False, userSetup=True):
     u"""
     必要な初期化を全て行う。
 
     以下が行われる。
 
+    - `initCymelPluginsPath`
+
+    - `initMaya` (既に初期化済みなら何もされない)
+
+      - mels=True なら `initMels` (plugins=plugins)
+      - mels=False で plugins=True なら `initAutoPlugins`
+      - userSetup=True なら `callUserSetupMel`
+
+    - `initApiImmutables`
+
     初期化済みなら何もされないので、
     繰り返し呼び出しても問題はない。
 
-    - `initCymelPluginsPath`
-    - `initMaya` and `callUserSetupMel`
-    - `initApiImmutables`
+    :param `bool` mels:
+        `initMaya` が True のときに `initMels` を呼び出すかどうか。
+        Maya の設定に依存する処理をしないなら、呼び出さなくても問題はないため、
+        デフォルトでは False としている。
+
+    :param `bool` plugins
+        プラグインをオートロードするかどうか。
+
+        プラグインは、シーンの requires で動的に解決されるし、
+        バッチ処理で必要な場合は明示的にロードするようにすべきであり、
+        処理負荷も大きいので、デフォルトでは False としている。
+
+    :param `bool` userSetup
+        `initMaya` が True のときに `callUserSetupMel` を呼び出すかどうか。
     """
     global _NOT_INITIALIZED
     if _NOT_INITIALIZED:
-        initCymelPluginsPath()
-        initMaya() and callUserSetupMel()
-        initApiImmutables()
         _NOT_INITIALIZED = False
+        initCymelPluginsPath()
+        if initMaya():
+            mels and initMels(plugins=plugins)
+            userSetup and callUserSetupMel()
+        initApiImmutables()
 _NOT_INITIALIZED = True
 
 
@@ -86,9 +115,28 @@ def isMayaInitialized():
     return True
 
 
+if _IS_WINDOWS:
+    def getUserPrefsDir():
+        u"""
+        ユーザープリファレンスディレクトリのパスを得る。
+
+        :rtype: `str`
+        """
+        return _os_path_join(_initMayaAppDir(), MAYA_PRODUCT_VERSION, 'prefs').replace('\\', '/')
+
+else:
+    def getUserPrefsDir():
+        u"""
+        ユーザープリファレンスディレクトリのパスを得る。
+
+        :rtype: `str`
+        """
+        return _os_path_join(_initMayaAppDir(), MAYA_PRODUCT_VERSION, 'prefs')
+
+
 def initMaya():
     u"""
-    Maya が未初期化なら初期化し True を返す。
+    Maya が初期化済みなら False を、未初期化なら初期化して True を返す。
 
     いずれにせよ、
     `MAYA_VERSION` などの cymel の定数は初期化される。
@@ -109,6 +157,110 @@ def initMaya():
     return ret
 
 
+def initMels(userPrefs=True, startup=True, plugins=False, namedCommand=True):
+    u"""
+    各種初期化MELを呼び出す（source する）。
+
+    Maya の設定に依存する処理をしないなら、呼び出さなくても問題はない。
+
+    一度呼び出したMELは繰り返し呼び出さないので、
+    この関数を繰り返し呼び出しても問題はない。
+
+    :param `bool` userPrefs:
+        ユーザープリファレンスに関連するMELを呼び出すかどうか。
+        plugins=True のときは True になる。
+
+    :param `bool` startup:
+        initStartup.mel を呼び出すかどうか。
+        plugins=True のときは True になる。
+
+    :param `bool` plugins:
+        プラグインをオートロードするかどうか。
+
+        プラグインは、シーンの requires で動的に解決されるし、
+        バッチ処理で必要な場合は明示的にロードするようにすべきであり、
+        処理負荷も大きいので、デフォルトでは False としている。
+
+    :param `bool` namedCommand:
+        ネームドコマンドを生成するかどうか。
+        ホットキーに mel コードを結びつけるための概念であるため、
+        UI が無ければ通常は不要なはずだが、処理負荷は大きくはないため、
+        pymelに倣いデフォルトは True としてる。
+    """
+    #plugins = plugins and ('plugins' not in _initializedMels)
+    if plugins:
+        userPrefs = True
+        startup = True
+    userPrefs = userPrefs and ('userPrefs' not in _initializedMels)
+    startup = startup and ('startup' not in _initializedMels)
+    namedCommand = namedCommand and ('namedCommand' not in _initializedMels)
+
+    try:
+        # 呼び出す MEL リスト。
+        upAxis = None
+        prefs = getUserPrefsDir()
+        mels = [
+            #### 'defaultRunTimeCommands.mel',  # sourced automatically
+            #### prefs + '/userRunTimeCommands.mel',  # sourced automatically
+
+            userPrefs and 'createPreferencesOptVars.mel',
+            userPrefs and 'createGlobalOptVars.mel',
+            userPrefs and (prefs + '/userPrefs.mel'),
+
+            startup and 'initialStartup.mel',
+
+            #### $HOME/Documents/maya/projects/default/workspace.mel
+
+            plugins and 'initialPlugins.mel',
+            plugins and (prefs + '/pluginPrefs.mel'),
+
+            #### 'initialGUI.mel',  # GUI
+            #### 'initialLayout.mel',  # GUI
+            #### prefs + '/windowPrefs.mel',  # GUI
+            #### prefs + '/menuSetPrefs.mel',  # GUI
+            #### 'hotkeySetup.mel',  # GUI
+
+            namedCommand and 'namedCommandSetup.mel',
+            namedCommand and (prefs + '/userNamedCommands.mel'),
+
+            ####'initAfter.mel',  # GUI
+        ]
+
+        # 各 MEL の呼び出し。
+        import maya.cmds as cmds
+        from maya.mel import eval as mel_eval
+        for f in mels:
+            if f and (not _os_path_isabs(f) or _os_path_isfile(f)):
+                # initialStartup.mel の実行で upAxis の変更が無いセットの warning が出るのを防ぐ。
+                if f == 'initialStartup.mel':
+                    upAxis = cmds.optionVar(q='upAxisDirection')
+                    if upAxis == 'y':
+                        cmds.upAxis(axis='z', rv=True)
+
+                try:
+                    #print('# ' + f)
+                    mel_eval('source "' + f + '"')
+                except:
+                    pass
+
+    finally:
+        # upAxis のセットがうまくいかなかった場合の修復。
+        if upAxis and upAxis != cmds.upAxis(q=True, axis=True):
+            cmds.upAxis(axis=upAxis, rv=True)
+
+        # 呼び出し済みのやつを記録。
+        if plugins:
+            _initializedMels.add('plugins')
+        if userPrefs:
+            _initializedMels.add('userPrefs')
+        if startup:
+            _initializedMels.add('startup')
+        if namedCommand:
+            _initializedMels.add('namedCommand')
+
+_initializedMels = set()
+
+
 def callUserSetupMel():
     u"""
     最優先の MEL パスに在る ``userSetup.mel`` を呼び出す。
@@ -117,6 +269,17 @@ def callUserSetupMel():
     if mel_eval('exists userSetup'):
         mel_eval('source userSetup')
         print('# userSetup.mel is done.')
+
+
+def initAutoPlugins():
+    u"""
+    オートロード設定のされたプラグインをロードする。
+
+    以下を呼び出すことと同じ。::
+
+      initMels(userPrefs=True, startup=True, plugins=True, namedCommand=False)
+    """
+    initMels(userPrefs=True, startup=True, plugins=True, namedCommand=False)
 
 
 def initApiImmutables():
@@ -227,6 +390,11 @@ def _initMayaStandalone():
                 uninitialize()
             except:
                 pass
+            finally:
+                sys.stdout.flush()
+                sys.stderr.flush()
+                sys.__stdout__.flush()
+                sys.__stderr__.flush()
         import atexit
         atexit.register(_uninitialize)
 

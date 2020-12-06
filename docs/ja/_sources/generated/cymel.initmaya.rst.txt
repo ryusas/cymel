@@ -18,9 +18,12 @@ cymel.initmaya
     .. autosummary::
     
         callUserSetupMel
+        getUserPrefsDir
         initApiImmutables
+        initAutoPlugins
         initCymelPluginsPath
         initMaya
+        initMels
         initialize
         isMayaInitialized
 
@@ -54,9 +57,12 @@ cymel.initmaya
 
     
     .. autofunction:: callUserSetupMel
+    .. autofunction:: getUserPrefsDir
     .. autofunction:: initApiImmutables
+    .. autofunction:: initAutoPlugins
     .. autofunction:: initCymelPluginsPath
     .. autofunction:: initMaya
+    .. autofunction:: initMels
     .. autofunction:: initialize
     .. autofunction:: isMayaInitialized
 

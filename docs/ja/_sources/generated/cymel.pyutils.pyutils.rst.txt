@@ -51,6 +51,8 @@ cymel.pyutils.pyutils
     
     .. autodata:: ENV_SEPARATOR
     .. autodata:: IS_WINDOWS
+    .. autodata:: MAXINT32
+    .. autodata:: MAXINT64
     .. autodata:: USER_DOC_PATH
 
 
