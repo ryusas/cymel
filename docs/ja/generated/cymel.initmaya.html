@@ -244,15 +244,19 @@ pymelに倣いデフォルトは True としてる。</li>
 <code class="descclassname">cymel.initmaya.</code><code class="descname">initialize</code><span class="sig-paren">(</span><em>mels=False</em>, <em>plugins=False</em>, <em>userSetup=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.initialize" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>必要な初期化を全て行う。</p>
 <p>以下が行われる。</p>
+<ul>
+<li><p class="first"><a class="reference internal" href="#cymel.initmaya.initCymelPluginsPath" title="cymel.initmaya.initCymelPluginsPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initCymelPluginsPath</span></code></a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> (既に初期化済みなら False となり何もされない)</p>
+<p>初期化されたら、さらに</p>
 <ul class="simple">
-<li><a class="reference internal" href="#cymel.initmaya.initCymelPluginsPath" title="cymel.initmaya.initCymelPluginsPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initCymelPluginsPath</span></code></a></li>
-<li><a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> (既に初期化済みなら何もされない)<ul>
 <li>mels=True なら <a class="reference internal" href="#cymel.initmaya.initMels" title="cymel.initmaya.initMels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMels</span></code></a> (plugins=plugins)</li>
 <li>mels=False で plugins=True なら <a class="reference internal" href="#cymel.initmaya.initAutoPlugins" title="cymel.initmaya.initAutoPlugins"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initAutoPlugins</span></code></a></li>
 <li>userSetup=True なら <a class="reference internal" href="#cymel.initmaya.callUserSetupMel" title="cymel.initmaya.callUserSetupMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callUserSetupMel</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#cymel.initmaya.initApiImmutables" title="cymel.initmaya.initApiImmutables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initApiImmutables</span></code></a></li>
+<li><p class="first"><a class="reference internal" href="#cymel.initmaya.initApiImmutables" title="cymel.initmaya.initApiImmutables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initApiImmutables</span></code></a></p>
+</li>
 </ul>
 <p>初期化済みなら何もされないので、
 繰り返し呼び出しても問題はない。</p>

@@ -54,7 +54,9 @@ def initialize(mels=False, plugins=False, userSetup=True):
 
     - `initCymelPluginsPath`
 
-    - `initMaya` (既に初期化済みなら何もされない)
+    - `initMaya` (既に初期化済みなら False となり何もされない)
+
+      初期化されたら、さらに
 
       - mels=True なら `initMels` (plugins=plugins)
       - mels=False で plugins=True なら `initAutoPlugins`
@@ -85,7 +87,10 @@ def initialize(mels=False, plugins=False, userSetup=True):
         _NOT_INITIALIZED = False
         initCymelPluginsPath()
         if initMaya():
-            mels and initMels(plugins=plugins)
+            if mels:
+                initMels(plugins=plugins)
+            elif plugins:
+                initAutoPlugins()
             userSetup and callUserSetupMel()
         initApiImmutables()
 _NOT_INITIALIZED = True
