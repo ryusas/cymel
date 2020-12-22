@@ -552,7 +552,53 @@ class Plug(Plug_c):
         queue.reverse()
         return queue
 
-    def removeElement(self, idx=None, force=False, f=False):
+    def remove(self, b=False, f=False, force=False):
+        u"""
+        自身がマルチアトリビュートの要素プラグの場合にそれを削除する。
+
+        `removeElement` にインデックスを指定しない場合と同じだが、
+        こちらの場合は要素プラグ以外で使用するとエラーになる。
+
+        削除された要素の数が返される。
+        ただし、それにはアトリビュート階層下の
+        マルチアトリビュート要素の数も含まれる。
+
+        :param `bool` b:
+            コネクションがあってもエラーにならずに削除する。
+        :param `bool` f|force:
+            コネクションだけでなく、ロックされていたりなどの
+            エラー要因を可能な限り回避する。
+            こちらのオプションだけで b=True も兼ねる。
+        :rtype: `int`
+        """
+        if not self.isElement():
+            raise ValueError('plug is not an element: ' + self.name_())
+        self._removeElement(b, f or force)
+
+    def removeAllElements(self, b=False, f=False, force=False):
+        u"""
+        自身がマルチアトリビュートのマルチプラグの場合にその全要素を削除する。
+
+        `removeElement` にインデックスを指定しない場合と同じだが、
+        こちらの場合はマルチプラグ以外で使用するとエラーになる。
+
+        削除された要素の数が返される。
+        ただし、それにはアトリビュート階層下の
+        マルチアトリビュート要素の数も含まれる。
+
+        :param `bool` b:
+            コネクションがあってもエラーにならずに削除する。
+        :param `bool` f|force:
+            コネクションだけでなく、ロックされていたりなどの
+            エラー要因を可能な限り回避する。
+            こちらのオプションだけで b=True も兼ねる。
+        :rtype: `int`
+        """
+        if not self.isArray():
+            raise ValueError('plug is not an array: ' + self.name_())
+        self._removeElement(b, f or force)
+
+    def removeElement(self, idx=None, b=False, f=False, force=False):
         u"""
         マルチアトリビュートの要素を削除する。
 
@@ -564,18 +610,20 @@ class Plug(Plug_c):
             自身がマルチのとき、削除するインデックスを指定する。
             省略すると、自身が要素ならそれが、
             マルチなら全ての要素が削除される。
+        :param `bool` b:
+            コネクションがあってもエラーにならずに削除する。
         :param `bool` f|force:
-            コネクションがあったり、ロックされていたりなどの
-            エラー要因を回避して削除する。
+            コネクションだけでなく、ロックされていたりなどの
+            エラー要因を可能な限り回避する。
+            こちらのオプションだけで b=True も兼ねる。
         :rtype: `int`
         """
-        force |= f
         if idx is None:
-            self._removeElement(force)
+            self._removeElement(b, f or force)
         else:
-            self[idx]._removeElement(force)
+            self[idx]._removeElement(b, f or force)
 
-    def _removeElement(self, force):
+    def _removeElement(self, breakConn, force):
         isRefNode = self.isNodeFromReferencedFile()
         isArray = self.isArray()
 
@@ -584,6 +632,7 @@ class Plug(Plug_c):
         # この操作は undo 可能でないと、条件によってはコネクションが復元されないようだ。
         tmpUnlocked = []
         if force:
+            breakConn = True
             for dst in self.connections(False, True):
                 if not dst.isNodeFromReferencedFile():
                     tmpUnlocked.extend(dst.unlock())
@@ -621,7 +670,7 @@ class Plug(Plug_c):
             name = None
             for plug in queue:
                 name = plug.name_()
-                _removeMultiInstance(name, b=force)
+                _removeMultiInstance(name, b=breakConn)
                 removedElems.append(plug)
 
         # エラー発生時の処理。
@@ -648,23 +697,6 @@ class Plug(Plug_c):
                     _setAttr(x.name_(), l=True)
 
         return len(queue)
-
-    def removeAllElements(self, force=False, f=False):
-        u"""
-        マルチアトリビュートの要素を全て削除する。
-
-        `removeElement` にインデックスを指定しない場合と同じ。
-
-        削除された要素の数が返される。
-        ただし、それにはアトリビュート階層下の
-        マルチアトリビュート要素の数も含まれる。
-
-        :param `bool` f|force:
-            コネクションがあったり、ロックされていたりなどの
-            エラー要因を回避して削除する。
-        :rtype: `int`
-        """
-        self.removeElement(f=f or force)
 
     def delete(self, force=False):
         u"""

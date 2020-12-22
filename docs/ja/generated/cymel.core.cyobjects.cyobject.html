@@ -20,7 +20,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
     <link rel="next" title="class cymel.core.cyobjects.cyobject.CyObject" href="classes/cymel.core.cyobjects.cyobject.CyObject.html" />
-    <link rel="prev" title="cymel.main" href="cymel.main.html" /> 
+    <link rel="prev" title="cymel.ui" href="cymel.ui.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>ナビゲーション</h3>
@@ -35,7 +35,7 @@
           <a href="classes/cymel.core.cyobjects.cyobject.CyObject.html" title="class cymel.core.cyobjects.cyobject.CyObject"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
-          <a href="cymel.main.html" title="cymel.main"
+          <a href="cymel.ui.html" title="cymel.ui"
              accesskey="P">前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li> 
@@ -44,8 +44,8 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>前のトピックへ</h4>
-  <p class="topless"><a href="cymel.main.html"
-                        title="前の章へ">cymel.main</a></p>
+  <p class="topless"><a href="cymel.ui.html"
+                        title="前の章へ">cymel.ui</a></p>
   <h4>次のトピックへ</h4>
   <p class="topless"><a href="classes/cymel.core.cyobjects.cyobject.CyObject.html"
                         title="次の章へ">class cymel.core.cyobjects.cyobject.CyObject</a></p>
@@ -162,14 +162,16 @@
 <dt id="cymel.core.cyobjects.cyobject.cyObjects">
 <code class="descclassname">cymel.core.cyobjects.cyobject.</code><code class="descname">cyObjects</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.cyObjects" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>名前リストなどから <a class="reference internal" href="classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> のリストを得る。</p>
+<p>文字列でも文字列のリストでも受けられ、
+None などの場合は空リストと解釈されるので、
+Mayaコマンドの戻り値をそのまま受けられることが多い。</p>
+<p>引数がどのようなものでも、戻り値のタイプは <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> となる。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>val</strong> (<em>iterable</em>) -- ノード名やプラグ名や同等の評価が可能なもののリスト。
-単一の名前の場合はそれのみのリスト、
-None などの場合は空リストと解釈されるので、
-Mayaコマンドの返値をそのまま受けられることが多い。</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>val</strong> (<em>iterable</em>) -- ノード名やプラグ名や同等の評価が可能なもの、
+またはそれらのリスト。</td>
 </tr>
 <tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></td>
 </tr>
@@ -198,7 +200,7 @@ Mayaコマンドの返値をそのまま受けられることが多い。</td>
           <a href="classes/cymel.core.cyobjects.cyobject.CyObject.html" title="class cymel.core.cyobjects.cyobject.CyObject"
              >次へ</a> |</li>
         <li class="right" >
-          <a href="cymel.main.html" title="cymel.main"
+          <a href="cymel.ui.html" title="cymel.ui"
              >前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li> 

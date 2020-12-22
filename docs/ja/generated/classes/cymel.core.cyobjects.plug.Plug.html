@@ -141,40 +141,43 @@
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.pairBlendPlug" title="cymel.core.cyobjects.plug.Plug.pairBlendPlug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairBlendPlug</span></code></a>([in1,&nbsp;in2,&nbsp;cur,&nbsp;inUse,&nbsp;byWeight])</td>
 <td><a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/pairBlend.html">pairBlend</a> の入力プラグを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeAllElements" title="cymel.core.cyobjects.plug.Plug.removeAllElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeAllElements</span></code></a>([force,&nbsp;f])</td>
-<td>マルチアトリビュートの要素を全て削除する。</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.remove" title="cymel.core.cyobjects.plug.Plug.remove"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove</span></code></a>([b,&nbsp;f,&nbsp;force])</td>
+<td>自身がマルチアトリビュートの要素プラグの場合にそれを削除する。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeElement" title="cymel.core.cyobjects.plug.Plug.removeElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeElement</span></code></a>([idx,&nbsp;force,&nbsp;f])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeAllElements" title="cymel.core.cyobjects.plug.Plug.removeAllElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeAllElements</span></code></a>([b,&nbsp;f,&nbsp;force])</td>
+<td>自身がマルチアトリビュートのマルチプラグの場合にその全要素を削除する。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeElement" title="cymel.core.cyobjects.plug.Plug.removeElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeElement</span></code></a>([idx,&nbsp;b,&nbsp;f,&nbsp;force])</td>
 <td>マルチアトリビュートの要素を削除する。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.reset" title="cymel.core.cyobjects.plug.Plug.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.reset" title="cymel.core.cyobjects.plug.Plug.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>()</td>
 <td>デフォルト値にリセットする。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.set" title="cymel.core.cyobjects.plug.Plug.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(val[,&nbsp;safe])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.set" title="cymel.core.cyobjects.plug.Plug.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(val[,&nbsp;safe])</td>
 <td>アトリビュート値を内部単位でセットする。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setCached" title="cymel.core.cyobjects.plug.Plug.setCached"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCached</span></code></a>(val[,&nbsp;leaf])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setCached" title="cymel.core.cyobjects.plug.Plug.setCached"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCached</span></code></a>(val[,&nbsp;leaf])</td>
 <td>Caching フラグを設定する。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setCaching" title="cymel.core.cyobjects.plug.Plug.setCaching"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCaching</span></code></a>(val[,&nbsp;leaf])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setCaching" title="cymel.core.cyobjects.plug.Plug.setCaching"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCaching</span></code></a>(val[,&nbsp;leaf])</td>
 <td>Caching フラグを設定する。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setChannelBox" title="cymel.core.cyobjects.plug.Plug.setChannelBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setChannelBox</span></code></a>(val[,&nbsp;leaf])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setChannelBox" title="cymel.core.cyobjects.plug.Plug.setChannelBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setChannelBox</span></code></a>(val[,&nbsp;leaf])</td>
 <td>Keyable でなくてもチャンネルボックスに出すかどうかを設定する。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setKeyable" title="cymel.core.cyobjects.plug.Plug.setKeyable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setKeyable</span></code></a>(val[,&nbsp;leaf])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setKeyable" title="cymel.core.cyobjects.plug.Plug.setKeyable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setKeyable</span></code></a>(val[,&nbsp;leaf])</td>
 <td>Keyable フラグを設定する。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="cymel.core.cyobjects.plug.Plug.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>(val[,&nbsp;leaf])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="cymel.core.cyobjects.plug.Plug.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>(val[,&nbsp;leaf])</td>
 <td>ロック、又はアンロックする。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setu" title="cymel.core.cyobjects.plug.Plug.setu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setu</span></code></a>(val[,&nbsp;safe])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setu" title="cymel.core.cyobjects.plug.Plug.setu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setu</span></code></a>(val[,&nbsp;safe])</td>
 <td>アトリビュート値をUI設定単位でセットする。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.toggle" title="cymel.core.cyobjects.plug.Plug.toggle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toggle</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.toggle" title="cymel.core.cyobjects.plug.Plug.toggle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toggle</span></code></a>()</td>
 <td>アトリビュート値をトグルする。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unlock" title="cymel.core.cyobjects.plug.Plug.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>([below,&nbsp;undoable])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unlock" title="cymel.core.cyobjects.plug.Plug.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>([below,&nbsp;undoable])</td>
 <td>このプラグと階層上位や、下位（オプション）のプラグをアンロックする。</td>
 </tr>
 </tbody>
@@ -608,10 +611,11 @@ in1 と in2 が両方 True の場合は <a class="reference external" href="http
 </dd></dl>
 
 <dl class="method">
-<dt id="cymel.core.cyobjects.plug.Plug.removeAllElements">
-<code class="descname">removeAllElements</code><span class="sig-paren">(</span><em>force=False</em>, <em>f=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.removeAllElements" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>マルチアトリビュートの要素を全て削除する。</p>
-<p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeElement" title="cymel.core.cyobjects.plug.Plug.removeElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeElement</span></code></a> にインデックスを指定しない場合と同じ。</p>
+<dt id="cymel.core.cyobjects.plug.Plug.remove">
+<code class="descname">remove</code><span class="sig-paren">(</span><em>b=False</em>, <em>f=False</em>, <em>force=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.remove" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>自身がマルチアトリビュートの要素プラグの場合にそれを削除する。</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeElement" title="cymel.core.cyobjects.plug.Plug.removeElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeElement</span></code></a> にインデックスを指定しない場合と同じだが、
+こちらの場合は要素プラグ以外で使用するとエラーになる。</p>
 <p>削除された要素の数が返される。
 ただし、それにはアトリビュート階層下の
 マルチアトリビュート要素の数も含まれる。</p>
@@ -619,10 +623,44 @@ in1 と in2 が両方 True の場合は <a class="reference external" href="http
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>f|force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- コネクションがあったり、ロックされていたりなどの
-エラー要因を回避して削除する。</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- コネクションがあってもエラーにならずに削除する。</li>
+<li><strong>f|force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- コネクションだけでなく、ロックされていたりなどの
+エラー要因を可能な限り回避する。
+こちらのオプションだけで b=True も兼ねる。</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.cyobjects.plug.Plug.removeAllElements">
+<code class="descname">removeAllElements</code><span class="sig-paren">(</span><em>b=False</em>, <em>f=False</em>, <em>force=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.removeAllElements" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>自身がマルチアトリビュートのマルチプラグの場合にその全要素を削除する。</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeElement" title="cymel.core.cyobjects.plug.Plug.removeElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeElement</span></code></a> にインデックスを指定しない場合と同じだが、
+こちらの場合はマルチプラグ以外で使用するとエラーになる。</p>
+<p>削除された要素の数が返される。
+ただし、それにはアトリビュート階層下の
+マルチアトリビュート要素の数も含まれる。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- コネクションがあってもエラーにならずに削除する。</li>
+<li><strong>f|force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- コネクションだけでなく、ロックされていたりなどの
+エラー要因を可能な限り回避する。
+こちらのオプションだけで b=True も兼ねる。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -630,7 +668,7 @@ in1 と in2 が両方 True の場合は <a class="reference external" href="http
 
 <dl class="method">
 <dt id="cymel.core.cyobjects.plug.Plug.removeElement">
-<code class="descname">removeElement</code><span class="sig-paren">(</span><em>idx=None</em>, <em>force=False</em>, <em>f=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.removeElement" title="この定義へのパーマリンク">¶</a></dt>
+<code class="descname">removeElement</code><span class="sig-paren">(</span><em>idx=None</em>, <em>b=False</em>, <em>f=False</em>, <em>force=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.removeElement" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>マルチアトリビュートの要素を削除する。</p>
 <p>削除された要素の数が返される。
 ただし、それにはアトリビュート階層下の
@@ -643,8 +681,10 @@ in1 と in2 が両方 True の場合は <a class="reference external" href="http
 <li><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- 自身がマルチのとき、削除するインデックスを指定する。
 省略すると、自身が要素ならそれが、
 マルチなら全ての要素が削除される。</li>
-<li><strong>f|force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- コネクションがあったり、ロックされていたりなどの
-エラー要因を回避して削除する。</li>
+<li><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- コネクションがあってもエラーにならずに削除する。</li>
+<li><strong>f|force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- コネクションだけでなく、ロックされていたりなどの
+エラー要因を可能な限り回避する。
+こちらのオプションだけで b=True も兼ねる。</li>
 </ul>
 </td>
 </tr>

@@ -336,14 +336,18 @@ def cyObjects(val):
     u"""
     名前リストなどから `CyObject` のリストを得る。
 
+    文字列でも文字列のリストでも受けられ、
+    None などの場合は空リストと解釈されるので、
+    Mayaコマンドの戻り値をそのまま受けられることが多い。
+
+    引数がどのようなものでも、戻り値のタイプは `list` となる。
+
     :param iterable val:
-        ノード名やプラグ名や同等の評価が可能なもののリスト。
-        単一の名前の場合はそれのみのリスト、
-        None などの場合は空リストと解釈されるので、
-        Mayaコマンドの返値をそのまま受けられることが多い。
+        ノード名やプラグ名や同等の評価が可能なもの、
+        またはそれらのリスト。
     :rtype: `list`
     """
-    if not vals:
+    if not val:
         return []
     elif isinstance(val, BASESTR):
         return [O(val)]

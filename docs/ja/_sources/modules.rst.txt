@@ -21,6 +21,7 @@ Main
     cymel.constants
     cymel.initmaya
     cymel.main
+    cymel.ui
 
 
 .. _modules-cyobjects:

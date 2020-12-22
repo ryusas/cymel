@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+u"""
+UI系機能。
+
+cymel.ui 以下の全てが展開されている。
+"""
 from .control import *
 from .layout import *
 from .window import *

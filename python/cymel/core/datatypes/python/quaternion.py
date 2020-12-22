@@ -689,20 +689,31 @@ class Quaternion(object):
         """
         return _newQ(_2_squadPt(q0.__data, q1.__data, q2.__data))
 
-    def asBend(self, aim=V.XAxis):
+    def asBend(self, reverse=False, aim=V.XAxis):
         u"""
         ボーン回転とした場合の曲げ成分を得る。
 
+        :param `bool` reverse:
+            曲げ・捻りの順番を反転するかどうか。
+            デフォルトでは、階層上位から見て曲げてから捻るが、
+            True を指定すると捻ってから曲げる分解になる。
         :type aim: `.Vector`
         :param aim: ボーン方向ベクトル。
         :rtype: `Quaternion`
         """
         aim = _MV(aim._Vector__data)
-        return _newQ(_MQ(aim, aim.rotateBy(self.__data)))
+        if reverse:
+            return _newQ(_MQ(aim.rotateBy(self.__data.conjugate()), aim))
+        else:
+            return _newQ(_MQ(aim, aim.rotateBy(self.__data)))
 
     def asRoll(self, aim=V.XAxis):
         u"""
         ボーン回転とした場合の捻り成分を得る。
+
+        分解の考え方として、曲げてから捻っても、捻ってから曲げても、
+        同じ値が得られるため `asBend` や `asRollBendHV` のような
+        reverse オプションはない。
 
         :type aim: `.Vector`
         :param aim: ボーン方向ベクトル。
@@ -711,10 +722,14 @@ class Quaternion(object):
         aim = _MV(aim._Vector__data)
         return _newQ(self.__data * _MQ(aim.rotateBy(self.__data), aim))
 
-    def asRollBendHV(self, aim=V.XAxis, upv=V.YAxis):
+    def asRollBendHV(self, reverse=False, aim=V.XAxis, upv=V.YAxis):
         u"""
         ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。
 
+        :param `bool` reverse:
+            曲げ・捻りの順番を反転するかどうか。
+            デフォルトでは、階層上位から見て曲げてから捻るが、
+            True を指定すると捻ってから曲げる分解になる。
         :type aim: `.Vector`
         :param aim: ボーン方向ベクトル。
         :type upv: `.Vector`
@@ -726,25 +741,46 @@ class Quaternion(object):
         dep = (aim ^ upv).normalize()
         upv = (dep ^ aim).normalize()
 
-        vec = aim.rotateBy(self.__data)
-        qBend = _MQ(aim, vec)
+        if reverse:
+            q = self.__data.conjugate()
 
-        f = (aim * vec) + 1.
-        rollQ = self.__data * qBend.conjugate()
-        return [
-            _asAngle(rollQ, aim, True),
-            atan2(dep * vec, f) * -2.,
-            atan2(upv * vec, f) * 2.,
-        ]
+            vec = aim.rotateBy(q)
+            qBend = _MQ(aim, vec)
+            f = (aim * vec) + 1.
+            rollQ = q * qBend.conjugate()
+
+            return [
+                -_asAngle(rollQ, aim, True),
+                2. * atan2(dep * vec, f),
+                -2. * atan2(upv * vec, f),
+            ]
+
+        else:
+            q = self.__data
+
+            vec = aim.rotateBy(q)
+            qBend = _MQ(aim, vec)
+            f = (aim * vec) + 1.
+            rollQ = q * qBend.conjugate()
+
+            return [
+                _asAngle(rollQ, aim, True),
+                -2. * atan2(dep * vec, f),
+                2. * atan2(upv * vec, f),
+            ]
 
     asRHV = asRollBendHV  #: `asRollBendHV` の別名。
 
     @classmethod
-    def makeRollBendHV(cls, rhv, aim=V.XAxis, upv=V.YAxis):
+    def makeRollBendHV(cls, rhv, reverse=False, aim=V.XAxis, upv=V.YAxis):
         u"""
         ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。
 
         :param rhv: [roll, bendH, bendV]
+        :param `bool` reverse:
+            曲げ・捻りの順番を反転するかどうか。
+            デフォルトでは、階層上位から見て曲げてから捻るが、
+            True を指定すると捻ってから曲げる合成になる。
         :type aim: `.Vector`
         :param aim: ボーン方向ベクトル。
         :type upv: `.Vector`
@@ -756,14 +792,28 @@ class Quaternion(object):
         dep = (aim ^ upv).normalize()
         upv = (dep ^ aim).normalize()
 
-        half = .5 * rhv[0]
-        f = sin(half)
-        q = _MQ(aim[0] * f, aim[1] * f, aim[2] * f, cos(half))
+        if reverse:
+            half = -.5 * rhv[0]
+            h = tan(.5 * rhv[1])
+            v = tan(-.5 * rhv[2])
 
-        h = tan(-.5 * rhv[1])
-        v = tan(.5 * rhv[2])
-        f = 2. / (h * h + v * v + 1.)
-        q *= _MQ(aim, aim * (f - 1.) + upv * (v * f) + dep * (h * f))
+            r = sin(half)
+            b = 2. / (h * h + v * v + 1.)
+
+            q = _MQ(aim * (b - 1.) + upv * (v * b) + dep * (h * b), aim)
+            q *= _MQ(aim[0] * r, aim[1] * r, aim[2] * r, -cos(half))
+
+        else:
+            half = .5 * rhv[0]
+            h = tan(-.5 * rhv[1])
+            v = tan(.5 * rhv[2])
+
+            r = sin(half)
+            b = 2. / (h * h + v * v + 1.)
+
+            q = _MQ(aim[0] * r, aim[1] * r, aim[2] * r, cos(half))
+            q *= _MQ(aim, aim * (b - 1.) + upv * (v * b) + dep * (h * b))
+
         return _newQ(q, cls)
 
     makeRHV = makeRollBendHV  #: `makeRollBendHV` の別名。

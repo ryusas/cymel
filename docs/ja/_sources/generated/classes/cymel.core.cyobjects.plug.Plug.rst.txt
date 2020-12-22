@@ -33,6 +33,7 @@ class cymel.core.cyobjects.plug.Plug
         layeredPlug
         listEnum
         pairBlendPlug
+        remove
         removeAllElements
         removeElement
         reset
@@ -72,6 +73,7 @@ class cymel.core.cyobjects.plug.Plug
     .. automethod:: layeredPlug
     .. automethod:: listEnum
     .. automethod:: pairBlendPlug
+    .. automethod:: remove
     .. automethod:: removeAllElements
     .. automethod:: removeElement
     .. automethod:: reset
