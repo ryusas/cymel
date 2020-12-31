@@ -18,8 +18,13 @@ class cymel.core.cyobjects.node_c.Node_c
 
     .. autosummary::
     
+        absoluteName
+        affectsAnimation
+        classification
         connections
         createNode
+        destinations
+        destinationsWithConversions
         hasAttr
         hasFn
         hasUniqueName
@@ -33,6 +38,7 @@ class cymel.core.cyobjects.node_c.Node_c
         isRenamable
         isShape
         isShared
+        isTrackingEdits
         isTransform
         isType
         mfn
@@ -48,7 +54,6 @@ class cymel.core.cyobjects.node_c.Node_c
         mpath1_
         mpath_
         mtypeId
-        namespace
         newObject
         node
         nodeName
@@ -59,7 +64,10 @@ class cymel.core.cyobjects.node_c.Node_c
         plug_
         pluginName
         plugsAffectsWorldSpace
+        relatedNodeTypes
         setPlugClass
+        sources
+        sourcesWithConversions
         thisPlugClass
         type
         worldSpacePlugs
@@ -81,8 +89,13 @@ class cymel.core.cyobjects.node_c.Node_c
     .. rubric:: Methods Details:
 
     
+    .. automethod:: absoluteName
+    .. automethod:: affectsAnimation
+    .. automethod:: classification
     .. automethod:: connections
     .. automethod:: createNode
+    .. automethod:: destinations
+    .. automethod:: destinationsWithConversions
     .. automethod:: hasAttr
     .. automethod:: hasFn
     .. automethod:: hasUniqueName
@@ -96,6 +109,7 @@ class cymel.core.cyobjects.node_c.Node_c
     .. automethod:: isRenamable
     .. automethod:: isShape
     .. automethod:: isShared
+    .. automethod:: isTrackingEdits
     .. automethod:: isTransform
     .. automethod:: isType
     .. automethod:: mfn
@@ -111,7 +125,6 @@ class cymel.core.cyobjects.node_c.Node_c
     .. automethod:: mpath1_
     .. automethod:: mpath_
     .. automethod:: mtypeId
-    .. automethod:: namespace
     .. automethod:: newObject
     .. automethod:: node
     .. automethod:: nodeName
@@ -122,7 +135,10 @@ class cymel.core.cyobjects.node_c.Node_c
     .. automethod:: plug_
     .. automethod:: pluginName
     .. automethod:: plugsAffectsWorldSpace
+    .. automethod:: relatedNodeTypes
     .. automethod:: setPlugClass
+    .. automethod:: sources
+    .. automethod:: sourcesWithConversions
     .. automethod:: thisPlugClass
     .. automethod:: type
     .. automethod:: worldSpacePlugs

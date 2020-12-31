@@ -9,6 +9,7 @@ from .dagnode_c import DagNodeMixin
 
 __all__ = ['DagNode']
 
+_setAttr = cmds.setAttr
 _parent = cmds.parent
 
 
@@ -21,6 +22,18 @@ class DagNode(DagNodeMixin, nodetypes.parentBasicNodeClass('dagNode')):
         __slots__ = tuple()
 
     TYPE_BITS = BIT_DAGNODE  #: クラスでサポートしているノードの特徴を表す。
+
+    def show(self):
+        u"""
+        visibility アトリビュートを True にする。
+        """
+        _setAttr(self.name() + '.v', True)
+
+    def hide(self):
+        u"""
+        visibility アトリビュートを False にする。
+        """
+        _setAttr(self.name() + '.v', False)
 
     def setParent(self, parent=None, r=False, add=False):
         u"""

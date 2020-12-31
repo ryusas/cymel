@@ -15,6 +15,7 @@ __all__ = ['Plug']
 
 _api1_executeCommand = api1.MGlobal.executeCommand
 
+_aliasAttr = cmds.aliasAttr
 _setAttr = cmds.setAttr
 _connectAttr = cmds.connectAttr
 _disconnectAttr = cmds.disconnectAttr
@@ -24,6 +25,7 @@ _createNode = cmds.createNode
 _animLayer = cmds.animLayer
 _keyframe = cmds.keyframe
 _connectionInfo = cmds.connectionInfo
+_mute = cmds.mute
 
 _MFn = api2.MFn
 _MFn_kPairBlend = _MFn.kPairBlend
@@ -68,6 +70,19 @@ class Plug(Plug_c):
         デフォルト値にリセットする。
         """
         self.set(self.default())
+
+    def setAlias(self, name=None):
+        u"""
+        プラグの別名を設定、又は削除する。
+
+        :param `str` name:
+            設定する別名。
+            None や空文字を指定すると、既存の設定を削除する。
+        """
+        if name:
+            _aliasAttr(name, self.name())
+        else:
+            _aliasAttr(self.name(), rm=True)
 
     def set(self, val, safe=False):
         u"""
@@ -403,7 +418,7 @@ class Plug(Plug_c):
         """
         self._setAttrFlags(leaf, k=val)
 
-    def setLocked(self, val, leaf=False):
+    def setLocked(self, val=True, leaf=False):
         u"""
         ロック、又はアンロックする。
 
@@ -411,8 +426,14 @@ class Plug(Plug_c):
         :param `bool` leaf:
             プラグがコンパウンドの場合に True にすると、そのプラグは
             処理されず、コンパウンド階層のリーフが探され纏めて処理される。
+
+        .. note::
+            アンロックの場合は、プラグ階層上位や下位に対しても保証できる
+            `unlock` メソッドが便利である。
         """
         self._setAttrFlags(leaf, l=val)
+
+    lock = setLocked  #: `setLocked` の別名。
 
     def _setAttrFlags(self, leaf=False, **flagdict):
         u"""
@@ -1409,6 +1430,24 @@ class Plug(Plug_c):
                 name = name[0]
                 if not _connectionInfo(name + '.i', ied=True):
                     return CyObject(name)
+
+    def isMuted(self):
+        u"""
+        ミュートされているかどうか。
+        """
+        return _mute(self.name(), q=True)
+
+    def mute(self, **kwargs):
+        u"""
+        ミュートする。
+        """
+        _mute(self.name())
+
+    def unmute(self, **kwargs):
+        u"""
+        ミュート解除する。
+        """
+        _mute(self.name(), d=True, f=True)
 
 CyObject.setGlobalPlugClass(Plug)
 

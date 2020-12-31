@@ -69,6 +69,22 @@ class DagNodeMixin(object):
         """
         return self.mfn().useObjectColor
 
+    def isVisible(self):
+        u"""
+        可視性を得る。
+
+        :rtype: `bool`
+        """
+        return self._mpath().isVisible()
+
+    def isTemplated(self):
+        u"""
+        テンプレート化されているかどうか。
+
+        :rtype: `bool`
+        """
+        return self._mpath().isTemplated()
+
     def partialPath(self):
         u"""
         パーシャルパス名を得る。
@@ -1102,7 +1118,7 @@ class DagNodeMixin(object):
             ws=True の場合の親までの非一様 scale や shear による影響や
             ws=False の場合の jointOrient は、 
             :mayacmd:`xform` コマンドや :mayaapi2:`MTransformationMatrix`
-            では考慮されないため、本メソッドでは考慮されている。
+            では考慮されないが、本メソッドでは考慮されている。
 
             ws=True の結果は Legacy Viewport での Local Axis 表示と常に一致するが、
             上位階層に 非一様 scale や shear が含まれる場合、

@@ -37,6 +37,8 @@ class cymel.core.cyobjects.plug_c.Plug_c
         connections
         default
         defaultu
+        destinations
+        destinationsWithConversions
         disconnectBehavior
         element
         elementExists
@@ -59,6 +61,7 @@ class cymel.core.cyobjects.plug_c.Plug_c
         hasSoftMin
         hasTransformation
         index
+        indexMatters
         indices
         inputs
         isAffectsAppearance
@@ -88,6 +91,7 @@ class cymel.core.cyobjects.plug_c.Plug_c
         isLocked
         isMulti
         isNewAttr
+        isNewAttribute
         isNodeFromReferencedFile
         isNodeType
         isNotInstanced
@@ -95,6 +99,7 @@ class cymel.core.cyobjects.plug_c.Plug_c
         isProxy
         isReadable
         isRenderSource
+        isSettable
         isSource
         isStorable
         isUsedArrayDataBuilder
@@ -136,12 +141,13 @@ class cymel.core.cyobjects.plug_c.Plug_c
         plug_
         proxyMaster
         root
-        setAlias
         shortName
         softMax
         softMaxu
         softMin
         softMinu
+        source
+        sourceWithConversion
         subType
         type
         worldElement
@@ -181,6 +187,8 @@ class cymel.core.cyobjects.plug_c.Plug_c
     .. automethod:: connections
     .. automethod:: default
     .. automethod:: defaultu
+    .. automethod:: destinations
+    .. automethod:: destinationsWithConversions
     .. automethod:: disconnectBehavior
     .. automethod:: element
     .. automethod:: elementExists
@@ -203,6 +211,7 @@ class cymel.core.cyobjects.plug_c.Plug_c
     .. automethod:: hasSoftMin
     .. automethod:: hasTransformation
     .. automethod:: index
+    .. automethod:: indexMatters
     .. automethod:: indices
     .. automethod:: inputs
     .. automethod:: isAffectsAppearance
@@ -232,6 +241,7 @@ class cymel.core.cyobjects.plug_c.Plug_c
     .. automethod:: isLocked
     .. automethod:: isMulti
     .. automethod:: isNewAttr
+    .. automethod:: isNewAttribute
     .. automethod:: isNodeFromReferencedFile
     .. automethod:: isNodeType
     .. automethod:: isNotInstanced
@@ -239,6 +249,7 @@ class cymel.core.cyobjects.plug_c.Plug_c
     .. automethod:: isProxy
     .. automethod:: isReadable
     .. automethod:: isRenderSource
+    .. automethod:: isSettable
     .. automethod:: isSource
     .. automethod:: isStorable
     .. automethod:: isUsedArrayDataBuilder
@@ -280,12 +291,13 @@ class cymel.core.cyobjects.plug_c.Plug_c
     .. automethod:: plug_
     .. automethod:: proxyMaster
     .. automethod:: root
-    .. automethod:: setAlias
     .. automethod:: shortName
     .. automethod:: softMax
     .. automethod:: softMaxu
     .. automethod:: softMin
     .. automethod:: softMinu
+    .. automethod:: source
+    .. automethod:: sourceWithConversion
     .. automethod:: subType
     .. automethod:: type
     .. automethod:: worldElement

@@ -48,7 +48,6 @@ _2_MPlug_connectedTo = _2_MPlug.connectedTo
 _2_MObject_kNullObj = _api2.MObject.kNullObj
 
 _attributeName = cmds.attributeName
-_aliasAttr = cmds.aliasAttr
 
 _type = type
 
@@ -425,7 +424,7 @@ class Plug_c(CyObject):
         """
         return self.mfn().indeterminant
 
-    def isIndexMatters(self):
+    def indexMatters(self):
         u"""
         マルチ要素のインデックスが意味を持つかどうか。
 
@@ -434,6 +433,8 @@ class Plug_c(CyObject):
         :rtype: `bool`
         """
         return self.mfn().indexMatters
+
+    isIndexMatters = indexMatters  #: `indexMatters` の別名。
 
     def isInternal(self):
         u"""
@@ -523,15 +524,23 @@ class Plug_c(CyObject):
         """
         return self.mfn().writable
 
-    def isNewAttr(self):
+    def isNewAttribute(self):
         u"""
-        ファイルリファレンスした後に追加されたアトリビュートかどうか。
+        リファレンスではないアトリビュートかどうか。
+
+        そもそもノードがリファレンスファイルのものでないか、
+        ファイルリファレンスした後に追加されたアトリビュートの場合に
+        True となる。
+
+        `isAttrFromReferencedFile` の逆の結果が得られる。
 
         :rtype: `bool`
         """
         self.checkValid()
         return self._CyObject__data['noderef']._CyObject__data['mfn'].isNewAttribute(
             self._CyObject__data['mplug'].attribute())
+
+    isNewAttr = isNewAttribute  #: `isNewAttribute` の別名。
 
     def isWritableNow(self, ancestors=True, children=True):
         u"""
@@ -546,6 +555,8 @@ class Plug_c(CyObject):
             not self._CyObject__data['mplug'].isFreeToChange(
                 checkAncestors=ancestors, checkChildren=children)
         )
+
+    isSettable = isWritableNow  #: `isWritableNow` の別名。
 
     def isFreeToChange(self, ancestors=True, children=True):
         u"""
@@ -590,14 +601,14 @@ class Plug_c(CyObject):
         ノードがリファレンスファイルのものであっても、
         その上に追加されたアトリビュートなら False となる。
 
+        `isNewAttribute` の逆の結果が得られる。
+
         :rtype: `bool`
         """
         self.checkValid()
-        mfnnode = self._CyObject__data['noderef']._CyObject__data['mfn']
-        return (
-            mfnnode.isFromReferencedFile and
-            not mfnnode.isNewAttribute(self._CyObject__data['mplug'].attribute())
-        )
+        # isNodeFromReferencedFile をチェックする必要はない。
+        return not self._CyObject__data['noderef']._CyObject__data['mfn'].isNewAttribute(
+            self._CyObject__data['mplug'].attribute())
 
     def isFromReferencedFile(self, ancestors=False, children=False):
         u"""
@@ -751,19 +762,6 @@ class Plug_c(CyObject):
         """
         self.checkValid()
         return self._CyObject__data['noderef']._CyObject__data['mfn'].plugsAlias(self._CyObject__data['mplug'])
-
-    def setAlias(self, name=None):
-        u"""
-        プラグの別名を設定、又は削除する。
-
-        :param `str` name:
-            設定する別名。
-            None や空文字を指定すると、既存の設定を削除する。
-        """
-        if name:
-            _aliasAttr(name, self.name())
-        else:
-            _aliasAttr(self.name(), rm=True)
 
     def plug(self, name):
         u"""
@@ -1645,7 +1643,7 @@ class Plug_c(CyObject):
         source=True, destination=True, connections=False,
         type=None, exactType=False, skipConversionNodes=False,
         asPair=False, asNode=False, checkChildren=True,
-        index=None, pcls=None,
+        checkElements=True, index=None, pcls=None,
     ):
         u"""
         コネクトされているプラグやノードのリストを得る。
@@ -1667,6 +1665,9 @@ class Plug_c(CyObject):
             コネクト先をプラグではなくノードで得る。
         :param `bool` checkChildren:
             コンパウンドの下層もチェックする。
+            デフォルトで True なので False を明示すると無効化できる。
+        :param `bool` checkElements:
+            マルチプラグの要素もチェックする。
             デフォルトで True なので False を明示すると無効化できる。
         :param `int` index:
             結果を1つだけ得る場合にインデックスを指定する。
@@ -1707,7 +1708,7 @@ class Plug_c(CyObject):
                 addMPlugs0(marr, fromPlug, mplug)
 
             # マルチプラグなら要素プラグのコネクションを得る。
-            if mplug.isArray:
+            if checkElements and mplug.isArray:
                 # コネクションでは必ずしも論理インデックスの昇順とは限らないので、ここではソートする。
                 getConElem = mplug.connectionByPhysicalIndex
                 mps = [getConElem(i) for i in range(mplug.numConnectedElements())]
@@ -1769,7 +1770,7 @@ class Plug_c(CyObject):
         上流のコネクションを得る。
 
         `connections` に s=True, d=False を指定することと同等であり、
-        その他のオプションも全て指定可能。
+        その他のオプションは全て指定可能。
         """
         return self.connections(True, False, **kwargs)
 
@@ -1778,8 +1779,80 @@ class Plug_c(CyObject):
         下流のコネクションを得る。
 
         `connections` に s=False, d=True を指定することと同等であり、
-        その他のオプションも全て指定可能。
+        その他のオプションは全て指定可能。
         """
+        return self.connections(False, True, **kwargs)
+
+    def source(self, **kwargs):
+        u"""
+        unitConversionノードをスキップしつつ、入力しているプラグかノードを得る。
+
+        `inputs` に以下のオプションを指定することと同等であり、
+        その他のオプションは全て指定可能。
+
+        - skipConversionNodes=True
+        - checkChildren=False
+        - checkElements=False
+        - index=0
+
+        :rtype: `.Plug`, `.Node`, or None
+        """
+        kwargs['skipConversionNodes'] = True
+        kwargs['checkChildren'] = False
+        kwargs['checkElements'] = False
+        kwargs['index'] = 0
+        return self.connections(True, False, **kwargs)
+
+    def sourceWithConversion(self, **kwargs):
+        u"""
+        unitConversionノードをスキップせずに、入力しているプラグかノードを得る。
+
+        `inputs` に以下のオプションを指定することと同等であり、
+        その他のオプションは全て指定可能。
+
+        - checkChildren=False
+        - checkElements=False
+        - index=0
+
+        :rtype: `.Plug`, `.Node`, or None
+        """
+        kwargs['checkChildren'] = False
+        kwargs['checkElements'] = False
+        kwargs['index'] = 0
+        return self.connections(True, False, **kwargs)
+
+    def destinations(self, **kwargs):
+        u"""
+        unitConversionノードをスキップしつつ、出力先のプラグかノードのリストを得る。
+
+        `outputs` に以下のオプションを指定することと同等であり、
+        その他のオプションは全て指定可能。
+
+        - skipConversionNodes=True
+        - checkChildren=False
+        - checkElements=False
+
+        :rtype: `list`
+        """
+        kwargs['skipConversionNodes'] = True
+        kwargs['checkChildren'] = False
+        kwargs['checkElements'] = False
+        return self.connections(False, True, **kwargs)
+
+    def destinationsWithConversions(self, **kwargs):
+        u"""
+        unitConversionノードをスキップせずに、出力先のプラグかノードのリストを得る。
+
+        `outputs` に以下のオプションを指定することと同等であり、
+        その他のオプションは全て指定可能。
+
+        - checkChildren=False
+        - checkElements=False
+
+        :rtype: `list`
+        """
+        kwargs['checkChildren'] = False
+        kwargs['checkElements'] = False
         return self.connections(False, True, **kwargs)
 
     def isConnectedTo(self, dst):

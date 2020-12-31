@@ -19,10 +19,17 @@ class cymel.core.cyobjects.node.Node
     .. autosummary::
     
         addAttr
+        aliases
         delete
+        listAliases
+        listAttr
         lock
+        namespace
         plugs
         rename
+        setLocked
+        setNamespace
+        unlock
         uuid
 
 
@@ -37,10 +44,17 @@ class cymel.core.cyobjects.node.Node
 
     
     .. automethod:: addAttr
+    .. automethod:: aliases
     .. automethod:: delete
+    .. automethod:: listAliases
+    .. automethod:: listAttr
     .. automethod:: lock
+    .. automethod:: namespace
     .. automethod:: plugs
     .. automethod:: rename
+    .. automethod:: setLocked
+    .. automethod:: setNamespace
+    .. automethod:: unlock
     .. automethod:: uuid
 
 

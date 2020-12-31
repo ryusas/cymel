@@ -27,6 +27,11 @@ cymel.utils.namespace
 
 
 
+    .. rubric:: Aliases:
+
+    
+    .. autodata:: NS
+
 
 
 

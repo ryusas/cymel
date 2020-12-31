@@ -18,6 +18,7 @@ class cymel.utils.namespace.Namespace
 
     .. autosummary::
     
+        absolute
         children
         create
         current
@@ -26,8 +27,12 @@ class cymel.utils.namespace.Namespace
         iterBreadthFirst
         iterDepthFirst
         ls
+        name
         parent
+        relative
+        relativeMode
         setCurrent
+        setRelativeMode
 
 
 
@@ -40,6 +45,7 @@ class cymel.utils.namespace.Namespace
     .. rubric:: Methods Details:
 
     
+    .. automethod:: absolute
     .. automethod:: children
     .. automethod:: create
     .. automethod:: current
@@ -48,7 +54,11 @@ class cymel.utils.namespace.Namespace
     .. automethod:: iterBreadthFirst
     .. automethod:: iterDepthFirst
     .. automethod:: ls
+    .. automethod:: name
     .. automethod:: parent
+    .. automethod:: relative
+    .. automethod:: relativeMode
     .. automethod:: setCurrent
+    .. automethod:: setRelativeMode
 
 

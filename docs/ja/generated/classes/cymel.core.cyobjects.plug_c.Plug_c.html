@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.core.cyobjects.plug_c.Plug_c &#8212; cymel 0.0.0 ドキュメント</title>
+    <title>class cymel.core.cyobjects.plug_c.Plug_c &#8212; cymel 0.1.2020123100 ドキュメント</title>
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.plug_c.html" title="cymel.core.cyobjects.plug_c"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.1.2020123100 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.plug_c.html" accesskey="U">cymel.core.cyobjects.plug_c</a> &#187;</li> 
       </ul>
@@ -152,6 +152,12 @@
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.defaultu" title="cymel.core.cyobjects.plug_c.Plug_c.defaultu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">defaultu</span></code></a>()</td>
 <td>デフォルト値をUI設定単位で得る。</td>
 </tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.destinations" title="cymel.core.cyobjects.plug_c.Plug_c.destinations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">destinations</span></code></a>(**kwargs)</td>
+<td>unitConversionノードをスキップしつつ、出力先のプラグかノードのリストを得る。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.destinationsWithConversions" title="cymel.core.cyobjects.plug_c.Plug_c.destinationsWithConversions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">destinationsWithConversions</span></code></a>(**kwargs)</td>
+<td>unitConversionノードをスキップせずに、出力先のプラグかノードのリストを得る。</td>
+</tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.disconnectBehavior" title="cymel.core.cyobjects.plug_c.Plug_c.disconnectBehavior"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disconnectBehavior</span></code></a>()</td>
 <td>マルチアトリビュートの要素の削除時の振る舞いを得る。</td>
 </tr>
@@ -218,92 +224,98 @@
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.index" title="cymel.core.cyobjects.plug_c.Plug_c.index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index</span></code></a>()</td>
 <td>マルチアトリビュートの要素の論理インデックスを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.indices" title="cymel.core.cyobjects.plug_c.Plug_c.indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">indices</span></code></a>()</td>
-<td>マルチアトリビュートの論理インデックスのリストを得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.inputs" title="cymel.core.cyobjects.plug_c.Plug_c.inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputs</span></code></a>(**kwargs)</td>
-<td>上流のコネクションを得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isAffectsAppearance" title="cymel.core.cyobjects.plug_c.Plug_c.isAffectsAppearance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAffectsAppearance</span></code></a>()</td>
-<td>ビューポートに影響を与えるかどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isAffectsWorldSpace" title="cymel.core.cyobjects.plug_c.Plug_c.isAffectsWorldSpace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAffectsWorldSpace</span></code></a>()</td>
-<td>ワールドスペースに影響を与えるかどうか。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isArray" title="cymel.core.cyobjects.plug_c.Plug_c.isArray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isArray</span></code></a>()</td>
-<td>マルチアトリビュートかどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isAttrFromReferencedFile" title="cymel.core.cyobjects.plug_c.Plug_c.isAttrFromReferencedFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAttrFromReferencedFile</span></code></a>()</td>
-<td>アトリビュートがリファレンスファイルのものかどうか。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isCached" title="cymel.core.cyobjects.plug_c.Plug_c.isCached"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isCached</span></code></a>([static])</td>
-<td>値がデータブロックにキャッシュされるかどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isCaching" title="cymel.core.cyobjects.plug_c.Plug_c.isCaching"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isCaching</span></code></a>([static])</td>
-<td>値がデータブロックにキャッシュされるかどうか。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isChannelBox" title="cymel.core.cyobjects.plug_c.Plug_c.isChannelBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isChannelBox</span></code></a>([static])</td>
-<td>Keyable でなくてもチャンネルボックスに出すかどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isChild" title="cymel.core.cyobjects.plug_c.Plug_c.isChild"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isChild</span></code></a>()</td>
-<td>コンパウンドの子アトリビュートかどうか。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isCompound" title="cymel.core.cyobjects.plug_c.Plug_c.isCompound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isCompound</span></code></a>()</td>
-<td>コンパウンドアトリビュートかどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isConnectable" title="cymel.core.cyobjects.plug_c.Plug_c.isConnectable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isConnectable</span></code></a>()</td>
-<td>コネクト可能かどうか。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isConnected" title="cymel.core.cyobjects.plug_c.Plug_c.isConnected"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isConnected</span></code></a>([ancestors,&nbsp;children])</td>
-<td>入力か出力のコネクションを持つかどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isConnectedTo" title="cymel.core.cyobjects.plug_c.Plug_c.isConnectedTo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isConnectedTo</span></code></a>(dst)</td>
-<td>このプラグから指定プラグへ向かう接続が在るかどうか検査する。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isDestination" title="cymel.core.cyobjects.plug_c.Plug_c.isDestination"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDestination</span></code></a>([ancestors,&nbsp;children])</td>
-<td>入力コネクションを持つかどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isDynamic" title="cymel.core.cyobjects.plug_c.Plug_c.isDynamic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDynamic</span></code></a>()</td>
-<td>ダイナミックアトリビュートかどうか。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isElement" title="cymel.core.cyobjects.plug_c.Plug_c.isElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isElement</span></code></a>()</td>
-<td>マルチアトリビュートの要素かどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isExtension" title="cymel.core.cyobjects.plug_c.Plug_c.isExtension"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isExtension</span></code></a>()</td>
-<td>拡張アトリビュートかどうか。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange" title="cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isFreeToChange</span></code></a>([ancestors,&nbsp;children])</td>
-<td>プラグの値が変更可能な状態にあるかどうか検査する。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isFromReferencedFile" title="cymel.core.cyobjects.plug_c.Plug_c.isFromReferencedFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isFromReferencedFile</span></code></a>([ancestors,&nbsp;children])</td>
-<td>リファレンスファイルで作られた入力コネクションを持つかどうか。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isHidden" title="cymel.core.cyobjects.plug_c.Plug_c.isHidden"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isHidden</span></code></a>()</td>
-<td>隠しアトリビュートかどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isIgnoredWhenRendering" title="cymel.core.cyobjects.plug_c.Plug_c.isIgnoredWhenRendering"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isIgnoredWhenRendering</span></code></a>()</td>
-<td>レンダリング中にはコネクションが無視されるかどうか。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isIndeterminant" title="cymel.core.cyobjects.plug_c.Plug_c.isIndeterminant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isIndeterminant</span></code></a>()</td>
-<td>Hint to DG that this attr may not always be used when computing the attrs which are dependent upon it.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isIndexMatters" title="cymel.core.cyobjects.plug_c.Plug_c.isIndexMatters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isIndexMatters</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.indexMatters" title="cymel.core.cyobjects.plug_c.Plug_c.indexMatters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">indexMatters</span></code></a>()</td>
 <td>マルチ要素のインデックスが意味を持つかどうか。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isInternal" title="cymel.core.cyobjects.plug_c.Plug_c.isInternal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isInternal</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.indices" title="cymel.core.cyobjects.plug_c.Plug_c.indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">indices</span></code></a>()</td>
+<td>マルチアトリビュートの論理インデックスのリストを得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.inputs" title="cymel.core.cyobjects.plug_c.Plug_c.inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputs</span></code></a>(**kwargs)</td>
+<td>上流のコネクションを得る。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isAffectsAppearance" title="cymel.core.cyobjects.plug_c.Plug_c.isAffectsAppearance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAffectsAppearance</span></code></a>()</td>
+<td>ビューポートに影響を与えるかどうか。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isAffectsWorldSpace" title="cymel.core.cyobjects.plug_c.Plug_c.isAffectsWorldSpace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAffectsWorldSpace</span></code></a>()</td>
+<td>ワールドスペースに影響を与えるかどうか。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isArray" title="cymel.core.cyobjects.plug_c.Plug_c.isArray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isArray</span></code></a>()</td>
+<td>マルチアトリビュートかどうか。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isAttrFromReferencedFile" title="cymel.core.cyobjects.plug_c.Plug_c.isAttrFromReferencedFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAttrFromReferencedFile</span></code></a>()</td>
+<td>アトリビュートがリファレンスファイルのものかどうか。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isCached" title="cymel.core.cyobjects.plug_c.Plug_c.isCached"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isCached</span></code></a>([static])</td>
+<td>値がデータブロックにキャッシュされるかどうか。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isCaching" title="cymel.core.cyobjects.plug_c.Plug_c.isCaching"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isCaching</span></code></a>([static])</td>
+<td>値がデータブロックにキャッシュされるかどうか。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isChannelBox" title="cymel.core.cyobjects.plug_c.Plug_c.isChannelBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isChannelBox</span></code></a>([static])</td>
+<td>Keyable でなくてもチャンネルボックスに出すかどうか。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isChild" title="cymel.core.cyobjects.plug_c.Plug_c.isChild"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isChild</span></code></a>()</td>
+<td>コンパウンドの子アトリビュートかどうか。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isCompound" title="cymel.core.cyobjects.plug_c.Plug_c.isCompound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isCompound</span></code></a>()</td>
+<td>コンパウンドアトリビュートかどうか。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isConnectable" title="cymel.core.cyobjects.plug_c.Plug_c.isConnectable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isConnectable</span></code></a>()</td>
+<td>コネクト可能かどうか。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isConnected" title="cymel.core.cyobjects.plug_c.Plug_c.isConnected"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isConnected</span></code></a>([ancestors,&nbsp;children])</td>
+<td>入力か出力のコネクションを持つかどうか。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isConnectedTo" title="cymel.core.cyobjects.plug_c.Plug_c.isConnectedTo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isConnectedTo</span></code></a>(dst)</td>
+<td>このプラグから指定プラグへ向かう接続が在るかどうか検査する。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isDestination" title="cymel.core.cyobjects.plug_c.Plug_c.isDestination"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDestination</span></code></a>([ancestors,&nbsp;children])</td>
+<td>入力コネクションを持つかどうか。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isDynamic" title="cymel.core.cyobjects.plug_c.Plug_c.isDynamic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDynamic</span></code></a>()</td>
+<td>ダイナミックアトリビュートかどうか。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isElement" title="cymel.core.cyobjects.plug_c.Plug_c.isElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isElement</span></code></a>()</td>
+<td>マルチアトリビュートの要素かどうか。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isExtension" title="cymel.core.cyobjects.plug_c.Plug_c.isExtension"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isExtension</span></code></a>()</td>
+<td>拡張アトリビュートかどうか。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange" title="cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isFreeToChange</span></code></a>([ancestors,&nbsp;children])</td>
+<td>プラグの値が変更可能な状態にあるかどうか検査する。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isFromReferencedFile" title="cymel.core.cyobjects.plug_c.Plug_c.isFromReferencedFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isFromReferencedFile</span></code></a>([ancestors,&nbsp;children])</td>
+<td>リファレンスファイルで作られた入力コネクションを持つかどうか。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isHidden" title="cymel.core.cyobjects.plug_c.Plug_c.isHidden"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isHidden</span></code></a>()</td>
+<td>隠しアトリビュートかどうか。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isIgnoredWhenRendering" title="cymel.core.cyobjects.plug_c.Plug_c.isIgnoredWhenRendering"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isIgnoredWhenRendering</span></code></a>()</td>
+<td>レンダリング中にはコネクションが無視されるかどうか。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isIndeterminant" title="cymel.core.cyobjects.plug_c.Plug_c.isIndeterminant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isIndeterminant</span></code></a>()</td>
+<td>Hint to DG that this attr may not always be used when computing the attrs which are dependent upon it.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isIndexMatters" title="cymel.core.cyobjects.plug_c.Plug_c.isIndexMatters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isIndexMatters</span></code></a>()</td>
+<td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.indexMatters" title="cymel.core.cyobjects.plug_c.Plug_c.indexMatters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">indexMatters</span></code></a> の別名。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isInternal" title="cymel.core.cyobjects.plug_c.Plug_c.isInternal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isInternal</span></code></a>()</td>
 <td>インターナルアトリビュートかどうか。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isKeyable" title="cymel.core.cyobjects.plug_c.Plug_c.isKeyable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isKeyable</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isKeyable" title="cymel.core.cyobjects.plug_c.Plug_c.isKeyable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isKeyable</span></code></a>()</td>
 <td>Keyable かどうか。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isLocked" title="cymel.core.cyobjects.plug_c.Plug_c.isLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isLocked</span></code></a>([ancestors,&nbsp;children])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isLocked" title="cymel.core.cyobjects.plug_c.Plug_c.isLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isLocked</span></code></a>([ancestors,&nbsp;children])</td>
 <td>ロックされているかどうか。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isMulti" title="cymel.core.cyobjects.plug_c.Plug_c.isMulti"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMulti</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isMulti" title="cymel.core.cyobjects.plug_c.Plug_c.isMulti"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMulti</span></code></a>()</td>
 <td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isArray" title="cymel.core.cyobjects.plug_c.Plug_c.isArray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isArray</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isNewAttr" title="cymel.core.cyobjects.plug_c.Plug_c.isNewAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isNewAttr</span></code></a>()</td>
-<td>ファイルリファレンスした後に追加されたアトリビュートかどうか。</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isNewAttr" title="cymel.core.cyobjects.plug_c.Plug_c.isNewAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isNewAttr</span></code></a>()</td>
+<td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute" title="cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isNewAttribute</span></code></a> の別名。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute" title="cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isNewAttribute</span></code></a>()</td>
+<td>リファレンスではないアトリビュートかどうか。</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isNodeFromReferencedFile" title="cymel.core.cyobjects.plug_c.Plug_c.isNodeFromReferencedFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isNodeFromReferencedFile</span></code></a>()</td>
 <td>ノードがリファレンスファイルのものかどうか。</td>
@@ -326,131 +338,131 @@
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isRenderSource" title="cymel.core.cyobjects.plug_c.Plug_c.isRenderSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRenderSource</span></code></a>()</td>
 <td>レンダーソースかどうか。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isSource" title="cymel.core.cyobjects.plug_c.Plug_c.isSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSource</span></code></a>([ancestors,&nbsp;children])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isSettable" title="cymel.core.cyobjects.plug_c.Plug_c.isSettable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSettable</span></code></a>([ancestors,&nbsp;children])</td>
+<td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isWritableNow" title="cymel.core.cyobjects.plug_c.Plug_c.isWritableNow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isWritableNow</span></code></a> の別名。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isSource" title="cymel.core.cyobjects.plug_c.Plug_c.isSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSource</span></code></a>([ancestors,&nbsp;children])</td>
 <td>出力コネクションを持つかどうか。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isStorable" title="cymel.core.cyobjects.plug_c.Plug_c.isStorable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isStorable</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isStorable" title="cymel.core.cyobjects.plug_c.Plug_c.isStorable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isStorable</span></code></a>()</td>
 <td>ファイルに保存されるかどうか。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isUsedArrayDataBuilder" title="cymel.core.cyobjects.plug_c.Plug_c.isUsedArrayDataBuilder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isUsedArrayDataBuilder</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isUsedArrayDataBuilder" title="cymel.core.cyobjects.plug_c.Plug_c.isUsedArrayDataBuilder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isUsedArrayDataBuilder</span></code></a>()</td>
 <td>API の MArrayDataBuilder が使われるかどうか。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isUsedAsColor" title="cymel.core.cyobjects.plug_c.Plug_c.isUsedAsColor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isUsedAsColor</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isUsedAsColor" title="cymel.core.cyobjects.plug_c.Plug_c.isUsedAsColor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isUsedAsColor</span></code></a>()</td>
 <td>カラーとして使われるものかどうか。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isUsedAsFilename" title="cymel.core.cyobjects.plug_c.Plug_c.isUsedAsFilename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isUsedAsFilename</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isUsedAsFilename" title="cymel.core.cyobjects.plug_c.Plug_c.isUsedAsFilename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isUsedAsFilename</span></code></a>()</td>
 <td>ファイル名として使われるものかどうか。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isValidWorldElement" title="cymel.core.cyobjects.plug_c.Plug_c.isValidWorldElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isValidWorldElement</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isValidWorldElement" title="cymel.core.cyobjects.plug_c.Plug_c.isValidWorldElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isValidWorldElement</span></code></a>()</td>
 <td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isWorldSpace" title="cymel.core.cyobjects.plug_c.Plug_c.isWorldSpace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isWorldSpace</span></code></a> な要素プラグの場合にインデックスがDAGノードのインスタンス番号と矛盾が無いかどうか。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isWorldSpace" title="cymel.core.cyobjects.plug_c.Plug_c.isWorldSpace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isWorldSpace</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isWorldSpace" title="cymel.core.cyobjects.plug_c.Plug_c.isWorldSpace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isWorldSpace</span></code></a>()</td>
 <td>DAGノードインスタンスに結びついたマルチアトリビュートかどうか。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isWritable" title="cymel.core.cyobjects.plug_c.Plug_c.isWritable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isWritable</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isWritable" title="cymel.core.cyobjects.plug_c.Plug_c.isWritable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isWritable</span></code></a>()</td>
 <td>書き込めるか（値をセットしたりコネクションの出力先と成り得るか）どうか。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isWritableNow" title="cymel.core.cyobjects.plug_c.Plug_c.isWritableNow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isWritableNow</span></code></a>([ancestors,&nbsp;children])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isWritableNow" title="cymel.core.cyobjects.plug_c.Plug_c.isWritableNow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isWritableNow</span></code></a>([ancestors,&nbsp;children])</td>
 <td>プラグの値が変更可能な状態にあるか。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.leaves" title="cymel.core.cyobjects.plug_c.Plug_c.leaves"><code class="xref py py-obj docutils literal notranslate"><span class="pre">leaves</span></code></a>([evaluate])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.leaves" title="cymel.core.cyobjects.plug_c.Plug_c.leaves"><code class="xref py py-obj docutils literal notranslate"><span class="pre">leaves</span></code></a>([evaluate])</td>
 <td>マルチやコンパウンドの階層を下って、リーフのプラグのリストを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.longName" title="cymel.core.cyobjects.plug_c.Plug_c.longName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">longName</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.longName" title="cymel.core.cyobjects.plug_c.Plug_c.longName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">longName</span></code></a>()</td>
 <td>アトリビュートのロング名を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.max" title="cymel.core.cyobjects.plug_c.Plug_c.max"><code class="xref py py-obj docutils literal notranslate"><span class="pre">max</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.max" title="cymel.core.cyobjects.plug_c.Plug_c.max"><code class="xref py py-obj docutils literal notranslate"><span class="pre">max</span></code></a>()</td>
 <td>アトリビュートに設定されている最大値を内部単位で得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.maxu" title="cymel.core.cyobjects.plug_c.Plug_c.maxu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maxu</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.maxu" title="cymel.core.cyobjects.plug_c.Plug_c.maxu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maxu</span></code></a>()</td>
 <td>アトリビュートに設定されている最大値をUI設定単位で得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mfn" title="cymel.core.cyobjects.plug_c.Plug_c.mfn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mfn</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mfn" title="cymel.core.cyobjects.plug_c.Plug_c.mfn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mfn</span></code></a>()</td>
 <td>Python API 2 のファンクションセットを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mfn1" title="cymel.core.cyobjects.plug_c.Plug_c.mfn1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mfn1</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mfn1" title="cymel.core.cyobjects.plug_c.Plug_c.mfn1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mfn1</span></code></a>()</td>
 <td>Python API 1 のファンクションセットを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mfn1_" title="cymel.core.cyobjects.plug_c.Plug_c.mfn1_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mfn1_</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mfn1_" title="cymel.core.cyobjects.plug_c.Plug_c.mfn1_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mfn1_</span></code></a>()</td>
 <td><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a> を省略して、 Python API 1 のファンクションセットを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mfn_" title="cymel.core.cyobjects.plug_c.Plug_c.mfn_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mfn_</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mfn_" title="cymel.core.cyobjects.plug_c.Plug_c.mfn_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mfn_</span></code></a>()</td>
 <td><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a> を省略して、 Python API 2 のファンクションセットを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.min" title="cymel.core.cyobjects.plug_c.Plug_c.min"><code class="xref py py-obj docutils literal notranslate"><span class="pre">min</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.min" title="cymel.core.cyobjects.plug_c.Plug_c.min"><code class="xref py py-obj docutils literal notranslate"><span class="pre">min</span></code></a>()</td>
 <td>アトリビュートに設定されている最小値を内部単位で得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.minu" title="cymel.core.cyobjects.plug_c.Plug_c.minu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minu</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.minu" title="cymel.core.cyobjects.plug_c.Plug_c.minu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minu</span></code></a>()</td>
 <td>アトリビュートに設定されている最小値をUI設定単位で得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mplug" title="cymel.core.cyobjects.plug_c.Plug_c.mplug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mplug</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mplug" title="cymel.core.cyobjects.plug_c.Plug_c.mplug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mplug</span></code></a>()</td>
 <td>Python API 2 の <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MPlug.html">MPlug</a> を得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mplug1" title="cymel.core.cyobjects.plug_c.Plug_c.mplug1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mplug1</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mplug1" title="cymel.core.cyobjects.plug_c.Plug_c.mplug1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mplug1</span></code></a>()</td>
 <td>Python API 1 の <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/index.html?url=cpp_ref/class_MPlug.html">MPlug</a> を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mplug1_" title="cymel.core.cyobjects.plug_c.Plug_c.mplug1_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mplug1_</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mplug1_" title="cymel.core.cyobjects.plug_c.Plug_c.mplug1_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mplug1_</span></code></a>()</td>
 <td><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a> を省略して、 Python API 1 の <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/index.html?url=cpp_ref/class_MPlug.html">MPlug</a> を得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mplug_" title="cymel.core.cyobjects.plug_c.Plug_c.mplug_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mplug_</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.mplug_" title="cymel.core.cyobjects.plug_c.Plug_c.mplug_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mplug_</span></code></a>()</td>
 <td><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a> を省略して、 Python API 2 の <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MPlug.html">MPlug</a> を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.multi" title="cymel.core.cyobjects.plug_c.Plug_c.multi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multi</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.multi" title="cymel.core.cyobjects.plug_c.Plug_c.multi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multi</span></code></a>()</td>
 <td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.array" title="cymel.core.cyobjects.plug_c.Plug_c.array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.newObject" title="cymel.core.cyobjects.plug_c.Plug_c.newObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">newObject</span></code></a>(data)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.newObject" title="cymel.core.cyobjects.plug_c.Plug_c.newObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">newObject</span></code></a>(data)</td>
 <td>内部データとともにインスタンスを生成する。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.nextAvailable" title="cymel.core.cyobjects.plug_c.Plug_c.nextAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nextAvailable</span></code></a>([start,&nbsp;asPlug,&nbsp;checkLocked,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.nextAvailable" title="cymel.core.cyobjects.plug_c.Plug_c.nextAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nextAvailable</span></code></a>([start,&nbsp;asPlug,&nbsp;checkLocked,&nbsp;...])</td>
 <td>マルチプラグの入力の次の空きインデックスを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.niceName" title="cymel.core.cyobjects.plug_c.Plug_c.niceName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">niceName</span></code></a>([noWorldIndex])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.niceName" title="cymel.core.cyobjects.plug_c.Plug_c.niceName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">niceName</span></code></a>([noWorldIndex])</td>
 <td>ナイス名を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.node" title="cymel.core.cyobjects.plug_c.Plug_c.node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.node" title="cymel.core.cyobjects.plug_c.Plug_c.node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code></a>()</td>
 <td>ノードを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.nodeName" title="cymel.core.cyobjects.plug_c.Plug_c.nodeName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodeName</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.nodeName" title="cymel.core.cyobjects.plug_c.Plug_c.nodeName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodeName</span></code></a>()</td>
 <td>ノード名を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.nodeType" title="cymel.core.cyobjects.plug_c.Plug_c.nodeType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodeType</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.nodeType" title="cymel.core.cyobjects.plug_c.Plug_c.nodeType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodeType</span></code></a>()</td>
 <td>ノードタイプ名を得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.noderef" title="cymel.core.cyobjects.plug_c.Plug_c.noderef"><code class="xref py py-obj docutils literal notranslate"><span class="pre">noderef</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.noderef" title="cymel.core.cyobjects.plug_c.Plug_c.noderef"><code class="xref py py-obj docutils literal notranslate"><span class="pre">noderef</span></code></a>()</td>
 <td>ノードの弱参照ラッパーを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.numChildren" title="cymel.core.cyobjects.plug_c.Plug_c.numChildren"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numChildren</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.numChildren" title="cymel.core.cyobjects.plug_c.Plug_c.numChildren"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numChildren</span></code></a>()</td>
 <td>コンパウンドアトリビュートの子の数を得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.numConnectedElements" title="cymel.core.cyobjects.plug_c.Plug_c.numConnectedElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numConnectedElements</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.numConnectedElements" title="cymel.core.cyobjects.plug_c.Plug_c.numConnectedElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numConnectedElements</span></code></a>()</td>
 <td>マルチアトリビュートの接続を持つ要素数を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.numElements" title="cymel.core.cyobjects.plug_c.Plug_c.numElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numElements</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.numElements" title="cymel.core.cyobjects.plug_c.Plug_c.numElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numElements</span></code></a>()</td>
 <td>マルチアトリビュートの評価済みの要素数を得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.outputs" title="cymel.core.cyobjects.plug_c.Plug_c.outputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputs</span></code></a>(**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.outputs" title="cymel.core.cyobjects.plug_c.Plug_c.outputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputs</span></code></a>(**kwargs)</td>
 <td>下流のコネクションを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.parent" title="cymel.core.cyobjects.plug_c.Plug_c.parent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.parent" title="cymel.core.cyobjects.plug_c.Plug_c.parent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></a>()</td>
 <td>親のコンパウンドアトリビュートを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.plug" title="cymel.core.cyobjects.plug_c.Plug_c.plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug</span></code></a>(name)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.plug" title="cymel.core.cyobjects.plug_c.Plug_c.plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug</span></code></a>(name)</td>
 <td>下位のプラグを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.plugName" title="cymel.core.cyobjects.plug_c.Plug_c.plugName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugName</span></code></a>([short,&nbsp;fullAttrPath])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.plugName" title="cymel.core.cyobjects.plug_c.Plug_c.plugName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugName</span></code></a>([short,&nbsp;fullAttrPath])</td>
 <td>プラグ名を得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.plug_" title="cymel.core.cyobjects.plug_c.Plug_c.plug_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug_</span></code></a>(name)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.plug_" title="cymel.core.cyobjects.plug_c.Plug_c.plug_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug_</span></code></a>(name)</td>
 <td><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a> を省略して、下位のプラグを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.proxyMaster" title="cymel.core.cyobjects.plug_c.Plug_c.proxyMaster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">proxyMaster</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.proxyMaster" title="cymel.core.cyobjects.plug_c.Plug_c.proxyMaster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">proxyMaster</span></code></a>()</td>
 <td>プロキシアトリビュートのマスタープラグを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.root" title="cymel.core.cyobjects.plug_c.Plug_c.root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">root</span></code></a>([completely])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.root" title="cymel.core.cyobjects.plug_c.Plug_c.root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">root</span></code></a>([completely])</td>
 <td>コンパウンドのルートプラグを得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.setAlias" title="cymel.core.cyobjects.plug_c.Plug_c.setAlias"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAlias</span></code></a>([name])</td>
-<td>プラグの別名を設定、又は削除する。</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.shortName" title="cymel.core.cyobjects.plug_c.Plug_c.shortName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shortName</span></code></a>()</td>
 <td>アトリビュートのショート名を得る。</td>
@@ -466,6 +478,12 @@
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.softMinu" title="cymel.core.cyobjects.plug_c.Plug_c.softMinu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">softMinu</span></code></a>()</td>
 <td>アトリビュートに設定されているソフト最小値をUI設定単位で得る。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.source" title="cymel.core.cyobjects.plug_c.Plug_c.source"><code class="xref py py-obj docutils literal notranslate"><span class="pre">source</span></code></a>(**kwargs)</td>
+<td>unitConversionノードをスキップしつつ、入力しているプラグかノードを得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.sourceWithConversion" title="cymel.core.cyobjects.plug_c.Plug_c.sourceWithConversion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sourceWithConversion</span></code></a>(**kwargs)</td>
+<td>unitConversionノードをスキップせずに、入力しているプラグかノードを得る。</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.subType" title="cymel.core.cyobjects.plug_c.Plug_c.subType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subType</span></code></a>()</td>
 <td>数値コンパウンド（ double3 等）アトリビュートの要素のタイプ名を得る。</td>
@@ -771,7 +789,7 @@ translate 等を得ることはできない。</p>
 
 <dl class="method">
 <dt id="cymel.core.cyobjects.plug_c.Plug_c.connections">
-<code class="descname">connections</code><span class="sig-paren">(</span><em>s=True</em>, <em>d=True</em>, <em>c=False</em>, <em>t=None</em>, <em>et=False</em>, <em>scn=False</em>, <em>source=True</em>, <em>destination=True</em>, <em>connections=False</em>, <em>type=None</em>, <em>exactType=False</em>, <em>skipConversionNodes=False</em>, <em>asPair=False</em>, <em>asNode=False</em>, <em>checkChildren=True</em>, <em>index=None</em>, <em>pcls=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.connections" title="この定義へのパーマリンク">¶</a></dt>
+<code class="descname">connections</code><span class="sig-paren">(</span><em>s=True</em>, <em>d=True</em>, <em>c=False</em>, <em>t=None</em>, <em>et=False</em>, <em>scn=False</em>, <em>source=True</em>, <em>destination=True</em>, <em>connections=False</em>, <em>type=None</em>, <em>exactType=False</em>, <em>skipConversionNodes=False</em>, <em>asPair=False</em>, <em>asNode=False</em>, <em>checkChildren=True</em>, <em>checkElements=True</em>, <em>index=None</em>, <em>pcls=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.connections" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>コネクトされているプラグやノードのリストを得る。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -787,6 +805,8 @@ translate 等を得ることはできない。</p>
 <li><strong>scn|skipConversionNodes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/unitConversion.html">unitConversion</a> 系ノードをスキップするかどうか。</li>
 <li><strong>asNode</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- コネクト先をプラグではなくノードで得る。</li>
 <li><strong>checkChildren</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- コンパウンドの下層もチェックする。
+デフォルトで True なので False を明示すると無効化できる。</li>
+<li><strong>checkElements</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- マルチプラグの要素もチェックする。
 デフォルトで True なので False を明示すると無効化できる。</li>
 <li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- 結果を1つだけ得る場合にインデックスを指定する。
 負数も指定可能。
@@ -814,6 +834,47 @@ translate 等を得ることはできない。</p>
 <dt id="cymel.core.cyobjects.plug_c.Plug_c.defaultu">
 <code class="descname">defaultu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.defaultu" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>デフォルト値をUI設定単位で得る。</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.cyobjects.plug_c.Plug_c.destinations">
+<code class="descname">destinations</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.destinations" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>unitConversionノードをスキップしつつ、出力先のプラグかノードのリストを得る。</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.outputs" title="cymel.core.cyobjects.plug_c.Plug_c.outputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputs</span></code></a> に以下のオプションを指定することと同等であり、
+その他のオプションは全て指定可能。</p>
+<ul class="simple">
+<li>skipConversionNodes=True</li>
+<li>checkChildren=False</li>
+<li>checkElements=False</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.cyobjects.plug_c.Plug_c.destinationsWithConversions">
+<code class="descname">destinationsWithConversions</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.destinationsWithConversions" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>unitConversionノードをスキップせずに、出力先のプラグかノードのリストを得る。</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.outputs" title="cymel.core.cyobjects.plug_c.Plug_c.outputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputs</span></code></a> に以下のオプションを指定することと同等であり、
+その他のオプションは全て指定可能。</p>
+<ul class="simple">
+<li>checkChildren=False</li>
+<li>checkElements=False</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -1153,6 +1214,21 @@ translate 等を得ることはできない。</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="cymel.core.cyobjects.plug_c.Plug_c.indexMatters">
+<code class="descname">indexMatters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.indexMatters" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>マルチ要素のインデックスが意味を持つかどうか。</p>
+<p>この値と <a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isReadable" title="cymel.core.cyobjects.plug_c.Plug_c.isReadable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isReadable</span></code></a> が False の場合に <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/connectAttr.html">connectAttr</a> -na が使える。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="cymel.core.cyobjects.plug_c.Plug_c.indices">
 <code class="descname">indices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.indices" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>マルチアトリビュートの論理インデックスのリストを得る。</p>
@@ -1172,7 +1248,7 @@ translate 等を得ることはできない。</p>
 <code class="descname">inputs</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.inputs" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>上流のコネクションを得る。</p>
 <p><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.connections" title="cymel.core.cyobjects.plug_c.Plug_c.connections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connections</span></code></a> に s=True, d=False を指定することと同等であり、
-その他のオプションも全て指定可能。</p>
+その他のオプションは全て指定可能。</p>
 </dd></dl>
 
 <dl class="method">
@@ -1223,6 +1299,7 @@ translate 等を得ることはできない。</p>
 <dd><p>アトリビュートがリファレンスファイルのものかどうか。</p>
 <p>ノードがリファレンスファイルのものであっても、
 その上に追加されたアトリビュートなら False となる。</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute" title="cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isNewAttribute</span></code></a> の逆の結果が得られる。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1536,16 +1613,7 @@ translate 等を得ることはできない。</p>
 <dl class="method">
 <dt id="cymel.core.cyobjects.plug_c.Plug_c.isIndexMatters">
 <code class="descname">isIndexMatters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.isIndexMatters" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>マルチ要素のインデックスが意味を持つかどうか。</p>
-<p>この値と <a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isReadable" title="cymel.core.cyobjects.plug_c.Plug_c.isReadable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isReadable</span></code></a> が False の場合に <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/connectAttr.html">connectAttr</a> -na が使える。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
-</tr>
-</tbody>
-</table>
+<dd><p><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.indexMatters" title="cymel.core.cyobjects.plug_c.Plug_c.indexMatters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">indexMatters</span></code></a> の別名。</p>
 </dd></dl>
 
 <dl class="method">
@@ -1617,7 +1685,17 @@ True ではなく 1 が返される。</p>
 <dl class="method">
 <dt id="cymel.core.cyobjects.plug_c.Plug_c.isNewAttr">
 <code class="descname">isNewAttr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.isNewAttr" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ファイルリファレンスした後に追加されたアトリビュートかどうか。</p>
+<dd><p><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute" title="cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isNewAttribute</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute">
+<code class="descname">isNewAttribute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リファレンスではないアトリビュートかどうか。</p>
+<p>そもそもノードがリファレンスファイルのものでないか、
+ファイルリファレンスした後に追加されたアトリビュートの場合に
+True となる。</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isAttrFromReferencedFile" title="cymel.core.cyobjects.plug_c.Plug_c.isAttrFromReferencedFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAttrFromReferencedFile</span></code></a> の逆の結果が得られる。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1727,6 +1805,12 @@ True ではなく 1 が返される。</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.cyobjects.plug_c.Plug_c.isSettable">
+<code class="descname">isSettable</code><span class="sig-paren">(</span><em>ancestors=True</em>, <em>children=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.isSettable" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.isWritableNow" title="cymel.core.cyobjects.plug_c.Plug_c.isWritableNow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isWritableNow</span></code></a> の別名。</p>
 </dd></dl>
 
 <dl class="method">
@@ -2228,7 +2312,7 @@ True ではなく 1 が返される。</p>
 <code class="descname">outputs</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.outputs" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>下流のコネクションを得る。</p>
 <p><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.connections" title="cymel.core.cyobjects.plug_c.Plug_c.connections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connections</span></code></a> に s=False, d=True を指定することと同等であり、
-その他のオプションも全て指定可能。</p>
+その他のオプションは全て指定可能。</p>
 </dd></dl>
 
 <dl class="method">
@@ -2335,21 +2419,6 @@ Pythonの名前と衝突する場合のためにこのメソッドがある。</
 </dd></dl>
 
 <dl class="method">
-<dt id="cymel.core.cyobjects.plug_c.Plug_c.setAlias">
-<code class="descname">setAlias</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.setAlias" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>プラグの別名を設定、又は削除する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) -- 設定する別名。
-None や空文字を指定すると、既存の設定を削除する。</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
 <dt id="cymel.core.cyobjects.plug_c.Plug_c.shortName">
 <code class="descname">shortName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.shortName" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>アトリビュートのショート名を得る。</p>
@@ -2385,6 +2454,49 @@ None や空文字を指定すると、既存の設定を削除する。</td>
 <dt id="cymel.core.cyobjects.plug_c.Plug_c.softMinu">
 <code class="descname">softMinu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.softMinu" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>アトリビュートに設定されているソフト最小値をUI設定単位で得る。</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.cyobjects.plug_c.Plug_c.source">
+<code class="descname">source</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.source" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>unitConversionノードをスキップしつつ、入力しているプラグかノードを得る。</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.inputs" title="cymel.core.cyobjects.plug_c.Plug_c.inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputs</span></code></a> に以下のオプションを指定することと同等であり、
+その他のオプションは全て指定可能。</p>
+<ul class="simple">
+<li>skipConversionNodes=True</li>
+<li>checkChildren=False</li>
+<li>checkElements=False</li>
+<li>index=0</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a>, <a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a>, or None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.cyobjects.plug_c.Plug_c.sourceWithConversion">
+<code class="descname">sourceWithConversion</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug_c.Plug_c.sourceWithConversion" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>unitConversionノードをスキップせずに、入力しているプラグかノードを得る。</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.plug_c.Plug_c.inputs" title="cymel.core.cyobjects.plug_c.Plug_c.inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputs</span></code></a> に以下のオプションを指定することと同等であり、
+その他のオプションは全て指定可能。</p>
+<ul class="simple">
+<li>checkChildren=False</li>
+<li>checkElements=False</li>
+<li>index=0</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a>, <a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a>, or None</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -2457,7 +2569,7 @@ None や空文字を指定すると、既存の設定を削除する。</td>
         <li class="right" >
           <a href="../cymel.core.cyobjects.plug_c.html" title="cymel.core.cyobjects.plug_c"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.1.2020123100 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.plug_c.html" >cymel.core.cyobjects.plug_c</a> &#187;</li> 
       </ul>

@@ -47,6 +47,8 @@ class cymel.core.cyobjects.dagnode_c.DagNodeMixin
         isIntermediateObject
         isParentOf
         isRoot
+        isTemplated
+        isVisible
         leaves
         lengthAndSiblingIndices
         numChildren
@@ -109,6 +111,8 @@ class cymel.core.cyobjects.dagnode_c.DagNodeMixin
     .. automethod:: isIntermediateObject
     .. automethod:: isParentOf
     .. automethod:: isRoot
+    .. automethod:: isTemplated
+    .. automethod:: isVisible
     .. automethod:: leaves
     .. automethod:: lengthAndSiblingIndices
     .. automethod:: numChildren

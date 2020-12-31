@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.core.cyobjects.plug.Plug &#8212; cymel 0.0.0 ドキュメント</title>
+    <title>class cymel.core.cyobjects.plug.Plug &#8212; cymel 0.1.2020123100 ドキュメント</title>
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.plug.html" title="cymel.core.cyobjects.plug"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.1.2020123100 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.plug.html" accesskey="U">cymel.core.cyobjects.plug</a> &#187;</li> 
       </ul>
@@ -126,35 +126,47 @@
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.disconnect" title="cymel.core.cyobjects.plug.Plug.disconnect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disconnect</span></code></a>([src,&nbsp;force,&nbsp;f,&nbsp;nextAvailable,&nbsp;na])</td>
 <td>入力コネクションを切断する。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.iterElements" title="cymel.core.cyobjects.plug.Plug.iterElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterElements</span></code></a>([start,&nbsp;end,&nbsp;step,&nbsp;all,&nbsp;infinite])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.isMuted" title="cymel.core.cyobjects.plug.Plug.isMuted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMuted</span></code></a>()</td>
+<td>ミュートされているかどうか。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.iterElements" title="cymel.core.cyobjects.plug.Plug.iterElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterElements</span></code></a>([start,&nbsp;end,&nbsp;step,&nbsp;all,&nbsp;infinite])</td>
 <td>マルチアトリビュート要素をイテレーションする。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.iterHierarchy" title="cymel.core.cyobjects.plug.Plug.iterHierarchy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterHierarchy</span></code></a>([evaluate,&nbsp;connected,&nbsp;checker])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.iterHierarchy" title="cymel.core.cyobjects.plug.Plug.iterHierarchy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterHierarchy</span></code></a>([evaluate,&nbsp;connected,&nbsp;checker])</td>
 <td>プラグ階層下（マルチ要素、コンパウンドの子）をイテレーションする。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.layeredPlug" title="cymel.core.cyobjects.plug.Plug.layeredPlug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">layeredPlug</span></code></a>([layer,&nbsp;selected,&nbsp;exact,&nbsp;best,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.layeredPlug" title="cymel.core.cyobjects.plug.Plug.layeredPlug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">layeredPlug</span></code></a>([layer,&nbsp;selected,&nbsp;exact,&nbsp;best,&nbsp;...])</td>
 <td>アニメーションレイヤーによる代理プラグを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.listEnum" title="cymel.core.cyobjects.plug.Plug.listEnum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listEnum</span></code></a>([reverse])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.listEnum" title="cymel.core.cyobjects.plug.Plug.listEnum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listEnum</span></code></a>([reverse])</td>
 <td>enum アトリビュートの名前と値のペアのリストを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.pairBlendPlug" title="cymel.core.cyobjects.plug.Plug.pairBlendPlug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairBlendPlug</span></code></a>([in1,&nbsp;in2,&nbsp;cur,&nbsp;inUse,&nbsp;byWeight])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.lock" title="cymel.core.cyobjects.plug.Plug.lock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lock</span></code></a>([val,&nbsp;leaf])</td>
+<td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="cymel.core.cyobjects.plug.Plug.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a> の別名。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.mute" title="cymel.core.cyobjects.plug.Plug.mute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mute</span></code></a>(**kwargs)</td>
+<td>ミュートする。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.pairBlendPlug" title="cymel.core.cyobjects.plug.Plug.pairBlendPlug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairBlendPlug</span></code></a>([in1,&nbsp;in2,&nbsp;cur,&nbsp;inUse,&nbsp;byWeight])</td>
 <td><a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/pairBlend.html">pairBlend</a> の入力プラグを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.remove" title="cymel.core.cyobjects.plug.Plug.remove"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove</span></code></a>([b,&nbsp;f,&nbsp;force])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.remove" title="cymel.core.cyobjects.plug.Plug.remove"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove</span></code></a>([b,&nbsp;f,&nbsp;force])</td>
 <td>自身がマルチアトリビュートの要素プラグの場合にそれを削除する。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeAllElements" title="cymel.core.cyobjects.plug.Plug.removeAllElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeAllElements</span></code></a>([b,&nbsp;f,&nbsp;force])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeAllElements" title="cymel.core.cyobjects.plug.Plug.removeAllElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeAllElements</span></code></a>([b,&nbsp;f,&nbsp;force])</td>
 <td>自身がマルチアトリビュートのマルチプラグの場合にその全要素を削除する。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeElement" title="cymel.core.cyobjects.plug.Plug.removeElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeElement</span></code></a>([idx,&nbsp;b,&nbsp;f,&nbsp;force])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeElement" title="cymel.core.cyobjects.plug.Plug.removeElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeElement</span></code></a>([idx,&nbsp;b,&nbsp;f,&nbsp;force])</td>
 <td>マルチアトリビュートの要素を削除する。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.reset" title="cymel.core.cyobjects.plug.Plug.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.reset" title="cymel.core.cyobjects.plug.Plug.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>()</td>
 <td>デフォルト値にリセットする。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.set" title="cymel.core.cyobjects.plug.Plug.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(val[,&nbsp;safe])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.set" title="cymel.core.cyobjects.plug.Plug.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(val[,&nbsp;safe])</td>
 <td>アトリビュート値を内部単位でセットする。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setAlias" title="cymel.core.cyobjects.plug.Plug.setAlias"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAlias</span></code></a>([name])</td>
+<td>プラグの別名を設定、又は削除する。</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setCached" title="cymel.core.cyobjects.plug.Plug.setCached"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCached</span></code></a>(val[,&nbsp;leaf])</td>
 <td>Caching フラグを設定する。</td>
@@ -168,7 +180,7 @@
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setKeyable" title="cymel.core.cyobjects.plug.Plug.setKeyable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setKeyable</span></code></a>(val[,&nbsp;leaf])</td>
 <td>Keyable フラグを設定する。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="cymel.core.cyobjects.plug.Plug.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>(val[,&nbsp;leaf])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="cymel.core.cyobjects.plug.Plug.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>([val,&nbsp;leaf])</td>
 <td>ロック、又はアンロックする。</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setu" title="cymel.core.cyobjects.plug.Plug.setu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setu</span></code></a>(val[,&nbsp;safe])</td>
@@ -179,6 +191,9 @@
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unlock" title="cymel.core.cyobjects.plug.Plug.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>([below,&nbsp;undoable])</td>
 <td>このプラグと階層上位や、下位（オプション）のプラグをアンロックする。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unmute" title="cymel.core.cyobjects.plug.Plug.unmute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unmute</span></code></a>(**kwargs)</td>
+<td>ミュート解除する。</td>
 </tr>
 </tbody>
 </table>
@@ -435,6 +450,12 @@ isIndexMatters 設定に限らず利用できる。</li>
 </dd></dl>
 
 <dl class="method">
+<dt id="cymel.core.cyobjects.plug.Plug.isMuted">
+<code class="descname">isMuted</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.isMuted" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ミュートされているかどうか。</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="cymel.core.cyobjects.plug.Plug.iterElements">
 <code class="descname">iterElements</code><span class="sig-paren">(</span><em>start=None</em>, <em>end=None</em>, <em>step=1</em>, <em>all=False</em>, <em>infinite=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.iterElements" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>マルチアトリビュート要素をイテレーションする。</p>
@@ -579,6 +600,18 @@ selected フラグがチェックされるようになる。</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.cyobjects.plug.Plug.lock">
+<code class="descname">lock</code><span class="sig-paren">(</span><em>val=True</em>, <em>leaf=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.lock" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="cymel.core.cyobjects.plug.Plug.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.cyobjects.plug.Plug.mute">
+<code class="descname">mute</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.mute" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ミュートする。</p>
 </dd></dl>
 
 <dl class="method">
@@ -730,6 +763,21 @@ in1 と in2 が両方 True の場合は <a class="reference external" href="http
 </dd></dl>
 
 <dl class="method">
+<dt id="cymel.core.cyobjects.plug.Plug.setAlias">
+<code class="descname">setAlias</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setAlias" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>プラグの別名を設定、又は削除する。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) -- 設定する別名。
+None や空文字を指定すると、既存の設定を削除する。</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="cymel.core.cyobjects.plug.Plug.setCached">
 <code class="descname">setCached</code><span class="sig-paren">(</span><em>val</em>, <em>leaf=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setCached" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Caching フラグを設定する。</p>
@@ -807,7 +855,7 @@ in1 と in2 が両方 True の場合は <a class="reference external" href="http
 
 <dl class="method">
 <dt id="cymel.core.cyobjects.plug.Plug.setLocked">
-<code class="descname">setLocked</code><span class="sig-paren">(</span><em>val</em>, <em>leaf=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="この定義へのパーマリンク">¶</a></dt>
+<code class="descname">setLocked</code><span class="sig-paren">(</span><em>val=True</em>, <em>leaf=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ロック、又はアンロックする。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -822,6 +870,11 @@ in1 と in2 が両方 True の場合は <a class="reference external" href="http
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">アンロックの場合は、プラグ階層上位や下位に対しても保証できる
+<a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unlock" title="cymel.core.cyobjects.plug.Plug.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a> メソッドが便利である。</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -895,6 +948,12 @@ in1 と in2 が両方 True の場合は <a class="reference external" href="http
 </div>
 </dd></dl>
 
+<dl class="method">
+<dt id="cymel.core.cyobjects.plug.Plug.unmute">
+<code class="descname">unmute</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.unmute" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ミュート解除する。</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -920,7 +979,7 @@ in1 と in2 が両方 True の場合は <a class="reference external" href="http
         <li class="right" >
           <a href="../cymel.core.cyobjects.plug.html" title="cymel.core.cyobjects.plug"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.1.2020123100 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.plug.html" >cymel.core.cyobjects.plug</a> &#187;</li> 
       </ul>

@@ -35,13 +35,15 @@ _2_MFnDagNode = _api2.MFnDagNode
 
 _1_MDagPath = _api1.MDagPath
 
+_classification = _api2.MFnDependencyNode.classification
+
 _createNode = cmds.createNode
 _namespace = cmds.namespace
 _namespaceInfo = cmds.namespaceInfo
 
 _relatedNodeTypes = nodetypes.relatedNodeTypes
 
-_RE_NAMESAPACE_match = re.compile(r'(.*?)([^:]+)$').match
+_RE_NAMESAPACE_match = re.compile(r'(:?.*?):?([^:]+)$').match
 
 
 #------------------------------------------------------------------------------
@@ -63,6 +65,22 @@ class Node_c(CyObject):
         return CyObject.__new__(cls, *args)
 
     @classmethod
+    def relatedNodeTypes(cls):
+        u"""
+        クラスに結び付けられているノードタイプのタプルを得る。
+
+        `.NodeTypes.relatedNodeTypes` をクラスメソッドとして
+        呼び出せるようにしたもの。
+
+        ベーシッククラスのノードタイプは1つだが、
+        検査メソッド付きカスタムクラスの場合は
+        複数タイプへの紐付けも有り得る。
+
+        :rtype: `tuple`
+        """
+        return _relatedNodeTypes(cls)
+
+    @classmethod
     def createNode(cls, **kwargs):
         u"""
         クラスに関連付けられたタイプのノードを生成する。
@@ -78,13 +96,14 @@ class Node_c(CyObject):
             ``_verifyNode`` メソッドの条件を満たすための処理を追加するために
             オーバーライドすることを推奨する。
         """
-        clsname = cls.__name__
-        typs = _relatedNodeTypes(cls)
-        if len(typs) > 1:
-            raise TypeError('multiple nodetypes related for: ' + clsname)
+        typ = _relatedNodeTypes(cls)
+        if len(typ) > 1:
+            raise TypeError('multiple nodetypes related for: ' + cls.__name__)
+        typ = typ[0]
         if 'n' not in kwargs and 'name' not in kwargs:
-            kwargs['n'] = clsname[0].lower() + clsname[1:] + '#'
-        return _createNode(typs[0], **kwargs)
+            x = cls.__name__
+            kwargs['n'] = (typ if typ == x else (x[0].lower() + x[1:])) + '#'
+        return _createNode(typ, **kwargs)
 
     @classmethod
     def newObject(cls, data):
@@ -203,6 +222,14 @@ class Node_c(CyObject):
             None を指定するとクリアする。
         """
         self._CyObject__data['plugcls'] = pcls
+
+    def classification(self):
+        u"""
+        ノードタイプの分類名を得る。
+
+        :rtype: `str`
+        """
+        return _classification(self._CyObject__data['nodetype'])
 
     def type(self):
         u"""
@@ -460,6 +487,15 @@ class Node_c(CyObject):
         """
         return self.mfn().isFromReferencedFile
 
+    # C++: >=2013, Python: >=2014
+    def isTrackingEdits(self):
+        u"""
+        `isFromReferencedFile` との違いがよくわからない。
+
+        :rtype: `bool`
+        """
+        return self.mfn().isTrackingEdits()
+
     def isLocked(self):
         u"""
         ロックされているかどうか。
@@ -514,6 +550,9 @@ class Node_c(CyObject):
         u"""
         DAGパスを含まないノード名を得る。
 
+        得られる名前は、 Maya の相対ネームスペースモードの影響を受ける。
+        常に絶対ネームスペースで得たい場合には `absoluteName` が利用できる。
+
         :param `bool` removeNamespace: ネームスペースを含めない。
         :rtype: `str`
         """
@@ -530,41 +569,30 @@ class Node_c(CyObject):
         """
         return self.mfn_().name()
 
-    def namespace(self, relative=False):
-        u"""
-        ネームスペースを得る。
+    if False and MAYA_VERSION >= (2017,):
+        def absoluteName(self):
+            u"""
+            DAGパスを含まないノード名を絶対ネームスペース表記で得る。
 
-        デフォルトでは、
-        常に : で始まる絶対ネームスペースが得られる。
+            :rtype: `str`
+            """
+            return self.mfn().absoluteName()
 
-        :param `bool` relative:
-            相対ネームスペースを得る。
+    else:
+        def absoluteName(self):
+            u"""
+            DAGパスを含まないノード名を絶対ネームスペース表記で得る。
 
-            Maya の相対ネームスペースモードが ON の場合は
-            カレントネームスペースから、
-            OFF の場合は ルートネームスペースからの
-            相対ネームスペースとなる。
-        :rtype: `str`
-        """
-        # ノード名も mfn.namespace も Maya の相対ネームスペースモードの影響を受けるが、
-        # mfn.namespace 以下のようになっており、一部がノード名の場合と異なるため、
-        # ノード名に合わせた取得方法にしている。
-        # - ルートネームスペースは常に '' が返される（ノード名では : となる）。
-        # - カレントネームスペースは絶対で返される（ノード名では無しになる）。
-        # - カレントの下位にない場合は絶対で返される（ノード名でも同じ）。
-        # - カレントの下位のネームスペースは相対で返される（ノード名でも同じ）。
-        if relative:
-            return _RE_NAMESAPACE_match(self.mfn().name()).group(1)
-        else:
-            ns = self.mfn().namespace
-            if not ns:
-                return ':'
-            elif ns.startswith(':'):
-                return ns
+            :rtype: `str`
+            """
+            name = self.mfn().name()
+            if name.startswith(':'):
+                return name
             elif _namespace(q=True, rel=True):
-                return _namespaceInfo(cur=True, an=True) + ':' + ns
+                x = _namespaceInfo(cur=True, an=True)
+                return (x if x == ':' else (x + ':')) + name
             else:
-                return ':' + ns
+                return ':' + name
 
     u'''
     def mplug(self, name):
@@ -752,6 +780,34 @@ class Node_c(CyObject):
         """
         return self.connections(False, True, **kwargs)
 
+    def sources(self, **kwargs):
+        u"""
+        unitConversionノードをスキップしつつ、入力しているプラグかノードを得る。
+
+        `inputs` に skipConversionNodes=True を指定することと同等であり、
+        その他のオプションは全て指定可能。
+
+        :rtype: `list`
+        """
+        kwargs['skipConversionNodes'] = True
+        return self.connections(True, False, **kwargs)
+
+    sourcesWithConversions = inputs  #: `inputs` の別名（unitConversionノードをスキップせずに、入力しているプラグかノードを得る）。
+
+    def destinations(self, **kwargs):
+        u"""
+        unitConversionノードをスキップしつつ、出力先のプラグかノードのリストを得る。
+
+        `outputs` に skipConversionNodes=True を指定することと同等であり、
+        その他のオプションは全て指定可能。
+
+        :rtype: `list`
+        """
+        kwargs['skipConversionNodes'] = True
+        return self.connections(False, True, **kwargs)
+
+    destinationsWithConversions = outputs  #: `outputs` の別名（unitConversionノードをスキップせずに、出力先のプラグかノードのリストを得る）。
+
     def worldSpacePlugs(self, pcls=None):
         u"""
         ワールド空間出力プラグのリストを得る。
@@ -910,6 +966,24 @@ class Node_c(CyObject):
             shape._CyObject__data['transform'] = _getObjectRef(self).weakref()
         return shape
 
+    if MAYA_VERSION >= (2019,):
+        def affectsAnimation(self):
+            u"""
+            ノードが「必ずアニメーションに影響を与える」と設定されているかどうか。
+
+            通常のノードは False であり、
+            評価グラフの作成プロセスにおいて自動的に判断されるが、
+            :mayanode:`time` や :mayanode:`expression` などの
+            ごく一部のノードでは True となる。
+
+            :rtype: `bool`
+            """
+            return self.mfn().affectsAnimation()
+
+    # NOTE: 以下は非サポート（API のような下層でなければ不要であろう）
+    #   - attributeCount
+    #   - attribute
+    #   - reorderedAttribute
 
 #------------------------------------------------------------------------------
 def _searchShapeCache(cache, key, mnode):

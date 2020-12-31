@@ -1109,6 +1109,7 @@ def _getSel0WithCache(sel):
         try:
             mpath = sel.getDagPath(0)
         except TypeError:
+            mpath = None
             mnode = sel.getDependNode(0)
         else:
             mnode = mpath.node()

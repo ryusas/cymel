@@ -61,18 +61,21 @@ class Shape(nodetypes.parentBasicNodeClass('shape')):
             return super(Shape, cls).createNode(**kwargs)
 
         # 指定された名前、またはクラス名から決まる名前で transform ノードを生成する。
-        clsname = cls.__name__
-        typs = _relatedNodeTypes(cls)
-        if len(typs) > 1:
-            raise TypeError('multiple nodetypes related for: ' + clsname)
-        name = kwargs.pop('name', None) or kwargs.pop('n', None) or (clsname[0].lower() + clsname[1:] + '#')
+        typ = _relatedNodeTypes(cls)
+        if len(typ) > 1:
+            raise TypeError('multiple nodetypes related for: ' + cls.__name__)
+        typ = typ[0]
+        name = kwargs.pop('name', None) or kwargs.pop('n', None)
+        if not name:
+            name = cls.__name__
+            name = (typ if typ == name else (name[0].lower() + name[1:])) + '#'
         name = _createNode(ttype, n=name)
 
         # transform ノードの子としてシェイプを生成する。
         # ノード生成フックを考慮して、名前はリネームでつける。
         kwargs['parent'] = name
         name = _RE_SHAPE_NAME_sub(r'Shape\1', name)
-        return _rename(_createNode(typs[0], **kwargs), name)
+        return _rename(_createNode(typ, **kwargs), name)
 
 nodetypes.registerNodeClass(Shape, 'shape')
 

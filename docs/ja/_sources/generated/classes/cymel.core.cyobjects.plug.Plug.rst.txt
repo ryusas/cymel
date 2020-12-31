@@ -28,16 +28,20 @@ class cymel.core.cyobjects.plug.Plug
         createAnimCurve
         delete
         disconnect
+        isMuted
         iterElements
         iterHierarchy
         layeredPlug
         listEnum
+        lock
+        mute
         pairBlendPlug
         remove
         removeAllElements
         removeElement
         reset
         set
+        setAlias
         setCached
         setCaching
         setChannelBox
@@ -46,6 +50,7 @@ class cymel.core.cyobjects.plug.Plug
         setu
         toggle
         unlock
+        unmute
 
 
 
@@ -68,16 +73,20 @@ class cymel.core.cyobjects.plug.Plug
     .. automethod:: createAnimCurve
     .. automethod:: delete
     .. automethod:: disconnect
+    .. automethod:: isMuted
     .. automethod:: iterElements
     .. automethod:: iterHierarchy
     .. automethod:: layeredPlug
     .. automethod:: listEnum
+    .. automethod:: lock
+    .. automethod:: mute
     .. automethod:: pairBlendPlug
     .. automethod:: remove
     .. automethod:: removeAllElements
     .. automethod:: removeElement
     .. automethod:: reset
     .. automethod:: set
+    .. automethod:: setAlias
     .. automethod:: setCached
     .. automethod:: setCaching
     .. automethod:: setChannelBox
@@ -86,5 +95,6 @@ class cymel.core.cyobjects.plug.Plug
     .. automethod:: setu
     .. automethod:: toggle
     .. automethod:: unlock
+    .. automethod:: unmute
 
 

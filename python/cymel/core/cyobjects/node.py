@@ -4,6 +4,7 @@ u"""
 """
 import uuid
 from ...common import *
+from ...utils.namespace import _wrapNS
 from ..typeregistry import nodetypes, _FIX_SLOTS
 from .node_c import Node_c
 
@@ -12,11 +13,15 @@ __all__ = ['Node']
 _delete = cmds.delete
 _lockNode = cmds.lockNode
 _ls = cmds.ls
+_namespace = cmds.namespace
+_namespaceInfo = cmds.namespaceInfo
 _rename = cmds.rename
 _addAttr = cmds.addAttr
 _setAttr = cmds.setAttr
 _connectAttr = cmds.connectAttr
 _listAttr = cmds.listAttr
+
+_RE_NAMESAPACE_match = re.compile(r'(:?.*?):?([^:]+)$').match
 
 
 #------------------------------------------------------------------------------
@@ -33,13 +38,89 @@ class Node(Node_c):
         """
         _delete(self.name())
 
-    def lock(self, val=True):
+    def setLocked(self, val=True):
         u"""
         ロック、又はアンロックする。
 
         :param `bool` val: True だとロック、 False だとアンロック。
         """
         _lockNode(self.name(), l=val)
+
+    lock = setLocked  #: `setLocked` の別名。
+
+    def unlock(self):
+        u"""
+        アンロックする。
+        """
+        _lockNode(self.name(), l=False)
+
+    if MAYA_VERSION >= (2017,):
+        def namespace(self):
+            u"""
+            ネームスペースを得る。
+
+            :rtype: `.Namespace`
+            """
+            #if relative:
+            #    return _RE_NAMESAPACE_match(self.mfn().name()).group(1)
+            #else:
+            return _wrapNS(_RE_NAMESAPACE_match(self.mfn().absoluteName()).group(1))
+
+    else:
+        def namespace(self):
+            u"""
+            ネームスペースを得る。
+
+            :rtype: `.Namespace`
+            """
+            # 相対ネームスペースモードが ON のとき、
+            # mfn.name() も mfn.namespace も Maya のカレントネームスペースの
+            # 影響を受けるが、 mfn.namespace は以下のようになっており、
+            # 一部が mfn.name() の場合と異なるため、mfn.name() に合わせた取得方法にしている。
+            #
+            # - ルートネームスペースは常に '' が返されるが、ノード名では : となる。
+            # - カレントネームスペースは絶対で返されるが、ノード名では無しになる。
+            # - カレントの下位にない場合は絶対で返される（ノード名でも同じ）。
+            # - カレントの下位のネームスペースは相対で返される（ノード名でも同じ）。
+            #if relative:
+            #    return _RE_NAMESAPACE_match(self.mfn().name()).group(1)
+            #else:
+            ns = self.mfn().namespace
+            if not ns:
+                return _wrapNS(':')
+            elif ns.startswith(':'):
+                return _wrapNS(ns)
+            elif _namespace(q=True, rel=True):
+                x = _namespaceInfo(cur=True, an=True)
+                return _wrapNS((x if x == ':' else (x + ':')) + ns)
+            else:
+                return _wrapNS(':' + ns)
+
+    def setNamespace(self, ns, ignoreShape=False):
+        u"""
+        ネームスペースをセットする。
+
+        :param `str` ns: ネームスペース。
+        :param `bool` ignoreShape: シェイプの名前は維持する。
+        """
+        name = self.name()
+
+        # 存在しないネームスペースが指定された場合は、
+        # 絶対ネームスペース指定でないとエラーになってしまうため、
+        # ここで絶対化する。
+        if not ns.startswith(':'):
+            if _namespace(q=True, rel=True):
+                x = _namespaceInfo(cur=True, an=True)
+                ns = (x if x == ':' else (x + ':')) + ns
+            else:
+                ns = ':' + ns
+        if not ns.endswith(':'):
+            ns = ns + ':'
+
+        return _rename(
+            name,
+            ns + _RE_NAMESAPACE_match(name.split('|')[-1]).group(2),
+            ignoreShape=ignoreShape)
 
     def rename(self, name, ignoreShape=False):
         u"""
@@ -410,6 +491,21 @@ class Node(Node_c):
         """
         p = self.plug_
         return [p(x) for x in _listAttr(self.name(), **kwargs)]
+
+    listAttr = plugs  #: `plugs` の別名。
+
+    def aliases(self):
+        u"""
+        別名が定義されているアトリビュートのリストを得る。
+
+        別名と `.Plug` のペアのリストが得られる。
+
+        :rtype: `list`
+        """
+        p = self.plug_
+        return [(x, p(y)) for x, y in self.mfn().getAliasList()]
+
+    listAliases = aliases  #: `aliases` の別名。
 
 nodetypes.registerNodeClass(Node, 'node')
 

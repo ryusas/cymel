@@ -18,9 +18,11 @@ class cymel.core.cyobjects.dagnode.DagNode
 
     .. autosummary::
     
+        hide
         iterBreadthFirst
         iterDepthFirst
         setParent
+        show
 
 
 
@@ -38,8 +40,10 @@ class cymel.core.cyobjects.dagnode.DagNode
     .. rubric:: Methods Details:
 
     
+    .. automethod:: hide
     .. automethod:: iterBreadthFirst
     .. automethod:: iterDepthFirst
     .. automethod:: setParent
+    .. automethod:: show
 
 

@@ -6,7 +6,7 @@ from ..common import *
 from .utils import correctNodeNameNS
 from ..pyutils import iterTreeBreadthFirst, iterTreeDepthFirst
 
-__all__ = ['Namespace']
+__all__ = ['Namespace', 'NS']
 
 _str_new = UNICODE.__new__
 _str_add = UNICODE.__add__
@@ -36,6 +36,19 @@ class Namespace(UNICODE):
     それがMayaに実際に存在するかどうかにかかわらず、
     インスタンスは生成できる。
     そして、カレントにする際などに存在しなければ生成される。
+
+    .. warning::
+        カレントネームスペース設定時、
+        Mayaの相対ネームスペースモードの設定による挙動の違いには注意が必要。
+
+        - ノード生成は、相対ネームスペースモード設定にかかわらず、
+          カレントネームスペースでの命名となる。
+
+        - ノード名の評価や指定は、相対ネームスペースモード設定が有効でないと、
+          カレントネームスペース指定の影響はない。
+
+        本クラスにおけるネームスペースのハンドリングは、ノード生成ではないため、
+        相対名が有効に機能するのは相対ネームスペースモードが有効な場合のみである。
     """
     __slots__ = ('_lastcur',)
 
@@ -74,6 +87,84 @@ class Namespace(UNICODE):
     def __gt__(self, ns):
         return _str_gt(self, _correctNS(ns))
 
+    @staticmethod
+    def relativeMode():
+        u"""
+        相対ネームスペースモードが有効かどうか。
+
+        :rtype: `bool`
+        """
+        return _namespace(q=True, rel=True)
+
+    @staticmethod
+    def setRelativeMode(state):
+        u"""
+        相対ネームスペースモードをセットする。
+
+        :param `bool` state: 有効か無効か。
+        """
+        _namespace(rel=state)
+
+    @classmethod
+    def current(cls):
+        u"""
+        カレントネームスペースを得る。
+
+        :rtype: `Namespace`
+        """
+        return _str_new(cls, _namespaceInfo(cur=True, an=True))
+
+    def isCurrent(self):
+        u"""
+        ネームスペースがカレントかどうか。
+        """
+        return _str_eq(self, _namespaceInfo(cur=True, an=True))
+
+    def setCurrent(self):
+        u"""
+        ネームスペースをカレントにする。存在しない場合は追加される。
+        """
+        _setCurrentNS(self)
+
+    def name(self):
+        u"""
+        Maya の相対ネームスペースモードの影響のもと、相対名を得る。
+
+        相対ネームスペースモードが ON の場合はカレントネームスペースから、
+        OFF の場合はルートネームスペースからの相対名となる。
+
+        :rtype: `str`
+        """
+        if _namespace(q=True, rel=True):
+            return self.relative()
+        return self[1:]
+
+    def absolute(self):
+        u"""
+        カレント設定に依存しない絶対名であり、このネームスペースの文字列そのもの。
+
+        :rtype: `str`
+        """
+        return UNICODE(self)
+
+    def relative(self):
+        u"""
+        カレントネームスペースからの相対名を得る。
+
+        Mayaの相対ネームスペースモードの状態にかかわらず、
+        常に、カレントネームスペースからの相対名が得られる。
+
+        :rtype: `str`
+        """
+        cur = _namespaceInfo(cur=True, an=True)
+        if _str_eq(self, cur):
+            return ''
+        if cur != ':':
+            cur += ':'
+        if self.startswith(cur):
+            return self[len(cur):]
+        return UNICODE(self)
+
     def exists(self):
         u"""
         ネームスペースが実際に存在するかどうか。
@@ -87,18 +178,6 @@ class Namespace(UNICODE):
         ネームスペースを生成する。
         """
         _namespace(add=self)
-
-    def setCurrent(self):
-        u"""
-        ネームスペースをカレントにする。存在しない場合は追加される。
-        """
-        _setCurrentNS(self)
-
-    def isCurrent(self):
-        u"""
-        ネームスペースがカレントかどうか。
-        """
-        return _str_eq(self, _namespaceInfo(cur=True, an=True))
 
     def parent(self):
         u"""
@@ -157,14 +236,7 @@ class Namespace(UNICODE):
         Namespace.ls = _Namespace_ls
         return self.ls(pattern, **kwargs)
 
-    @classmethod
-    def current(cls):
-        u"""
-        カレントネームスペースを得る。
-
-        :rtype: `Namespace`
-        """
-        return _str_new(cls, _namespaceInfo(cur=True, an=True))
+NS = Namespace  #: `Namespace` の別名。
 
 
 #------------------------------------------------------------------------------
@@ -173,18 +245,28 @@ def _Namespace_ls(self, pattern='*', **kwargs):
 
 
 def _correctNS(ns):
+    u"""
+    ネームスペース文字列を補正する。
+
+    - 使用できない文字を修正、末尾の : を除去。
+    - Mayaの相対モード設定に従い、で始まる絶対名に補正。
+    """
     ns = correctNodeNameNS(ns)
     if ns.startswith(':'):
         return ns
-    elif ns:
-        c = _namespaceInfo(cur=True, an=True)
+    c = _namespaceInfo(cur=True, an=True) if _namespace(q=True, rel=True) else ':'
+    if ns:
         return (c if c == ':' else (c + ':')) + ns
-    else:
-        return _namespaceInfo(cur=True, an=True)
+    return c
 
 
 def _setCurrentNS(ns):
+    u"""
+    カレントネームスペースをセットする。
+    """
     if not _namespace(ex=ns):
         _namespace(add=ns)
     _namespace(set=ns)
+
+_wrapNS = partial(_str_new, Namespace)
 

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.core.cyobjects.dagnode.DagNode &#8212; cymel 0.0.0 ドキュメント</title>
+    <title>class cymel.core.cyobjects.dagnode.DagNode &#8212; cymel 0.1.2020123100 ドキュメント</title>
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.dagnode.html" title="cymel.core.cyobjects.dagnode"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.1.2020123100 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.dagnode.html" accesskey="U">cymel.core.cyobjects.dagnode</a> &#187;</li> 
       </ul>
@@ -99,14 +99,20 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst" title="cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterBreadthFirst</span></code></a>([shapes,&nbsp;intermediates,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.hide" title="cymel.core.cyobjects.dagnode.DagNode.hide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hide</span></code></a>()</td>
+<td>visibility アトリビュートを False にする。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst" title="cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterBreadthFirst</span></code></a>([shapes,&nbsp;intermediates,&nbsp;...])</td>
 <td>DAGノードツリーを幅優先反復する。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst" title="cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterDepthFirst</span></code></a>([shapes,&nbsp;intermediates,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst" title="cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterDepthFirst</span></code></a>([shapes,&nbsp;intermediates,&nbsp;...])</td>
 <td>DAGノードツリーを深さ優先反復する。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.setParent" title="cymel.core.cyobjects.dagnode.DagNode.setParent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParent</span></code></a>([parent,&nbsp;r,&nbsp;add])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.setParent" title="cymel.core.cyobjects.dagnode.DagNode.setParent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParent</span></code></a>([parent,&nbsp;r,&nbsp;add])</td>
 <td>親ノードを変更する。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.show" title="cymel.core.cyobjects.dagnode.DagNode.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>()</td>
+<td>visibility アトリビュートを True にする。</td>
 </tr>
 </tbody>
 </table>
@@ -118,6 +124,12 @@
 </dd></dl>
 
 <p class="rubric">Methods Details:</p>
+<dl class="method">
+<dt id="cymel.core.cyobjects.dagnode.DagNode.hide">
+<code class="descname">hide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode.DagNode.hide" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>visibility アトリビュートを False にする。</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst">
 <code class="descname">iterBreadthFirst</code><span class="sig-paren">(</span><em>shapes=False</em>, <em>intermediates=False</em>, <em>underWorld=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst" title="この定義へのパーマリンク">¶</a></dt>
@@ -182,6 +194,12 @@
 </table>
 </dd></dl>
 
+<dl class="method">
+<dt id="cymel.core.cyobjects.dagnode.DagNode.show">
+<code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode.DagNode.show" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>visibility アトリビュートを True にする。</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -207,7 +225,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.dagnode.html" title="cymel.core.cyobjects.dagnode"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.0.0 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.1.2020123100 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.dagnode.html" >cymel.core.cyobjects.dagnode</a> &#187;</li> 
       </ul>
