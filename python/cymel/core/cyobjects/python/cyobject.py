@@ -10,6 +10,7 @@ from ..typeregistry import nodetypes
 from ._api2mplug import (
     _1_mpath, _1_mnode,
     makePlugTypeInfo,
+    toNonNetworkedMPlug,
 )
 import maya.api.OpenMaya as _api2
 import maya.OpenMaya as _api1
@@ -67,6 +68,11 @@ class CyObject(object):
     ラッパークラスは、大きく分けて
     `.Node` と `.Plug` とがある。
 
+    `CyObject` コンストラクタに、
+    シーン中の既存ノードやプラグを特定するための名前や
+    Python API 2.0 オブジェクトを指定することで、
+    適切なクラスのインスタンスを得ることができる。
+
     ノードクラスはノードタイプごとに用意されているか自動生成される。
     プラグクラスは、システムで用意しているのは1種類だけである。
     いずれも、クラスを継承してカスタムクラスを作ることができる。
@@ -110,7 +116,8 @@ class CyObject(object):
         # ソースが API2 MPlug の場合。
         if isinstance(src, _2_MPlug):
             if src.isNetworked:
-                raise ValueError('Networked plug is specified')
+                #raise ValueError('Networked plug is specified')
+                src = toNonNetworkedMPlug(src)
             return _plugClsObjByMPlug(cls, src, src)
 
         # その他の場合、文字列として評価する。
@@ -349,12 +356,14 @@ def cyObjects(val):
     """
     if not val:
         return []
-    elif isinstance(val, BASESTR):
+    elif isinstance(val, _SINGLE_SRCTYPES):
         return [O(val)]
     else:
         return [O(v) for v in val]
 
 Os = cyObjects  #: `cyObjects` の別名。
+
+_SINGLE_SRCTYPES = (BASESTR, _2_MObject, _2_MDagPath, _2_MPlug)
 
 
 #------------------------------------------------------------------------------
