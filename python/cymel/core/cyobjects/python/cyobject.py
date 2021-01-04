@@ -556,10 +556,15 @@ def _newNodePlug(pcls, node, mplug, typeinfo=None, typename=None):
     if cache:
         plug = cache.get(key)
         if plug:
-            return plug
-        for k in cache:
-            data = cache[k]._CyObject__data
-            break
+            if plug.isValid():
+                return plug
+            # キャッシュ生成後に、アトリビュートが削除され、同じ名前で追加し直された場合など。
+            cache.clear()
+            data = _makePlugData(_getObjectRef(node), mplug, typeinfo, typename, attrname)
+        else:
+            for k in cache:
+                data = cache[k]._CyObject__data
+                break
     else:
         cache = {}
         node._Node_c__plugCache[attrname] = cache
@@ -1031,40 +1036,51 @@ class ModuleForSel(types.ModuleType):
             その他に :mayacmd:`ls` コマンドのオプションを指定可能。
         :rtype: `list`
         """
-        if kwargs:
-            return _O_ls(sel, **kwargs) if sel else _O_ls(**kwargs)
-
-        if not sel:
-            objMap = _objMapFor_getObjectBySelIdx()
-            sel = _2_getActiveSelectionList()
-            return [_getObjectBySelIdx(sel, i, objMap) for i in range(sel.length())]
-
+        # 単一CyObject指定の場合、kwargs条件がマッチすればそれを返す。
         if isinstance(sel, CyObject):
+            if kwargs and not _ls(sel, **kwargs):
+                return []
             return [sel]
 
-        objMap = _objMapFor_getObjectBySelIdx()
+        # sel指定無しの場合は、カレントセレクションから。
+        if not sel:
+            if kwargs:
+                kwargs['sl'] = True
+                sel = _strsToSelList(_ls(**kwargs))
+            else:
+                sel = _2_getActiveSelectionList()
+            objMap = _objMapFor_getObjectBySelIdx()
 
-        if isinstance(sel, BASESTR):
-            sel = _2_getSelectionListByName(sel)
-            return [_getObjectBySelIdx(sel, i, objMap) for i in range(sel.length())]
+        # 単一文字列の指定の場合。
+        elif isinstance(sel, BASESTR):
+            if kwargs:
+                sel = _strsToSelList(_ls(sel, **kwargs))
+            else:
+                sel = _2_getSelectionListByName(sel)
+            objMap = _objMapFor_getObjectBySelIdx()
 
-        if isinstance(sel, _2_MSelectionList):
-            return [_getObjectBySelIdx(sel, i, objMap) for i in range(sel.length())]
+        # MSelectionList指定の場合。
+        elif isinstance(sel, _2_MSelectionList):
+            if kwargs:
+                sel = _strsToSelList(_ls(sel.getSelectionStrings(), **kwargs))
+            objMap = _objMapFor_getObjectBySelIdx()
 
-        sel = list(sel)
-        objs = [x for x in sel if isinstance(x, CyObject)]
-        if len(objs) == len(sel):
-            return objs
-        objs = dict([(x.name(), x) for x in objs])
+        # その他（シーケンスとして評価）の場合、そこに含まれる CyObject を優先して返す。
+        else:
+            srcs = list(sel)
+            res = [x for x in srcs if isinstance(x, CyObject)]
+            if len(res) == len(srcs):
+                return res
 
-        mayasel = _2_getSelectionListByName(str(sel[0]))
-        for x in sel[1:]:
-            mayasel.merge(_2_getSelectionListByName(str(x)))
+            objMap = _objMapFor_getObjectBySelIdx()
+            for x in res:
+                objMap[x.name()] = x
 
-        res = [_getObjectBySelIdx(mayasel, i, objMap) for i in range(mayasel.length())]
-        if objs:
-            return [objs.get(x.name_(), x) for x in res]
-        return res
+            sel = _2_getSelectionListByName(str(srcs[0]))
+            for x in srcs[1:]:
+                sel.merge(_2_getSelectionListByName(str(x)))
+
+        return [_getObjectBySelIdx(sel, i, objMap) for i in range(sel.length())]
 
 
 #------------------------------------------------------------------------------
@@ -1172,6 +1188,13 @@ def _objMapFor_getObjectBySelIdx():
         else:
             return {_LAST_SEL.name_(): (_LAST_SEL, None)}
     return {}
+
+
+def _strsToSelList(strs):
+    sel = _2_getSelectionListByName(strs[0])
+    for s in strs[1:]:
+        sel.merge(_2_getSelectionListByName(s))
+    return sel
 
 
 #------------------------------------------------------------------------------
