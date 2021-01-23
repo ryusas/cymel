@@ -2,11 +2,12 @@
 u"""
 :mayanode:`node` ノードタイプラッパークラス。
 """
-import uuid
+from uuid import uuid4 as _uuid4, UUID as _UUID
 from ...common import *
 from ...utils.namespace import _wrapNS
 from ..typeregistry import nodetypes, _FIX_SLOTS
 from .node_c import Node_c
+from .cyobject import CyObject, UUID_ATTR_NAME
 
 __all__ = ['Node']
 
@@ -18,10 +19,14 @@ _namespaceInfo = cmds.namespaceInfo
 _rename = cmds.rename
 _addAttr = cmds.addAttr
 _setAttr = cmds.setAttr
+_deleteAttr = cmds.deleteAttr
 _connectAttr = cmds.connectAttr
 _listAttr = cmds.listAttr
+_referenceQuery = cmds.referenceQuery
 
 _RE_NAMESAPACE_match = re.compile(r'(:?.*?):?([^:]+)$').match
+
+_DOT_UUID_ATTR_NAME = '.' + UUID_ATTR_NAME
 
 
 #------------------------------------------------------------------------------
@@ -131,18 +136,86 @@ class Node(Node_c):
         """
         return _rename(self.name(), name, ignoreShape=ignoreShape)
 
-    def uuid(self, new=False):
-        u"""
-        UUID を得る。
-
-        :param `bool` new:
-            既存の ID 破棄して新しい ID を割り当てる。
-        :rtype: `str`
-        """
+    def _py_uuid(self, new=False, py=False):
+        if not self.hasAttr(UUID_ATTR_NAME):
+            self.addAttr(UUID_ATTR_NAME, 'string')
+            new = True
+        plug = self.plug_(UUID_ATTR_NAME)
         if new:
-            return _rename(self.name(), str(uuid.uuid4()), uuid=True)  # 大文字化される。
+            val = _uuid4()
+            plug.set(str(val))
+            return val
         else:
-            return self._uuid()
+            return _UUID(plug.get())
+
+    def _py_assignUUID(self, val, py=False):
+        if val:
+            if not self.hasAttr(UUID_ATTR_NAME):
+                self.addAttr(UUID_ATTR_NAME, 'string')
+            self.plug_(UUID_ATTR_NAME).set(str(val))
+        elif self.hasAttr(UUID_ATTR_NAME):
+            _deleteAttr(self.name_() + _DOT_UUID_ATTR_NAME)
+
+    if MAYA_VERSION < (2016,):
+        uuid = _py_uuid
+        assignUUID = _py_assignUUID
+
+    else:
+        def uuid(self, new=False, py=False):
+            u"""
+            UUID を得る。
+
+            :param `bool` new:
+                既存の ID 破棄して新しい ID を割り当てる。
+            :param `bool` py:
+                Maya 標準機能ではなく Python の機能を使って生成する
+                UUID は uuid という名前のアトリビュートに保存される。
+                2016 未満では常に True 扱いとなる。
+
+                2016 以降では、
+                それ以前に作られたファイルをリファレンスしていると
+                シーンを開くたびにUUIDが変わってしまう問題を
+                回避する目的で利用できる。
+            :rtype: `UUID`
+
+            .. note::
+                指定UUIDをアサインするには `assignUUID` 、
+                UUIDからノードを得るには `.CyObject.fromUUID` を利用する。
+            """
+            if py:
+                return self._py_uuid(new)
+            elif new:
+                val = _uuid4()
+                _rename(self.name(), str(val), uuid=True)
+                return val
+            else:
+                return self._uuid()
+
+        def assignUUID(self, val, py=False):
+            u"""
+            UUID をアサインする。
+
+            :param `UUID` val:
+                アサインする UUID を指定する。
+                py=True の場合は None を指定して消去することもできる。
+            :param `bool` py:
+                Maya 標準機能ではなく Python の機能を使って生成する
+                UUID は uuid という名前のアトリビュートに保存される。
+                2016 未満では常に True 扱いとなる。
+
+                2016 以降では、
+                それ以前に作られたファイルをリファレンスしていると
+                シーンを開くたびにUUIDが変わってしまう問題を
+                回避する目的で利用できる。
+            """
+            if py:
+                self._py_assignUUID(val)
+            else:
+                _rename(self.name(), str(val), uuid=True)
+
+    #def referenceNode(self):
+    #    if self.isFromReferencedFile():
+    #        return CyObject(_referenceQuery(self.name_(), rfn=True))
 
     def addAttr(
         self, longName='', type=None, subType=None,

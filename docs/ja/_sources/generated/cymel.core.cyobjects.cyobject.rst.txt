@@ -56,6 +56,7 @@ cymel.core.cyobjects.cyobject
     .. autodata:: BIT_DAGNODE
     .. autodata:: BIT_SHAPE
     .. autodata:: BIT_TRANSFORM
+    .. autodata:: UUID_ATTR_NAME
 
 
 

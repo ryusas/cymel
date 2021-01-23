@@ -114,37 +114,40 @@ Python API 2.0 オブジェクトを指定することで、
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a>()</td>
 <td>内部ハンドルの有効性チェック。無効なら <a class="reference internal" href="../cymel.core.cyobjects.cyobject.html#cymel.core.cyobjects.cyobject.CymelInvalidHandle" title="cymel.core.cyobjects.cyobject.CymelInvalidHandle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CymelInvalidHandle</span></code></a> エラーとなる。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.fromUUID" title="cymel.core.cyobjects.cyobject.CyObject.fromUUID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromUUID</span></code></a>(val)</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.checktype" title="cymel.core.cyobjects.cyobject.CyObject.checktype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checktype</span></code></a>(obj)</td>
+<td>指定したオブジェクトがクラスにマッチするかチェックする。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.fromUUID" title="cymel.core.cyobjects.cyobject.CyObject.fromUUID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromUUID</span></code></a>(val[,&nbsp;candidates,&nbsp;py])</td>
 <td>UUID からノードリストを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.globalPlugClass" title="cymel.core.cyobjects.cyobject.CyObject.globalPlugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalPlugClass</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.globalPlugClass" title="cymel.core.cyobjects.cyobject.CyObject.globalPlugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalPlugClass</span></code></a>()</td>
 <td>グローバル設定のプラグクラスを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.internalData" title="cymel.core.cyobjects.cyobject.CyObject.internalData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">internalData</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.internalData" title="cymel.core.cyobjects.cyobject.CyObject.internalData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">internalData</span></code></a>()</td>
 <td>内部データを返す。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.isAlive" title="cymel.core.cyobjects.cyobject.CyObject.isAlive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAlive</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.isAlive" title="cymel.core.cyobjects.cyobject.CyObject.isAlive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAlive</span></code></a>()</td>
 <td>内部ハンドルがメモリ上に存在しているかどうかを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.isValid" title="cymel.core.cyobjects.cyobject.CyObject.isValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isValid</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.isValid" title="cymel.core.cyobjects.cyobject.CyObject.isValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isValid</span></code></a>()</td>
 <td>内部ハンドルが正常な状態かどうかを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.ls" title="cymel.core.cyobjects.cyobject.CyObject.ls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ls</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.ls" title="cymel.core.cyobjects.cyobject.CyObject.ls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ls</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td><a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/ls.html">ls</a> コマンドの結果をクラスに適合するものに限定してオブジェクトとして得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.name" title="cymel.core.cyobjects.cyobject.CyObject.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.name" title="cymel.core.cyobjects.cyobject.CyObject.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a>()</td>
 <td>オブジェクトのユニーク名を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.name_" title="cymel.core.cyobjects.cyobject.CyObject.name_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name_</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.name_" title="cymel.core.cyobjects.cyobject.CyObject.name_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name_</span></code></a>()</td>
 <td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a> を省略して、オブジェクトのユニーク名を得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.newObject" title="cymel.core.cyobjects.cyobject.CyObject.newObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">newObject</span></code></a>(data)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.newObject" title="cymel.core.cyobjects.cyobject.CyObject.newObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">newObject</span></code></a>(data)</td>
 <td>内部データとともにインスタンスを生成する。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.node" title="cymel.core.cyobjects.cyobject.CyObject.node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.node" title="cymel.core.cyobjects.cyobject.CyObject.node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code></a>()</td>
 <td>ノードを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass" title="cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGlobalPlugClass</span></code></a>([pcls])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass" title="cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGlobalPlugClass</span></code></a>([pcls])</td>
 <td>グローバル設定のプラグクラスをセットする。</td>
 </tr>
 </tbody>
@@ -164,17 +167,48 @@ Python API 2.0 オブジェクトを指定することで、
 </dd></dl>
 
 <dl class="classmethod">
+<dt id="cymel.core.cyobjects.cyobject.CyObject.checktype">
+<em class="property">classmethod </em><code class="descname">checktype</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.checktype" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定したオブジェクトがクラスにマッチするかチェックする。</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> 派生オブジェクトを指定した場合、
+マッチすればそれ自身、
+マッチしない場合は None が返される。</p>
+<p>それ以外の値（文字列や Python API 2.0 オブジェクトなど
+<a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> コンストラクタに指定可能なもの）を指定した場合、
+マッチすれば適切な型の <a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> 派生オブジェクト、
+マッチしない場合は None が返される。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>obj</strong> -- チェックするオブジェクト。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> or None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
 <dt id="cymel.core.cyobjects.cyobject.CyObject.fromUUID">
-<em class="property">classmethod </em><code class="descname">fromUUID</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.fromUUID" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">fromUUID</code><span class="sig-paren">(</span><em>val</em>, <em>candidates=()</em>, <em>py=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.fromUUID" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>UUID からノードリストを得る。</p>
 <p>重複も起こり得るので、戻り値はリストである。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) -- 単一のUUIDかそのリスト。</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>val</strong> (<em>UUID</em>) -- 単一の UUID かそのリスト。
+個々の UUID の型は <code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code> か <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> を指定できる。</li>
+<li><strong>candidates</strong> (<em>iterable</em>) -- py=True の場合の候補を事前に絞りたい場合に指定する。</li>
+<li><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- Maya 標準機能ではなく uuid というアトリビュートに保存されているものから得る。
+2016 未満では常に True 扱いとなる。</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></td>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</td>
 </tr>
 </tbody>
 </table>

@@ -4,6 +4,7 @@ Mayaラッパーオブジェクトの抽象基底クラス。
 """
 import sys
 import types
+from uuid import UUID as _UUID
 from ...common import *
 from ..typeinfo import isDerivedNodeType as _isDerivedNodeType
 from ..typeregistry import nodetypes
@@ -20,7 +21,10 @@ __all__ = [
     'CyObject', 'O',
     'cyObjects', 'Os',
     'ModuleForSel',
+    'UUID_ATTR_NAME',
 ]
+
+UUID_ATTR_NAME = 'uuid'  #: Maya標準ではなくPython機能で生成するUUIDを保持するアトリビュート。
 
 _MFn = _api2.MFn
 _2_MObject = _api2.MObject
@@ -318,19 +322,81 @@ class CyObject(object):
         else:
             return [_getObjectBySelIdx(sel, i, objMap) for i in range(num)]
 
-    if MAYA_VERSION >= (2016,):
+    @classmethod
+    def checktype(cls, obj):
+        u"""
+        指定したオブジェクトがクラスにマッチするかチェックする。
+
+        `CyObject` 派生オブジェクトを指定した場合、
+        マッチすればそれ自身、
+        マッチしない場合は None が返される。
+
+        それ以外の値（文字列や Python API 2.0 オブジェクトなど
+        `CyObject` コンストラクタに指定可能なもの）を指定した場合、
+        マッチすれば適切な型の `CyObject` 派生オブジェクト、
+        マッチしない場合は None が返される。
+
+        :param obj: チェックするオブジェクト。
+        :rtype: `CyObject` or None
+        """
+        if not isinstance(obj, CyObject):
+            try:
+                obj = CyObject(obj)
+            except:
+                return
+        if isinstance(obj, cls):
+            return obj
+
+    @classmethod
+    def _py_fromUUID(cls, val, candidates=EMPTY_TUPLE, py=False):
+        if candidates:
+            chk = cls.checktype
+            objs = [chk(x) for x in candidates]
+            objs = [x for x in candidates if x]
+        else:
+            objs = cls.ls()
+
+        if isinstance(val, BASESTR):
+            val = _UUID(val)
+        elif isinstance(val, Iterable):
+            uuids = set([(x if isinstance(x, _UUID) else _UUID(x)) for x in val])
+            return [x for x in objs if x.hasAttr(UUID_ATTR_NAME) and _UUID(x.plug_(UUID_ATTR_NAME).get()) in uuids]
+        return [x for x in objs if x.hasAttr(UUID_ATTR_NAME) and val == _UUID(x.plug_(UUID_ATTR_NAME).get())]
+
+    if MAYA_VERSION < (2016,):
+        fromUUID = _py_fromUUID
+
+    else:
         @classmethod
-        def fromUUID(cls, val):
+        def fromUUID(cls, val, candidates=EMPTY_TUPLE, py=False):
             u"""
             UUID からノードリストを得る。
 
             重複も起こり得るので、戻り値はリストである。
 
-            :param `str` val:
-                単一のUUIDかそのリスト。
+            :param `UUID` val:
+                単一の UUID かそのリスト。
+                個々の UUID の型は `UUID` か `str` を指定できる。
+            :param `iterable` candidates:
+                py=True の場合の候補を事前に絞りたい場合に指定する。
+            :param `bool` py:
+                Maya 標準機能ではなく uuid というアトリビュートに保存されているものから得る。
+                2016 未満では常に True 扱いとなる。
             :rtype: `list`
             """
-            return [cls(x) for x in (_ls(val) or EMPTY_TUPLE)]
+            if py:
+                return cls._py_fromUUID(val, candidates)
+            elif isinstance(val, BASESTR):
+                return cls.ls(val)
+            elif isinstance(val, Iterable):
+                return cls.ls([str(x) for x in val])
+            else:
+                return cls.ls(str(val))
+            # NOTE:
+            #   MayaObject() にそのまま指定できるようにしたいと考えたが、
+            #   py オプションをどうするかという問題と、
+            #   MSelectionList.add() での MUuid 指定は C++ や API1 では可能だが
+            #   API2 ではサポートされていないため、保留にしている。
 
 _defaultPlugCls = None  #: Plug が import 後にセットされる。
 

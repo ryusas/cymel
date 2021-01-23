@@ -19,6 +19,7 @@ class cymel.core.cyobjects.cyobject.CyObject
     .. autosummary::
     
         checkValid
+        checktype
         fromUUID
         globalPlugClass
         internalData
@@ -48,6 +49,7 @@ class cymel.core.cyobjects.cyobject.CyObject
 
     
     .. automethod:: checkValid
+    .. automethod:: checktype
     .. automethod:: fromUUID
     .. automethod:: globalPlugClass
     .. automethod:: internalData

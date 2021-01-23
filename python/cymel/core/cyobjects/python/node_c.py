@@ -2,6 +2,7 @@
 u"""
 `.Node` クラスでサポートする機能の中核。
 """
+from uuid import UUID as _UUID
 from ...common import *
 from ..typeinfo import isDerivedNodeType as _isDerivedNodeType
 from ..typeregistry import nodetypes
@@ -542,9 +543,9 @@ class Node_c(CyObject):
             u"""
             UUID を得る。
 
-            :rtype: `str`
+            :rtype: `UUID`
             """
-            return str(self.mfn().uuid())
+            return _UUID(str(self.mfn().uuid()))
 
     def nodeName(self, removeNamespace=False):
         u"""
@@ -984,6 +985,7 @@ class Node_c(CyObject):
     #   - attributeCount
     #   - attribute
     #   - reorderedAttribute
+
 
 #------------------------------------------------------------------------------
 def _searchShapeCache(cache, key, mnode):

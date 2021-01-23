@@ -20,6 +20,7 @@ class cymel.core.cyobjects.node.Node
     
         addAttr
         aliases
+        assignUUID
         delete
         listAliases
         listAttr
@@ -45,6 +46,7 @@ class cymel.core.cyobjects.node.Node
     
     .. automethod:: addAttr
     .. automethod:: aliases
+    .. automethod:: assignUUID
     .. automethod:: delete
     .. automethod:: listAliases
     .. automethod:: listAttr
