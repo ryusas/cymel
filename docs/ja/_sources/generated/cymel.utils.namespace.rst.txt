@@ -12,6 +12,7 @@ cymel.utils.namespace
         :nosignatures:
     
         Namespace
+        RelativeNamespace
 
 
 
@@ -31,6 +32,7 @@ cymel.utils.namespace
 
     
     .. autodata:: NS
+    .. autodata:: RelativeNS
 
 
 

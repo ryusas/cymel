@@ -40,6 +40,7 @@ CyObjects
     cymel.core.cyobjects.objectref
     cymel.core.cyobjects.plug
     cymel.core.cyobjects.plug_c
+    cymel.core.cyobjects.reference
     cymel.core.cyobjects.shape
     cymel.core.cyobjects.transform
     cymel.core.cyobjects.transform_c

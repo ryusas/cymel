@@ -4,7 +4,7 @@ u"""
 """
 from uuid import uuid4 as _uuid4, UUID as _UUID
 from ...common import *
-from ...utils.namespace import _wrapNS
+from ...utils.namespace import _wrapNS, _mayaNS
 from ..typeregistry import nodetypes, _FIX_SLOTS
 from .node_c import Node_c
 from .cyobject import CyObject, UUID_ATTR_NAME
@@ -66,9 +66,6 @@ class Node(Node_c):
 
             :rtype: `.Namespace`
             """
-            #if relative:
-            #    return _RE_NAMESAPACE_match(self.mfn().name()).group(1)
-            #else:
             return _wrapNS(_RE_NAMESAPACE_match(self.mfn().absoluteName()).group(1))
 
     else:
@@ -78,28 +75,7 @@ class Node(Node_c):
 
             :rtype: `.Namespace`
             """
-            # 相対ネームスペースモードが ON のとき、
-            # mfn.name() も mfn.namespace も Maya のカレントネームスペースの
-            # 影響を受けるが、 mfn.namespace は以下のようになっており、
-            # 一部が mfn.name() の場合と異なるため、mfn.name() に合わせた取得方法にしている。
-            #
-            # - ルートネームスペースは常に '' が返されるが、ノード名では : となる。
-            # - カレントネームスペースは絶対で返されるが、ノード名では無しになる。
-            # - カレントの下位にない場合は絶対で返される（ノード名でも同じ）。
-            # - カレントの下位のネームスペースは相対で返される（ノード名でも同じ）。
-            #if relative:
-            #    return _RE_NAMESAPACE_match(self.mfn().name()).group(1)
-            #else:
-            ns = self.mfn().namespace
-            if not ns:
-                return _wrapNS(':')
-            elif ns.startswith(':'):
-                return _wrapNS(ns)
-            elif _namespace(q=True, rel=True):
-                x = _namespaceInfo(cur=True, an=True)
-                return _wrapNS((x if x == ':' else (x + ':')) + ns)
-            else:
-                return _wrapNS(':' + ns)
+            return _mayaNS(self.mfn().namespace)
 
     def setNamespace(self, ns, ignoreShape=False):
         u"""
@@ -176,7 +152,7 @@ class Node(Node_c):
                 それ以前に作られたファイルをリファレンスしていると
                 シーンを開くたびにUUIDが変わってしまう問題を
                 回避する目的で利用できる。
-            :rtype: `UUID`
+            :rtype: `.UUID`
 
             .. note::
                 指定UUIDをアサインするには `assignUUID` 、
@@ -195,7 +171,8 @@ class Node(Node_c):
             u"""
             UUID をアサインする。
 
-            :param `UUID` val:
+            :type val: `.UUID`
+            :param val:
                 アサインする UUID を指定する。
                 py=True の場合は None を指定して消去することもできる。
             :param `bool` py:
@@ -213,9 +190,14 @@ class Node(Node_c):
             else:
                 _rename(self.name(), str(val), uuid=True)
 
-    #def referenceNode(self):
-    #    if self.isFromReferencedFile():
-    #        return CyObject(_referenceQuery(self.name_(), rfn=True))
+    def referenceNode(self):
+        u"""
+        ノードがリファレンスの場合、それを管理する :mayanode:`reference` ノードを得る。
+
+        :rtype: `.Reference` or None
+        """
+        if self.isFromReferencedFile():
+            return CyObject(_referenceQuery(self.name_(), rfn=True))
 
     def addAttr(
         self, longName='', type=None, subType=None,

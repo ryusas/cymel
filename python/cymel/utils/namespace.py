@@ -6,7 +6,7 @@ from ..common import *
 from .utils import correctNodeNameNS
 from ..pyutils import iterTreeBreadthFirst, iterTreeDepthFirst
 
-__all__ = ['Namespace', 'NS']
+__all__ = ['Namespace', 'NS', 'RelativeNamespace', 'RelativeNS']
 
 _str_new = UNICODE.__new__
 _str_add = UNICODE.__add__
@@ -36,6 +36,10 @@ class Namespace(UNICODE):
     それがMayaに実際に存在するかどうかにかかわらず、
     インスタンスは生成できる。
     そして、カレントにする際などに存在しなければ生成される。
+
+    イミュータブルである文字列としては、
+    Mayaの相対ネームスペースモード如何にかかわらず、
+    常に : で始まる絶対名で扱われる。
 
     .. warning::
         カレントネームスペース設定時、
@@ -240,6 +244,36 @@ NS = Namespace  #: `Namespace` の別名。
 
 
 #------------------------------------------------------------------------------
+class RelativeNamespace(object):
+    u"""
+    相対ネームスペースモードを切り替えるコンテキスト。
+    """
+    __slots__ = ('namespace', '_lastcur', '_notrel')
+
+    def __init__(self, namespace):
+        if isinstance(namespace, Namespace):
+            self.namespace = namespace
+        else:
+            self.namespace = Namespace(namespace)
+
+    def __enter__(self):
+        self._lastcur = _namespaceInfo(cur=True, an=True)
+        _setCurrentNS(self.namespace)
+        if _namespace(q=True, rel=True):
+            self._notrel = False
+        else:
+            self._notrel = True
+            _namespace(rel=True)
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        if self._notrel:
+            _namespace(rel=False)
+        _setCurrentNS(self._lastcur)
+
+RelativeNS = RelativeNamespace  #: `RelativeNamespace` の別名。
+
+
+#------------------------------------------------------------------------------
 def _Namespace_ls(self, pattern='*', **kwargs):
     return [_CyObject(x) for x in _ls(self + pattern, **kwargs)]
 
@@ -249,7 +283,7 @@ def _correctNS(ns):
     ネームスペース文字列を補正する。
 
     - 使用できない文字を修正、末尾の : を除去。
-    - Mayaの相対モード設定に従い、で始まる絶対名に補正。
+    - Mayaの相対モード設定に従い : で始まる絶対名に補正。
     """
     ns = correctNodeNameNS(ns)
     if ns.startswith(':'):
@@ -268,5 +302,24 @@ def _setCurrentNS(ns):
         _namespace(add=ns)
     _namespace(set=ns)
 
-_wrapNS = partial(_str_new, Namespace)
+
+def _mayaNS(ns):
+    u"""
+    Maya API の返すネームスペース文字列から `Namespace` を得る。
+    """
+    # - ルートネームスペースは常に空文字列（ノード名を得た場合は : となる）。
+    # - カレントネームスペースは絶対名（ノード名を得た場合は無しになる）。
+    # - カレントの下位にない場合は絶対名（ノード名でも同じ）。
+    # - カレントの下位の場合は相対名（ノード名でも同じ）。
+    if not ns:
+        return _wrapNS(':')
+    elif ns.startswith(':'):
+        return _wrapNS(ns)
+    elif _namespace(q=True, rel=True):
+        x = _namespaceInfo(cur=True, an=True)
+        return _wrapNS((x if x == ':' else (x + ':')) + ns)
+    else:
+        return _wrapNS(':' + ns)
+
+_wrapNS = partial(_str_new, Namespace)  #: `str` をそのまま `Namespace` にする。
 

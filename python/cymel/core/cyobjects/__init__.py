@@ -10,3 +10,4 @@ from .plug import *
 from .dagnode import *
 from .transform import *
 from .shape import *
+from .reference import *

@@ -543,7 +543,7 @@ class Node_c(CyObject):
             u"""
             UUID を得る。
 
-            :rtype: `UUID`
+            :rtype: `.UUID`
             """
             return _UUID(str(self.mfn().uuid()))
 

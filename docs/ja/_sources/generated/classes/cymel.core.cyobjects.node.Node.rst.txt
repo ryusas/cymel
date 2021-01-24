@@ -27,6 +27,7 @@ class cymel.core.cyobjects.node.Node
         lock
         namespace
         plugs
+        referenceNode
         rename
         setLocked
         setNamespace
@@ -53,6 +54,7 @@ class cymel.core.cyobjects.node.Node
     .. automethod:: lock
     .. automethod:: namespace
     .. automethod:: plugs
+    .. automethod:: referenceNode
     .. automethod:: rename
     .. automethod:: setLocked
     .. automethod:: setNamespace

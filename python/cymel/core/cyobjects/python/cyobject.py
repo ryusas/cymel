@@ -374,9 +374,10 @@ class CyObject(object):
 
             重複も起こり得るので、戻り値はリストである。
 
-            :param `UUID` val:
+            :type val: `.UUID`
+            :param val:
                 単一の UUID かそのリスト。
-                個々の UUID の型は `UUID` か `str` を指定できる。
+                個々の UUID の型は `.UUID` か `str` を指定できる。
             :param `iterable` candidates:
                 py=True の場合の候補を事前に絞りたい場合に指定する。
             :param `bool` py:
@@ -948,15 +949,15 @@ def _initFnNodeDict():
 
     defs = []
     for keyname, clsname in [
-        ('kCamera', 'MFnCamera'),
+        ('kCamera', 'MFnCamera'),  # API2: 2015
         ('kMesh', 'MFnMesh'),
-        ('kNurbsCurve', 'MFnNurbsCurve'),
-        ('kNurbsSurface', 'MFnNurbsSurface'),
+        ('kNurbsCurve', 'MFnNurbsCurve'),  # API2: 2016
+        ('kNurbsSurface', 'MFnNurbsSurface'),  # API2: 2016
         ('kTransform', 'MFnTransform'),
         ('kDagNode', 'MFnDagNode'),
-        ('kContainer', 'MFnContainerNode'),
-        ('kReference', 'MFnReference'),
-        ('kSet', 'MFnSet'),
+        ('kContainer', 'MFnContainerNode'),  # API2: 2016.5
+        ('kReference', 'MFnReference'),  # API2: 2016.5, C++: 2013.5
+        ('kSet', 'MFnSet'),  # API2: 2016.5
         ('kDependencyNode', 'MFnDependencyNode'),
     ]:
         try:

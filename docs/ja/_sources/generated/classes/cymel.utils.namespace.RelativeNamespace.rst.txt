@@ -1,0 +1,41 @@
+class cymel.utils.namespace.RelativeNamespace
+=============================================
+
+.. currentmodule:: cymel.utils.namespace
+
+
+.. inheritance-diagram:: RelativeNamespace
+    :parts: 1
+
+
+
+.. autoclass:: RelativeNamespace
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        __init__
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: namespace
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: __init__
+
+

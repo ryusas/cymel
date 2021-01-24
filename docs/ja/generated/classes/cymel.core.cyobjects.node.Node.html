@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.core.cyobjects.node.Node &#8212; cymel 0.1.2021010400 ドキュメント</title>
+    <title>class cymel.core.cyobjects.node.Node &#8212; cymel 0.1.2021012400 ドキュメント</title>
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.node.html" title="cymel.core.cyobjects.node"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.1.2021010400 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.1.2021012400 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.node.html" accesskey="U">cymel.core.cyobjects.node</a> &#187;</li> 
       </ul>
@@ -124,19 +124,22 @@
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node.Node.plugs" title="cymel.core.cyobjects.node.Node.plugs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugs</span></code></a>(**kwargs)</td>
 <td>指定した条件にマッチするプラグのリストを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node.Node.rename" title="cymel.core.cyobjects.node.Node.rename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename</span></code></a>(name[,&nbsp;ignoreShape])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node.Node.referenceNode" title="cymel.core.cyobjects.node.Node.referenceNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">referenceNode</span></code></a>()</td>
+<td>ノードがリファレンスの場合、それを管理する <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/reference.html">reference</a> ノードを得る。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node.Node.rename" title="cymel.core.cyobjects.node.Node.rename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename</span></code></a>(name[,&nbsp;ignoreShape])</td>
 <td>リネームする。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node.Node.setLocked" title="cymel.core.cyobjects.node.Node.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>([val])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node.Node.setLocked" title="cymel.core.cyobjects.node.Node.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>([val])</td>
 <td>ロック、又はアンロックする。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node.Node.setNamespace" title="cymel.core.cyobjects.node.Node.setNamespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setNamespace</span></code></a>(ns[,&nbsp;ignoreShape])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node.Node.setNamespace" title="cymel.core.cyobjects.node.Node.setNamespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setNamespace</span></code></a>(ns[,&nbsp;ignoreShape])</td>
 <td>ネームスペースをセットする。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node.Node.unlock" title="cymel.core.cyobjects.node.Node.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node.Node.unlock" title="cymel.core.cyobjects.node.Node.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>()</td>
 <td>アンロックする。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node.Node.uuid" title="cymel.core.cyobjects.node.Node.uuid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uuid</span></code></a>([new,&nbsp;py])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node.Node.uuid" title="cymel.core.cyobjects.node.Node.uuid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uuid</span></code></a>([new,&nbsp;py])</td>
 <td>UUID を得る。</td>
 </tr>
 </tbody>
@@ -249,7 +252,7 @@ doubleLinear や doubleAngle などの単位付きアトリビュートと
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>val</strong> (<em>UUID</em>) -- アサインする UUID を指定する。
+<li><strong>val</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code>) -- アサインする UUID を指定する。
 py=True の場合は None を指定して消去することもできる。</li>
 <li><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- <p>Maya 標準機能ではなく Python の機能を使って生成する
 UUID は uuid という名前のアトリビュートに保存される。
@@ -320,6 +323,20 @@ m=True を指定しても要素は得られない
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.cyobjects.node.Node.referenceNode">
+<code class="descname">referenceNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.referenceNode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードがリファレンスの場合、それを管理する <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/reference.html">reference</a> ノードを得る。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="cymel.core.cyobjects.reference.Reference.html#cymel.core.cyobjects.reference.Reference" title="cymel.core.cyobjects.reference.Reference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reference</span></code></a> or None</td>
 </tr>
 </tbody>
 </table>
@@ -439,7 +456,7 @@ UUIDからノードを得るには <a class="reference internal" href="cymel.cor
         <li class="right" >
           <a href="../cymel.core.cyobjects.node.html" title="cymel.core.cyobjects.node"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.1.2021010400 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.1.2021012400 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.node.html" >cymel.core.cyobjects.node</a> &#187;</li> 
       </ul>

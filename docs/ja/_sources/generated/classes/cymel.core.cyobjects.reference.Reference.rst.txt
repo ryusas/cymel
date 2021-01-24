@@ -1,0 +1,86 @@
+class cymel.core.cyobjects.reference.Reference
+==============================================
+
+.. currentmodule:: cymel.core.cyobjects.reference
+
+
+.. inheritance-diagram:: Reference
+    :parts: 1
+
+
+
+.. autoclass:: Reference
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        associatedNS
+        associatedNamespace
+        children
+        containsNode
+        containsNodeExactly
+        editAttrs
+        editNodes
+        editPlugs
+        editStrings
+        fileName
+        filename
+        isExportEditsFile
+        isLoaded
+        isLocked
+        isReferenceLocked
+        isRoot
+        iterBreadthFirst
+        iterDepthFirst
+        load
+        lockReference
+        nodes
+        parent
+        referenceNode
+        root
+        unload
+        unlockReference
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: associatedNS
+    .. automethod:: associatedNamespace
+    .. automethod:: children
+    .. automethod:: containsNode
+    .. automethod:: containsNodeExactly
+    .. automethod:: editAttrs
+    .. automethod:: editNodes
+    .. automethod:: editPlugs
+    .. automethod:: editStrings
+    .. automethod:: fileName
+    .. automethod:: filename
+    .. automethod:: isExportEditsFile
+    .. automethod:: isLoaded
+    .. automethod:: isLocked
+    .. automethod:: isReferenceLocked
+    .. automethod:: isRoot
+    .. automethod:: iterBreadthFirst
+    .. automethod:: iterDepthFirst
+    .. automethod:: load
+    .. automethod:: lockReference
+    .. automethod:: nodes
+    .. automethod:: parent
+    .. automethod:: referenceNode
+    .. automethod:: root
+    .. automethod:: unload
+    .. automethod:: unlockReference
+
+
