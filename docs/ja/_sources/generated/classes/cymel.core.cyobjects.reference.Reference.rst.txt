@@ -20,6 +20,7 @@ class cymel.core.cyobjects.reference.Reference
     
         associatedNS
         associatedNamespace
+        byFilename
         children
         containsNode
         containsNodeExactly
@@ -29,6 +30,7 @@ class cymel.core.cyobjects.reference.Reference
         editStrings
         fileName
         filename
+        importReference
         isExportEditsFile
         isLoaded
         isLocked
@@ -41,6 +43,7 @@ class cymel.core.cyobjects.reference.Reference
         nodes
         parent
         referenceNode
+        removeReference
         root
         unload
         unlockReference
@@ -58,6 +61,7 @@ class cymel.core.cyobjects.reference.Reference
     
     .. automethod:: associatedNS
     .. automethod:: associatedNamespace
+    .. automethod:: byFilename
     .. automethod:: children
     .. automethod:: containsNode
     .. automethod:: containsNodeExactly
@@ -67,6 +71,7 @@ class cymel.core.cyobjects.reference.Reference
     .. automethod:: editStrings
     .. automethod:: fileName
     .. automethod:: filename
+    .. automethod:: importReference
     .. automethod:: isExportEditsFile
     .. automethod:: isLoaded
     .. automethod:: isLocked
@@ -79,6 +84,7 @@ class cymel.core.cyobjects.reference.Reference
     .. automethod:: nodes
     .. automethod:: parent
     .. automethod:: referenceNode
+    .. automethod:: removeReference
     .. automethod:: root
     .. automethod:: unload
     .. automethod:: unlockReference

@@ -156,7 +156,7 @@ class Node(Node_c):
 
             .. note::
                 指定UUIDをアサインするには `assignUUID` 、
-                UUIDからノードを得るには `.CyObject.fromUUID` を利用する。
+                UUIDからノードを得るには `.CyObject.byUUID` を利用する。
             """
             if py:
                 return self._py_uuid(new)

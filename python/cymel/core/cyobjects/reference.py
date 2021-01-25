@@ -31,6 +31,27 @@ class Reference(nodetypes.parentBasicNodeClass('reference')):
     if _FIX_SLOTS:
         __slots__ = tuple()
 
+    @classmethod
+    def byFilename(cls, fname, all=False):
+        u"""
+        解決済みのファイル名からリファレンスノードを得る。
+
+        :param `str` fname:
+            解決済みのファイル名。
+        :param `bool` all:
+            コピー番号なしのファイル名を指定して、
+            それに対応する全てのリストを得る。
+        :rtype: `Referemce` or None
+        """
+        if all:
+            fmt = fname + '{%s}'
+            return [
+                (fname if x == '0' else (fmt % x))
+                for x in _file(fname, q=True, cnl=True)
+            ]
+        r = _referenceQuery(fname, rfn=True)
+        return r and cls(r)
+
     if MAYA_VERSION >= (2016, 5):
         def filename(self, unresolved=False, withoutPath=False, withoutCopyNumber=False):
             u"""
@@ -338,6 +359,18 @@ class Reference(nodetypes.parentBasicNodeClass('reference')):
         リファレンスをアンロックする。
         """
         return _file(self.filename(), lockReference=False)
+
+    def removeReference(self):
+        u"""
+        リファレンスを削除する。
+        """
+        return _file(self.filename(), rr=True)
+
+    def importReference(self):
+        u"""
+        リファレンスをインポートする。
+        """
+        return _file(self.filename(), ir=True)
 
     def editStrings(self, command=None, fail=False, success=True, namespace=True):
         u"""

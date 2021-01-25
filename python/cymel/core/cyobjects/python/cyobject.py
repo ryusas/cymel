@@ -348,7 +348,7 @@ class CyObject(object):
             return obj
 
     @classmethod
-    def _py_fromUUID(cls, val, candidates=EMPTY_TUPLE, py=False):
+    def _py_byUUID(cls, val, candidates=EMPTY_TUPLE, py=False):
         if candidates:
             chk = cls.checktype
             objs = [chk(x) for x in candidates]
@@ -364,11 +364,11 @@ class CyObject(object):
         return [x for x in objs if x.hasAttr(UUID_ATTR_NAME) and val == _UUID(x.plug_(UUID_ATTR_NAME).get())]
 
     if MAYA_VERSION < (2016,):
-        fromUUID = _py_fromUUID
+        byUUID = _py_byUUID
 
     else:
         @classmethod
-        def fromUUID(cls, val, candidates=EMPTY_TUPLE, py=False):
+        def byUUID(cls, val, candidates=EMPTY_TUPLE, py=False):
             u"""
             UUID からノードリストを得る。
 
@@ -386,7 +386,7 @@ class CyObject(object):
             :rtype: `list`
             """
             if py:
-                return cls._py_fromUUID(val, candidates)
+                return cls._py_byUUID(val, candidates)
             elif isinstance(val, BASESTR):
                 return cls.ls(val)
             elif isinstance(val, Iterable):

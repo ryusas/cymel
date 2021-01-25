@@ -111,14 +111,14 @@ Python API 2.0 オブジェクトを指定することで、
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.byUUID" title="cymel.core.cyobjects.cyobject.CyObject.byUUID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">byUUID</span></code></a>(val[,&nbsp;candidates,&nbsp;py])</td>
+<td>UUID からノードリストを得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a>()</td>
 <td>内部ハンドルの有効性チェック。無効なら <a class="reference internal" href="../cymel.core.cyobjects.cyobject.html#cymel.core.cyobjects.cyobject.CymelInvalidHandle" title="cymel.core.cyobjects.cyobject.CymelInvalidHandle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CymelInvalidHandle</span></code></a> エラーとなる。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.checktype" title="cymel.core.cyobjects.cyobject.CyObject.checktype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checktype</span></code></a>(obj)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.checktype" title="cymel.core.cyobjects.cyobject.CyObject.checktype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checktype</span></code></a>(obj)</td>
 <td>指定したオブジェクトがクラスにマッチするかチェックする。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.fromUUID" title="cymel.core.cyobjects.cyobject.CyObject.fromUUID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromUUID</span></code></a>(val[,&nbsp;candidates,&nbsp;py])</td>
-<td>UUID からノードリストを得る。</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.globalPlugClass" title="cymel.core.cyobjects.cyobject.CyObject.globalPlugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalPlugClass</span></code></a>()</td>
 <td>グローバル設定のプラグクラスを得る。</td>
@@ -160,6 +160,31 @@ Python API 2.0 オブジェクトを指定することで、
 </dd></dl>
 
 <p class="rubric">Methods Details:</p>
+<dl class="classmethod">
+<dt id="cymel.core.cyobjects.cyobject.CyObject.byUUID">
+<em class="property">classmethod </em><code class="descname">byUUID</code><span class="sig-paren">(</span><em>val</em>, <em>candidates=()</em>, <em>py=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.byUUID" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>UUID からノードリストを得る。</p>
+<p>重複も起こり得るので、戻り値はリストである。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>val</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code>) -- 単一の UUID かそのリスト。
+個々の UUID の型は <code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code> か <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> を指定できる。</li>
+<li><strong>candidates</strong> (<em>iterable</em>) -- py=True の場合の候補を事前に絞りたい場合に指定する。</li>
+<li><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- Maya 標準機能ではなく uuid というアトリビュートに保存されているものから得る。
+2016 未満では常に True 扱いとなる。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="method">
 <dt id="cymel.core.cyobjects.cyobject.CyObject.checkValid">
 <code class="descname">checkValid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="この定義へのパーマリンク">¶</a></dt>
@@ -184,31 +209,6 @@ Python API 2.0 オブジェクトを指定することで、
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>obj</strong> -- チェックするオブジェクト。</td>
 </tr>
 <tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> or None</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="cymel.core.cyobjects.cyobject.CyObject.fromUUID">
-<em class="property">classmethod </em><code class="descname">fromUUID</code><span class="sig-paren">(</span><em>val</em>, <em>candidates=()</em>, <em>py=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.fromUUID" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>UUID からノードリストを得る。</p>
-<p>重複も起こり得るので、戻り値はリストである。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>val</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code>) -- 単一の UUID かそのリスト。
-個々の UUID の型は <code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code> か <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> を指定できる。</li>
-<li><strong>candidates</strong> (<em>iterable</em>) -- py=True の場合の候補を事前に絞りたい場合に指定する。</li>
-<li><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- Maya 標準機能ではなく uuid というアトリビュートに保存されているものから得る。
-2016 未満では常に True 扱いとなる。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
-</td>
 </tr>
 </tbody>
 </table>

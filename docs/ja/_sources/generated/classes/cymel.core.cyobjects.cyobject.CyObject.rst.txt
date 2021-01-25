@@ -18,9 +18,9 @@ class cymel.core.cyobjects.cyobject.CyObject
 
     .. autosummary::
     
+        byUUID
         checkValid
         checktype
-        fromUUID
         globalPlugClass
         internalData
         isAlive
@@ -48,9 +48,9 @@ class cymel.core.cyobjects.cyobject.CyObject
     .. rubric:: Methods Details:
 
     
+    .. automethod:: byUUID
     .. automethod:: checkValid
     .. automethod:: checktype
-    .. automethod:: fromUUID
     .. automethod:: globalPlugClass
     .. automethod:: internalData
     .. automethod:: isAlive
