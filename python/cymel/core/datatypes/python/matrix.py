@@ -1017,14 +1017,27 @@ class Matrix(object):
         :param v: 平行移動の3次元ベクトル。
         :rtype: `Matrix`
         """
-        return cls([
+        return _newM(_MM([
             1., 0., 0., 0.,
             0., 1., 0., 0.,
             0., 0., 1., 0.,
             v[0], v[1], v[2], 1.,
-        ])
+        ]), cls)
 
     makeT = makeTranslation  #: `makeTranslation` の別名。
+
+    @classmethod
+    def makeRotation(cls, v, order=XYZ):
+        u"""
+        オイラー角回転から回転行列を作成する。
+
+        :param iterable v: 各軸の回転角度 (x,y,z) を Radians で。
+        :param `int` order: 回転オーダーを表す整数値。
+        :rtype: `Matrix`
+        """
+        return _newM(_ME(v, order).asMatrix(), cls)
+
+    makeR = makeRotation  #: `makeRotation` の別名。
 
     @classmethod
     def makeInverseTranslation(cls, v):
@@ -1035,12 +1048,12 @@ class Matrix(object):
         :param v: 平行移動の3次元ベクトル。
         :rtype: `Matrix`
         """
-        return cls([
+        return _newM(_MM([
             1., 0., 0., 0.,
             0., 1., 0., 0.,
             0., 0., 1., 0.,
             -v[0], -v[1], -v[2], 1.,
-        ])
+        ]), cls)
 
     makeInvT = makeInverseTranslation  #: `makeInverseTranslation` の別名。
 
@@ -1053,12 +1066,12 @@ class Matrix(object):
         :param v: スケール値の3次元ベクトル。
         :rtype: `Matrix`
         """
-        return cls([
+        return _newM(_MM([
             v[0], 0., 0., 0.,
             0., v[1], 0., 0.,
             0., 0., v[2], 0.,
             0., 0., 0., 1.,
-        ])
+        ]), cls)
 
     makeS = makeScaling  #: `makeScaling` の別名。
 
@@ -1072,12 +1085,12 @@ class Matrix(object):
         :param `float` pre: ゼロ除算を避ける為の許容誤差。
         :rtype: `Matrix`
         """
-        return cls([
+        return _newM(_MM([
             1. / avoidZeroDiv(v[0], pre), 0., 0., 0.,
             0., 1. / avoidZeroDiv(v[1], pre), 0., 0.,
             0., 0., 1. / avoidZeroDiv(v[2], pre), 0.,
             0., 0., 0., 1.,
-        ])
+        ]), cls)
 
     makeInvS = makeInverseScaling  #: `makeInverseScaling` の別名。
 
@@ -1090,12 +1103,12 @@ class Matrix(object):
         :param v: シアー値 (xy, yz, yx)
         :rtype: `Matrix`
         """
-        return cls([
+        return _newM(_MM([
             1., 0., 0., 0.,
             v[0], 1., 0., 0.,
             v[1], v[2], 1., 0.,
             0., 0., 0., 1.,
-        ])
+        ]), cls)
 
     makeSh = makeShearing  #: `makeShearing` の別名。
 
@@ -1108,12 +1121,12 @@ class Matrix(object):
         :param v: シアー値 (xy, yz, yx)
         :rtype: `Matrix`
         """
-        return cls([
+        return _newM(_MM([
             1., 0., 0., 0.,
             -v[0], 1., 0., 0.,
             v[0] * v[2] - v[1], -v[2], 1., 0.,
             0., 0., 0., 1.,
-        ])
+        ]), cls)
 
     makeInvSh = makeInverseShearing  #: `makeInverseShearing` の別名。
 
