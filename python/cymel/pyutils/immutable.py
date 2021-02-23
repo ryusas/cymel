@@ -49,7 +49,7 @@ class CymelImmutableError(TypeError):
 
 
 #------------------------------------------------------------------------------
-def _makeImmutableWrapper(cls, clsname):
+def _makeImmutableWrapper(cls, clsname, modulename):
     u"""
     immutableラッパークラスを生成し、基本的なメソッドをオーバーライドする。
     """
@@ -62,8 +62,7 @@ def _makeImmutableWrapper(cls, clsname):
         if names:
             nameSet.update(names)
     for name in nameSet:
-        func = _immutableFunc(name)
-        attrDict[name] = func
+        attrDict[name] = _immutableFunc(name)
 
     # __特殊名__ のミューテーターを封じる。
     for name in _SPECIAL_MUTATOR_NAMES:
@@ -78,20 +77,28 @@ def _makeImmutableWrapper(cls, clsname):
         attrDict['__setattr__'] = _immutableFunc('__setattr__')
         attrDict['__slots__'] = tuple()   # 親方向のクラス全てで徹底されていないと意味がないが一応。
 
-    # __init__ が無いクラスなら、初期化時の属性セットは許容しつつその後の __setattr__ を封じる。
+    # 把握していないクラスなら、__init__ での属性セットは許容しつつその後の __setattr__ を封じる。
     else:
+        initSet = set()
+        init_add = initSet.add
+        init_remove = initSet.remove
+
         cls_init = cls.__init__
         cls_setattr = cls.__setattr__
 
         def __init__(self, *args, **kwargs):
-            cls_init(self, *args, **kwargs)  # この中での __setattr__ は許す。
-            self.__dict__['_cymelImmutable'] = True
+            init_add(self)
+            try:
+                cls_init(self, *args, **kwargs)
+            finally:
+                init_remove(self)
         attrDict['__init__'] = __init__
 
         def __setattr__(self, name, val):
-            if self.__dict__.get('_cymelImmutable'):
+            if self in initSet:
+                cls_setattr(self, name, val)
+            else:
                 raise CymelImmutableError('%s.__setattr__' % repr(self))
-            cls_setattr(self, name, val)
         attrDict['__setattr__'] = __setattr__
 
     # ハッシュ関数が実装されていなければ、簡単にサポートして hashable にする。
@@ -110,9 +117,11 @@ def _makeImmutableWrapper(cls, clsname):
         return res
     attrDict['__reduce_ex__'] = __reduce_ex__
 
-    # クラスを生成。pickle 用にグローバルスコープにも出す。
+    # クラスを生成。
+    # pickle 用に __module__ 属性をセットし、モジュールにもクラスをセットする。
+    attrDict['__module__'] = modulename
     newcls = type(clsname, (cls,), attrDict)
-    globals()[clsname] = newcls
+    setattr(sys.modules[modulename], clsname, newcls)
     newcls_tuple = (newcls,)
     return newcls
 
@@ -176,7 +185,7 @@ def immutable(type_or_obj, *args, **kwargs):
     オブジェクトが変更不可になるラッパーを生成する。
 
     `immutableType` を呼び出し、
-    デフォルト名のラッパークラスを得て、
+    デフォルト設定でラッパークラスを得て、
     それでラップした新規インスタンスが返される。
 
     .. warning:
@@ -212,16 +221,12 @@ def immutable(type_or_obj, *args, **kwargs):
     True
     """
     if isinstance(type_or_obj, type):
-        cls = type_or_obj
+        return immutableType(type_or_obj)(*args, **kwargs)
     else:
-        if _IS_PYTHON2 and isinstance(type_or_obj, types.ClassType):
-            raise TypeError('old style class is not supported.')
-        cls = type(type_or_obj)
-        args = [type_or_obj]
-    return immutableType(cls)(*args, **kwargs)
+        return immutableType(type(type_or_obj))(type_or_obj, **kwargs)
 
 
-def immutableType(cls, name=None):
+def immutableType(cls, name=None, module=None):
     u"""
     オブジェクトが変更不可になるラッパークラスを生成する。
 
@@ -250,9 +255,17 @@ def immutableType(cls, name=None):
         イミュータブル化する元のクラス。
     :param `str` name:
         ラッパークラスの名前。
-        省略時は ``'Immutable元のクラス名'`` となるが、
-        最初にその型で生成されたキャッシュがあれば再利用される。
+        省略時は ``'Immutable元のクラス名'`` となる。
+    :param `str` module:
+        ラッパークラスを提供するモジュール名。
+        __module__ 属性にセットされる。
+        省略時は、元のクラスの __module__ 属性を引き継ぐ。
     :rtype: `type`
+
+    .. warning::
+        name も module も省略した場合は、
+        指定したクラスで最初に生成された immutable ラッパークラスが
+        再利用されるため、結果的にどちらも不定となる。
 
     .. note::
         `OPTIONAL_MUTATOR_DICT` には、インスタンスを変更する
@@ -267,25 +280,38 @@ def immutableType(cls, name=None):
         * 属性のメソッドを呼び出すメソッド。
         * 組み込みやバイナリモジュールで提供される型のメソッド。
     """
-    if name:
-        key = (cls, name)
+    # immutableラップの多重化を防ぐ。
+    base = cls.mro()[1]
+    existing = _immutableClsCache_get(base)
+    if existing:
+        if not name and not module:
+            return existing
+        cls = base
+
     else:
-        newcls = _immutable_class_cache.get(cls)
-        if newcls:
-            return newcls
-        key = (cls, 'Immutable%s' % cls.__name__)
+        existing = _immutableClsCache_get(cls)
+        if existing and not name and not module:
+            return existing
 
-    newcls = _immutable_class_cache.get(key)
-    if newcls:
-        return newcls
+    key = (
+        cls,
+        name or 'Immutable%s' % cls.__name__,
+        module or cls.__module__,
+    )
+    if existing:
+        icls = _immutableClsCache_get(key)
+        if icls:
+            return icls
 
-    newcls = _makeImmutableWrapper(*key)
-    _immutable_class_cache[key] = newcls
-    if not name or cls not in _immutable_class_cache:
-        _immutable_class_cache[cls] = newcls
-    return newcls
+    icls = _makeImmutableWrapper(*key)
+    _immutableClsCache[key] = icls
 
-_immutable_class_cache = {}  #: 生成済みimmutableラッパークラスのキャッシュ。
+    if not existing:
+        _immutableClsCache[cls] = icls
+    return icls
 
-ImmutableDict = immutableType(dict, 'ImmutableDict')  #: イミュータブル `dict`
+_immutableClsCache = {}  #: 生成済みimmutableラッパークラスのキャッシュ。
+_immutableClsCache_get = _immutableClsCache.get
+
+ImmutableDict = immutableType(dict, 'ImmutableDict', __name__)  #: イミュータブル `dict`
 
