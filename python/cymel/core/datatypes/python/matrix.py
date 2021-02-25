@@ -792,7 +792,7 @@ class Matrix(object):
             vals[i] = v[2] - data[i]
         data += _MM(vals)
 
-    def setAxes(self, i, vx, vy, vz, vt=V.Zero, transpose=False):
+    def setAxes(self, vx, vy, vz, vt=V.Zero, transpose=False):
         u"""
         3x3部分の行や列と4行目の平行移動ベクトルをセットする。
 
