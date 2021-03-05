@@ -814,7 +814,7 @@ class Plug_c(CyObject):
 
             # ノードから得て、それが本当に下位のプラグかチェックした上で返す。
             mp = mfnnode.findPlug(mattr, False)
-            pp = mp
+            pp = mp.array() if mp.isElement else mp
             while pp.isChild:
                 pp = pp.parent()
                 if pp == mplug:
@@ -822,6 +822,8 @@ class Plug_c(CyObject):
                     for ia in self.__elementIndexAttrs():
                         mp.selectAncestorLogicalIndex(*ia)
                     return _newNodeRefPlug(_type(self), noderef, mp)
+                if pp.isElement:
+                    pp = pp.array()
 
         raise AttributeError('no inferior attribute exists: %s.%s' % (self.name_(), name))
 
@@ -836,12 +838,14 @@ class Plug_c(CyObject):
             mplug = self._CyObject__data['mplug']
             if mplug.isElement:
                 info = [(mplug.logicalIndex(), mplug.attribute())]
+                mplug = mplug.array()
             else:
                 info = []
             while mplug.isChild:
                 mplug = mplug.parent()
                 if mplug.isElement:
                     info.append((mplug.logicalIndex(), mplug.attribute()))
+                    mplug = mplug.array()
             self._CyObject__data['elemIdxAttrs'] = info
         return info
 
@@ -854,16 +858,31 @@ class Plug_c(CyObject):
         :rtype: `.Plug`
         """
         mplug = self.mplug()
-        if mplug.isChild:
-            mplug = mplug.parent()
-            while mplug.isChild:
-                mplug = mplug.parent()
-            if completely and mplug.isElement:
-                mplug = mplug.array()
-            return _newNodeRefPlug(_type(self), self._CyObject__data['noderef'], mplug)
-        if completely and mplug.isElement:
-            return _newNodeRefPlug(_type(self), self._CyObject__data['noderef'], mplug.array(), self._CyObject__data['typeinfo'])
-        return self
+        mp = mplug
+        typeinfo = None
+
+        if completely:
+            if mp.isElement:
+                mp = mp.array()
+            while mp.isChild:
+                mp = mp.parent()
+                if mp.isElement:
+                    mp = mp.array()
+            if mp is mplug:
+                return self
+
+            if mp == mplug:
+                typeinfo = self._CyObject__data['typeinfo']
+
+        else:
+            c = mp.array() if mp.isElement else mp
+            while c.isChild:
+                mp = c.parent()
+                c = mp.array() if mp.isElement else mp
+            if mp is mplug:
+                return self
+
+        return _newNodeRefPlug(_type(self), self._CyObject__data['noderef'], mp, typeinfo)
 
     def parent(self):
         u"""
@@ -1058,9 +1077,13 @@ class Plug_c(CyObject):
         """
         if not self.mfn().worldSpace:
             return True
+
         mp = self._CyObject__data['mplug']
-        while mp.isChild:
-            mp = mp.parent()
+        c = mp.array() if mp.isElement else mp
+        while c.isChild:
+            mp = c.parent()
+            c = mp.array() if mp.isElement else mp
+
         if not mp.isElement:
             return True
         i = mp.logicalIndex()
@@ -1081,26 +1104,32 @@ class Plug_c(CyObject):
             return self
 
         mplug = self._CyObject__data['mplug']
-        if mplug.isChild:
-            root = mplug
-            while root.isChild:
-                root = root.parent()
-            idx = self._CyObject__data['noderef']._CyObject__data['mpath'].instanceNumber()
-            if root.logicalIndex() == idx:
+        if mplug.isArray:
+            if not mplug.isChild:
+                # 最上位マルチプラグ（ワールドエレメントでない）なら、自身をそのまま返す。
                 return self
-            mplug = _2_MPlug(mplug)
-            mplug.selectAncestorLogicalIndex(idx, root.attribute())
-            return _newNodeRefPlug(_type(self), self._CyObject__data['noderef'], mplug, self._CyObject__data['typeinfo'])
-
+            root = mplug.parent()
         else:
-            if mplug.isArray:
-                return self
-            idx = self._CyObject__data['noderef']._CyObject__data['mpath'].instanceNumber()
-            if mplug.logicalIndex() == idx:
-                return self
+            root = mplug
+
+        c = root.array() if root.isElement else root
+        while c.isChild:
+            root = c.parent()
+            c = root.array() if root.isElement else root
+
+        idx = self._CyObject__data['noderef']._CyObject__data['mpath'].instanceNumber()
+        if root.logicalIndex() == idx:
+            # インデックスが正しいなら、自身をそのまま返す。
+            return self
+
+        if mplug is root:
             mplug = _2_MPlug(mplug)
             mplug.selectAncestorLogicalIndex(idx)
-            return _newNodeRefPlug(_type(self), self._CyObject__data['noderef'], mplug)
+        else:
+            mplug = _2_MPlug(mplug)
+            mplug.selectAncestorLogicalIndex(idx, root.attribute())
+
+        return _newNodeRefPlug(_type(self), self._CyObject__data['noderef'], mplug, self._CyObject__data['typeinfo'])
 
     def numElements(self):
         u"""
@@ -1538,22 +1567,34 @@ class Plug_c(CyObject):
         DAGノードのインスタンス番号は動的に変わるので、キャッシュはされない。
         `~.CyObject.checkValid` は呼び出し側で保証すること。
         """
-        if self._CyObject__data['typeinfo']['mfn'].worldSpace:
-            mplug = self._CyObject__data['mplug']
-            if mplug.isChild:
-                # 下層のプラグで、最上位のインデックスが未確定なら、現在のインスタンス番号に合わせた要素を得る。
-                root = mplug.parent()
-                while root.isChild:
-                    root = root.parent()
-                if root.logicalIndex() < 0:
-                    mplug = _2_MPlug(mplug)
-                    mplug.selectAncestorLogicalIndex(self._CyObject__data['noderef']._CyObject__data['mpath'].instanceNumber(), root.attribute())
-            elif mplug.isArray:
+        if not self._CyObject__data['typeinfo']['mfn'].worldSpace:
+            return self._CyObject__data['mplug']
+
+        mplug = self._CyObject__data['mplug']
+        if mplug.isArray:
+            if not mplug.isChild:
                 # 最上位のプラグで isArray なら、現在のインスタンス番号の要素を得る。
                 mplug = _2_MPlug(mplug)
                 mplug.selectAncestorLogicalIndex(self._CyObject__data['noderef']._CyObject__data['mpath'].instanceNumber())
-            return mplug
-        return self._CyObject__data['mplug']
+                return mplug
+            root = mplug.parent()
+        else:
+            root = mplug
+
+        c = root.array() if root.isElement else root
+        while c.isChild:
+            root = c.parent()
+            c = root.array() if root.isElement else root
+
+        if root.logicalIndex() < 0:
+            # 最上位のインデックスが未確定なら、現在のインスタンス番号に合わせた要素を得る。
+            if mplug is root:
+                mplug = _2_MPlug(mplug)
+                mplug.selectAncestorLogicalIndex(self._CyObject__data['noderef']._CyObject__data['mpath'].instanceNumber())
+            else:
+                mplug = _2_MPlug(mplug)
+                mplug.selectAncestorLogicalIndex(self._CyObject__data['noderef']._CyObject__data['mpath'].instanceNumber(), root.attribute())
+        return mplug
 
     def get(self):
         u"""

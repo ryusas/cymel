@@ -155,17 +155,19 @@ def nonNetworkedMPlug(mplug):
     :rtype: :mayaapi2:`MPlug`
     """
     if mplug.isNetworked:
+        # toNonNetworkedMPlug と同じ処理。
         mattr = mplug.attribute()
-        if mplug.isElement:
+        if mp.isElement:
             idxAttrs = [(mplug.logicalIndex(), mattr)]
+            mp = mplug.array()
         else:
             idxAttrs = []
-
-        mp = mplug
+            mp = mplug
         while mp.isChild:
             mp = mp.parent()
             if mp.isElement:
                 idxAttrs.append((mp.logicalIndex(), mp.attribute()))
+                mp = mp.array()
 
         mplug = _2_MPlug(mplug.node(), mattr)
         for idxAttr in idxAttrs:
@@ -183,13 +185,12 @@ def toNonNetworkedMPlug(mplug):
     :rtype: :mayaapi2:`MPlug`
     """
     mattr = mplug.attribute()
-    if mplug.isElement:
+    if mp.isElement:
         idxAttrs = [(mplug.logicalIndex(), mattr)]
-        mplug = mplug.array()
+        mp = mplug.array()
     else:
         idxAttrs = []
-
-    mp = mplug
+        mp = mplug
     while mp.isChild:
         mp = mp.parent()
         if mp.isElement:
@@ -258,8 +259,13 @@ def getMPlugName(mplug):
 
 
 def _mplugRoot(mplug):
-    while mplug.isChild:
-        mplug = mplug.parent()
+    u"""
+    MPlug のルートを得る（最上位がマルチエレメントならエレメントのまま）。
+    """
+    c = mplug.array() if mplug.isElement else mplug
+    while c.isChild:
+        mplug = c.parent()
+        c = mplug.array() if mplug.isElement else mplug
     return mplug
 
 

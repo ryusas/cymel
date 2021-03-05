@@ -1483,7 +1483,7 @@ def _getMPlugNode(mplug):
     u"""
     MPlug からノードを得る。
 
-    worldSpace プラグならインスタンスインデックが加味される。
+    worldSpace プラグならインスタンスインデックスが加味される。
 
     :returns: MDagPath, MObject
     """
@@ -1493,8 +1493,15 @@ def _getMPlugNode(mplug):
             mpaths = _2_getAllPathsTo(mnode)
             if len(mpaths) < 2:
                 return mpaths[0], mnode
-            while mplug.isChild:
+
+            if mplug.isArray:
+                if not mplug.isChild:
+                    return mpaths[0], mnode
                 mplug = mplug.parent()
+            c = mplug.array() if mplug.isElement else mplug
+            while c.isChild:
+                mplug = c.parent()
+                c = mplug.array() if mplug.isElement else mplug
             return mpaths[max(0, mplug.logicalIndex())], mnode
         else:
             return _2_getAPathTo(mnode), mnode
