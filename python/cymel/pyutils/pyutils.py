@@ -10,6 +10,30 @@ from weakref import ref as _wref
 from .immutable import ImmutableDict as _ImmutableDict
 from ..constants import AVOID_ZERO_DIV_PRECISION, PI
 
+#------------------------------------------------------------------------------
+try:
+    from future.utils import with_metaclass
+except ImportError:
+    try:
+        from six import with_metaclass
+
+    except ImportError:
+        def with_metaclass(meta, *bases):
+            u"""
+            Function from jinja2/_compat.py. License: BSD.
+            """
+            class metaclass(meta):
+                __call__ = type.__call__
+                __init__ = type.__init__
+
+                def __new__(cls, name, this_bases, d):
+                    if this_bases is None:
+                        return type.__new__(cls, name, (), d)
+                    return meta(name, bases, d)
+            return metaclass('temporary_class', None, {})
+
+
+#------------------------------------------------------------------------------
 _os_path_exists = _os_path.exists
 _os_path_join = _os_path.join
 _os_path_normpath = _os_path.normpath
@@ -57,7 +81,7 @@ if (not IS_PYTHON2 and not IS_PYTHON3) or (IS_PYTHON2 and _sys.version_info[1] <
 if IS_PYTHON2:
     BASESTR = basestring  #: Python 2 と 3 の差を吸収する文字列型チェック用。
     BYTES = str
-    UNICODE = _types.UnicodeType
+    UNICODE = unicode
     LONG = long  #: Python 2 と 3 の差を吸収する長整数型チェック用。
 
     lrange = range  #: list を返す range (Python 2 の標準)
@@ -152,8 +176,7 @@ class Singleton(type):
     生成時の引数内容の違いも考慮されずに流用される点には注意が必要。
 
     >>> import cymel.main as cm
-    >>> class Foo(object):
-    ...     __metaclass__ = cm.Singleton
+    >>> class Foo(cm.with_metaclass(cm.Singleton, object)):
     ...     def __init__(self, v):
     ...         self._v = v
     ...     def __repr__(self):

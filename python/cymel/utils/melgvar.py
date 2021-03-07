@@ -2,7 +2,7 @@
 u"""
 MELグローバル変数ラッパー。
 """
-from ..pyutils import Singleton
+from ..pyutils import with_metaclass, Singleton
 import maya.mel as mel
 
 __all__ = ['MelVar', 'melvar']
@@ -11,7 +11,7 @@ _mel_eval = mel.eval
 
 
 #------------------------------------------------------------------------------
-class MelVar(object):
+class MelVar(with_metaclass(Singleton, object)):
     u"""
     MELグローバル変数ラッパークラス。
 
@@ -20,8 +20,6 @@ class MelVar(object):
 
     参照のみが可能で、セットや削除はサポートされない。
     """
-    __metaclass__ = Singleton
-
     def __contains__(self, key):
         return ('$' + key) in _mel_eval('env()')
 

@@ -15,9 +15,10 @@ _from_iterable = itertools.chain.from_iterable
 
 _MFn_kDagNode = _api2.MFn.kDagNode
 _MFn_kReference = _api2.MFn.kReference
-_2_MFnReference = _api2.MFnReference
 _2_getAllPathsTo = _api2.MDagPath.getAllPathsTo
 _2_NullObj = _api2.MObject.kNullObj
+if MAYA_VERSION >= (2016, 5):
+    _2_MFnReference = _api2.MFnReference
 
 _referenceQuery = cmds.referenceQuery
 _file = cmds.file

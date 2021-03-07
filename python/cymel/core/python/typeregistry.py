@@ -12,7 +12,7 @@ _FIX_SLOTS = True  #: 標準 CyObject クラスのスロットを固定する。
 
 
 #------------------------------------------------------------------------------
-class NodeTypes(object):
+class NodeTypes(with_metaclass(Singleton, object)):
     u"""
     ノードタイプのラッパークラスのマネージャー。
 
@@ -41,8 +41,6 @@ class NodeTypes(object):
     `.CyObject` からインスタンスを得ることで
     自動的にクラスを決定させることができる。
     """
-    __metaclass__ = Singleton
-
     def __getattr__(self, name):
         u"""
         ベーシッククラスを得る。
