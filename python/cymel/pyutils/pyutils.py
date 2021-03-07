@@ -14,23 +14,22 @@ from ..constants import AVOID_ZERO_DIV_PRECISION, PI
 try:
     from future.utils import with_metaclass
 except ImportError:
-    try:
-        from six import with_metaclass
+    #try:
+    #    from six import with_metaclass
+    #except ImportError:
+    def with_metaclass(meta, *bases):
+        u"""
+        Function from jinja2/_compat.py. License: BSD.
+        """
+        class metaclass(meta):
+            __call__ = type.__call__
+            __init__ = type.__init__
 
-    except ImportError:
-        def with_metaclass(meta, *bases):
-            u"""
-            Function from jinja2/_compat.py. License: BSD.
-            """
-            class metaclass(meta):
-                __call__ = type.__call__
-                __init__ = type.__init__
-
-                def __new__(cls, name, this_bases, d):
-                    if this_bases is None:
-                        return type.__new__(cls, name, (), d)
-                    return meta(name, bases, d)
-            return metaclass('temporary_class', None, {})
+            def __new__(cls, name, this_bases, d):
+                if this_bases is None:
+                    return type.__new__(cls, name, (), d)
+                return meta(name, bases, d)
+        return metaclass('temporary_class', None, {})
 
 
 #------------------------------------------------------------------------------

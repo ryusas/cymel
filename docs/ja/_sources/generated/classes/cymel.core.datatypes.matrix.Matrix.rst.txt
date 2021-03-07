@@ -71,6 +71,8 @@ class cymel.core.datatypes.matrix.Matrix
         makeInverseScaling
         makeInverseShearing
         makeInverseTranslation
+        makeR
+        makeRotation
         makeS
         makeScaling
         makeSh
@@ -169,6 +171,8 @@ class cymel.core.datatypes.matrix.Matrix
     .. automethod:: makeInverseScaling
     .. automethod:: makeInverseShearing
     .. automethod:: makeInverseTranslation
+    .. automethod:: makeR
+    .. automethod:: makeRotation
     .. automethod:: makeS
     .. automethod:: makeScaling
     .. automethod:: makeSh

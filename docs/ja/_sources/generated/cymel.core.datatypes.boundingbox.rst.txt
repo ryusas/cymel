@@ -12,6 +12,7 @@ cymel.core.datatypes.boundingbox
         :nosignatures:
     
         BoundingBox
+        ImmutableBoundingBox
 
 
 

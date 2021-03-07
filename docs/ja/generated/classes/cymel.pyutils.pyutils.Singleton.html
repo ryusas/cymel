@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.pyutils.pyutils.Singleton &#8212; cymel 0.1.2021012400 ドキュメント</title>
+    <title>class cymel.pyutils.pyutils.Singleton &#8212; cymel 0.2.2021030700 ドキュメント</title>
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="../cymel.pyutils.pyutils.html" title="cymel.pyutils.pyutils"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.1.2021012400 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.2.2021030700 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.pyutils.pyutils.html" accesskey="U">cymel.pyutils.pyutils</a> &#187;</li> 
       </ul>
@@ -85,8 +85,7 @@
 既に存在していればそれが返されるだけである。
 生成時の引数内容の違いも考慮されずに流用される点には注意が必要。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">cymel.main</span> <span class="k">as</span> <span class="nn">cm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">__metaclass__</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">Singleton</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">with_metaclass</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">Singleton</span><span class="p">,</span> <span class="nb">object</span><span class="p">)):</span>
 <span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">_v</span> <span class="o">=</span> <span class="n">v</span>
 <span class="gp">... </span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -133,7 +132,7 @@
         <li class="right" >
           <a href="../cymel.pyutils.pyutils.html" title="cymel.pyutils.pyutils"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.1.2021012400 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.2.2021030700 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.pyutils.pyutils.html" >cymel.pyutils.pyutils</a> &#187;</li> 
       </ul>

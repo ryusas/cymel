@@ -11,6 +11,7 @@ cymel.core.datatypes.quaternion
         :toctree: classes
         :nosignatures:
     
+        ImmutableQuaternion
         Quaternion
 
 

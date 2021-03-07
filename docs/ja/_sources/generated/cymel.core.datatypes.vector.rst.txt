@@ -11,6 +11,7 @@ cymel.core.datatypes.vector
         :toctree: classes
         :nosignatures:
     
+        ImmutableVector
         Vector
 
 

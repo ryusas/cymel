@@ -11,6 +11,7 @@ cymel.core.datatypes.transformation
         :toctree: classes
         :nosignatures:
     
+        ImmutableTransformation
         Transformation
 
 

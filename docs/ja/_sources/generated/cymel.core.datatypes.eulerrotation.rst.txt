@@ -12,6 +12,7 @@ cymel.core.datatypes.eulerrotation
         :nosignatures:
     
         EulerRotation
+        ImmutableEulerRotation
 
 
 
