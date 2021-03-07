@@ -1,0 +1,58 @@
+class cymel.core.datatypes.quaternion.ImmutableQuaternion
+=========================================================
+
+.. currentmodule:: cymel.core.datatypes.quaternion
+
+
+.. inheritance-diagram:: ImmutableQuaternion
+    :parts: 1
+
+
+
+.. autoclass:: ImmutableQuaternion
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        conjugateIt
+        invertIt
+        negateIt
+        normalize
+        normalizeIt
+        set
+        setAngle
+        setToIdentity
+        setToXAxis
+        setToYAxis
+        setToZAxis
+        setValue
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: conjugateIt
+    .. automethod:: invertIt
+    .. automethod:: negateIt
+    .. automethod:: normalize
+    .. automethod:: normalizeIt
+    .. automethod:: set
+    .. automethod:: setAngle
+    .. automethod:: setToIdentity
+    .. automethod:: setToXAxis
+    .. automethod:: setToYAxis
+    .. automethod:: setToZAxis
+    .. automethod:: setValue
+
+

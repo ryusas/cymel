@@ -1,0 +1,40 @@
+class cymel.core.datatypes.boundingbox.ImmutableBoundingBox
+===========================================================
+
+.. currentmodule:: cymel.core.datatypes.boundingbox
+
+
+.. inheritance-diagram:: ImmutableBoundingBox
+    :parts: 1
+
+
+
+.. autoclass:: ImmutableBoundingBox
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        clear
+        expand
+        transformUsing
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: clear
+    .. automethod:: expand
+    .. automethod:: transformUsing
+
+

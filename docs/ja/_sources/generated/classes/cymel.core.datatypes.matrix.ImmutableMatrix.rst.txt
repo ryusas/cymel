@@ -1,0 +1,80 @@
+class cymel.core.datatypes.matrix.ImmutableMatrix
+=================================================
+
+.. currentmodule:: cymel.core.datatypes.matrix
+
+
+.. inheritance-diagram:: ImmutableMatrix
+    :parts: 1
+
+
+
+.. autoclass:: ImmutableMatrix
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        addT
+        addTranslation
+        adjointIt
+        homogenizeIt
+        imulidivsetTranslation
+        init3x3
+        initT
+        initTranslation
+        invertIt
+        mirrorIt
+        set
+        setAxes
+        setAxis
+        setColumn
+        setColumns
+        setElem
+        setRow
+        setRows
+        setT
+        setToIdentity
+        subT
+        subTranslation
+        transposeIt
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: addT
+    .. automethod:: addTranslation
+    .. automethod:: adjointIt
+    .. automethod:: homogenizeIt
+    .. automethod:: imulidivsetTranslation
+    .. automethod:: init3x3
+    .. automethod:: initT
+    .. automethod:: initTranslation
+    .. automethod:: invertIt
+    .. automethod:: mirrorIt
+    .. automethod:: set
+    .. automethod:: setAxes
+    .. automethod:: setAxis
+    .. automethod:: setColumn
+    .. automethod:: setColumns
+    .. automethod:: setElem
+    .. automethod:: setRow
+    .. automethod:: setRows
+    .. automethod:: setT
+    .. automethod:: setToIdentity
+    .. automethod:: subT
+    .. automethod:: subTranslation
+    .. automethod:: transposeIt
+
+

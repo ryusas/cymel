@@ -1,0 +1,36 @@
+class cymel.core.datatypes.transformation.ImmutableTransformation
+=================================================================
+
+.. currentmodule:: cymel.core.datatypes.transformation
+
+
+.. inheritance-diagram:: ImmutableTransformation
+    :parts: 1
+
+
+
+.. autoclass:: ImmutableTransformation
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        clear
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: clear
+
+
