@@ -38,6 +38,7 @@ class cymel.utils.optionvar.OptionVar
         removeDefault
         reset
         resetAll
+        resetToDefaults
         setDefault
         setDefaults
         setTranslator
@@ -75,6 +76,7 @@ class cymel.utils.optionvar.OptionVar
     .. automethod:: removeDefault
     .. automethod:: reset
     .. automethod:: resetAll
+    .. automethod:: resetToDefaults
     .. automethod:: setDefault
     .. automethod:: setDefaults
     .. automethod:: setTranslator

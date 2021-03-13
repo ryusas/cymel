@@ -29,6 +29,8 @@ cymel.pyutils.pyutils
         boundAngle
         donothing
         gettrue
+        im_class
+        im_self
         insertEnvPath
         insertSysPath
         iterTreeBreadthFirst
@@ -42,6 +44,14 @@ cymel.pyutils.pyutils
 
 
 
+
+    .. rubric:: Aliases:
+
+    
+    .. autodata:: dict_get_items
+    .. autodata:: dict_get_keys
+    .. autodata:: dict_get_values
+    .. autodata:: im_func
 
 
 
@@ -71,6 +81,8 @@ cymel.pyutils.pyutils
     .. autofunction:: boundAngle
     .. autofunction:: donothing
     .. autofunction:: gettrue
+    .. autofunction:: im_class
+    .. autofunction:: im_self
     .. autofunction:: insertEnvPath
     .. autofunction:: insertSysPath
     .. autofunction:: iterTreeBreadthFirst

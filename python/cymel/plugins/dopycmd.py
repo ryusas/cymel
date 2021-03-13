@@ -31,8 +31,11 @@ Usage:
     cmds.undo()
 """
 
+import sys
 from _ctypes import PyObj_FromPtr as _fromptr
 import maya.OpenMayaMPx as api
+
+LONG = long if sys.version_info[0] <= 2 else int
 _creator = lambda c: lambda: api.asMPxPtr(c())
 
 
@@ -43,12 +46,12 @@ class dopycmd(api.MPxCommand):
         return True
 
     def doIt(self, args):
-        do = _fromptr(long(args.asString(0), 0))
-        self._undoit = _fromptr(long(args.asString(1), 0))
+        do = _fromptr(LONG(args.asString(0), 0))
+        self._undoit = _fromptr(LONG(args.asString(1), 0))
         if args.length() < 3:
             self._redoit = do
         else:
-            self._redoit = _fromptr(long(args.asString(2), 0)) or do
+            self._redoit = _fromptr(LONG(args.asString(2), 0)) or do
         do()
 
     def redoIt(self):

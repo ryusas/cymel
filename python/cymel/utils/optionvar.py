@@ -141,17 +141,16 @@ class OptionVar(object):
             raise TypeError('unsupported value type: ' + str(type(val)))
 
     def __delitem__(self, key):
-        notFound = True
         if key in self._defaultDict:
             del self._defaultDict[key]
             notFound = False
+        else:
+            notFound = True
 
         k = self._prefix + key
         if _optionVar(ex=k):
             _optionVar(rm=k)
-            notFound = False
-
-        if notFound:
+        elif notFound:
             raise KeyError(key)
 
     def prefix(self):
@@ -184,9 +183,7 @@ class OptionVar(object):
         :param key: キー。
         :returns: 格納されていた値かデフォルト値、又は指定値。
         """
-        val = self
-        if key in self._defaultDict:
-            val = self._defaultDict.pop(key)
+        val = self._defaultDict.pop(key, self)
 
         k = self._prefix + key
         if _optionVar(ex=k):
@@ -278,19 +275,45 @@ class OptionVar(object):
 
     def reset(self, key):
         u"""
-        指定したキーの値をデフォルト値にリセットする。
+        指定したキーの値をリセットする。
+
+        デフォルト値があればその値に、
+        無ければ値が無い状態になる。
 
         :param `str` key: キー。
         """
-        if key not in self._defaultDict:
-            raise KeyError(key)
         _optionVar(rm=self._prefix + key)
 
     def resetAll(self, ignores=None):
         u"""
-        デフォルト値を持つ全てのキーをリセットする。
+        全ての値をリセットする。
 
-        :param iterable ignores: リセットしないキーリスト。
+        デフォルト値があればその値に、
+        無ければ値が無い状態になる。
+
+        接頭辞が未設定の場合は、Mayaの全ての値を削除することになるので、
+        認められない操作であるとしてエラーになる。
+
+        :param iterable ignores: 除外するキーのリストやセット。
+        """
+        prefix = self._prefix
+        if not prefix:
+            raise RuntimeError('resetAll is not allowed because prefix is not set')
+        if ignores:
+            start = len(prefix)
+            for k in _optionVar(l=True):
+                if k.startswith(prefix) and k[start:] not in ignores:
+                    _optionVar(rm=k)
+        else:
+            for k in _optionVar(l=True):
+                if k.startswith(prefix):
+                    _optionVar(rm=k)
+
+    def resetToDefaults(self, ignores=None):
+        u"""
+        デフォルト値を持つ全ての値をリセットする。
+
+        :param iterable ignores: 除外するキーのリストやセット。
         """
         prefix = self._prefix
         if ignores:
@@ -307,7 +330,7 @@ class OptionVar(object):
 
         :rtype: `list`
         """
-        return self._defaultDict.keys()
+        return dict_get_keys(self._defaultDict)
 
     def defaultValues(self):
         u"""
@@ -315,7 +338,7 @@ class OptionVar(object):
 
         :rtype: `list`
         """
-        return self._defaultDict.values()
+        return dict_get_values(self._defaultDict)
 
     def defaultItems(self):
         u"""
@@ -323,7 +346,7 @@ class OptionVar(object):
 
         :rtype: `list`
         """
-        return self._defaultDict.items()
+        return dict_get_items(self._defaultDict)
 
     def nonDefaultKeys(self):
         u"""

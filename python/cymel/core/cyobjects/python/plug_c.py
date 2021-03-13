@@ -86,6 +86,9 @@ class Plug_c(CyObject):
         obj.__lenCalled = False
         return obj
 
+    def __bool__(self):
+        return True
+
     def __len__(self):
         u"""
         maya.cmds を騙すために常に 1 を返す。

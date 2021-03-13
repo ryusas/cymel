@@ -6,6 +6,7 @@ import sys as _sys
 import os as _os
 import os.path as _os_path
 import types as _types
+import re as _re
 from weakref import ref as _wref
 from .immutable import ImmutableDict as _ImmutableDict
 from ..constants import AVOID_ZERO_DIV_PRECISION, PI
@@ -83,6 +84,8 @@ if IS_PYTHON2:
     UNICODE = unicode
     LONG = long  #: Python 2 と 3 の差を吸収する長整数型チェック用。
 
+    RePattern = _re._pattern_type  #: 正規表現パターン型。
+
     lrange = range  #: list を返す range (Python 2 の標準)
     xrange = xrange  #: イテレータによる range
 
@@ -90,16 +93,13 @@ if IS_PYTHON2:
     from itertools import izip  #: イテレータによる zip
     from itertools import izip_longest
 
+    dict_get_items = lambda d: d.items()  #: `dict` から items list を得る。
+    dict_get_keys = lambda d: d.keys()  #: `dict` から keys list を得る。
+    dict_get_values = lambda d: d.values()  #: `dict` から values list を得る。
+
+    im_func = lambda m: m.im_func  #: インスタンスメソッドから func を得る。ビルトインクラスのメソッドだと AttributeError になる。
+
     reduce = reduce
-
-    #im_func = lambda m: m.im_func
-    #im_self = lambda m: m.im_self
-    #im_class = lambda m: m.im_class
-
-    #dict_get_items = lambda d: d.items()
-    #dict_get_keys = lambda d: d.keys()
-    #dict_get_values = lambda d: d.values()
-
     execfile = execfile
 
     def ucToStrList(xx):
@@ -114,23 +114,22 @@ else:
     UNICODE = str
     LONG = int  #: Python 2 と 3 の差を吸収する長整数型チェック用。
 
+    RePattern = _re.Pattern  #: 正規表現パターン型。
+
     lrange = lambda *a: list(range(*a))  # list を返す range (Python 3 には無い)
     xrange = range  #: イテレータによる range (Python 3 の標準)
 
     lzip = lambda *a: list(zip(*a))  #: list を返す zip (Python 3 には無い)
     izip = zip  #: イテレータによる zip
-
     from itertools import zip_longest as izip_longest
 
+    dict_get_items = lambda d: list(d.items())  #: `dict` から items list を得る。
+    dict_get_keys = lambda d: list(d)  #: `dict` から keys list を得る。
+    dict_get_values = lambda d: list(d.values())  #: `dict` から values list を得る。
+
+    im_func = lambda m: m.__func__  #: インスタンスメソッドから func を得る。ビルトインクラスのメソッドだと AttributeError になる。
+
     from functools import reduce
-
-    #im_func = lambda m: m.__func__
-    #im_self = lambda m: m.__self__
-    #im_class = lambda m: m.__self__.__class__
-
-    #dict_get_items = lambda d: list(d.items())
-    #dict_get_keys = lambda d: list(d.keys())
-    #dict_get_values = lambda d: list(d.values())
 
     def execfile(fname, globals=None, locals=None):
         if globals is None:
@@ -147,6 +146,22 @@ else:
         何もしない。
         """
         return xx
+
+
+def im_self(m):
+    u"""
+    インスタンスメソッドから self を得る。
+    """
+    # m.im_self だと py3 で使えず、且つ py2 でもビルトインメソッドでは使えない。
+    return m.__self__
+
+
+def im_class(m):
+    u"""
+    インスタンスメソッドから type を得る。
+    """
+    # m.im_class だと py3 で使えず、且つ py2 でもビルトインメソッドでは使えない。
+    return m.__self__.__class__
 
 
 #------------------------------------------------------------------------------

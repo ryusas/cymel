@@ -448,7 +448,7 @@ def _initCymelConstants():
         if v >= 2018.:
             # 2018nnpp: 2018.n.p
             v = _about(api=True)
-            v = (v / 10000, (v - v / 10000 * 10000) / 100, v - v / 100 * 100)
+            v = (v // 10000, (v - v // 10000 * 10000) // 100, v - v // 100 * 100)
         elif v == 2017.:
             # 2017xx: 2017.?
             v = _about(api=True) - 201700
@@ -464,7 +464,7 @@ def _initCymelConstants():
                 # 201760: 2017update4
                 # 201780: 2017update5
                 v -= 20
-                x = v / 20
+                x = v // 20
                 v = (2017, x + 2, v - x * 20)
                 del x
         else:
