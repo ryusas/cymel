@@ -1,0 +1,71 @@
+cymel.pyutils.immutables
+========================
+
+.. automodule:: cymel.pyutils.immutables
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        ImmutableDict
+
+
+
+
+
+    .. rubric:: Exceptions:
+
+    .. autosummary::
+    
+        CymelImmutableError
+
+
+
+
+
+    .. rubric:: Functions:
+
+    .. autosummary::
+    
+        immutable
+        immutableType
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Constants:
+
+    
+    .. autodata:: OPTIONAL_MUTATOR_DICT
+
+
+
+
+
+    .. rubric:: Exceptions Details:
+
+    
+    .. autoexception:: CymelImmutableError
+
+
+
+
+
+    .. rubric:: Functions Details:
+
+    
+    .. autofunction:: immutable
+    .. autofunction:: immutableType
+
+

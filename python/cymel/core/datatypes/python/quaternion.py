@@ -3,7 +3,7 @@ u"""
 クォータニオンクラス。
 """
 from ...common import *
-from ...pyutils.immutable import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
+from ...pyutils.immutables import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
 from .vector import V
 import maya.api.OpenMaya as _api2
 from math import sin, cos, tan, acos, atan2

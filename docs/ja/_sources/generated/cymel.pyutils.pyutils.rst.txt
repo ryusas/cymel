@@ -25,12 +25,16 @@ cymel.pyutils.pyutils
 
     .. autosummary::
     
+        assembleCodeToCallFunction
         avoidZeroDiv
         boundAngle
+        convIntToBaseN
         donothing
+        getTempFilename
         gettrue
         im_class
         im_self
+        incrementName
         insertEnvPath
         insertSysPath
         iterTreeBreadthFirst
@@ -77,12 +81,16 @@ cymel.pyutils.pyutils
     .. rubric:: Functions Details:
 
     
+    .. autofunction:: assembleCodeToCallFunction
     .. autofunction:: avoidZeroDiv
     .. autofunction:: boundAngle
+    .. autofunction:: convIntToBaseN
     .. autofunction:: donothing
+    .. autofunction:: getTempFilename
     .. autofunction:: gettrue
     .. autofunction:: im_class
     .. autofunction:: im_self
+    .. autofunction:: incrementName
     .. autofunction:: insertEnvPath
     .. autofunction:: insertSysPath
     .. autofunction:: iterTreeBreadthFirst

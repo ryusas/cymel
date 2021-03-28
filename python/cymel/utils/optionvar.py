@@ -87,18 +87,19 @@ class OptionVar(object):
     def __getitem__(self, key):
         k = self._prefix + key
         if _optionVar(ex=k):
-            return self._evalVal(key, _optionVar(q=k))
+            return self._evalVal(k, _optionVar(q=k))
         return self._defaultDict[key]
 
     def __setitem__(self, key, val):
         k = self._prefix + key
         if key in self._defaultDict:
-            # 0, 1 はそのまま False, True と比較可能。
-            if self._defaultDict[key] == val:
+            # bool や int や float のように == で一致するものもあるので型まで比較する。
+            v = self._defaultDict[key]
+            if v == val and type(v) is type(val):
                 _optionVar(rm=k)
                 return
 
-        trans = self._translators.get(key)
+        trans = self._translators.get(k)
         if trans:
             val = trans[1](val)
 
@@ -170,7 +171,7 @@ class OptionVar(object):
         """
         k = self._prefix + key
         if _optionVar(ex=k):
-            return self._evalVal(key, _optionVar(q=k))
+            return self._evalVal(k, _optionVar(q=k))
         return self._defaultDict.get(key, default)
 
     def pop(self, key, *args):
@@ -187,7 +188,7 @@ class OptionVar(object):
 
         k = self._prefix + key
         if _optionVar(ex=k):
-            val = self._evalVal(key, _optionVar(q=k))
+            val = self._evalVal(k, _optionVar(q=k))
             _optionVar(rm=k)
 
         if val is self:
@@ -224,7 +225,7 @@ class OptionVar(object):
         """
         self._defaultDict[key] = val
         k = self._prefix + key
-        if self._evalVal(key, _optionVar(q=k)) == val:
+        if self._evalVal(k, _optionVar(q=k)) == val:
             _optionVar(rm=k)
 
     def setDefaults(self, dic):
@@ -365,10 +366,9 @@ class OptionVar(object):
         :rtype: `list`
         """
         prefix = self._prefix
-        start = len(prefix)
         evalVal = self._evalVal
         return [
-            evalVal(k[start:], _optionVar(q=k))
+            evalVal(k, _optionVar(q=k))
             for k in _optionVar(l=True) if k.startswith(prefix)]
 
     def nonDefaultItems(self):
@@ -381,7 +381,7 @@ class OptionVar(object):
         start = len(prefix)
         evalVal = self._evalVal
         return [
-            (k[start:], evalVal(k[start:], _optionVar(q=k)))
+            (k[start:], evalVal(k, _optionVar(q=k)))
             for k in _optionVar(l=True) if k.startswith(prefix)]
 
     def hasNonDefaultValue(self, key):
@@ -417,13 +417,12 @@ class OptionVar(object):
         :rtype: `list`
         """
         prefix = self._prefix
-        start = len(prefix)
         evalVal = self._evalVal
         defaults = self._defaultDict
-        keys = [k[start:] for k in _optionVar(l=True) if k.startswith(prefix)]
+        keys = [k for k in _optionVar(l=True) if k.startswith(prefix)]
         keySet = frozenset(keys)
-        vals = [evalVal(k, _optionVar(q=prefix + k)) for k in keys]
-        return vals + [defaults[k] for k in defaults if k not in keySet]
+        vals = [evalVal(k, _optionVar(q=k)) for k in keys]
+        return vals + [defaults[k] for k in defaults if (prefix + k) not in keySet]
 
     def items(self):
         u"""
@@ -438,10 +437,10 @@ class OptionVar(object):
         start = len(prefix)
         evalVal = self._evalVal
         defaults = self._defaultDict
-        keys = [k[start:] for k in _optionVar(l=True) if k.startswith(prefix)]
+        keys = [k for k in _optionVar(l=True) if k.startswith(prefix)]
         keySet = frozenset(keys)
-        items = [(k, evalVal(k, _optionVar(q=prefix + k))) for k in keys]
-        return items + [kv for kv in defaults.items() if kv[0] not in keySet]
+        items = [(k[start:], evalVal(k, _optionVar(q=k))) for k in keys]
+        return items + [kv for kv in defaults.items() if (prefix + kv[0]) not in keySet]
 
     def setTranslator(self, key, getter_setter=(eval, repr)):
         u"""

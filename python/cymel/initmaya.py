@@ -291,7 +291,7 @@ def initApiImmutables():
     u"""
     Maya API の数学クラスを `.immutable` ラップのための定義をする。
     """
-    from .pyutils.immutable import OPTIONAL_MUTATOR_DICT
+    from .pyutils.immutables import OPTIONAL_MUTATOR_DICT
     import maya.api.OpenMaya as api2
     import maya.OpenMaya as api1
 

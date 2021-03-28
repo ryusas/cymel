@@ -5,7 +5,7 @@ Mayaファイル関連。
 from ..common import *
 from .operation import (
     nonUndoable as _nonUndoable,
-    preserveSelection as _preserveSelection,
+    PreserveSelection as _PreserveSelection,
 )
 import os
 import maya.mel as mel
@@ -193,7 +193,7 @@ def exportSceneFile(fname, sel=None, all=False, ftype=None, **kwargs):
     if all:
         return _file(fname, ea=True, typ=ftype, f=True, **kwargs)
     elif sel:
-        with _preserveSelection:
+        with _PreserveSelection(True):
             with _nonUndoable:
                 _select(sel)
                 return _file(fname, es=True, typ=ftype, f=True, **kwargs)

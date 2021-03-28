@@ -3,7 +3,7 @@ u"""
 オイラー角回転クラス。
 """
 from ...common import *
-from ...pyutils.immutable import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
+from ...pyutils.immutables import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
 import maya.api.OpenMaya as _api2
 from math import sqrt, atan2
 

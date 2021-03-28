@@ -9,6 +9,8 @@ import maya.OpenMaya as _api1
 __all__ = [
     'correctNodeName',
     'correctNodeNameNS',
+    'escapeForMel',
+    'makeNiceName',
 
     'loadPlugin',
     'enablePlugin',
@@ -61,6 +63,35 @@ def correctNodeNameNS(name):
 
 _RE_INVALID_CHARACTERS_FOR_NS_NODENAME_sub = re.compile(r'[^\w:]').sub  #: ネームスペース付きノード名に都合の悪い文字。
 _RE_REDUNDANT_NS_SEPARATOR_sub = re.compile(r':+\d*').sub  #: ネームスペース区切りと続く数字。
+
+
+def escapeForMel(s):
+    u"""
+    melの文字列向けのエスケープをする。
+
+    :param `str` s: 文字列。
+    :rtype: `str`
+    """
+    return _RE_ESCAPES_FOR_MEL_sub(r'\\\1', s)
+
+_RE_ESCAPES_FOR_MEL_sub = re.compile(r'(["\\])').sub
+
+
+def makeNiceName(name):
+    u"""
+    mixedCase や CamelCase の名前から Maya の Nice Name を得る。
+
+    :param `str` name: 任意の名前。
+    :rtype: `str`
+    """
+    if name:
+        return ' '.join([
+            (x[0].upper() + x[1:])
+            for x in _RE_WORDS_OR_MAYA_NAME_findall(name)
+        ])
+    return name
+
+_RE_WORDS_OR_MAYA_NAME_findall = re.compile(r'([A-Z]+(?![^A-Z])|[A-Z][a-z]*|\d+|(?<![A-Z])[a-z]+|\|)').findall
 
 
 #------------------------------------------------------------------------------

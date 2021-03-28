@@ -3,7 +3,7 @@ u"""
 3Dバウンディングボックスクラス。
 """
 from ...common import *
-from ...pyutils.immutable import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
+from ...pyutils.immutables import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
 from .vector import _newV
 import maya.api.OpenMaya as _api2
 from math import sqrt

@@ -3,7 +3,7 @@ u"""
 3Dベクトルクラス。
 """
 from ...common import *
-from ...pyutils.immutable import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
+from ...pyutils.immutables import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
 import maya.api.OpenMaya as _api2
 from math import sqrt
 
@@ -264,7 +264,7 @@ class Vector(object):
 
     def isZero(self, tol=_TOLERANCE):
         u"""
-        ほぼゼロかどうか。
+        3次元ベクトルがほぼゼロかどうか。
 
         :param `float` tol: 許容誤差。
         :rtype: `bool`

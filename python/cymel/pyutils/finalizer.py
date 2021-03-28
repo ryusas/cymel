@@ -45,7 +45,7 @@ def deregisterFinalizer(key):
 
     :param `int` key: 登録時に返されたID。
     """
-    del _wref_dict[i]
+    del _wref_dict[key]
 
 
 def _finalizer(r):

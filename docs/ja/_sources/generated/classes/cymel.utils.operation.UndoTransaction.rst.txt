@@ -1,0 +1,36 @@
+class cymel.utils.operation.UndoTransaction
+===========================================
+
+.. currentmodule:: cymel.utils.operation
+
+
+.. inheritance-diagram:: UndoTransaction
+    :parts: 1
+
+
+
+.. autoclass:: UndoTransaction
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        decorate
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: decorate
+
+

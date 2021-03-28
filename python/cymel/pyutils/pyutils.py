@@ -8,7 +8,9 @@ import os.path as _os_path
 import types as _types
 import re as _re
 from weakref import ref as _wref
-from .immutable import ImmutableDict as _ImmutableDict
+from tempfile import gettempdir as _gettempdir
+from random import Random as _Random
+from .immutables import ImmutableDict as _ImmutableDict
 from ..constants import AVOID_ZERO_DIV_PRECISION, PI
 
 #------------------------------------------------------------------------------
@@ -261,6 +263,7 @@ def parentClasses(cls):
     return mro[1:i]
 
 
+#------------------------------------------------------------------------------
 def avoidZeroDiv(v, pre=AVOID_ZERO_DIV_PRECISION):
     u"""
     Maya を模倣したゼロ割を防ぐ為の分母を得る。
@@ -398,6 +401,110 @@ def insertSysPath(path, index=-1, noCheck=False):
         else:
             _sys.path.insert(index, path)
     return result
+
+
+#------------------------------------------------------------------------------
+def incrementName(name):
+    u"""
+    名前の末尾の数字をインクリメントする。
+
+    >>> import cymel.main as cm
+    >>> cm.incrementName('hoge')
+    'hoge1'
+    >>> cm.incrementName('hoge1')
+    'hoge2'
+    """
+    m = _RE_TAIL_NUMBER_search(name)
+    if m:
+        i = m.group(0)
+        return name[:-len(i)] + str(int(i) + 1)
+    return name + '1'
+
+_RE_TAIL_NUMBER_search = _re.compile(r'\d+$').search
+
+
+def convIntToBaseN(i, chars='0123456789abcdef'):
+    u"""
+    整数を N 進数表記の文字列に変換する。
+
+    :param `str` chars:
+        桁の文字を 0～N-1 まで並べた文字列。
+        デフォルトは小文字の16進数。
+    :rtype: `str`
+
+    >>> import cymel.main as cm
+    >>> convIntToBaseN(255)
+    'ff'
+    >>> convIntToBaseN(4096)
+    '1000'
+    """
+    num = len(chars)
+    r = i % num
+    i //= num
+    s = chars[r]
+    while i:
+        r = i % num
+        i //= num
+        s = chars[r] + s
+    return s
+
+
+def assembleCodeToCallFunction(name, *args, **kwargs):
+    u"""
+    関数呼び出し用のコード文字列を生成する。
+
+    :param `str` name: 関数名。
+    :param iterable args: 引数リスト。
+    :param `dict` kwargs: キーワード引数辞書。
+    :rtype: `str`
+    """
+    if args:
+        args = repr(args)
+        if args[-2] == ',':
+            args = [args[1:-2]]
+        else:
+            args = [args[1:-1]]
+        args.extend([(str(k) + '=' + repr(v)) for k, v in kwargs.items()])
+    else:
+        args = [(str(k) + '=' + repr(v)) for k, v in kwargs.items()]
+    return name + '(' + ', '.join(args) + ')'
+
+
+#------------------------------------------------------------------------------
+def getTempFilename(
+    suffix='', prefix='tmp', dir=None, n=5,
+    chars='abcdefghijklmnopqrstuvwxyz0123456789_'
+):
+    u"""
+    任意に使えるテンポラリファイル名をフルパスで得る。
+
+    :param `str` prefix: ファイル名に付ける任意の接頭辞を指定する。
+    :param `str` suffix: ファイル名に付ける任意の接尾辞を指定する。
+    :param `str` dir: ファイルを生成するディレクトリパスを指定する。
+    :param `int` n: ランダムに決まる部分の文字数を指定する。
+    :param `str` chars: ランダムに決まる部分に使用される文字。
+    :rtype: `str`
+    """
+    if dir is None:
+        dir = _gettempdir()
+
+    global _tempFileNamer
+    if not _tempFileNamer:
+        _tempFileNamer = _makeTempFileNamer()
+
+    name = _os_path_join(dir, prefix + _tempFileNamer(n, chars) + suffix)
+    while _os_path_exists(name):
+        name = _os_path_join(dir, prefix + _tempFileNamer(n, chars) + suffix)
+    return name
+
+_tempFileNamer = None
+
+
+def _makeTempFileNamer(seed=None):
+    def proc(n, chars):
+        return ''.join([choose(chars) for i in range(n)])
+    choose = _Random(seed).choice
+    return proc
 
 
 #------------------------------------------------------------------------------

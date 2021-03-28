@@ -27,7 +27,7 @@ class cymel.utils.operation.PreserveSelection
     .. rubric:: Attributes:
 
     
-    .. autoattribute:: ascmd
+    .. autoattribute:: nocmd
 
 
 

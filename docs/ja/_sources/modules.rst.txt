@@ -106,7 +106,7 @@ Utilities (Independent of Maya)
     :toctree: generated/
 
     cymel.pyutils.finalizer
-    cymel.pyutils.immutable
+    cymel.pyutils.immutables
     cymel.pyutils.ordereddict
     cymel.pyutils.pyutils
 

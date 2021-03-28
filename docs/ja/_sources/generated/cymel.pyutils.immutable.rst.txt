@@ -1,6 +1,0 @@
-cymel.pyutils.immutable
-=======================
-
-.. currentmodule:: cymel.pyutils
-
-.. autofunction:: immutable

@@ -250,15 +250,23 @@ class RelativeNamespace(object):
     """
     __slots__ = ('namespace', '_lastcur', '_notrel')
 
-    def __init__(self, namespace):
-        if isinstance(namespace, Namespace):
-            self.namespace = namespace
+    def __init__(self, namespace=None):
+        if namespace:
+            if isinstance(namespace, Namespace):
+                self.namespace = namespace
+            else:
+                self.namespace = Namespace(namespace)
         else:
-            self.namespace = Namespace(namespace)
+            self.namespace = None
 
     def __enter__(self):
-        self._lastcur = _namespaceInfo(cur=True, an=True)
-        _setCurrentNS(self.namespace)
+        ns = self.namespace and _namespaceInfo(cur=True, an=True)
+        if self.namespace == ns:
+            self._lastcur = None
+        else:
+            self._lastcur = ns
+            _setCurrentNS(self.namespace)
+
         if _namespace(q=True, rel=True):
             self._notrel = False
         else:
@@ -268,7 +276,8 @@ class RelativeNamespace(object):
     def __exit__(self, exc_type, exc_value, traceback):
         if self._notrel:
             _namespace(rel=False)
-        _setCurrentNS(self._lastcur)
+        if self._lastcur:
+            _setCurrentNS(self._lastcur)
 
 RelativeNS = RelativeNamespace  #: `RelativeNamespace` の別名。
 

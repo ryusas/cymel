@@ -3,25 +3,25 @@ u"""
 循環参照によるメモリリークが解決された `ordereddict` 。
 """
 import sys as _sys
-try:
-    from collections import OrderedDict as _OrderedDict
-except ImportError:
-    from .exts.ordereddict import OrderedDict as _OrderedDict
 
 __all__ = ['CleanOrderedDict']
 
 
 #------------------------------------------------------------------------------
-if _sys.version_info[0] < 3:
+if _sys.version_info[:2] < (3, 6):
+    try:
+        from collections import OrderedDict as _OrderedDict
+    except ImportError:
+        from .exts.ordereddict import OrderedDict as _OrderedDict
     from weakref import ref as _wref
 
     class CleanOrderedDict(_OrderedDict):
         u"""
         破棄された後の参照の後始末も行う `OrderedDict` 。
 
-        OrderedDict には、キーにしたオブジェクトの循環参照が生じる問題がある。
-        その為、 OrderedDict が破棄されても、キーにしたオブジェクトは
-        ガベージコレクトされるまで破棄されなくなってしまう。
+        OrderedDict では、キーにしたオブジェクトの循環参照が生じており、
+        値を保持したまま OrderedDict インスタンスが破棄されると、
+        キーはガベージコレクトされるまで破棄されなくなってしまう。
 
         そこで、自身が破棄された後に、
         内部で保持されていたキーの相互参照を破棄する処理を追加した。
@@ -42,5 +42,5 @@ if _sys.version_info[0] < 3:
     _wref_dict = {}
 
 else:
-    CleanOrderedDict = _OrderedDict  #: `OrderedDict` の別名。Python3.? 以降ではキーの循環参照問題が解決されている。
+    CleanOrderedDict = dict  #: `dict` の別名。Python3.6 以降では dict が OrderedDict 相当になり、キーの循環参照問題も解決されている。
 

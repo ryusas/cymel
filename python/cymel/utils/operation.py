@@ -12,13 +12,14 @@ __all__ = [
     'doNothingCmd',
     'WaitCursor', 'waitCursor',
     'UndoChunk', 'undoChunk',
+    'UndoTransaction', 'undoTransaction',
     'NonUndoable', 'nonUndoable',
     'PreserveSelection',
-    'preserveSelection', 'preserveSelectionCmd',
 ]
 
 _waitCursor = cmds.waitCursor
 _undoInfo = cmds.undoInfo
+_undo = cmds.undo
 
 if MAYA_VERSION >= (2016,):
     _setCurSel = api2.MGlobal.setActiveSelectionList
@@ -139,6 +140,35 @@ undoChunk = UndoChunk()  #: `UndoChunk` の生成済みインスタンス。
 
 
 #------------------------------------------------------------------------------
+class UndoTransaction(object):
+    u"""
+    コンテキストで例外が発生した場合にアンドゥするトランザクション。
+
+    インスタンス `undoTransaction` が生成済み。
+    """
+    def __enter__(self):
+        _undoInfo(ock=True)
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        if exc_type:
+            doNothingCmd()
+            _undoInfo(cck=True)
+            _undo()
+        else:
+            _undoInfo(cck=True)
+
+    @classmethod
+    def decorate(cls, proc):
+        def wrap(*a, **k):
+            with cls():
+                return proc(*a, **k)
+        return wrap
+
+undoTransaction = UndoTransaction()  #: `UndoTransaction` の生成済みインスタンス。
+
+
+#------------------------------------------------------------------------------
 class NonUndoable(object):
     u"""
     アンドゥ不可で実行するコンテキスト。
@@ -199,9 +229,6 @@ class PreserveSelection(object):
     u"""
     元の選択状態を復元できるコンテキスト。
 
-    インスタンス `preserveSelection` と
-    `preserveSelectionCmd` が生成済み。
-
     >>> import maya.cmds as cmds
     >>> import cymel.main as cm
     >>> cm.Transform()
@@ -209,35 +236,32 @@ class PreserveSelection(object):
     >>> cm.Transform()
     Transform('transform2')
     >>> cmds.select(['transform*', 'persp'])
-    >>> with cm.preserveSelection:
+    >>> with cm.PreserveSelection():
     ...     cmds.delete('transform2')
     ...     cmds.select('side')
     ...
     >>> cmds.ls(sl=True)
     [u'transform1', u'persp']
     """
-    __slots__ = ('ascmd',)
+    __slots__ = ('nocmd', '_sel')
 
-    def __init__(self, ascmd=False):
+    def __init__(self, nocmd=False):
         u"""
         初期化。
 
-        :param `bool` ascmd:
+        :param `bool` nocmd:
             コンテキストから抜ける際のセレクション復元処理を
-            コマンドキューを消費して行うかどうか。
+            コマンドキューを消費せずに行うかどうか。
         """
-        self.ascmd = ascmd
+        self.nocmd = nocmd
 
     def __enter__(self):
         self._sel = _getCurSel()
         return self
 
     def __exit__(self, exc_type, exc_value, traceback):
-        if self.ascmd:
+        if self.nocmd:
             docmd(partial(_setCurSel, self._sel), partial(_setCurSel, _getCurSel()))
         else:
             _setCurSel(self._sel)
-
-preserveSelection = PreserveSelection()  #: `PreserveSelection` の生成済みインスタンス。
-preserveSelectionCmd = PreserveSelection(True)  #: `PreserveSelection` (True) の生成済みインスタンス。
 

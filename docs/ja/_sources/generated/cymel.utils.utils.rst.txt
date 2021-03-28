@@ -22,8 +22,10 @@ cymel.utils.utils
         correctNodeName
         correctNodeNameNS
         enablePlugin
+        escapeForMel
         listEnum
         loadPlugin
+        makeNiceName
 
 
 
@@ -51,7 +53,9 @@ cymel.utils.utils
     .. autofunction:: correctNodeName
     .. autofunction:: correctNodeNameNS
     .. autofunction:: enablePlugin
+    .. autofunction:: escapeForMel
     .. autofunction:: listEnum
     .. autofunction:: loadPlugin
+    .. autofunction:: makeNiceName
 
 

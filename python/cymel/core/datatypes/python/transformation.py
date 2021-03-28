@@ -3,7 +3,7 @@ u"""
 トランスフォーメーション情報クラス。
 """
 from ...common import *
-from ...pyutils.immutable import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
+from ...pyutils.immutables import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
 from .eulerrotation import E, ImmutableEulerRotation, _newE
 from .matrix import M, ImmutableMatrix, _newM
 from .quaternion import Q, ImmutableQuaternion, _newQ
