@@ -157,7 +157,7 @@ def nonNetworkedMPlug(mplug):
     if mplug.isNetworked:
         # toNonNetworkedMPlug と同じ処理。
         mattr = mplug.attribute()
-        if mp.isElement:
+        if mplug.isElement:
             idxAttrs = [(mplug.logicalIndex(), mattr)]
             mp = mplug.array()
         else:
@@ -185,7 +185,7 @@ def toNonNetworkedMPlug(mplug):
     :rtype: :mayaapi2:`MPlug`
     """
     mattr = mplug.attribute()
-    if mp.isElement:
+    if mplug.isElement:
         idxAttrs = [(mplug.logicalIndex(), mattr)]
         mp = mplug.array()
     else:
