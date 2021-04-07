@@ -9,7 +9,7 @@ import types as _types
 import re as _re
 from weakref import ref as _wref
 from tempfile import gettempdir as _gettempdir
-from random import Random as _Random
+from random import choice as _choice
 from .immutables import ImmutableDict as _ImmutableDict
 from ..constants import AVOID_ZERO_DIV_PRECISION, PI
 
@@ -473,7 +473,7 @@ def assembleCodeToCallFunction(name, *args, **kwargs):
 #------------------------------------------------------------------------------
 def getTempFilename(
     suffix='', prefix='tmp', dir=None, n=5,
-    chars='abcdefghijklmnopqrstuvwxyz0123456789_'
+    chars='abcdefghijklmnopqrstuvwxyz0123456789'
 ):
     u"""
     任意に使えるテンポラリファイル名をフルパスで得る。
@@ -488,23 +488,12 @@ def getTempFilename(
     if dir is None:
         dir = _gettempdir()
 
-    global _tempFileNamer
-    if not _tempFileNamer:
-        _tempFileNamer = _makeTempFileNamer()
+    namer = lambda: ''.join([_choice(chars) for i in range(n)])
 
-    name = _os_path_join(dir, prefix + _tempFileNamer(n, chars) + suffix)
+    name = _os_path_join(dir, prefix + namer() + suffix)
     while _os_path_exists(name):
-        name = _os_path_join(dir, prefix + _tempFileNamer(n, chars) + suffix)
+        name = _os_path_join(dir, prefix + namer() + suffix)
     return name
-
-_tempFileNamer = None
-
-
-def _makeTempFileNamer(seed=None):
-    def proc(n, chars):
-        return ''.join([choose(chars) for i in range(n)])
-    choose = _Random(seed).choice
-    return proc
 
 
 #------------------------------------------------------------------------------
