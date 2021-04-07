@@ -41,7 +41,6 @@ cymel.pyutils.pyutils
         iterTreeDepthFirst
         parentClasses
         ucToStrList
-        with_metaclass
 
 
 
@@ -97,6 +96,5 @@ cymel.pyutils.pyutils
     .. autofunction:: iterTreeDepthFirst
     .. autofunction:: parentClasses
     .. autofunction:: ucToStrList
-    .. autofunction:: with_metaclass
 
 

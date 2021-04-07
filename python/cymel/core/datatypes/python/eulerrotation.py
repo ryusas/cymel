@@ -292,7 +292,7 @@ class EulerRotation(object):
 
     asX = asTransformation  #: `asTransformation` の別名。
 
-    def incrementalRotateBy(axis, angle):
+    def incrementalRotateBy(self, axis, angle):
         u"""
         Perform an incremental rotation by the specified axis and angle.
         The rotation is broken down and performed in smaller steps so that the angles update properly.
@@ -300,7 +300,7 @@ class EulerRotation(object):
         self.__data.incrementalRotateBy(_MV(axis._Vector__data), angle)
         return self
 
-    def inverse():
+    def inverse(self):
         u"""
         逆回転を得る。
 
@@ -308,7 +308,7 @@ class EulerRotation(object):
         """
         return _newE(self.__data.inverse())
 
-    def invertIt():
+    def invertIt(self):
         u"""
         逆回転をセットする。
 
