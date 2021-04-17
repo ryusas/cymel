@@ -2,6 +2,10 @@
 u"""
 循環参照によるメモリリークが解決された `ordereddict` 。
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 import sys as _sys
 
 __all__ = ['CleanOrderedDict']

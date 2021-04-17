@@ -79,7 +79,7 @@ class TestOptionVar(unittest.TestCase):
 
         for key, val in _DEFAULTS.items():
             self.assertTrue(key in opts)
-            self.assertTrue(opts.has_key(key))
+            #self.assertTrue(opts.has_key(key))
             self.assertTrue(opts.hasDefault(key))
             self.assertFalse(opts.hasNonDefaultValue(key))
             self.assertEqual(opts[key], val)

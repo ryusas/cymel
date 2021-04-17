@@ -2,6 +2,10 @@
 u"""
 Mayaに依存しない諸機能。
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 import sys as _sys
 if _sys.hexversion < 0x2060000:
     raise EnvironmentError('unsupported python version')

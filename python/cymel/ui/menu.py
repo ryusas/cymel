@@ -2,6 +2,10 @@
 u"""
 mel UI のメニュー系のラッパー。
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 from ..common import *
 from .uitypes import *
 from .control import Control

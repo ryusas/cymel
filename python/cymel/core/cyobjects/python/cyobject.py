@@ -2,6 +2,10 @@
 u"""
 Mayaラッパーオブジェクトの抽象基底クラス。
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 import sys
 import types
 from uuid import UUID as _UUID

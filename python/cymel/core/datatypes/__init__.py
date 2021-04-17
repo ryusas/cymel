@@ -1,3 +1,7 @@
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 import os.path as _os_path
 __path__.append(_os_path.join(__path__[0], 'python'))
 del _os_path

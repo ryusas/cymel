@@ -8,6 +8,8 @@ cymel 内の Maya に依存するモジュールがインポートされる際�
 初期化プロセスをカスタマイズしたい場合などに利用できる。
 """
 from __future__ import print_function
+from __future__ import absolute_import
+from __future__ import division
 
 import sys
 import os

@@ -2,6 +2,10 @@
 u"""
 `.DagNode` クラスでサポートする機能の中核。
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 from ...common import *
 from .cyobject import _newNodeObjByMPath
 from .objectref import _getObjectRef

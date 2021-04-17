@@ -2,6 +2,8 @@
 u"""
 トランスフォーメーション関連のテスト。
 """
+from __future__ import print_function
+
 from cymel.all import *
 from random import seed, random, uniform, randrange
 from math import sqrt, cos, sin

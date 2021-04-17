@@ -2,6 +2,10 @@
 u"""
 プラグラッパークラス。
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 from ...common import *
 from ..typeregistry import _FIX_SLOTS
 from .plug_c import Plug_c

@@ -25,6 +25,8 @@ u"""
     import pprint
     maya.utils.formatGuiResult = pprint.pformat
 """
+from __future__ import absolute_import
+
 from .constants import *
 from . import main as cm
 from . import ui as cmu

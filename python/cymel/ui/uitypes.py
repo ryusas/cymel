@@ -3,6 +3,8 @@ u"""
 mel UI タイプ情報と、自動生成UIクラス。
 """
 from __future__ import print_function
+from __future__ import absolute_import
+from __future__ import division
 
 from ..common import *
 

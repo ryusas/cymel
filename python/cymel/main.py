@@ -12,6 +12,8 @@ UI以外の全機能。
 - cymel.utils 以下の全て。
 - cymel.initmaya の全て。
 """
+from __future__ import absolute_import
+
 from .core import *
 from .constants import *
 from .pyutils import *

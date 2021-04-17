@@ -2,6 +2,10 @@
 u"""
 :mayanode:`node` ノードタイプラッパークラス。
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 from uuid import uuid4 as _uuid4, UUID as _UUID
 from ...common import *
 from ...utils.namespace import _wrapNS, _mayaNS

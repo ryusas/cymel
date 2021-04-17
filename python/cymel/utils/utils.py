@@ -2,6 +2,10 @@
 u"""
 Maya用の様々なヘルパー。
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 from ..common import *
 import maya.api.OpenMaya as _api2
 import maya.OpenMaya as _api1

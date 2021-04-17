@@ -2,6 +2,10 @@
 u"""
 `.CyObject` の参照が切れていても再取得が可能な弱参照ラッパー。
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 from ...common import *
 from .cyobject import CyObject, _decideNodeClsFromData
 from weakref import ref as _wref

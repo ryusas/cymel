@@ -4,6 +4,8 @@ cymel全体で使用する主な定数。
 
 よく使うものに厳選してあるので * で import しても良いかも知れない。
 """
+from __future__ import absolute_import
+
 from math import pi as PI  #: π
 
 TO_DEG = 180. / PI  #: Radians を Degrees に変換するための係数。

@@ -2,6 +2,8 @@
 u"""
 Plugのsetやgetのテスト。
 """
+from __future__ import print_function
+
 import sys
 from functools import partial
 from maya.api.OpenMaya import (

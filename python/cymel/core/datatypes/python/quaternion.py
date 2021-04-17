@@ -2,6 +2,10 @@
 u"""
 クォータニオンクラス。
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 from ...common import *
 from ...pyutils.immutables import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
 from .vector import V

@@ -30,6 +30,9 @@ Usage:
     cmds.undo()
     cmds.undo()
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
 
 import sys
 from _ctypes import PyObj_FromPtr as _fromptr
