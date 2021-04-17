@@ -2,6 +2,10 @@
 u"""
 Test of cymel.pyutils.ordereddict
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 import sys
 import unittest
 import random

@@ -3,6 +3,8 @@ u"""
 トランスフォーメーション関連のテスト。
 """
 from __future__ import print_function
+from __future__ import absolute_import
+from __future__ import division
 
 from cymel.all import *
 from random import seed, random, uniform, randrange

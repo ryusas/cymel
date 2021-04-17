@@ -3,6 +3,8 @@ u"""
 Plugのsetやgetのテスト。
 """
 from __future__ import print_function
+from __future__ import absolute_import
+from __future__ import division
 
 import sys
 from functools import partial
@@ -15,6 +17,7 @@ from maya.api.OpenMaya import (
 from cymel.all import *
 from random import seed, random, uniform, randrange
 from .xform import randX
+lrange = cm.lrange
 
 __all__ = ['doit']
 
@@ -99,24 +102,24 @@ def doit(s=13):
     #_testSetGet(expr.addAttr('reflectance', 'reflectance', getPlug=True), _randColor())
     #_testSetGet(expr.addAttr('spectrum', 'spectrum', getPlug=True), _randColor())
 
-    _testSetGetArray(expr.addAttr('dblarr', 'doubleArray', getPlug=True), _randFArr, range(8))
-    _testSetGetArray(expr.addAttr('fltarr', 'floatArray', getPlug=True), _randFArr, range(8), _compareFArr)
-    _testSetGetArray(expr.addAttr('i32arr', 'Int32Array', getPlug=True), _randIArr, range(8))
-    _testSetGetArray(expr.addAttr('strarr', 'stringArray', getPlug=True), _randSArr, range(8))
+    _testSetGetArray(expr.addAttr('dblarr', 'doubleArray', getPlug=True), _randFArr, lrange(8))
+    _testSetGetArray(expr.addAttr('fltarr', 'floatArray', getPlug=True), _randFArr, lrange(8), _compareFArr)
+    _testSetGetArray(expr.addAttr('i32arr', 'Int32Array', getPlug=True), _randIArr, lrange(8))
+    _testSetGetArray(expr.addAttr('strarr', 'stringArray', getPlug=True), _randSArr, lrange(8))
 
     # Int64Array の setAttr はバギー。
     # - long を含むとエラー。
     # - 要素数が奇数だと要素が1個減ってセットされる。
     # - 負数は含められないので、実質 unsigned ぽいが、バグか仕様かは不明。
     if cm.MAYA_VERSION >= (2016, 5):
-        _testSetGetArray(expr.addAttr('i64arr', 'Int64Array', getPlug=True), partial(_randIArr, mn=0), range(0, 8, 2))  # _randLArr, range(8))
+        _testSetGetArray(expr.addAttr('i64arr', 'Int64Array', getPlug=True), partial(_randIArr, mn=0), lrange(0, 8, 2))  # _randLArr, lrange(8))
 
     if cm.MAYA_VERSION >= (2016,):
-        _testSetGetArray(expr.addAttr('matarr', 'matrixArray', getPlug=True), _randMatArr, range(8))
+        _testSetGetArray(expr.addAttr('matarr', 'matrixArray', getPlug=True), _randMatArr, lrange(8))
 
-    _testSetGetArray(expr.addAttr('vecarr', 'vectorArray', getPlug=True), _randVecArr, range(8))
-    _testSetGetArray(expr.addAttr('fvecarr', 'floatVectorArray', getPlug=True), _randFVecArr, range(8))
-    _testSetGetArray(expr.addAttr('pntarr', 'pointArray', getPlug=True), _randPntArr, range(8))
+    _testSetGetArray(expr.addAttr('vecarr', 'vectorArray', getPlug=True), _randVecArr, lrange(8))
+    _testSetGetArray(expr.addAttr('fvecarr', 'floatVectorArray', getPlug=True), _randFVecArr, lrange(8))
+    _testSetGetArray(expr.addAttr('pntarr', 'pointArray', getPlug=True), _randPntArr, lrange(8))
 
 
 #------------------------------------------------------------------------------
