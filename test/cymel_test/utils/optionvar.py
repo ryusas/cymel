@@ -33,7 +33,7 @@ _KEY_SET = frozenset(_DEFAULTS)
 _GKEY_SET = frozenset([_PREFIX + x for x in _DEFAULTS])
 
 if sys.hexversion < 0x3000000 and MAYA_VERSION >= (2016,):
-    # 2016 ˆÈ~Aint ‚Í int ‚¾‚ª intArray ‚Í long ‚É‚È‚éB
+    # 2016 ä»¥é™ã€int ã¯ int ã ãŒ intArray ã¯ long ã«ãªã‚‹ã€‚
     _INTARRAY = lambda a: [long(x) for x in a]
 else:
     _INTARRAY = lambda a: a
