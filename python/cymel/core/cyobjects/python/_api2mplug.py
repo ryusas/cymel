@@ -541,25 +541,38 @@ def _makeUnsupportedType(typename):
 
 
 #------------------------------------------------------------------------------
-def _mplug_get_generic(mplug):
-    u"""
-    generic 型 :mayaapi2:`MPlug` から値を得る。
-
-    数値、数値データ、文字列、matrix に対応。
-
-    単位付き型の場合は内部単位となる。
-
-    :param mplug: :mayaapi2:`MPlug`
-    :returns: 数値かリスト。
-    """
-    try:
-        mobj = mplug.asMObject()
-    except RuntimeError:
+if (2016,) <= MAYA_VERSION < (2016, 5):
+    # 2016 だけ generic の MPlug で asXXXX() をやると 2度目は失敗するバグがあるので、その対策。
+    def _mplug_get_generic(mplug):
         try:
-            return mplug.asDouble()
-        except:
-            return mplug.asString()
-    return dataToValue(mobj, mplug)
+            mobj = _2_MPlug(mplug).asMObject()
+        except RuntimeError:
+            try:
+                return _2_MPlug(mplug).asDouble()
+            except:
+                return _2_MPlug(mplug).asString()
+        return dataToValue(mobj, mplug)
+
+else:
+    def _mplug_get_generic(mplug):
+        u"""
+        generic 型 :mayaapi2:`MPlug` から値を得る。
+
+        数値、数値データ、文字列、matrix に対応。
+
+        単位付き型の場合は内部単位となる。
+
+        :param mplug: :mayaapi2:`MPlug`
+        :returns: 数値かリスト。
+        """
+        try:
+            mobj = mplug.asMObject()
+        except RuntimeError:
+            try:
+                return mplug.asDouble()
+            except:
+                return mplug.asString()
+        return dataToValue(mobj, mplug)
 
 
 def mplug_get_nums(mplug):

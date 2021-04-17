@@ -18,9 +18,13 @@ __all__ = ['doit']
 
 _XformClasses = (cm.Matrix, cm.Transformation)
 
+TIME_TOLERANCE = 1e-6 if cm.MAYA_VERSION >= (2017,) else 1e-3
+
 
 #------------------------------------------------------------------------------
 def doit(s=13):
+    cmds.file(f=True, new=True)
+
     seed(s)
 
     cm.loadPlugin('exprespy')
@@ -68,7 +72,7 @@ def doit(s=13):
     _testSetGet(expr.addAttr('double', 'double', getPlug=True), _randF())
     _testSetGet(expr.addAttr('doubleLinear', 'doubleLinear', getPlug=True), _randF(), partial(_compareF, tol=1e-12))
     _testSetGet(expr.addAttr('doubleAngle', 'doubleAngle', getPlug=True), _randF(), partial(_compareF, tol=1e-12))
-    _testSetGet(expr.addAttr('time', 'time', getPlug=True), _randF(), partial(_compareF, tol=1e-4))
+    _testSetGet(expr.addAttr('time', 'time', getPlug=True), _randF(), partial(_compareF, tol=TIME_TOLERANCE))
 
     _testSetGet(expr.addAttr('float', 'float', getPlug=True), _randF(), _compareF)
     _testSetGet(expr.addAttr('floatLinear', 'floatLinear', getPlug=True), _randF(), _compareF)
@@ -102,9 +106,12 @@ def doit(s=13):
     # - long を含むとエラー。
     # - 要素数が奇数だと要素が1個減ってセットされる。
     # - 負数は含められないので、実質 unsigned ぽいが、バグか仕様かは不明。
-    _testSetGetArray(expr.addAttr('i64arr', 'Int64Array', getPlug=True), partial(_randIArr, mn=0), range(0, 8, 2))  # _randLArr, range(8))
+    if cm.MAYA_VERSION >= (2016, 5):
+        _testSetGetArray(expr.addAttr('i64arr', 'Int64Array', getPlug=True), partial(_randIArr, mn=0), range(0, 8, 2))  # _randLArr, range(8))
 
-    _testSetGetArray(expr.addAttr('matarr', 'matrixArray', getPlug=True), _randMatArr, range(8))
+    if cm.MAYA_VERSION >= (2016,):
+        _testSetGetArray(expr.addAttr('matarr', 'matrixArray', getPlug=True), _randMatArr, range(8))
+
     _testSetGetArray(expr.addAttr('vecarr', 'vectorArray', getPlug=True), _randVecArr, range(8))
     _testSetGetArray(expr.addAttr('fvecarr', 'floatVectorArray', getPlug=True), _randFVecArr, range(8))
     _testSetGetArray(expr.addAttr('pntarr', 'pointArray', getPlug=True), _randPntArr, range(8))
@@ -122,7 +129,7 @@ def _testSetGet(plug, val, compare=None):
     msgbase = plug.type() + ' ' + cls.__name__
 
     plug.set(val)
-    print(plug.mplug().getSetAttrCmds())
+    #print(plug.mplug().getSetAttrCmds())
     v = plug.get()
     if mustBeTyped:
         v = cls(v)
