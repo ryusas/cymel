@@ -11,7 +11,7 @@ _optionVar = cmds.optionVar
 _STR_NONE = '___None___'
 _STR_TRUE = '___True___'
 _STR_FALSE = '___False___'
-_IntType = (int, long) if IS_PYTHON2 else int
+_IntType = (int, LONG) if IS_PYTHON2 else int
 
 
 #------------------------------------------------------------------------------

@@ -15,6 +15,11 @@ if _sys.hexversion < 0x3060000:
         from .exts.ordereddict import OrderedDict as _OrderedDict
     from weakref import ref as _wref
 
+    if _sys.hexversion < 0x3000000:
+        _dict_itervalues = lambda d: d.itervalues()
+    else:
+        _dict_itervalues = lambda d: d.values()
+
     class CleanOrderedDict(_OrderedDict):
         u"""
         破棄された後の参照の後始末も行う `OrderedDict` 。
@@ -30,7 +35,7 @@ if _sys.hexversion < 0x3060000:
             _OrderedDict.__init__(self, *args, **kwargs)
 
             def _finalize(w):
-                for node in map.itervalues():
+                for node in _dict_itervalues(map):
                     del node[:]
                 if _wref_dict:  # モジュール削除時に None になる場合があるので。
                     del _wref_dict[key]

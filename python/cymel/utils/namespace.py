@@ -91,6 +91,8 @@ class Namespace(UNICODE):
     def __gt__(self, ns):
         return _str_gt(self, _correctNS(ns))
 
+    __hash__ = UNICODE.__hash__
+
     @staticmethod
     def relativeMode():
         u"""

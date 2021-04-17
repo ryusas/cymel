@@ -705,7 +705,7 @@ class Plug(Plug_c):
                 _setAttr(x.name_(), l=True)
 
             # コマンドのメッセージだと格好悪いので自身のエラーに変更。
-            if 'connected' in err.message:
+            if u'connected' in UNICODE(err):
                 if not isArray or not name:
                     name = self.name_()
                 raise RuntimeError('attribute is connected: ' + name)
