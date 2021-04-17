@@ -33,6 +33,7 @@ cymel.pyutils.pyutils
         getTempFilename
         gettrue
         im_class
+        im_func
         im_self
         incrementName
         insertEnvPath
@@ -41,6 +42,7 @@ cymel.pyutils.pyutils
         iterTreeDepthFirst
         parentClasses
         ucToStrList
+        with_metaclass
 
 
 
@@ -54,7 +56,9 @@ cymel.pyutils.pyutils
     .. autodata:: dict_get_items
     .. autodata:: dict_get_keys
     .. autodata:: dict_get_values
-    .. autodata:: im_func
+    .. autodata:: dict_iteritems
+    .. autodata:: dict_iterkeys
+    .. autodata:: dict_itervalues
 
 
 
@@ -63,7 +67,6 @@ cymel.pyutils.pyutils
     .. rubric:: Constants:
 
     
-    .. autodata:: ENV_SEPARATOR
     .. autodata:: IS_WINDOWS
     .. autodata:: MAXINT32
     .. autodata:: MAXINT64
@@ -88,6 +91,7 @@ cymel.pyutils.pyutils
     .. autofunction:: getTempFilename
     .. autofunction:: gettrue
     .. autofunction:: im_class
+    .. autofunction:: im_func
     .. autofunction:: im_self
     .. autofunction:: incrementName
     .. autofunction:: insertEnvPath
@@ -96,5 +100,6 @@ cymel.pyutils.pyutils
     .. autofunction:: iterTreeDepthFirst
     .. autofunction:: parentClasses
     .. autofunction:: ucToStrList
+    .. autofunction:: with_metaclass
 
 

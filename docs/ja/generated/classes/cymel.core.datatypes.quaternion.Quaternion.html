@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.core.datatypes.quaternion.Quaternion &#8212; cymel 0.3.2021040700 ドキュメント</title>
+    <title>class cymel.core.datatypes.quaternion.Quaternion &#8212; cymel 0.4.2021041700 ドキュメント</title>
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html" title="class cymel.core.datatypes.quaternion.ImmutableQuaternion"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.3.2021040700 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.4.2021041700 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" accesskey="U">cymel.core.datatypes.quaternion</a> &#187;</li> 
       </ul>
@@ -116,16 +116,16 @@
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asBend" title="cymel.core.datatypes.quaternion.Quaternion.asBend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asBend</span></code></a>([reverse,&nbsp;aim])</td>
 <td>ボーン回転とした場合の曲げ成分を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asD" title="cymel.core.datatypes.quaternion.Quaternion.asD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asD</span></code></a>([order])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asD" title="cymel.core.datatypes.quaternion.Quaternion.asD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asD</span></code></a>([order,&nbsp;correct])</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a>([order])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a>([order,&nbsp;correct])</td>
 <td>オイラー角回転を度数法の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> として得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asE" title="cymel.core.datatypes.quaternion.Quaternion.asE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asE</span></code></a>([order])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asE" title="cymel.core.datatypes.quaternion.Quaternion.asE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asE</span></code></a>([order,&nbsp;correct])</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a>([order])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a>([order,&nbsp;correct])</td>
 <td>オイラー角回転として得る。</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asM" title="cymel.core.datatypes.quaternion.Quaternion.asM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asM</span></code></a>()</td>
@@ -320,21 +320,28 @@ True を指定すると捻ってから曲げる分解になる。</li>
 
 <dl class="method">
 <dt id="cymel.core.datatypes.quaternion.Quaternion.asD">
-<code class="descname">asD</code><span class="sig-paren">(</span><em>order=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asD" title="この定義へのパーマリンク">¶</a></dt>
+<code class="descname">asD</code><span class="sig-paren">(</span><em>order=0</em>, <em>correct=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asD" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a> の別名。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="cymel.core.datatypes.quaternion.Quaternion.asDegrees">
-<code class="descname">asDegrees</code><span class="sig-paren">(</span><em>order=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="この定義へのパーマリンク">¶</a></dt>
+<code class="descname">asDegrees</code><span class="sig-paren">(</span><em>order=0</em>, <em>correct=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>オイラー角回転を度数法の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> として得る。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- 得たい回転オーダー。</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- 得たい回転オーダー。</li>
+<li><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- Maya 2019 より前のバージョンの場合、
+クォータニオンの w の符号に適した回転を得られるように補正する。
+不適切な場合に <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reverseDirection</span></code></a> することと等しい。</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></td>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -342,25 +349,39 @@ True を指定すると捻ってから曲げる分解になる。</li>
 <p class="first admonition-title">注釈</p>
 <p class="last">単位を弧度法で得たい場合は <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a> を使用すると良い。</p>
 </div>
+<div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p>correct に真を指定して得た値を rotateAxis にセットしようとすると
+正常にセットできない場合があるので、その用途では指定すべきではない。</p>
+<p class="last">なお、Maya 2019 以降の場合は、この問題は解決されており、
+且つ correct 指定無しでも適切な値が返される。</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="cymel.core.datatypes.quaternion.Quaternion.asE">
-<code class="descname">asE</code><span class="sig-paren">(</span><em>order=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asE" title="この定義へのパーマリンク">¶</a></dt>
+<code class="descname">asE</code><span class="sig-paren">(</span><em>order=0</em>, <em>correct=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asE" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a> の別名。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation">
-<code class="descname">asEulerRotation</code><span class="sig-paren">(</span><em>order=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="この定義へのパーマリンク">¶</a></dt>
+<code class="descname">asEulerRotation</code><span class="sig-paren">(</span><em>order=0</em>, <em>correct=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>オイラー角回転として得る。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- 得たい回転オーダー。</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) -- 得たい回転オーダー。</li>
+<li><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) -- Maya 2019 より前のバージョンの場合、
+クォータニオンの w の符号に適した回転を得られるように補正する。
+不適切な場合に <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reverseDirection</span></code></a> することと等しい。</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a></td>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a></p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -368,6 +389,13 @@ True を指定すると捻ってから曲げる分解になる。</li>
 <p class="first admonition-title">注釈</p>
 <p class="last"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code> の単位は弧度法なので、
 度数法で得たい場合は <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a> を使用すると良い。</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p>correct に真を指定して得た値を rotateAxis にセットしようとすると
+正常にセットできない場合があるので、その用途では指定すべきではない。</p>
+<p class="last">なお、Maya 2019 以降の場合は、この問題は解決されており、
+且つ correct 指定無しでも適切な値が返される。</p>
 </div>
 </dd></dl>
 
@@ -950,7 +978,7 @@ True を指定すると捻ってから曲げる合成になる。</li>
         <li class="right" >
           <a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html" title="class cymel.core.datatypes.quaternion.ImmutableQuaternion"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.3.2021040700 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.4.2021041700 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" >cymel.core.datatypes.quaternion</a> &#187;</li> 
       </ul>
