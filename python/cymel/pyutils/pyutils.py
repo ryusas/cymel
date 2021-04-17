@@ -64,18 +64,9 @@ MAXINT64 = int(2**63 - 1)  #: 64bit符号付き整数の最大値。Maya の pyt
 #------------------------------------------------------------------------------
 IS_WINDOWS = _sys.platform == 'win32'  #: OS が Windows かどうか。
 if IS_WINDOWS:
-    #IS_X64 = _os.environ['PROCESSOR_ARCHITECTURE'] == 'AMD64'  #: 64bit OS かどうか。
-    ENV_SEPARATOR = ';'  #: 環境変数などで使用する設定値の区切り文字。Unix 系ではコロン、Windows ではセミコロンとしている。
-    #LD_PATH_VARNAME = 'PATH'  #: ダイナミックライブラリの検索パスを定義する環境変数名。Unix 系では LD_LIBRARY_PATH、Windows では PATH としている。
     USER_DOC_PATH = _os_path_join(_os.environ['USERPROFILE'], 'Documents')  #: ユーザードキュメントディレクトリ。Unix系ではホーム、Windowsではマイドキュメントとしている。
-    #RE_PATH_DELIMITTER = re.compile(r'[\\/]')  #: パス区切り文字の正規表現。
 else:
-    # NOTE: Windows Python の場合は x64 でも int サイズが変わらない為、この手段は使えない。
-    #IS_X64 = hash('a') == 12416037344  #: 64bit OS かどうか。
-    ENV_SEPARATOR = ':'  #: 環境変数などで使用する設定値の区切り文字。Unix 系ではコロン、Windows ではセミコロンとしている。
-    #LD_PATH_VARNAME = 'LD_LIBRARY_PATH'  #: ダイナミックライブラリの検索パスを定義する環境変数名。Unix 系では LD_LIBRARY_PATH、Windows では PATH としている。
     USER_DOC_PATH = _os.environ['HOME']  #: ユーザードキュメントディレクトリ。Unix 系ではホーム、Windows ではマイドキュメントとしている。
-    #RE_PATH_DELIMITTER = re.compile(r'/')  #: パス区切り文字の正規表現。
 
 #------------------------------------------------------------------------------
 IS_PYTHON2 = _sys.version_info[0] is 2
@@ -93,17 +84,23 @@ if IS_PYTHON2:
     xrange = xrange  #: イテレータによる range
 
     lzip = zip  #: list を返す zip (Python 2 の標準)
-    from itertools import izip  #: イテレータによる zip
-    from itertools import izip_longest
+    lmap = map  #: list を返す map (Python 2 の標準)
+    lfilter = filter  #: list を返す filter (Python 2 の標準)
+    from itertools import izip, imap, ifilter
+    if _sys.hexversion >= 0x2060000:
+        from itertools import izip_longest
 
     dict_get_items = lambda d: d.items()  #: `dict` から items list を得る。
     dict_get_keys = lambda d: d.keys()  #: `dict` から keys list を得る。
     dict_get_values = lambda d: d.values()  #: `dict` から values list を得る。
 
-    im_func = lambda m: m.im_func  #: インスタンスメソッドから func を得る。ビルトインクラスのメソッドだと AttributeError になる。
+    dict_iteritems = lambda d: d.iteritems()  #: `dict` から dict_items を得る。
+    dict_iterkeys = lambda d: d.iterkeys()  #: `dict` から dict_keys を得る。
+    dict_itervalues = lambda d: d.itervalues()  #: `dict` から dict_values を得る。
 
     reduce = reduce
     execfile = execfile
+    fround = round  #: 常にfloat型を返すround。ただし、py2は四捨五入、py3は偶数への丸め(bankers' rounding)という違いはある。
 
     def ucToStrList(xx):
         u"""
@@ -123,14 +120,20 @@ else:
     xrange = range  #: イテレータによる range (Python 3 の標準)
 
     lzip = lambda *a: list(zip(*a))  #: list を返す zip (Python 3 には無い)
-    izip = zip  #: イテレータによる zip
+    izip = zip
+    lmap = lambda *a: list(map(*a))  #: list を返す map (Python 3 には無い)
+    imap = map
+    lfilter = lambda *a: list(filter(*a))  #: list を返す filter (Python 3 には無い)
+    ifilter = filter
     from itertools import zip_longest as izip_longest
 
     dict_get_items = lambda d: list(d.items())  #: `dict` から items list を得る。
     dict_get_keys = lambda d: list(d)  #: `dict` から keys list を得る。
     dict_get_values = lambda d: list(d.values())  #: `dict` から values list を得る。
 
-    im_func = lambda m: m.__func__  #: インスタンスメソッドから func を得る。ビルトインクラスのメソッドだと AttributeError になる。
+    dict_iteritems = lambda d: d.items()  #: `dict` から dict_items を得る。
+    dict_iterkeys = lambda d: d.keys()  #: `dict` から dict_keys を得る。
+    dict_itervalues = lambda d: d.values()  #: `dict` から dict_values を得る。
 
     from functools import reduce
 
@@ -144,6 +147,12 @@ else:
         with open(fname, 'rb') as f:
             exec(compile(f.read(), fname, 'exec'), globals, locals)
 
+    def fround(f):
+        u"""
+        常にfloat型を返すround。ただし、py2は四捨五入、py3は偶数への丸め(bankers' rounding)という違いはある。
+        """
+        return float(round(f))
+
     def ucToStrList(xx):
         u"""
         何もしない。
@@ -151,11 +160,20 @@ else:
         return xx
 
 
+def im_func(m):
+    u"""
+    インスタンスメソッドから func を得る。
+
+    .. warning:
+        ビルトインクラスのメソッドだと AttributeError になる。
+    """
+    return m.__func__
+
+
 def im_self(m):
     u"""
     インスタンスメソッドから self を得る。
     """
-    # m.im_self だと py3 で使えず、且つ py2 でもビルトインメソッドでは使えない。
     return m.__self__
 
 
@@ -163,7 +181,6 @@ def im_class(m):
     u"""
     インスタンスメソッドから type を得る。
     """
-    # m.im_class だと py3 で使えず、且つ py2 でもビルトインメソッドでは使えない。
     return m.__self__.__class__
 
 
@@ -344,7 +361,7 @@ def insertEnvPath(path, name, index=-1, noCheck=False, noUpdate=False):
     if noCheck or _os_path_exists(path):
         npath = _normPath(path)
         if name in _os.environ:
-            paths = _os.environ[name].split(ENV_SEPARATOR)
+            paths = _os.environ[name].split(_os.pathsep)
         else:
             paths = []
         normPaths = [_normPath(s) for s in paths]
@@ -360,7 +377,7 @@ def insertEnvPath(path, name, index=-1, noCheck=False, noUpdate=False):
             paths.append(path)
         else:
             paths.insert(index, path)
-        _os.environ[name] = ENV_SEPARATOR.join(paths)
+        _os.environ[name] = _os.pathsep.join(paths)
     return result
 
 

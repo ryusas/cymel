@@ -7,6 +7,8 @@ cymel 内の Maya に依存するモジュールがインポートされる際�
 このモジュールを明示的に使用する必要はほとんどないが、
 初期化プロセスをカスタマイズしたい場合などに利用できる。
 """
+from __future__ import print_function
+
 import sys
 import os
 import os.path as _os_path

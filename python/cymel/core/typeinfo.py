@@ -2,6 +2,8 @@
 u"""
 ノードタイプ情報。
 """
+from __future__ import print_function
+
 from ..common import *
 
 __all__ = [

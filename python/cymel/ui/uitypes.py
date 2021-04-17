@@ -2,6 +2,8 @@
 u"""
 mel UI タイプ情報と、自動生成UIクラス。
 """
+from __future__ import print_function
+
 from ..common import *
 
 #__all__ = [

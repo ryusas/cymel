@@ -13,6 +13,8 @@ u"""
     __del__ が在ると循環参照の状況で解放されなくなる問題は
     python 3.4 以降（ :pep:`442` ）で解決されている。
 """
+from __future__ import print_function
+
 from weakref import ref as _wref
 import traceback
 
@@ -90,14 +92,14 @@ def trackDestruction(obj, logger=None, maxChars=0):
         def proc():
             global _TRACKER_COUNT
             _TRACKER_COUNT -= 1
-            logger('DESTRUCT: ' + s + ' (tracking=' + str(_TRACKER_COUNT)) + ')'
-        logger('BEGIN_TRACK: ' + s + ' (tracking=' + str(_TRACKER_COUNT)) + ')'
+            logger('DESTRUCT: ' + s + ' (tracking=' + str(_TRACKER_COUNT) + ')')
+        logger('BEGIN_TRACK: ' + s + ' (tracking=' + str(_TRACKER_COUNT) + ')')
     else:
         def proc():
             global _TRACKER_COUNT
             _TRACKER_COUNT -= 1
-            print('# DESTRUCT: ' + s + ' (tracking=' + str(_TRACKER_COUNT)) + ')'
-        print('# BEGIN_TRACK: ' + s + ' (tracking=' + str(_TRACKER_COUNT)) + ')'
+            print('# DESTRUCT: ' + s + ' (tracking=' + str(_TRACKER_COUNT) + ')')
+        print('# BEGIN_TRACK: ' + s + ' (tracking=' + str(_TRACKER_COUNT) + ')')
 
     return registerFinalizer(obj, proc)
 

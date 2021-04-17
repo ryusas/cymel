@@ -641,7 +641,7 @@ class DagNodeMixin(object):
                 it = _2_MItDag()
                 it.reset(shape._mpath())
                 it.traverseUnderWorld = True
-                it.next()
+                next(it)
                 return not it.isDone() and not _2_MFnDagNode(it.getPath()).inModel
             return False
 
@@ -656,7 +656,7 @@ class DagNodeMixin(object):
                 it = _2_MItDag()
                 it.reset(shape._mpath())
                 it.traverseUnderWorld = True
-                it.next()
+                next(it)
                 if not it.isDone():
                     mpath = it.getPath()
                     if not _2_MFnDagNode(mpath).inModel:

@@ -916,7 +916,7 @@ class Plug(Plug_c):
                         yield self[idx]
 
                 elif step == -1:
-                    print(idx, end, indices)
+                    #print((idx, end, indices))
                     n = len(indices)
                     s = n - 1
                     while 0 < s and idx < indices[s]:
