@@ -25,7 +25,7 @@ HAS_JOINT_SHEAR_BUG = (2019,) <= cm.MAYA_VERSION < (2020, 1)    #: joint の she
 
 #------------------------------------------------------------------------------
 def doit(s=13):
-    #cmds.file(f=True, new=True)
+    cmds.file(f=True, new=True)
 
     seed(s)
 
