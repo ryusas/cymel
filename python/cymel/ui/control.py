@@ -2,6 +2,8 @@
 u"""
 mel UI の :mayacmd:`control` ラッパー。
 """
+from __future__ import absolute_import
+
 from ..common import *
 from .uitypes import *
 from weakref import ref as _wref
@@ -25,6 +27,20 @@ _cmds_menuItem = cmds.menuItem
 _cmds_lsUI = cmds.lsUI
 _cmds_objectTypeUI = cmds.objectTypeUI
 _cmds_deleteUI = cmds.deleteUI
+
+_str_eq = UNICODE.__eq__
+_str_ne = UNICODE.__ne__
+_str_le = UNICODE.__le__
+_str_lt = UNICODE.__lt__
+_str_ge = UNICODE.__ge__
+_str_gt = UNICODE.__gt__
+
+_op_str = {
+    _str_le: '<=',
+    _str_lt: '<',
+    _str_ge: '>=',
+    _str_gt: '>',
+}.get
 
 
 #------------------------------------------------------------------------------
@@ -210,35 +226,64 @@ class Control(object):
     def __hash__(self):
         return self._hash
 
-    def __cmp__(self, other):
+    def __eq__(self, other):
+        return self.__compare(other, True, _str_eq)
+
+    def __ne__(self, other):
+        return self.__compare(other, False, _str_ne)
+
+    def __le__(self, other):
+        return self.__compare(other, True, _str_le)
+
+    def __lt__(self, other):
+        return self.__compare(other, False, _str_lt)
+
+    def __ge__(self, other):
+        return self.__compare(other, True, _str_ge)
+
+    def __gt__(self, other):
+        return self.__compare(other, False, _str_gt)
+
+    def __compare(self, other, eqval, proc):
         # 名前比較はドック化によって変わることを考慮し、
         # 変わる前と変わった後の両方を許容。
         if isinstance(other, Control):
-            res = cmp(self._orgName, other._orgName)
-            if res:
+            if self._orgName == other._orgName:
+                return eqval
+
+            if self._untrustedName:
                 # self のパスが変わった可能性がある。
-                if self._untrustedName:
-                    selfName = self.name()
+                selfName = self.name()
+                if other._untrustedName:
                     # さらに other のパスが変わった可能性もある。
-                    if other._untrustedName:
-                        otherName = other.name()
-                        res = cmp(selfName, otherName)
-                        if not res:
-                            return res
-                        res = cmp(self._orgName, otherName)
-                        if not res:
-                            return res
-                    return cmp(selfName, other._orgName)
+                    otherName = other.name()
+                    if selfName == otherName or self._orgName == otherName:
+                        return eqval
+
+                return proc(selfName, other._orgName)
+
+            elif other._untrustedName:
                 # other のパスが変わった可能性がある。
-                elif other._untrustedName:
-                    return cmp(self._orgName, other.name())
+                return proc(self._orgName, other.name())
+
+            return proc is _str_ne or proc(self._orgName, other._orgName)
 
         elif isinstance(other, BASESTR):
-            res = cmp(self._orgName, other)
-            if res and self._untrustedName:
+            if self._orgName == other:
+                return eqval
+
+            if self._untrustedName:
                 # self のパスが変わった可能性がある。
-                return cmp(self.name(), other)
-        return res
+                return proc(self.name(), other)
+
+            return proc is _str_ne or proc(self._orgName, other)
+
+        opname = _op_str(proc)
+        if opname:
+            raise TypeError(
+                '%r not supported between instances of %r and %r' % (
+                    opname, type(self).__name__, type(other).__name__))
+        return not eqval
 
     def type(self):
         u"""

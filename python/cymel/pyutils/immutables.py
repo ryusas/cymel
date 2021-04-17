@@ -161,8 +161,7 @@ _SPECIAL_MUTATOR_NAMES = (
     '__ior__',
 )  #: 既存クラスに存在する場合のみオーバーライドするミューテーター。
 
-_IS_PYTHON2 = sys.version_info[0] is 2
-if _IS_PYTHON2:
+if sys.hexversion < 0x3000000:
     _LONG = long
     _BYTES = str
     _UNICODE = unicode
@@ -175,7 +174,7 @@ _MUTABLE_BUILTIN_TYPES = frozenset([
     bool, int, float, _LONG, complex,
     _BYTES, _UNICODE, list, tuple, dict,
 ])  #: イミュータブル化の処理を簡易化する組み込み型。
-if not _IS_PYTHON2 or sys.version_info[1] >= 6:
+if sys.hexversion >= 0x2060000:
     _MUTABLE_BUILTIN_TYPES |= frozenset([bytearray])
 
 

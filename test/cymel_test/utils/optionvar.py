@@ -8,6 +8,7 @@ import unittest
 import maya.cmds as cmds
 
 from cymel.utils.optionvar import OptionVar
+from cymel.initmaya import MAYA_VERSION
 
 _PREFIX = '_cymel_test.'
 _DEFAULTS = dict(
@@ -30,6 +31,12 @@ _DEFAULTS = dict(
 )
 _KEY_SET = frozenset(_DEFAULTS)
 _GKEY_SET = frozenset([_PREFIX + x for x in _DEFAULTS])
+
+if sys.hexversion < 0x3000000 and MAYA_VERSION >= (2016,):
+    # 2016 à»ç~ÅAint ÇÕ int ÇæÇ™ intArray ÇÕ long Ç…Ç»ÇÈÅB
+    _INTARRAY = lambda a: [long(x) for x in a]
+else:
+    _INTARRAY = lambda a: a
 
 
 #------------------------------------------------------------------------------
@@ -143,7 +150,9 @@ class TestOptionVar(unittest.TestCase):
             1., 0., 2., -1., 1.23,
             None, 
             u'1.24',
-            [7, -8, 9], [1.7, -1.8, 1.9], [u'1.1', u'foo', u'2.2']
+            _INTARRAY([7, -8, 9]),
+            [1.7, -1.8, 1.9],
+            [u'1.1', u'foo', u'2.2']
         ]
 
         opts = self._optvar

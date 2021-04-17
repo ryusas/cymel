@@ -172,13 +172,13 @@ class Quaternion(object):
         except:
             raise ValueError("%r * %s" % (v, type(self).__name__))
 
-    def __div__(self, v):
+    def __truediv__(self, v):
         try:
             return _newQ((1. / v) * self.__data)
         except:
             raise ValueError("%s / %r" % (type(self).__name__, v))
 
-    def __idiv__(self, v):
+    def __itruediv__(self, v):
         try:
             v = 1. / v
             d = self.__data
@@ -190,12 +190,17 @@ class Quaternion(object):
             raise ValueError("%s /= %r" % (type(self).__name__, v))
         return self
 
-    def __rdiv__(self, v):
+    def __rtruediv__(self, v):
         try:
             d = self.__data
             return _newQ(_MQ(v / d[0], v / d[1], v / d[2], v / d[3]))
         except:
             raise ValueError("%r / %s" % (v, type(self).__name__))
+
+    if IS_PYTHON2:
+        __div__ = __truediv__
+        __idiv__ = __itruediv__
+        __rdiv__ = __rtruediv__
 
     if MAYA_VERSION < (2015,):
         def isEquivalent(self, q, tol=_TOLERANCE):

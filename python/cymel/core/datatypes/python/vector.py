@@ -206,25 +206,30 @@ class Vector(object):
         except:
             raise ValueError("%r * %s" % (v, type(self).__name__))
 
-    def __div__(self, v):
+    def __truediv__(self, v):
         try:
             return _newV(self.__data / v)
         except:
             raise ValueError("%s / %r" % (type(self).__name__, v))
 
-    def __idiv__(self, v):
+    def __itruediv__(self, v):
         try:
             self.__data /= v
         except:
             raise ValueError("%s /= %r" % (type(self).__name__, v))
         return self
 
-    def __rdiv__(self, v):
+    def __rtruediv__(self, v):
         try:
             d = self.__data
             return _newV(_MP(v / d[0], v / d[1], v / d[2], d[3]))
         except:
             raise ValueError("%r / %s" % (v, type(self).__name__))
+
+    if IS_PYTHON2:
+        __div__ = __truediv__
+        __idiv__ = __itruediv__
+        __rdiv__ = __rtruediv__
 
     def __xor__(self, v):
         try:

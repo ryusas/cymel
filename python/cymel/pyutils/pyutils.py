@@ -3,6 +3,9 @@ u"""
 Mayaに依存しない諸機能。
 """
 import sys as _sys
+if _sys.hexversion < 0x2060000:
+    raise EnvironmentError('unsupported python version')
+
 import os as _os
 import os.path as _os_path
 import types as _types
@@ -77,8 +80,6 @@ else:
 #------------------------------------------------------------------------------
 IS_PYTHON2 = _sys.version_info[0] is 2
 IS_PYTHON3 = _sys.version_info[0] is 3
-if (not IS_PYTHON2 and not IS_PYTHON3) or (IS_PYTHON2 and _sys.version_info[1] < 6):
-    raise EnvironmentError('unsupported python version')
 
 if IS_PYTHON2:
     BASESTR = basestring  #: Python 2 と 3 の差を吸収する文字列型チェック用。

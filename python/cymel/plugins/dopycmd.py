@@ -35,7 +35,7 @@ import sys
 from _ctypes import PyObj_FromPtr as _fromptr
 import maya.OpenMayaMPx as api
 
-LONG = long if sys.version_info[0] <= 2 else int
+LONG = long if sys.hexversion < 0x3000000 else int
 _creator = lambda c: lambda: api.asMPxPtr(c())
 
 

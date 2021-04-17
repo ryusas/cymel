@@ -202,6 +202,8 @@ class OptionVar(object):
         全ての値とデフォルト値を削除する。
         """
         prefix = self._prefix
+        if not prefix:
+            raise RuntimeError('clear() is not allowed because prefix is not set')
         for k in _optionVar(l=True):
             if k.startswith(prefix):
                 _optionVar(rm=k)
@@ -299,7 +301,7 @@ class OptionVar(object):
         """
         prefix = self._prefix
         if not prefix:
-            raise RuntimeError('resetAll is not allowed because prefix is not set')
+            raise RuntimeError('resetAll() is not allowed because prefix is not set')
         if ignores:
             start = len(prefix)
             for k in _optionVar(l=True):

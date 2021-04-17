@@ -396,10 +396,11 @@ def _initMayaStandalone():
             except:
                 pass
             finally:
-                sys.stdout.flush()
-                sys.stderr.flush()
-                sys.__stdout__.flush()
-                sys.__stderr__.flush()
+                if sys:
+                    sys.stdout.flush()
+                    sys.stderr.flush()
+                    sys.__stdout__.flush()
+                    sys.__stderr__.flush()
         import atexit
         atexit.register(_uninitialize)
 

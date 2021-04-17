@@ -8,7 +8,7 @@ __all__ = ['CleanOrderedDict']
 
 
 #------------------------------------------------------------------------------
-if _sys.version_info[:2] < (3, 6):
+if _sys.hexversion < 0x3060000:
     try:
         from collections import OrderedDict as _OrderedDict
     except ImportError:

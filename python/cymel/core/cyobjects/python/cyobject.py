@@ -127,9 +127,13 @@ class CyObject(object):
         # その他の場合、文字列として評価する。
         return _anyClsObjByName(cls, str(src))
 
-    def __nonzero__(self):
-        # bool 評価などで __len__ が呼ばれないようにするためにも非常に重要。
-        return True
+    # bool 評価時に __len__ が呼ばれないようにするために、特に Plug で重要。
+    if IS_PYTHON2:
+        def __nonzero__(self):
+            return True
+    else:
+        def __bool__(self):
+            return True
 
     def __hash__(self):
         return self.__data['hash']

@@ -160,25 +160,30 @@ class EulerRotation(object):
         except:
             raise ValueError("%r * %s" % (v, type(self).__name__))
 
-    def __div__(self, v):
+    def __truediv__(self, v):
         try:
             return _newE(self.__data * (1. / v))
         except:
             raise ValueError("%s / %r" % (type(self).__name__, v))
 
-    def __idiv__(self, v):
+    def __itruediv__(self, v):
         try:
             self.__data *= 1. / v
         except:
             raise ValueError("%s /= %r" % (type(self).__name__, v))
         return self
 
-    def __rdiv__(self, v):
+    def __rtruediv__(self, v):
         try:
             d = self.__data
             return _newE(_ME(v / d[0], v / d[1], v / d[2], d.order))
         except:
             raise ValueError("%r / %s" % (v, type(self).__name__))
+
+    if IS_PYTHON2:
+        __div__ = __truediv__
+        __idiv__ = __itruediv__
+        __rdiv__ = __rtruediv__
 
     def isEquivalent(self, v, tol=_TOLERANCE):
         u"""
