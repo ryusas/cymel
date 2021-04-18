@@ -209,8 +209,10 @@ class Transformation(object):
         e = data.get('r')
         if e:
             ro = data.get('ro')
-            if ro is not None and e.order != ro:
-                data['r'] = _newIE(e._EulerRotation__data.reorder(ro))
+            #if ro is not None and e.order != ro:
+            #    data['r'] = _newIE(e._EulerRotation__data.reorder(ro))
+            if ro is not None:
+                e._EulerRotation__data.order = ro
 
         # デフォルト値のトランスフォーメーション修飾属性は削除。
         return _newX(dict([kv for kv in data.items() if kv[1] != _MOD_ATTR_DICT_get(kv[0])]), cls)
