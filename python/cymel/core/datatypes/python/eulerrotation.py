@@ -122,7 +122,13 @@ class EulerRotation(object):
 
     def __iadd__(self, v):
         try:
-            self.__data += v.__data
+            d = self.__data
+            s = v.__data
+            if d.order != s.order:
+                s = s.reorder(d.order)
+            d[0] += s[0]
+            d[1] += s[1]
+            d[2] += s[2]
         except:
             raise ValueError("%s += %r" % (type(self).__name__, v))
         return self
@@ -135,7 +141,13 @@ class EulerRotation(object):
 
     def __isub__(self, v):
         try:
-            self.__data -= v.__data
+            d = self.__data
+            s = v.__data
+            if d.order != s.order:
+                s = s.reorder(d.order)
+            d[0] -= s[0]
+            d[1] -= s[1]
+            d[2] -= s[2]
         except:
             raise ValueError("%s -= %r" % (type(self).__name__, v))
         return self

@@ -130,7 +130,12 @@ class Quaternion(object):
 
     def __iadd__(self, v):
         try:
-            self.__data += v.__data
+            d = self.__data
+            s = v.__data
+            d[0] += s[0]
+            d[1] += s[1]
+            d[2] += s[2]
+            d[3] += s[3]
         except:
             raise ValueError("%s += %r" % (type(self).__name__, v))
         return self
@@ -143,7 +148,12 @@ class Quaternion(object):
 
     def __isub__(self, v):
         try:
-            self.__data -= v.__data
+            d = self.__data
+            s = v.__data
+            d[0] -= s[0]
+            d[1] -= s[1]
+            d[2] -= s[2]
+            d[3] -= s[3]
         except:
             raise ValueError("%s -= %r" % (type(self).__name__, v))
         return self
