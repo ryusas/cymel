@@ -562,7 +562,7 @@ class Matrix(object):
         _M_setdata(self, self.__data.homogenize())
         return self
 
-    def det4x4(self):
+    def det(self):
         u"""
         行列式を得る。
 
@@ -570,13 +570,18 @@ class Matrix(object):
         """
         return self.__data.det4x4()
 
-    def det3x3(self):
+    det4 = det  #: `det` の別名。
+    det4x4 = det  #: `det` の別名。
+
+    def det3(self):
         u"""
         3x3部分の行列式を得る。
 
         :rtype: `float`
         """
         return self.__data.det3x3()
+
+    det3x3 = det3  #: `det3` の別名。
 
     def row(self, i):
         u"""

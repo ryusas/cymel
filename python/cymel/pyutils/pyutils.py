@@ -62,8 +62,8 @@ EMPTY_DICT = _ImmutableDict()  # 空 `.ImmutableDict`
 LIST_OR_TUPLE = (list, tuple)
 
 #------------------------------------------------------------------------------
-MAXINT32 = int(2**31 - 1)  #: 32bit符号付き整数の最大値。Maya の python 2.x の sys.maxint はこれ。
-MAXINT64 = int(2**63 - 1)  #: 64bit符号付き整数の最大値。Maya の python 3.x の sys.maxsize はこれ。
+MAXINT32 = int(2**31 - 1)  #: 32bit符号付き整数の最大値。Maya の sys.maxint はこれ（py3 で廃止）。
+MAXINT64 = int(2**63 - 1)  #: 64bit符号付き整数の最大値。Maya の sys.maxsize はこれ。
 
 #------------------------------------------------------------------------------
 IS_WINDOWS = _sys.platform == 'win32'  #: OS が Windows かどうか。
@@ -77,9 +77,9 @@ IS_PYTHON2 = _sys.version_info[0] is 2
 IS_PYTHON3 = _sys.version_info[0] is 3
 
 if IS_PYTHON2:
-    BASESTR = basestring  #: Python 2 と 3 の差を吸収する文字列型チェック用。
     BYTES = str
     UNICODE = unicode
+    BASESTR = basestring  #: Python 2 と 3 の差を吸収する文字列型チェック用。
     LONG = long  #: Python 2 と 3 の差を吸収する長整数型チェック用。
 
     RePattern = _re._pattern_type  #: 正規表現パターン型。
@@ -94,17 +94,36 @@ if IS_PYTHON2:
     if _sys.hexversion >= 0x2060000:
         from itertools import izip_longest
 
-    dict_get_items = lambda d: d.items()  #: `dict` から items list を得る。
-    dict_get_keys = lambda d: d.keys()  #: `dict` から keys list を得る。
-    dict_get_values = lambda d: d.values()  #: `dict` から values list を得る。
+    # 辞書から list を取得。
+    dict_get_keys = lambda d: d.keys()  #: `dict` から keys リストを得る。
+    dict_get_values = lambda d: d.values()  #: `dict` から values リストを得る。
+    dict_get_items = lambda d: d.items()  #: `dict` から items リストを得る。
 
-    dict_iteritems = lambda d: d.iteritems()  #: `dict` から dict_items を得る。
-    dict_iterkeys = lambda d: d.iterkeys()  #: `dict` から dict_keys を得る。
-    dict_itervalues = lambda d: d.itervalues()  #: `dict` から dict_values を得る。
+    # 辞書イテレータ。next() が使え、一度しかイテレーションできない。インデックスアクセスはできない。
+    dict_iterkeys = lambda d: d.iterkeys()  #: `dict` から keys イテレータを得る。
+    dict_itervalues = lambda d: d.itervalues()  #: `dict` から values イテレータを得る。
+    dict_iteritems = lambda d: d.iteritems()  #: `dict` から items イテレータを得る。
+
+    # py2.7 以降は辞書ビューを使える。繰り返しイテレーションできる。next() やインデックスアクセスはできない。
+    if hasattr(dict, 'viewkeys'):
+        dict_keys = lambda d: d.viewkeys()  #: `dict` から dict_keys を得る。
+        dict_values = lambda d: d.viewvalues()  #: `dict` から dict_values を得る。
+        dict_items = lambda d: d.viewitems()  #: `dict` から dict_items を得る。
+    else:
+        dict_keys = None
+        dict_values = None
+        dict_items = None
 
     reduce = reduce
     execfile = execfile
+
     fround = round  #: 常にfloat型を返すround。ただし、py2は四捨五入、py3は偶数への丸め(bankers' rounding)という違いはある。
+
+    def round(f, ndigits=None):
+        u"""
+        py3 標準の round 。ndigits がデフォルト(None)だと `int` 型を返す。ただし、py2は四捨五入、py3は偶数への丸め(bankers' rounding)という違いはある。
+        """
+        return int(fround(f)) if ndigits is None else fround(f, ndigits)
 
     def ucToStrList(xx):
         u"""
@@ -113,9 +132,9 @@ if IS_PYTHON2:
         return [str(x) for x in xx]
 
 else:
-    BASESTR = str  #: Python 2 と 3 の差を吸収する文字列型チェック用。
     BYTES = bytes
     UNICODE = str
+    BASESTR = str  #: Python 2 と 3 の差を吸収する文字列型チェック用。
     LONG = int  #: Python 2 と 3 の差を吸収する長整数型チェック用。
 
     RePattern = _re.Pattern  #: 正規表現パターン型。
@@ -131,61 +150,41 @@ else:
     ifilter = filter
     from itertools import zip_longest as izip_longest
 
-    dict_get_items = lambda d: list(d.items())  #: `dict` から items list を得る。
-    dict_get_keys = lambda d: list(d)  #: `dict` から keys list を得る。
-    dict_get_values = lambda d: list(d.values())  #: `dict` から values list を得る。
+    # 辞書から list を取得。
+    dict_get_keys = lambda d: list(d)  #: `dict` から keys リストを得る。
+    dict_get_values = lambda d: list(d.values())  #: `dict` から values リストを得る。
+    dict_get_items = lambda d: list(d.items())  #: `dict` から items リストを得る。
 
-    dict_iteritems = lambda d: d.items()  #: `dict` から dict_items を得る。
-    dict_iterkeys = lambda d: d.keys()  #: `dict` から dict_keys を得る。
-    dict_itervalues = lambda d: d.values()  #: `dict` から dict_values を得る。
+    # 辞書イテレータ。next() が使え、一度しかイテレーションできない。インデックスアクセスはできない。
+    dict_iterkeys = lambda d: d.keys().__iter__()  #: `dict` から keys イテレータを得る。
+    dict_itervalues = lambda d: d.values().__iter__()  #: `dict` から values イテレータを得る。
+    dict_iteritems = lambda d: d.items().__iter__()  #: `dict` から items イテレータを得る。
+
+    # py3 では通常操作が辞書ビューになった。繰り返しイテレーションできる。next() やインデックスアクセスはできない。
+    dict_keys = lambda d: d.keys()  #: `dict` から dict_keys を得る。
+    dict_values = lambda d: d.values()  #: `dict` から dict_values を得る。
+    dict_items = lambda d: d.items()  #: `dict` から dict_items を得る。
 
     from functools import reduce
 
     def execfile(fname, globals=None, locals=None):
         if globals is None:
-            globals = {}
-        globals.update({
-            '__file__': fname,
-            '__name__': '__main__',
-        })
-        with open(fname, 'rb') as f:
-            exec(compile(f.read(), fname, 'exec'), globals, locals)
+            globals = {'__name__': '__main__'}
+        exec(compile(open(fname, 'rb').read(), fname, 'exec'), globals, locals)
 
-    def fround(f):
+    def fround(f, ndigits=0):
         u"""
-        常にfloat型を返すround。ただし、py2は四捨五入、py3は偶数への丸め(bankers' rounding)という違いはある。
+        常に `float` 型を返す `round` 。ただし、py2は四捨五入、py3は偶数への丸め(bankers' rounding)という違いはある。
         """
-        return float(round(f))
+        return round(f, ndigits or 0)
+
+    round = round  #: py3 標準の round 。ndigits がデフォルト(None)だと `int` 型を返す。ただし、py2は四捨五入、py3は偶数への丸め(bankers' rounding)という違いはある。
 
     def ucToStrList(xx):
         u"""
         何もしない。
         """
         return xx
-
-
-def im_func(m):
-    u"""
-    インスタンスメソッドから func を得る。
-
-    .. warning:
-        ビルトインクラスのメソッドだと AttributeError になる。
-    """
-    return m.__func__
-
-
-def im_self(m):
-    u"""
-    インスタンスメソッドから self を得る。
-    """
-    return m.__self__
-
-
-def im_class(m):
-    u"""
-    インスタンスメソッドから type を得る。
-    """
-    return m.__self__.__class__
 
 
 #------------------------------------------------------------------------------
