@@ -20,8 +20,11 @@ class cymel.core.datatypes.matrix.Matrix
     
         addT
         addTranslation
+        adj
         adjoint
         adjointIt
+        adjugate
+        adjugateIt
         as3x3
         asD
         asDegrees
@@ -46,10 +49,19 @@ class cymel.core.datatypes.matrix.Matrix
         asX
         axes
         axis
+        cofactor
         column
         columns
+        det
+        det2
+        det2x2
+        det3
         det3x3
+        det4
         det4x4
+        determinant
+        determinant2
+        determinant3
         div
         getElem
         hasNonUniformScaling
@@ -120,8 +132,11 @@ class cymel.core.datatypes.matrix.Matrix
     
     .. automethod:: addT
     .. automethod:: addTranslation
+    .. automethod:: adj
     .. automethod:: adjoint
     .. automethod:: adjointIt
+    .. automethod:: adjugate
+    .. automethod:: adjugateIt
     .. automethod:: as3x3
     .. automethod:: asD
     .. automethod:: asDegrees
@@ -146,10 +161,19 @@ class cymel.core.datatypes.matrix.Matrix
     .. automethod:: asX
     .. automethod:: axes
     .. automethod:: axis
+    .. automethod:: cofactor
     .. automethod:: column
     .. automethod:: columns
+    .. automethod:: det
+    .. automethod:: det2
+    .. automethod:: det2x2
+    .. automethod:: det3
     .. automethod:: det3x3
+    .. automethod:: det4
     .. automethod:: det4x4
+    .. automethod:: determinant
+    .. automethod:: determinant2
+    .. automethod:: determinant3
     .. automethod:: div
     .. automethod:: getElem
     .. automethod:: hasNonUniformScaling

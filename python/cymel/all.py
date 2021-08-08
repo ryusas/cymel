@@ -26,6 +26,8 @@ u"""
     maya.utils.formatGuiResult = pprint.pformat
 """
 from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
 
 from .constants import *
 from . import main as cm

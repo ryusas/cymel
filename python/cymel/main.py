@@ -13,6 +13,8 @@ UI以外の全機能。
 - cymel.initmaya の全て。
 """
 from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
 
 from .core import *
 from .constants import *

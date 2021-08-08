@@ -3,6 +3,8 @@ u"""
 Maya依存部分の全体で使用する共通定義。
 """
 from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
 
 from . import initmaya
 initmaya.initialize()

@@ -32,15 +32,13 @@ cymel.pyutils.pyutils
         donothing
         getTempFilename
         gettrue
-        im_class
-        im_func
-        im_self
         incrementName
         insertEnvPath
         insertSysPath
         iterTreeBreadthFirst
         iterTreeDepthFirst
         parentClasses
+        round
         ucToStrList
         with_metaclass
 
@@ -56,9 +54,12 @@ cymel.pyutils.pyutils
     .. autodata:: dict_get_items
     .. autodata:: dict_get_keys
     .. autodata:: dict_get_values
+    .. autodata:: dict_items
     .. autodata:: dict_iteritems
     .. autodata:: dict_iterkeys
     .. autodata:: dict_itervalues
+    .. autodata:: dict_keys
+    .. autodata:: dict_values
 
 
 
@@ -90,15 +91,13 @@ cymel.pyutils.pyutils
     .. autofunction:: donothing
     .. autofunction:: getTempFilename
     .. autofunction:: gettrue
-    .. autofunction:: im_class
-    .. autofunction:: im_func
-    .. autofunction:: im_self
     .. autofunction:: incrementName
     .. autofunction:: insertEnvPath
     .. autofunction:: insertSysPath
     .. autofunction:: iterTreeBreadthFirst
     .. autofunction:: iterTreeDepthFirst
     .. autofunction:: parentClasses
+    .. autofunction:: round
     .. autofunction:: ucToStrList
     .. autofunction:: with_metaclass
 

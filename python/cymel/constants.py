@@ -5,6 +5,8 @@ cymel全体で使用する主な定数。
 よく使うものに厳選してあるので * で import しても良いかも知れない。
 """
 from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
 
 from math import pi as PI  #: π
 
