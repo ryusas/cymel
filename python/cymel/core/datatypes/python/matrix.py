@@ -528,7 +528,7 @@ class Matrix(object):
         _M_setdata(self, self.__data.inverse())
         return self
 
-    def adjoint(self):
+    def adjugate(self):
         u"""
         余因子行列を得る。
 
@@ -536,7 +536,10 @@ class Matrix(object):
         """
         return _newM(self.__data.adjoint())
 
-    def adjointIt(self):
+    adjoint = adjugate  #: `adjugate` の別名。
+    adj = adjugate  #: `adjugate` の別名。
+
+    def adjugateIt(self):
         u"""
         余因子行列をセットする。
 
@@ -544,6 +547,19 @@ class Matrix(object):
         """
         _M_setdata(self, self.__data.adjoint())
         return self
+
+    adjointIt = adjugateIt  #: `adjugateIt` の別名。
+
+    def cofactor(self, i, j):
+        u"""
+        指定位置の余因子を得る。
+
+        :param `int` i: 行インデックス。
+        :param `int` j: 列インデックス。
+        :rtype: `float`
+        """
+        # python で det3 計算するより API を呼んだ方が速いだろう。
+        return self.__data.adjoint()[j * 4 + i]
 
     def homogenize(self):
         u"""
@@ -572,6 +588,7 @@ class Matrix(object):
 
     det4 = det  #: `det` の別名。
     det4x4 = det  #: `det` の別名。
+    determinant = det  #: `det` の別名。
 
     def det3(self):
         u"""
@@ -582,6 +599,19 @@ class Matrix(object):
         return self.__data.det3x3()
 
     det3x3 = det3  #: `det3` の別名。
+    determinant3 = det3  #: `det3` の別名。
+
+    def det2(self):
+        u"""
+        2x2部分の行列式を得る。
+
+        :rtype: `float`
+        """
+        m = self.__data
+        return m[0] * m[5] - m[4] * m[1]
+
+    det2x2 = det2  #: `det2` の別名。
+    determinant2 = det2  #: `det2` の別名。
 
     def row(self, i):
         u"""
