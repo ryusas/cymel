@@ -441,10 +441,33 @@ def _initCymelConstants():
     global MAYA_PRODUCT_VERSION, MAYA_VERSION, MAYA_VERSION_STR, IS_UIMODE, warning
 
     import maya.cmds as cmds
-
     _about = cmds.about
 
-    MAYA_PRODUCT_VERSION = re.search(r'.+/(\d+(?:\.\d+)?)', str(cmds.internalVar(upd=True))).group(1)
+    from maya.OpenMaya import MAYA_API_VERSION
+    if MAYA_API_VERSION >= 20180000:
+        # 2018 以降は .5 を想定しない。
+        MAYA_PRODUCT_VERSION = str(MAYA_API_VERSION // 10000)
+    else:
+        # .5 があるバージョンは次の通り:
+        #   2016.5 = 2016 Ext2
+        #   2013.5 = 2013 Ext
+        #   2011.5 = 2011 SAP
+        v = MAYA_API_VERSION // 10
+        if v == 20165:
+            MAYA_PRODUCT_VERSION = '2016.5'
+        elif v == 20135:
+            MAYA_PRODUCT_VERSION = '2013.5'
+        else:
+            # 2011.5 は MAYA_API_VERSION でも about(v=True) でも判別できないが非サポートなので問題ない。
+            #v //= 10
+            #if v == 2011:
+            #    try:
+            #        if re.search(r'.+/(\d+(?:\.\d+)?)', str(cmds.internalVar(upd=True))).group(1) == '2011.5':
+            #            v = '2011.5'
+            #    except:
+            #        pass
+            MAYA_PRODUCT_VERSION = str(v)
+
     try:
         # 2019.1 以降で利用できるオプション。
         v = (int(_about(mjv=True)), int(_about(mnv=True)), int(_about(pv=True)))
