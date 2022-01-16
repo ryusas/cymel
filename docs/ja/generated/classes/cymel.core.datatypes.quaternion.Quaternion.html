@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.core.datatypes.quaternion.Quaternion &#8212; cymel 0.6.2021101900 ドキュメント</title>
+    <title>class cymel.core.datatypes.quaternion.Quaternion &#8212; cymel 0.7.2022011600 ドキュメント</title>
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html" title="class cymel.core.datatypes.quaternion.ImmutableQuaternion"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.6.2021101900 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.7.2022011600 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" accesskey="U">cymel.core.datatypes.quaternion</a> &#187;</li> 
       </ul>
@@ -137,10 +137,16 @@
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV" title="cymel.core.datatypes.quaternion.Quaternion.asRHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRHV</span></code></a>([reverse,&nbsp;aim,&nbsp;upv])</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV</span></code></a> の別名。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRoll" title="cymel.core.datatypes.quaternion.Quaternion.asRoll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRoll</span></code></a>([aim])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRHV2</span></code></a>([axisOri,&nbsp;reverse])</td>
+<td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV2</span></code></a> の別名。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRoll" title="cymel.core.datatypes.quaternion.Quaternion.asRoll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRoll</span></code></a>([aim])</td>
 <td>ボーン回転とした場合の捻り成分を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV</span></code></a>([reverse,&nbsp;aim,&nbsp;upv])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV</span></code></a>([reverse,&nbsp;aim,&nbsp;upv])</td>
+<td>ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV2</span></code></a>([axisOri,&nbsp;reverse])</td>
 <td>ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asTransformation" title="cymel.core.datatypes.quaternion.Quaternion.asTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTransformation</span></code></a>()</td>
@@ -182,7 +188,13 @@
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRHV</span></code></a>(rhv[,&nbsp;reverse,&nbsp;aim,&nbsp;upv])</td>
 <td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV</span></code></a> の別名。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV</span></code></a>(rhv[,&nbsp;reverse,&nbsp;aim,&nbsp;upv])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRHV2</span></code></a>(rhv[,&nbsp;axisOri,&nbsp;reverse])</td>
+<td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV2</span></code></a> の別名。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV</span></code></a>(rhv[,&nbsp;reverse,&nbsp;aim,&nbsp;upv])</td>
+<td>ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV2</span></code></a>(rhv[,&nbsp;axisOri,&nbsp;reverse])</td>
 <td>ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.negateIt" title="cymel.core.datatypes.quaternion.Quaternion.negateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">negateIt</span></code></a>()</td>
@@ -426,6 +438,12 @@ True を指定すると捻ってから曲げる分解になる。</li>
 </dd></dl>
 
 <dl class="method">
+<dt id="cymel.core.datatypes.quaternion.Quaternion.asRHV2">
+<code class="descname">asRHV2</code><span class="sig-paren">(</span><em>axisOri=None</em>, <em>reverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV2</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="cymel.core.datatypes.quaternion.Quaternion.asRoll">
 <code class="descname">asRoll</code><span class="sig-paren">(</span><em>aim=ImmutableVector(1.000000</em>, <em>0.000000</em>, <em>0.000000)</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRoll" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ボーン回転とした場合の捻り成分を得る。</p>
@@ -458,6 +476,31 @@ reverse オプションはない。</p>
 True を指定すると捻ってから曲げる分解になる。</li>
 <li><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- ボーン方向ベクトル。</li>
 <li><strong>upv</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- ボーンアップベクトル。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">[roll, bendH, bendV]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2">
+<code class="descname">asRollBendHV2</code><span class="sig-paren">(</span><em>axisOri=None</em>, <em>reverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>axisOri</strong> -- 基準軸を回転（クォータニオン）で指定する。
+その空間のX軸がボーン方向、Y軸がアップ方向に相当する。
+デフォルトの None は単位クォータニオンと同じである。</li>
+<li><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
+デフォルトでは、階層上位から見て曲げてから捻るが、
+True を指定すると捻ってから曲げる分解になる。</li>
 </ul>
 </td>
 </tr>
@@ -666,6 +709,12 @@ True を指定すると捻ってから曲げる分解になる。</li>
 </dd></dl>
 
 <dl class="classmethod">
+<dt id="cymel.core.datatypes.quaternion.Quaternion.makeRHV2">
+<em class="property">classmethod </em><code class="descname">makeRHV2</code><span class="sig-paren">(</span><em>rhv</em>, <em>axisOri=None</em>, <em>reverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV2</span></code></a> の別名。</p>
+</dd></dl>
+
+<dl class="classmethod">
 <dt id="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV">
 <em class="property">classmethod </em><code class="descname">makeRollBendHV</code><span class="sig-paren">(</span><em>rhv</em>, <em>reverse=False</em>, <em>aim=ImmutableVector(1.000000</em>, <em>0.000000</em>, <em>0.000000)</em>, <em>upv=ImmutableVector(0.000000</em>, <em>1.000000</em>, <em>0.000000)</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。</p>
@@ -680,6 +729,32 @@ True を指定すると捻ってから曲げる分解になる。</li>
 True を指定すると捻ってから曲げる合成になる。</li>
 <li><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- ボーン方向ベクトル。</li>
 <li><strong>upv</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- ボーンアップベクトル。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2">
+<em class="property">classmethod </em><code class="descname">makeRollBendHV2</code><span class="sig-paren">(</span><em>rhv</em>, <em>axisOri=None</em>, <em>reverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
+<li><strong>rhv</strong> -- [roll, bendH, bendV]</li>
+<li><strong>axisOri</strong> -- 基準軸を回転（クォータニオン）で指定する。
+その空間のX軸がボーン方向、Y軸がアップ方向に相当する。
+デフォルトの None は単位クォータニオンと同じである。</li>
+<li><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
+デフォルトでは、階層上位から見て曲げてから捻るが、
+True を指定すると捻ってから曲げる合成になる。</li>
 </ul>
 </td>
 </tr>
@@ -978,7 +1053,7 @@ True を指定すると捻ってから曲げる合成になる。</li>
         <li class="right" >
           <a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html" title="class cymel.core.datatypes.quaternion.ImmutableQuaternion"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.6.2021101900 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.7.2022011600 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" >cymel.core.datatypes.quaternion</a> &#187;</li> 
       </ul>

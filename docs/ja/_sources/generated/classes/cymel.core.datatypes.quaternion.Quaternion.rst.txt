@@ -29,8 +29,10 @@ class cymel.core.datatypes.quaternion.Quaternion
         asM
         asMatrix
         asRHV
+        asRHV2
         asRoll
         asRollBendHV
+        asRollBendHV2
         asTransformation
         asX
         conjugate
@@ -44,7 +46,9 @@ class cymel.core.datatypes.quaternion.Quaternion
         isSignedEquivalent
         log
         makeRHV
+        makeRHV2
         makeRollBendHV
+        makeRollBendHV2
         negateIt
         normal
         normalize
@@ -89,8 +93,10 @@ class cymel.core.datatypes.quaternion.Quaternion
     .. automethod:: asM
     .. automethod:: asMatrix
     .. automethod:: asRHV
+    .. automethod:: asRHV2
     .. automethod:: asRoll
     .. automethod:: asRollBendHV
+    .. automethod:: asRollBendHV2
     .. automethod:: asTransformation
     .. automethod:: asX
     .. automethod:: conjugate
@@ -104,7 +110,9 @@ class cymel.core.datatypes.quaternion.Quaternion
     .. automethod:: isSignedEquivalent
     .. automethod:: log
     .. automethod:: makeRHV
+    .. automethod:: makeRHV2
     .. automethod:: makeRollBendHV
+    .. automethod:: makeRollBendHV2
     .. automethod:: negateIt
     .. automethod:: normal
     .. automethod:: normalize

@@ -7,6 +7,7 @@ from __future__ import division
 from __future__ import print_function
 
 from ...common import *
+from ...pyutils import boundAngle
 from ...pyutils.immutables import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
 from .vector import V
 import maya.api.OpenMaya as _api2
@@ -20,6 +21,10 @@ _MP = _api2.MPoint
 _ME = _api2.MEulerRotation
 _MX = _api2.MTransformationMatrix
 _MQ_Identity = _MQ.kIdentity
+
+_MV_X = _MV.kXaxisVector
+_MV_Y = _MV.kYaxisVector
+_MV_Z = _MV.kZaxisVector
 
 _2_squadPt = _MQ.squadPt
 _TOLERANCE = _MQ.kTolerance
@@ -791,33 +796,63 @@ class Quaternion(object):
 
         if reverse:
             q = self.__data.conjugate()
+            sign = -1.
+        else:
+            q = self.__data
+            sign = 1.
 
-            vec = aim.rotateBy(q)
-            qBend = _MQ(aim, vec)
-            f = (aim * vec) + 1.
-            rollQ = q * qBend.conjugate()
+        vec = aim.rotateBy(q)
+        bendQ = _MQ(aim, vec)
+        b = (aim * vec) + 1.
+        rollQ = q * bendQ.conjugate()
 
-            return [
-                -_asAngle(rollQ, aim, True),
-                2. * atan2(dep * vec, f),
-                -2. * atan2(upv * vec, f),
-            ]
+        return [
+            _asAngle(rollQ, aim, True) * sign,
+            atan2(dep * vec, b) * sign * -2.,
+            atan2(upv * vec, b) * sign * 2.,
+        ]
 
+    asRHV = asRollBendHV  #: `asRollBendHV` の別名。
+
+    def asRollBendHV2(self, axisOri=None, reverse=False):
+        u"""
+        ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。
+
+        :param axisOri:
+            基準軸を回転（クォータニオン）で指定する。
+            その空間のX軸がボーン方向、Y軸がアップ方向に相当する。
+            デフォルトの None は単位クォータニオンと同じである。
+        :param `bool` reverse:
+            曲げ・捻りの順番を反転するかどうか。
+            デフォルトでは、階層上位から見て曲げてから捻るが、
+            True を指定すると捻ってから曲げる分解になる。
+        :returns: [roll, bendH, bendV]
+        """
+        if axisOri:
+            axisOri = axisOri.__data
+            q = axisOri * self.__data
+            q *= axisOri.conjugate()
         else:
             q = self.__data
 
-            vec = aim.rotateBy(q)
-            qBend = _MQ(aim, vec)
-            f = (aim * vec) + 1.
-            rollQ = q * qBend.conjugate()
+        if reverse:
+            q = q.conjugate()
+            f = -2.
+        else:
+            f = 2.
 
-            return [
-                _asAngle(rollQ, aim, True),
-                -2. * atan2(dep * vec, f),
-                2. * atan2(upv * vec, f),
-            ]
+        vec = _MV_X.rotateBy(q)
+        bendQ = _MQ(_MV_X, vec)
+        b = (_MV_X * vec) + 1.
+        rollQ = q * bendQ.conjugate()
 
-    asRHV = asRollBendHV  #: `asRollBendHV` の別名。
+        return [
+            boundAngle(atan2(rollQ[0], rollQ[3]) * f),
+            atan2(_MV_Z * vec, b) * -f,
+            atan2(_MV_Y * vec, b) * f,
+        ]
+
+    asRHV2 = asRollBendHV2  #: `asRollBendHV2` の別名。
 
     @classmethod
     def makeRollBendHV(cls, rhv, reverse=False, aim=V.XAxis, upv=V.YAxis):
@@ -840,31 +875,64 @@ class Quaternion(object):
         dep = (aim ^ upv).normalize()
         upv = (dep ^ aim).normalize()
 
+        f = -.5 if reverse else .5
+        half = f * rhv[0]
+        h = tan(-f * rhv[1])
+        v = tan(f * rhv[2])
+
+        r = sin(half)
+        b = 2. / (h * h + v * v + 1.)
+
         if reverse:
-            half = -.5 * rhv[0]
-            h = tan(.5 * rhv[1])
-            v = tan(-.5 * rhv[2])
-
-            r = sin(half)
-            b = 2. / (h * h + v * v + 1.)
-
             q = _MQ(aim * (b - 1.) + upv * (v * b) + dep * (h * b), aim)
             q *= _MQ(aim[0] * r, aim[1] * r, aim[2] * r, -cos(half))
-
         else:
-            half = .5 * rhv[0]
-            h = tan(-.5 * rhv[1])
-            v = tan(.5 * rhv[2])
-
-            r = sin(half)
-            b = 2. / (h * h + v * v + 1.)
-
             q = _MQ(aim[0] * r, aim[1] * r, aim[2] * r, cos(half))
             q *= _MQ(aim, aim * (b - 1.) + upv * (v * b) + dep * (h * b))
 
         return _newQ(q, cls)
 
     makeRHV = makeRollBendHV  #: `makeRollBendHV` の別名。
+
+    @classmethod
+    def makeRollBendHV2(cls, rhv, axisOri=None, reverse=False):
+        u"""
+        ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。
+
+        :param rhv: [roll, bendH, bendV]
+        :param axisOri:
+            基準軸を回転（クォータニオン）で指定する。
+            その空間のX軸がボーン方向、Y軸がアップ方向に相当する。
+            デフォルトの None は単位クォータニオンと同じである。
+        :param `bool` reverse:
+            曲げ・捻りの順番を反転するかどうか。
+            デフォルトでは、階層上位から見て曲げてから捻るが、
+            True を指定すると捻ってから曲げる合成になる。
+        :rtype: `Quaternion`
+        """
+        f = -.5 if reverse else .5
+        half = f * rhv[0]
+        h = tan(-f * rhv[1])
+        v = tan(f * rhv[2])
+
+        r = sin(half)
+        b = 2. / (h * h + v * v + 1.)
+
+        if reverse:
+            q = _MQ(_MV_X * (b - 1.) + _MV_Y * (v * b) + _MV_Z * (h * b), _MV_X)
+            q *= _MQ(_MV_X[0] * r, _MV_X[1] * r, _MV_X[2] * r, -cos(half))
+        else:
+            q = _MQ(_MV_X[0] * r, _MV_X[1] * r, _MV_X[2] * r, cos(half))
+            q *= _MQ(_MV_X, _MV_X * (b - 1.) + _MV_Y * (v * b) + _MV_Z * (h * b))
+
+        if axisOri:
+            axisOri = axisOri.__data
+            q = axisOri.conjugate() * q
+            q *= axisOri
+
+        return _newQ(q, cls)
+
+    makeRHV2 = makeRollBendHV2  #: `makeRollBendHV2` の別名。
 
 Q = Quaternion  #: `Quaternion` の別名。
 

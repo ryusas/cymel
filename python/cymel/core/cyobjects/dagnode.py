@@ -39,7 +39,7 @@ class DagNode(DagNodeMixin, nodetypes.parentBasicNodeClass('dagNode')):
         """
         _setAttr(self.name() + '.v', False)
 
-    def setParent(self, parent=None, r=False, add=False):
+    def setParent(self, parent=None, r=False, add=False, avoidJointShear=False):
         u"""
         親ノードを変更する。
 
@@ -50,16 +50,36 @@ class DagNode(DagNodeMixin, nodetypes.parentBasicNodeClass('dagNode')):
             デフォルトではワールド空間で維持される。
         :param `bool` add:
             移動ではなくパスを追加する（インスタンス）。
+        :param `bool` avoidJointShear:
+            このノードが joint で、ワールド姿勢の維持のために shear
+            が必要な場合に、その使用を避けるための transform が
+            追加されるようにする。
+            これは本来の Maya の挙動だが、このメソッドのデフォルトでは
+            joint の shear を使用することで transform を追加しない。
+
+        .. warning::
+            2019 全てと 2020.0 では、joint の shear は機能しないため、
+            avoidJointShear=True を指定しないと姿勢を維持できない場合がある。
+            この問題は 2020.1 以降はバグとして修正されている。
         """
         if parent:
             if self.isShape():
                 _parent(self.name(), parent, s=True, r=True, add=add)
-            else:
+            elif avoidJointShear or r or add or not self.isJoint():
                 _parent(self.name(), parent, r=r, add=add)
+            else:
+                m = self.getM(ws=True)
+                _parent(self.name(), parent, r=True)
+                self.setM(m, ws=True)
         else:
             if self.isShape():
                 raise RuntimeError('A shape cannot be ungrouped.')
-            _parent(self.name(), w=True, r=r, add=add)
+            elif avoidJointShear or r or add or not self.isJoint():
+                _parent(self.name(), w=True, r=r, add=add)
+            else:
+                m = self.getM(ws=True)
+                _parent(self.name_(), w=True, r=True)
+                self.setM(m, ws=True)
 
     def iterBreadthFirst(self, shapes=False, intermediates=False, underWorld=False):
         u"""
