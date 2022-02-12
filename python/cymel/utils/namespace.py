@@ -221,7 +221,7 @@ class Namespace(UNICODE):
 
         :rtype: yield `Namespace`
         """
-        return iterTreeBreadthFirst([self], 'children')
+        return iterTreeBreadthFirst([self], lambda x: x.children())
 
     def iterDepthFirst(self):
         u"""
@@ -229,7 +229,7 @@ class Namespace(UNICODE):
 
         :rtype: yield `Namespace`
         """
-        return iterTreeDepthFirst([self], 'children')
+        return iterTreeDepthFirst([self], lambda x: x.children())
 
     def ls(self, pattern='*', **kwargs):
         u"""

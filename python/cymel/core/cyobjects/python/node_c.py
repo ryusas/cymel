@@ -8,7 +8,10 @@ from __future__ import print_function
 
 from uuid import UUID as _UUID
 from ...common import *
-from ..typeinfo import isDerivedNodeType as _isDerivedNodeType
+from ..typeinfo import (
+    isDerivedNodeType as _isDerivedNodeType,
+    isAbstractType as _isAbstractType,
+)
 from ..typeregistry import nodetypes
 from .cyobject import (
     CyObject,
@@ -228,6 +231,52 @@ class Node_c(CyObject):
         """
         self._CyObject__data['plugcls'] = pcls
 
+    def pluginName(self):
+        u"""
+        プラグインノードの場合にそのプラグイン名を得る。
+
+        :rtype: `str`
+        """
+        return self.mfn().pluginName
+
+    @classmethod
+    def pluginName_(cls):
+        u"""
+        クラスに紐付けられたノードタイプがプラグインノードの場合にそのプラグイン名を得る。
+
+        :rtype: `str`
+
+        .. note::
+            個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。
+        """
+        try:
+            return cls.__apiinfo.pluginName
+        except AttributeError:
+            raise TypeError('Class methods for type information are only available in basic classes that are strictly associated with individual types.')
+
+    def mtypeId(self):
+        u"""
+        API2 :mayaapi2:`MTypeId` を得る。
+
+        :rtype: :mayaapi2:`MTypeId`
+        """
+        return self.mfn().typeId
+
+    @classmethod
+    def mtypeId_(cls):
+        u"""
+        クラスに紐付けられたノードタイプの API2 :mayaapi2:`MTypeId` を得る。
+
+        :rtype: :mayaapi2:`MTypeId`
+
+        .. note::
+            個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。
+        """
+        try:
+            return cls.__apiinfo.typeId
+        except AttributeError:
+            raise TypeError('Class methods for type information are only available in basic classes that are strictly associated with individual types.')
+
     def classification(self):
         u"""
         ノードタイプの分類名を得る。
@@ -236,6 +285,21 @@ class Node_c(CyObject):
         """
         return _classification(self._CyObject__data['nodetype'])
 
+    @classmethod
+    def classification_(cls):
+        u"""
+        クラスに紐付けられたノードタイプの分類名を得る。
+
+        :rtype: `str`
+
+        .. note::
+            個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。
+        """
+        try:
+            return cls.__apiinfo.classification
+        except AttributeError:
+            raise TypeError('Class methods for type information are only available in basic classes that are strictly associated with individual types.')
+
     def type(self):
         u"""
         ノードタイプ名を得る。
@@ -243,6 +307,43 @@ class Node_c(CyObject):
         :rtype: `str`
         """
         return self._CyObject__data['nodetype']
+
+    @classmethod
+    def type_(cls):
+        u"""
+        クラスに紐付けられたノードタイプ名を得る。
+
+        :rtype: `str`
+
+        .. note::
+            個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。
+        """
+        try:
+            return cls.__apiinfo.typeName
+        except AttributeError:
+            raise TypeError('Class methods for type information are only available in basic classes that are strictly associated with individual types.')
+
+    @classmethod
+    def isAbstractType_(cls):
+        u"""
+        クラスに紐付けられたノードタイプが抽象タイプかどうかを得る。
+
+        戻り値は整数で、
+        0 は抽象タイプではなく、
+        1 は抽象タイプ、
+        2 はメタクラス（プラグインインタフェースなどのために存在するが、
+        実際は本当のノードタイプではない）
+        の意味となる。
+
+        :rtype: `int`
+
+        .. note::
+            個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。
+        """
+        try:
+            return _isAbstractType(cls.__apiinfo.typeName)
+        except AttributeError:
+            raise TypeError('Class methods for type information are only available in basic classes that are strictly associated with individual types.')
 
     def isType(self, typename):
         u"""
@@ -525,22 +626,6 @@ class Node_c(CyObject):
         """
         mfn = self.mfn()
         return not(mfn.isShared or mfn.isLocked or mfn.isFromReferencedFile)
-
-    def pluginName(self):
-        u"""
-        プラグインノードの場合は、そのプラグイン名を得る。
-
-        :rtype: `str`
-        """
-        return self.mfn().pluginName
-
-    def mtypeId(self):
-        u"""
-        API2 の :mayaapi2:`MTypeId` を得る。
-
-        :rtype: :mayaapi2:`MTypeId`
-        """
-        return self.mfn().typeId
 
     if MAYA_VERSION >= (2016,):
         def _uuid(self):

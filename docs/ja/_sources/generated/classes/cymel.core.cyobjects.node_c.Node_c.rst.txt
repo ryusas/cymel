@@ -21,6 +21,7 @@ class cymel.core.cyobjects.node_c.Node_c
         absoluteName
         affectsAnimation
         classification
+        classification_
         connections
         createNode
         destinations
@@ -29,6 +30,7 @@ class cymel.core.cyobjects.node_c.Node_c
         hasFn
         hasUniqueName
         inputs
+        isAbstractType_
         isDagNode
         isDefaultNode
         isFromReferencedFile
@@ -54,6 +56,7 @@ class cymel.core.cyobjects.node_c.Node_c
         mpath1_
         mpath_
         mtypeId
+        mtypeId_
         newObject
         node
         nodeName
@@ -63,6 +66,7 @@ class cymel.core.cyobjects.node_c.Node_c
         plugClass
         plug_
         pluginName
+        pluginName_
         plugsAffectsWorldSpace
         relatedNodeTypes
         setPlugClass
@@ -70,6 +74,7 @@ class cymel.core.cyobjects.node_c.Node_c
         sourcesWithConversions
         thisPlugClass
         type
+        type_
         worldSpacePlugs
 
 
@@ -92,6 +97,7 @@ class cymel.core.cyobjects.node_c.Node_c
     .. automethod:: absoluteName
     .. automethod:: affectsAnimation
     .. automethod:: classification
+    .. automethod:: classification_
     .. automethod:: connections
     .. automethod:: createNode
     .. automethod:: destinations
@@ -100,6 +106,7 @@ class cymel.core.cyobjects.node_c.Node_c
     .. automethod:: hasFn
     .. automethod:: hasUniqueName
     .. automethod:: inputs
+    .. automethod:: isAbstractType_
     .. automethod:: isDagNode
     .. automethod:: isDefaultNode
     .. automethod:: isFromReferencedFile
@@ -125,6 +132,7 @@ class cymel.core.cyobjects.node_c.Node_c
     .. automethod:: mpath1_
     .. automethod:: mpath_
     .. automethod:: mtypeId
+    .. automethod:: mtypeId_
     .. automethod:: newObject
     .. automethod:: node
     .. automethod:: nodeName
@@ -134,6 +142,7 @@ class cymel.core.cyobjects.node_c.Node_c
     .. automethod:: plugClass
     .. automethod:: plug_
     .. automethod:: pluginName
+    .. automethod:: pluginName_
     .. automethod:: plugsAffectsWorldSpace
     .. automethod:: relatedNodeTypes
     .. automethod:: setPlugClass
@@ -141,6 +150,7 @@ class cymel.core.cyobjects.node_c.Node_c
     .. automethod:: sourcesWithConversions
     .. automethod:: thisPlugClass
     .. automethod:: type
+    .. automethod:: type_
     .. automethod:: worldSpacePlugs
 
 

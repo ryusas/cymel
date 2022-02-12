@@ -19,8 +19,10 @@ cymel.core.typeinfo
     
         dumpNodetypeTree
         getInheritedNodeTypes
+        getNodetypeTreeDict
         isAbstractType
         isDerivedNodeType
+        iterNodetypeTree
 
 
 
@@ -45,7 +47,9 @@ cymel.core.typeinfo
     
     .. autofunction:: dumpNodetypeTree
     .. autofunction:: getInheritedNodeTypes
+    .. autofunction:: getNodetypeTreeDict
     .. autofunction:: isAbstractType
     .. autofunction:: isDerivedNodeType
+    .. autofunction:: iterNodetypeTree
 
 

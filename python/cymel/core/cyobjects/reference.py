@@ -329,7 +329,7 @@ class Reference(nodetypes.parentBasicNodeClass('reference')):
 
         :rtype: yield `Reference`
         """
-        return iterTreeBreadthFirst([self], 'children')
+        return iterTreeBreadthFirst([self], lambda x: x.children())
 
     def iterDepthFirst(self):
         u"""
@@ -337,7 +337,7 @@ class Reference(nodetypes.parentBasicNodeClass('reference')):
 
         :rtype: yield `Reference`
         """
-        return iterTreeDepthFirst([self], 'children')
+        return iterTreeDepthFirst([self], lambda x: x.children())
 
     def load(self):
         u"""

@@ -518,12 +518,12 @@ def getTempFilename(
 
 
 #------------------------------------------------------------------------------
-def iterTreeBreadthFirst(nodes, method):
+def iterTreeBreadthFirst(nodes, proc):
     u"""
     木を幅優先反復する。
 
     :param `iterable` nodes: 基点ノードリスト。
-    :param `str` method: 子ノード群を得るメソッド名。
+    :param `callable` proc: 子ノード群を得るプロシージャ。
 
     .. warning::
         循環していると無限ループになる。
@@ -533,26 +533,21 @@ def iterTreeBreadthFirst(nodes, method):
         nodes = []
         for node in queue:
             yield node
-            getter = getattr(node, method, None)
-            if getter:
-                for neighbor in getter():
-                    nodes.append(neighbor)
+            nodes.extend(proc(node))
 
 
-def iterTreeDepthFirst(nodes, method):
+def iterTreeDepthFirst(nodes, proc):
     u"""
     木を深さ優先反復する。
 
     :param `iterable` nodes: 基点ノードリスト。
-    :param `str` method: 子ノード群を得るメソッド名。
+    :param `callable` proc: 子ノード群を得るプロシージャ。
 
     .. warning::
         循環していると無限ループになる。
     """
     for node in nodes:
         yield node
-        getter = getattr(node, method, None)
-        if getter:
-            for node in iterTreeDepthFirst(getter(), method):
-                yield node
+        for node in iterTreeDepthFirst(proc(node), proc):
+            yield node
 

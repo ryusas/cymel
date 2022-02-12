@@ -9,10 +9,13 @@ from __future__ import print_function
 from ..common import *
 from ..pyutils import Singleton, parentClasses
 from .typeinfo import isDerivedNodeType, getInheritedNodeTypes
+import maya.api.OpenMaya as _api2
 
 __all__ = ['nodetypes']
 
 _FIX_SLOTS = True  #: 標準 CyObject クラスのスロットを固定する。
+
+_2_MNodeClass = _api2.MNodeClass
 
 
 #------------------------------------------------------------------------------
@@ -282,6 +285,7 @@ class NodeTypes(with_metaclass(Singleton, object)):
         #print('# RegisterBasicNodeClass: %s %r' % (nodetype, cls))
         _basicClsDict[nodetype] = cls
         _clsNodeTypeDict[cls] = (nodetype,)
+        cls._Node_c__apiinfo = _2_MNodeClass(nodetype)
         setattr(self, cls.__name__, cls)
 
     def __decideClass(self, nodename, nodetype, getMFn, basecls=None):

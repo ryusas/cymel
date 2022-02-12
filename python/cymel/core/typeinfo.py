@@ -13,6 +13,8 @@ __all__ = [
     'getInheritedNodeTypes',
     'isAbstractType',
     'dumpNodetypeTree',
+    'getNodetypeTreeDict',
+    'iterNodetypeTree',
 ]
 
 _allNodeTypes = cmds.allNodeTypes
@@ -121,6 +123,39 @@ def dumpNodetypeTree(nodetype='node', writer=None, indent=2):
     belows = [_NODETYPE_INHERIT_DICT[x] for x, y in _NODETYPE_INHERIT_SET_DICT.items() if nodetype in y]
     belows = [x for x in belows if x[0] != nodetype]
     dump(nodetype, '', belows)
+
+
+def getNodetypeTreeDict(nodetype='node'):
+    u"""
+    ノードタイプツリーの辞書を得る。
+
+    キーは「ノードタイプ名」、
+    値は「子タイプ名の `set` 」
+    となる辞書を得られる。
+
+    :param `str` nodetype: 起点。これ以下の情報を生成する。
+    :rtype: `dict`
+    """
+    _buildNodeTypeHierarchyInfo(nodetype)
+
+    result = {}
+
+    def build(nodetype, belows):
+        children = set([x[0] for x in belows if x[1] == nodetype])
+        belows = [x for x in belows if x[1] != nodetype and x[0] not in children]
+        result[nodetype] = children
+        for child in children:
+            build(child, belows)
+
+    belows = [_NODETYPE_INHERIT_DICT[x] for x, y in _NODETYPE_INHERIT_SET_DICT.items() if nodetype in y]
+    belows = [x for x in belows if x[0] != nodetype]
+    build(nodetype, belows)
+    return result
+
+
+def iterNodetypeTree(nodetype='node', breadthFirst=False):
+    dic = getNodetypeTreeDict(nodetype)
+    return (iterTreeBreadthFirst if breadthFirst else iterTreeDepthFirst)(['node'], dic.get)
 
 
 #------------------------------------------------------------------------------

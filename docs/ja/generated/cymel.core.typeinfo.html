@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>cymel.core.typeinfo &#8212; cymel 0.7.2022011600 ドキュメント</title>
+    <title>cymel.core.typeinfo &#8212; cymel 0.8.2022021200 ドキュメント</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="classes/cymel.core.cyobjects.transform_c.TransformMixin.html" title="class cymel.core.cyobjects.transform_c.TransformMixin"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.7.2022011600 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.8.2022021200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li> 
       </ul>
     </div>
@@ -92,11 +92,17 @@
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.typeinfo.getInheritedNodeTypes" title="cymel.core.typeinfo.getInheritedNodeTypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInheritedNodeTypes</span></code></a>(nodetype[,&nbsp;node,&nbsp;asSet])</td>
 <td>ノードタイプが継承しているタイプ情報を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.typeinfo.isAbstractType" title="cymel.core.typeinfo.isAbstractType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAbstractType</span></code></a>(nodetype[,&nbsp;node])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.typeinfo.getNodetypeTreeDict" title="cymel.core.typeinfo.getNodetypeTreeDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getNodetypeTreeDict</span></code></a>([nodetype])</td>
+<td>ノードタイプツリーの辞書を得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.typeinfo.isAbstractType" title="cymel.core.typeinfo.isAbstractType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAbstractType</span></code></a>(nodetype[,&nbsp;node])</td>
 <td>ノードタイプが抽象タイプかどうかを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.typeinfo.isDerivedNodeType" title="cymel.core.typeinfo.isDerivedNodeType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDerivedNodeType</span></code></a>(nodetype,&nbsp;basetype[,&nbsp;node])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.typeinfo.isDerivedNodeType" title="cymel.core.typeinfo.isDerivedNodeType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDerivedNodeType</span></code></a>(nodetype,&nbsp;basetype[,&nbsp;node])</td>
 <td>ノードタイプが別のノードタイプと同じか派生型かどうかを得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.typeinfo.iterNodetypeTree" title="cymel.core.typeinfo.iterNodetypeTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterNodetypeTree</span></code></a>([nodetype,&nbsp;breadthFirst])</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -142,6 +148,25 @@
 </tr>
 <tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">frozenset</span></code></a></p>
 </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cymel.core.typeinfo.getNodetypeTreeDict">
+<code class="descclassname">cymel.core.typeinfo.</code><code class="descname">getNodetypeTreeDict</code><span class="sig-paren">(</span><em>nodetype='node'</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.getNodetypeTreeDict" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードタイプツリーの辞書を得る。</p>
+<p>キーは「ノードタイプ名」、
+値は「子タイプ名の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a> 」
+となる辞書を得られる。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- 起点。これ以下の情報を生成する。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -202,6 +227,11 @@
 </table>
 </dd></dl>
 
+<dl class="function">
+<dt id="cymel.core.typeinfo.iterNodetypeTree">
+<code class="descclassname">cymel.core.typeinfo.</code><code class="descname">iterNodetypeTree</code><span class="sig-paren">(</span><em>nodetype='node'</em>, <em>breadthFirst=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.iterNodetypeTree" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 
 
@@ -225,7 +255,7 @@
         <li class="right" >
           <a href="classes/cymel.core.cyobjects.transform_c.TransformMixin.html" title="class cymel.core.cyobjects.transform_c.TransformMixin"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.7.2022011600 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.8.2022021200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li> 
       </ul>
     </div>

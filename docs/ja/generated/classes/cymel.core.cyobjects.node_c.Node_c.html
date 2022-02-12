@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.core.cyobjects.node_c.Node_c &#8212; cymel 0.7.2022011600 ドキュメント</title>
+    <title>class cymel.core.cyobjects.node_c.Node_c &#8212; cymel 0.8.2022021200 ドキュメント</title>
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.node_c.html" title="cymel.core.cyobjects.node_c"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.7.2022011600 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.8.2022021200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.node_c.html" accesskey="U">cymel.core.cyobjects.node_c</a> &#187;</li> 
       </ul>
@@ -105,29 +105,35 @@
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.classification" title="cymel.core.cyobjects.node_c.Node_c.classification"><code class="xref py py-obj docutils literal notranslate"><span class="pre">classification</span></code></a>()</td>
 <td>ノードタイプの分類名を得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.connections" title="cymel.core.cyobjects.node_c.Node_c.connections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connections</span></code></a>([s,&nbsp;d,&nbsp;c,&nbsp;t,&nbsp;et,&nbsp;scn,&nbsp;source,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.classification_" title="cymel.core.cyobjects.node_c.Node_c.classification_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">classification_</span></code></a>()</td>
+<td>クラスに紐付けられたノードタイプの分類名を得る。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.connections" title="cymel.core.cyobjects.node_c.Node_c.connections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connections</span></code></a>([s,&nbsp;d,&nbsp;c,&nbsp;t,&nbsp;et,&nbsp;scn,&nbsp;source,&nbsp;...])</td>
 <td>コネクトされているプラグやノードのリストを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.createNode" title="cymel.core.cyobjects.node_c.Node_c.createNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createNode</span></code></a>(**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.createNode" title="cymel.core.cyobjects.node_c.Node_c.createNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createNode</span></code></a>(**kwargs)</td>
 <td>クラスに関連付けられたタイプのノードを生成する。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.destinations" title="cymel.core.cyobjects.node_c.Node_c.destinations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">destinations</span></code></a>(**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.destinations" title="cymel.core.cyobjects.node_c.Node_c.destinations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">destinations</span></code></a>(**kwargs)</td>
 <td>unitConversionノードをスキップしつつ、出力先のプラグかノードのリストを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.destinationsWithConversions" title="cymel.core.cyobjects.node_c.Node_c.destinationsWithConversions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">destinationsWithConversions</span></code></a>(**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.destinationsWithConversions" title="cymel.core.cyobjects.node_c.Node_c.destinationsWithConversions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">destinationsWithConversions</span></code></a>(**kwargs)</td>
 <td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.outputs" title="cymel.core.cyobjects.node_c.Node_c.outputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputs</span></code></a> の別名（unitConversionノードをスキップせずに、出力先のプラグかノードのリストを得る）。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.hasAttr" title="cymel.core.cyobjects.node_c.Node_c.hasAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasAttr</span></code></a>(name[,&nbsp;alias,&nbsp;shape])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.hasAttr" title="cymel.core.cyobjects.node_c.Node_c.hasAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasAttr</span></code></a>(name[,&nbsp;alias,&nbsp;shape])</td>
 <td>指定した名前のアトリビュートが在るかどうか。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.hasFn" title="cymel.core.cyobjects.node_c.Node_c.hasFn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasFn</span></code></a>(fn)</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.hasFn" title="cymel.core.cyobjects.node_c.Node_c.hasFn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasFn</span></code></a>(fn)</td>
 <td>指定ファンクションタイプと互換性があるかどうか。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.hasUniqueName" title="cymel.core.cyobjects.node_c.Node_c.hasUniqueName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasUniqueName</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.hasUniqueName" title="cymel.core.cyobjects.node_c.Node_c.hasUniqueName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasUniqueName</span></code></a>()</td>
 <td>ノード名がユニークであるかどうかを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.inputs" title="cymel.core.cyobjects.node_c.Node_c.inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputs</span></code></a>(**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.inputs" title="cymel.core.cyobjects.node_c.Node_c.inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputs</span></code></a>(**kwargs)</td>
 <td>上流のコネクションを得る。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.isAbstractType_" title="cymel.core.cyobjects.node_c.Node_c.isAbstractType_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAbstractType_</span></code></a>()</td>
+<td>クラスに紐付けられたノードタイプが抽象タイプかどうかを得る。</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.isDagNode" title="cymel.core.cyobjects.node_c.Node_c.isDagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDagNode</span></code></a>()</td>
 <td>DAGノードかどうか。</td>
@@ -202,34 +208,40 @@
 <td><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a> を省略して、 Python API 2 の <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MDagPath.html">MDagPath</a> を得る。</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.mtypeId" title="cymel.core.cyobjects.node_c.Node_c.mtypeId"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mtypeId</span></code></a>()</td>
-<td>API2 の <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MTypeId.html">MTypeId</a> を得る。</td>
+<td>API2 <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MTypeId.html">MTypeId</a> を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.newObject" title="cymel.core.cyobjects.node_c.Node_c.newObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">newObject</span></code></a>(data)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.mtypeId_" title="cymel.core.cyobjects.node_c.Node_c.mtypeId_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mtypeId_</span></code></a>()</td>
+<td>クラスに紐付けられたノードタイプの API2 <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MTypeId.html">MTypeId</a> を得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.newObject" title="cymel.core.cyobjects.node_c.Node_c.newObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">newObject</span></code></a>(data)</td>
 <td>内部データとともにインスタンスを生成する。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.node" title="cymel.core.cyobjects.node_c.Node_c.node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.node" title="cymel.core.cyobjects.node_c.Node_c.node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code></a>()</td>
 <td>ノードを得る（このオブジェクト自身が得られる）。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.nodeName" title="cymel.core.cyobjects.node_c.Node_c.nodeName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodeName</span></code></a>([removeNamespace])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.nodeName" title="cymel.core.cyobjects.node_c.Node_c.nodeName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodeName</span></code></a>([removeNamespace])</td>
 <td>DAGパスを含まないノード名を得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.nodeName_" title="cymel.core.cyobjects.node_c.Node_c.nodeName_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodeName_</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.nodeName_" title="cymel.core.cyobjects.node_c.Node_c.nodeName_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodeName_</span></code></a>()</td>
 <td><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a> を省略して、DAGパスを含まないノード名を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.outputs" title="cymel.core.cyobjects.node_c.Node_c.outputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputs</span></code></a>(**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.outputs" title="cymel.core.cyobjects.node_c.Node_c.outputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputs</span></code></a>(**kwargs)</td>
 <td>下流のコネクションを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plug" title="cymel.core.cyobjects.node_c.Node_c.plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug</span></code></a>(name[,&nbsp;pcls])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plug" title="cymel.core.cyobjects.node_c.Node_c.plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug</span></code></a>(name[,&nbsp;pcls])</td>
 <td>ノードのアトリビュートを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plugClass" title="cymel.core.cyobjects.node_c.Node_c.plugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugClass</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plugClass" title="cymel.core.cyobjects.node_c.Node_c.plugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugClass</span></code></a>()</td>
 <td>プラグクラスを得る。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plug_" title="cymel.core.cyobjects.node_c.Node_c.plug_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug_</span></code></a>(name[,&nbsp;pcls])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plug_" title="cymel.core.cyobjects.node_c.Node_c.plug_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug_</span></code></a>(name[,&nbsp;pcls])</td>
 <td><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a> を省略して、ノードのアトリビュートを得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.pluginName" title="cymel.core.cyobjects.node_c.Node_c.pluginName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pluginName</span></code></a>()</td>
-<td>プラグインノードの場合は、そのプラグイン名を得る。</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.pluginName" title="cymel.core.cyobjects.node_c.Node_c.pluginName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pluginName</span></code></a>()</td>
+<td>プラグインノードの場合にそのプラグイン名を得る。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.pluginName_" title="cymel.core.cyobjects.node_c.Node_c.pluginName_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pluginName_</span></code></a>()</td>
+<td>クラスに紐付けられたノードタイプがプラグインノードの場合にそのプラグイン名を得る。</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plugsAffectsWorldSpace" title="cymel.core.cyobjects.node_c.Node_c.plugsAffectsWorldSpace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugsAffectsWorldSpace</span></code></a>([pcls])</td>
 <td>ワールド空間出力に影響を与えるプラグのリストを得る。</td>
@@ -252,7 +264,10 @@
 <tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.type" title="cymel.core.cyobjects.node_c.Node_c.type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a>()</td>
 <td>ノードタイプ名を得る。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.worldSpacePlugs" title="cymel.core.cyobjects.node_c.Node_c.worldSpacePlugs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">worldSpacePlugs</span></code></a>([pcls])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.type_" title="cymel.core.cyobjects.node_c.Node_c.type_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type_</span></code></a>()</td>
+<td>クラスに紐付けられたノードタイプ名を得る。</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.worldSpacePlugs" title="cymel.core.cyobjects.node_c.Node_c.worldSpacePlugs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">worldSpacePlugs</span></code></a>([pcls])</td>
 <td>ワールド空間出力プラグのリストを得る。</td>
 </tr>
 </tbody>
@@ -315,6 +330,24 @@
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="cymel.core.cyobjects.node_c.Node_c.classification_">
+<em class="property">classmethod </em><code class="descname">classification_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.classification_" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クラスに紐付けられたノードタイプの分類名を得る。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -453,6 +486,30 @@
 <dd><p>上流のコネクションを得る。</p>
 <p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.connections" title="cymel.core.cyobjects.node_c.Node_c.connections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connections</span></code></a> に s=True, d=False を指定することと同等であり、
 その他のオプションも全て指定可能。</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="cymel.core.cyobjects.node_c.Node_c.isAbstractType_">
+<em class="property">classmethod </em><code class="descname">isAbstractType_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.isAbstractType_" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クラスに紐付けられたノードタイプが抽象タイプかどうかを得る。</p>
+<p>戻り値は整数で、
+0 は抽象タイプではなく、
+1 は抽象タイプ、
+2 はメタクラス（プラグインインタフェースなどのために存在するが、
+実際は本当のノードタイプではない）
+の意味となる。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -806,7 +863,7 @@
 <dl class="method">
 <dt id="cymel.core.cyobjects.node_c.Node_c.mtypeId">
 <code class="descname">mtypeId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.mtypeId" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>API2 の <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MTypeId.html">MTypeId</a> を得る。</p>
+<dd><p>API2 <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MTypeId.html">MTypeId</a> を得る。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -815,6 +872,24 @@
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="cymel.core.cyobjects.node_c.Node_c.mtypeId_">
+<em class="property">classmethod </em><code class="descname">mtypeId_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.mtypeId_" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クラスに紐付けられたノードタイプの API2 <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MTypeId.html">MTypeId</a> を得る。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MTypeId.html">MTypeId</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。</p>
+</div>
 </dd></dl>
 
 <dl class="classmethod">
@@ -969,7 +1044,7 @@ Pythonの名前と衝突する場合のためにこのメソッドがある。</
 <dl class="method">
 <dt id="cymel.core.cyobjects.node_c.Node_c.pluginName">
 <code class="descname">pluginName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.pluginName" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>プラグインノードの場合は、そのプラグイン名を得る。</p>
+<dd><p>プラグインノードの場合にそのプラグイン名を得る。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -978,6 +1053,24 @@ Pythonの名前と衝突する場合のためにこのメソッドがある。</
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="cymel.core.cyobjects.node_c.Node_c.pluginName_">
+<em class="property">classmethod </em><code class="descname">pluginName_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.pluginName_" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クラスに紐付けられたノードタイプがプラグインノードの場合にそのプラグイン名を得る。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -1084,6 +1177,24 @@ None を指定するとクリアする。</td>
 </table>
 </dd></dl>
 
+<dl class="classmethod">
+<dt id="cymel.core.cyobjects.node_c.Node_c.type_">
+<em class="property">classmethod </em><code class="descname">type_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.type_" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クラスに紐付けられたノードタイプ名を得る。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。</p>
+</div>
+</dd></dl>
+
 <dl class="method">
 <dt id="cymel.core.cyobjects.node_c.Node_c.worldSpacePlugs">
 <code class="descname">worldSpacePlugs</code><span class="sig-paren">(</span><em>pcls=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.worldSpacePlugs" title="この定義へのパーマリンク">¶</a></dt>
@@ -1127,7 +1238,7 @@ None を指定するとクリアする。</td>
         <li class="right" >
           <a href="../cymel.core.cyobjects.node_c.html" title="cymel.core.cyobjects.node_c"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.7.2022011600 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.8.2022021200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.node_c.html" >cymel.core.cyobjects.node_c</a> &#187;</li> 
       </ul>
