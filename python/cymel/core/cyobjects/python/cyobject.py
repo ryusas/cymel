@@ -944,10 +944,10 @@ def _mnodeFn(mpath_or_mobj, mobj, default=None):
 
     # ジオメトリを持っていないジオメトリシェイプのファンクションセットはエラーになるので特別処理する。
     try:
-        mfn = cls(mpath_or_mobj)
-        mfn.typeId
+        mfn = cls(mpath_or_mobj)  # 2022.0 までは通るが 2022.1 以降は ValueError となる。
+        mfn.typeId  # RuntimeError となる。
         return mfn
-    except RuntimeError:
+    except:  # (RuntimeError, ValueError)
         return _2_MFnDagNode(mpath_or_mobj)
 
 
