@@ -458,8 +458,8 @@ def _initCymelConstants():
         elif v == 20135:
             MAYA_PRODUCT_VERSION = '2013.5'
         else:
+            v //= 10
             # 2011.5 は MAYA_API_VERSION でも about(v=True) でも判別できないが非サポートなので問題ない。
-            #v //= 10
             #if v == 2011:
             #    try:
             #        if re.search(r'.+/(\d+(?:\.\d+)?)', str(cmds.internalVar(upd=True))).group(1) == '2011.5':

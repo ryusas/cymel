@@ -115,8 +115,7 @@ def dumpNodetypeTree(nodetype='node', writer=None, indent=2):
             dump(child, indent, belows)
 
     if not writer:
-        def writer(x):
-            print(x)
+        writer = print
 
     spc = ' ' * indent
     belows = [_NODETYPE_INHERIT_DICT[x] for x, y in _NODETYPE_INHERIT_SET_DICT.items() if nodetype in y]

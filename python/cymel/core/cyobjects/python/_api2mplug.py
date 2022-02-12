@@ -33,7 +33,7 @@ __all__ = [
 
 #------------------------------------------------------------------------------
 if MAYA_VERSION < (2015,):
-    raise NotImplementedError('The python version of cymel.core is only supported starting with Maya 2015.')
+    raise NotImplementedError('The python version of cymel.core is only supported in Maya 2015 and later..')
 #------------------------------------------------------------------------------
 
 _MFn = _api2.MFn
