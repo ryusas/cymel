@@ -133,11 +133,19 @@ class Node_c(CyObject):
         obj = super(Node_c, cls).newObject(data)
         obj.__plugCache = {}
 
-        if cls.__apiinfo.typeName != data['nodetype']:
-            obj.pluginName = obj._pluginName
-            obj.typeId = obj._typeId
-            obj.classification = obj._classification
-            obj.type = obj._type
+        # NOTE: 動的なメソッド切り替えを試みたが、色々と問題になるのでやめた。
+        #   クラスに紐付いたノードタイプと実際のノードタイプが異なる場合にクラスメソッドをインスタンスメソッドに変更することを試みた。
+        #   しかし、以下の問題があった。
+        #
+        #    - 動的なメソッド追加は循環参照になってしまう。
+        #    - 書き換え不可にされていると、そもそも不可能。
+        #    - ベーシッククラスはすべて書き換え不可なので、たとえば joint を Transform で得ようとしたらエラー。
+        #
+        #if cls.__apiinfo.typeName != data['nodetype']:
+        #    obj.pluginName = obj._pluginName
+        #    obj.typeId = obj._typeId
+        #    obj.classification = obj._classification
+        #    obj.type = obj._type
         return obj
 
     def isInstanceOf(self, other):
@@ -238,22 +246,15 @@ class Node_c(CyObject):
         self._CyObject__data['plugcls'] = pcls
 
     @classmethod
-    def pluginName(cls):
+    def pluginName_(cls):
         u"""
         クラスに紐付けられたノードタイプがプラグインの場合にそのプラグイン名を得る。
 
         :rtype: `str`
-
-        .. note::
-            通常はクラスメソッドだが、
-            適合検査メソッド付きノードクラスの場合で、且つ
-            継承しているベーシッククラスに紐付けられたノードタイプと異なる
-            ノードタイプのインスタンスとなった場合、
-            実際のノードインスタンスを検査できるオブジェクトメソッドに置き換わる。
         """
         return cls.__apiinfo.pluginName
 
-    def _pluginName(self):
+    def pluginName(self):
         u"""
         ノードタイプがプラグインの場合にそのプラグイン名を得る。
 
@@ -262,22 +263,15 @@ class Node_c(CyObject):
         return self.mfn().pluginName
 
     @classmethod
-    def typeId(cls):
+    def typeId_(cls):
         u"""
         クラスに紐付けられたノードタイプの TypeId を得る。
 
         :rtype: `int`
-
-        .. note::
-            通常はクラスメソッドだが、
-            適合検査メソッド付きノードクラスの場合で、且つ
-            継承しているベーシッククラスに紐付けられたノードタイプと異なる
-            ノードタイプのインスタンスとなった場合、
-            実際のノードインスタンスを検査できるオブジェクトメソッドに置き換わる。
         """
         return cls.__apiinfo.typeId.id()
 
-    def _typeId(self):
+    def typeId(self):
         u"""
         ノードタイプの TypeId を得る。
 
@@ -286,22 +280,15 @@ class Node_c(CyObject):
         return self.mfn().typeId.id()
 
     @classmethod
-    def classification(cls):
+    def classification_(cls):
         u"""
         クラスに紐付けられたノードタイプの分類名を得る。
 
         :rtype: `str`
-
-        .. note::
-            通常はクラスメソッドだが、
-            適合検査メソッド付きノードクラスの場合で、且つ
-            継承しているベーシッククラスに紐付けられたノードタイプと異なる
-            ノードタイプのインスタンスとなった場合、
-            実際のノードインスタンスを検査できるオブジェクトメソッドに置き換わる。
         """
         return cls.__apiinfo.classification
 
-    def _classification(self):
+    def classification(self):
         u"""
         ノードタイプの分類名を得る。
 
@@ -310,22 +297,15 @@ class Node_c(CyObject):
         return _classification(self._CyObject__data['nodetype'])
 
     @classmethod
-    def type(cls):
+    def type_(cls):
         u"""
         クラスに紐付けられたノードタイプ名を得る。
 
         :rtype: `str`
-
-        .. note::
-            通常はクラスメソッドだが、
-            適合検査メソッド付きノードクラスの場合で、且つ
-            継承しているベーシッククラスに紐付けられたノードタイプと異なる
-            ノードタイプのインスタンスとなった場合、
-            実際のノードインスタンスを検査できるオブジェクトメソッドに置き換わる。
         """
         return cls.__apiinfo.typeName
 
-    def _type(self):
+    def type(self):
         u"""
         ノードタイプ名を得る。
 

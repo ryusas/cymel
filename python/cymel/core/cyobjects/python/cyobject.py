@@ -264,7 +264,7 @@ class CyObject(object):
         obj = _object_new(cls)
         obj.__data = data
         obj.__ref = None
-        #trackDestruction(obj)
+        trackDestruction(obj)
         return obj
 
     @staticmethod
@@ -872,24 +872,14 @@ def _checkNodeCls(cls, mfn, nodename, src):
     指定クラスは少なことも Node の派生でなければならず、
     それに紐付いたノードタイプに実際のノードタイプがマッチしなければならない。
     """
-    #for typ in _relatedNodeTypes(cls):
-    #    if _isDerivedNodeType(mfn.typeName, typ):
-    #        # たとえ未登録のカスタム派生クラスでも、このメソッドがあればチェックされる。
-    #        verify = getattr(cls, '_verifyNode', None)
-    #        if not verify or verify(mfn, nodename):
-    #            return True
-
     typeName = mfn.typeName
-    verify = getattr(cls, '_verifyNode', None)
-    if verify:
-        # たとえ未登録のカスタム派生クラスでも、このメソッドがあればチェックされる。
-        for typ in _relatedNodeTypes(cls):
-            if _isDerivedNodeType(typeName, typ):
-                if verify(mfn, nodename):
-                    return
-                break
-    elif typeName == cls._Node_c__apiinfo.typeName:
-        return
+    for typ in _relatedNodeTypes(cls):
+        if _isDerivedNodeType(typeName, typ):
+            # たとえ未登録のカスタム派生クラスでも、このメソッドがあればチェックされる。
+            verify = getattr(cls, '_verifyNode', None)
+            if not verify or verify(mfn, nodename):
+                return
+            break
     raise TypeError('not matched to class ' + cls.__name__ + ': '+ repr(src))
 
 
