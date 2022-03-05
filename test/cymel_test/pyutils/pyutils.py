@@ -12,7 +12,6 @@ import unittest
 from cymel.pyutils import pyutils
 from cymel.pyutils.pyutils import (
     with_metaclass, EMPTY_TUPLE,
-    im_func, im_self, im_class,
 )
 
 
@@ -21,20 +20,6 @@ class TestPyutils(unittest.TestCase):
     u"""
     Test of pyutils
     """
-    # im_ 系関数のテスト。
-    def test_im_xxx(self):
-        class MyDict(dict):
-            def dummy(self):
-                pass
-
-        obj = MyDict()
-        self.assertRaises(AttributeError, im_func, obj.pop)
-        self.assertTrue(im_func(obj.dummy))
-        self.assertTrue(im_self(obj.pop) is obj)
-        self.assertTrue(im_self(obj.dummy) is obj)
-        self.assertTrue(im_class(obj.pop) is MyDict)
-        self.assertTrue(im_class(obj.dummy) is MyDict)
-
     # Singleton のテスト。
     def test_Singleton(self):
         class Foo(with_metaclass(pyutils.Singleton, object)):

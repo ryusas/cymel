@@ -8,12 +8,13 @@ from __future__ import print_function
 
 import unittest
 from cymel_test import (
-    pyutils, utils,
+    core, pyutils, utils,
 )
 
 
 def suite():
      return unittest.TestSuite((
+        core.suite(),
         pyutils.suite(),
         utils.suite(),
     ))
