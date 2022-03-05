@@ -68,11 +68,11 @@ class TestPyutils(unittest.TestCase):
             ]),
         ])]
         self.assertEqual(
-            [str(x) for x in pyutils.iterTreeBreadthFirst(tree, 'children')],
+            [str(x) for x in pyutils.iterTreeBreadthFirst(tree, lambda x: x.children())],
             ['top', 'foo', 'bar', 'baz', 'fooA', 'fooB', 'fooC', 'barA', 'barB', 'bazA', 'bazB', 'bazC', 'fooB1', 'fooB2', 'bazA1', 'bazB1'],
         )
         self.assertEqual(
-            [str(x) for x in pyutils.iterTreeDepthFirst(tree, 'children')],
+            [str(x) for x in pyutils.iterTreeDepthFirst(tree, lambda x: x.children())],
             ['top', 'foo', 'fooA', 'fooB', 'fooB1', 'fooB2', 'fooC', 'bar', 'barA', 'barB', 'baz', 'bazA', 'bazA1', 'bazB', 'bazB1', 'bazC'],
         )
 

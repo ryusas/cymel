@@ -30,7 +30,7 @@ class cymel.core.cyobjects.node_c.Node_c
         hasFn
         hasUniqueName
         inputs
-        isAbstractType_
+        isAbstractType
         isDagNode
         isDefaultNode
         isFromReferencedFile
@@ -55,8 +55,6 @@ class cymel.core.cyobjects.node_c.Node_c
         mpath1
         mpath1_
         mpath_
-        mtypeId
-        mtypeId_
         newObject
         node
         nodeName
@@ -74,6 +72,8 @@ class cymel.core.cyobjects.node_c.Node_c
         sourcesWithConversions
         thisPlugClass
         type
+        typeId
+        typeId_
         type_
         worldSpacePlugs
 
@@ -106,7 +106,7 @@ class cymel.core.cyobjects.node_c.Node_c
     .. automethod:: hasFn
     .. automethod:: hasUniqueName
     .. automethod:: inputs
-    .. automethod:: isAbstractType_
+    .. automethod:: isAbstractType
     .. automethod:: isDagNode
     .. automethod:: isDefaultNode
     .. automethod:: isFromReferencedFile
@@ -131,8 +131,6 @@ class cymel.core.cyobjects.node_c.Node_c
     .. automethod:: mpath1
     .. automethod:: mpath1_
     .. automethod:: mpath_
-    .. automethod:: mtypeId
-    .. automethod:: mtypeId_
     .. automethod:: newObject
     .. automethod:: node
     .. automethod:: nodeName
@@ -150,6 +148,8 @@ class cymel.core.cyobjects.node_c.Node_c
     .. automethod:: sourcesWithConversions
     .. automethod:: thisPlugClass
     .. automethod:: type
+    .. automethod:: typeId
+    .. automethod:: typeId_
     .. automethod:: type_
     .. automethod:: worldSpacePlugs
 
