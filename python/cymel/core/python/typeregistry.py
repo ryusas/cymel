@@ -198,8 +198,8 @@ class NodeTypes(with_metaclass(Singleton, object)):
         :param cls: 登録を削除するクラス。
         :param `bool` warn: 削除しながら警告メッセージを出力するかどうか。
         """
-        cnt = _deregisterNodeClass(_evalAbstrClsDict, cls, warn)
-        cnt += _deregisterNodeClass(_basicClsDict, cls, warn)
+        cnt = self.__deregisterNodeClass(_evalAbstrClsDict, cls, warn)
+        cnt += self.__deregisterNodeClass(_basicClsDict, cls, warn)
         if not cnt:
             raise ValueError('unknown class: ' + repr(cls))
 
@@ -334,28 +334,34 @@ class NodeTypes(with_metaclass(Singleton, object)):
             # ベーシックノードクラスを得る。
             return self.basicNodeClass(nodetype, nodename)
 
+    def __deregisterNodeClass(self, dic, cls, warn):
+        u"""
+        クラスの種類ごとの `deregisterNodeClass` サブルーチン。
+
+        :param `dict` dic: クラスの種類に応じた登録辞書。
+        :param `type` cls: クラス。
+        :param `callable` proc: クラス登録削除用プロシージャ。
+        :rtype: `int`
+        """
+        cnt = 0
+        for typ in list(dic):
+            subcs = dic[typ]
+            if not isinstance(subcs, list):
+                subcs = [subcs]
+            for subc in subcs:
+                if issubclass(subc, cls):
+                    del dic[typ]
+                    del _clsNodeTypeDict[subc]
+                    name = subc.__name__
+                    if getattr(self, name, None) is subc:
+                        delattr(self, name)
+                    if warn:
+                        warning('node class deregistered: ' + repr(subc))
+                    cnt += 1
+        return cnt
+
 
 #------------------------------------------------------------------------------
-def _deregisterNodeClass(dic, cls, warn):
-    u"""
-    クラスの種類ごとの `NodeTypes.deregisterNodeClass` サブルーチン。
-
-    :param `dict` dic: クラスの種類に応じた登録辞書。
-    :param `type` cls: クラス。
-    :param `callable` proc: クラス登録削除用プロシージャ。
-    :rtype: `int`
-    """
-    cnt = 0
-    for typ in list(dic):
-        subc = dic[typ]
-        if issubclass(subc, cls):
-            del dic[typ]
-            del _clsNodeTypeDict[subc]
-            if warn:
-                warning('node class deregistered: ' + repr(subc))
-            cnt += 1
-    return cnt
-
 _evalAbstrClsDict = {}  #: 検査メソッド付きクラス辞書。
 _basicClsDict = {}  #: ベーシッククラス辞書。
 _clsNodeTypeDict = {}  #: クラスに紐付けられたノードタイプの辞書。
