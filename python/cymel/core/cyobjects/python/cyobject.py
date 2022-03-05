@@ -865,33 +865,40 @@ def _anyClsObjByName(cls, name):
 
 
 #------------------------------------------------------------------------------
-def _checkNodeCls(cls, mfn, nodename, src=None):
+def _checkNodeCls(cls, mfn, nodename, src):
     u"""
-    ノード用に指定されたクラスが問題ないかチェックしつつクラスを決定する。
+    ノード用に指定されたクラスが問題ないかチェックする。
 
     指定クラスは少なことも Node の派生でなければならず、
     それに紐付いたノードタイプに実際のノードタイプがマッチしなければならない。
     """
-    for typ in _relatedNodeTypes(cls):
-        if _isDerivedNodeType(mfn.typeName, typ):
-            # たとえ未登録のカスタム派生クラスでも、このメソッドがあればチェックされる。
-            verify = getattr(cls, '_verifyNode', None)
-            if not verify or verify(mfn, nodename):
-                return True
-    if src:
-        raise TypeError('not matched to class ' + cls.__name__ + ': '+ repr(src))
-    return False
+    #for typ in _relatedNodeTypes(cls):
+    #    if _isDerivedNodeType(mfn.typeName, typ):
+    #        # たとえ未登録のカスタム派生クラスでも、このメソッドがあればチェックされる。
+    #        verify = getattr(cls, '_verifyNode', None)
+    #        if not verify or verify(mfn, nodename):
+    #            return True
+
+    typeName = mfn.typeName
+    verify = getattr(cls, '_verifyNode', None)
+    if verify:
+        # たとえ未登録のカスタム派生クラスでも、このメソッドがあればチェックされる。
+        for typ in _relatedNodeTypes(cls):
+            if _isDerivedNodeType(typeName, typ):
+                if verify(mfn, nodename):
+                    return
+                break
+    elif typeName == cls._Node_c__apiinfo.typeName:
+        return
+    raise TypeError('not matched to class ' + cls.__name__ + ': '+ repr(src))
 
 
 def _checkPlugCls(cls, src=None):
     u"""
-    プラグ用に指定されたクラスが問題ないかチェックしつつクラスを決定する。
+    プラグ用に指定されたクラスが問題ないかチェックする。
     """
-    if issubclass(cls, _defaultPlugCls):
-        return True
-    if src:
+    if not issubclass(cls, _defaultPlugCls):
         raise TypeError('not matched to class ' + cls.__name__ + ': '+ repr(src))
-    return False
 
 
 #------------------------------------------------------------------------------

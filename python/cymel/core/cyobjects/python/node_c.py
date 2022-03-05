@@ -132,6 +132,12 @@ class Node_c(CyObject):
         """
         obj = super(Node_c, cls).newObject(data)
         obj.__plugCache = {}
+
+        if cls.__apiinfo.typeName != data['nodetype']:
+            obj.pluginName = obj._pluginName
+            obj.typeId = obj._typeId
+            obj.classification = obj._classification
+            obj.type = obj._type
         return obj
 
     def isInstanceOf(self, other):
@@ -231,53 +237,71 @@ class Node_c(CyObject):
         """
         self._CyObject__data['plugcls'] = pcls
 
-    def pluginName(self):
+    @classmethod
+    def pluginName(cls):
         u"""
-        プラグインノードの場合にそのプラグイン名を得る。
+        クラスに紐付けられたノードタイプがプラグインの場合にそのプラグイン名を得る。
+
+        :rtype: `str`
+
+        .. note::
+            通常はクラスメソッドだが、
+            適合検査メソッド付きノードクラスの場合で、且つ
+            継承しているベーシッククラスに紐付けられたノードタイプと異なる
+            ノードタイプのインスタンスとなった場合、
+            実際のノードインスタンスを検査できるオブジェクトメソッドに置き換わる。
+        """
+        return cls.__apiinfo.pluginName
+
+    def _pluginName(self):
+        u"""
+        ノードタイプがプラグインの場合にそのプラグイン名を得る。
 
         :rtype: `str`
         """
         return self.mfn().pluginName
 
     @classmethod
-    def pluginName_(cls):
+    def typeId(cls):
         u"""
-        クラスに紐付けられたノードタイプがプラグインノードの場合にそのプラグイン名を得る。
+        クラスに紐付けられたノードタイプの TypeId を得る。
+
+        :rtype: `int`
+
+        .. note::
+            通常はクラスメソッドだが、
+            適合検査メソッド付きノードクラスの場合で、且つ
+            継承しているベーシッククラスに紐付けられたノードタイプと異なる
+            ノードタイプのインスタンスとなった場合、
+            実際のノードインスタンスを検査できるオブジェクトメソッドに置き換わる。
+        """
+        return cls.__apiinfo.typeId.id()
+
+    def _typeId(self):
+        u"""
+        ノードタイプの TypeId を得る。
+
+        :rtype: `int`
+        """
+        return self.mfn().typeId.id()
+
+    @classmethod
+    def classification(cls):
+        u"""
+        クラスに紐付けられたノードタイプの分類名を得る。
 
         :rtype: `str`
 
         .. note::
-            個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。
+            通常はクラスメソッドだが、
+            適合検査メソッド付きノードクラスの場合で、且つ
+            継承しているベーシッククラスに紐付けられたノードタイプと異なる
+            ノードタイプのインスタンスとなった場合、
+            実際のノードインスタンスを検査できるオブジェクトメソッドに置き換わる。
         """
-        try:
-            return cls.__apiinfo.pluginName
-        except AttributeError:
-            raise TypeError('Class methods for type information are only available in basic classes that are strictly associated with individual types.')
+        return cls.__apiinfo.classification
 
-    def mtypeId(self):
-        u"""
-        API2 :mayaapi2:`MTypeId` を得る。
-
-        :rtype: :mayaapi2:`MTypeId`
-        """
-        return self.mfn().typeId
-
-    @classmethod
-    def mtypeId_(cls):
-        u"""
-        クラスに紐付けられたノードタイプの API2 :mayaapi2:`MTypeId` を得る。
-
-        :rtype: :mayaapi2:`MTypeId`
-
-        .. note::
-            個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。
-        """
-        try:
-            return cls.__apiinfo.typeId
-        except AttributeError:
-            raise TypeError('Class methods for type information are only available in basic classes that are strictly associated with individual types.')
-
-    def classification(self):
+    def _classification(self):
         u"""
         ノードタイプの分類名を得る。
 
@@ -286,21 +310,22 @@ class Node_c(CyObject):
         return _classification(self._CyObject__data['nodetype'])
 
     @classmethod
-    def classification_(cls):
+    def type(cls):
         u"""
-        クラスに紐付けられたノードタイプの分類名を得る。
+        クラスに紐付けられたノードタイプ名を得る。
 
         :rtype: `str`
 
         .. note::
-            個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。
+            通常はクラスメソッドだが、
+            適合検査メソッド付きノードクラスの場合で、且つ
+            継承しているベーシッククラスに紐付けられたノードタイプと異なる
+            ノードタイプのインスタンスとなった場合、
+            実際のノードインスタンスを検査できるオブジェクトメソッドに置き換わる。
         """
-        try:
-            return cls.__apiinfo.classification
-        except AttributeError:
-            raise TypeError('Class methods for type information are only available in basic classes that are strictly associated with individual types.')
+        return cls.__apiinfo.typeName
 
-    def type(self):
+    def _type(self):
         u"""
         ノードタイプ名を得る。
 
@@ -309,22 +334,7 @@ class Node_c(CyObject):
         return self._CyObject__data['nodetype']
 
     @classmethod
-    def type_(cls):
-        u"""
-        クラスに紐付けられたノードタイプ名を得る。
-
-        :rtype: `str`
-
-        .. note::
-            個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。
-        """
-        try:
-            return cls.__apiinfo.typeName
-        except AttributeError:
-            raise TypeError('Class methods for type information are only available in basic classes that are strictly associated with individual types.')
-
-    @classmethod
-    def isAbstractType_(cls):
+    def isAbstractType(cls):
         u"""
         クラスに紐付けられたノードタイプが抽象タイプかどうかを得る。
 
@@ -338,12 +348,10 @@ class Node_c(CyObject):
         :rtype: `int`
 
         .. note::
-            個々のノードタイプに厳密に紐付けられるベーシッククラスでのみ利用可能。
+            適合検査メソッド付きノードクラスの場合は、
+            継承しているベーシッククラスに紐付けられたノードタイプについての結果となる。
         """
-        try:
-            return _isAbstractType(cls.__apiinfo.typeName)
-        except AttributeError:
-            raise TypeError('Class methods for type information are only available in basic classes that are strictly associated with individual types.')
+        return _isAbstractType(cls.__apiinfo.typeName)
 
     def isType(self, typename):
         u"""
