@@ -264,7 +264,7 @@ class CyObject(object):
         obj = _object_new(cls)
         obj.__data = data
         obj.__ref = None
-        trackDestruction(obj)
+        #trackDestruction(obj)
         return obj
 
     @staticmethod

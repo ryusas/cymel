@@ -17,7 +17,8 @@ _rename = cmds.rename
 
 _relatedNodeTypes = nodetypes.relatedNodeTypes
 
-_RE_SHAPE_NAME_sub = re.compile(r'(\d*)$').sub
+#_RE_SHAPE_NAME_sub = re.compile(r'(\d*)$').sub
+_RE_SHAPE_NAME_search = re.compile(r'\d*$').search
 
 
 #------------------------------------------------------------------------------
@@ -78,7 +79,9 @@ class Shape(nodetypes.parentBasicNodeClass('shape')):
         # transform ノードの子としてシェイプを生成する。
         # ノード生成フックを考慮して、名前はリネームでつける。
         kwargs['parent'] = name
-        name = _RE_SHAPE_NAME_sub(r'Shape\1', name)
+        #name = _RE_SHAPE_NAME_sub(r'Shape\1', name)  # py3だと数字の後の空文字列にもマッチして 'hoge1' -> 'hogeShape1Shape' となってしまう。
+        m = _RE_SHAPE_NAME_search(name)
+        name = name[:m.start()] + 'Shape' + m.group(0)
         return _rename(_createNode(typ, **kwargs), name)
 
 nodetypes.registerNodeClass(Shape, 'shape')
