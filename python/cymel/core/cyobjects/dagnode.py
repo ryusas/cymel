@@ -69,7 +69,7 @@ class DagNode(DagNodeMixin, nodetypes.parentBasicNodeClass('dagNode')):
                 _parent(self.name(), parent, r=r, add=add)
             else:
                 m = self.getM(ws=True)
-                _parent(self.name(), parent, r=True)
+                _parent(self.name(), parent)  # r=True を指定すると is が接続されない。
                 self.setM(m, ws=True)
         else:
             if self.isShape():
@@ -78,7 +78,7 @@ class DagNode(DagNodeMixin, nodetypes.parentBasicNodeClass('dagNode')):
                 _parent(self.name(), w=True, r=r, add=add)
             else:
                 m = self.getM(ws=True)
-                _parent(self.name_(), w=True, r=True)
+                _parent(self.name_(), w=True)  # r=True を指定すると is が接続されない。
                 self.setM(m, ws=True)
 
     def iterBreadthFirst(self, shapes=False, intermediates=False, underWorld=False):
