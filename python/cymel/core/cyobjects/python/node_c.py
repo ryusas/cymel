@@ -15,6 +15,7 @@ from ..typeinfo import (
 from ..typeregistry import nodetypes
 from .cyobject import (
     CyObject,
+    CY_NODE,
     _initAPI1Objects,
     _newNodePlug,
     _argsToFindComplexMPlug,
@@ -61,7 +62,7 @@ class Node_c(CyObject):
     """
     __slots__ = ('__plugCache',)
 
-    CLASS_TYPE = 1  #: ラッパークラスの種類が `.Node` であることを表す。
+    CLASS_TYPE = CY_NODE  #: ラッパークラスの種類が `.Node` であることを表す。
     TYPE_BITS = 0  #: クラスでサポートしているノードの特徴を表す。
 
     def __new__(cls, *args, **kwargs):

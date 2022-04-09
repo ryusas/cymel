@@ -254,7 +254,7 @@ class AutoLayout(_FormLayout):
                 afs.append((child, af0, sideSpc))
                 afs.append((child, af1, sideSpc))
 
-                if i is 0:
+                if i == 0:
                     afs.append((child, dir0, spc))
                 elif i <= adjustIndex:
                     acs.append((child, dir0, spc, children[i - 1]))

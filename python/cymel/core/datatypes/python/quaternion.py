@@ -52,7 +52,7 @@ class Quaternion(object):
 
     def __new__(cls, *args):
         n = len(args)
-        if n is 1:
+        if n == 1:
             v = args[0]
             #if hasattr(v, '_Quaternion__data'):
             #    return _newQ(_MQ(v.__data), cls)
@@ -353,7 +353,7 @@ class Quaternion(object):
         """
         v0 = args[0]
         n = len(args)
-        if n is 1:
+        if n == 1:
             if hasattr(v0, '_Quaternion__data'):
                 self.__data.setValue(v0.__data)
                 return self
@@ -363,7 +363,7 @@ class Quaternion(object):
             if hasattr(v0, '_Matrix__data'):
                 _Q_setdata(self, _MX(v0._Matrix__data).rotation(True))
                 return self
-        elif n is 2:
+        elif n == 2:
             if hasattr(v0, '_Vector__data'):
                 _Q_setdata(self, _MQ(args[1], _MV(v0)))
                 return self
@@ -452,7 +452,7 @@ class Quaternion(object):
             なお、Maya 2019 以降の場合は、この問題は解決されており、
             且つ correct 指定無しでも適切な値が返される。
         """
-        if order is XYZ:
+        if order == XYZ:
             r = self.__data.asEulerRotation()
         else:
             r = _ME(0., 0., 0., order)
@@ -488,7 +488,7 @@ class Quaternion(object):
             なお、Maya 2019 以降の場合は、この問題は解決されており、
             且つ correct 指定無しでも適切な値が返される。
         """
-        if order is XYZ:
+        if order == XYZ:
             r = self.__data.asEulerRotation()
         else:
             r = _ME(0., 0., 0., order)

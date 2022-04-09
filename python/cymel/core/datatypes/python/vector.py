@@ -71,7 +71,7 @@ class Vector(object):
     __hash__ = None
 
     def __new__(cls, *args):
-        if len(args) is 1:
+        if len(args) == 1:
             v = args[0]
             if hasattr(v, '_Vector__data'):
                 return _newV(_MP(v.__data), cls)
@@ -305,7 +305,7 @@ class Vector(object):
 
         :rtype: `Vector` (self)
         """
-        if len(args) is 1:
+        if len(args) == 1:
             args = args[0]
             if hasattr(args, '_Vector__data'):
                 args = args.__data

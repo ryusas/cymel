@@ -475,7 +475,7 @@ _ATTRS_TO_COMPARE_NO_IS = tuple([x for x in _ATTRS_TO_COMPARE_NO_SSC if x != 'is
 
 
 def _inputQ(v):
-    return _newIQ(_ME(v).asQuaternion()) if len(v) is 3 else ImmutableQuaternion(v)
+    return _newIQ(_ME(v).asQuaternion()) if len(v) == 3 else ImmutableQuaternion(v)
 
 _SRC_FILTER_DICT = {
     'm': ImmutableMatrix,

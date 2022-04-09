@@ -386,11 +386,11 @@ def inspectUIInheritance():
         except:
             pass
         n = len(parents)
-        if n is 1:
+        if n == 1:
             _uitypeDict1[k] = parents[0]
-        elif n is 2 and 'layout' in parents:
+        elif n == 2 and 'layout' in parents:
             _uitypeDict1[k] = 'layout'
-        elif n is 3:
+        elif n == 3:
             for candidate in ('rowLayout', 'tabLayout'):
                 if candidate in parents:
                     _uitypeDict1[k] = candidate

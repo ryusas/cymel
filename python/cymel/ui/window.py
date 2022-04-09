@@ -104,7 +104,7 @@ class Window(uiParentClass('window')):
 
         # ドック化されていないなら、全レイアウトから直下のものを選出する。
         pre = name + '|'
-        return [Control(s) for s in cmds.lsUI(l=True, cl=True) if s.startswith(pre) and len(s.split('|')) is 2]
+        return [Control(s) for s in cmds.lsUI(l=True, cl=True) if s.startswith(pre) and len(s.split('|')) == 2]
 
     def children(self):
         u"""
@@ -119,7 +119,7 @@ class Window(uiParentClass('window')):
 
         # ドック化されていないなら、全コントロールから直下のものを選出する。
         pre = name + '|'
-        return [Control(s) for s in cmds.lsUI(l=True, ctl=True) if s.startswith(pre) and len(s.split('|')) is 2]
+        return [Control(s) for s in cmds.lsUI(l=True, ctl=True) if s.startswith(pre) and len(s.split('|')) == 2]
 
     def makeCurrent(self):
         u"""

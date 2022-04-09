@@ -11,6 +11,7 @@ from functools import partial
 from ..typeinfo import isDerivedNodeType as _isDerivedNodeType
 from .cyobject import (
     CyObject,
+    CY_NODE, CY_PLUG, CY_OBJREF,
     _initAPI1Objects,
     _setPlugCache,
     _newNodeRefPlug,
@@ -67,7 +68,7 @@ class Plug_c(CyObject):
     """
     __slots__ = ('__lenCalled',)
 
-    CLASS_TYPE = 2  #: ラッパークラスの種類が `.Plug` であることを表す。
+    CLASS_TYPE = CY_PLUG  #: ラッパークラスの種類が `.Plug` であることを表す。
 
     @classmethod
     def newObject(cls, data):
@@ -1033,7 +1034,7 @@ class Plug_c(CyObject):
         numElemName = 'evaluateNumElements' if evaluate else 'numElements'
         finder(self._CyObject__data['mplug'])
 
-        if len(leaves) is 1:
+        if len(leaves) == 1:
             return [self]
 
         cls = _type(self)
@@ -2260,7 +2261,7 @@ def _evalConnList(baseobj, results, pcls=None, basepcls=None, index=None, nodety
     # 得た MPlug から戻り値となる Plug や Node オブジェクトを得る。
     # objMap によって、なるべく同じインスタンスがシェアされるようにする。
     if results:
-        isNode = baseobj.CLASS_TYPE is 1
+        isNode = baseobj.CLASS_TYPE is CY_NODE
         noderef = _getObjectRef(baseobj) if isNode else baseobj._CyObject__data['noderef']
         nodename = noderef._CyObject__data['getname']()
         objMap = {nodename: noderef}
@@ -2312,7 +2313,7 @@ def _argsToNode(args, objMap):
     if not node:
         node = _newNodeObjByArgs(args)
         objMap[args[-1]] = node
-    elif node.CLASS_TYPE is -1:
+    elif node.CLASS_TYPE is CY_OBJREF:
         node = node()
         objMap[args[-1]] = node
     return node

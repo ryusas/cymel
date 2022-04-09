@@ -52,7 +52,7 @@ class EulerRotation(object):
     __hash__ = None
 
     def __new__(cls, *args):
-        if len(args) is 1:
+        if len(args) == 1:
             v = args[0]
             if hasattr(v, '_EulerRotation__data'):
                 return _newE(_ME(v.__data), cls)
@@ -238,7 +238,7 @@ class EulerRotation(object):
 
         :rtype: `EulerRotation` (self)
         """
-        if len(args) is 1:
+        if len(args) == 1:
             v = args[0]
             if hasattr(v, '_EulerRotation__data'):
                 self.__data.setValue(v.__data)

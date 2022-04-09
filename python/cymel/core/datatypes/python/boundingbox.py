@@ -29,14 +29,14 @@ class BoundingBox(object):
     def __new__(cls, *args):
         try:
             n = len(args)
-            if n is 1:
+            if n == 1:
                 v = args[0]
                 if hasattr(v, '_BoundingBox__data'):
                     return _newBB(_MBB(v.__data), cls)
                 else:
                     p = getattr(v, '_Vector__data', None) or _MP(v)
                     return _newBB(_MBB(p, p), cls)
-            elif n is 2:
+            elif n == 2:
                 p0 = args[0]
                 p0 = getattr(p0, '_Vector__data', None) or _MP(p0)
                 p1 = args[1]

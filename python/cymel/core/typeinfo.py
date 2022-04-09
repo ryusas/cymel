@@ -103,7 +103,7 @@ def dumpNodetypeTree(nodetype='node', writer=None, indent=2):
 
     def dump(nodetype, indent, belows):
         abstype = _ABSTRACT_NODETYPE_DICT[nodetype]
-        if abstype is 2:
+        if abstype is _ABS_META:
             writer(indent + nodetype + ' (abstract meta)')
         elif abstype:
             writer(indent + nodetype + ' (abstract)')
@@ -354,8 +354,8 @@ def _updateAbstractTypeInfo(typeSet):
         abstypes = [x.split()[0] for x in puretypes if x.endswith('(abstract)')]
         unknownMetaSet = typeSet.difference([x.split()[0] for x in puretypes])
 
-        _ABSTRACT_NODETYPE_DICT.update([(x, 0) for x in typeSet])
-        _ABSTRACT_NODETYPE_DICT.update([(x, 1) for x in abstypes] + [(x, 2) for x in unknownMetaSet])
+        _ABSTRACT_NODETYPE_DICT.update([(x, _ABS_NO) for x in typeSet])
+        _ABSTRACT_NODETYPE_DICT.update([(x, _ABS_ABS) for x in abstypes] + [(x, _ABS_META) for x in unknownMetaSet])
 
 
 def _buildNodeTypeHierarchyInfo(nodetype='node', abstract=True):
@@ -375,6 +375,9 @@ def _buildNodeTypeHierarchyInfo(nodetype='node', abstract=True):
 _NODETYPE_INHERIT_DICT = {}  #: ノードタイプの上位ノードタイプtupleの辞書。
 _NODETYPE_INHERIT_SET_DICT = {}  #: ノードタイプの上位ノードタイプfrozensetの辞書。
 _ABSTRACT_NODETYPE_DICT = {}  #: 抽象タイプかどうかの辞書。 (0=No, 1=Abstract, 2=Meta)
+_ABS_NO = 0
+_ABS_ABS = 1
+_ABS_META = 2
 
 # import時にキャッシュを生成。やらなくても良いが、一気にやった方が効率が良いので。
 _buildNodeTypeHierarchyInfo()

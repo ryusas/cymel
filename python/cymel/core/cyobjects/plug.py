@@ -1287,9 +1287,9 @@ class Plug(Plug_c):
                         i = p_('rm').get()
                     else:
                         i = p_(sn + 'm').get()
-                    if i is 2:
+                    if i == 2:
                         get1 = False
-                    elif i is 1:
+                    elif i == 1:
                         get2 = False
                     elif byWeight:
                         w = p_('w').get()
@@ -1715,7 +1715,7 @@ def _addElement(queue):
     1つの要素プラグに関わるプラグの上から順に並んだキューを元に「評価」と「削除」をコマンド化して呼び出す。
     """
     top = queue[0]
-    if len(queue) is 1:
+    if len(queue) == 1:
         docmd(top.evaluator(), partial(_api1_executeCommand, 'removeMultiInstance ' + top.name_()))
     else:
         # 評価は上から。undoのための削除は最上位のみで良い（redoはそのundoではなくdoなので）。
@@ -1742,9 +1742,9 @@ def _pairBlendInput(out, pcls=None):
 
     # Check the blending mode.
     i = p_('rm' if sn.startswith('r') else (sn + 'm')).get()
-    if i is 2:  # 2 only
+    if i == 2:  # 2 only
         return p_('i' + sn + '2', pcls)
-    elif i is 1:  # 1 only
+    elif i == 1:  # 1 only
         return p_('i' + sn + '1', pcls)
 
     # Check the weight.

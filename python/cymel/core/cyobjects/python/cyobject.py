@@ -59,6 +59,11 @@ BIT_DAGNODE = 0b0001  #: ノードクラスで dagNode の特徴をサポート�
 BIT_TRANSFORM = 0b0010  #: ノードクラスで transform の特徴をサポートしていることを示す。
 BIT_SHAPE = 0b0100  #: ノードクラスで shape の特徴をサポートしていることを示す。
 
+CY_OBJECT = 0
+CY_NODE = 1
+CY_PLUG = 2
+CY_OBJREF = -1
+
 
 #------------------------------------------------------------------------------
 class CymelInvalidHandle(Exception):
@@ -98,7 +103,7 @@ class CyObject(object):
     __slots__ = ('__weakref__', '__data', '__ref',)
     __glbpcls = None
 
-    CLASS_TYPE = 0  #: ラッパークラスの種類を表す (0=CyObject, 1=Node, 2=Plug, -1=ObjectRef)
+    CLASS_TYPE = CY_OBJECT  #: ラッパークラスの種類を表す (0=CyObject, 1=Node, 2=Plug, -1=ObjectRef)
 
     def __new__(cls, src):  #, **kwargs):
         # ソースがCyObject派生インスタンスの場合、その複製か参照ラッパーを得る。
@@ -299,7 +304,7 @@ class CyObject(object):
 
         :rtype: `list`
         """
-        isNode = cls.CLASS_TYPE is 1
+        isNode = cls.CLASS_TYPE is CY_NODE
         if isNode:
             typs = _relatedNodeTypes(cls)
             kwargs['type'] = typs
@@ -323,9 +328,9 @@ class CyObject(object):
 
         objMap = {} if num > 1 else None
 
-        if cls.CLASS_TYPE is 2:
+        if cls.CLASS_TYPE is CY_PLUG:
             return [x for x in [_getPlugObjBySelIdx(sel, i, cls, objMap) for i in range(num)] if x]
-        elif cls.CLASS_TYPE is -1:
+        elif cls.CLASS_TYPE is CY_OBJREF:
             return [_getObjRefBySelIdx(sel, i, cls, objMap) for i in range(num)]
         else:
             return [_getObjectBySelIdx(sel, i, objMap) for i in range(num)]
@@ -488,8 +493,8 @@ def _makeNodeData(mpath, mnode, mfn, dummy=None):
         def eq(self, other):
             if isAlive() and isinstance(other, CyObject) and other._CyObject__data['isAlive']():
                 if (
-                    (self.refclass() if self.CLASS_TYPE is -1 else self).TYPE_BITS and
-                    (other.refclass() if other.CLASS_TYPE is -1 else other).TYPE_BITS
+                    (self.refclass() if self.CLASS_TYPE is CY_OBJREF else self).TYPE_BITS and
+                    (other.refclass() if other.CLASS_TYPE is CY_OBJREF else other).TYPE_BITS
                 ):
                     return mpath == other._CyObject__data['mpath']
                 else:
@@ -684,7 +689,7 @@ def _newNodeObjByArgs(args):
     data = _makeNodeData(*args)
     mfn = args[2]
     return _decideClass(
-        args[-1] if len(args) is 4 else data['getname'](),
+        args[-1] if len(args) == 4 else data['getname'](),
         mfn.typeName, lambda: mfn).newObject(data)
 
 
@@ -713,11 +718,11 @@ def _anyClsObjByObj(cls, obj):
     """
     if cls is CyObject:
         cls = type(obj)
-    elif cls.CLASS_TYPE is -1:
+    elif cls.CLASS_TYPE is CY_OBJREF:
         return _getObjectRef(obj, cls)
-    elif obj.CLASS_TYPE is 1:
+    elif obj.CLASS_TYPE is CY_NODE:
         _checkNodeCls(cls, obj._CyObject__data['mfn'], obj.name(), obj)
-    elif obj.CLASS_TYPE is 2:
+    elif obj.CLASS_TYPE is CY_PLUG:
         _checkPlugCls(cls, obj)
     else:
         cls = type(obj)
@@ -730,7 +735,7 @@ def _nodeClsObjByAPI2(cls, mpath, mnode, mfn, src, name=None):
     """
     if cls is CyObject:
         cls = _decideClass(name or (mpath.partialPathName() if mpath else mfn.name()), mfn.typeName, lambda: mfn)
-    elif cls.CLASS_TYPE is -1:
+    elif cls.CLASS_TYPE is CY_OBJREF:
         return _newNodeRefFromData(_makeNodeData(mpath, mnode, mfn), cls)
     else:
         _checkNodeCls(cls, mfn, name or (mpath.partialPathName() if mpath else mfn.name()), src)
@@ -776,7 +781,7 @@ def _plugClsObjByMPlug(cls, mplug, src, nodeArgs=None):
     if cls is CyObject:
         noderef = _newNodeRefFromData(_makeNodeData(*(nodeArgs or _node3ArgsByMPlug(mplug))))
         cls = CyObject._CyObject__glbpcls
-    elif cls.CLASS_TYPE is -1:
+    elif cls.CLASS_TYPE is CY_OBJREF:
         noderef = _newNodeRefFromData(_makeNodeData(*(nodeArgs or _node3ArgsByMPlug(mplug))))
         return _newPlugRefFromData(_makePlugData(noderef, mplug))
     else:
@@ -791,7 +796,7 @@ def _anyClsObjByName(cls, name):
     """
     # ノード名指定ならノードを得る。
     tkns = name.split('.')
-    if len(tkns) is 1:
+    if len(tkns) == 1:
         return _nodeClsObjByName(cls, name)
 
     # ノード名が指定されているなら、そのノードの API2 オブジェクトを得る。
@@ -1178,7 +1183,7 @@ def _getSel0WithCache(sel):
             dt = _LAST_SEL._CyObject__data
 
             # キャッシュがプラグなら、それを再利用できればする。またはノードだけでも再利用できればする。
-            if _LAST_SEL.CLASS_TYPE is 2:
+            if _LAST_SEL.CLASS_TYPE is CY_PLUG:
                 noderef = dt['noderef']
                 if _isSameNodeData(noderef._CyObject__data, mpath, mnode):
                     if dt['attrname'][1:] != mplug.partialName(includeNonMandatoryIndices=True, includeInstancedIndices=True):
@@ -1216,7 +1221,7 @@ def _getSel0WithCache(sel):
             dt = _LAST_SEL._CyObject__data
 
             # キャッシュがプラグなら、そのノードを再利用できればする。
-            if _LAST_SEL.CLASS_TYPE is 2:
+            if _LAST_SEL.CLASS_TYPE is CY_PLUG:
                 noderef = dt['noderef']
                 if _isSameNodeData(noderef._CyObject__data, mpath, mnode):
                     _LAST_SEL = noderef()
@@ -1249,7 +1254,7 @@ def _isSameNodeData(data, mpath, mnode):
 
 def _objMapFor_getObjectBySelIdx():
     if _LAST_SEL and _LAST_SEL.isValid():
-        if _LAST_SEL.CLASS_TYPE is 2:
+        if _LAST_SEL.CLASS_TYPE is CY_PLUG:
             #ref = _LAST_SEL.noderef()
             #return {ref.name_(): (ref, [_LAST_SEL])}
 

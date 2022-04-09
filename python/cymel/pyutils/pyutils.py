@@ -73,8 +73,8 @@ else:
     USER_DOC_PATH = _os.environ['HOME']  #: ユーザードキュメントディレクトリ。Unix 系ではホーム、Windows ではマイドキュメントとしている。
 
 #------------------------------------------------------------------------------
-IS_PYTHON2 = _sys.version_info[0] is 2
-IS_PYTHON3 = _sys.version_info[0] is 3
+IS_PYTHON2 = _sys.version_info[0] == 2
+IS_PYTHON3 = _sys.version_info[0] == 3
 
 if IS_PYTHON2:
     BYTES = str

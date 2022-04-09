@@ -367,7 +367,7 @@ class Matrix(object):
         """
         #return _newE(_ME(0., 0., 0., order).setValue(self.__data.homogenize()))
         # MEulerRotation の場合 MTransformationMatrix の方が直接よりやや速い。
-        if order is XYZ:
+        if order == XYZ:
             return _newE(_MX(self.__data).rotation(False))
         else:
             return _newE(_MX(self.__data).reorderRotation(order + 1).rotation(False))
@@ -384,7 +384,7 @@ class Matrix(object):
         .. note::
             単位を弧度法で得たい場合は `asEulerRotation` を使用すると良い。
         """
-        if order is XYZ:
+        if order == XYZ:
             e = _MX(self.__data).rotation(False)
         else:
             e = _MX(self.__data).reorderRotation(order + 1).rotation(False)
@@ -1267,42 +1267,42 @@ M.Zero = ImmutableMatrix([0] * 16)  #: ゼロ。
 
 #------------------------------------------------------------------------------
 def _mirror(d, mirrorAxis, negAxis, t):
-    if mirrorAxis is AXIS_X:
+    if mirrorAxis == AXIS_X:
         t = -d[12] if t else d[12]
-        if negAxis is mirrorAxis or negAxis is True:
+        if negAxis is False:
+            return _MM([d[0], d[1], d[2], 0., d[4], d[5], d[6], 0., d[8], d[9], d[10], 0., t, d[13], d[14], 1.])
+        elif negAxis is True or negAxis == mirrorAxis:
             return _MM([d[0], -d[1], -d[2], 0., -d[4], d[5], d[6], 0., -d[8], d[9], d[10], 0., t, d[13], d[14], 1.])
         elif negAxis is None:
             return _MM([d[0], -d[1], -d[2], 0., d[4], -d[5], -d[6], 0., d[8], -d[9], -d[10], 0., t, d[13], d[14], 1.])
-        elif negAxis is AXIS_Y:
+        elif negAxis == AXIS_Y:
             return _MM([-d[0], d[1], d[2], 0., d[4], -d[5], -d[6], 0., -d[8], d[9], d[10], 0., t, d[13], d[14], 1.])
-        elif negAxis is AXIS_Z:
+        else:  # AXIS_Z
             return _MM([-d[0], d[1], d[2], 0., -d[4], d[5], d[6], 0., d[8], -d[9], -d[10], 0., t, d[13], d[14], 1.])
-        else:
-            return _MM([d[0], d[1], d[2], 0., d[4], d[5], d[6], 0., d[8], d[9], d[10], 0., t, d[13], d[14], 1.])
 
-    elif mirrorAxis is AXIS_Y:
+    elif mirrorAxis == AXIS_Y:
         t = -d[13] if t else d[13]
-        if negAxis is mirrorAxis or negAxis is True:
+        if negAxis is False:
+            return _MM([d[0], d[1], d[2], 0., d[4], d[5], d[6], 0., d[8], d[9], d[10], 0., d[12], t, d[14], 1.])
+        elif negAxis is True or negAxis == mirrorAxis:
             return _MM([d[0], -d[1], d[2], 0., -d[4], d[5], -d[6], 0., d[8], -d[9], d[10], 0., d[12], t, d[14], 1.])
         elif negAxis is None:
             return _MM([-d[0], d[1], -d[2], 0., -d[4], d[5], -d[6], 0., -d[8], d[9], -d[10], 0., d[12], t, d[14], 1.])
-        elif negAxis is AXIS_X:
+        elif negAxis == AXIS_X:
             return _MM([-d[0], d[1], -d[2], 0., d[4], -d[5], d[6], 0., d[8], -d[9], d[10], 0., d[12], t, d[14], 1.])
-        elif negAxis is AXIS_Z:
+        else:  # AXIS_Z
             return _MM([d[0], -d[1], d[2], 0., d[4], -d[5], d[6], 0., -d[8], d[9], -d[10], 0., d[12], t, d[14], 1.])
-        else:
-            return _MM([d[0], d[1], d[2], 0., d[4], d[5], d[6], 0., d[8], d[9], d[10], 0., d[12], t, d[14], 1.])
 
     else:  # AXIS_Z
         t = -d[14] if t else d[14]
-        if negAxis is mirrorAxis or negAxis is True:
+        if negAxis is False:
+            return _MM([d[0], d[1], d[2], 0., d[4], d[5], d[6], 0., d[8], d[9], d[10], 0., d[12], d[13], t, 1.])
+        elif negAxis is True or negAxis == mirrorAxis:
             return _MM([d[0], d[1], -d[2], 0., d[4], d[5], -d[6], 0., -d[8], -d[9], d[10], 0., d[12], d[13], t, 1.])
         elif negAxis is None:
             return _MM([-d[0], -d[1], d[2], 0., -d[4], -d[5], d[6], 0., -d[8], -d[9], d[10], 0., d[12], d[13], t, 1.])
-        elif negAxis is AXIS_X:
+        elif negAxis == AXIS_X:
             return _MM([-d[0], -d[1], d[2], 0., d[4], d[5], -d[6], 0., d[8], d[9], -d[10], 0., d[12], d[13], t, 1.])
-        elif negAxis is AXIS_Y:
+        else:  # AXIS_Y
             return _MM([d[0], d[1], -d[2], 0., -d[4], -d[5], d[6], 0., d[8], d[9], -d[10], 0., d[12], d[13], t, 1.])
-        else:
-            return _MM([d[0], d[1], d[2], 0., d[4], d[5], d[6], 0., d[8], d[9], d[10], 0., d[12], d[13], t, 1.])
 

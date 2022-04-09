@@ -226,11 +226,11 @@ def getConnWithoutUC(mplug, source, destination):
             elif name == 'input':
                 conn = _2_MFnDependencyNode(mnode).findPlug('output', True).connectedTo(False, True)
             if conn:
-                n = len(conn)
-                if n is 1:
-                    results[i] = conn[0]
-                else:
-                    results[i:] = list(conn) + results[i + 1:]
+                #if len(conn) == 1:
+                #    results[i] = conn[0]
+                #else:
+                #    results[i:] = list(conn) + results[i + 1:]
+                results[i:i + 1] = conn
     return results
 
 

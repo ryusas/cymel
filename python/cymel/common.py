@@ -28,3 +28,5 @@ from .initmaya import (
     MAYA_VERSION, IS_UIMODE, warning,
 )
 
+ZERO = 0
+

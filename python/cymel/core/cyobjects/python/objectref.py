@@ -7,7 +7,7 @@ from __future__ import division
 from __future__ import print_function
 
 from ...common import *
-from .cyobject import CyObject, _decideNodeClsFromData
+from .cyobject import CyObject, CY_OBJREF, _decideNodeClsFromData
 from weakref import ref as _wref
 
 __all__ = ['ObjectRef']
@@ -23,7 +23,7 @@ class ObjectRef(CyObject):
     """
     __slots__ = ('__data',)
 
-    CLASS_TYPE = -1  #: ラッパークラスの種類が `ObjectRef` であることを表す。
+    CLASS_TYPE = CY_OBJREF  #: ラッパークラスの種類が `ObjectRef` であることを表す。
 
     def __call__(self):
         return self.__data['wref']() or self._newobject()
@@ -127,7 +127,7 @@ class ObjectRef(CyObject):
 
         if 'mnode' in self._CyObject__data:
             obj = self()
-            while obj.CLASS_TYPE is -1:
+            while obj.CLASS_TYPE is CY_OBJREF:
                 obj = obj()
             return obj
 

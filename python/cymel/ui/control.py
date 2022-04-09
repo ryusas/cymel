@@ -56,7 +56,7 @@ class Control(object):
         # 固定引数が指定された場合は既存UIかも知れない。
         nArgs = len(args)
         uitype = None
-        lastCurrent = 0
+        lastCurrent = ZERO
         if nArgs >= 1:
             name = args[0]
             if not name:
@@ -204,7 +204,7 @@ class Control(object):
             obj._hash = hash(name)
         else:
             tkns = name.split('|')
-            if len(tkns) is 1:
+            if len(tkns) == 1:
                 obj._untrustedName = None  # パスはもう変わらない。
                 obj._hash = hash(name)
             else:
@@ -212,7 +212,7 @@ class Control(object):
                 obj._hash = hash(name[len(tkns[0]):])  # 変わらない部分をハッシュ化。
 
         obj._uitype = uitype
-        if lastCurrent is not 0:
+        if lastCurrent is not ZERO:
             obj._lastCurrent = lastCurrent
         return obj
 

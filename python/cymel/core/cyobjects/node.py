@@ -381,7 +381,7 @@ class Node(Node_c):
             elif type == 'compound':
                 if childNames or childShortNames or childSuffixes:
                     nChildren = kwargs_pop('numberOfChildren', kwargs_get('nc', 0))
-                    if nChildren is 0:
+                    if not nChildren:
                         if childNames:
                             nChildren = len(childNames)
                         elif childShortNames:
