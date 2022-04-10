@@ -118,11 +118,15 @@ class EulerRotation(object):
         try:
             return _newE(self.__data + v.__data)
         except:
-            raise ValueError("%s + %r" % (type(self).__name__, v))
+            try:
+                d = self.__data
+                return _newE(_ME(d[0] + v[0], d[1] + v[1], d[2] + v[2], d.order))
+            except:
+                raise ValueError("%s + %r" % (type(self).__name__, v))
 
     def __iadd__(self, v):
+        d = self.__data
         try:
-            d = self.__data
             s = v.__data
             if d.order != s.order:
                 s = s.reorder(d.order)
@@ -130,14 +134,23 @@ class EulerRotation(object):
             d[1] += s[1]
             d[2] += s[2]
         except:
-            raise ValueError("%s += %r" % (type(self).__name__, v))
+            try:
+                d[0] += v[0]
+                d[1] += v[1]
+                d[2] += v[2]
+            except:
+                raise ValueError("%s += %r" % (type(self).__name__, v))
         return self
 
     def __sub__(self, v):
         try:
             return _newE(self.__data - v.__data)
         except:
-            raise ValueError("%s - %r" % (type(self).__name__, v))
+            try:
+                d = self.__data
+                return _newE(_ME(d[0] - v[0], d[1] - v[1], d[2] - v[2], d.order))
+            except:
+                raise ValueError("%s - %r" % (type(self).__name__, v))
 
     def __isub__(self, v):
         try:
@@ -149,7 +162,12 @@ class EulerRotation(object):
             d[1] -= s[1]
             d[2] -= s[2]
         except:
-            raise ValueError("%s -= %r" % (type(self).__name__, v))
+            try:
+                d[0] -= v[0]
+                d[1] -= v[1]
+                d[2] -= v[2]
+            except:
+                raise ValueError("%s -= %r" % (type(self).__name__, v))
         return self
 
     def __mul__(self, v):
@@ -162,10 +180,12 @@ class EulerRotation(object):
 
     def __imul__(self, v):
         if isinstance(v, Number):
-            self.__data *= v
+            #self.__data *= v
+            self.__data.__imul__(v)
         else:
             try:
-                self.__data *= v.__data  # 回転の合成。
+                #self.__data *= v.__data
+                self.__data.__imul__(v.__data)  # 回転の合成。
             except:
                 raise ValueError("%s *= %r" % (type(self).__name__, v))
         return self
@@ -184,7 +204,8 @@ class EulerRotation(object):
 
     def __itruediv__(self, v):
         try:
-            self.__data *= 1. / v
+            #self.__data *= 1. / v
+            self.__data.__imul__(1. / v)
         except:
             raise ValueError("%s /= %r" % (type(self).__name__, v))
         return self

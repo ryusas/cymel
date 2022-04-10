@@ -14,6 +14,7 @@ import maya.cmds as cmds
 
 #------------------------------------------------------------------------------
 class MyTransform(cm.nt.Transform):
+    @staticmethod
     def _verifyNode(mfn, name):
         return mfn.hasAttribute('myNodeTag')
 

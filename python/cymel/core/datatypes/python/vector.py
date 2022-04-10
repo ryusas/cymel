@@ -173,7 +173,9 @@ class Vector(object):
         return self
 
     def __mul__(self, v):
-        if hasattr(v, '_Matrix__data'):
+        if hasattr(v, '_Transformation__data'):
+            return _newV(self.__data * v.m._Matrix__data)
+        elif hasattr(v, '_Matrix__data'):
             return _newV(self.__data * v._Matrix__data)
         elif hasattr(v, '_Quaternion__data'):
             v = _MV(self.__data).rotateBy(v._Quaternion__data)
@@ -189,8 +191,12 @@ class Vector(object):
                 raise ValueError("%s * %r" % (type(self).__name__, v))
 
     def __imul__(self, v):
-        if hasattr(v, '_Matrix__data'):
-            self.__data *= v._Matrix__data
+        if hasattr(v, '_Transformation__data'):
+            #self.__data *= v.m._Matrix__data
+            self.__data.__imul__(v.m._Matrix__data)
+        elif hasattr(v, '_Matrix__data'):
+            #self.__data *= v._Matrix__data
+            self.__data.__imul__(v._Matrix__data)
         elif hasattr(v, '_Quaternion__data'):
             d = self.__data
             v = _MV(d).rotateBy(v._Quaternion__data)
@@ -199,7 +205,8 @@ class Vector(object):
             d[2] = v[2]
         else:
             try:
-                self.__data *= v
+                #self.__data *= v
+                self.__data.__imul__(v)
             except:
                 raise ValueError("%s *= %r" % (type(self).__name__, v))
         return self
@@ -218,7 +225,8 @@ class Vector(object):
 
     def __itruediv__(self, v):
         try:
-            self.__data /= v
+            #self.__data /= v
+            self.__data.__imul__(1. / v)
         except:
             raise ValueError("%s /= %r" % (type(self).__name__, v))
         return self

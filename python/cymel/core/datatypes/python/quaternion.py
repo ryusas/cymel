@@ -180,7 +180,8 @@ class Quaternion(object):
             d[3] *= v
         else:
             try:
-                self.__data *= v.__data
+                #self.__data *= v.__data
+                self.__data.__imul__(v.__data)
             except:
                 raise ValueError("%s *= %r" % (type(self).__name__, v))
         return self
