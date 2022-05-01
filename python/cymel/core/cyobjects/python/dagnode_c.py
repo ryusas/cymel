@@ -37,8 +37,8 @@ if MAYA_VERSION >= (2016, 5):
 _MFn_kTransform = _MFn.kTransform
 _MFn_kShape = _MFn.kShape
 _MFn_kJoint = _MFn.kJoint
-_2_MDagPath_getAllPathsTo = _2_MDagPath.getAllPathsTo
-_2_MDagPath_getAPathTo = _2_MDagPath.getAPathTo
+_2_getAllPathsTo = _2_MDagPath.getAllPathsTo
+_2_getAPathTo = _2_MDagPath.getAPathTo
 _MSpace_kTransform = _api2.MSpace.kTransform
 
 
@@ -147,7 +147,7 @@ class DagNodeMixin(object):
         # NOTE: inUnderWorld だと (MDagPath|MFnDagNode).isInstanced は正常動作するが MFnDagNode.instanceCount は常に 1 となる。
         if orig.isInstanced():  # indirect も含んだ判定。
             mpaths = []
-            for x in _2_MDagPath_getAllPathsTo(orig.node()):
+            for x in _2_getAllPathsTo(orig.node()):
                 # NOTE: getAllPathsTo で得たものをそのまま使うとクラッシュすることがあるので複製。
                 x = _2_MDagPath(x).pop(x.length() - 1)
                 if x not in mpaths:
@@ -347,7 +347,7 @@ class DagNodeMixin(object):
             idx = orig.instanceNumber()
             return [
                 parent if i == idx else _newNodeObjByMPath(_getParentPath(x))
-                for i, x in enumerate(_2_MDagPath_getAllPathsTo(self.mnode_()))
+                for i, x in enumerate(_2_getAllPathsTo(self.mnode_()))
             ]
 
         # インスタンスポイントにおける親ノードを得るなら mfn から得る。
@@ -361,7 +361,7 @@ class DagNodeMixin(object):
             mobjs = [mfn.parent(i) for i in range(num)]
             mnode = parent.mnode_()
             return [
-                parent if x == mnode else _newNodeObjByMPath(_2_MDagPath_getAPathTo(x))
+                parent if x == mnode else _newNodeObjByMPath(_2_getAPathTo(x))
                 for x in mobjs]
 
     def parent(self, step=1):
@@ -604,7 +604,7 @@ class DagNodeMixin(object):
             if underWorld and not self_fn.inUnderWorld:
                 node_fn = node.mfn_()
                 if node_fn.inUnderWorld:
-                    mnode = _2_MDagPath_getAPathTo(node_fn.dagRoot()).pop().node()
+                    mnode = _2_getAPathTo(node_fn.dagRoot()).pop().node()
                     return self.mnode_() == mnode or self_fn.isParentOf(mnode)
             return False
 
@@ -946,13 +946,13 @@ class DagNodeMixin(object):
         # 0 番の場合 getAPathTo で得られるようだ。
         if not idx:
             mnode = self.mnode_()
-            mpath = _2_MDagPath_getAPathTo(mnode)
+            mpath = _2_getAPathTo(mnode)
             if not mpath.instanceNumber():  # 念のためチェック。
-                mpath = _2_MDagPath(_2_MDagPath_getAllPathsTo(mnode)[idx])
+                mpath = _2_MDagPath(_2_getAllPathsTo(mnode)[idx])
             return type(self)(mpath)
 
         # NOTE: getAllPathsTo で得たものをそのまま使うとクラッシュすることがあるので複製。
-        arr = _2_MDagPath_getAllPathsTo(self.mnode_())
+        arr = _2_getAllPathsTo(self.mnode_())
         if 0 <= idx < len(arr):
             return type(self)(_2_MDagPath(arr[idx]))
 
@@ -971,12 +971,12 @@ class DagNodeMixin(object):
             if noSelf:
                 return [
                     cls(_2_MDagPath(x))
-                    for i, x in enumerate(_2_MDagPath_getAllPathsTo(self.mnode_()))
+                    for i, x in enumerate(_2_getAllPathsTo(self.mnode_()))
                     if i != idx]
             else:
                 return [
                     self if i == idx else cls(_2_MDagPath(x))
-                    for i, x in enumerate(_2_MDagPath_getAllPathsTo(self.mnode_()))]
+                    for i, x in enumerate(_2_getAllPathsTo(self.mnode_()))]
         return [] if noSelf else [self]
 
     def boundingBox(self, ws=False):

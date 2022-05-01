@@ -1500,19 +1500,20 @@ def _getMPlugNode(mplug):
     mnode = mplug.node()
     if mnode.hasFn(_MFn_kDagNode):
         if _2_MFnAttribute(mplug.attribute()).worldSpace:
+            # NOTE: getAllPathsTo で得たものをそのまま使うとクラッシュすることがあるので複製。
+            idx = 0
             mpaths = _2_getAllPathsTo(mnode)
-            if len(mpaths) < 2:
-                return mpaths[0], mnode
-
-            if mplug.isArray:
-                if not mplug.isChild:
-                    return mpaths[0], mnode
-                mplug = mplug.parent()
-            c = mplug.array() if mplug.isElement else mplug
-            while c.isChild:
-                mplug = c.parent()
-                c = mplug.array() if mplug.isElement else mplug
-            return mpaths[max(0, mplug.logicalIndex())], mnode
+            if len(mpaths) >= 2:
+                root = mplug
+                isElem = root.isElement
+                c = root.array() if isElem else root
+                while c.isChild:
+                    root = c.parent()
+                    isElem = root.isElement
+                    c = root.array() if isElem else root
+                if isElem:
+                    idx = max(0, root.logicalIndex())
+            return _2_MDagPath(mpaths[idx]), mnode
         else:
             return _2_getAPathTo(mnode), mnode
     else:

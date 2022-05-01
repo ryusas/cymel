@@ -38,6 +38,7 @@ if MAYA_VERSION < (2015,):
 
 _MFn = _api2.MFn
 _MFn_kDagNode = _MFn.kDagNode
+_2_getAllPathsTo = _api2.MDagPath.getAllPathsTo
 _2_MObjectHandle = _api2.MObjectHandle
 _2_MPlug = _api2.MPlug
 _2_MFnDagNode = _api2.MFnDagNode
@@ -95,8 +96,8 @@ _MFnData_kMatrix = _api2.MFnData.kMatrix
 _MFn_kMatrixData = _MFn.kMatrixData
 _MFn_kInvalid = _MFn.kInvalid
 
-_1_MDagPathArray = _api1.MDagPathArray
-_1_MDagPath_getAllPathsTo = _api1.MDagPath.getAllPathsTo
+#_1_MDagPathArray = _api1.MDagPathArray
+#_1_getAllPathsTo = _api1.MDagPath.getAllPathsTo
 _1_MSelectionList = _api1.MSelectionList
 _1_MGlobal_getActiveSelectionList = _api1.MGlobal.getActiveSelectionList
 _1_MObject = _api1.MObject
@@ -239,38 +240,33 @@ def getMPlugName(mplug):
     MPlug からノード名を含むユニーク名を得る。
     """
     # DAGノードでなければ簡単に得られる。
-    mobj = mplug.node()
-    if not mobj.hasFn(_MFn_kDagNode):
+    mnode = mplug.node()
+    if not mnode.hasFn(_MFn_kDagNode):
         return mplug.info
-
-    # まず、ノード名抜きでアトリビュート名を得る。
-    attrname = mplug.partialName(includeNonMandatoryIndices=True, includeInstancedIndices=True)
-    mfnnode = _2_MFnDagNode(mobj)
 
     # worldSpace アトリビュートの場合は、そのインデックスにマッチした DAG パスを得る。
     if _2_MFnAttribute(mplug.attribute()).worldSpace:
-        root = _mplugRoot(mplug)
-        if root.isElement:
-            idx = root.logicalIndex()
-            if idx > 0:
-                # API2 だとクラッシュする場合がある(Maya2012_SAP_SP1 win で確認)ので API1 を使う。
-                arr1 = _1_MDagPathArray()
-                _1_MDagPath_getAllPathsTo(_1_mnode(mfnnode.partialPathName()), arr1)
-                return arr1[idx].partialPathName() + '.' + attrname
+        idx = 0
+        # NOTE: getAllPathsTo は古い API2 だとクラッシュする場合があるようだ(Maya2012_SAP_SP1 win で確認)
+        #mpaths = _1_MDagPathArray()
+        #_1_getAllPathsTo(_1_mnode(_2_MFnDagNode(mnode).partialPathName()), mpaths)
+        #if mpaths.length() > 1:
+        mpaths = _2_getAllPathsTo(mnode)
+        if len(mpaths) >= 2:
+            root = mplug
+            isElem = root.isElement
+            c = root.array() if isElem else root
+            while c.isChild:
+                root = c.parent()
+                isElem = root.isElement
+                c = root.array() if isElem else root
+            if isElem:
+                idx = max(0, root.logicalIndex())
+        pathname = mpaths[idx].partialPathName()
+    else:
+        pathname = _2_MFnDagNode(mnode).partialPathName()
 
-    # worldSpace でないか、１個めのインスタンスで良い場合はその DAG パスを得る。
-    return mfnnode.partialPathName() + '.' + attrname
-
-
-def _mplugRoot(mplug):
-    u"""
-    MPlug のルートを得る（最上位がマルチエレメントならエレメントのまま）。
-    """
-    c = mplug.array() if mplug.isElement else mplug
-    while c.isChild:
-        mplug = c.parent()
-        c = mplug.array() if mplug.isElement else mplug
-    return mplug
+    return pathname + '.' + mplug.partialName(includeNonMandatoryIndices=True, includeInstancedIndices=True)
 
 
 #------------------------------------------------------------------------------

@@ -1109,21 +1109,17 @@ class Plug_c(CyObject):
             return self
 
         mplug = self._CyObject__data['mplug']
-        if mplug.isArray:
-            if not mplug.isChild:
-                # 最上位マルチプラグ（ワールドエレメントでない）なら、自身をそのまま返す。
-                return self
-            root = mplug.parent()
-        else:
-            root = mplug
+        root = mplug
 
-        c = root.array() if root.isElement else root
+        isElem = root.isElement
+        c = root.array() if isElem else root
         while c.isChild:
             root = c.parent()
-            c = root.array() if root.isElement else root
+            isElem = root.isElement
+            c = root.array() if isElem else root
 
         idx = self._CyObject__data['noderef']._CyObject__data['mpath'].instanceNumber()
-        if root.logicalIndex() == idx:
+        if isElem and root.logicalIndex() == idx:
             # インデックスが正しいなら、自身をそのまま返す。
             return self
 
