@@ -73,7 +73,7 @@ class DagNode(DagNodeMixin, nodetypes.parentBasicNodeClass('dagNode')):
                 raise RuntimeError('A shape cannot be ungrouped.')
 
         # joint でないか r=True が不要なら、普通にやるだけ。
-        elif add or not self.isJoint() or ((avoidJointShear or not r) and bool(r) is bool(unmaintainIS)):
+        elif add or not self.isJoint() or ((r or avoidJointShear) and bool(r) is bool(unmaintainIS)):
             # r=True,  unmaintainIS=True,  avoidJointShear=False : 普通に r=True でやる (pose も is も維持されない)
             # r=True,  unmaintainIS=True,  avoidJointShear=True  : 普通に r=True でやる (pose も is も維持されない)
             # r=False, unmaintainIS=False, avoidJointShear=True  : 普通に r=False でやる (transform追加で is も維持)
@@ -95,6 +95,7 @@ class DagNode(DagNodeMixin, nodetypes.parentBasicNodeClass('dagNode')):
         # 元の姿勢を取得。
         if maintainM:
             if avoidSh:
+                # r=False, unmaintainIS=True,  avoidJointShear=True
                 raise ValueError(
                     'Unsupported option value combinations: r=%r, unmaintainIS=%r, avoidJointShear=%r' %
                     (not maintainM, not maintainIS, avoidSh))

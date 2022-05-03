@@ -61,7 +61,7 @@ class Transform(TransformMixin, nodetypes.parentBasicNodeClass('transform')):
                 _parent(shapes, name, s=True, r=True, add=add)
             # その他は順番に処理する。
             if others:
-                if add or ((avoidJointShear or not r) and bool(r) is bool(unmaintainIS)) or not _ls(others, type='joint'):
+                if add or ((r or avoidJointShear) and bool(r) is bool(unmaintainIS)) or not _ls(others, type='joint'):
                     _parent(others, name, r=r, add=add)
                 else:
                     for child in others:
@@ -76,7 +76,7 @@ class Transform(TransformMixin, nodetypes.parentBasicNodeClass('transform')):
             child = CyObject(child)
             if child.isShape():
                 _parent(child.name_(), name, s=True, r=True, add=add)
-            elif add or not child.isJoint() or ((avoidJointShear or not r) and bool(r) is bool(unmaintainIS)):
+            elif add or not child.isJoint() or ((r or avoidJointShear) and bool(r) is bool(unmaintainIS)):
                 _parent(child.name_(), name, r=r, add=add)
             else:
                 child._DagNode__setJointParent(self, not r, not unmaintainIS, avoidJointShear)
