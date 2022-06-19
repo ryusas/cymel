@@ -11,10 +11,11 @@ from ...pyutils import boundAngle
 from ...pyutils.immutables import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
 from .vector import V
 import maya.api.OpenMaya as _api2
-from math import sin, cos, tan, acos, atan2
+from math import sin, cos, tan, acos, atan2, sqrt
 
 __all__ = ['Quaternion', 'Q', 'ImmutableQuaternion']
 
+_MM = _api2.MMatrix
 _MQ = _api2.MQuaternion
 _MV = _api2.MVector
 _MP = _api2.MPoint
@@ -545,7 +546,23 @@ class Quaternion(object):
             ±π の範囲に収めた角度を得るかどうか。
         :rtype: `float`
         """
-        return _asAngle(self.__data, naxis, bound)
+        if naxis:
+            ax = abs(naxis[0])
+            ay = abs(naxis[1])
+            az = abs(naxis[2])
+            if ax > ay:
+                s = (self.__data[0] / naxis[0]) if ax > az else (self.__data[2] / naxis[2])
+            else:
+                s = (self.__data[1] / naxis[1]) if ay > az else (self.__data[2] / naxis[2])
+            ang = atan2(s, self.__data[3]) * 2.
+        else:
+            ang = (acos(self.__data[3]) * 2.) if (-1. < self.__data[3] < 1.) else 0.
+        if bound:
+            if ang < -PI:
+                ang += _2PI
+            elif PI < ang:
+                ang -= _2PI
+        return ang
 
     def setAngle(self, theta, correctAxis=False):
         u"""
@@ -564,9 +581,9 @@ class Quaternion(object):
             half = theta * .5
             w = min(1., max(-1., w))
             if correctAxis and w < 0.:
-                w = -(sin(half) / sin(acos(-w)))
+                w = -sin(half) / sqrt(1. - w * w)
             else:
-                w = sin(half) / sin(acos(w))
+                w = sin(half) / sqrt(1. - w * w)  # sin(acos(w))
             data[0] *= w
             data[1] *= w
             data[2] *= w
@@ -798,19 +815,43 @@ class Quaternion(object):
         if reverse:
             q = self.__data.conjugate()
             sign = -1.
+            f = -2.
         else:
             q = self.__data
             sign = 1.
+            f = 2.
 
         vec = aim.rotateBy(q)
-        bendQ = _MQ(aim, vec)
-        b = (aim * vec) + 1.
-        rollQ = q * bendQ.conjugate()
+        rollQ = q * _MQ(vec, aim)
 
+        #vec *= _MM([
+        #    aim[0], aim[1], aim[2], 0.,
+        #    upv[0], upv[1], upv[2], 0.,
+        #    dep[0], dep[1], dep[2], 0.,
+        #    0., 0., 0., 1.,
+        #])
+
+        if rollQ.w < 0.:
+            rollQ = -rollQ
+        ax = abs(aim[0])
+        ay = abs(aim[1])
+        az = abs(aim[2])
+        if ax > ay:
+            rs = (rollQ[0] / aim[0]) if ax > az else (rollQ[2] / aim[2])
+        else:
+            rs = (rollQ[1] / aim[1]) if ay > az else (rollQ[2] / aim[2])
+
+        #b = vec.x + 1.
+        #return [
+        #    atan2(rs, rollQ[3]) * f,
+        #    atan2(vec.z, b) * -f,
+        #    atan2(vec.y, b) * f,
+        #]
+        b = (vec * aim) + 1.
         return [
-            _asAngle(rollQ, aim, True) * sign,
-            atan2(dep * vec, b) * sign * -2.,
-            atan2(upv * vec, b) * sign * 2.,
+            atan2(rs, rollQ[3]) * f,
+            atan2(vec * dep, b) * -f,
+            atan2(vec * upv, b) * f,
         ]
 
     asRHV = asRollBendHV  #: `asRollBendHV` の別名。
@@ -843,14 +884,13 @@ class Quaternion(object):
             f = 2.
 
         vec = _MV_X.rotateBy(q)
-        bendQ = _MQ(_MV_X, vec)
-        b = (_MV_X * vec) + 1.
-        rollQ = q * bendQ.conjugate()
+        rollQ = q * _MQ(vec, _MV_X)
 
+        b = vec.x + 1.
         return [
-            boundAngle(atan2(rollQ[0], rollQ[3]) * f),
-            atan2(_MV_Z * vec, b) * -f,
-            atan2(_MV_Y * vec, b) * f,
+            (atan2(-rollQ.x, -rollQ.w) if rollQ.w < 0. else atan2(rollQ.x, rollQ.w)) * f,
+            atan2(vec.z, b) * -f,
+            atan2(vec.y, b) * f,
         ]
 
     asRHV2 = asRollBendHV2  #: `asRollBendHV2` の別名。
@@ -877,19 +917,29 @@ class Quaternion(object):
         upv = (dep ^ aim).normalize()
 
         f = -.5 if reverse else .5
-        half = f * rhv[0]
-        h = tan(-f * rhv[1])
-        v = tan(f * rhv[2])
+        r = rhv[0] * f
+        vec = _MV(1., tan(rhv[2] * f), -tan(rhv[1] * f))
 
-        r = sin(half)
-        b = 2. / (h * h + v * v + 1.)
+        saim = aim * sin(r)
+        c = cos(r)
+        vec *= 2. / (vec * vec)
+        vec.x -= 1.
+        #vec *= _MM([
+        #    aim[0], aim[1], aim[2], 0.,
+        #    upv[0], upv[1], upv[2], 0.,
+        #    dep[0], dep[1], dep[2], 0.,
+        #    0., 0., 0., 1.,
+        #])
+        vec = _MV(vec * aim, vec * upv, vec * dep)
 
+        #if reverse:
+        #    q = _MQ(vec, aim)
+        #    q *= _MQ(saim[0], saim[1], saim[2], -c)  # こうすると -w になるので良くない。
+        #else:
+        q = _MQ(saim[0], saim[1], saim[2], c)
+        q *= _MQ(aim, vec)
         if reverse:
-            q = _MQ(aim * (b - 1.) + upv * (v * b) + dep * (h * b), aim)
-            q *= _MQ(aim[0] * r, aim[1] * r, aim[2] * r, -cos(half))
-        else:
-            q = _MQ(aim[0] * r, aim[1] * r, aim[2] * r, cos(half))
-            q *= _MQ(aim, aim * (b - 1.) + upv * (v * b) + dep * (h * b))
+            q.conjugateIt()
 
         return _newQ(q, cls)
 
@@ -912,19 +962,22 @@ class Quaternion(object):
         :rtype: `Quaternion`
         """
         f = -.5 if reverse else .5
-        half = f * rhv[0]
-        h = tan(-f * rhv[1])
-        v = tan(f * rhv[2])
+        r = rhv[0] * f
+        vec = _MV(1., tan(rhv[2] * f), -tan(rhv[1] * f))
 
-        r = sin(half)
-        b = 2. / (h * h + v * v + 1.)
+        s = sin(r)
+        c = cos(r)
+        vec *= 2. / (vec * vec)
+        vec.x -= 1.
 
+        #if reverse:
+        #    q = _MQ(vec, _MV_X)
+        #    q *= _MQ(s, 0., 0., -c)  # こうすると -w になるので良くない。
+        #else:
+        q = _MQ(s, 0., 0., c)
+        q *= _MQ(_MV_X, vec)
         if reverse:
-            q = _MQ(_MV_X * (b - 1.) + _MV_Y * (v * b) + _MV_Z * (h * b), _MV_X)
-            q *= _MQ(_MV_X[0] * r, _MV_X[1] * r, _MV_X[2] * r, -cos(half))
-        else:
-            q = _MQ(_MV_X[0] * r, _MV_X[1] * r, _MV_X[2] * r, cos(half))
-            q *= _MQ(_MV_X, _MV_X * (b - 1.) + _MV_Y * (v * b) + _MV_Z * (h * b))
+            q.conjugateIt()
 
         if axisOri:
             axisOri = axisOri.__data
@@ -967,26 +1020,4 @@ Q.Identity = ImmutableQuaternion()  #: 単位クォータニオン。
 Q.Zero = ImmutableQuaternion(0., 0., 0., 0.)  #: ゼロ。
 
 _slerp = Q.slerp
-
-
-#------------------------------------------------------------------------------
-def _asAngle(data, naxis, bound):
-    if naxis:
-        ax = abs(naxis[0])
-        ay = abs(naxis[1])
-        az = abs(naxis[2])
-        if ax > ay:
-            s = (data[0] / naxis[0]) if ax > az else (data[2] / naxis[2])
-        else:
-            s = (data[1] / naxis[1]) if ay > az else (data[2] / naxis[2])
-        ang = atan2(s, data[3]) * 2.
-    else:
-        w = data[3]
-        ang = (acos(w) * 2.) if (-1. < w < 1.) else 0.
-    if bound:
-        if ang < -PI:
-            ang += _2PI
-        elif PI < ang:
-            ang -= _2PI
-    return ang
 

@@ -50,6 +50,8 @@ class cymel.core.datatypes.matrix.Matrix
         axes
         axis
         cofactor
+        col
+        cols
         column
         columns
         det
@@ -162,6 +164,8 @@ class cymel.core.datatypes.matrix.Matrix
     .. automethod:: axes
     .. automethod:: axis
     .. automethod:: cofactor
+    .. automethod:: col
+    .. automethod:: cols
     .. automethod:: column
     .. automethod:: columns
     .. automethod:: det

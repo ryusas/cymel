@@ -1356,6 +1356,8 @@ class Matrix(object):
         d = self.__data
         return _newV(_MP(d[i], d[i + 4], d[i + 8], d[i + 12]))
 
+    col = column  #: `column` の別名。
+
     def columns(self):
         u"""
         列ベクトルを4つ全て得る。
@@ -1369,6 +1371,8 @@ class Matrix(object):
             _newV(_MP(d[2], d[6], d[10], d[14])),
             _newV(_MP(d[3], d[7], d[11], d[15])),
         )
+
+    cols = columns  #: `columns` の別名。
 
     def axis(self, i, transpose=False):
         u"""
