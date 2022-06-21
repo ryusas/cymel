@@ -192,8 +192,198 @@ class DagNode(DagNodeMixin, nodetypes.parentBasicNodeClass('dagNode')):
             for node in node.iterDepthFirst(shapes, intermediates, underWorld):
                 yield node
 
-    # TODO: findCommonAncestor
-    # TODO: iterPath
+    @staticmethod
+    def findCommonAncestor(nodes=None, skipFirst=False):
+        u"""
+        指定したDAGノードに共通の先祖ノードを見つける。
+
+        :param `iterable` nodes:
+            1つ以上のDAGノード。省略時はカレントセレクション。
+        :param `bool` skipFirst:
+            指定したノードの親を探索起点とするかどうか。
+            デフォルトでは指定したノード自身も結果となり得る。
+        :rtype: `DagNode` or None
+        """
+        nodes = nodes or DagNode.ls(sl=True)
+        num = len(nodes)
+        if num:
+            lengths = [x.pathLength() for x in nodes]
+            minLen = min(lengths)
+            nodes = [x.parent(i - minLen) for x, i in zip(nodes, lengths)]
+
+            if not skipFirst:
+                x = nodes[0]
+                if nodes == [x] * num:
+                    return x
+
+            for i in range(minLen):
+                nodes = [x.parent() for x in nodes]
+                x = nodes[0]
+                if nodes == [x] * num:
+                    return x
+
+    def commonAncestor(self, other, skipFirst=False):
+        u"""
+        指定したノードとの共通の先祖ノードを得る。
+
+        `findCommonAncestor` を [self, other] で呼び出すことと同じ。
+
+        :param `DagNode` other:
+            比較するDAGノード。
+        :param `bool` skipFirst:
+            指定したノードの親を探索起点とするかどうか。
+            デフォルトでは指定したノード自身も結果となり得る。
+        :rtype: `DagNode` or None
+        """
+        return DagNode.findCommonAncestor([self, other], skipFirst)
+
+    def iterPath(self, end=None, includeStart=True, includeEnd=True, includeTurn=False):  #, breakAt=None):
+        u"""
+        DAGパスをたどるイテレータ。
+
+        :param end:
+            終点とする DAG ノード。
+            省略時はルートまでイテレーションする。
+
+        :param `int` includeStart:
+            始点ノードを含めるかどうか。
+
+            上昇のみ（始点が終点の子孫）の場合は、
+            さらに includeTurn も True である必要がある。
+
+        :param `int` includeEnd:
+            終点ノードを含めるかどうか。
+
+            下降のみ（始点が終点の先祖）の場合は、
+            さらに includeTurn も True である必要がある。
+
+            終点省略時はこの指定は無視され、シーン上の最上位ノードまで常に含める。
+
+        :param `bool` includeTurn:
+            上昇から下降への折り返し点を含めるかどうか。
+
+            折り返し点とは、イテレーション中の最上位に位置するノードのことで、
+            `commonAncestor` で取得できるものと同じく、始点と終点の共通の先祖である。
+
+            下降のみ（始点が終点の先祖）の場合の始点や
+            上昇のみ（始点が終点の子孫）の場合の終点は、
+            始点や終点であると同時に折り返し点でもあるという扱いになる。
+            それらは、includeStart か includeEnd に加えて includeTurn も
+            True でないと取得されない。
+
+        :returns:
+            yield (`DagNode`, `int`)
+
+            整数値は次の値をとり、辿っている方向を示す。
+
+            * 0 - 下降。
+            * 1 - 上昇。
+            * 2 - 上昇から下降への折り返し点（イテレーション中の最上位点）。
+
+        .. note::
+            終点ノード空間の始点ノードのローカルマトリックス配列を得る場合、
+            デフォルト設定で使用し、
+            返される整数値が 0 なら inverseMatrix、1 なら matrix を参照すれば良い。
+        """
+        # 共通の先祖と上位ノード群の取得。
+        if end:
+            resDict = {self: self, end: end}
+            #ancestor = DagNode.findCommonAncestor([self, end])
+
+            upperNum = self.pathLength()
+            lowerNum = end.pathLength()
+            comLen = min(upperNum, lowerNum)
+            sp = self.parent(upperNum - comLen) or self
+            ep = end.parent(lowerNum - comLen) or end
+            upperNodes = self.__makeUpperNodeList(upperNum - comLen)
+
+            if sp == ep:
+                ancestor = sp
+                lowerNum -= comLen
+            else:
+                ancestor = None
+                nodes = [None] * comLen
+                for i in range(comLen):
+                    nodes[i] = sp
+                    sp = sp.parent()
+                    ep = ep.parent()
+                    if sp == ep:
+                        ancestor = sp
+                        i += 1
+                        upperNodes += nodes[:i]
+                        comLen -= i
+                        lowerNum -= comLen
+                        break
+        else:
+            resDict = {self: self}
+            ancestor = None
+            lowerNum = 0
+            upperNodes = self.__makeUpperNodeList(self.pathLength())
+
+        # ブレークポイントの準備。
+        #if not breakAt:
+        #    breakAt = EMPTY_DICT
+        #elif isinstance(breakAt, Iterable):
+        #    breakAt = set(breakAt)
+        #else:
+        #    breakAt = set([breakAt])
+        #for x in breakAt:
+        #    if x not in resDict:
+        #        resDict[x] = x
+
+        res_get = resDict.get
+        incBreak = includeEnd
+        skip = not includeStart
+
+        # 上昇
+        for node in upperNodes:
+            #if node in breakAt:
+            #    if incBreak and not skip:
+            #        yield res_get(node, node), 1
+            #    return
+            if skip:
+                skip = False
+            else:
+                yield res_get(node, node), 1
+
+        # 折り返し地点（上昇の最後、又は下降の最初）
+        node = ancestor
+        #print(upperNodes, node, skip, lowerNum, includeTurn)
+        if node:
+            if not lowerNum and not includeEnd:
+                return
+            #if node in breakAt:
+            #    if incBreak and includeTurn and not skip:
+            #        yield res_get(node, node), 2
+            #    return
+            if skip:
+                skip = False
+            elif includeTurn:
+                yield res_get(node, node), 2
+
+        # 下降
+        if lowerNum:
+            lowerNodes = end.__makeUpperNodeList(lowerNum)
+            lowerNodes.reverse()
+            if not includeEnd:
+                lowerNodes.pop()
+
+            for node in lowerNodes:
+                #if node in breakAt:
+                #    if incBreak and not skip:
+                #        yield res_get(node, node), 0
+                #    return
+                if skip:
+                    skip = False
+                else:
+                    yield res_get(node, node), 0
+
+    def __makeUpperNodeList(node, num):
+        nodes = [node] * num
+        for i in range(1, num):
+            node = node.parent()
+            nodes[i] = node
+        return nodes
 
 nodetypes.registerNodeClass(DagNode, 'dagNode')
 

@@ -18,9 +18,12 @@ class cymel.core.cyobjects.dagnode.DagNode
 
     .. autosummary::
     
+        commonAncestor
+        findCommonAncestor
         hide
         iterBreadthFirst
         iterDepthFirst
+        iterPath
         setParent
         show
 
@@ -40,9 +43,12 @@ class cymel.core.cyobjects.dagnode.DagNode
     .. rubric:: Methods Details:
 
     
+    .. automethod:: commonAncestor
+    .. automethod:: findCommonAncestor
     .. automethod:: hide
     .. automethod:: iterBreadthFirst
     .. automethod:: iterDepthFirst
+    .. automethod:: iterPath
     .. automethod:: setParent
     .. automethod:: show
 
