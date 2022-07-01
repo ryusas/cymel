@@ -1437,14 +1437,17 @@ def _parseSetAttrCmds(lines):
     if not m:
         raise RuntimeError('cannnot parse command')
     tkns = _RE_SETATTR_VAL_TOKENS_findall(m.group(1))
-    if len(lines) > 1:
-        for line in lines[1:-1]:
+    for line in lines[1:]:
+        m = _RE_SETATTR_CMD_VAL_match(line)
+        if m:
+            tkns.extend(_RE_SETATTR_VAL_TOKENS_findall(m.group(1)))
+        else:
+            if line[-1] == ';':
+                line = line[:-1]  # 末尾の ; を取り除く。
             tkns.extend(_RE_SETATTR_VAL_TOKENS_findall(line))
-        line = lines[-1][:-1]  # 末尾の ; を取り除く。
-        tkns.extend(_RE_SETATTR_VAL_TOKENS_findall(line))
     return eval('[' + ','.join([_YESNO_TO_BOOLSTR(x, x) for x in tkns]) + ']')
 
-_RE_SETATTR_CMD_VAL_match = re.compile(r'.*setAttr .+ -type "[^"]+" (.*?);?$').match  #: setAttr のコマンド開始行にマッチ。
+_RE_SETATTR_CMD_VAL_match = re.compile(r'.*setAttr .+(?: -type "[^"]+")? (.*?);?$').match  #: setAttr のコマンド開始行にマッチ。
 #_RE_SETATTR_VAL_match = re.compile(r'(.*?);?$').match  #: setAttr の後続行にマッチ。
 _RE_SETATTR_VAL_TOKENS_findall = re.compile(r'((?<!\\)".*(?<!\\)"|\S+)').findall  #: setAttr 値のトークン分割。
 _YESNO_TO_BOOLSTR = {'yes': 'True', 'no': 'False'}.get
@@ -1467,9 +1470,15 @@ def _dataValueByParsing(mobj, datatype, mplug=None, parser=None):
     else:
         lines = None
 
-    # MPlug が渡されなかったか MPlug からはどうしてもコマンドを得られなかった場合、
-    # 共有テンポラリアトリビュートに値をセットしてから得る。
+    # MPlug が渡されなかったか MPlug からはどうしてもコマンドを得られなかった場合。
     if not lines:
+        # コンパウンドだったら getAttr コマンドに頼る。
+        # TODO: コールスタックの手前でプラグ階層を再帰的に取得しても良いかも。
+        if mplug and datatype == 'compound':
+            res = _getAttr(getMPlugName(mplug))
+            return res and list(res[0])
+
+        # 共有テンポラリアトリビュートに値をセットしてから得る。
         tmpmp = _getCommonTempMPlug(datatype)
         tmpmp.setMObject(mobj)
         lines = tmpmp.getSetAttrCmds()
