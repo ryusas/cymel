@@ -698,30 +698,51 @@ class Quaternion(object):
         """
         p = p.__data
         q = q.__data
-        flip = 1.
-        xx = p[0] * q[0]
-        yy = p[1] * q[1]
-        zz = p[2] * q[2]
-        ww = p[3] * q[3]
-        cosOmega = xx + yy + zz + ww
-        if cosOmega < 0.:
-            cosOmega = -cosOmega
+        dt = p[0] * q[0] + p[1] * q[1] + p[2] * q[2] + p[3] * q[3]
+        if dt < 0.:
+            dt = -dt
             flip = -1.
+        else:
+            flip = 1.
 
-        if 1. - cosOmega < _TOLERANCE:  # 限りなく同じ姿勢を表すもの同士の場合。
+        if 1. - dt < _TOLERANCE:  # 限りなく同じ姿勢を表すもの同士の場合。
             # 符号反転を考慮して線形補間する（微妙な差もあるので、全要素が反転していない場合も有り得る）。
-            return (p * t + q * ((1. - t) * flip)).normalizeIt()
+            return _newQ(((1. - t) * p + (t * flip) * q).normalizeIt())
 
-        omega = acos(cosOmega) if cosOmega < 1. else 0.
-        phi = omega + spin * PI
-        sinOmega = sin(omega)
-        a = sin(omega - t * phi) / sinOmega
-        b = sin(t * phi) / sinOmega * flip
-        return _newQ(_MQ(
-            p[0] * a + q[0] * b,
-            p[1] * a + q[1] * b,
-            p[2] * a + q[2] * b,
-            p[3] * a + q[3] * b))
+        else:
+            angle = acos(dt)
+            s = 1. / sin(angle)  # 1. / sqrt(1. - dt * dt)
+            t *= angle + spin * PI
+            return _newQ((sin(angle - t) * s) * p + (sin(t) * s * flip) * q)
+
+    def slerp0(self, t, spin=0):
+        u"""
+        単位クォータニオンと球面線形補間する。
+
+        :param `float` t: 0.0～1.0の補間係数。範囲外も指定可。
+        :param `int` spin:
+            スピン値。
+            デフォルトの0は正方向、-1は逆方向、
+            さらに+1や-1すると余分に周回する。
+        :rtype: `Quaternion`
+        """
+        q = self.__data
+        dt = q[3]
+        if dt < 0.:
+            dt = -dt
+            flip = -1.
+        else:
+            flip = 1.
+
+        if 1. - dt < _TOLERANCE:  # 限りなく同じ姿勢を表すもの同士の場合。
+            # 符号反転を考慮して線形補間する（微妙な差もあるので、全要素が反転していない場合も有り得る）。
+            return _newQ(((1. - t) * _MQ_Identity + (t * flip) * q).normalizeIt())
+
+        else:
+            angle = acos(dt)
+            s = 1. / sin(angle)  # 1. / sqrt(1. - dt * dt)
+            t *= angle + spin * PI
+            return _newQ((sin(angle - t) * s) * _MQ_Identity + (sin(t) * s * flip) * q)
 
     @staticmethod
     def squad(p, a, b, q, t, spin=0):
