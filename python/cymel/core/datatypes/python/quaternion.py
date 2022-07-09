@@ -319,10 +319,8 @@ class Quaternion(object):
             :rtype: `bool`
             """
             try:
-                return (
-                    self.__data.isEquivalent(q.__data, tol) and
-                    self.__data[3] * q.__data[3] >= 0.
-                )
+                q = self.__data - q.__data
+                return abs(q[0]) < tol and abs(q[1]) < tol and abs(q[2]) < tol and abs(q[3]) < tol
             except:
                 return False
 
@@ -335,7 +333,8 @@ class Quaternion(object):
             :param `float` tol: 許容誤差。
             :rtype: `bool`
             """
-            return self.__data[3] > 0. and self.__data.isEquivalent(_MQ_Identity, tol)
+            q = self.__data
+            return abs(q[0]) < tol and abs(q[1]) < tol and abs(q[2]) < tol and abs(1. - q[3]) < tol
 
     def set(self, *args):
         u"""
@@ -438,8 +437,8 @@ class Quaternion(object):
 
         :param `int` order: 得たい回転オーダー。
         :param `bool` correct:
-            Maya 2019 より前のバージョンの場合、
-            クォータニオンの w の符号に適した回転を得られるように補正する。
+            得られるオイラー角回転値を再度クォータニオン化したときに
+            元の符号と一致するように補正する。
             不適切な場合に `.EulerRotation.reverseDirection` することと等しい。
         :rtype: `.EulerRotation`
 
@@ -450,9 +449,6 @@ class Quaternion(object):
         .. warning::
             correct に真を指定して得た値を rotateAxis にセットしようとすると
             正常にセットできない場合があるので、その用途では指定すべきではない。
-
-            なお、Maya 2019 以降の場合は、この問題は解決されており、
-            且つ correct 指定無しでも適切な値が返される。
         """
         if order == XYZ:
             r = self.__data.asEulerRotation()
@@ -461,10 +457,12 @@ class Quaternion(object):
             r.setValue(self.__data)
 
         if correct:
-            # w の符号に忠実な回転に補正する。
-            qw = r.asQuaternion().w
-            if qw * self.__data.w < 0.:
-                return _newE(_reverseRotation(r, qw))
+            # クォータニオンの符号に忠実な回転に補正する。
+            s = self.__data
+            d = r.asQuaternion()
+            if d[0] * s[0] + d[1] * s[1] + d[2] * s[2] + d[3] * s[3] < 0.:
+                _reverseEulerRotationInPlace(r)
+
         return _newE(r)
 
     asE = asEulerRotation  #: `asEulerRotation` の別名。
@@ -475,8 +473,8 @@ class Quaternion(object):
 
         :param `int` order: 得たい回転オーダー。
         :param `bool` correct:
-            Maya 2019 より前のバージョンの場合、
-            クォータニオンの w の符号に適した回転を得られるように補正する。
+            得られるオイラー角回転値を再度クォータニオン化したときに
+            元の符号と一致するように補正する。
             不適切な場合に `.EulerRotation.reverseDirection` することと等しい。
         :rtype: `list`
 
@@ -486,9 +484,6 @@ class Quaternion(object):
         .. warning::
             correct に真を指定して得た値を rotateAxis にセットしようとすると
             正常にセットできない場合があるので、その用途では指定すべきではない。
-
-            なお、Maya 2019 以降の場合は、この問題は解決されており、
-            且つ correct 指定無しでも適切な値が返される。
         """
         if order == XYZ:
             r = self.__data.asEulerRotation()
@@ -497,10 +492,11 @@ class Quaternion(object):
             r.setValue(self.__data)
 
         if correct:
-            # w の符号に忠実な回転に補正する。
-            qw = r.asQuaternion().w
-            if qw * self.__data.w < 0.:
-                r = _reverseRotation(r, qw)
+            s = self.__data
+            d = r.asQuaternion()
+            if d[0] * s[0] + d[1] * s[1] + d[2] * s[2] + d[3] * s[3] < 0.:
+                _reverseEulerRotationInPlace(r)
+
         return [r[0] * TO_DEG, r[1] * TO_DEG, r[2] * TO_DEG]
 
     asD = asDegrees  #: `asDegrees` の別名。

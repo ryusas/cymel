@@ -511,7 +511,10 @@ class EulerRotation(object):
 
         :rtype: `EulerRotation`
         """
-        return _newE(_reverseRotation(_ME(self.__data), self.__data.asQuaternion().w))
+        #return _newE(_reverseRotation(_ME(self.__data), self.__data.asQuaternion().w))
+        r = _ME(self.__data)
+        _reverseEulerRotationInPlace(r)
+        return _newE(r)
 
     def setToReverseDirection(self):
         u"""
@@ -521,7 +524,8 @@ class EulerRotation(object):
 
         :rtype: `EulerRotation` (self)
         """
-        self.__data = _reverseRotation(self.__data, self.__data.asQuaternion().w)
+        #self.__data = _reverseRotation(self.__data, self.__data.asQuaternion().w)
+        _reverseEulerRotationInPlace(self.__data)
         return self
 
     @classmethod
@@ -639,9 +643,26 @@ _MAKE_YAW_PITCH = _init_make_yaw_pitch()  #: 球面上の指定方向を表す�
 
 
 #------------------------------------------------------------------------------
-def _reverseRotation(r0, qw):
+def _reverseEulerRotationInPlace(rot):
+    # 全てを反転しても良い。
+    #rot.x += _2PI if rot.x < 0. else -_2PI
+    #rot.y += _2PI if rot.y < 0. else -_2PI
+    #rot.z += _2PI if rot.z < 0. else -_2PI
+
+    # 角度の絶対値が最大の軸だけ反転する。
+    ax = abs(rot[0])
+    ay = abs(rot[1])
+    az = abs(rot[2])
+    i = (0 if ax > az else 2) if ax > ay else (1 if ay > az else 2)
+    rot[i] += _2PI if rot[i] < 0. else -_2PI
+
+
+u"""
+def _reverseRotation(r0, q0):
+    # なるべく alternateSolution に頼りたいが、それで良いのか内積を確認しないといけない？
     r1 = r0.alternateSolution()
-    if qw * r1.asQuaternion().w < 0.:
+    q1 = r1.asQuaternion()
+    if q0.x * q1.x + q0.y * q1.y + q0.z * q1.z + q0.w * q1.w < 0.:
         s1 = abs(r1.x) + abs(r1.y) + abs(r1.z)
     else:
         s1 = _reverse(r1)
@@ -652,17 +673,17 @@ def _reverse(rot):
     ax = abs(rot.x)
     ay = abs(rot.y)
     az = abs(rot.z)
-    if ax >= ay:
-        if ax >= az:
+    if ax > ay:
+        if ax > az:
             rot.x += _2PI if rot.x < 0. else -_2PI
             return abs(rot.x) + ay + az
         else:
             rot.z += _2PI if rot.z < 0. else -_2PI
             return abs(rot.z) + ax + ay
-    elif ay >= az:
+    elif ay > az:
         rot.y += _2PI if rot.y < 0. else -_2PI
         return abs(rot.y) + ax + az
     else:
         rot.z += _2PI if rot.z < 0. else -_2PI
         return abs(rot.z) + ax + ay
-
+"""

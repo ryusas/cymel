@@ -61,6 +61,7 @@ class cymel.core.datatypes.quaternion.Quaternion
         setToZAxis
         setValue
         slerp
+        slerp0
         squad
         squadPt
 
@@ -125,6 +126,7 @@ class cymel.core.datatypes.quaternion.Quaternion
     .. automethod:: setToZAxis
     .. automethod:: setValue
     .. automethod:: slerp
+    .. automethod:: slerp0
     .. automethod:: squad
     .. automethod:: squadPt
 

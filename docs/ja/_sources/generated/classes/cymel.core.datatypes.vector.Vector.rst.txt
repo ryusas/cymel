@@ -19,6 +19,7 @@ class cymel.core.datatypes.vector.Vector
     .. autosummary::
     
         abs
+        add
         angle
         cartesianize
         cross
@@ -31,16 +32,20 @@ class cymel.core.datatypes.vector.Vector
         findNearestAxis
         homogenize
         iabs
+        iadd
         idiv
         imul
+        ineg
         isEquivalent
         isParallel
         isZero
+        isub
         length
         lengthSq
         maxAxis
         minAxis
         mul
+        neg
         normal
         normalize
         normalizeIt
@@ -50,6 +55,7 @@ class cymel.core.datatypes.vector.Vector
         rotateBy
         rotateTo
         set
+        sub
         transformAsNormal
         xform3
         xform4
@@ -82,6 +88,7 @@ class cymel.core.datatypes.vector.Vector
 
     
     .. automethod:: abs
+    .. automethod:: add
     .. automethod:: angle
     .. automethod:: cartesianize
     .. automethod:: cross
@@ -94,16 +101,20 @@ class cymel.core.datatypes.vector.Vector
     .. automethod:: findNearestAxis
     .. automethod:: homogenize
     .. automethod:: iabs
+    .. automethod:: iadd
     .. automethod:: idiv
     .. automethod:: imul
+    .. automethod:: ineg
     .. automethod:: isEquivalent
     .. automethod:: isParallel
     .. automethod:: isZero
+    .. automethod:: isub
     .. automethod:: length
     .. automethod:: lengthSq
     .. automethod:: maxAxis
     .. automethod:: minAxis
     .. automethod:: mul
+    .. automethod:: neg
     .. automethod:: normal
     .. automethod:: normalize
     .. automethod:: normalizeIt
@@ -113,6 +124,7 @@ class cymel.core.datatypes.vector.Vector
     .. automethod:: rotateBy
     .. automethod:: rotateTo
     .. automethod:: set
+    .. automethod:: sub
     .. automethod:: transformAsNormal
     .. automethod:: xform3
     .. automethod:: xform4

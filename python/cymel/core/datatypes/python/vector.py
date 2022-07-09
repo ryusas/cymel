@@ -183,6 +183,7 @@ class Vector(object):
         elif isinstance(v, Number):
             return _newV(self.__data * v)
         else:
+            # dot product.
             try:
                 d = self.__data
                 s = v.__data
@@ -192,10 +193,8 @@ class Vector(object):
 
     def __imul__(self, v):
         if hasattr(v, '_Transformation__data'):
-            #self.__data *= v.m._Matrix__data
             self.__data.__imul__(v.m._Matrix__data)
         elif hasattr(v, '_Matrix__data'):
-            #self.__data *= v._Matrix__data
             self.__data.__imul__(v._Matrix__data)
         elif hasattr(v, '_Quaternion__data'):
             d = self.__data
@@ -204,9 +203,12 @@ class Vector(object):
             d[1] = v[1]
             d[2] = v[2]
         else:
+            d = self.__data
             try:
-                #self.__data *= v
-                self.__data.__imul__(v)
+                # MPoint.__imul__ のスカラーは未実装なので。
+                d[0] *= v
+                d[1] *= v
+                d[2] *= v
             except:
                 raise ValueError("%s *= %r" % (type(self).__name__, v))
         return self
@@ -224,9 +226,13 @@ class Vector(object):
             raise ValueError("%s / %r" % (type(self).__name__, v))
 
     def __itruediv__(self, v):
+        d = self.__data
         try:
-            #self.__data /= v
-            self.__data.__imul__(1. / v)
+            # MPoint.__imul__ のスカラーは未実装なので。
+            v = 1. / v
+            d[0] *= v
+            d[1] *= v
+            d[2] *= v
         except:
             raise ValueError("%s /= %r" % (type(self).__name__, v))
         return self
@@ -581,67 +587,165 @@ class Vector(object):
         v[3] = abs(v[3])
         return self
 
-    def mul(self, v):
+    def neg(self):
         u"""
-        4次元ベクトルの各要素を乗算したベクトルを得る。
+        4次元ベクトルの符号反転を得る。
+
+        :rtype: `Vector`
+        """
+        d = self.__data
+        return _newV(_MP(-d[0], -d[1], -d[2], -d[3]))
+
+    def ineg(self):
+        u"""
+        4次元ベクトルの符号反転をセットする。
+
+        :rtype: `Vector`
+        """
+        d = self.__data
+        d[0] = -d[0]
+        d[1] = -d[1]
+        d[2] = -d[2]
+        d[3] = -d[3]
+        return self
+
+    def add(self, v):
+        u"""
+        4次元ベクトルの和を得る。
 
         :type v: `Vector`
-        :param v: もう1方のベクトル。
+        :param v: もう1方のベクトル
         :rtype: `Vector`
         """
         a = self.__data
         b = v.__data
-        return _newV(_MP(a[0] * b[0], a[1] * b[1], a[2] * b[2], a[3] * b[3]))
+        return _newV(_MP(a[0] + b[0], a[1] + b[1], a[2] + b[2], a[3] + b[3]))
 
-    def imul(self, v):
+    def iadd(self, v):
         u"""
-        4次元ベクトルの各要素を乗算したベクトルをセットする。
+        4次元ベクトルの和をセットする。
 
-        :type v: `Vector`
+        :type v: `Vector` or `Number`
         :param v: もう1方のベクトル。
         :rtype: `Vector` (self)
         """
         a = self.__data
         b = v.__data
-        a[0] *= b[0]
-        a[1] *= b[1]
-        a[2] *= b[2]
-        a[3] *= b[3]
+        a[0] += b[0]
+        a[1] += b[1]
+        a[2] += b[2]
+        a[3] += b[3]
+        return self
+
+    def sub(self, v):
+        u"""
+        4次元ベクトルの和を得る。
+
+        :type v: `Vector`
+        :param v: もう1方のベクトル
+        :rtype: `Vector`
+        """
+        a = self.__data
+        b = v.__data
+        return _newV(_MP(a[0] - b[0], a[1] - b[1], a[2] - b[2], a[3] - b[3]))
+
+    def isub(self, v):
+        u"""
+        4次元ベクトルの和をセットする。
+
+        :type v: `Vector` or `Number`
+        :param v: もう1方のベクトル。
+        :rtype: `Vector` (self)
+        """
+        a = self.__data
+        b = v.__data
+        a[0] -= b[0]
+        a[1] -= b[1]
+        a[2] -= b[2]
+        a[3] -= b[3]
+        return self
+
+    def mul(self, v):
+        u"""
+        4次元ベクトルの積を得る。
+
+        :type v: `Vector` or `Number`
+        :param v: もう1方のベクトル、またはスカラー。
+        :rtype: `Vector`
+        """
+        a = self.__data
+        if isinstance(v, Number):
+            return _newV(_MP(a[0] * v, a[1] * v, a[2] * v, a[3] * v))
+        else:
+            b = v.__data
+            return _newV(_MP(a[0] * b[0], a[1] * b[1], a[2] * b[2], a[3] * b[3]))
+
+    def imul(self, v):
+        u"""
+        4次元ベクトルの積をセットする。
+
+        :type v: `Vector` or `Number`
+        :param v: もう1方のベクトル、またはスカラー。
+        :rtype: `Vector` (self)
+        """
+        a = self.__data
+        if isinstance(v, Number):
+            a[0] *= v
+            a[1] *= v
+            a[2] *= v
+            a[3] *= v
+        else:
+            b = v.__data
+            a[0] *= b[0]
+            a[1] *= b[1]
+            a[2] *= b[2]
+            a[3] *= b[3]
         return self
 
     def div(self, v, pre=AVOID_ZERO_DIV_PRECISION):
         u"""
-        4次元ベクトルの各要素を除算したベクトルを得る。
+        4次元ベクトルの商を得る。
 
-        :type v: `Vector`
-        :param v: 分母のベクトル。
+        :type v: `Vector` or `Number`
+        :param v: 分母のベクトル、またはスカラー。
         :param `float` pre: ゼロ除算を避ける為の許容誤差。
         :rtype: `Vector`
         """
         a = self.__data
-        b = v.__data
-        return _newV(_MP(
-            a[0] / avoidZeroDiv(b[0], pre),
-            a[1] / avoidZeroDiv(b[1], pre),
-            a[2] / avoidZeroDiv(b[2], pre),
-            a[3] / avoidZeroDiv(b[3], pre),
-        ))
+        if isinstance(v, Number):
+            v = 1. / avoidZeroDiv(v, pre)
+            return _newV(_MP(a[0] * v, a[1] * v, a[2] * v, a[3] * v))
+        else:
+            b = v.__data
+            return _newV(_MP(
+                a[0] / avoidZeroDiv(b[0], pre),
+                a[1] / avoidZeroDiv(b[1], pre),
+                a[2] / avoidZeroDiv(b[2], pre),
+                a[3] / avoidZeroDiv(b[3], pre),
+            ))
 
     def idiv(self, v, pre=AVOID_ZERO_DIV_PRECISION):
         u"""
-        4次元ベクトルの各要素を除算したベクトルをセットする。
+        4次元ベクトルの商をセットする。
 
-        :type v: `Vector`
-        :param v: 分母のベクトル。
+        :type v: `Vector` or `Number`
+        :param v: 分母のベクトル、またはスカラー。
         :param `float` pre: ゼロ除算を避ける為の許容誤差。
         :rtype: `Vector` (self)
         """
         a = self.__data
-        b = v.__data
-        a[0] /= avoidZeroDiv(b[0], pre)
-        a[1] /= avoidZeroDiv(b[1], pre)
-        a[2] /= avoidZeroDiv(b[2], pre)
-        a[3] /= avoidZeroDiv(b[3], pre)
+        if isinstance(v, Number):
+            v = 1. / avoidZeroDiv(v, pre)
+            a[0] *= v
+            a[1] *= v
+            a[2] *= v
+            a[3] *= v
+        else:
+            b = v.__data
+            a[0] /= avoidZeroDiv(b[0], pre)
+            a[1] /= avoidZeroDiv(b[1], pre)
+            a[2] /= avoidZeroDiv(b[2], pre)
+            a[3] /= avoidZeroDiv(b[3], pre)
         return self
 
     def orthogonal(self, vec):
