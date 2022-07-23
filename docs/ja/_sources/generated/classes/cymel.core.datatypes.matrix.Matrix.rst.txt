@@ -96,6 +96,8 @@ class cymel.core.datatypes.matrix.Matrix
         mirror
         mirrorIt
         mul
+        orthonormalize
+        orthonormalizeIt
         row
         rows
         set
@@ -210,6 +212,8 @@ class cymel.core.datatypes.matrix.Matrix
     .. automethod:: mirror
     .. automethod:: mirrorIt
     .. automethod:: mul
+    .. automethod:: orthonormalize
+    .. automethod:: orthonormalizeIt
     .. automethod:: row
     .. automethod:: rows
     .. automethod:: set

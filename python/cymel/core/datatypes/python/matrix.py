@@ -1286,6 +1286,9 @@ class Matrix(object):
         _M_setdata(self, self.__data.homogenize())
         return self
 
+    orthonormalize = homogenize  # `homogenize` の別名。
+    orthonormalizeIt = homogenizeIt  # `homogenizeIt` の別名。
+
     def det(self):
         u"""
         行列式を得る。

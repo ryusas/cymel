@@ -155,6 +155,7 @@ class Vector(object):
 
     def __sub__(self, v):
         try:
+            # MPoint では cartesianize() した上で差をとるという律儀なことをしているけど、w はガン無視。
             d = self.__data
             s = v.__data
             return _newV(_MP(d[0] - s[0], d[1] - s[1], d[2] - s[2], d[3]))
@@ -279,9 +280,20 @@ class Vector(object):
         :param v: 比較するベクトル。
         :param `float` tol: 許容誤差。
         :rtype: `bool`
+
+        .. note::
+            :mayaapi2:`MPoint` の isEquivalent とは挙動が異なることに注意。
+            :mayaapi2:`MPoint` では `cartesianize` での差の距離が比較されるが、
+            w=0 の場合に望ましくない結果になるなどの問題がある。
+            本メソッドの場合は単純でコストも低い要素ごとの単純比較としている。
         """
         try:
-            return self.__data.isEquivalent(v.__data, tol)
+            # MPoint では差ベクトルの平方和が tol^2 未満かどうかを判定している。
+            # 差を計算するにあたって cartesianize() するので w=0 のときにおかしくなるので、要素ごとの単純比較にする。
+            #return self.__data.isEquivalent(v.__data, tol)
+            a = self.__data
+            b = v.__data
+            return abs(a.x - b.x) < tol and abs(a.y - b.y) < tol and abs(a.z - b.z) < tol and abs(a.w - b.w) < tol
         except:
             return False
 
