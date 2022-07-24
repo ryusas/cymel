@@ -848,12 +848,14 @@ V = Vector  #: `Vector` の別名。
 
 _MUTATOR_DICT[V] = (
     'set',
-    'normalize',
-    'normalizeIt',
+    'normalize', 'normalizeIt',
     'cartesianize',
     'rationalize',
     'homogenize',
     'iabs',
+    'ineg',
+    'iadd',
+    'isub',
     'imul',
     'idiv',
     'orthogonalize',

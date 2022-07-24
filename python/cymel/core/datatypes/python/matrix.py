@@ -1610,15 +1610,6 @@ M = Matrix  #: `Matrix` の別名。
 
 _MUTATOR_DICT[M] = (
     'set',
-    'setToIdentity',
-    'init3x3',
-    'initTranslation',
-    'initT',
-    'setElem',
-    'transposeIt',
-    'invertIt',
-    'adjointIt',
-    'homogenizeIt',
     'setRow',
     'setRows',
     'setColumn',
@@ -1627,13 +1618,18 @@ _MUTATOR_DICT[M] = (
     'setAxes',
     'imul'
     'idiv'
-    'setTranslation',
-    'setT',
-    'addTranslation',
-    'addT',
-    'subTranslation',
-    'subT',
+    'setTranslation', 'setT',
+    'addTranslation', 'addT',
+    'subTranslation', 'subT',
     'mirrorIt',
+    'setToIdentity',
+    'init3x3',
+    'initTranslation', 'initT',
+    'setElem',
+    'transposeIt',
+    'invertIt',
+    'adjugateIt', 'adjointIt',
+    'homogenizeIt', 'orthonormalizeIt',
 )
 ImmutableMatrix = immutableType(M)  #: `Matrix` の `immutable` ラッパー。
 

@@ -21,6 +21,7 @@ class cymel.core.datatypes.matrix.ImmutableMatrix
         addT
         addTranslation
         adjointIt
+        adjugateIt
         homogenizeIt
         imulidivsetTranslation
         init3x3
@@ -28,6 +29,7 @@ class cymel.core.datatypes.matrix.ImmutableMatrix
         initTranslation
         invertIt
         mirrorIt
+        orthonormalizeIt
         set
         setAxes
         setAxis
@@ -56,6 +58,7 @@ class cymel.core.datatypes.matrix.ImmutableMatrix
     .. automethod:: addT
     .. automethod:: addTranslation
     .. automethod:: adjointIt
+    .. automethod:: adjugateIt
     .. automethod:: homogenizeIt
     .. automethod:: imulidivsetTranslation
     .. automethod:: init3x3
@@ -63,6 +66,7 @@ class cymel.core.datatypes.matrix.ImmutableMatrix
     .. automethod:: initTranslation
     .. automethod:: invertIt
     .. automethod:: mirrorIt
+    .. automethod:: orthonormalizeIt
     .. automethod:: set
     .. automethod:: setAxes
     .. automethod:: setAxis

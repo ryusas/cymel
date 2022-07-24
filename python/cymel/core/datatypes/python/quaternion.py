@@ -1008,8 +1008,7 @@ class Quaternion(object):
 Q = Quaternion  #: `Quaternion` の別名。
 
 _MUTATOR_DICT[Q] = (
-    'set',
-    'setValue',
+    'set', 'setValue',
     'setToIdentity',
     'setToXAxis',
     'setToYAxis',
@@ -1017,8 +1016,7 @@ _MUTATOR_DICT[Q] = (
     'setAngle',
     'conjugateIt',
     'invertIt',
-    'normalize',
-    'normalizeIt',
+    'normalize', 'normalizeIt',
     'negateIt',
 )
 ImmutableQuaternion = immutableType(Q)  #: `Quaternion` の `immutable` ラッパー。

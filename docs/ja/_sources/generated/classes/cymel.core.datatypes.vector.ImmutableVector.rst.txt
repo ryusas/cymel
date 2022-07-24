@@ -21,8 +21,11 @@ class cymel.core.datatypes.vector.ImmutableVector
         cartesianize
         homogenize
         iabs
+        iadd
         idiv
         imul
+        ineg
+        isub
         normalize
         normalizeIt
         orthogonalize
@@ -43,8 +46,11 @@ class cymel.core.datatypes.vector.ImmutableVector
     .. automethod:: cartesianize
     .. automethod:: homogenize
     .. automethod:: iabs
+    .. automethod:: iadd
     .. automethod:: idiv
     .. automethod:: imul
+    .. automethod:: ineg
+    .. automethod:: isub
     .. automethod:: normalize
     .. automethod:: normalizeIt
     .. automethod:: orthogonalize
