@@ -605,7 +605,9 @@ else:
             try:
                 return mplug.asDouble()
             except:
-                return mplug.asString()
+                # string なら asMObject() で得られている。
+                # asString() は string が accept されていなければエラー、されていれば empty でも '' となる。
+                return
         return dataToValue(mobj, mplug)
 
 
