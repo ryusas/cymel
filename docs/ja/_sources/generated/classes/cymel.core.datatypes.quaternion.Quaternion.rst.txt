@@ -34,11 +34,16 @@ class cymel.core.datatypes.quaternion.Quaternion
         asRollBendHV
         asRollBendHV2
         asTransformation
+        asVecW
         asX
         conjugate
         conjugateIt
+        div
         dot
         exp
+        fromVecW
+        idiv
+        imul
         inverse
         invertIt
         isEquivalent
@@ -49,6 +54,7 @@ class cymel.core.datatypes.quaternion.Quaternion
         makeRHV2
         makeRollBendHV
         makeRollBendHV2
+        mul
         negateIt
         normal
         normalize
@@ -60,6 +66,7 @@ class cymel.core.datatypes.quaternion.Quaternion
         setToYAxis
         setToZAxis
         setValue
+        setVecW
         slerp
         slerp0
         squad
@@ -99,11 +106,16 @@ class cymel.core.datatypes.quaternion.Quaternion
     .. automethod:: asRollBendHV
     .. automethod:: asRollBendHV2
     .. automethod:: asTransformation
+    .. automethod:: asVecW
     .. automethod:: asX
     .. automethod:: conjugate
     .. automethod:: conjugateIt
+    .. automethod:: div
     .. automethod:: dot
     .. automethod:: exp
+    .. automethod:: fromVecW
+    .. automethod:: idiv
+    .. automethod:: imul
     .. automethod:: inverse
     .. automethod:: invertIt
     .. automethod:: isEquivalent
@@ -114,6 +126,7 @@ class cymel.core.datatypes.quaternion.Quaternion
     .. automethod:: makeRHV2
     .. automethod:: makeRollBendHV
     .. automethod:: makeRollBendHV2
+    .. automethod:: mul
     .. automethod:: negateIt
     .. automethod:: normal
     .. automethod:: normalize
@@ -125,6 +138,7 @@ class cymel.core.datatypes.quaternion.Quaternion
     .. automethod:: setToYAxis
     .. automethod:: setToZAxis
     .. automethod:: setValue
+    .. automethod:: setVecW
     .. automethod:: slerp
     .. automethod:: slerp0
     .. automethod:: squad

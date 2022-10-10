@@ -45,6 +45,7 @@ class cymel.core.cyobjects.plug.Plug
         setCached
         setCaching
         setChannelBox
+        setKey
         setKeyable
         setLocked
         setu
@@ -90,6 +91,7 @@ class cymel.core.cyobjects.plug.Plug
     .. automethod:: setCached
     .. automethod:: setCaching
     .. automethod:: setChannelBox
+    .. automethod:: setKey
     .. automethod:: setKeyable
     .. automethod:: setLocked
     .. automethod:: setu

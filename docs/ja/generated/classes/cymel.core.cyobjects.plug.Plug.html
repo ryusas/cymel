@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.core.cyobjects.plug.Plug &#8212; cymel 0.16.2022072400 ドキュメント</title>
+    <title>class cymel.core.cyobjects.plug.Plug &#8212; cymel 0.17.2022101000 ドキュメント</title>
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.plug.html" title="cymel.core.cyobjects.plug"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.16.2022072400 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.17.2022101000 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.plug.html" accesskey="U">cymel.core.cyobjects.plug</a> &#187;</li> 
       </ul>
@@ -177,22 +177,25 @@
 <tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setChannelBox" title="cymel.core.cyobjects.plug.Plug.setChannelBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setChannelBox</span></code></a>(val[,&nbsp;leaf])</td>
 <td>Keyable でなくてもチャンネルボックスに出すかどうかを設定する。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setKeyable" title="cymel.core.cyobjects.plug.Plug.setKeyable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setKeyable</span></code></a>(val[,&nbsp;leaf])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setKey" title="cymel.core.cyobjects.plug.Plug.setKey"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setKey</span></code></a>(**kwargs)</td>
+<td>キーフレームをセットする。</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setKeyable" title="cymel.core.cyobjects.plug.Plug.setKeyable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setKeyable</span></code></a>(val[,&nbsp;leaf])</td>
 <td>Keyable フラグを設定する。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="cymel.core.cyobjects.plug.Plug.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>([val,&nbsp;leaf])</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="cymel.core.cyobjects.plug.Plug.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>([val,&nbsp;leaf])</td>
 <td>ロック、又はアンロックする。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setu" title="cymel.core.cyobjects.plug.Plug.setu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setu</span></code></a>(val[,&nbsp;safe])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setu" title="cymel.core.cyobjects.plug.Plug.setu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setu</span></code></a>(val[,&nbsp;safe])</td>
 <td>アトリビュート値をUI設定単位でセットする。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.toggle" title="cymel.core.cyobjects.plug.Plug.toggle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toggle</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.toggle" title="cymel.core.cyobjects.plug.Plug.toggle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toggle</span></code></a>()</td>
 <td>アトリビュート値をトグルする。</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unlock" title="cymel.core.cyobjects.plug.Plug.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>([below,&nbsp;undoable])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unlock" title="cymel.core.cyobjects.plug.Plug.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>([below,&nbsp;undoable])</td>
 <td>このプラグと階層上位や、下位（オプション）のプラグをアンロックする。</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unmute" title="cymel.core.cyobjects.plug.Plug.unmute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unmute</span></code></a>(**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unmute" title="cymel.core.cyobjects.plug.Plug.unmute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unmute</span></code></a>(**kwargs)</td>
 <td>ミュート解除する。</td>
 </tr>
 </tbody>
@@ -835,6 +838,12 @@ None や空文字を指定すると、既存の設定を削除する。</td>
 </dd></dl>
 
 <dl class="method">
+<dt id="cymel.core.cyobjects.plug.Plug.setKey">
+<code class="descname">setKey</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setKey" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>キーフレームをセットする。</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="cymel.core.cyobjects.plug.Plug.setKeyable">
 <code class="descname">setKeyable</code><span class="sig-paren">(</span><em>val</em>, <em>leaf=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setKeyable" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Keyable フラグを設定する。</p>
@@ -979,7 +988,7 @@ None や空文字を指定すると、既存の設定を削除する。</td>
         <li class="right" >
           <a href="../cymel.core.cyobjects.plug.html" title="cymel.core.cyobjects.plug"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.16.2022072400 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.17.2022101000 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.plug.html" >cymel.core.cyobjects.plug</a> &#187;</li> 
       </ul>

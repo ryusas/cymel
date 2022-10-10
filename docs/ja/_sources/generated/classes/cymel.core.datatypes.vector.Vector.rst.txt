@@ -55,6 +55,7 @@ class cymel.core.datatypes.vector.Vector
         rotateBy
         rotateTo
         set
+        slerp
         sub
         transformAsNormal
         xform3
@@ -124,6 +125,7 @@ class cymel.core.datatypes.vector.Vector
     .. automethod:: rotateBy
     .. automethod:: rotateTo
     .. automethod:: set
+    .. automethod:: slerp
     .. automethod:: sub
     .. automethod:: transformAsNormal
     .. automethod:: xform3
