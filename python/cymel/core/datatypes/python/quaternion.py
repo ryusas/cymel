@@ -47,6 +47,7 @@ class Quaternion(object):
     - 角度, 回転軸 (`.Vector`)
     - `.EulerRotation`
     - `.Matrix`
+    - `.Vector`
     """
     __slots__ = ('__data',)
     __hash__ = None
@@ -61,6 +62,8 @@ class Quaternion(object):
                 return _newQ(v._EulerRotation__data.asQuaternion(), cls)
             if hasattr(v, '_Matrix__data'):
                 return _newQ(_MX(v._Matrix__data).rotation(True), cls)
+            if hasattr(v, '_Vector__data'):
+                args = v._Vector__data
         elif n >= 2:
             v0 = args[0]
             v1 = args[1]
@@ -223,6 +226,69 @@ class Quaternion(object):
         __idiv__ = __itruediv__
         __rdiv__ = __rtruediv__
 
+    def mul(self, v):
+        u"""
+        4次元ベクトル要素ごとの積を得る。
+
+        :type v: `Quaternion`
+        :param v: もう1方のクォータニオン。
+        :rtype: `Quaternion`
+        """
+        a = self.__data
+        b = v.__data
+        return _newQ(_MQ(a[0] * b[0], a[1] * b[1], a[2] * b[2], a[3] * b[3]))
+
+    def imul(self, v):
+        u"""
+        4次元ベクトル要素ごとの積をセットする。
+
+        :type v: `Quaternion`
+        :param v: もう1方のクォータニオン。
+        :rtype: `Quaternion` (self)
+        """
+        a = self.__data
+        b = v.__data
+        a[0] *= b[0]
+        a[1] *= b[1]
+        a[2] *= b[2]
+        a[3] *= b[3]
+        return self
+
+    def div(self, v, pre=AVOID_ZERO_DIV_PRECISION):
+        u"""
+        4次元ベクトル要素ごとのの商を得る。
+
+        :type v: `Quaternion`
+        :param v: 分母のクォータニオン。
+        :param `float` pre: ゼロ除算を避ける為の許容誤差。
+        :rtype: `Quaternion`
+        """
+        a = self.__data
+        b = v.__data
+        return _newQ(_MQ(
+            a[0] / avoidZeroDiv(b[0], pre),
+            a[1] / avoidZeroDiv(b[1], pre),
+            a[2] / avoidZeroDiv(b[2], pre),
+            a[3] / avoidZeroDiv(b[3], pre),
+        ))
+
+    def idiv(self, v, pre=AVOID_ZERO_DIV_PRECISION):
+        u"""
+        4次元ベクトル要素ごとのの商をセットする。
+
+        :type v: `Quaternion`
+        :param v: 分母のクォータニオン。
+        :param `float` pre: ゼロ除算を避ける為の許容誤差。
+        :rtype: `Vector` (self)
+        """
+        a = self.__data
+        b = v.__data
+        a[0] /= avoidZeroDiv(b[0], pre)
+        a[1] /= avoidZeroDiv(b[1], pre)
+        a[2] /= avoidZeroDiv(b[2], pre)
+        a[3] /= avoidZeroDiv(b[3], pre)
+        return self
+
     if MAYA_VERSION < (2015,):
         def isEquivalent(self, q, tol=_TOLERANCE):
             u"""
@@ -349,28 +415,40 @@ class Quaternion(object):
         - 角度, 回転軸 (`.Vector`)
         - `.EulerRotation`
         - `.Matrix`
+        - `.Vector`
 
         :rtype: `Quaternion` (self)
         """
-        v0 = args[0]
         n = len(args)
         if n == 1:
-            if hasattr(v0, '_Quaternion__data'):
-                self.__data.setValue(v0.__data)
+            v = args[0]
+            if hasattr(v, '_Quaternion__data'):
+                self.__data.setValue(v.__data)
                 return self
-            if hasattr(v0, '_EulerRotation__data'):
-                self.__data.setValue(v0._EulerRotation__data)
+            if hasattr(v, '_EulerRotation__data'):
+                self.__data.setValue(v._EulerRotation__data)
                 return self
-            if hasattr(v0, '_Matrix__data'):
-                _Q_setdata(self, _MX(v0._Matrix__data).rotation(True))
+            if hasattr(v, '_Matrix__data'):
+                _Q_setdata(self, _MX(v._Matrix__data).rotation(True))
+                return self
+            if hasattr(v, '_Vector__data'):
+                d = self.__data
+                s = v._Vector__data
+                d.x = s.x
+                d.y = s.y
+                d.z = s.z
+                d.w = s.w
                 return self
         elif n == 2:
+            v0 = args[0]
             if hasattr(v0, '_Vector__data'):
-                _Q_setdata(self, _MQ(args[1], _MV(v0)))
+                # (axis, angle)
+                self.__data.setValue(_MV(v0), args[1])
                 return self
             v1 = args[1]
             if hasattr(v1, '_Vector__data'):
-                _Q_setdata(self, _MQ(v0, _MV(v1)))
+                # (angle, axis)
+                self.__data.setValue(_MV(v1), v0)
                 return self
         try:
             for i, v in numerate(args):
@@ -430,6 +508,42 @@ class Quaternion(object):
         return _newV(_MP(axis)), angle
 
     asAA = asAxisAngle  #: `asAxisAngle` の別名。
+
+    def asVecW(self):
+        u"""
+        3次元ベクトルとw値を得る。
+
+        :rtype: `.Vector, `float`
+        """
+        q = self.__data
+        return _newV(_MP(q.x, q.y, q.z, 0.)), q.w
+
+    def setVecW(self, vec, w):
+        u"""
+        3次元ベクトルとw値をセットする。
+
+        :type vec: `.Vector`
+        :param vec: 3次元ベクトル
+        :param `float` w: w値
+        :rtype: `Quaternion` (self)
+        """
+        self.__data.x = vec[0]
+        self.__data.y = vec[1]
+        self.__data.z = vec[2]
+        self.__data.w = w
+        return self
+
+    @classmethod
+    def fromVecW(cls, vec, w):
+        u"""
+        3次元ベクトルとw値からクォータニオンを得る。
+
+        :type vec: `.Vector`
+        :param vec: 3次元ベクトル
+        :param `float` w: w値
+        :rtype: `Quaternion`
+        """
+        return _newQ(_MQ(vec.x, vec.y, vec.z, w), cls)
 
     def asEulerRotation(self, order=XYZ, correct=False):
         u"""
