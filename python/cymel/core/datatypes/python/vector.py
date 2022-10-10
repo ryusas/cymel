@@ -9,7 +9,7 @@ from __future__ import print_function
 from ...common import *
 from ...pyutils.immutables import OPTIONAL_MUTATOR_DICT as _MUTATOR_DICT
 import maya.api.OpenMaya as _api2
-from math import sqrt
+from math import sqrt, sin, acos
 
 __all__ = ['Vector', 'V', 'ImmutableVector']
 
@@ -26,7 +26,7 @@ _MP_Zero = _MP.kOrigin
 #------------------------------------------------------------------------------
 class Vector(object):
     u"""
-    3Dベクトルクラス。
+    3次元ベクトルクラス。
 
     座標と方向ベクトルを
     Maya API の :mayaapi2:`MPoint` と :mayaapi2:`MVector`
@@ -843,6 +843,37 @@ class Vector(object):
                 if v < 0.:
                     axis += AXIS_NEG
         return axis if asId else _AXIS_VECTOR_DICT.get(axis)
+
+    @classmethod
+    def slerp(cls, p0, p1, t, spin=0):
+        u"""
+        3次元ベクトルを球面線形補間する。
+
+        :type p0: `Vector`
+        :param p0: 始点。
+        :type p1: `Vector`
+        :param p1: 終点。
+        :param `float` t: 0.0～1.0の補間係数。範囲外も指定可。
+        :param `int` spin:
+            スピン値。
+            デフォルトの0は最短方向、-1は逆方向、
+            さらに+1や-1すると余分に周回する。
+        :rtype: `Vector`
+        """
+        v0 = _MV(p0.__data)
+        v1 = _MV(p1.__data)
+        dot = v0.normal() * v1.normal()
+
+        if 1. - dot < 1e-15:
+            s = 1. - t
+        else:
+            angle = acos(dot)
+            s = 1. / sin(angle)  # 1. / sqrt(1. - dot * dot)
+            ta = t * angle + spin * PI
+            t = s * sin(ta)
+            s *= sin(angle - ta)
+
+        return _newV(p0.__data * s + v1 * t, cls)
 
 V = Vector  #: `Vector` の別名。
 
