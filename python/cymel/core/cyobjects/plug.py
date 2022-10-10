@@ -30,6 +30,8 @@ _animLayer = cmds.animLayer
 _keyframe = cmds.keyframe
 _connectionInfo = cmds.connectionInfo
 _mute = cmds.mute
+_setKeyframe = cmds.setKeyframe
+_undoInfo = cmds.undoInfo
 
 _MFn = api2.MFn
 _MFn_kPairBlend = _MFn.kPairBlend
@@ -123,28 +125,26 @@ class Plug(Plug_c):
 
         # 通常の値の場合は、setAttr コマンドでセットする。
         else:
-            subType = self.subType()
-            typename = self.type()
-            if subType and not typename.startswith(subType):
-                typename += subType
-
             if safe:
                 try:
-                    _setRawValue(self.name_(), typename, val)
+                    _setRawValue(self.name_(), self._unittype(), val)
                 except:
                     # 個々のセット操作をオーバーライド可能なように、きちんと Plug を呼び出す。
-                    if subType:
+                    if self.subType():
                         n = 0
-                        for p, v in zip(self.children(), val):
+                        pvs = zip(self.children(), val)
+                        _undoInfo(ock=True)
+                        for p, v in pvs:
                             try:
                                 p.set(v)
                             except:
                                 n += 1
+                        _undoInfo(cck=True)
                         return n
                     return 1
                 return 0
             else:
-                _setRawValue(self.name_(), typename, val)
+                _setRawValue(self.name_(), self._unittype(), val)
 
     def setu(self, val, safe=False):
         u"""
@@ -184,21 +184,24 @@ class Plug(Plug_c):
             if safe:
                 name = self.name()
                 try:
-                    _setUnitValue(name, self.type(), val)
+                    _setUnitValue(name, self._unittype(), val)
                 except:
                     # 個々のセット操作をオーバーライド可能なように、きちんと Plug を呼び出す。
                     if self.subType():
                         n = 0
-                        for p, v in zip(self.children(), val):
+                        pvs = zip(self.children(), val)
+                        _undoInfo(ock=True)
+                        for p, v in pvs:
                             try:
                                 p.setu(v)
                             except:
                                 n += 1
+                        _undoInfo(cck=True)
                         return n
                     return 1
                 return 0
             else:
-                _setUnitValue(self.name(), self.type(), val)
+                _setUnitValue(self.name(), self._unittype(), val)
 
     def connect(
         self, src,
@@ -386,6 +389,12 @@ class Plug(Plug_c):
         v = not self.get()
         self.set(v)
         return v
+
+    def setKey(self, **kwargs):
+        u"""
+        キーフレームをセットする。
+        """
+        _setKeyframe(self.name(), **kwargs)
 
     def setCaching(self, val, leaf=False):
         u"""
@@ -1629,6 +1638,19 @@ _CMD_SETUVAL_DICT = {
     'double2': _setAttr_vals,
     'double3': _setAttr_vals,
     'double4': _setAttr_vals,
+
+    'float2floatLinear': _setAttr_vals,
+    'float3floatLinear': _setAttr_vals,
+    'double2doubleLinear': _setAttr_vals,
+    'double3doubleLinear': _setAttr_vals,
+    'double4doubleLinear': _setAttr_vals,
+
+    'float2floatAngle': _setAttr_vals,
+    'float3floatAngle': _setAttr_vals,
+    'double2doubleAngle': _setAttr_vals,
+    'double3doubleAngle': _setAttr_vals,
+    'double4doubleAngle': _setAttr_vals,
+
     'reflectance': _setAttr_vals,
     'spectrum': _setAttr_vals,
 

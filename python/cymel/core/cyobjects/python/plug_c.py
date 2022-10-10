@@ -285,11 +285,30 @@ class Plug_c(CyObject):
         u"""
         数値コンパウンド（ double3 等）アトリビュートの要素のタイプ名を得る。
 
+        一般コンパウンドでも数値コンパウンドと同等に扱うべきタイプの場合もそのタイプが返される。
+        たとえば、quatNodes プラグインのクォータニオンアトリビュートは一般コンパウンドだが double となる。
+
         :rtype: `str` or `None`
         """
         self.checkValid()
         fixUnitTypeInfo(self._CyObject__data['typeinfo'])
         return self._CyObject__data['typeinfo'].get('subtype')
+
+    def _unittype(self):
+        u"""
+        内部的に使用される単位情報を含んだ型名を得る。
+
+        通常は `type` と同じだが、
+        数値コンパウンドかそれと同等の一般コンパウンドの場合に、以下の規則で型名と異なる名前になる。
+
+        * `subType` が単位付き数値型の場合、数値コンパウンド名に単位型名を連結した名前になる（例: double3doubleAngle など）。
+        * `subType` が単位無し数値型の場合、数値コンパウンド名になる（例: double3 など）。
+
+        :rtype: `str`
+        """
+        self.checkValid()
+        fixUnitTypeInfo(self._CyObject__data['typeinfo'])
+        return self._CyObject__data['typeinfo'].get('unittype')
 
     def isAffectsAppearance(self):
         u"""
@@ -1607,6 +1626,7 @@ class Plug_c(CyObject):
         :returns: アトリビュート値。
         """
         self.checkValid()
+        # どのみち一般 compound の数値型は通常手段では得られないので unittype ではなく typename としている。
         return mplugGetRawValue(self.__fixedMPlug(), self._CyObject__data['typeinfo']['typename'])
 
     def getu(self):

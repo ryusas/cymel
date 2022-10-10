@@ -38,6 +38,7 @@ if MAYA_VERSION < (2015,):
 
 _MFn = _api2.MFn
 _MFn_kDagNode = _MFn.kDagNode
+_MFn_kNumericAttribute = _MFn.kNumericAttribute
 _2_getAllPathsTo = _api2.MDagPath.getAllPathsTo
 _2_MObjectHandle = _api2.MObjectHandle
 _2_MPlug = _api2.MPlug
@@ -365,8 +366,41 @@ def fixUnitTypeInfo(typeinfo):
             else:
                 typeinfo['subtype'] = m.group(1)
                 typeinfo['unittype'] = typeinfo['typename']
-        else:
-            typeinfo['unittype'] = typeinfo['typename']
+            return
+
+        elif typeinfo['typename'] == 'compound':
+            # 一般 compound だが、数値 compound として扱うべきもののチェック（quatNodes のクォータニオンアトリビュートなど）。
+            num = typeinfo['mfn'].numChildren()
+            if num:
+                childAttr = typeinfo['mfn'].child
+                types = _checkNumericCompoundType(childAttr(0))
+                if types and all(_checkNumericCompoundType(childAttr(i)) == types for i in range(1, num)):
+                    typeinfo['subtype'], main = types
+                    if main:
+                        typeinfo['unittype'] = main + str(num) + typeinfo['subtype']
+                    else:
+                        typeinfo['unittype'] = typeinfo['subtype'] + str(num)
+                    return
+
+        typeinfo['unittype'] = typeinfo['typename']
+
+
+def _checkNumericCompoundType(mattr):
+    apiType = mattr.apiType()
+    if apiType == _MFn_kNumericAttribute:
+        name = _numericAttrTypeName(_2_MFnNumericAttribute(mattr))
+        if name:
+            return (name, None)
+    else:
+        return _APITYPE_UNITTYPE_get(apiType)
+
+_APITYPE_UNITTYPE_get = {
+    _MFn.kDoubleAngleAttribute: ('doubleAngle', 'double'),
+    _MFn.kDoubleLinearAttribute: ('doubleLinear', 'double'),
+    _MFn.kFloatAngleAttribute: ('floatAngle', 'float'),
+    _MFn.kFloatLinearAttribute: ('floatLinear', 'float'),
+    _MFn.kTimeAttribute: ('time', 'double'),
+}.get
 
 
 #def numChildrenOfNumericCompound(typename):
@@ -713,6 +747,8 @@ _MPLUG_GETVAL_DICT.update({
     'double2': mplug_get_nums,
     'double3': mplug_get_nums,
     'double4': mplug_get_nums,
+
+    # どのみち一般 compound の数値型は mplug_get_nums() では得られないので double3doubleAngle などは省略。
 })
 
 _MPLUG_GETUVAL_DICT = dict(_MPLUG_GETVAL_DICT)
