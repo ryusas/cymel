@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.core.cyobjects.shape.Shape &#8212; cymel 0.17.2022101000 ドキュメント</title>
+    <title>class cymel.core.cyobjects.shape.Shape &#8212; cymel 0.18.2023012200 ドキュメント</title>
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.shape.html" title="cymel.core.cyobjects.shape"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.17.2022101000 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.18.2023012200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.shape.html" accesskey="U">cymel.core.cyobjects.shape</a> &#187;</li> 
       </ul>
@@ -100,7 +100,7 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.shape.Shape.createNode" title="cymel.core.cyobjects.shape.Shape.createNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createNode</span></code></a>([ttype])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.shape.Shape.createNode" title="cymel.core.cyobjects.shape.Shape.createNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createNode</span></code></a>([ttype,&nbsp;tparent])</td>
 <td>クラスに関連付けられたタイプのシェイプノードを生成する。</td>
 </tr>
 </tbody>
@@ -115,7 +115,7 @@
 <p class="rubric">Methods Details:</p>
 <dl class="classmethod">
 <dt id="cymel.core.cyobjects.shape.Shape.createNode">
-<em class="property">classmethod </em><code class="descname">createNode</code><span class="sig-paren">(</span><em>ttype='transform'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.shape.Shape.createNode" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">createNode</code><span class="sig-paren">(</span><em>ttype='transform'</em>, <em>tparent=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.shape.Shape.createNode" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>クラスに関連付けられたタイプのシェイプノードを生成する。</p>
 <p>このメソッド自体は生成されたノードの名前（文字列）が返されるが、
 固定引数無しでクラスインスタンスを生成する場合に内部的に呼び出される。</p>
@@ -131,14 +131,16 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>ttype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- parent(またはp)オプションが指定されない場合に
+<li><strong>ttype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- parent(またはp)オプションが指定されない場合に
 シェイプの親として同時生成される
 <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> 系ノードのタイプ名を指定する。</li>
+<li><strong>tparent</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- parent(またはp)オプションが指定されない場合に
+同時生成される transform の親を指定できる。</li>
 <li><strong>kwargs</strong> -- <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/createNode.html">createNode</a> コマンドのその他のオプションを指定可能。</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </td>
 </tr>
 </tbody>
@@ -177,7 +179,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.shape.html" title="cymel.core.cyobjects.shape"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.17.2022101000 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.18.2023012200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.shape.html" >cymel.core.cyobjects.shape</a> &#187;</li> 
       </ul>

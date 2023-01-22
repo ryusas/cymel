@@ -31,7 +31,7 @@ class Shape(nodetypes.parentBasicNodeClass('shape')):
     TYPE_BITS = BIT_DAGNODE | BIT_SHAPE  #: クラスでサポートしているノードの特徴を表す。
 
     @classmethod
-    def createNode(cls, ttype='transform', **kwargs):
+    def createNode(cls, ttype='transform', tparent=None, **kwargs):
         u"""
         クラスに関連付けられたタイプのシェイプノードを生成する。
 
@@ -51,6 +51,9 @@ class Shape(nodetypes.parentBasicNodeClass('shape')):
             parent(またはp)オプションが指定されない場合に
             シェイプの親として同時生成される
             :mayanode:`transform` 系ノードのタイプ名を指定する。
+        :param `str` tparent:
+            parent(またはp)オプションが指定されない場合に
+            同時生成される transform の親を指定できる。
         :param kwargs:
             :mayacmd:`createNode` コマンドのその他のオプションを指定可能。
         :rtype: `str`
@@ -73,7 +76,10 @@ class Shape(nodetypes.parentBasicNodeClass('shape')):
         if not name:
             name = cls.__name__
             name = (typ if typ == name else (name[0].lower() + name[1:])) + '#'
-        name = _createNode(ttype, n=name)
+        if tparent:
+            name = _createNode(ttype, n=name, p=tparent)
+        else:
+            name = _createNode(ttype, n=name)
 
         # transform ノードの子としてシェイプを生成する。
         # ノード生成フックを考慮して、名前はリネームでつける。

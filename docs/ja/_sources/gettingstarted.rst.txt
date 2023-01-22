@@ -30,7 +30,7 @@ cymel の機能は以下の3つを選択してインポートできます。
 
 .. code-block:: python
 
-    from cymel.main import *
+    from cymel.all import *
 
 スタンドアロン Python (mayapy) で cymel をインポートすると、
 `cymel.initmaya` モジュールの働きによって Maya が初期化されます。

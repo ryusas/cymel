@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>cymel入門 &#8212; cymel 0.17.2022101000 ドキュメント</title>
+    <title>cymel入門 &#8212; cymel 0.18.2023012200 ドキュメント</title>
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="whycymel.html" title="なぜ cymel ?"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">cymel 0.17.2022101000 ドキュメント</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">cymel 0.18.2023012200 ドキュメント</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -129,7 +129,7 @@
 <p><a class="reference internal" href="generated/cymel.constants.html#module-cymel.constants" title="cymel.constants"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cymel.constants</span></code></a> は <a class="reference internal" href="generated/cymel.main.html#module-cymel.main" title="cymel.main"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cymel.main</span></code></a> 内にも展開されているため、グローバルスコープを汚すことを嫌う場合はインポートしなくても構いません。</p>
 <p>また、以下のように <a class="reference internal" href="generated/cymel.all.html#module-cymel.all" title="cymel.all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cymel.all</span></code></a> をインポートするだけで、すべてのインポートを一度に行うこともできます。
 上記といくつかの推奨モジュールがインポートされます。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cymel.main</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cymel.all</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>スタンドアロン Python (mayapy) で cymel をインポートすると、
@@ -507,7 +507,7 @@ API では、位置を表すか方向を表すかで2種類を使いわける必
 <p><a class="reference internal" href="generated/classes/cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> は w を持っていますが、それがデフォルトの 1.0 である限り、長さ 3 のシーケンスとして振る舞います。
 よって、4次元ベクトル値としては扱いにくいですが、3次元ベクトル値としては扱いやすいものになっています。</p>
 <p>たとえば、double3型アトリビュートの値に直接セットすることができます。
-ゲットで得られるのは <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> ですが、そこからすぐに <a class="reference internal" href="generated/classes/cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> にすることもできます。</p>
+ゲットで得られるのは <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> ですが、そこからすぐに <a class="reference internal" href="generated/classes/cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> にすることもできます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">V</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
@@ -921,7 +921,7 @@ shear は隠されていますが変更可能です（Maya 2019 から 2020.0 �
         <li class="right" >
           <a href="whycymel.html" title="なぜ cymel ?"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">cymel 0.17.2022101000 ドキュメント</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">cymel 0.18.2023012200 ドキュメント</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

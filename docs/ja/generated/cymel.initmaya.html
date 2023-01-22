@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>cymel.initmaya &#8212; cymel 0.17.2022101000 ドキュメント</title>
+    <title>cymel.initmaya &#8212; cymel 0.18.2023012200 ドキュメント</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="cymel.constants.html" title="cymel.constants"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.17.2022101000 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.18.2023012200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li> 
       </ul>
     </div>
@@ -159,7 +159,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -219,16 +219,16 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>userPrefs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- ユーザープリファレンスに関連するMELを呼び出すかどうか。
+<li><strong>userPrefs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ユーザープリファレンスに関連するMELを呼び出すかどうか。
 plugins=True のときは True になる。</li>
-<li><strong>startup</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- initStartup.mel を呼び出すかどうか。
+<li><strong>startup</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- initStartup.mel を呼び出すかどうか。
 plugins=True のときは True になる。</li>
-<li><strong>plugins</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- <p>プラグインをオートロードするかどうか。</p>
+<li><strong>plugins</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- <p>プラグインをオートロードするかどうか。</p>
 <p>プラグインは、シーンの requires で動的に解決されるし、
 バッチ処理で必要な場合は明示的にロードするようにすべきであり、
 処理負荷も大きいので、デフォルトでは False としている。</p>
 </li>
-<li><strong>namedCommand</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- ネームドコマンドを生成するかどうか。
+<li><strong>namedCommand</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ネームドコマンドを生成するかどうか。
 ホットキーに mel コードを結びつけるための概念であるため、
 UI が無ければ通常は不要なはずだが、処理負荷は大きくはないため、
 pymelに倣いデフォルトは True としてる。</li>
@@ -264,20 +264,20 @@ pymelに倣いデフォルトは True としてる。</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>mels</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- <a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> が True のときに <a class="reference internal" href="#cymel.initmaya.initMels" title="cymel.initmaya.initMels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMels</span></code></a> を呼び出すかどうか。
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>mels</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- <a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> が True のときに <a class="reference internal" href="#cymel.initmaya.initMels" title="cymel.initmaya.initMels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMels</span></code></a> を呼び出すかどうか。
 Maya の設定に依存する処理をしないなら、呼び出さなくても問題はないため、
 デフォルトでは False としている。</td>
 </tr>
 </tbody>
 </table>
 <dl class="docutils">
-<dt>:param <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> plugins</dt>
+<dt>:param <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> plugins</dt>
 <dd><p class="first">プラグインをオートロードするかどうか。</p>
 <p class="last">プラグインは、シーンの requires で動的に解決されるし、
 バッチ処理で必要な場合は明示的にロードするようにすべきであり、
 処理負荷も大きいので、デフォルトでは False としている。</p>
 </dd>
-<dt>:param <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> userSetup</dt>
+<dt>:param <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> userSetup</dt>
 <dd><a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> が True のときに <a class="reference internal" href="#cymel.initmaya.callUserSetupMel" title="cymel.initmaya.callUserSetupMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callUserSetupMel</span></code></a> を呼び出すかどうか。</dd>
 </dl>
 </dd></dl>
@@ -290,7 +290,7 @@ Maya の設定に依存する処理をしないなら、呼び出さなくても
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -319,7 +319,7 @@ Maya の設定に依存する処理をしないなら、呼び出さなくても
         <li class="right" >
           <a href="cymel.constants.html" title="cymel.constants"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.17.2022101000 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.18.2023012200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li> 
       </ul>
     </div>

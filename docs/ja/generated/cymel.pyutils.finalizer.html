@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>cymel.pyutils.finalizer &#8212; cymel 0.17.2022101000 ドキュメント</title>
+    <title>cymel.pyutils.finalizer &#8212; cymel 0.18.2023012200 ドキュメント</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="cymel.utils.utils.html" title="cymel.utils.utils"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.17.2022101000 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.18.2023012200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li> 
       </ul>
     </div>
@@ -84,7 +84,7 @@
 <li>__del__ 中の例外は補足できない。</li>
 <li>インタプリタが終了する時に呼ばれる事は保証されない。</li>
 <li>循環参照がある場合で且つ __del__ が在ると解放されなくなる。
-（循環参照があると <a class="reference external" href="https://docs.python.org/3/library/gc.html#module-gc" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gc</span></code></a> は __del__ を呼び出す適切なタイミングを保証出来なくなる為）</li>
+（循環参照があると <a class="reference external" href="https://docs.python.org/3/library/gc.html#module-gc" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gc</span></code></a> は __del__ を呼び出す適切なタイミングを保証出来なくなる為）</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
@@ -118,7 +118,7 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- 登録時に返されたID。</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 登録時に返されたID。</td>
 </tr>
 </tbody>
 </table>
@@ -138,7 +138,7 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
 </td>
 </tr>
 </tbody>
@@ -155,14 +155,14 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
 <li><strong>obj</strong> -- 対象のオブジェクト。</li>
-<li><strong>logger</strong> -- ログ用に <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> を受け取れる任意の実行可能オブジェクト。
+<li><strong>logger</strong> -- ログ用に <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> を受け取れる任意の実行可能オブジェクト。
 省略時は print される。</li>
-<li><strong>maxChars</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- ログ出力される repr の文字数がこの数を超える場合に
+<li><strong>maxChars</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- ログ出力される repr の文字数がこの数を超える場合に
 メッセージを調整する。ゼロの場合はその判定をしない。</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
+<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
 </td>
 </tr>
 </tbody>
@@ -192,7 +192,7 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
         <li class="right" >
           <a href="cymel.utils.utils.html" title="cymel.utils.utils"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.17.2022101000 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.18.2023012200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li> 
       </ul>
     </div>
