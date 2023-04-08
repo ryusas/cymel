@@ -12,7 +12,10 @@ initmaya.initialize()
 import sys
 import re
 from numbers import Number
-from collections import Sequence, Iterable, Callable
+try:
+    from collections import Sequence, Iterable, Callable
+except:
+    from collections.abc import Sequence, Iterable, Callable
 #from collections import Container, Hashable, Iterable, Sequence, Mapping, Callable
 from functools import partial
 
