@@ -12,9 +12,11 @@ initmaya.initialize()
 import sys
 import re
 from numbers import Number
-from collections import Sequence, Iterable, Callable
-#from collections import Container, Hashable, Iterable, Sequence, Mapping, Callable
 from functools import partial
+try:
+    from collections.abc import Sequence, Iterable, Callable
+except ImportError:
+    from collections import Sequence, Iterable, Callable
 
 import maya.cmds as cmds
 
