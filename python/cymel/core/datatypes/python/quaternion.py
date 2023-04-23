@@ -770,6 +770,16 @@ class Quaternion(object):
         """
         return _newQ(self.__data.log())
 
+    def safelog(self):
+        u"""
+        絶対値が π/2 を超えない対数クォータニオンを得る。
+
+        w < 0 の場合に符号反転したうえで `log` が得られる。
+
+        :rtype: `Quaternion`
+        """
+        return _newQ((-self.__data if self.__data.w < 0. else self.__data).log())
+
     def exp(self):
         u"""
         対数クォータニオンからクォータニオンを得る。。
@@ -777,6 +787,24 @@ class Quaternion(object):
         :rtype: `Quaternion`
         """
         return _newQ(self.__data.exp())
+
+    def length(self):
+        u"""
+        クォータニオンの絶対値を得る。
+
+        :rtype: `float`
+        """
+        d = self.__data
+        return sqrt(d[0] * d[0] + d[1] * d[1] + d[2] * d[2] + d[3] * d[3])
+
+    def lengthSq(self):
+        u"""
+        クォータニオンの絶対値の2乗を得る。
+
+        :rtype: `float`
+        """
+        d = self.__data
+        return d[0] * d[0] + d[1] * d[1] + d[2] * d[2] + d[3] * d[3]
 
     def dot(self, q):
         u"""

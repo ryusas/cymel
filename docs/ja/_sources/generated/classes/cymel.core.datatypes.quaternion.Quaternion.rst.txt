@@ -49,6 +49,8 @@ class cymel.core.datatypes.quaternion.Quaternion
         isEquivalent
         isIdentity
         isSignedEquivalent
+        length
+        lengthSq
         log
         makeRHV
         makeRHV2
@@ -59,6 +61,7 @@ class cymel.core.datatypes.quaternion.Quaternion
         normal
         normalize
         normalizeIt
+        safelog
         set
         setAngle
         setToIdentity
@@ -121,6 +124,8 @@ class cymel.core.datatypes.quaternion.Quaternion
     .. automethod:: isEquivalent
     .. automethod:: isIdentity
     .. automethod:: isSignedEquivalent
+    .. automethod:: length
+    .. automethod:: lengthSq
     .. automethod:: log
     .. automethod:: makeRHV
     .. automethod:: makeRHV2
@@ -131,6 +136,7 @@ class cymel.core.datatypes.quaternion.Quaternion
     .. automethod:: normal
     .. automethod:: normalize
     .. automethod:: normalizeIt
+    .. automethod:: safelog
     .. automethod:: set
     .. automethod:: setAngle
     .. automethod:: setToIdentity
