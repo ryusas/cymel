@@ -1,26 +1,23 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<html lang="ja">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>cymel.pyutils.pyutils &#8212; cymel 0.19.2023042300 ドキュメント</title>
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel.pyutils.pyutils &#8212; cymel 0.20.2023090200 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
     <link rel="next" title="class cymel.pyutils.pyutils.Singleton" href="classes/cymel.pyutils.pyutils.Singleton.html" />
-    <link rel="prev" title="class cymel.pyutils.ordereddict.CleanOrderedDict" href="classes/cymel.pyutils.ordereddict.CleanOrderedDict.html" /> 
+    <link rel="prev" title="cymel.pyutils.ordereddict" href="cymel.pyutils.ordereddict.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>ナビゲーション</h3>
@@ -35,268 +32,246 @@
           <a href="classes/cymel.pyutils.pyutils.Singleton.html" title="class cymel.pyutils.pyutils.Singleton"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
-          <a href="classes/cymel.pyutils.ordereddict.CleanOrderedDict.html" title="class cymel.pyutils.ordereddict.CleanOrderedDict"
+          <a href="cymel.pyutils.ordereddict.html" title="cymel.pyutils.ordereddict"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.pyutils.pyutils</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h4>前のトピックへ</h4>
-  <p class="topless"><a href="classes/cymel.pyutils.ordereddict.CleanOrderedDict.html"
-                        title="前の章へ">class cymel.pyutils.ordereddict.CleanOrderedDict</a></p>
-  <h4>次のトピックへ</h4>
-  <p class="topless"><a href="classes/cymel.pyutils.pyutils.Singleton.html"
-                        title="次の章へ">class cymel.pyutils.pyutils.Singleton</a></p>
-  <div role="note" aria-label="source link">
-    <h3>このページ</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/generated/cymel.pyutils.pyutils.rst.txt"
-            rel="nofollow">ソースコードを表示</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>クイック検索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="検索" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-cymel.pyutils.pyutils">
-<span id="cymel-pyutils-pyutils"></span><h1>cymel.pyutils.pyutils<a class="headerlink" href="#module-cymel.pyutils.pyutils" title="このヘッドラインへのパーマリンク">¶</a></h1>
+  <section id="module-cymel.pyutils.pyutils">
+<span id="cymel-pyutils-pyutils"></span><h1>cymel.pyutils.pyutils<a class="headerlink" href="#module-cymel.pyutils.pyutils" title="この見出しへのパーマリンク">¶</a></h1>
 <p>Mayaに依存しない諸機能。</p>
 <p class="rubric">Classes:</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="classes/cymel.pyutils.pyutils.Singleton.html#cymel.pyutils.pyutils.Singleton" title="cymel.pyutils.pyutils.Singleton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Singleton</span></code></a></td>
-<td>シングルトンクラスを作る為のメタクラス。</td>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="classes/cymel.pyutils.pyutils.Singleton.html#cymel.pyutils.pyutils.Singleton" title="cymel.pyutils.pyutils.Singleton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Singleton</span></code></a></p></td>
+<td><p>シングルトンクラスを作る為のメタクラス。</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Functions:</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.pyutils.pyutils.assembleCodeToCallFunction" title="cymel.pyutils.pyutils.assembleCodeToCallFunction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assembleCodeToCallFunction</span></code></a>(name,&nbsp;*args,&nbsp;**kwargs)</td>
-<td>関数呼び出し用のコード文字列を生成する。</td>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.assembleCodeToCallFunction" title="cymel.pyutils.pyutils.assembleCodeToCallFunction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assembleCodeToCallFunction</span></code></a>(name, *args, **kwargs)</p></td>
+<td><p>関数呼び出し用のコード文字列を生成する。</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.pyutils.pyutils.avoidZeroDiv" title="cymel.pyutils.pyutils.avoidZeroDiv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">avoidZeroDiv</span></code></a>(v[,&nbsp;pre])</td>
-<td>Maya を模倣したゼロ割を防ぐ為の分母を得る。</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.avoidZeroDiv" title="cymel.pyutils.pyutils.avoidZeroDiv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">avoidZeroDiv</span></code></a>(v[, pre])</p></td>
+<td><p>Maya を模倣したゼロ割を防ぐ為の分母を得る。</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.pyutils.pyutils.boundAngle" title="cymel.pyutils.pyutils.boundAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">boundAngle</span></code></a>(a)</td>
-<td>角度を±πの範囲におさめる。</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.boundAngle" title="cymel.pyutils.pyutils.boundAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">boundAngle</span></code></a>(a)</p></td>
+<td><p>角度を±πの範囲におさめる。</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.pyutils.pyutils.convIntToBaseN" title="cymel.pyutils.pyutils.convIntToBaseN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convIntToBaseN</span></code></a>(i[,&nbsp;chars])</td>
-<td>整数を N 進数表記の文字列に変換する。</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.convIntToBaseN" title="cymel.pyutils.pyutils.convIntToBaseN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convIntToBaseN</span></code></a>(i[, chars])</p></td>
+<td><p>整数を N 進数表記の文字列に変換する。</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.pyutils.pyutils.donothing" title="cymel.pyutils.pyutils.donothing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">donothing</span></code></a>(*a)</td>
-<td>何もしない。</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.donothing" title="cymel.pyutils.pyutils.donothing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">donothing</span></code></a>(*a)</p></td>
+<td><p>何もしない。</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.pyutils.pyutils.getTempFilename" title="cymel.pyutils.pyutils.getTempFilename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTempFilename</span></code></a>([suffix,&nbsp;prefix,&nbsp;dir,&nbsp;n,&nbsp;chars])</td>
-<td>任意に使えるテンポラリファイル名をフルパスで得る。</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.execfile" title="cymel.pyutils.pyutils.execfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">execfile</span></code></a>(fname[, globals, locals])</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.pyutils.pyutils.gettrue" title="cymel.pyutils.pyutils.gettrue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gettrue</span></code></a>(*a)</td>
-<td>常に真。</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.fround" title="cymel.pyutils.pyutils.fround"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fround</span></code></a>(f[, ndigits])</p></td>
+<td><p>常にfloat型を返すround。ただし、py2は四捨五入、py3は偶数への丸め(bankers' rounding)という違いはある。</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.pyutils.pyutils.incrementName" title="cymel.pyutils.pyutils.incrementName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">incrementName</span></code></a>(name)</td>
-<td>名前の末尾の数字をインクリメントする。</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.getTempFilename" title="cymel.pyutils.pyutils.getTempFilename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTempFilename</span></code></a>([suffix, prefix, dir, n, chars])</p></td>
+<td><p>任意に使えるテンポラリファイル名をフルパスで得る。</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.pyutils.pyutils.insertEnvPath" title="cymel.pyutils.pyutils.insertEnvPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insertEnvPath</span></code></a>(path,&nbsp;name[,&nbsp;index,&nbsp;noCheck,&nbsp;...])</td>
-<td>様々なパス環境変数にパスを追加する。</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.gettrue" title="cymel.pyutils.pyutils.gettrue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gettrue</span></code></a>(*a)</p></td>
+<td><p>常に真。</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.pyutils.pyutils.insertSysPath" title="cymel.pyutils.pyutils.insertSysPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insertSysPath</span></code></a>(path[,&nbsp;index,&nbsp;noCheck])</td>
-<td><a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.path" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sys.path</span></code></a> にパスを追加する。</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.incrementName" title="cymel.pyutils.pyutils.incrementName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">incrementName</span></code></a>(name)</p></td>
+<td><p>名前の末尾の数字をインクリメントする。</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.pyutils.pyutils.iterTreeBreadthFirst" title="cymel.pyutils.pyutils.iterTreeBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterTreeBreadthFirst</span></code></a>(nodes,&nbsp;proc)</td>
-<td>木を幅優先反復する。</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.insertEnvPath" title="cymel.pyutils.pyutils.insertEnvPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insertEnvPath</span></code></a>(path, name[, index, noCheck, ...])</p></td>
+<td><p>様々なパス環境変数にパスを追加する。</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.pyutils.pyutils.iterTreeDepthFirst" title="cymel.pyutils.pyutils.iterTreeDepthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterTreeDepthFirst</span></code></a>(nodes,&nbsp;proc)</td>
-<td>木を深さ優先反復する。</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.insertSysPath" title="cymel.pyutils.pyutils.insertSysPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insertSysPath</span></code></a>(path[, index, noCheck])</p></td>
+<td><p><cite>sys.path</cite> にパスを追加する。</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.pyutils.pyutils.parentClasses" title="cymel.pyutils.pyutils.parentClasses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parentClasses</span></code></a>(cls)</td>
-<td>親クラスのリストを得る。</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.iterTreeBreadthFirst" title="cymel.pyutils.pyutils.iterTreeBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterTreeBreadthFirst</span></code></a>(nodes, proc)</p></td>
+<td><p>木を幅優先反復する。</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.pyutils.pyutils.round" title="cymel.pyutils.pyutils.round"><code class="xref py py-obj docutils literal notranslate"><span class="pre">round</span></code></a>(f[,&nbsp;ndigits])</td>
-<td>py3 標準の round 。ndigits がデフォルト(None)だと <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> 型を返す。ただし、py2は四捨五入、py3は偶数への丸め(bankers' rounding)という違いはある。</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.iterTreeDepthFirst" title="cymel.pyutils.pyutils.iterTreeDepthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterTreeDepthFirst</span></code></a>(nodes, proc)</p></td>
+<td><p>木を深さ優先反復する。</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.pyutils.pyutils.ucToStrList" title="cymel.pyutils.pyutils.ucToStrList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ucToStrList</span></code></a>(xx)</td>
-<td><code class="xref py py-obj docutils literal notranslate"><span class="pre">unicode</span></code> の可能性のある <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> をすべて <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> にする。</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.parentClasses" title="cymel.pyutils.pyutils.parentClasses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parentClasses</span></code></a>(cls)</p></td>
+<td><p>親クラスのリストを得る。</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.pyutils.pyutils.with_metaclass" title="cymel.pyutils.pyutils.with_metaclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">with_metaclass</span></code></a>(meta,&nbsp;*bases)</td>
-<td>Function from jinja2/_compat.py.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.pyutils.pyutils.ucToStrList" title="cymel.pyutils.pyutils.ucToStrList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ucToStrList</span></code></a>(xx)</p></td>
+<td><p>何もしない。</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Aliases:</p>
-<dl class="data">
-<dt id="cymel.pyutils.pyutils.dict_get_items">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">dict_get_items</code><em class="property"> = &lt;function &lt;lambda&gt;&gt;</em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_get_items" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> から items リストを得る。</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.dict_get_items">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">dict_get_items</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_get_items" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>dict</cite> から items リストを得る。</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="cymel.pyutils.pyutils.dict_get_keys">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">dict_get_keys</code><em class="property"> = &lt;function &lt;lambda&gt;&gt;</em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_get_keys" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> から keys リストを得る。</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.dict_get_keys">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">dict_get_keys</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_get_keys" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>dict</cite> から keys リストを得る。</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="cymel.pyutils.pyutils.dict_get_values">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">dict_get_values</code><em class="property"> = &lt;function &lt;lambda&gt;&gt;</em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_get_values" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> から values リストを得る。</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.dict_get_values">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">dict_get_values</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_get_values" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>dict</cite> から values リストを得る。</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="cymel.pyutils.pyutils.dict_items">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">dict_items</code><em class="property"> = &lt;function &lt;lambda&gt;&gt;</em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_items" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> から dict_items を得る。</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.dict_items">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">dict_items</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_items" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>dict</cite> から dict_items を得る。</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="cymel.pyutils.pyutils.dict_iteritems">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">dict_iteritems</code><em class="property"> = &lt;function &lt;lambda&gt;&gt;</em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_iteritems" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> から items イテレータを得る。</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.dict_iteritems">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">dict_iteritems</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_iteritems" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>dict</cite> から items イテレータを得る。</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="cymel.pyutils.pyutils.dict_iterkeys">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">dict_iterkeys</code><em class="property"> = &lt;function &lt;lambda&gt;&gt;</em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_iterkeys" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> から keys イテレータを得る。</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.dict_iterkeys">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">dict_iterkeys</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_iterkeys" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>dict</cite> から keys イテレータを得る。</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="cymel.pyutils.pyutils.dict_itervalues">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">dict_itervalues</code><em class="property"> = &lt;function &lt;lambda&gt;&gt;</em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_itervalues" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> から values イテレータを得る。</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.dict_itervalues">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">dict_itervalues</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_itervalues" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>dict</cite> から values イテレータを得る。</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="cymel.pyutils.pyutils.dict_keys">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">dict_keys</code><em class="property"> = &lt;function &lt;lambda&gt;&gt;</em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_keys" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> から dict_keys を得る。</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.dict_keys">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">dict_keys</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_keys" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>dict</cite> から dict_keys を得る。</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="cymel.pyutils.pyutils.dict_values">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">dict_values</code><em class="property"> = &lt;function &lt;lambda&gt;&gt;</em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_values" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> から dict_values を得る。</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.dict_values">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">dict_values</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.dict_values" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>dict</cite> から dict_values を得る。</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.lfilter">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">lfilter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.lfilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>list を返す filter (Python 3 には無い)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.lmap">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">lmap</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.lmap" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>list を返す map (Python 3 には無い)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.lrange">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">lrange</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.lrange" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>list を返す range (Python 2 の標準)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.lzip">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">lzip</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.lzip" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>list を返す zip (Python 3 には無い)</p>
 </dd></dl>
 
 <p class="rubric">Constants:</p>
-<dl class="data">
-<dt id="cymel.pyutils.pyutils.IS_WINDOWS">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">IS_WINDOWS</code><em class="property"> = True</em><a class="headerlink" href="#cymel.pyutils.pyutils.IS_WINDOWS" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.IS_WINDOWS">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">IS_WINDOWS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.IS_WINDOWS" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>OS が Windows かどうか。</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="cymel.pyutils.pyutils.MAXINT32">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">MAXINT32</code><em class="property"> = 2147483647</em><a class="headerlink" href="#cymel.pyutils.pyutils.MAXINT32" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.MAXINT32">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">MAXINT32</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2147483647</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.MAXINT32" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>32bit符号付き整数の最大値。Maya の sys.maxint はこれ（py3 で廃止）。</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="cymel.pyutils.pyutils.MAXINT64">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">MAXINT64</code><em class="property"> = 9223372036854775807L</em><a class="headerlink" href="#cymel.pyutils.pyutils.MAXINT64" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.MAXINT64">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">MAXINT64</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9223372036854775807</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.MAXINT64" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>64bit符号付き整数の最大値。Maya の sys.maxsize はこれ。</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="cymel.pyutils.pyutils.USER_DOC_PATH">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">USER_DOC_PATH</code><em class="property"> = 'C:\\Users\\ryusukes\\Documents'</em><a class="headerlink" href="#cymel.pyutils.pyutils.USER_DOC_PATH" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.USER_DOC_PATH">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">USER_DOC_PATH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'C:\\Users\\ryusukes\\Documents'</span></em><a class="headerlink" href="#cymel.pyutils.pyutils.USER_DOC_PATH" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ユーザードキュメントディレクトリ。Unix 系ではホーム、Windows ではマイドキュメントとしている。</p>
 </dd></dl>
 
 <p class="rubric">Functions Details:</p>
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.assembleCodeToCallFunction">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">assembleCodeToCallFunction</code><span class="sig-paren">(</span><em>name</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.assembleCodeToCallFunction" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.assembleCodeToCallFunction">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">assembleCodeToCallFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.assembleCodeToCallFunction" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>関数呼び出し用のコード文字列を生成する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 関数名。</li>
-<li><strong>args</strong> (<em>iterable</em>) -- 引数リスト。</li>
-<li><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a>) -- キーワード引数辞書。</li>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 関数名。</p></li>
+<li><p><strong>args</strong> (<em>iterable</em>) -- 引数リスト。</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a>) -- キーワード引数辞書。</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>str</cite></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.avoidZeroDiv">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">avoidZeroDiv</code><span class="sig-paren">(</span><em>v</em>, <em>pre=1e-13</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.avoidZeroDiv" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.avoidZeroDiv">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">avoidZeroDiv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-13</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.avoidZeroDiv" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Maya を模倣したゼロ割を防ぐ為の分母を得る。</p>
 <p>Maya では scale=0 を設定しても matrix が特異値とならないように
 0.0 は 1.e-12 くらいでリミットして保持するようなので、それを意識
 したリミットを掛けた値を返す。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>v</strong> -- チェックする値。</li>
-<li><strong>pre</strong> -- 最小値。デフォルトは <code class="xref py py-obj docutils literal notranslate"><span class="pre">AVOID_ZERO_DIV_PRECISION</span></code> 。</li>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> -- チェックする値。</p></li>
+<li><p><strong>pre</strong> -- 最小値。デフォルトは <cite>AVOID_ZERO_DIV_PRECISION</cite> 。</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last">リミットを適用した値。</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p>リミットを適用した値。</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.boundAngle">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">boundAngle</code><span class="sig-paren">(</span><em>a</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.boundAngle" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.boundAngle">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">boundAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.boundAngle" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>角度を±πの範囲におさめる。</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.convIntToBaseN">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">convIntToBaseN</code><span class="sig-paren">(</span><em>i</em>, <em>chars='0123456789abcdef'</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.convIntToBaseN" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.convIntToBaseN">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">convIntToBaseN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0123456789abcdef'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.convIntToBaseN" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>整数を N 進数表記の文字列に変換する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>chars</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 桁の文字を 0～N-1 まで並べた文字列。
-デフォルトは小文字の16進数。</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
-</tr>
-</tbody>
-</table>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">cymel.main</span> <span class="k">as</span> <span class="nn">cm</span>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>chars</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 桁の文字を 0～N-1 まで並べた文字列。
+デフォルトは小文字の16進数。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>str</cite></p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">cymel.main</span> <span class="k">as</span> <span class="nn">cm</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">convIntToBaseN</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
 <span class="go">&#39;ff&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">convIntToBaseN</span><span class="p">(</span><span class="mi">4096</span><span class="p">)</span>
@@ -305,47 +280,54 @@
 </div>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.donothing">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">donothing</code><span class="sig-paren">(</span><em>*a</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.donothing" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.donothing">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">donothing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.donothing" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>何もしない。</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.getTempFilename">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">getTempFilename</code><span class="sig-paren">(</span><em>suffix=''</em>, <em>prefix='tmp'</em>, <em>dir=None</em>, <em>n=5</em>, <em>chars='abcdefghijklmnopqrstuvwxyz0123456789'</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.getTempFilename" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>任意に使えるテンポラリファイル名をフルパスで得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>prefix</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ファイル名に付ける任意の接頭辞を指定する。</li>
-<li><strong>suffix</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ファイル名に付ける任意の接尾辞を指定する。</li>
-<li><strong>dir</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ファイルを生成するディレクトリパスを指定する。</li>
-<li><strong>n</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- ランダムに決まる部分の文字数を指定する。</li>
-<li><strong>chars</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ランダムに決まる部分に使用される文字。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.execfile">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">execfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">globals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.execfile" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.fround">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">fround</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndigits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.fround" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>常にfloat型を返すround。ただし、py2は四捨五入、py3は偶数への丸め(bankers' rounding)という違いはある。</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.gettrue">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">gettrue</code><span class="sig-paren">(</span><em>*a</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.gettrue" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.getTempFilename">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">getTempFilename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'tmp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'abcdefghijklmnopqrstuvwxyz0123456789'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.getTempFilename" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>任意に使えるテンポラリファイル名をフルパスで得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prefix</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ファイル名に付ける任意の接頭辞を指定する。</p></li>
+<li><p><strong>suffix</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ファイル名に付ける任意の接尾辞を指定する。</p></li>
+<li><p><strong>dir</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ファイルを生成するディレクトリパスを指定する。</p></li>
+<li><p><strong>n</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- ランダムに決まる部分の文字数を指定する。</p></li>
+<li><p><strong>chars</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ランダムに決まる部分に使用される文字。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>str</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.gettrue">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">gettrue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.gettrue" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>常に真。</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.incrementName">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">incrementName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.incrementName" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.incrementName">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">incrementName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.incrementName" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>名前の末尾の数字をインクリメントする。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">cymel.main</span> <span class="k">as</span> <span class="nn">cm</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">cymel.main</span> <span class="k">as</span> <span class="nn">cm</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">incrementName</span><span class="p">(</span><span class="s1">&#39;hoge&#39;</span><span class="p">)</span>
 <span class="go">&#39;hoge1&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">incrementName</span><span class="p">(</span><span class="s1">&#39;hoge1&#39;</span><span class="p">)</span>
@@ -354,149 +336,193 @@
 </div>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.insertEnvPath">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">insertEnvPath</code><span class="sig-paren">(</span><em>path</em>, <em>name</em>, <em>index=-1</em>, <em>noCheck=False</em>, <em>noUpdate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.insertEnvPath" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.insertEnvPath">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">insertEnvPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noCheck</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noUpdate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.insertEnvPath" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>様々なパス環境変数にパスを追加する。</p>
 <p>パスが存在せず追加されなかったら 0 、
 既にリストに含まれていたら 1 、
 新規に追加されたなら 2 が返される。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 追加するパス。</li>
-<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 環境変数名。</li>
-<li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 追加する位置。負数であれば末尾に追加、
-そうでなければこの位置の手前に挿入される。</li>
-<li><strong>noCheck</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- パスの存在の有無をチェックしない。
-デフォルトでは、実際に存在しないパスは追加されない。</li>
-<li><strong>noUpdate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- パスが既に含まれていたら更新しない。
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 追加するパス。</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 環境変数名。</p></li>
+<li><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 追加する位置。負数であれば末尾に追加、
+そうでなければこの位置の手前に挿入される。</p></li>
+<li><p><strong>noCheck</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- パスの存在の有無をチェックしない。
+デフォルトでは、実際に存在しないパスは追加されない。</p></li>
+<li><p><strong>noUpdate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- パスが既に含まれていたら更新しない。
 デフォルトでは、既にリストに含まれているパスなら、
-一旦それを削除してから追加し直される。</li>
+一旦それを削除してから追加し直される。</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>int</cite></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.insertSysPath">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">insertSysPath</code><span class="sig-paren">(</span><em>path</em>, <em>index=-1</em>, <em>noCheck=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.insertSysPath" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.path" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sys.path</span></code></a> にパスを追加する。</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.insertSysPath">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">insertSysPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noCheck</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.insertSysPath" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>sys.path</cite> にパスを追加する。</p>
 <p>パスが存在せず追加されなかったら 0 、
 既にリストに含まれていて追加し直されたら 1 、
 新規に追加されたなら 2 が返される。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 追加するパス。</li>
-<li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 追加する位置。負数であれば末尾に追加、
-そうでなければこの位置の手前に挿入される。</li>
-<li><strong>noCheck</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- パスの存在の有無をチェックしない。
-デフォルトでは、実際に存在しないパスは追加されない。</li>
-<li><strong>noUpdate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- パスが既に含まれていたら更新しない。
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 追加するパス。</p></li>
+<li><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 追加する位置。負数であれば末尾に追加、
+そうでなければこの位置の手前に挿入される。</p></li>
+<li><p><strong>noCheck</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- パスの存在の有無をチェックしない。
+デフォルトでは、実際に存在しないパスは追加されない。</p></li>
+<li><p><strong>noUpdate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- パスが既に含まれていたら更新しない。
 デフォルトでは、既にリストに含まれているパスなら、
-一旦それを削除してから追加し直される。</li>
+一旦それを削除してから追加し直される。</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>int</cite></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.iterTreeBreadthFirst">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">iterTreeBreadthFirst</code><span class="sig-paren">(</span><em>nodes</em>, <em>proc</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.iterTreeBreadthFirst" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.iterTreeBreadthFirst">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">iterTreeBreadthFirst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.iterTreeBreadthFirst" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>木を幅優先反復する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>nodes</strong> (<em>iterable</em>) -- 基点ノードリスト。</li>
-<li><strong>proc</strong> (<em>callable</em>) -- 子ノード群を得るプロシージャ。</li>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodes</strong> (<em>iterable</em>) -- 基点ノードリスト。</p></li>
+<li><p><strong>proc</strong> (<em>callable</em>) -- 子ノード群を得るプロシージャ。</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition warning">
-<p class="first admonition-title">警告</p>
-<p class="last">循環していると無限ループになる。</p>
+<p class="admonition-title">警告</p>
+<p>循環していると無限ループになる。</p>
 </div>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.iterTreeDepthFirst">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">iterTreeDepthFirst</code><span class="sig-paren">(</span><em>nodes</em>, <em>proc</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.iterTreeDepthFirst" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.iterTreeDepthFirst">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">iterTreeDepthFirst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.iterTreeDepthFirst" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>木を深さ優先反復する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>nodes</strong> (<em>iterable</em>) -- 基点ノードリスト。</li>
-<li><strong>proc</strong> (<em>callable</em>) -- 子ノード群を得るプロシージャ。</li>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodes</strong> (<em>iterable</em>) -- 基点ノードリスト。</p></li>
+<li><p><strong>proc</strong> (<em>callable</em>) -- 子ノード群を得るプロシージャ。</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition warning">
-<p class="first admonition-title">警告</p>
-<p class="last">循環していると無限ループになる。</p>
+<p class="admonition-title">警告</p>
+<p>循環していると無限ループになる。</p>
 </div>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.parentClasses">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">parentClasses</code><span class="sig-paren">(</span><em>cls</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.parentClasses" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.parentClasses">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">parentClasses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.parentClasses" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>親クラスのリストを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a>) -- クラス。</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cls</strong> (<cite>type</cite>) -- クラス。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>list</cite></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.round">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">round</code><span class="sig-paren">(</span><em>f</em>, <em>ndigits=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.round" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>py3 標準の round 。ndigits がデフォルト(None)だと <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> 型を返す。ただし、py2は四捨五入、py3は偶数への丸め(bankers' rounding)という違いはある。</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.pyutils.ucToStrList">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.pyutils.</span></span><span class="sig-name descname"><span class="pre">ucToStrList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.ucToStrList" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>何もしない。</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.ucToStrList">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">ucToStrList</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.ucToStrList" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">unicode</span></code> の可能性のある <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> をすべて <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> にする。</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="cymel.pyutils.pyutils.with_metaclass">
-<code class="descclassname">cymel.pyutils.pyutils.</code><code class="descname">with_metaclass</code><span class="sig-paren">(</span><em>meta</em>, <em>*bases</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.pyutils.with_metaclass" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Function from jinja2/_compat.py. License: BSD.</p>
-</dd></dl>
-
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel.pyutils.pyutils</a><ul>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.dict_get_items"><code class="docutils literal notranslate"><span class="pre">dict_get_items</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.dict_get_keys"><code class="docutils literal notranslate"><span class="pre">dict_get_keys</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.dict_get_values"><code class="docutils literal notranslate"><span class="pre">dict_get_values</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.dict_items"><code class="docutils literal notranslate"><span class="pre">dict_items</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.dict_iteritems"><code class="docutils literal notranslate"><span class="pre">dict_iteritems</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.dict_iterkeys"><code class="docutils literal notranslate"><span class="pre">dict_iterkeys</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.dict_itervalues"><code class="docutils literal notranslate"><span class="pre">dict_itervalues</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.dict_keys"><code class="docutils literal notranslate"><span class="pre">dict_keys</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.dict_values"><code class="docutils literal notranslate"><span class="pre">dict_values</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.lfilter"><code class="docutils literal notranslate"><span class="pre">lfilter</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.lmap"><code class="docutils literal notranslate"><span class="pre">lmap</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.lrange"><code class="docutils literal notranslate"><span class="pre">lrange</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.lzip"><code class="docutils literal notranslate"><span class="pre">lzip</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.IS_WINDOWS"><code class="docutils literal notranslate"><span class="pre">IS_WINDOWS</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.MAXINT32"><code class="docutils literal notranslate"><span class="pre">MAXINT32</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.MAXINT64"><code class="docutils literal notranslate"><span class="pre">MAXINT64</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.USER_DOC_PATH"><code class="docutils literal notranslate"><span class="pre">USER_DOC_PATH</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.assembleCodeToCallFunction"><code class="docutils literal notranslate"><span class="pre">assembleCodeToCallFunction()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.avoidZeroDiv"><code class="docutils literal notranslate"><span class="pre">avoidZeroDiv()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.boundAngle"><code class="docutils literal notranslate"><span class="pre">boundAngle()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.convIntToBaseN"><code class="docutils literal notranslate"><span class="pre">convIntToBaseN()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.donothing"><code class="docutils literal notranslate"><span class="pre">donothing()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.execfile"><code class="docutils literal notranslate"><span class="pre">execfile()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.fround"><code class="docutils literal notranslate"><span class="pre">fround()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.getTempFilename"><code class="docutils literal notranslate"><span class="pre">getTempFilename()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.gettrue"><code class="docutils literal notranslate"><span class="pre">gettrue()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.incrementName"><code class="docutils literal notranslate"><span class="pre">incrementName()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.insertEnvPath"><code class="docutils literal notranslate"><span class="pre">insertEnvPath()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.insertSysPath"><code class="docutils literal notranslate"><span class="pre">insertSysPath()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.iterTreeBreadthFirst"><code class="docutils literal notranslate"><span class="pre">iterTreeBreadthFirst()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.iterTreeDepthFirst"><code class="docutils literal notranslate"><span class="pre">iterTreeDepthFirst()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.parentClasses"><code class="docutils literal notranslate"><span class="pre">parentClasses()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.pyutils.ucToStrList"><code class="docutils literal notranslate"><span class="pre">ucToStrList()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="cymel.pyutils.ordereddict.html"
+                          title="前の章へ">cymel.pyutils.ordereddict</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="classes/cymel.pyutils.pyutils.Singleton.html"
+                          title="次の章へ">class cymel.pyutils.pyutils.Singleton</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.pyutils.pyutils.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -514,15 +540,16 @@
           <a href="classes/cymel.pyutils.pyutils.Singleton.html" title="class cymel.pyutils.pyutils.Singleton"
              >次へ</a> |</li>
         <li class="right" >
-          <a href="classes/cymel.pyutils.ordereddict.CleanOrderedDict.html" title="class cymel.pyutils.ordereddict.CleanOrderedDict"
+          <a href="cymel.pyutils.ordereddict.html" title="cymel.pyutils.ordereddict"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.pyutils.pyutils</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, ryusas.
-      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 で生成しました。
+        &#169; Copyright 2020-2023, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
     </div>
   </body>
 </html>

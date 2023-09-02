@@ -1,4 +1,4 @@
-cymel.core.datatypes.vector
+﻿cymel.core.datatypes.vector
 ===========================
 
 .. automodule:: cymel.core.datatypes.vector

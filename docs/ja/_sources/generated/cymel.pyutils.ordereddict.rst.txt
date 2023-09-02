@@ -1,17 +1,9 @@
-cymel.pyutils.ordereddict
+﻿cymel.pyutils.ordereddict
 =========================
 
 .. automodule:: cymel.pyutils.ordereddict
 
 
-
-    .. rubric:: Classes:
-
-    .. autosummary::
-        :toctree: classes
-        :nosignatures:
-    
-        CleanOrderedDict
 
 
 

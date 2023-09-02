@@ -1,22 +1,19 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<html lang="ja">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>cymel.utils.files &#8212; cymel 0.19.2023042300 ドキュメント</title>
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel.utils.files &#8212; cymel 0.20.2023090200 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
     <link rel="next" title="cymel.utils.melgvar" href="cymel.utils.melgvar.html" />
@@ -37,18 +34,171 @@
         <li class="right" >
           <a href="classes/cymel.ui.window.Window.html" title="class cymel.ui.window.Window"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.utils.files</a></li> 
       </ul>
-    </div>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-cymel.utils.files">
+<span id="cymel-utils-files"></span><h1>cymel.utils.files<a class="headerlink" href="#module-cymel.utils.files" title="この見出しへのパーマリンク">¶</a></h1>
+<p>Mayaファイル関連。</p>
+<p class="rubric">Functions:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.files.exportSceneFile" title="cymel.utils.files.exportSceneFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exportSceneFile</span></code></a>(fname[, sel, all, ftype])</p></td>
+<td><p>シーンファイルをエクスポートする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.files.importSceneFile" title="cymel.utils.files.importSceneFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">importSceneFile</span></code></a>(fname[, namespace, prefix])</p></td>
+<td><p>シーンファイルをインポートする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.files.openSceneFile" title="cymel.utils.files.openSceneFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openSceneFile</span></code></a>(fname[, addRecent])</p></td>
+<td><p>シーンファイルをオープンする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.files.referenceSceneFile" title="cymel.utils.files.referenceSceneFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">referenceSceneFile</span></code></a>(fname[, namespace, prefix])</p></td>
+<td><p>シーンファイルをリファレンスする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.files.saveSceneFile" title="cymel.utils.files.saveSceneFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">saveSceneFile</span></code></a>([fname, ftype, addRecent])</p></td>
+<td><p>シーンファイルをセーブする。</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Functions Details:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.files.exportSceneFile">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.files.</span></span><span class="sig-name descname"><span class="pre">exportSceneFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ftype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.files.exportSceneFile" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>シーンファイルをエクスポートする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- シーンファイル名。
+ディレクトリが存在しない場合は自動的に生成される。</p></li>
+<li><p><strong>sel</strong> -- all=False の場合に出力するノードの名前やリスト。
+省略すると選択されているものがエクスポートされる。</p></li>
+<li><p><strong>all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- シーン全体をエクスポートするかどうか。</p></li>
+<li><p><strong>ftype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ファイルタイプ名。拡張子から推測できる場合は省略可能。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>str</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.files.importSceneFile">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.files.</span></span><span class="sig-name descname"><span class="pre">importSceneFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.files.importSceneFile" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>シーンファイルをインポートする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- シーンファイル名。</p></li>
+<li><p><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- インポートしたノードにネームスペースを付加する場合に指定する。
+文字列ではない真値を指定すると、ファイル名から自動決定される。</p></li>
+<li><p><strong>prefix</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- インポートしたノードにプレフィックスを付加する場合に指定する。
+文字列ではない真値を指定すると、ファイル名から自動決定される。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>str</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.files.openSceneFile">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.files.</span></span><span class="sig-name descname"><span class="pre">openSceneFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addRecent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.files.openSceneFile" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>シーンファイルをオープンする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- シーンファイル名。</p></li>
+<li><p><strong>addRecent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- Recent Files に追加するかどうか。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>str</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.files.referenceSceneFile">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.files.</span></span><span class="sig-name descname"><span class="pre">referenceSceneFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.files.referenceSceneFile" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>シーンファイルをリファレンスする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- シーンファイル名。</p></li>
+<li><p><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- リファレンスしたノードにネームスペースを付加する場合に指定する。
+文字列ではない真値を指定すると、ファイル名から自動決定される。</p></li>
+<li><p><strong>prefix</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- リファレンスしたノードにプレフィックスを付加する場合に指定する。
+文字列ではない真値を指定すると、ファイル名から自動決定される。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>str</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.files.saveSceneFile">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.files.</span></span><span class="sig-name descname"><span class="pre">saveSceneFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ftype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addRecent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.files.saveSceneFile" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>シーンファイルをセーブする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- シーンファイル名。新規やリネームでなければ省略可能。
+ディレクトリが存在しない場合は自動的に生成される。</p></li>
+<li><p><strong>ftype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ファイルタイプ名。拡張子から推測できる場合は省略可能。</p></li>
+<li><p><strong>addRecent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- Recent Files に追加するかどうか。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>str</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>前のトピックへ</h4>
-  <p class="topless"><a href="classes/cymel.ui.window.Window.html"
-                        title="前の章へ">class cymel.ui.window.Window</a></p>
-  <h4>次のトピックへ</h4>
-  <p class="topless"><a href="cymel.utils.melgvar.html"
-                        title="次の章へ">cymel.utils.melgvar</a></p>
+  <div>
+    <h3><a href="../index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel.utils.files</a><ul>
+<li><a class="reference internal" href="#cymel.utils.files.exportSceneFile"><code class="docutils literal notranslate"><span class="pre">exportSceneFile()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.files.importSceneFile"><code class="docutils literal notranslate"><span class="pre">importSceneFile()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.files.openSceneFile"><code class="docutils literal notranslate"><span class="pre">openSceneFile()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.files.referenceSceneFile"><code class="docutils literal notranslate"><span class="pre">referenceSceneFile()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.files.saveSceneFile"><code class="docutils literal notranslate"><span class="pre">saveSceneFile()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="classes/cymel.ui.window.Window.html"
+                          title="前の章へ">class cymel.ui.window.Window</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="cymel.utils.melgvar.html"
+                          title="次の章へ">cymel.utils.melgvar</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>このページ</h3>
     <ul class="this-page-menu">
@@ -57,174 +207,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>クイック検索</h3>
+  <h3 id="searchlabel">クイック検索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="検索" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="module-cymel.utils.files">
-<span id="cymel-utils-files"></span><h1>cymel.utils.files<a class="headerlink" href="#module-cymel.utils.files" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Mayaファイル関連。</p>
-<p class="rubric">Functions:</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.utils.files.exportSceneFile" title="cymel.utils.files.exportSceneFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exportSceneFile</span></code></a>(fname[,&nbsp;sel,&nbsp;all,&nbsp;ftype])</td>
-<td>シーンファイルをエクスポートする。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.utils.files.importSceneFile" title="cymel.utils.files.importSceneFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">importSceneFile</span></code></a>(fname[,&nbsp;namespace,&nbsp;prefix])</td>
-<td>シーンファイルをインポートする。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.utils.files.openSceneFile" title="cymel.utils.files.openSceneFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openSceneFile</span></code></a>(fname[,&nbsp;addRecent])</td>
-<td>シーンファイルをオープンする。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.utils.files.referenceSceneFile" title="cymel.utils.files.referenceSceneFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">referenceSceneFile</span></code></a>(fname[,&nbsp;namespace,&nbsp;prefix])</td>
-<td>シーンファイルをリファレンスする。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.utils.files.saveSceneFile" title="cymel.utils.files.saveSceneFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">saveSceneFile</span></code></a>([fname,&nbsp;ftype,&nbsp;addRecent])</td>
-<td>シーンファイルをセーブする。</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Functions Details:</p>
-<dl class="function">
-<dt id="cymel.utils.files.exportSceneFile">
-<code class="descclassname">cymel.utils.files.</code><code class="descname">exportSceneFile</code><span class="sig-paren">(</span><em>fname</em>, <em>sel=None</em>, <em>all=False</em>, <em>ftype=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.files.exportSceneFile" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>シーンファイルをエクスポートする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- シーンファイル名。
-ディレクトリが存在しない場合は自動的に生成される。</li>
-<li><strong>sel</strong> -- all=False の場合に出力するノードの名前やリスト。
-省略すると選択されているものがエクスポートされる。</li>
-<li><strong>all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- シーン全体をエクスポートするかどうか。</li>
-<li><strong>ftype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ファイルタイプ名。拡張子から推測できる場合は省略可能。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="cymel.utils.files.importSceneFile">
-<code class="descclassname">cymel.utils.files.</code><code class="descname">importSceneFile</code><span class="sig-paren">(</span><em>fname</em>, <em>namespace=None</em>, <em>prefix=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.files.importSceneFile" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>シーンファイルをインポートする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- シーンファイル名。</li>
-<li><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- インポートしたノードにネームスペースを付加する場合に指定する。
-文字列ではない真値を指定すると、ファイル名から自動決定される。</li>
-<li><strong>prefix</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- インポートしたノードにプレフィックスを付加する場合に指定する。
-文字列ではない真値を指定すると、ファイル名から自動決定される。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="cymel.utils.files.openSceneFile">
-<code class="descclassname">cymel.utils.files.</code><code class="descname">openSceneFile</code><span class="sig-paren">(</span><em>fname</em>, <em>addRecent=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.files.openSceneFile" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>シーンファイルをオープンする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- シーンファイル名。</li>
-<li><strong>addRecent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- Recent Files に追加するかどうか。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="cymel.utils.files.referenceSceneFile">
-<code class="descclassname">cymel.utils.files.</code><code class="descname">referenceSceneFile</code><span class="sig-paren">(</span><em>fname</em>, <em>namespace=None</em>, <em>prefix=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.files.referenceSceneFile" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>シーンファイルをリファレンスする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- シーンファイル名。</li>
-<li><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- リファレンスしたノードにネームスペースを付加する場合に指定する。
-文字列ではない真値を指定すると、ファイル名から自動決定される。</li>
-<li><strong>prefix</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- リファレンスしたノードにプレフィックスを付加する場合に指定する。
-文字列ではない真値を指定すると、ファイル名から自動決定される。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="cymel.utils.files.saveSceneFile">
-<code class="descclassname">cymel.utils.files.</code><code class="descname">saveSceneFile</code><span class="sig-paren">(</span><em>fname=None</em>, <em>ftype=None</em>, <em>addRecent=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.files.saveSceneFile" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>シーンファイルをセーブする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- シーンファイル名。新規やリネームでなければ省略可能。
-ディレクトリが存在しない場合は自動的に生成される。</li>
-<li><strong>ftype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ファイルタイプ名。拡張子から推測できる場合は省略可能。</li>
-<li><strong>addRecent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- Recent Files に追加するかどうか。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-
-
-          </div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -244,13 +235,14 @@
         <li class="right" >
           <a href="classes/cymel.ui.window.Window.html" title="class cymel.ui.window.Window"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.utils.files</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, ryusas.
-      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 で生成しました。
+        &#169; Copyright 2020-2023, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
     </div>
   </body>
 </html>

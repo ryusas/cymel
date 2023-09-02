@@ -1,4 +1,4 @@
-cymel.core.cyobjects.objectref
+﻿cymel.core.cyobjects.objectref
 ==============================
 
 .. automodule:: cymel.core.cyobjects.objectref

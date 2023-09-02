@@ -1,4 +1,4 @@
-cymel.utils.utils
+﻿cymel.utils.utils
 =================
 
 .. automodule:: cymel.utils.utils

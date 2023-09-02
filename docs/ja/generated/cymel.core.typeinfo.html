@@ -1,22 +1,19 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<html lang="ja">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>cymel.core.typeinfo &#8212; cymel 0.19.2023042300 ドキュメント</title>
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel.core.typeinfo &#8212; cymel 0.20.2023090200 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
     <link rel="next" title="cymel.core.typeregistry" href="cymel.core.typeregistry.html" />
@@ -37,144 +34,102 @@
         <li class="right" >
           <a href="classes/cymel.core.cyobjects.transform_c.TransformMixin.html" title="class cymel.core.cyobjects.transform_c.TransformMixin"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.core.typeinfo</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h4>前のトピックへ</h4>
-  <p class="topless"><a href="classes/cymel.core.cyobjects.transform_c.TransformMixin.html"
-                        title="前の章へ">class cymel.core.cyobjects.transform_c.TransformMixin</a></p>
-  <h4>次のトピックへ</h4>
-  <p class="topless"><a href="cymel.core.typeregistry.html"
-                        title="次の章へ">cymel.core.typeregistry</a></p>
-  <div role="note" aria-label="source link">
-    <h3>このページ</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/generated/cymel.core.typeinfo.rst.txt"
-            rel="nofollow">ソースコードを表示</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>クイック検索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="検索" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-cymel.core.typeinfo">
-<span id="cymel-core-typeinfo"></span><h1>cymel.core.typeinfo<a class="headerlink" href="#module-cymel.core.typeinfo" title="このヘッドラインへのパーマリンク">¶</a></h1>
+  <section id="module-cymel.core.typeinfo">
+<span id="cymel-core-typeinfo"></span><h1>cymel.core.typeinfo<a class="headerlink" href="#module-cymel.core.typeinfo" title="この見出しへのパーマリンク">¶</a></h1>
 <p>ノードタイプ情報。</p>
 <p class="rubric">Functions:</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.typeinfo.dumpNodetypeTree" title="cymel.core.typeinfo.dumpNodetypeTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dumpNodetypeTree</span></code></a>([nodetype,&nbsp;writer,&nbsp;indent])</td>
-<td>ノードタイプツリーをダンプする。</td>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.typeinfo.dumpNodetypeTree" title="cymel.core.typeinfo.dumpNodetypeTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dumpNodetypeTree</span></code></a>([nodetype, writer, indent])</p></td>
+<td><p>ノードタイプツリーをダンプする。</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.typeinfo.getInheritedNodeTypes" title="cymel.core.typeinfo.getInheritedNodeTypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInheritedNodeTypes</span></code></a>(nodetype[,&nbsp;node,&nbsp;asSet])</td>
-<td>ノードタイプが継承しているタイプ情報を得る。</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.typeinfo.getInheritedNodeTypes" title="cymel.core.typeinfo.getInheritedNodeTypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInheritedNodeTypes</span></code></a>(nodetype[, node, asSet])</p></td>
+<td><p>ノードタイプが継承しているタイプ情報を得る。</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.typeinfo.getNodetypeTreeDict" title="cymel.core.typeinfo.getNodetypeTreeDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getNodetypeTreeDict</span></code></a>([nodetype])</td>
-<td>ノードタイプツリーの辞書を得る。</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.typeinfo.getNodetypeTreeDict" title="cymel.core.typeinfo.getNodetypeTreeDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getNodetypeTreeDict</span></code></a>([nodetype])</p></td>
+<td><p>ノードタイプツリーの辞書を得る。</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.typeinfo.isAbstractType" title="cymel.core.typeinfo.isAbstractType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAbstractType</span></code></a>(nodetype[,&nbsp;node])</td>
-<td>ノードタイプが抽象タイプかどうかを得る。</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.typeinfo.isAbstractType" title="cymel.core.typeinfo.isAbstractType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAbstractType</span></code></a>(nodetype[, node])</p></td>
+<td><p>ノードタイプが抽象タイプかどうかを得る。</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.typeinfo.isDerivedNodeType" title="cymel.core.typeinfo.isDerivedNodeType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDerivedNodeType</span></code></a>(nodetype,&nbsp;basetype[,&nbsp;node])</td>
-<td>ノードタイプが別のノードタイプと同じか派生型かどうかを得る。</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.typeinfo.isDerivedNodeType" title="cymel.core.typeinfo.isDerivedNodeType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDerivedNodeType</span></code></a>(nodetype, basetype[, node])</p></td>
+<td><p>ノードタイプが別のノードタイプと同じか派生型かどうかを得る。</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.typeinfo.iterNodetypeTree" title="cymel.core.typeinfo.iterNodetypeTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterNodetypeTree</span></code></a>([nodetype,&nbsp;breadthFirst])</td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.typeinfo.iterNodetypeTree" title="cymel.core.typeinfo.iterNodetypeTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterNodetypeTree</span></code></a>([nodetype, breadthFirst])</p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Functions Details:</p>
-<dl class="function">
-<dt id="cymel.core.typeinfo.dumpNodetypeTree">
-<code class="descclassname">cymel.core.typeinfo.</code><code class="descname">dumpNodetypeTree</code><span class="sig-paren">(</span><em>nodetype='node'</em>, <em>writer=None</em>, <em>indent=2</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.dumpNodetypeTree" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.core.typeinfo.dumpNodetypeTree">
+<span class="sig-prename descclassname"><span class="pre">cymel.core.typeinfo.</span></span><span class="sig-name descname"><span class="pre">dumpNodetypeTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'node'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">writer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.dumpNodetypeTree" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ノードタイプツリーをダンプする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 起点。これ以下をダンプする。</li>
-<li><strong>writer</strong> (<em>callable</em>) -- ライター。</li>
-<li><strong>indent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- インデント数。</li>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 起点。これ以下をダンプする。</p></li>
+<li><p><strong>writer</strong> (<em>callable</em>) -- ライター。</p></li>
+<li><p><strong>indent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- インデント数。</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.core.typeinfo.getInheritedNodeTypes">
-<code class="descclassname">cymel.core.typeinfo.</code><code class="descname">getInheritedNodeTypes</code><span class="sig-paren">(</span><em>nodetype</em>, <em>node=None</em>, <em>asSet=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.getInheritedNodeTypes" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.core.typeinfo.getInheritedNodeTypes">
+<span class="sig-prename descclassname"><span class="pre">cymel.core.typeinfo.</span></span><span class="sig-name descname"><span class="pre">getInheritedNodeTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asSet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.getInheritedNodeTypes" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ノードタイプが継承しているタイプ情報を得る。</p>
 <p>キャッシュされているので <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/nodeType.html">nodeType</a> コマンドなどで
 調べるより、大幅に高速である。</p>
 <p>指定タイプ名を含む継承タイプ名全てを得られる。
-<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> の場合は、昇順に並んでいる。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ノードタイプ名。</li>
-<li><strong>node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 実際のノードを特定する名前。
-必須ではないが、指定すると新規に情報作成される場合にやや高速。</li>
-<li><strong>asSet</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 結果を <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">frozenset</span></code></a> で得る。</li>
+<cite>tuple</cite> の場合は、昇順に並んでいる。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ノードタイプ名。</p></li>
+<li><p><strong>node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 実際のノードを特定する名前。
+必須ではないが、指定すると新規に情報作成される場合にやや高速。</p></li>
+<li><p><strong>asSet</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 結果を <cite>frozenset</cite> で得る。</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">frozenset</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>tuple</cite> or <cite>frozenset</cite></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.core.typeinfo.getNodetypeTreeDict">
-<code class="descclassname">cymel.core.typeinfo.</code><code class="descname">getNodetypeTreeDict</code><span class="sig-paren">(</span><em>nodetype='node'</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.getNodetypeTreeDict" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.core.typeinfo.getNodetypeTreeDict">
+<span class="sig-prename descclassname"><span class="pre">cymel.core.typeinfo.</span></span><span class="sig-name descname"><span class="pre">getNodetypeTreeDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'node'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.getNodetypeTreeDict" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ノードタイプツリーの辞書を得る。</p>
 <p>キーは「ノードタイプ名」、
-値は「子タイプ名の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a> 」
+値は「子タイプ名の <cite>set</cite> 」
 となる辞書を得られる。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 起点。これ以下の情報を生成する。</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 起点。これ以下の情報を生成する。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>dict</cite></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.core.typeinfo.isAbstractType">
-<code class="descclassname">cymel.core.typeinfo.</code><code class="descname">isAbstractType</code><span class="sig-paren">(</span><em>nodetype</em>, <em>node=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.isAbstractType" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.core.typeinfo.isAbstractType">
+<span class="sig-prename descclassname"><span class="pre">cymel.core.typeinfo.</span></span><span class="sig-name descname"><span class="pre">isAbstractType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.isAbstractType" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ノードタイプが抽象タイプかどうかを得る。</p>
 <p>キャッシュされているので <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/allNodeTypes.html">allNodeTypes</a> コマンドなどで
 調べるより、大幅に高速である。</p>
@@ -184,58 +139,97 @@
 2 はメタクラス（プラグインインタフェースなどのために存在するが、
 実際は本当のノードタイプではない）
 の意味となる。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ノードタイプ名。</li>
-<li><strong>node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 実際のノードを特定する名前。
-必須ではないが、指定すると新規に情報作成される場合にやや高速。</li>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ノードタイプ名。</p></li>
+<li><p><strong>node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 実際のノードを特定する名前。
+必須ではないが、指定すると新規に情報作成される場合にやや高速。</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>int</cite></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.core.typeinfo.isDerivedNodeType">
-<code class="descclassname">cymel.core.typeinfo.</code><code class="descname">isDerivedNodeType</code><span class="sig-paren">(</span><em>nodetype</em>, <em>basetype</em>, <em>node=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.isDerivedNodeType" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.core.typeinfo.isDerivedNodeType">
+<span class="sig-prename descclassname"><span class="pre">cymel.core.typeinfo.</span></span><span class="sig-name descname"><span class="pre">isDerivedNodeType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basetype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.isDerivedNodeType" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ノードタイプが別のノードタイプと同じか派生型かどうかを得る。</p>
 <p>キャッシュされているので <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/nodeType.html">nodeType</a> コマンドなどで
 調べるより、大幅に高速である。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ノードタイプ名。</li>
-<li><strong>basetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- チェックするベースタイプ名。</li>
-<li><strong>node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 実際のノードを特定する名前。
-必須ではないが、指定すると新規に情報作成される場合にやや高速。</li>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ノードタイプ名。</p></li>
+<li><p><strong>basetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- チェックするベースタイプ名。</p></li>
+<li><p><strong>node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 実際のノードを特定する名前。
+必須ではないが、指定すると新規に情報作成される場合にやや高速。</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>bool</cite></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="cymel.core.typeinfo.iterNodetypeTree">
-<code class="descclassname">cymel.core.typeinfo.</code><code class="descname">iterNodetypeTree</code><span class="sig-paren">(</span><em>nodetype='node'</em>, <em>breadthFirst=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.iterNodetypeTree" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.core.typeinfo.iterNodetypeTree">
+<span class="sig-prename descclassname"><span class="pre">cymel.core.typeinfo.</span></span><span class="sig-name descname"><span class="pre">iterNodetypeTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'node'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">breadthFirst</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.iterNodetypeTree" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel.core.typeinfo</a><ul>
+<li><a class="reference internal" href="#cymel.core.typeinfo.dumpNodetypeTree"><code class="docutils literal notranslate"><span class="pre">dumpNodetypeTree()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.typeinfo.getInheritedNodeTypes"><code class="docutils literal notranslate"><span class="pre">getInheritedNodeTypes()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.typeinfo.getNodetypeTreeDict"><code class="docutils literal notranslate"><span class="pre">getNodetypeTreeDict()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.typeinfo.isAbstractType"><code class="docutils literal notranslate"><span class="pre">isAbstractType()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.typeinfo.isDerivedNodeType"><code class="docutils literal notranslate"><span class="pre">isDerivedNodeType()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.typeinfo.iterNodetypeTree"><code class="docutils literal notranslate"><span class="pre">iterNodetypeTree()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="classes/cymel.core.cyobjects.transform_c.TransformMixin.html"
+                          title="前の章へ">class cymel.core.cyobjects.transform_c.TransformMixin</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="cymel.core.typeregistry.html"
+                          title="次の章へ">cymel.core.typeregistry</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.core.typeinfo.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -255,13 +249,14 @@
         <li class="right" >
           <a href="classes/cymel.core.cyobjects.transform_c.TransformMixin.html" title="class cymel.core.cyobjects.transform_c.TransformMixin"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.core.typeinfo</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, ryusas.
-      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 で生成しました。
+        &#169; Copyright 2020-2023, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
     </div>
   </body>
 </html>

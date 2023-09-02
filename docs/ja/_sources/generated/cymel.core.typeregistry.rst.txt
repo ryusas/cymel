@@ -1,4 +1,4 @@
-cymel.core.typeregistry
+﻿cymel.core.typeregistry
 =======================
 
 .. automodule:: cymel.core.typeregistry

@@ -1,4 +1,4 @@
-cymel.core.datatypes.matrix
+﻿cymel.core.datatypes.matrix
 ===========================
 
 .. automodule:: cymel.core.datatypes.matrix

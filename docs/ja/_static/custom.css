@@ -39,3 +39,7 @@ h3 {
     border-bottom: 1px solid #AAA;
 }
 
+table.align-default {
+    margin-left: 1em;
+}
+

@@ -1,4 +1,4 @@
-cymel.ui.window
+﻿cymel.ui.window
 ===============
 
 .. automodule:: cymel.ui.window

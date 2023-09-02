@@ -1,4 +1,4 @@
-cymel.ui.menu
+﻿cymel.ui.menu
 =============
 
 .. automodule:: cymel.ui.menu

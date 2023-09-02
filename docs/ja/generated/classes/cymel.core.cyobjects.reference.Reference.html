@@ -1,22 +1,19 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<html lang="ja">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.core.cyobjects.reference.Reference &#8212; cymel 0.19.2023042300 ドキュメント</title>
-    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.cyobjects.reference.Reference &#8212; cymel 0.20.2023090200 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="cymel.core.cyobjects.shape" href="../cymel.core.cyobjects.shape.html" />
@@ -37,19 +34,529 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.reference.html" title="cymel.core.cyobjects.reference"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.reference.html" accesskey="U">cymel.core.cyobjects.reference</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.reference.html" accesskey="U">cymel.core.cyobjects.reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.reference.Reference</a></li> 
       </ul>
-    </div>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-cyobjects-reference-reference">
+<h1>class cymel.core.cyobjects.reference.Reference<a class="headerlink" href="#class-cymel-core-cyobjects-reference-reference" title="この見出しへのパーマリンク">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-1c2f6f9970e0c9111b4c00cb34fb0a4926e57d81.png" alt="Inheritance diagram of Reference" usemap="#inheritancef0d2d1ae36" class="inheritance graphviz" /></div>
+<map id="inheritancef0d2d1ae36" name="inheritancef0d2d1ae36">
+<area shape="rect" id="node1" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" target="_top" title="Mayaラッパーオブジェクトの抽象基底クラス。" alt="" coords="6,5,78,29"/>
+<area shape="rect" id="node3" href="cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c" target="_top" title="`.Node` クラスでサポートする機能の中核。" alt="" coords="6,44,78,68"/>
+<area shape="rect" id="node2" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" target="_top" title=":mayanode:`node` ノードタイプラッパークラス。" alt="" coords="6,83,78,107"/>
+<area shape="rect" id="node4" href="#cymel.core.cyobjects.reference.Reference" target="_top" title=":mayanode:`reference` ノードタイプラッパークラス。" alt="" coords="5,121,79,145"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.reference.</span></span><span class="sig-name descname"><span class="pre">Reference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a></p>
+<p><a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/reference.html">reference</a> ノードタイプラッパークラス。</p>
+<p>固定引数無しでのクラスインスタンス生成時のノード生成をサポート。</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNS" title="cymel.core.cyobjects.reference.Reference.associatedNS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">associatedNS</span></code></a>()</p></td>
+<td><p><cite>associatedNamespace</cite> の別名。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNamespace" title="cymel.core.cyobjects.reference.Reference.associatedNamespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">associatedNamespace</span></code></a>()</p></td>
+<td><p>関連付けられたネームスペースを得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.byFilename" title="cymel.core.cyobjects.reference.Reference.byFilename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">byFilename</span></code></a>(fname[, all])</p></td>
+<td><p>解決済みのファイル名からリファレンスノードを得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.children" title="cymel.core.cyobjects.reference.Reference.children"><code class="xref py py-obj docutils literal notranslate"><span class="pre">children</span></code></a>()</p></td>
+<td><p>子リファレンスノードのリストを得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.containsNode" title="cymel.core.cyobjects.reference.Reference.containsNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">containsNode</span></code></a>(node)</p></td>
+<td><p>指定ノードを含んでいるかどうか。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.containsNodeExactly" title="cymel.core.cyobjects.reference.Reference.containsNodeExactly"><code class="xref py py-obj docutils literal notranslate"><span class="pre">containsNodeExactly</span></code></a>(node)</p></td>
+<td><p>指定ノードを直接含んでいるかどうか。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editAttrs" title="cymel.core.cyobjects.reference.Reference.editAttrs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">editAttrs</span></code></a>([command, fail, success])</p></td>
+<td><p>編集コマンドのアトリビュート名リストを得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editNodes" title="cymel.core.cyobjects.reference.Reference.editNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">editNodes</span></code></a>([command, fail, success])</p></td>
+<td><p>編集コマンドのノードリストを得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editPlugs" title="cymel.core.cyobjects.reference.Reference.editPlugs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">editPlugs</span></code></a>([command, fail, success])</p></td>
+<td><p>編集コマンドのプラグリストを得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editStrings" title="cymel.core.cyobjects.reference.Reference.editStrings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">editStrings</span></code></a>([command, fail, success, namespace])</p></td>
+<td><p>編集コマンドリストを得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.fileName" title="cymel.core.cyobjects.reference.Reference.fileName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fileName</span></code></a>([unresolved, withoutPath, ...])</p></td>
+<td><p><cite>filename</cite> の別名。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.filename" title="cymel.core.cyobjects.reference.Reference.filename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filename</span></code></a>([unresolved, withoutPath, ...])</p></td>
+<td><p>ファイル名を得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.importReference" title="cymel.core.cyobjects.reference.Reference.importReference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">importReference</span></code></a>()</p></td>
+<td><p>リファレンスをインポートする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isExportEditsFile" title="cymel.core.cyobjects.reference.Reference.isExportEditsFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isExportEditsFile</span></code></a>()</p></td>
+<td><p>リファレンス編集ファイル (editMA や editMB) かどうか。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isLoaded" title="cymel.core.cyobjects.reference.Reference.isLoaded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isLoaded</span></code></a>()</p></td>
+<td><p>リファレンスがロードされているかどうか。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isLocked" title="cymel.core.cyobjects.reference.Reference.isLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isLocked</span></code></a>()</p></td>
+<td><p>ロックされているかどうか。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isReferenceLocked" title="cymel.core.cyobjects.reference.Reference.isReferenceLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isReferenceLocked</span></code></a>()</p></td>
+<td><p>リファレンスがロックされているかどうか。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isRoot" title="cymel.core.cyobjects.reference.Reference.isRoot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRoot</span></code></a>()</p></td>
+<td><p>ルートリファレンスノードかどうか。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.iterBreadthFirst" title="cymel.core.cyobjects.reference.Reference.iterBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterBreadthFirst</span></code></a>()</p></td>
+<td><p>リファレンス階層を幅優先反復する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.iterDepthFirst" title="cymel.core.cyobjects.reference.Reference.iterDepthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterDepthFirst</span></code></a>()</p></td>
+<td><p>リファレンス階層を深さ優先反復する。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.load" title="cymel.core.cyobjects.reference.Reference.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>()</p></td>
+<td><p>ロードする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.lockReference" title="cymel.core.cyobjects.reference.Reference.lockReference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lockReference</span></code></a>([val])</p></td>
+<td><p>リファレンスをロック、又はアンロックする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.nodes" title="cymel.core.cyobjects.reference.Reference.nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodes</span></code></a>()</p></td>
+<td><p>含まれているノードのリストを得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.parent" title="cymel.core.cyobjects.reference.Reference.parent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></a>()</p></td>
+<td><p>親リファレンスノードを得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.referenceNode" title="cymel.core.cyobjects.reference.Reference.referenceNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">referenceNode</span></code></a>()</p></td>
+<td><p><cite>parent</cite> の別名。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.removeReference" title="cymel.core.cyobjects.reference.Reference.removeReference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeReference</span></code></a>()</p></td>
+<td><p>リファレンスを削除する。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.root" title="cymel.core.cyobjects.reference.Reference.root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">root</span></code></a>()</p></td>
+<td><p>ルートリファレンスノードを得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.unload" title="cymel.core.cyobjects.reference.Reference.unload"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unload</span></code></a>()</p></td>
+<td><p>アンロードする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.unlockReference" title="cymel.core.cyobjects.reference.Reference.unlockReference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlockReference</span></code></a>()</p></td>
+<td><p>リファレンスをアンロックする。</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.associatedNS">
+<span class="sig-name descname"><span class="pre">associatedNS</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.associatedNS" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>associatedNamespace</cite> の別名。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.associatedNamespace">
+<span class="sig-name descname"><span class="pre">associatedNamespace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.associatedNamespace" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>関連付けられたネームスペースを得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>.Namespace</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.byFilename">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">byFilename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.byFilename" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>解決済みのファイル名からリファレンスノードを得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 解決済みのファイル名。</p></li>
+<li><p><strong>all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- コピー番号なしのファイル名を指定して、
+それに対応する全てのリストを得る。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Referemce</cite> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.children">
+<span class="sig-name descname"><span class="pre">children</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.children" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>子リファレンスノードのリストを得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>list</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.containsNode">
+<span class="sig-name descname"><span class="pre">containsNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.containsNode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定ノードを含んでいるかどうか。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>node</strong> (<cite>.Node</cite>) -- チェックするノード。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>bool</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.containsNodeExactly">
+<span class="sig-name descname"><span class="pre">containsNodeExactly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.containsNodeExactly" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定ノードを直接含んでいるかどうか。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>node</strong> (<cite>.Node</cite>) -- チェックするノード。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>bool</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.editAttrs">
+<span class="sig-name descname"><span class="pre">editAttrs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.editAttrs" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>編集コマンドのアトリビュート名リストを得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- コマンドの種類を指定する。
+有効な値は、'addAttr'、'connectAttr'、'deleteAttr'、'disconnectAttr'、
+'parent'、'setAttr'、'lock'、および'unlock'である。</p></li>
+<li><p><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 失敗したコマンドを得るかどうか。</p></li>
+<li><p><strong>success</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 成功したコマンドを得るかどうか。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>list</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.editNodes">
+<span class="sig-name descname"><span class="pre">editNodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.editNodes" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>編集コマンドのノードリストを得る。</p>
+<p>可能な限り cymel のノードオブジェクトが返されるが、
+見つからない場合は文字列のまま返される。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- コマンドの種類を指定する。
+有効な値は、'addAttr'、'connectAttr'、'deleteAttr'、'disconnectAttr'、
+'parent'、'setAttr'、'lock'、および'unlock'である。</p></li>
+<li><p><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 失敗したコマンドを得るかどうか。</p></li>
+<li><p><strong>success</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 成功したコマンドを得るかどうか。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>list</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.editPlugs">
+<span class="sig-name descname"><span class="pre">editPlugs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.editPlugs" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>編集コマンドのプラグリストを得る。</p>
+<p>可能な限り cymel のプラグオブジェクトが返されるが、
+見つからない場合は文字列のまま返される。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- コマンドの種類を指定する。
+有効な値は、'addAttr'、'connectAttr'、'deleteAttr'、'disconnectAttr'、
+'parent'、'setAttr'、'lock'、および'unlock'である。</p></li>
+<li><p><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 失敗したコマンドを得るかどうか。</p></li>
+<li><p><strong>success</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 成功したコマンドを得るかどうか。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>list</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.editStrings">
+<span class="sig-name descname"><span class="pre">editStrings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.editStrings" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>編集コマンドリストを得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- コマンドの種類を指定する。
+有効な値は、'addAttr'、'connectAttr'、'deleteAttr'、'disconnectAttr'、
+'parent'、'setAttr'、'lock'、および'unlock'である。</p></li>
+<li><p><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 失敗したコマンドを得るかどうか。</p></li>
+<li><p><strong>success</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 成功したコマンドを得るかどうか。</p></li>
+<li><p><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- リファレンスによるネームスペースを付加するかどうか。
+付加されるのは、親リファレンスのローカルネームスペースまで。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>list</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.fileName">
+<span class="sig-name descname"><span class="pre">fileName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unresolved</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">withoutPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">withoutCopyNumber</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.fileName" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>filename</cite> の別名。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.filename">
+<span class="sig-name descname"><span class="pre">filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unresolved</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">withoutPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">withoutCopyNumber</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.filename" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ファイル名を得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>unresolved</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 指定されているファイル名をそのまま得る。
+環境変数を含んでいたり、実際は存在しないパスの場合が有り得る。</p></li>
+<li><p><strong>withoutPath</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- パスを含まないファイル名のみを得る。</p></li>
+<li><p><strong>withoutCopyNumber</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 同名ファイルの2つめ以降に付加されるコピー番号を含めない。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>str</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.importReference">
+<span class="sig-name descname"><span class="pre">importReference</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.importReference" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リファレンスをインポートする。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.isExportEditsFile">
+<span class="sig-name descname"><span class="pre">isExportEditsFile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isExportEditsFile" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リファレンス編集ファイル (editMA や editMB) かどうか。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>bool</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.isLoaded">
+<span class="sig-name descname"><span class="pre">isLoaded</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isLoaded" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リファレンスがロードされているかどうか。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>bool</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.isLocked">
+<span class="sig-name descname"><span class="pre">isLocked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isLocked" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ロックされているかどうか。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>bool</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.isReferenceLocked">
+<span class="sig-name descname"><span class="pre">isReferenceLocked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isReferenceLocked" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リファレンスがロックされているかどうか。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>bool</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.isRoot">
+<span class="sig-name descname"><span class="pre">isRoot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isRoot" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ルートリファレンスノードかどうか。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>bool</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.iterBreadthFirst">
+<span class="sig-name descname"><span class="pre">iterBreadthFirst</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.iterBreadthFirst" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リファレンス階層を幅優先反復する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>yield <cite>Reference</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.iterDepthFirst">
+<span class="sig-name descname"><span class="pre">iterDepthFirst</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.iterDepthFirst" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リファレンス階層を深さ優先反復する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>yield <cite>Reference</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.load" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ロードする。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.lockReference">
+<span class="sig-name descname"><span class="pre">lockReference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.lockReference" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リファレンスをロック、又はアンロックする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ロック状態値。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.nodes">
+<span class="sig-name descname"><span class="pre">nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.nodes" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>含まれているノードのリストを得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>list</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.parent" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>親リファレンスノードを得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Reference</cite> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.referenceNode">
+<span class="sig-name descname"><span class="pre">referenceNode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.referenceNode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>parent</cite> の別名。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.removeReference">
+<span class="sig-name descname"><span class="pre">removeReference</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.removeReference" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リファレンスを削除する。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.root">
+<span class="sig-name descname"><span class="pre">root</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.root" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ルートリファレンスノードを得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Reference</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.unload">
+<span class="sig-name descname"><span class="pre">unload</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.unload" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>アンロードする。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.unlockReference">
+<span class="sig-name descname"><span class="pre">unlockReference</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.unlockReference" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リファレンスをアンロックする。</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>前のトピックへ</h4>
-  <p class="topless"><a href="../cymel.core.cyobjects.reference.html"
-                        title="前の章へ">cymel.core.cyobjects.reference</a></p>
-  <h4>次のトピックへ</h4>
-  <p class="topless"><a href="../cymel.core.cyobjects.shape.html"
-                        title="次の章へ">cymel.core.cyobjects.shape</a></p>
+  <div>
+    <h3><a href="../../index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.cyobjects.reference.Reference</a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference"><code class="docutils literal notranslate"><span class="pre">Reference</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNS"><code class="docutils literal notranslate"><span class="pre">Reference.associatedNS()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNamespace"><code class="docutils literal notranslate"><span class="pre">Reference.associatedNamespace()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.byFilename"><code class="docutils literal notranslate"><span class="pre">Reference.byFilename()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.children"><code class="docutils literal notranslate"><span class="pre">Reference.children()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.containsNode"><code class="docutils literal notranslate"><span class="pre">Reference.containsNode()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.containsNodeExactly"><code class="docutils literal notranslate"><span class="pre">Reference.containsNodeExactly()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editAttrs"><code class="docutils literal notranslate"><span class="pre">Reference.editAttrs()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editNodes"><code class="docutils literal notranslate"><span class="pre">Reference.editNodes()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editPlugs"><code class="docutils literal notranslate"><span class="pre">Reference.editPlugs()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editStrings"><code class="docutils literal notranslate"><span class="pre">Reference.editStrings()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.fileName"><code class="docutils literal notranslate"><span class="pre">Reference.fileName()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.filename"><code class="docutils literal notranslate"><span class="pre">Reference.filename()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.importReference"><code class="docutils literal notranslate"><span class="pre">Reference.importReference()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isExportEditsFile"><code class="docutils literal notranslate"><span class="pre">Reference.isExportEditsFile()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isLoaded"><code class="docutils literal notranslate"><span class="pre">Reference.isLoaded()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isLocked"><code class="docutils literal notranslate"><span class="pre">Reference.isLocked()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isReferenceLocked"><code class="docutils literal notranslate"><span class="pre">Reference.isReferenceLocked()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isRoot"><code class="docutils literal notranslate"><span class="pre">Reference.isRoot()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.iterBreadthFirst"><code class="docutils literal notranslate"><span class="pre">Reference.iterBreadthFirst()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.iterDepthFirst"><code class="docutils literal notranslate"><span class="pre">Reference.iterDepthFirst()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.load"><code class="docutils literal notranslate"><span class="pre">Reference.load()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.lockReference"><code class="docutils literal notranslate"><span class="pre">Reference.lockReference()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.nodes"><code class="docutils literal notranslate"><span class="pre">Reference.nodes()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.parent"><code class="docutils literal notranslate"><span class="pre">Reference.parent()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.referenceNode"><code class="docutils literal notranslate"><span class="pre">Reference.referenceNode()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.removeReference"><code class="docutils literal notranslate"><span class="pre">Reference.removeReference()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.root"><code class="docutils literal notranslate"><span class="pre">Reference.root()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.unload"><code class="docutils literal notranslate"><span class="pre">Reference.unload()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.unlockReference"><code class="docutils literal notranslate"><span class="pre">Reference.unlockReference()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="../cymel.core.cyobjects.reference.html"
+                          title="前の章へ">cymel.core.cyobjects.reference</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="../cymel.core.cyobjects.shape.html"
+                          title="次の章へ">cymel.core.cyobjects.shape</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>このページ</h3>
     <ul class="this-page-menu">
@@ -58,551 +565,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>クイック検索</h3>
+  <h3 id="searchlabel">クイック検索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="検索" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="class-cymel-core-cyobjects-reference-reference">
-<h1>class cymel.core.cyobjects.reference.Reference<a class="headerlink" href="#class-cymel-core-cyobjects-reference-reference" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="graphviz"><img src="../../_images/inheritance-cbc77b0a691af6a678dbb0030b9ce721a20a5ce3.png" alt="Inheritance diagram of Reference" usemap="#inheritancef0d2d1ae36" class="inheritance graphviz" /></div>
-<map id="inheritancef0d2d1ae36" name="inheritancef0d2d1ae36">
-<area shape="rect" id="node1" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" target="_top" title="Mayaラッパーオブジェクトの抽象基底クラス。" alt="" coords="6,5,78,29"/>
-<area shape="rect" id="node3" href="cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c" target="_top" title="`.Node` クラスでサポートする機能の中核。" alt="" coords="6,44,78,68"/>
-<area shape="rect" id="node2" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" target="_top" title=":mayanode:`node` ノードタイプラッパークラス。" alt="" coords="6,83,78,107"/>
-<area shape="rect" id="node4" href="#cymel.core.cyobjects.reference.Reference" target="_top" title=":mayanode:`reference` ノードタイプラッパークラス。" alt="" coords="5,121,79,145"/>
-</map><dl class="class">
-<dt id="cymel.core.cyobjects.reference.Reference">
-<em class="property">class </em><code class="descclassname">cymel.core.cyobjects.reference.</code><code class="descname">Reference</code><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">cymel.core.cyobjects.node.Node</span></code></a></p>
-<p><a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/reference.html">reference</a> ノードタイプラッパークラス。</p>
-<p>固定引数無しでのクラスインスタンス生成時のノード生成をサポート。</p>
-<p class="rubric">Methods:</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNS" title="cymel.core.cyobjects.reference.Reference.associatedNS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">associatedNS</span></code></a>()</td>
-<td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNamespace" title="cymel.core.cyobjects.reference.Reference.associatedNamespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">associatedNamespace</span></code></a> の別名。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNamespace" title="cymel.core.cyobjects.reference.Reference.associatedNamespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">associatedNamespace</span></code></a>()</td>
-<td>関連付けられたネームスペースを得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.byFilename" title="cymel.core.cyobjects.reference.Reference.byFilename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">byFilename</span></code></a>(fname[,&nbsp;all])</td>
-<td>解決済みのファイル名からリファレンスノードを得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.children" title="cymel.core.cyobjects.reference.Reference.children"><code class="xref py py-obj docutils literal notranslate"><span class="pre">children</span></code></a>()</td>
-<td>子リファレンスノードのリストを得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.containsNode" title="cymel.core.cyobjects.reference.Reference.containsNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">containsNode</span></code></a>(node)</td>
-<td>指定ノードを含んでいるかどうか。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.containsNodeExactly" title="cymel.core.cyobjects.reference.Reference.containsNodeExactly"><code class="xref py py-obj docutils literal notranslate"><span class="pre">containsNodeExactly</span></code></a>(node)</td>
-<td>指定ノードを直接含んでいるかどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editAttrs" title="cymel.core.cyobjects.reference.Reference.editAttrs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">editAttrs</span></code></a>([command,&nbsp;fail,&nbsp;success])</td>
-<td>編集コマンドのアトリビュート名リストを得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editNodes" title="cymel.core.cyobjects.reference.Reference.editNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">editNodes</span></code></a>([command,&nbsp;fail,&nbsp;success])</td>
-<td>編集コマンドのノードリストを得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editPlugs" title="cymel.core.cyobjects.reference.Reference.editPlugs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">editPlugs</span></code></a>([command,&nbsp;fail,&nbsp;success])</td>
-<td>編集コマンドのプラグリストを得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editStrings" title="cymel.core.cyobjects.reference.Reference.editStrings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">editStrings</span></code></a>([command,&nbsp;fail,&nbsp;success,&nbsp;namespace])</td>
-<td>編集コマンドリストを得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.fileName" title="cymel.core.cyobjects.reference.Reference.fileName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fileName</span></code></a>([unresolved,&nbsp;withoutPath,&nbsp;...])</td>
-<td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.filename" title="cymel.core.cyobjects.reference.Reference.filename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filename</span></code></a> の別名。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.filename" title="cymel.core.cyobjects.reference.Reference.filename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filename</span></code></a>([unresolved,&nbsp;withoutPath,&nbsp;...])</td>
-<td>ファイル名を得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.importReference" title="cymel.core.cyobjects.reference.Reference.importReference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">importReference</span></code></a>()</td>
-<td>リファレンスをインポートする。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isExportEditsFile" title="cymel.core.cyobjects.reference.Reference.isExportEditsFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isExportEditsFile</span></code></a>()</td>
-<td>リファレンス編集ファイル (editMA や editMB) かどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isLoaded" title="cymel.core.cyobjects.reference.Reference.isLoaded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isLoaded</span></code></a>()</td>
-<td>リファレンスがロードされているかどうか。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isLocked" title="cymel.core.cyobjects.reference.Reference.isLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isLocked</span></code></a>()</td>
-<td>ロックされているかどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isReferenceLocked" title="cymel.core.cyobjects.reference.Reference.isReferenceLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isReferenceLocked</span></code></a>()</td>
-<td>リファレンスがロックされているかどうか。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isRoot" title="cymel.core.cyobjects.reference.Reference.isRoot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRoot</span></code></a>()</td>
-<td>ルートリファレンスノードかどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.iterBreadthFirst" title="cymel.core.cyobjects.reference.Reference.iterBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterBreadthFirst</span></code></a>()</td>
-<td>リファレンス階層を幅優先反復する。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.iterDepthFirst" title="cymel.core.cyobjects.reference.Reference.iterDepthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterDepthFirst</span></code></a>()</td>
-<td>リファレンス階層を深さ優先反復する。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.load" title="cymel.core.cyobjects.reference.Reference.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>()</td>
-<td>ロードする。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.lockReference" title="cymel.core.cyobjects.reference.Reference.lockReference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lockReference</span></code></a>([val])</td>
-<td>リファレンスをロック、又はアンロックする。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.nodes" title="cymel.core.cyobjects.reference.Reference.nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodes</span></code></a>()</td>
-<td>含まれているノードのリストを得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.parent" title="cymel.core.cyobjects.reference.Reference.parent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></a>()</td>
-<td>親リファレンスノードを得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.referenceNode" title="cymel.core.cyobjects.reference.Reference.referenceNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">referenceNode</span></code></a>()</td>
-<td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.parent" title="cymel.core.cyobjects.reference.Reference.parent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></a> の別名。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.removeReference" title="cymel.core.cyobjects.reference.Reference.removeReference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeReference</span></code></a>()</td>
-<td>リファレンスを削除する。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.root" title="cymel.core.cyobjects.reference.Reference.root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">root</span></code></a>()</td>
-<td>ルートリファレンスノードを得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.unload" title="cymel.core.cyobjects.reference.Reference.unload"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unload</span></code></a>()</td>
-<td>アンロードする。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.unlockReference" title="cymel.core.cyobjects.reference.Reference.unlockReference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlockReference</span></code></a>()</td>
-<td>リファレンスをアンロックする。</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods Details:</p>
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.associatedNS">
-<code class="descname">associatedNS</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.associatedNS" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNamespace" title="cymel.core.cyobjects.reference.Reference.associatedNamespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">associatedNamespace</span></code></a> の別名。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.associatedNamespace">
-<code class="descname">associatedNamespace</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.associatedNamespace" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>関連付けられたネームスペースを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="cymel.utils.namespace.Namespace.html#cymel.utils.namespace.Namespace" title="cymel.utils.namespace.Namespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Namespace</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="cymel.core.cyobjects.reference.Reference.byFilename">
-<em class="property">classmethod </em><code class="descname">byFilename</code><span class="sig-paren">(</span><em>fname</em>, <em>all=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.byFilename" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>解決済みのファイル名からリファレンスノードを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 解決済みのファイル名。</li>
-<li><strong>all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- コピー番号なしのファイル名を指定して、
-それに対応する全てのリストを得る。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Referemce</span></code> or None</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.children">
-<code class="descname">children</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.children" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>子リファレンスノードのリストを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.containsNode">
-<code class="descname">containsNode</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.containsNode" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>指定ノードを含んでいるかどうか。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>node</strong> (<a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a>) -- チェックするノード。</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.containsNodeExactly">
-<code class="descname">containsNodeExactly</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.containsNodeExactly" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>指定ノードを直接含んでいるかどうか。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>node</strong> (<a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a>) -- チェックするノード。</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.editAttrs">
-<code class="descname">editAttrs</code><span class="sig-paren">(</span><em>command=None</em>, <em>fail=False</em>, <em>success=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.editAttrs" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>編集コマンドのアトリビュート名リストを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- コマンドの種類を指定する。
-有効な値は、'addAttr'、'connectAttr'、'deleteAttr'、'disconnectAttr'、
-'parent'、'setAttr'、'lock'、および'unlock'である。</li>
-<li><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 失敗したコマンドを得るかどうか。</li>
-<li><strong>success</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 成功したコマンドを得るかどうか。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.editNodes">
-<code class="descname">editNodes</code><span class="sig-paren">(</span><em>command=None</em>, <em>fail=False</em>, <em>success=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.editNodes" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>編集コマンドのノードリストを得る。</p>
-<p>可能な限り cymel のノードオブジェクトが返されるが、
-見つからない場合は文字列のまま返される。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- コマンドの種類を指定する。
-有効な値は、'addAttr'、'connectAttr'、'deleteAttr'、'disconnectAttr'、
-'parent'、'setAttr'、'lock'、および'unlock'である。</li>
-<li><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 失敗したコマンドを得るかどうか。</li>
-<li><strong>success</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 成功したコマンドを得るかどうか。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.editPlugs">
-<code class="descname">editPlugs</code><span class="sig-paren">(</span><em>command=None</em>, <em>fail=False</em>, <em>success=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.editPlugs" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>編集コマンドのプラグリストを得る。</p>
-<p>可能な限り cymel のプラグオブジェクトが返されるが、
-見つからない場合は文字列のまま返される。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- コマンドの種類を指定する。
-有効な値は、'addAttr'、'connectAttr'、'deleteAttr'、'disconnectAttr'、
-'parent'、'setAttr'、'lock'、および'unlock'である。</li>
-<li><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 失敗したコマンドを得るかどうか。</li>
-<li><strong>success</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 成功したコマンドを得るかどうか。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.editStrings">
-<code class="descname">editStrings</code><span class="sig-paren">(</span><em>command=None</em>, <em>fail=False</em>, <em>success=True</em>, <em>namespace=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.editStrings" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>編集コマンドリストを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- コマンドの種類を指定する。
-有効な値は、'addAttr'、'connectAttr'、'deleteAttr'、'disconnectAttr'、
-'parent'、'setAttr'、'lock'、および'unlock'である。</li>
-<li><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 失敗したコマンドを得るかどうか。</li>
-<li><strong>success</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 成功したコマンドを得るかどうか。</li>
-<li><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- リファレンスによるネームスペースを付加するかどうか。
-付加されるのは、親リファレンスのローカルネームスペースまで。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.fileName">
-<code class="descname">fileName</code><span class="sig-paren">(</span><em>unresolved=False</em>, <em>withoutPath=False</em>, <em>withoutCopyNumber=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.fileName" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.filename" title="cymel.core.cyobjects.reference.Reference.filename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filename</span></code></a> の別名。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.filename">
-<code class="descname">filename</code><span class="sig-paren">(</span><em>unresolved=False</em>, <em>withoutPath=False</em>, <em>withoutCopyNumber=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.filename" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ファイル名を得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>unresolved</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 指定されているファイル名をそのまま得る。
-環境変数を含んでいたり、実際は存在しないパスの場合が有り得る。</li>
-<li><strong>withoutPath</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- パスを含まないファイル名のみを得る。</li>
-<li><strong>withoutCopyNumber</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 同名ファイルの2つめ以降に付加されるコピー番号を含めない。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.importReference">
-<code class="descname">importReference</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.importReference" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>リファレンスをインポートする。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.isExportEditsFile">
-<code class="descname">isExportEditsFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isExportEditsFile" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>リファレンス編集ファイル (editMA や editMB) かどうか。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.isLoaded">
-<code class="descname">isLoaded</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isLoaded" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>リファレンスがロードされているかどうか。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.isLocked">
-<code class="descname">isLocked</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isLocked" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ロックされているかどうか。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.isReferenceLocked">
-<code class="descname">isReferenceLocked</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isReferenceLocked" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>リファレンスがロックされているかどうか。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.isRoot">
-<code class="descname">isRoot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isRoot" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ルートリファレンスノードかどうか。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.iterBreadthFirst">
-<code class="descname">iterBreadthFirst</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.iterBreadthFirst" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>リファレンス階層を幅優先反復する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body">yield <a class="reference internal" href="#cymel.core.cyobjects.reference.Reference" title="cymel.core.cyobjects.reference.Reference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reference</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.iterDepthFirst">
-<code class="descname">iterDepthFirst</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.iterDepthFirst" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>リファレンス階層を深さ優先反復する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body">yield <a class="reference internal" href="#cymel.core.cyobjects.reference.Reference" title="cymel.core.cyobjects.reference.Reference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reference</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.load">
-<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.load" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ロードする。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.lockReference">
-<code class="descname">lockReference</code><span class="sig-paren">(</span><em>val=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.lockReference" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>リファレンスをロック、又はアンロックする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ロック状態値。</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.nodes">
-<code class="descname">nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.nodes" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>含まれているノードのリストを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.parent">
-<code class="descname">parent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.parent" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>親リファレンスノードを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference" title="cymel.core.cyobjects.reference.Reference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reference</span></code></a> or None</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.referenceNode">
-<code class="descname">referenceNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.referenceNode" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.parent" title="cymel.core.cyobjects.reference.Reference.parent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></a> の別名。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.removeReference">
-<code class="descname">removeReference</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.removeReference" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>リファレンスを削除する。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.root">
-<code class="descname">root</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.root" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ルートリファレンスノードを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference" title="cymel.core.cyobjects.reference.Reference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reference</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.unload">
-<code class="descname">unload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.unload" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>アンロードする。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.cyobjects.reference.Reference.unlockReference">
-<code class="descname">unlockReference</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.unlockReference" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>リファレンスをアンロックする。</p>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-
-
-          </div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -622,14 +593,15 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.reference.html" title="cymel.core.cyobjects.reference"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.reference.html" >cymel.core.cyobjects.reference</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.reference.html" >cymel.core.cyobjects.reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.reference.Reference</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, ryusas.
-      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 で生成しました。
+        &#169; Copyright 2020-2023, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
     </div>
   </body>
 </html>

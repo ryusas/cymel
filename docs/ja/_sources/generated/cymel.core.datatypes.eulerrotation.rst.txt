@@ -1,4 +1,4 @@
-cymel.core.datatypes.eulerrotation
+﻿cymel.core.datatypes.eulerrotation
 ==================================
 
 .. automodule:: cymel.core.datatypes.eulerrotation

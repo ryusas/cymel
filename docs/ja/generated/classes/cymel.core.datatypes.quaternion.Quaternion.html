@@ -1,22 +1,19 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<html lang="ja">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.core.datatypes.quaternion.Quaternion &#8212; cymel 0.19.2023042300 ドキュメント</title>
-    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.datatypes.quaternion.Quaternion &#8212; cymel 0.20.2023090200 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="cymel.core.datatypes.transformation" href="../cymel.core.datatypes.transformation.html" />
@@ -37,19 +34,1133 @@
         <li class="right" >
           <a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html" title="class cymel.core.datatypes.quaternion.ImmutableQuaternion"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" accesskey="U">cymel.core.datatypes.quaternion</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" accesskey="U">cymel.core.datatypes.quaternion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.quaternion.Quaternion</a></li> 
       </ul>
-    </div>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-datatypes-quaternion-quaternion">
+<h1>class cymel.core.datatypes.quaternion.Quaternion<a class="headerlink" href="#class-cymel-core-datatypes-quaternion-quaternion" title="この見出しへのパーマリンク">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-2ad0b244f699760f69895d7835ff37feea4d665e.png" alt="Inheritance diagram of Quaternion" usemap="#inheritance98e4d77901" class="inheritance graphviz" /></div>
+<map id="inheritance98e4d77901" name="inheritance98e4d77901">
+<area shape="rect" id="node1" href="#cymel.core.datatypes.quaternion.Quaternion" target="_top" title="クォータニオンクラス。" alt="" coords="5,5,80,29"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.core.datatypes.quaternion.</span></span><span class="sig-name descname"><span class="pre">Quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>クォータニオンクラス。</p>
+<p>コンストラクタでは以下の値を指定可能。</p>
+<ul class="simple">
+<li><p><cite>Quaternion</cite></p></li>
+<li><p>x, y, z, w</p></li>
+<li><p>4値のシーケンス</p></li>
+<li><p>回転軸 (<cite>.Vector</cite>), 角度</p></li>
+<li><p>角度, 回転軸 (<cite>.Vector</cite>)</p></li>
+<li><p><cite>.EulerRotation</cite></p></li>
+<li><p><cite>.Matrix</cite></p></li>
+<li><p><cite>.Vector</cite></p></li>
+</ul>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAA" title="cymel.core.datatypes.quaternion.Quaternion.asAA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAA</span></code></a>()</p></td>
+<td><p><cite>asAxisAngle</cite> の別名。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAngle</span></code></a>([naxis, bound])</p></td>
+<td><p>クォータニオンの持つ回転角度を得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a>()</p></td>
+<td><p>軸ベクトルと回転角度として得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asBend" title="cymel.core.datatypes.quaternion.Quaternion.asBend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asBend</span></code></a>([reverse, aim])</p></td>
+<td><p>ボーン回転とした場合の曲げ成分を得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asD" title="cymel.core.datatypes.quaternion.Quaternion.asD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asD</span></code></a>([order, correct])</p></td>
+<td><p><cite>asDegrees</cite> の別名。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a>([order, correct])</p></td>
+<td><p>オイラー角回転を度数法の <cite>list</cite> として得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asE" title="cymel.core.datatypes.quaternion.Quaternion.asE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asE</span></code></a>([order, correct])</p></td>
+<td><p><cite>asEulerRotation</cite> の別名。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a>([order, correct])</p></td>
+<td><p>オイラー角回転として得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asM" title="cymel.core.datatypes.quaternion.Quaternion.asM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asM</span></code></a>()</p></td>
+<td><p><cite>asMatrix</cite> の別名。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asMatrix" title="cymel.core.datatypes.quaternion.Quaternion.asMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asMatrix</span></code></a>()</p></td>
+<td><p>回転行列として得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV" title="cymel.core.datatypes.quaternion.Quaternion.asRHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRHV</span></code></a>([reverse, aim, upv])</p></td>
+<td><p><cite>asRollBendHV</cite> の別名。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRHV2</span></code></a>([axisOri, reverse])</p></td>
+<td><p><cite>asRollBendHV2</cite> の別名。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRoll" title="cymel.core.datatypes.quaternion.Quaternion.asRoll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRoll</span></code></a>([aim])</p></td>
+<td><p>ボーン回転とした場合の捻り成分を得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV</span></code></a>([reverse, aim, upv])</p></td>
+<td><p>ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV2</span></code></a>([axisOri, reverse])</p></td>
+<td><p>ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asTransformation" title="cymel.core.datatypes.quaternion.Quaternion.asTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTransformation</span></code></a>()</p></td>
+<td><p>トランスフォーメーションとして得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asVecW" title="cymel.core.datatypes.quaternion.Quaternion.asVecW"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asVecW</span></code></a>()</p></td>
+<td><p>3次元ベクトルとw値を得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asX" title="cymel.core.datatypes.quaternion.Quaternion.asX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asX</span></code></a>()</p></td>
+<td><p><cite>asTransformation</cite> の別名。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.conjugate" title="cymel.core.datatypes.quaternion.Quaternion.conjugate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">conjugate</span></code></a>()</p></td>
+<td><p>共役クォータニオンを得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.conjugateIt" title="cymel.core.datatypes.quaternion.Quaternion.conjugateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">conjugateIt</span></code></a>()</p></td>
+<td><p>共役クォータニオンをセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.div" title="cymel.core.datatypes.quaternion.Quaternion.div"><code class="xref py py-obj docutils literal notranslate"><span class="pre">div</span></code></a>(v[, pre])</p></td>
+<td><p>4次元ベクトル要素ごとのの商を得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.dot" title="cymel.core.datatypes.quaternion.Quaternion.dot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dot</span></code></a>(q)</p></td>
+<td><p>クォータニオンの内積を得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.exp" title="cymel.core.datatypes.quaternion.Quaternion.exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exp</span></code></a>()</p></td>
+<td><p>対数クォータニオンからクォータニオンを得る。。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.fromVecW" title="cymel.core.datatypes.quaternion.Quaternion.fromVecW"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromVecW</span></code></a>(vec, w)</p></td>
+<td><p>3次元ベクトルとw値からクォータニオンを得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.idiv" title="cymel.core.datatypes.quaternion.Quaternion.idiv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idiv</span></code></a>(v[, pre])</p></td>
+<td><p>4次元ベクトル要素ごとのの商をセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.imul" title="cymel.core.datatypes.quaternion.Quaternion.imul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imul</span></code></a>(v)</p></td>
+<td><p>4次元ベクトル要素ごとの積をセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.inverse" title="cymel.core.datatypes.quaternion.Quaternion.inverse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inverse</span></code></a>()</p></td>
+<td><p>逆クォータニオンを得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.invertIt" title="cymel.core.datatypes.quaternion.Quaternion.invertIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invertIt</span></code></a>()</p></td>
+<td><p>逆クォータニオンをセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isEquivalent</span></code></a>(q[, tol])</p></td>
+<td><p>ほぼ等価かどうか。符号反転は同じ回転姿勢を表すものとして等価とみなす。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isIdentity" title="cymel.core.datatypes.quaternion.Quaternion.isIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isIdentity</span></code></a>([tol])</p></td>
+<td><p>ほぼ単位クォータニオンかどうか。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSignedEquivalent</span></code></a>(q[, tol])</p></td>
+<td><p>ほぼ同値かどうか。符号反転は同値とみなさない。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.length" title="cymel.core.datatypes.quaternion.Quaternion.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a>()</p></td>
+<td><p>クォータニオンの絶対値を得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.lengthSq" title="cymel.core.datatypes.quaternion.Quaternion.lengthSq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lengthSq</span></code></a>()</p></td>
+<td><p>クォータニオンの絶対値の2乗を得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.log" title="cymel.core.datatypes.quaternion.Quaternion.log"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log</span></code></a>()</p></td>
+<td><p>対数クォータニオンを得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRHV</span></code></a>(rhv[, reverse, aim, upv])</p></td>
+<td><p><cite>makeRollBendHV</cite> の別名。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRHV2</span></code></a>(rhv[, axisOri, reverse])</p></td>
+<td><p><cite>makeRollBendHV2</cite> の別名。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV</span></code></a>(rhv[, reverse, aim, upv])</p></td>
+<td><p>ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV2</span></code></a>(rhv[, axisOri, reverse])</p></td>
+<td><p>ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.mul" title="cymel.core.datatypes.quaternion.Quaternion.mul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mul</span></code></a>(v)</p></td>
+<td><p>4次元ベクトル要素ごとの積を得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.negateIt" title="cymel.core.datatypes.quaternion.Quaternion.negateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">negateIt</span></code></a>()</p></td>
+<td><p>符号反転クォータニオンをセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normal" title="cymel.core.datatypes.quaternion.Quaternion.normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normal</span></code></a>()</p></td>
+<td><p>正規化クォータニオンを得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normalize" title="cymel.core.datatypes.quaternion.Quaternion.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a>()</p></td>
+<td><p>正規化クォータニオンをセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normalizeIt" title="cymel.core.datatypes.quaternion.Quaternion.normalizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalizeIt</span></code></a>()</p></td>
+<td><p>正規化クォータニオンをセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.safelog" title="cymel.core.datatypes.quaternion.Quaternion.safelog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">safelog</span></code></a>()</p></td>
+<td><p>絶対値が π/2 を超えない対数クォータニオンを得る。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.set" title="cymel.core.datatypes.quaternion.Quaternion.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(*args)</p></td>
+<td><p>他の値をセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setAngle" title="cymel.core.datatypes.quaternion.Quaternion.setAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAngle</span></code></a>(theta[, correctAxis])</p></td>
+<td><p>クォータニオンの持つ回転角度を書き換える。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToIdentity" title="cymel.core.datatypes.quaternion.Quaternion.setToIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToIdentity</span></code></a>()</p></td>
+<td><p>単位クォータニオンをセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToXAxis" title="cymel.core.datatypes.quaternion.Quaternion.setToXAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToXAxis</span></code></a>(angle)</p></td>
+<td><p>X軸回りの回転角度をセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToYAxis" title="cymel.core.datatypes.quaternion.Quaternion.setToYAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToYAxis</span></code></a>(angle)</p></td>
+<td><p>Y軸回りの回転角度をセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToZAxis" title="cymel.core.datatypes.quaternion.Quaternion.setToZAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToZAxis</span></code></a>(angle)</p></td>
+<td><p>Z軸回りの回転角度をセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setValue" title="cymel.core.datatypes.quaternion.Quaternion.setValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValue</span></code></a>(*args)</p></td>
+<td><p>他の値をセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setVecW" title="cymel.core.datatypes.quaternion.Quaternion.setVecW"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVecW</span></code></a>(vec, w)</p></td>
+<td><p>3次元ベクトルとw値をセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.slerp" title="cymel.core.datatypes.quaternion.Quaternion.slerp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slerp</span></code></a>(p, q, t[, spin])</p></td>
+<td><p>クォータニオンを球面線形補間する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.slerp0" title="cymel.core.datatypes.quaternion.Quaternion.slerp0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slerp0</span></code></a>(t[, spin])</p></td>
+<td><p>単位クォータニオンと球面線形補間する。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squad" title="cymel.core.datatypes.quaternion.Quaternion.squad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squad</span></code></a>(p, a, b, q, t[, spin])</p></td>
+<td><p>クォータニオンを球面曲線補間する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squadPt" title="cymel.core.datatypes.quaternion.Quaternion.squadPt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squadPt</span></code></a>(q0, q1, q2)</p></td>
+<td><p><cite>squad</cite> 用の制御点を計算する。</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes:</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.Identity">
+<span class="sig-name descname"><span class="pre">Identity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">ImmutableQuaternion(0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">1)</span></em><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.Identity" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.Tolerance">
+<span class="sig-name descname"><span class="pre">Tolerance</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1e-10</span></em><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.Tolerance" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.Zero">
+<span class="sig-name descname"><span class="pre">Zero</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">ImmutableQuaternion(0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0)</span></em><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.Zero" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asAA">
+<span class="sig-name descname"><span class="pre">asAA</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asAA" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>asAxisAngle</cite> の別名。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asAngle">
+<span class="sig-name descname"><span class="pre">asAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">naxis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asAngle" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クォータニオンの持つ回転角度を得る。</p>
+<p><cite>asAxisAngle</cite> では 0 になるような微小な角度も取得出来るが、
+その場合は <cite>asAxisAngle</cite> で得られる軸
+（おそらく 0 度扱いの場合は常に (0,0,1) となる）
+には対応しない。</p>
+<p>また、回転軸があらかじめ分かっている場合は
+指定した方が精度の良い値を得られる。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>naxis</strong> (<cite>.Vector</cite>) -- 回転軸が分かっている場合はそれを指定する。
+<cite>asAxisAngle</cite> で得られるベクトルと平行でなければならない。
+反転した軸も指定可能で、その場合、反転した角度が得られる。</p></li>
+<li><p><strong>bound</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ±π の範囲に収めた角度を得るかどうか。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>float</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle">
+<span class="sig-name descname"><span class="pre">asAxisAngle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>軸ベクトルと回転角度として得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>.Vector</cite>, <cite>float</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asBend">
+<span class="sig-name descname"><span class="pre">asBend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(1.000000,</span> <span class="pre">0.000000,</span> <span class="pre">0.000000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asBend" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ボーン回転とした場合の曲げ成分を得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
+デフォルトでは、階層上位から見て曲げてから捻るが、
+True を指定すると捻ってから曲げる分解になる。</p></li>
+<li><p><strong>aim</strong> (<cite>.Vector</cite>) -- ボーン方向ベクトル。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asD">
+<span class="sig-name descname"><span class="pre">asD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asD" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>asDegrees</cite> の別名。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asDegrees">
+<span class="sig-name descname"><span class="pre">asDegrees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>オイラー角回転を度数法の <cite>list</cite> として得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 得たい回転オーダー。</p></li>
+<li><p><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 得られるオイラー角回転値を再度クォータニオン化したときに
+元の符号と一致するように補正する。
+不適切な場合に <cite>.EulerRotation.reverseDirection</cite> することと等しい。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>list</cite></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>単位を弧度法で得たい場合は <cite>asEulerRotation</cite> を使用すると良い。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>correct に真を指定して得た値を rotateAxis にセットしようとすると
+正常にセットできない場合があるので、その用途では指定すべきではない。</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asE">
+<span class="sig-name descname"><span class="pre">asE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asE" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>asEulerRotation</cite> の別名。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation">
+<span class="sig-name descname"><span class="pre">asEulerRotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>オイラー角回転として得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 得たい回転オーダー。</p></li>
+<li><p><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 得られるオイラー角回転値を再度クォータニオン化したときに
+元の符号と一致するように補正する。
+不適切な場合に <cite>.EulerRotation.reverseDirection</cite> することと等しい。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>.EulerRotation</cite></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p><cite>EulerRotation</cite> の単位は弧度法なので、
+度数法で得たい場合は <cite>asDegrees</cite> を使用すると良い。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>correct に真を指定して得た値を rotateAxis にセットしようとすると
+正常にセットできない場合があるので、その用途では指定すべきではない。</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asM">
+<span class="sig-name descname"><span class="pre">asM</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asM" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>asMatrix</cite> の別名。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asMatrix">
+<span class="sig-name descname"><span class="pre">asMatrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asMatrix" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>回転行列として得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>.Matrix</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asRHV">
+<span class="sig-name descname"><span class="pre">asRHV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(1.000000,</span> <span class="pre">0.000000,</span> <span class="pre">0.000000)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(0.000000,</span> <span class="pre">1.000000,</span> <span class="pre">0.000000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>asRollBendHV</cite> の別名。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asRHV2">
+<span class="sig-name descname"><span class="pre">asRHV2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axisOri</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>asRollBendHV2</cite> の別名。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asRoll">
+<span class="sig-name descname"><span class="pre">asRoll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(1.000000,</span> <span class="pre">0.000000,</span> <span class="pre">0.000000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRoll" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ボーン回転とした場合の捻り成分を得る。</p>
+<p>分解の考え方として、曲げてから捻っても、捻ってから曲げても、
+同じ値が得られるため <cite>asBend</cite> や <cite>asRollBendHV</cite> のような
+reverse オプションはない。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>aim</strong> (<cite>.Vector</cite>) -- ボーン方向ベクトル。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV">
+<span class="sig-name descname"><span class="pre">asRollBendHV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(1.000000,</span> <span class="pre">0.000000,</span> <span class="pre">0.000000)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(0.000000,</span> <span class="pre">1.000000,</span> <span class="pre">0.000000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
+デフォルトでは、階層上位から見て曲げてから捻るが、
+True を指定すると捻ってから曲げる分解になる。</p></li>
+<li><p><strong>aim</strong> (<cite>.Vector</cite>) -- ボーン方向ベクトル。</p></li>
+<li><p><strong>upv</strong> (<cite>.Vector</cite>) -- ボーンアップベクトル。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値<span class="colon">:</span></dt>
+<dd class="field-even"><p>[roll, bendH, bendV]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2">
+<span class="sig-name descname"><span class="pre">asRollBendHV2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axisOri</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axisOri</strong> -- 基準軸を回転（クォータニオン）で指定する。
+その空間のX軸がボーン方向、Y軸がアップ方向に相当する。
+デフォルトの None は単位クォータニオンと同じである。</p></li>
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
+デフォルトでは、階層上位から見て曲げてから捻るが、
+True を指定すると捻ってから曲げる分解になる。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値<span class="colon">:</span></dt>
+<dd class="field-even"><p>[roll, bendH, bendV]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asTransformation">
+<span class="sig-name descname"><span class="pre">asTransformation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asTransformation" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>トランスフォーメーションとして得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>.Transformation</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asVecW">
+<span class="sig-name descname"><span class="pre">asVecW</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asVecW" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>3次元ベクトルとw値を得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>.Vector, `float</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asX">
+<span class="sig-name descname"><span class="pre">asX</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asX" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>asTransformation</cite> の別名。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.conjugate">
+<span class="sig-name descname"><span class="pre">conjugate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.conjugate" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>共役クォータニオンを得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.conjugateIt">
+<span class="sig-name descname"><span class="pre">conjugateIt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.conjugateIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>共役クォータニオンをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.div">
+<span class="sig-name descname"><span class="pre">div</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-13</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.div" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>4次元ベクトル要素ごとのの商を得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> (<cite>Quaternion</cite>) -- 分母のクォータニオン。</p></li>
+<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- ゼロ除算を避ける為の許容誤差。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.dot">
+<span class="sig-name descname"><span class="pre">dot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.dot" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クォータニオンの内積を得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>q</strong> (<cite>Quaternion</cite>) -- もう一方のクォータニオン。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>float</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.exp">
+<span class="sig-name descname"><span class="pre">exp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.exp" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>対数クォータニオンからクォータニオンを得る。。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.fromVecW">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fromVecW</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.fromVecW" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>3次元ベクトルとw値からクォータニオンを得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vec</strong> (<cite>.Vector</cite>) -- 3次元ベクトル</p></li>
+<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- w値</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.idiv">
+<span class="sig-name descname"><span class="pre">idiv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-13</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.idiv" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>4次元ベクトル要素ごとのの商をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> (<cite>Quaternion</cite>) -- 分母のクォータニオン。</p></li>
+<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- ゼロ除算を避ける為の許容誤差。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Vector</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.imul">
+<span class="sig-name descname"><span class="pre">imul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.imul" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>4次元ベクトル要素ごとの積をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<cite>Quaternion</cite>) -- もう1方のクォータニオン。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.inverse">
+<span class="sig-name descname"><span class="pre">inverse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.inverse" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>逆クォータニオンを得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.invertIt">
+<span class="sig-name descname"><span class="pre">invertIt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.invertIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>逆クォータニオンをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.isEquivalent">
+<span class="sig-name descname"><span class="pre">isEquivalent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.isEquivalent" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ほぼ等価かどうか。符号反転は同じ回転姿勢を表すものとして等価とみなす。</p>
+<p>符号反転を等価とみなしたくない場合は
+<cite>isSignedEquivalent</cite> を利用すると良い。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q</strong> (<cite>Quaternion</cite>) -- 比較するクォータニオン。</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 許容誤差。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>bool</cite></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p><a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MQuaternion.html">MQuaternion</a> の isEquivalent では、
+2015 未満では符号反転は等価とみなされなかったが、
+2015 以降で等価とみなされるように変更された。</p>
+<p>cymel では現在の API の仕様に合わせ、
+どのバージョンでも一貫して等価とみなすようにしている。</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.isIdentity">
+<span class="sig-name descname"><span class="pre">isIdentity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.isIdentity" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ほぼ単位クォータニオンかどうか。</p>
+<p>単位クォータニオンと <cite>isSignedEquivalent</cite> で比較することと等しい。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 許容誤差。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>bool</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent">
+<span class="sig-name descname"><span class="pre">isSignedEquivalent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ほぼ同値かどうか。符号反転は同値とみなさない。</p>
+<p>符号反転も等価とみなしたい場合は
+<cite>isEquivalent</cite> を利用すると良い。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q</strong> (<cite>Quaternion</cite>) -- 比較するクォータニオン。</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 許容誤差。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>bool</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.length">
+<span class="sig-name descname"><span class="pre">length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.length" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クォータニオンの絶対値を得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>float</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.lengthSq">
+<span class="sig-name descname"><span class="pre">lengthSq</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.lengthSq" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クォータニオンの絶対値の2乗を得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>float</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.log">
+<span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.log" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>対数クォータニオンを得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.makeRHV">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">makeRHV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rhv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(1.000000,</span> <span class="pre">0.000000,</span> <span class="pre">0.000000)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(0.000000,</span> <span class="pre">1.000000,</span> <span class="pre">0.000000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>makeRollBendHV</cite> の別名。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.makeRHV2">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">makeRHV2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rhv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisOri</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>makeRollBendHV2</cite> の別名。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">makeRollBendHV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rhv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(1.000000,</span> <span class="pre">0.000000,</span> <span class="pre">0.000000)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(0.000000,</span> <span class="pre">1.000000,</span> <span class="pre">0.000000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rhv</strong> -- [roll, bendH, bendV]</p></li>
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
+デフォルトでは、階層上位から見て曲げてから捻るが、
+True を指定すると捻ってから曲げる合成になる。</p></li>
+<li><p><strong>aim</strong> (<cite>.Vector</cite>) -- ボーン方向ベクトル。</p></li>
+<li><p><strong>upv</strong> (<cite>.Vector</cite>) -- ボーンアップベクトル。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">makeRollBendHV2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rhv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisOri</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rhv</strong> -- [roll, bendH, bendV]</p></li>
+<li><p><strong>axisOri</strong> -- 基準軸を回転（クォータニオン）で指定する。
+その空間のX軸がボーン方向、Y軸がアップ方向に相当する。
+デフォルトの None は単位クォータニオンと同じである。</p></li>
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
+デフォルトでは、階層上位から見て曲げてから捻るが、
+True を指定すると捻ってから曲げる合成になる。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.mul">
+<span class="sig-name descname"><span class="pre">mul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.mul" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>4次元ベクトル要素ごとの積を得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<cite>Quaternion</cite>) -- もう1方のクォータニオン。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.negateIt">
+<span class="sig-name descname"><span class="pre">negateIt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.negateIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>符号反転クォータニオンをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.normal">
+<span class="sig-name descname"><span class="pre">normal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.normal" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>正規化クォータニオンを得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.normalize">
+<span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.normalize" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>正規化クォータニオンをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.normalizeIt">
+<span class="sig-name descname"><span class="pre">normalizeIt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.normalizeIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>正規化クォータニオンをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.safelog">
+<span class="sig-name descname"><span class="pre">safelog</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.safelog" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>絶対値が π/2 を超えない対数クォータニオンを得る。</p>
+<p>w &lt; 0 の場合に符号反転したうえで <cite>log</cite> が得られる。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.set" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>他の値をセットする。</p>
+<p>コンストラクタと同様に、以下の値を指定可能。</p>
+<ul class="simple">
+<li><p><cite>Quaternion</cite></p></li>
+<li><p>x, y, z, w</p></li>
+<li><p>4値までのシーケンス</p></li>
+<li><p>回転軸 (<cite>.Vector</cite>), 角度</p></li>
+<li><p>角度, 回転軸 (<cite>.Vector</cite>)</p></li>
+<li><p><cite>.EulerRotation</cite></p></li>
+<li><p><cite>.Matrix</cite></p></li>
+<li><p><cite>.Vector</cite></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setAngle">
+<span class="sig-name descname"><span class="pre">setAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correctAxis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setAngle" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クォータニオンの持つ回転角度を書き換える。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 角度。</p></li>
+<li><p><strong>correctAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 現在の w が負
+（πより大きい回転角度を持っている）
+なら、軸を反転補正させた上での角度をセットする。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setToIdentity">
+<span class="sig-name descname"><span class="pre">setToIdentity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setToIdentity" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>単位クォータニオンをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>self</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setToXAxis">
+<span class="sig-name descname"><span class="pre">setToXAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setToXAxis" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>X軸回りの回転角度をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 角度。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setToYAxis">
+<span class="sig-name descname"><span class="pre">setToYAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setToYAxis" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Y軸回りの回転角度をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 角度。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setToZAxis">
+<span class="sig-name descname"><span class="pre">setToZAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setToZAxis" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Z軸回りの回転角度をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 角度。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setValue">
+<span class="sig-name descname"><span class="pre">setValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setValue" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>他の値をセットする。</p>
+<p>コンストラクタと同様に、以下の値を指定可能。</p>
+<ul class="simple">
+<li><p><cite>Quaternion</cite></p></li>
+<li><p>x, y, z, w</p></li>
+<li><p>4値までのシーケンス</p></li>
+<li><p>回転軸 (<cite>.Vector</cite>), 角度</p></li>
+<li><p>角度, 回転軸 (<cite>.Vector</cite>)</p></li>
+<li><p><cite>.EulerRotation</cite></p></li>
+<li><p><cite>.Matrix</cite></p></li>
+<li><p><cite>.Vector</cite></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setVecW">
+<span class="sig-name descname"><span class="pre">setVecW</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setVecW" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>3次元ベクトルとw値をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vec</strong> (<cite>.Vector</cite>) -- 3次元ベクトル</p></li>
+<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- w値</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.slerp">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">slerp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.slerp" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クォータニオンを球面線形補間する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p</strong> (<cite>Quaternion</cite>) -- 始点クォータニオン。</p></li>
+<li><p><strong>q</strong> (<cite>Quaternion</cite>) -- 終点クォータニオン。</p></li>
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 0.0～1.0の補間係数。範囲外も指定可。</p></li>
+<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- スピン値。
+デフォルトの0は最短方向、-1は逆方向、
+さらに+1や-1すると余分に周回する。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.slerp0">
+<span class="sig-name descname"><span class="pre">slerp0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.slerp0" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>単位クォータニオンと球面線形補間する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 0.0～1.0の補間係数。範囲外も指定可。</p></li>
+<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- スピン値。
+デフォルトの0は正方向、-1は逆方向、
+さらに+1や-1すると余分に周回する。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.squad">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">squad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.squad" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クォータニオンを球面曲線補間する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p</strong> (<cite>Quaternion</cite>) -- 始点クォータニオン。</p></li>
+<li><p><strong>a</strong> (<cite>Quaternion</cite>) -- 始点側の制御点。</p></li>
+<li><p><strong>b</strong> (<cite>Quaternion</cite>) -- 終点側の制御点。</p></li>
+<li><p><strong>q</strong> (<cite>Quaternion</cite>) -- 終点クォータニオン。</p></li>
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 0.0～1.0の補間係数。範囲外も指定可。</p></li>
+<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- スピン値。
+デフォルトの0は正方向、-1は逆方向、
+さらに+1や-1すると余分に周回する。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.squadPt">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">squadPt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.squadPt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><cite>squad</cite> 用の制御点を計算する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q0</strong> (<cite>Quaternion</cite>) -- 1つめのクォータニオン。</p></li>
+<li><p><strong>q1</strong> (<cite>Quaternion</cite>) -- 2つめのクォータニオン。</p></li>
+<li><p><strong>q2</strong> (<cite>Quaternion</cite>) -- 3つめのクォータニオン。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>前のトピックへ</h4>
-  <p class="topless"><a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html"
-                        title="前の章へ">class cymel.core.datatypes.quaternion.ImmutableQuaternion</a></p>
-  <h4>次のトピックへ</h4>
-  <p class="topless"><a href="../cymel.core.datatypes.transformation.html"
-                        title="次の章へ">cymel.core.datatypes.transformation</a></p>
+  <div>
+    <h3><a href="../../index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.datatypes.quaternion.Quaternion</a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion"><code class="docutils literal notranslate"><span class="pre">Quaternion</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.Identity"><code class="docutils literal notranslate"><span class="pre">Quaternion.Identity</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.Tolerance"><code class="docutils literal notranslate"><span class="pre">Quaternion.Tolerance</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.Zero"><code class="docutils literal notranslate"><span class="pre">Quaternion.Zero</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAA"><code class="docutils literal notranslate"><span class="pre">Quaternion.asAA()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAngle"><code class="docutils literal notranslate"><span class="pre">Quaternion.asAngle()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="docutils literal notranslate"><span class="pre">Quaternion.asAxisAngle()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asBend"><code class="docutils literal notranslate"><span class="pre">Quaternion.asBend()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asD"><code class="docutils literal notranslate"><span class="pre">Quaternion.asD()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="docutils literal notranslate"><span class="pre">Quaternion.asDegrees()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asE"><code class="docutils literal notranslate"><span class="pre">Quaternion.asE()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="docutils literal notranslate"><span class="pre">Quaternion.asEulerRotation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asM"><code class="docutils literal notranslate"><span class="pre">Quaternion.asM()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asMatrix"><code class="docutils literal notranslate"><span class="pre">Quaternion.asMatrix()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV"><code class="docutils literal notranslate"><span class="pre">Quaternion.asRHV()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV2"><code class="docutils literal notranslate"><span class="pre">Quaternion.asRHV2()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRoll"><code class="docutils literal notranslate"><span class="pre">Quaternion.asRoll()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="docutils literal notranslate"><span class="pre">Quaternion.asRollBendHV()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2"><code class="docutils literal notranslate"><span class="pre">Quaternion.asRollBendHV2()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asTransformation"><code class="docutils literal notranslate"><span class="pre">Quaternion.asTransformation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asVecW"><code class="docutils literal notranslate"><span class="pre">Quaternion.asVecW()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asX"><code class="docutils literal notranslate"><span class="pre">Quaternion.asX()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.conjugate"><code class="docutils literal notranslate"><span class="pre">Quaternion.conjugate()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.conjugateIt"><code class="docutils literal notranslate"><span class="pre">Quaternion.conjugateIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.div"><code class="docutils literal notranslate"><span class="pre">Quaternion.div()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.dot"><code class="docutils literal notranslate"><span class="pre">Quaternion.dot()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.exp"><code class="docutils literal notranslate"><span class="pre">Quaternion.exp()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.fromVecW"><code class="docutils literal notranslate"><span class="pre">Quaternion.fromVecW()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.idiv"><code class="docutils literal notranslate"><span class="pre">Quaternion.idiv()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.imul"><code class="docutils literal notranslate"><span class="pre">Quaternion.imul()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.inverse"><code class="docutils literal notranslate"><span class="pre">Quaternion.inverse()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.invertIt"><code class="docutils literal notranslate"><span class="pre">Quaternion.invertIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isEquivalent"><code class="docutils literal notranslate"><span class="pre">Quaternion.isEquivalent()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isIdentity"><code class="docutils literal notranslate"><span class="pre">Quaternion.isIdentity()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent"><code class="docutils literal notranslate"><span class="pre">Quaternion.isSignedEquivalent()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.length"><code class="docutils literal notranslate"><span class="pre">Quaternion.length()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.lengthSq"><code class="docutils literal notranslate"><span class="pre">Quaternion.lengthSq()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.log"><code class="docutils literal notranslate"><span class="pre">Quaternion.log()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV"><code class="docutils literal notranslate"><span class="pre">Quaternion.makeRHV()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV2"><code class="docutils literal notranslate"><span class="pre">Quaternion.makeRHV2()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV"><code class="docutils literal notranslate"><span class="pre">Quaternion.makeRollBendHV()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2"><code class="docutils literal notranslate"><span class="pre">Quaternion.makeRollBendHV2()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.mul"><code class="docutils literal notranslate"><span class="pre">Quaternion.mul()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.negateIt"><code class="docutils literal notranslate"><span class="pre">Quaternion.negateIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normal"><code class="docutils literal notranslate"><span class="pre">Quaternion.normal()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normalize"><code class="docutils literal notranslate"><span class="pre">Quaternion.normalize()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normalizeIt"><code class="docutils literal notranslate"><span class="pre">Quaternion.normalizeIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.safelog"><code class="docutils literal notranslate"><span class="pre">Quaternion.safelog()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.set"><code class="docutils literal notranslate"><span class="pre">Quaternion.set()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setAngle"><code class="docutils literal notranslate"><span class="pre">Quaternion.setAngle()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToIdentity"><code class="docutils literal notranslate"><span class="pre">Quaternion.setToIdentity()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToXAxis"><code class="docutils literal notranslate"><span class="pre">Quaternion.setToXAxis()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToYAxis"><code class="docutils literal notranslate"><span class="pre">Quaternion.setToYAxis()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToZAxis"><code class="docutils literal notranslate"><span class="pre">Quaternion.setToZAxis()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setValue"><code class="docutils literal notranslate"><span class="pre">Quaternion.setValue()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setVecW"><code class="docutils literal notranslate"><span class="pre">Quaternion.setVecW()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.slerp"><code class="docutils literal notranslate"><span class="pre">Quaternion.slerp()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.slerp0"><code class="docutils literal notranslate"><span class="pre">Quaternion.slerp0()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squad"><code class="docutils literal notranslate"><span class="pre">Quaternion.squad()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squadPt"><code class="docutils literal notranslate"><span class="pre">Quaternion.squadPt()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html"
+                          title="前の章へ">class cymel.core.datatypes.quaternion.ImmutableQuaternion</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="../cymel.core.datatypes.transformation.html"
+                          title="次の章へ">cymel.core.datatypes.transformation</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>このページ</h3>
     <ul class="this-page-menu">
@@ -58,1210 +1169,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>クイック検索</h3>
+  <h3 id="searchlabel">クイック検索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="検索" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="class-cymel-core-datatypes-quaternion-quaternion">
-<h1>class cymel.core.datatypes.quaternion.Quaternion<a class="headerlink" href="#class-cymel-core-datatypes-quaternion-quaternion" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="graphviz"><img src="../../_images/inheritance-de01c3a1a9b4c15922b1d512528f43ac8673bd11.png" alt="Inheritance diagram of Quaternion" usemap="#inheritance98e4d77901" class="inheritance graphviz" /></div>
-<map id="inheritance98e4d77901" name="inheritance98e4d77901">
-<area shape="rect" id="node1" href="#cymel.core.datatypes.quaternion.Quaternion" target="_top" title="クォータニオンクラス。" alt="" coords="5,5,80,29"/>
-</map><dl class="class">
-<dt id="cymel.core.datatypes.quaternion.Quaternion">
-<em class="property">class </em><code class="descclassname">cymel.core.datatypes.quaternion.</code><code class="descname">Quaternion</code><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>クォータニオンクラス。</p>
-<p>コンストラクタでは以下の値を指定可能。</p>
-<ul class="simple">
-<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></li>
-<li>x, y, z, w</li>
-<li>4値のシーケンス</li>
-<li>回転軸 (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>), 角度</li>
-<li>角度, 回転軸 (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</li>
-<li><a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a></li>
-<li><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></li>
-<li><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></li>
-</ul>
-<p class="rubric">Methods:</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAA" title="cymel.core.datatypes.quaternion.Quaternion.asAA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAA</span></code></a>()</td>
-<td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a> の別名。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAngle</span></code></a>([naxis,&nbsp;bound])</td>
-<td>クォータニオンの持つ回転角度を得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a>()</td>
-<td>軸ベクトルと回転角度として得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asBend" title="cymel.core.datatypes.quaternion.Quaternion.asBend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asBend</span></code></a>([reverse,&nbsp;aim])</td>
-<td>ボーン回転とした場合の曲げ成分を得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asD" title="cymel.core.datatypes.quaternion.Quaternion.asD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asD</span></code></a>([order,&nbsp;correct])</td>
-<td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a> の別名。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a>([order,&nbsp;correct])</td>
-<td>オイラー角回転を度数法の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> として得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asE" title="cymel.core.datatypes.quaternion.Quaternion.asE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asE</span></code></a>([order,&nbsp;correct])</td>
-<td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a> の別名。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a>([order,&nbsp;correct])</td>
-<td>オイラー角回転として得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asM" title="cymel.core.datatypes.quaternion.Quaternion.asM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asM</span></code></a>()</td>
-<td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asMatrix" title="cymel.core.datatypes.quaternion.Quaternion.asMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asMatrix</span></code></a> の別名。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asMatrix" title="cymel.core.datatypes.quaternion.Quaternion.asMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asMatrix</span></code></a>()</td>
-<td>回転行列として得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV" title="cymel.core.datatypes.quaternion.Quaternion.asRHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRHV</span></code></a>([reverse,&nbsp;aim,&nbsp;upv])</td>
-<td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV</span></code></a> の別名。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRHV2</span></code></a>([axisOri,&nbsp;reverse])</td>
-<td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV2</span></code></a> の別名。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRoll" title="cymel.core.datatypes.quaternion.Quaternion.asRoll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRoll</span></code></a>([aim])</td>
-<td>ボーン回転とした場合の捻り成分を得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV</span></code></a>([reverse,&nbsp;aim,&nbsp;upv])</td>
-<td>ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV2</span></code></a>([axisOri,&nbsp;reverse])</td>
-<td>ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asTransformation" title="cymel.core.datatypes.quaternion.Quaternion.asTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTransformation</span></code></a>()</td>
-<td>トランスフォーメーションとして得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asVecW" title="cymel.core.datatypes.quaternion.Quaternion.asVecW"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asVecW</span></code></a>()</td>
-<td>3次元ベクトルとw値を得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asX" title="cymel.core.datatypes.quaternion.Quaternion.asX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asX</span></code></a>()</td>
-<td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asTransformation" title="cymel.core.datatypes.quaternion.Quaternion.asTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTransformation</span></code></a> の別名。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.conjugate" title="cymel.core.datatypes.quaternion.Quaternion.conjugate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">conjugate</span></code></a>()</td>
-<td>共役クォータニオンを得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.conjugateIt" title="cymel.core.datatypes.quaternion.Quaternion.conjugateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">conjugateIt</span></code></a>()</td>
-<td>共役クォータニオンをセットする。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.div" title="cymel.core.datatypes.quaternion.Quaternion.div"><code class="xref py py-obj docutils literal notranslate"><span class="pre">div</span></code></a>(v[,&nbsp;pre])</td>
-<td>4次元ベクトル要素ごとのの商を得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.dot" title="cymel.core.datatypes.quaternion.Quaternion.dot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dot</span></code></a>(q)</td>
-<td>クォータニオンの内積を得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.exp" title="cymel.core.datatypes.quaternion.Quaternion.exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exp</span></code></a>()</td>
-<td>対数クォータニオンからクォータニオンを得る。。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.fromVecW" title="cymel.core.datatypes.quaternion.Quaternion.fromVecW"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromVecW</span></code></a>(vec,&nbsp;w)</td>
-<td>3次元ベクトルとw値からクォータニオンを得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.idiv" title="cymel.core.datatypes.quaternion.Quaternion.idiv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idiv</span></code></a>(v[,&nbsp;pre])</td>
-<td>4次元ベクトル要素ごとのの商をセットする。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.imul" title="cymel.core.datatypes.quaternion.Quaternion.imul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imul</span></code></a>(v)</td>
-<td>4次元ベクトル要素ごとの積をセットする。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.inverse" title="cymel.core.datatypes.quaternion.Quaternion.inverse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inverse</span></code></a>()</td>
-<td>逆クォータニオンを得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.invertIt" title="cymel.core.datatypes.quaternion.Quaternion.invertIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invertIt</span></code></a>()</td>
-<td>逆クォータニオンをセットする。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isEquivalent</span></code></a>(q[,&nbsp;tol])</td>
-<td>ほぼ等価かどうか。符号反転は同じ回転姿勢を表すものとして等価とみなす。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isIdentity" title="cymel.core.datatypes.quaternion.Quaternion.isIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isIdentity</span></code></a>([tol])</td>
-<td>ほぼ単位クォータニオンかどうか。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSignedEquivalent</span></code></a>(q[,&nbsp;tol])</td>
-<td>ほぼ同値かどうか。符号反転は同値とみなさない。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.length" title="cymel.core.datatypes.quaternion.Quaternion.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a>()</td>
-<td>クォータニオンの絶対値を得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.lengthSq" title="cymel.core.datatypes.quaternion.Quaternion.lengthSq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lengthSq</span></code></a>()</td>
-<td>クォータニオンの絶対値の2乗を得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.log" title="cymel.core.datatypes.quaternion.Quaternion.log"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log</span></code></a>()</td>
-<td>対数クォータニオンを得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRHV</span></code></a>(rhv[,&nbsp;reverse,&nbsp;aim,&nbsp;upv])</td>
-<td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV</span></code></a> の別名。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRHV2</span></code></a>(rhv[,&nbsp;axisOri,&nbsp;reverse])</td>
-<td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV2</span></code></a> の別名。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV</span></code></a>(rhv[,&nbsp;reverse,&nbsp;aim,&nbsp;upv])</td>
-<td>ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV2</span></code></a>(rhv[,&nbsp;axisOri,&nbsp;reverse])</td>
-<td>ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.mul" title="cymel.core.datatypes.quaternion.Quaternion.mul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mul</span></code></a>(v)</td>
-<td>4次元ベクトル要素ごとの積を得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.negateIt" title="cymel.core.datatypes.quaternion.Quaternion.negateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">negateIt</span></code></a>()</td>
-<td>符号反転クォータニオンをセットする。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normal" title="cymel.core.datatypes.quaternion.Quaternion.normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normal</span></code></a>()</td>
-<td>正規化クォータニオンを得る。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normalize" title="cymel.core.datatypes.quaternion.Quaternion.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a>()</td>
-<td>正規化クォータニオンをセットする。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normalizeIt" title="cymel.core.datatypes.quaternion.Quaternion.normalizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalizeIt</span></code></a>()</td>
-<td>正規化クォータニオンをセットする。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.safelog" title="cymel.core.datatypes.quaternion.Quaternion.safelog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">safelog</span></code></a>()</td>
-<td>絶対値が π/2 を超えない対数クォータニオンを得る。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.set" title="cymel.core.datatypes.quaternion.Quaternion.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(*args)</td>
-<td>他の値をセットする。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setAngle" title="cymel.core.datatypes.quaternion.Quaternion.setAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAngle</span></code></a>(theta[,&nbsp;correctAxis])</td>
-<td>クォータニオンの持つ回転角度を書き換える。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToIdentity" title="cymel.core.datatypes.quaternion.Quaternion.setToIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToIdentity</span></code></a>()</td>
-<td>単位クォータニオンをセットする。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToXAxis" title="cymel.core.datatypes.quaternion.Quaternion.setToXAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToXAxis</span></code></a>(angle)</td>
-<td>X軸回りの回転角度をセットする。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToYAxis" title="cymel.core.datatypes.quaternion.Quaternion.setToYAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToYAxis</span></code></a>(angle)</td>
-<td>Y軸回りの回転角度をセットする。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToZAxis" title="cymel.core.datatypes.quaternion.Quaternion.setToZAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToZAxis</span></code></a>(angle)</td>
-<td>Z軸回りの回転角度をセットする。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setValue" title="cymel.core.datatypes.quaternion.Quaternion.setValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValue</span></code></a>(*args)</td>
-<td>他の値をセットする。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setVecW" title="cymel.core.datatypes.quaternion.Quaternion.setVecW"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVecW</span></code></a>(vec,&nbsp;w)</td>
-<td>3次元ベクトルとw値をセットする。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.slerp" title="cymel.core.datatypes.quaternion.Quaternion.slerp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slerp</span></code></a>(p,&nbsp;q,&nbsp;t[,&nbsp;spin])</td>
-<td>クォータニオンを球面線形補間する。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.slerp0" title="cymel.core.datatypes.quaternion.Quaternion.slerp0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slerp0</span></code></a>(t[,&nbsp;spin])</td>
-<td>単位クォータニオンと球面線形補間する。</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squad" title="cymel.core.datatypes.quaternion.Quaternion.squad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squad</span></code></a>(p,&nbsp;a,&nbsp;b,&nbsp;q,&nbsp;t[,&nbsp;spin])</td>
-<td>クォータニオンを球面曲線補間する。</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squadPt" title="cymel.core.datatypes.quaternion.Quaternion.squadPt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squadPt</span></code></a>(q0,&nbsp;q1,&nbsp;q2)</td>
-<td><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squad" title="cymel.core.datatypes.quaternion.Quaternion.squad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squad</span></code></a> 用の制御点を計算する。</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Attributes:</p>
-<dl class="attribute">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.Identity">
-<code class="descname">Identity</code><em class="property"> = ImmutableQuaternion(0, 0, 0, 1)</em><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.Identity" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.Tolerance">
-<code class="descname">Tolerance</code><em class="property"> = 1e-10</em><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.Tolerance" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.Zero">
-<code class="descname">Zero</code><em class="property"> = ImmutableQuaternion(0, 0, 0, 0)</em><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.Zero" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p class="rubric">Methods Details:</p>
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asAA">
-<code class="descname">asAA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asAA" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a> の別名。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asAngle">
-<code class="descname">asAngle</code><span class="sig-paren">(</span><em>naxis=None</em>, <em>bound=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asAngle" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>クォータニオンの持つ回転角度を得る。</p>
-<p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a> では 0 になるような微小な角度も取得出来るが、
-その場合は <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a> で得られる軸
-（おそらく 0 度扱いの場合は常に (0,0,1) となる）
-には対応しない。</p>
-<p>また、回転軸があらかじめ分かっている場合は
-指定した方が精度の良い値を得られる。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>naxis</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 回転軸が分かっている場合はそれを指定する。
-<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a> で得られるベクトルと平行でなければならない。
-反転した軸も指定可能で、その場合、反転した角度が得られる。</li>
-<li><strong>bound</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ±π の範囲に収めた角度を得るかどうか。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle">
-<code class="descname">asAxisAngle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>軸ベクトルと回転角度として得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asBend">
-<code class="descname">asBend</code><span class="sig-paren">(</span><em>reverse=False</em>, <em>aim=ImmutableVector(1.000000</em>, <em>0.000000</em>, <em>0.000000)</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asBend" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ボーン回転とした場合の曲げ成分を得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
-デフォルトでは、階層上位から見て曲げてから捻るが、
-True を指定すると捻ってから曲げる分解になる。</li>
-<li><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- ボーン方向ベクトル。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asD">
-<code class="descname">asD</code><span class="sig-paren">(</span><em>order=0</em>, <em>correct=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asD" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a> の別名。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asDegrees">
-<code class="descname">asDegrees</code><span class="sig-paren">(</span><em>order=0</em>, <em>correct=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>オイラー角回転を度数法の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> として得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 得たい回転オーダー。</li>
-<li><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 得られるオイラー角回転値を再度クォータニオン化したときに
-元の符号と一致するように補正する。
-不適切な場合に <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reverseDirection</span></code></a> することと等しい。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last">単位を弧度法で得たい場合は <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a> を使用すると良い。</p>
-</div>
-<div class="admonition warning">
-<p class="first admonition-title">警告</p>
-<p class="last">correct に真を指定して得た値を rotateAxis にセットしようとすると
-正常にセットできない場合があるので、その用途では指定すべきではない。</p>
-</div>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asE">
-<code class="descname">asE</code><span class="sig-paren">(</span><em>order=0</em>, <em>correct=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asE" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a> の別名。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation">
-<code class="descname">asEulerRotation</code><span class="sig-paren">(</span><em>order=0</em>, <em>correct=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>オイラー角回転として得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 得たい回転オーダー。</li>
-<li><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 得られるオイラー角回転値を再度クォータニオン化したときに
-元の符号と一致するように補正する。
-不適切な場合に <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reverseDirection</span></code></a> することと等しい。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code> の単位は弧度法なので、
-度数法で得たい場合は <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a> を使用すると良い。</p>
-</div>
-<div class="admonition warning">
-<p class="first admonition-title">警告</p>
-<p class="last">correct に真を指定して得た値を rotateAxis にセットしようとすると
-正常にセットできない場合があるので、その用途では指定すべきではない。</p>
-</div>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asM">
-<code class="descname">asM</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asM" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asMatrix" title="cymel.core.datatypes.quaternion.Quaternion.asMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asMatrix</span></code></a> の別名。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asMatrix">
-<code class="descname">asMatrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asMatrix" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>回転行列として得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asRHV">
-<code class="descname">asRHV</code><span class="sig-paren">(</span><em>reverse=False</em>, <em>aim=ImmutableVector(1.000000</em>, <em>0.000000</em>, <em>0.000000)</em>, <em>upv=ImmutableVector(0.000000</em>, <em>1.000000</em>, <em>0.000000)</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV</span></code></a> の別名。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asRHV2">
-<code class="descname">asRHV2</code><span class="sig-paren">(</span><em>axisOri=None</em>, <em>reverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV2</span></code></a> の別名。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asRoll">
-<code class="descname">asRoll</code><span class="sig-paren">(</span><em>aim=ImmutableVector(1.000000</em>, <em>0.000000</em>, <em>0.000000)</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRoll" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ボーン回転とした場合の捻り成分を得る。</p>
-<p>分解の考え方として、曲げてから捻っても、捻ってから曲げても、
-同じ値が得られるため <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asBend" title="cymel.core.datatypes.quaternion.Quaternion.asBend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asBend</span></code></a> や <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV</span></code></a> のような
-reverse オプションはない。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- ボーン方向ベクトル。</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV">
-<code class="descname">asRollBendHV</code><span class="sig-paren">(</span><em>reverse=False</em>, <em>aim=ImmutableVector(1.000000</em>, <em>0.000000</em>, <em>0.000000)</em>, <em>upv=ImmutableVector(0.000000</em>, <em>1.000000</em>, <em>0.000000)</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
-デフォルトでは、階層上位から見て曲げてから捻るが、
-True を指定すると捻ってから曲げる分解になる。</li>
-<li><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- ボーン方向ベクトル。</li>
-<li><strong>upv</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- ボーンアップベクトル。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">[roll, bendH, bendV]</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2">
-<code class="descname">asRollBendHV2</code><span class="sig-paren">(</span><em>axisOri=None</em>, <em>reverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>axisOri</strong> -- 基準軸を回転（クォータニオン）で指定する。
-その空間のX軸がボーン方向、Y軸がアップ方向に相当する。
-デフォルトの None は単位クォータニオンと同じである。</li>
-<li><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
-デフォルトでは、階層上位から見て曲げてから捻るが、
-True を指定すると捻ってから曲げる分解になる。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">[roll, bendH, bendV]</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asTransformation">
-<code class="descname">asTransformation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asTransformation" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>トランスフォーメーションとして得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="cymel.core.datatypes.transformation.Transformation.html#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asVecW">
-<code class="descname">asVecW</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asVecW" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>3次元ベクトルとw値を得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector,</span> <span class="pre">`float</span></code></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.asX">
-<code class="descname">asX</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asX" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asTransformation" title="cymel.core.datatypes.quaternion.Quaternion.asTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTransformation</span></code></a> の別名。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.conjugate">
-<code class="descname">conjugate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.conjugate" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>共役クォータニオンを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.conjugateIt">
-<code class="descname">conjugateIt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.conjugateIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>共役クォータニオンをセットする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.div">
-<code class="descname">div</code><span class="sig-paren">(</span><em>v</em>, <em>pre=1e-13</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.div" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>4次元ベクトル要素ごとのの商を得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 分母のクォータニオン。</li>
-<li><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- ゼロ除算を避ける為の許容誤差。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.dot">
-<code class="descname">dot</code><span class="sig-paren">(</span><em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.dot" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>クォータニオンの内積を得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- もう一方のクォータニオン。</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.exp">
-<code class="descname">exp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.exp" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>対数クォータニオンからクォータニオンを得る。。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.fromVecW">
-<em class="property">classmethod </em><code class="descname">fromVecW</code><span class="sig-paren">(</span><em>vec</em>, <em>w</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.fromVecW" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>3次元ベクトルとw値からクォータニオンを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>vec</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 3次元ベクトル</li>
-<li><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- w値</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.idiv">
-<code class="descname">idiv</code><span class="sig-paren">(</span><em>v</em>, <em>pre=1e-13</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.idiv" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>4次元ベクトル要素ごとのの商をセットする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 分母のクォータニオン。</li>
-<li><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- ゼロ除算を避ける為の許容誤差。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code> (self)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.imul">
-<code class="descname">imul</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.imul" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>4次元ベクトル要素ごとの積をセットする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- もう1方のクォータニオン。</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.inverse">
-<code class="descname">inverse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.inverse" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>逆クォータニオンを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.invertIt">
-<code class="descname">invertIt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.invertIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>逆クォータニオンをセットする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.isEquivalent">
-<code class="descname">isEquivalent</code><span class="sig-paren">(</span><em>q</em>, <em>tol=1e-10</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.isEquivalent" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ほぼ等価かどうか。符号反転は同じ回転姿勢を表すものとして等価とみなす。</p>
-<p>符号反転を等価とみなしたくない場合は
-<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSignedEquivalent</span></code></a> を利用すると良い。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 比較するクォータニオン。</li>
-<li><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 許容誤差。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p><a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MQuaternion.html">MQuaternion</a> の isEquivalent では、
-2015 未満では符号反転は等価とみなされなかったが、
-2015 以降で等価とみなされるように変更された。</p>
-<p class="last">cymel では現在の API の仕様に合わせ、
-どのバージョンでも一貫して等価とみなすようにしている。</p>
-</div>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.isIdentity">
-<code class="descname">isIdentity</code><span class="sig-paren">(</span><em>tol=1e-10</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.isIdentity" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ほぼ単位クォータニオンかどうか。</p>
-<p>単位クォータニオンと <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSignedEquivalent</span></code></a> で比較することと等しい。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 許容誤差。</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent">
-<code class="descname">isSignedEquivalent</code><span class="sig-paren">(</span><em>q</em>, <em>tol=1e-10</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ほぼ同値かどうか。符号反転は同値とみなさない。</p>
-<p>符号反転も等価とみなしたい場合は
-<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isEquivalent</span></code></a> を利用すると良い。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 比較するクォータニオン。</li>
-<li><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 許容誤差。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.length">
-<code class="descname">length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.length" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>クォータニオンの絶対値を得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.lengthSq">
-<code class="descname">lengthSq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.lengthSq" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>クォータニオンの絶対値の2乗を得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.log">
-<code class="descname">log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.log" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>対数クォータニオンを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.makeRHV">
-<em class="property">classmethod </em><code class="descname">makeRHV</code><span class="sig-paren">(</span><em>rhv</em>, <em>reverse=False</em>, <em>aim=ImmutableVector(1.000000</em>, <em>0.000000</em>, <em>0.000000)</em>, <em>upv=ImmutableVector(0.000000</em>, <em>1.000000</em>, <em>0.000000)</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV</span></code></a> の別名。</p>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.makeRHV2">
-<em class="property">classmethod </em><code class="descname">makeRHV2</code><span class="sig-paren">(</span><em>rhv</em>, <em>axisOri=None</em>, <em>reverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV2</span></code></a> の別名。</p>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV">
-<em class="property">classmethod </em><code class="descname">makeRollBendHV</code><span class="sig-paren">(</span><em>rhv</em>, <em>reverse=False</em>, <em>aim=ImmutableVector(1.000000</em>, <em>0.000000</em>, <em>0.000000)</em>, <em>upv=ImmutableVector(0.000000</em>, <em>1.000000</em>, <em>0.000000)</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>rhv</strong> -- [roll, bendH, bendV]</li>
-<li><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
-デフォルトでは、階層上位から見て曲げてから捻るが、
-True を指定すると捻ってから曲げる合成になる。</li>
-<li><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- ボーン方向ベクトル。</li>
-<li><strong>upv</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- ボーンアップベクトル。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2">
-<em class="property">classmethod </em><code class="descname">makeRollBendHV2</code><span class="sig-paren">(</span><em>rhv</em>, <em>axisOri=None</em>, <em>reverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>rhv</strong> -- [roll, bendH, bendV]</li>
-<li><strong>axisOri</strong> -- 基準軸を回転（クォータニオン）で指定する。
-その空間のX軸がボーン方向、Y軸がアップ方向に相当する。
-デフォルトの None は単位クォータニオンと同じである。</li>
-<li><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
-デフォルトでは、階層上位から見て曲げてから捻るが、
-True を指定すると捻ってから曲げる合成になる。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.mul">
-<code class="descname">mul</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.mul" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>4次元ベクトル要素ごとの積を得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- もう1方のクォータニオン。</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.negateIt">
-<code class="descname">negateIt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.negateIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>符号反転クォータニオンをセットする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.normal">
-<code class="descname">normal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.normal" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>正規化クォータニオンを得る。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.normalize">
-<code class="descname">normalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.normalize" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>正規化クォータニオンをセットする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.normalizeIt">
-<code class="descname">normalizeIt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.normalizeIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>正規化クォータニオンをセットする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.safelog">
-<code class="descname">safelog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.safelog" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>絶対値が π/2 を超えない対数クォータニオンを得る。</p>
-<p>w &lt; 0 の場合に符号反転したうえで <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.log" title="cymel.core.datatypes.quaternion.Quaternion.log"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log</span></code></a> が得られる。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.set">
-<code class="descname">set</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.set" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>他の値をセットする。</p>
-<p>コンストラクタと同様に、以下の値を指定可能。</p>
-<ul class="simple">
-<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></li>
-<li>x, y, z, w</li>
-<li>4値までのシーケンス</li>
-<li>回転軸 (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>), 角度</li>
-<li>角度, 回転軸 (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</li>
-<li><a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a></li>
-<li><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></li>
-<li><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></li>
-</ul>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.setAngle">
-<code class="descname">setAngle</code><span class="sig-paren">(</span><em>theta</em>, <em>correctAxis=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setAngle" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>クォータニオンの持つ回転角度を書き換える。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>theta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 角度。</li>
-<li><strong>correctAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 現在の w が負
-（πより大きい回転角度を持っている）
-なら、軸を反転補正させた上での角度をセットする。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.setToIdentity">
-<code class="descname">setToIdentity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setToIdentity" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>単位クォータニオンをセットする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><code class="xref py py-obj docutils literal notranslate"><span class="pre">self</span></code></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.setToXAxis">
-<code class="descname">setToXAxis</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setToXAxis" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>X軸回りの回転角度をセットする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 角度。</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.setToYAxis">
-<code class="descname">setToYAxis</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setToYAxis" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Y軸回りの回転角度をセットする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 角度。</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.setToZAxis">
-<code class="descname">setToZAxis</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setToZAxis" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Z軸回りの回転角度をセットする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 角度。</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.setValue">
-<code class="descname">setValue</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setValue" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>他の値をセットする。</p>
-<p>コンストラクタと同様に、以下の値を指定可能。</p>
-<ul class="simple">
-<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></li>
-<li>x, y, z, w</li>
-<li>4値までのシーケンス</li>
-<li>回転軸 (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>), 角度</li>
-<li>角度, 回転軸 (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</li>
-<li><a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a></li>
-<li><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></li>
-<li><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></li>
-</ul>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.setVecW">
-<code class="descname">setVecW</code><span class="sig-paren">(</span><em>vec</em>, <em>w</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setVecW" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>3次元ベクトルとw値をセットする。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>vec</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 3次元ベクトル</li>
-<li><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- w値</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.slerp">
-<em class="property">classmethod </em><code class="descname">slerp</code><span class="sig-paren">(</span><em>p</em>, <em>q</em>, <em>t</em>, <em>spin=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.slerp" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>クォータニオンを球面線形補間する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>p</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 始点クォータニオン。</li>
-<li><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 終点クォータニオン。</li>
-<li><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 0.0～1.0の補間係数。範囲外も指定可。</li>
-<li><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- スピン値。
-デフォルトの0は最短方向、-1は逆方向、
-さらに+1や-1すると余分に周回する。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.slerp0">
-<code class="descname">slerp0</code><span class="sig-paren">(</span><em>t</em>, <em>spin=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.slerp0" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>単位クォータニオンと球面線形補間する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 0.0～1.0の補間係数。範囲外も指定可。</li>
-<li><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- スピン値。
-デフォルトの0は正方向、-1は逆方向、
-さらに+1や-1すると余分に周回する。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.squad">
-<em class="property">static </em><code class="descname">squad</code><span class="sig-paren">(</span><em>p</em>, <em>a</em>, <em>b</em>, <em>q</em>, <em>t</em>, <em>spin=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.squad" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>クォータニオンを球面曲線補間する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>p</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 始点クォータニオン。</li>
-<li><strong>a</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 始点側の制御点。</li>
-<li><strong>b</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 終点側の制御点。</li>
-<li><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 終点クォータニオン。</li>
-<li><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 0.0～1.0の補間係数。範囲外も指定可。</li>
-<li><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- スピン値。
-デフォルトの0は正方向、-1は逆方向、
-さらに+1や-1すると余分に周回する。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="cymel.core.datatypes.quaternion.Quaternion.squadPt">
-<em class="property">static </em><code class="descname">squadPt</code><span class="sig-paren">(</span><em>q0</em>, <em>q1</em>, <em>q2</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.squadPt" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squad" title="cymel.core.datatypes.quaternion.Quaternion.squad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squad</span></code></a> 用の制御点を計算する。</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>q0</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 1つめのクォータニオン。</li>
-<li><strong>q1</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 2つめのクォータニオン。</li>
-<li><strong>q2</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 3つめのクォータニオン。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-
-
-          </div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -1281,14 +1197,15 @@ True を指定すると捻ってから曲げる合成になる。</li>
         <li class="right" >
           <a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html" title="class cymel.core.datatypes.quaternion.ImmutableQuaternion"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" >cymel.core.datatypes.quaternion</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" >cymel.core.datatypes.quaternion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.quaternion.Quaternion</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, ryusas.
-      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 で生成しました。
+        &#169; Copyright 2020-2023, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
     </div>
   </body>
 </html>

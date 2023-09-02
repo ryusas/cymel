@@ -1,4 +1,4 @@
-cymel.constants
+﻿cymel.constants
 ===============
 
 .. automodule:: cymel.constants

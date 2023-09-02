@@ -513,8 +513,13 @@ class Node(Node_c):
                     for p in plug.children():
                         p.apiSetDefault(default, True, True)
             if channelBox:
-                for x in childNames:
-                    _setAttr(nodename_ + x, cb=True)
+                if isinstance(channelBox, Iterable):
+                    for x, v in zip(childNames, channelBox):
+                        if v:
+                            _setAttr(nodename_ + x, cb=True)
+                else:
+                    for x in childNames:
+                        _setAttr(nodename_ + x, cb=True)
             if proxy:
                 for x, src in zip(childNames, masterChildren):
                     _connectAttr(src.name_(), nodename_ + x)

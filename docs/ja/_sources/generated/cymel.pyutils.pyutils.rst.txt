@@ -1,4 +1,4 @@
-cymel.pyutils.pyutils
+﻿cymel.pyutils.pyutils
 =====================
 
 .. automodule:: cymel.pyutils.pyutils
@@ -30,6 +30,8 @@ cymel.pyutils.pyutils
         boundAngle
         convIntToBaseN
         donothing
+        execfile
+        fround
         getTempFilename
         gettrue
         incrementName
@@ -38,9 +40,7 @@ cymel.pyutils.pyutils
         iterTreeBreadthFirst
         iterTreeDepthFirst
         parentClasses
-        round
         ucToStrList
-        with_metaclass
 
 
 
@@ -60,6 +60,10 @@ cymel.pyutils.pyutils
     .. autodata:: dict_itervalues
     .. autodata:: dict_keys
     .. autodata:: dict_values
+    .. autodata:: lfilter
+    .. autodata:: lmap
+    .. autodata:: lrange
+    .. autodata:: lzip
 
 
 
@@ -89,6 +93,8 @@ cymel.pyutils.pyutils
     .. autofunction:: boundAngle
     .. autofunction:: convIntToBaseN
     .. autofunction:: donothing
+    .. autofunction:: execfile
+    .. autofunction:: fround
     .. autofunction:: getTempFilename
     .. autofunction:: gettrue
     .. autofunction:: incrementName
@@ -97,8 +103,6 @@ cymel.pyutils.pyutils
     .. autofunction:: iterTreeBreadthFirst
     .. autofunction:: iterTreeDepthFirst
     .. autofunction:: parentClasses
-    .. autofunction:: round
     .. autofunction:: ucToStrList
-    .. autofunction:: with_metaclass
 
 

@@ -1,22 +1,19 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<html lang="ja">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.core.datatypes.matrix.ImmutableMatrix &#8212; cymel 0.19.2023042300 ドキュメント</title>
-    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.datatypes.matrix.ImmutableMatrix &#8212; cymel 0.20.2023090200 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="class cymel.core.datatypes.matrix.Matrix" href="cymel.core.datatypes.matrix.Matrix.html" />
@@ -37,19 +34,499 @@
         <li class="right" >
           <a href="../cymel.core.datatypes.matrix.html" title="cymel.core.datatypes.matrix"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.matrix.html" accesskey="U">cymel.core.datatypes.matrix</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.matrix.html" accesskey="U">cymel.core.datatypes.matrix</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.matrix.ImmutableMatrix</a></li> 
       </ul>
-    </div>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-datatypes-matrix-immutablematrix">
+<h1>class cymel.core.datatypes.matrix.ImmutableMatrix<a class="headerlink" href="#class-cymel-core-datatypes-matrix-immutablematrix" title="この見出しへのパーマリンク">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-42509631373e86e3bb48b59b9e21cc1e3052d2f9.png" alt="Inheritance diagram of ImmutableMatrix" usemap="#inheritance3670ad9c05" class="inheritance graphviz" /></div>
+<map id="inheritance3670ad9c05" name="inheritance3670ad9c05">
+<area shape="rect" id="node1" href="#cymel.core.datatypes.matrix.ImmutableMatrix" target="_top" title="ImmutableMatrix" alt="" coords="5,44,104,68"/>
+<area shape="rect" id="node2" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" target="_top" title="4x4 マトリックスクラス。" alt="" coords="19,5,91,29"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.core.datatypes.matrix.</span></span><span class="sig-name descname"><span class="pre">ImmutableMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a></p>
+<p><cite>Matrix</cite> の <cite>immutable</cite> ラッパー。</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addT" title="cymel.core.datatypes.matrix.ImmutableMatrix.addT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addT</span></code></a>(*args, **kwargs)</p></td>
+<td><p>平行移動値を加算する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation" title="cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addTranslation</span></code></a>(*args, **kwargs)</p></td>
+<td><p>平行移動値を加算する。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjointIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>余因子行列をセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjugateIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>余因子行列をセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">homogenizeIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>3x3部分を正規直交化した行列をセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation" title="cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imulidivsetTranslation</span></code></a>(*args, **kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.init3x3" title="cymel.core.datatypes.matrix.ImmutableMatrix.init3x3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init3x3</span></code></a>(*args, **kwargs)</p></td>
+<td><p>3x3 部分を初期化する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initT" title="cymel.core.datatypes.matrix.ImmutableMatrix.initT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initT</span></code></a>(*args, **kwargs)</p></td>
+<td><p>4行目の平行移動成分をクリアする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation" title="cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initTranslation</span></code></a>(*args, **kwargs)</p></td>
+<td><p>4行目の平行移動成分をクリアする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.invertIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.invertIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invertIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>逆行列をセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mirrorIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>指定軸方向でミラーしたマトリックスをセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orthonormalizeIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>3x3部分を正規直交化した行列をセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.set" title="cymel.core.datatypes.matrix.ImmutableMatrix.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(*args, **kwargs)</p></td>
+<td><p>他の値をセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxes" title="cymel.core.datatypes.matrix.ImmutableMatrix.setAxes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAxes</span></code></a>(*args, **kwargs)</p></td>
+<td><p>3x3部分の行や列と4行目の平行移動ベクトルをセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxis" title="cymel.core.datatypes.matrix.ImmutableMatrix.setAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAxis</span></code></a>(*args, **kwargs)</p></td>
+<td><p>3x3部分の行や列のベクトルをセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumn" title="cymel.core.datatypes.matrix.ImmutableMatrix.setColumn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setColumn</span></code></a>(*args, **kwargs)</p></td>
+<td><p>列ベクトルをセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumns" title="cymel.core.datatypes.matrix.ImmutableMatrix.setColumns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setColumns</span></code></a>(*args, **kwargs)</p></td>
+<td><p>列ベクトルを4つ全てセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setElem" title="cymel.core.datatypes.matrix.ImmutableMatrix.setElem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setElem</span></code></a>(*args, **kwargs)</p></td>
+<td><p>指定位置の要素をセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRow" title="cymel.core.datatypes.matrix.ImmutableMatrix.setRow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRow</span></code></a>(*args, **kwargs)</p></td>
+<td><p>行ベクトルをセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRows" title="cymel.core.datatypes.matrix.ImmutableMatrix.setRows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRows</span></code></a>(*args, **kwargs)</p></td>
+<td><p>行ベクトルを4つ全てセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setT" title="cymel.core.datatypes.matrix.ImmutableMatrix.setT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setT</span></code></a>(*args, **kwargs)</p></td>
+<td><p>平行移動値をセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity" title="cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToIdentity</span></code></a>(*args, **kwargs)</p></td>
+<td><p>単位行列をセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subT" title="cymel.core.datatypes.matrix.ImmutableMatrix.subT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subT</span></code></a>(*args, **kwargs)</p></td>
+<td><p>平行移動値を減算する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation" title="cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subTranslation</span></code></a>(*args, **kwargs)</p></td>
+<td><p>平行移動値を減算する。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transposeIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>転置行列をセットする。</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.addT">
+<span class="sig-name descname"><span class="pre">addT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addT" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>平行移動値を加算する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<cite>.Vector</cite>) -- 平行移動の3次元ベクトル。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation">
+<span class="sig-name descname"><span class="pre">addTranslation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>平行移動値を加算する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<cite>.Vector</cite>) -- 平行移動の3次元ベクトル。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt">
+<span class="sig-name descname"><span class="pre">adjointIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>余因子行列をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Matrix</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt">
+<span class="sig-name descname"><span class="pre">adjugateIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>余因子行列をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Matrix</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt">
+<span class="sig-name descname"><span class="pre">homogenizeIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>3x3部分を正規直交化した行列をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Matrix</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation">
+<span class="sig-name descname"><span class="pre">imulidivsetTranslation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.init3x3">
+<span class="sig-name descname"><span class="pre">init3x3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.init3x3" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>3x3 部分を初期化する。</p>
+<p>4x4 全て初期化する場合は <cite>setToIdentity</cite> が利用できる。</p>
+<p>平行移動成分のみの行列を新規に得たい場合は
+<cite>asTranslationMatrix</cite> が利用できる。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Matrix</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.initT">
+<span class="sig-name descname"><span class="pre">initT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initT" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>4行目の平行移動成分をクリアする。</p>
+<p>3x3 以外を初期化したマトリクスを新規に得たい場合は
+<cite>as3x3</cite> が利用できる。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Matrix</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation">
+<span class="sig-name descname"><span class="pre">initTranslation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>4行目の平行移動成分をクリアする。</p>
+<p>3x3 以外を初期化したマトリクスを新規に得たい場合は
+<cite>as3x3</cite> が利用できる。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Matrix</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.invertIt">
+<span class="sig-name descname"><span class="pre">invertIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.invertIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>逆行列をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Matrix</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt">
+<span class="sig-name descname"><span class="pre">mirrorIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定軸方向でミラーしたマトリックスをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mirrorAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- ミラーする基準軸。
+<cite>.AXIS_X</cite> 、 <cite>.AXIS_Y</cite> 、 <cite>.AXIS_Z</cite> のいずれかを指定する。</p></li>
+<li><p><strong>negAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- <p>行列式（スケール）が反転しないように、
+ミラー結果の逆を向けるローカル軸。
+<cite>.AXIS_X</cite> 、 <cite>.AXIS_Y</cite> 、 <cite>.AXIS_Z</cite> の他に、
+None 、 False 、 True を指定可能。</p>
+<p>省略時(True)はミラー基準軸と同じになる。
+False では 3x3 部は反転しない。
+None ではミラー結果から全軸を逆に向ける。</p>
+</p></li>
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 平行移動値（4行目）も反転するかどうか。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Matrix</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt">
+<span class="sig-name descname"><span class="pre">orthonormalizeIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>3x3部分を正規直交化した行列をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Matrix</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.set" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>他の値をセットする。</p>
+<p>コンストラクタと同様に、以下の値を指定可能。</p>
+<ul class="simple">
+<li><p><cite>Matrix</cite></p></li>
+<li><p>16値のシーケンス</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Matrix</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setAxes">
+<span class="sig-name descname"><span class="pre">setAxes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxes" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>3x3部分の行や列と4行目の平行移動ベクトルをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vx</strong> (<cite>.Vector</cite>) -- セットするX軸ベクトル。</p></li>
+<li><p><strong>vy</strong> (<cite>.Vector</cite>) -- セットするY軸ベクトル。</p></li>
+<li><p><strong>vz</strong> (<cite>.Vector</cite>) -- セットするZ軸ベクトル。</p></li>
+<li><p><strong>vt</strong> (<cite>.Vector</cite>) -- セットする平行移動ベクトル。
+これだけは transpose オプションの影響を受けない。</p></li>
+<li><p><strong>transpose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 3x3部分には転置行列の軸ベクトルをセットする。
+言い換えると False では行ベクトルを
+True では列ベクトルをセットすることになる。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setAxis">
+<span class="sig-name descname"><span class="pre">setAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxis" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>3x3部分の行や列のベクトルをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 軸指定(0=X, 1=Y, 2=Z)。</p></li>
+<li><p><strong>v</strong> (<cite>.Vector</cite>) -- セットする軸ベクトル。</p></li>
+<li><p><strong>transpose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 転置行列の軸ベクトルをセットする。
+言い換えると False では行ベクトルを
+True では列ベクトルをセットすることになる。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setColumn">
+<span class="sig-name descname"><span class="pre">setColumn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumn" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>列ベクトルをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 列インデックス（0～3）。</p></li>
+<li><p><strong>v</strong> (<cite>.Vector</cite>) -- セットする4次元ベクトル。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setColumns">
+<span class="sig-name descname"><span class="pre">setColumns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumns" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>列ベクトルを4つ全てセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v0</strong> (<cite>.Vector</cite>) -- 1列目の4次元ベクトル。</p></li>
+<li><p><strong>v1</strong> (<cite>.Vector</cite>) -- 2列目の4次元ベクトル。</p></li>
+<li><p><strong>v2</strong> (<cite>.Vector</cite>) -- 3列目の4次元ベクトル。</p></li>
+<li><p><strong>v3</strong> (<cite>.Vector</cite>) -- 4列目の4次元ベクトル。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setElem">
+<span class="sig-name descname"><span class="pre">setElem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setElem" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定位置の要素をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 行を 0 ～ 3 で指定。</p></li>
+<li><p><strong>col</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 列を 0 ～ 3 で指定。</p></li>
+<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- セットする値。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setRow">
+<span class="sig-name descname"><span class="pre">setRow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRow" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>行ベクトルをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 行インデックス（0～3）。</p></li>
+<li><p><strong>v</strong> (<cite>.Vector</cite>) -- セットする4次元ベクトル。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setRows">
+<span class="sig-name descname"><span class="pre">setRows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRows" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>行ベクトルを4つ全てセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v0</strong> (<cite>.Vector</cite>) -- 1行目の4次元ベクトル。</p></li>
+<li><p><strong>v1</strong> (<cite>.Vector</cite>) -- 2行目の4次元ベクトル。</p></li>
+<li><p><strong>v2</strong> (<cite>.Vector</cite>) -- 3行目の4次元ベクトル。</p></li>
+<li><p><strong>v3</strong> (<cite>.Vector</cite>) -- 4行目の4次元ベクトル。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setT">
+<span class="sig-name descname"><span class="pre">setT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setT" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>平行移動値をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<cite>.Vector</cite>) -- 平行移動の3次元ベクトル。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity">
+<span class="sig-name descname"><span class="pre">setToIdentity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>単位行列をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>self</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.subT">
+<span class="sig-name descname"><span class="pre">subT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subT" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>平行移動値を減算する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<cite>.Vector</cite>) -- 平行移動の3次元ベクトル。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation">
+<span class="sig-name descname"><span class="pre">subTranslation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>平行移動値を減算する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<cite>.Vector</cite>) -- 平行移動の3次元ベクトル。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt">
+<span class="sig-name descname"><span class="pre">transposeIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>転置行列をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Matrix</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>前のトピックへ</h4>
-  <p class="topless"><a href="../cymel.core.datatypes.matrix.html"
-                        title="前の章へ">cymel.core.datatypes.matrix</a></p>
-  <h4>次のトピックへ</h4>
-  <p class="topless"><a href="cymel.core.datatypes.matrix.Matrix.html"
-                        title="次の章へ">class cymel.core.datatypes.matrix.Matrix</a></p>
+  <div>
+    <h3><a href="../../index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.datatypes.matrix.ImmutableMatrix</a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addT"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.addT()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.addTranslation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.adjointIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.adjugateIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.homogenizeIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.imulidivsetTranslation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.init3x3"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.init3x3()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initT"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.initT()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.initTranslation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.invertIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.invertIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.mirrorIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.orthonormalizeIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.set"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.set()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxes"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setAxes()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxis"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setAxis()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumn"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setColumn()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumns"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setColumns()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setElem"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setElem()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRow"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setRow()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRows"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setRows()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setT"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setT()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setToIdentity()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subT"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.subT()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.subTranslation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.transposeIt()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="../cymel.core.datatypes.matrix.html"
+                          title="前の章へ">cymel.core.datatypes.matrix</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="cymel.core.datatypes.matrix.Matrix.html"
+                          title="次の章へ">class cymel.core.datatypes.matrix.Matrix</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>このページ</h3>
     <ul class="this-page-menu">
@@ -58,252 +535,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>クイック検索</h3>
+  <h3 id="searchlabel">クイック検索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="検索" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="class-cymel-core-datatypes-matrix-immutablematrix">
-<h1>class cymel.core.datatypes.matrix.ImmutableMatrix<a class="headerlink" href="#class-cymel-core-datatypes-matrix-immutablematrix" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="graphviz"><img src="../../_images/inheritance-06f4565233b1b57b24f99cac8ce5878f168578da.png" alt="Inheritance diagram of ImmutableMatrix" usemap="#inheritance3670ad9c05" class="inheritance graphviz" /></div>
-<map id="inheritance3670ad9c05" name="inheritance3670ad9c05">
-<area shape="rect" id="node1" href="#cymel.core.datatypes.matrix.ImmutableMatrix" target="_top" title="ImmutableMatrix" alt="" coords="5,44,104,68"/>
-<area shape="rect" id="node2" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" target="_top" title="4x4 マトリックスクラス。" alt="" coords="19,5,91,29"/>
-</map><dl class="class">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix">
-<em class="property">class </em><code class="descclassname">cymel.core.datatypes.matrix.</code><code class="descname">ImmutableMatrix</code><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">cymel.core.datatypes.matrix.Matrix</span></code></a></p>
-<p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> の <code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code> ラッパー。</p>
-<p class="rubric">Methods:</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addT" title="cymel.core.datatypes.matrix.ImmutableMatrix.addT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addT</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation" title="cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addTranslation</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjointIt</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjugateIt</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">homogenizeIt</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation" title="cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imulidivsetTranslation</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.init3x3" title="cymel.core.datatypes.matrix.ImmutableMatrix.init3x3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init3x3</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initT" title="cymel.core.datatypes.matrix.ImmutableMatrix.initT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initT</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation" title="cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initTranslation</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.invertIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.invertIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invertIt</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mirrorIt</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orthonormalizeIt</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.set" title="cymel.core.datatypes.matrix.ImmutableMatrix.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxes" title="cymel.core.datatypes.matrix.ImmutableMatrix.setAxes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAxes</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxis" title="cymel.core.datatypes.matrix.ImmutableMatrix.setAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAxis</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumn" title="cymel.core.datatypes.matrix.ImmutableMatrix.setColumn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setColumn</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumns" title="cymel.core.datatypes.matrix.ImmutableMatrix.setColumns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setColumns</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setElem" title="cymel.core.datatypes.matrix.ImmutableMatrix.setElem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setElem</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRow" title="cymel.core.datatypes.matrix.ImmutableMatrix.setRow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRow</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRows" title="cymel.core.datatypes.matrix.ImmutableMatrix.setRows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRows</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setT" title="cymel.core.datatypes.matrix.ImmutableMatrix.setT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setT</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity" title="cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToIdentity</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subT" title="cymel.core.datatypes.matrix.ImmutableMatrix.subT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subT</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation" title="cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subTranslation</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transposeIt</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods Details:</p>
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.addT">
-<code class="descname">addT</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addT" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation">
-<code class="descname">addTranslation</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt">
-<code class="descname">adjointIt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt">
-<code class="descname">adjugateIt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt">
-<code class="descname">homogenizeIt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation">
-<code class="descname">imulidivsetTranslation</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.init3x3">
-<code class="descname">init3x3</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.init3x3" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.initT">
-<code class="descname">initT</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initT" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation">
-<code class="descname">initTranslation</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.invertIt">
-<code class="descname">invertIt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.invertIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt">
-<code class="descname">mirrorIt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt">
-<code class="descname">orthonormalizeIt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.set">
-<code class="descname">set</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.set" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.setAxes">
-<code class="descname">setAxes</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxes" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.setAxis">
-<code class="descname">setAxis</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxis" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.setColumn">
-<code class="descname">setColumn</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumn" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.setColumns">
-<code class="descname">setColumns</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumns" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.setElem">
-<code class="descname">setElem</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setElem" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.setRow">
-<code class="descname">setRow</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRow" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.setRows">
-<code class="descname">setRows</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRows" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.setT">
-<code class="descname">setT</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setT" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity">
-<code class="descname">setToIdentity</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.subT">
-<code class="descname">subT</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subT" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation">
-<code class="descname">subTranslation</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt">
-<code class="descname">transposeIt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</div>
-
-
-          </div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -323,14 +563,15 @@
         <li class="right" >
           <a href="../cymel.core.datatypes.matrix.html" title="cymel.core.datatypes.matrix"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.matrix.html" >cymel.core.datatypes.matrix</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.matrix.html" >cymel.core.datatypes.matrix</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.matrix.ImmutableMatrix</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, ryusas.
-      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 で生成しました。
+        &#169; Copyright 2020-2023, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
     </div>
   </body>
 </html>

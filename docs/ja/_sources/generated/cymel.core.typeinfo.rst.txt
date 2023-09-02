@@ -1,4 +1,4 @@
-cymel.core.typeinfo
+﻿cymel.core.typeinfo
 ===================
 
 .. automodule:: cymel.core.typeinfo

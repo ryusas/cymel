@@ -1,4 +1,4 @@
-cymel.core.datatypes.boundingbox
+﻿cymel.core.datatypes.boundingbox
 ================================
 
 .. automodule:: cymel.core.datatypes.boundingbox

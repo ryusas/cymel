@@ -1,4 +1,4 @@
-cymel.core.cyobjects.plug
+﻿cymel.core.cyobjects.plug
 =========================
 
 .. automodule:: cymel.core.cyobjects.plug

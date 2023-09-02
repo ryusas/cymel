@@ -1,4 +1,4 @@
-cymel.core.cyobjects.dagnode
+﻿cymel.core.cyobjects.dagnode
 ============================
 
 .. automodule:: cymel.core.cyobjects.dagnode

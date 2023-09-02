@@ -1,4 +1,4 @@
-cymel.ui.layout
+﻿cymel.ui.layout
 ===============
 
 .. automodule:: cymel.ui.layout

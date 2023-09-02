@@ -2,6 +2,10 @@
 u"""
 mayaモジュールドキュメンテーション用のsphinxコンフィギュレーション。
 """
+from __future__ import absolute_import
+from __future__ import print_function
+from __future__ import division
+
 import sys
 import os
 import inspect
@@ -22,10 +26,10 @@ def get_std_extlinks():
     return _EXTLINKS.copy()
 
 _EXTLINKS = {
-    'mayanode': (MAYA_DOC_URL + 'Nodes/%s.html', ''),
-    'mayacmd': (MAYA_DOC_URL + 'CommandsPython/%s.html', ''),
-    'mayaapi2': (MAYA_API2_URL + '%s.html', ''),
-    'mayaapi1': (MAYA_API1_URL + 'index.html?url=cpp_ref/class_%s.html', '',),
+    'mayanode': (MAYA_DOC_URL + 'Nodes/%s.html', '%s'),
+    'mayacmd': (MAYA_DOC_URL + 'CommandsPython/%s.html', '%s'),
+    'mayaapi2': (MAYA_API2_URL + '%s.html', '%s'),
+    'mayaapi1': (MAYA_API1_URL + 'index.html?url=cpp_ref/class_%s.html', '%s',),
 }
 
 
@@ -51,7 +55,7 @@ def chk_if_alias(val, name):
     :param name: モジュール属性名。
     :rtype: `bool`
     """
-    return hasattr(val, '__name__') and val.__name__ != name
+    return _has_name(val) and val.__name__ != name
 
 
 def chk_if_no_alias(val, name):
@@ -62,7 +66,14 @@ def chk_if_no_alias(val, name):
     :param name: モジュール属性名。
     :rtype: `bool`
     """
-    return not hasattr(val, '__name__') or val.__name__ == name
+    return not _has_name(val) or val.__name__ == name
+
+
+def _has_name(val):
+    try:
+        return hasattr(val, '__name__')
+    except:
+        return False
 
 
 #----------------------------------------------------
@@ -137,7 +148,7 @@ def filter_in_module(names, modname):
 
         # モジュールの直接メンバーかどうか。
         owner = getattr(obj, '__module__', 0)
-        if owner is not 0:
+        if owner != 0:
             if not owner:
                 return
             if owner != modname:
@@ -254,7 +265,7 @@ def _find_attr_docs(modname, name):
     else:
         try:
             _attrDocsDict[modname] = d = ModuleAnalyzer.for_module(modname).find_attr_docs()
-        except PycodeError, e:
+        except PycodeError as e:
             raise RuntimeError("sphinx.pycode parsing failure: %s" % modname)
     key = ('', name)
     if key in d:

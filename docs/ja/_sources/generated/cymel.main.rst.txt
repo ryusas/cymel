@@ -1,4 +1,4 @@
-cymel.main
+﻿cymel.main
 ==========
 
 .. automodule:: cymel.main

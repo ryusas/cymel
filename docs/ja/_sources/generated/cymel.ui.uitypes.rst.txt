@@ -1,4 +1,4 @@
-cymel.ui.uitypes
+﻿cymel.ui.uitypes
 ================
 
 .. automodule:: cymel.ui.uitypes

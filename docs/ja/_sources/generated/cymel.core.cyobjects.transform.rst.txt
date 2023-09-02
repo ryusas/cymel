@@ -1,4 +1,4 @@
-cymel.core.cyobjects.transform
+﻿cymel.core.cyobjects.transform
 ==============================
 
 .. automodule:: cymel.core.cyobjects.transform

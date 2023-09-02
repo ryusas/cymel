@@ -1,22 +1,19 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<html lang="ja">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.utils.melgvar.MelVar &#8212; cymel 0.19.2023042300 ドキュメント</title>
-    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.utils.melgvar.MelVar &#8212; cymel 0.20.2023090200 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="cymel.utils.namespace" href="../cymel.utils.namespace.html" />
@@ -37,19 +34,115 @@
         <li class="right" >
           <a href="../cymel.utils.melgvar.html" title="cymel.utils.melgvar"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../cymel.utils.melgvar.html" accesskey="U">cymel.utils.melgvar</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="../cymel.utils.melgvar.html" accesskey="U">cymel.utils.melgvar</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.utils.melgvar.MelVar</a></li> 
       </ul>
-    </div>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-utils-melgvar-melvar">
+<h1>class cymel.utils.melgvar.MelVar<a class="headerlink" href="#class-cymel-utils-melgvar-melvar" title="この見出しへのパーマリンク">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-9e6b3e1954d466fb4a15e8cd60f4c4497cd6ebd2.png" alt="Inheritance diagram of MelVar" usemap="#inheritance7c69afa3d9" class="inheritance graphviz" /></div>
+<map id="inheritance7c69afa3d9" name="inheritance7c69afa3d9">
+<area shape="rect" id="node1" href="#cymel.utils.melgvar.MelVar" target="_top" title="MELグローバル変数ラッパークラス。" alt="" coords="5,5,77,29"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.utils.melgvar.MelVar">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.utils.melgvar.</span></span><span class="sig-name descname"><span class="pre">MelVar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.melgvar.MelVar" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>MELグローバル変数ラッパークラス。</p>
+<p><cite>dict</cite> のような振る舞いをする。
+唯一のインスタンス <cite>melvar</cite> が生成済み。</p>
+<p>参照のみが可能で、セットや削除はサポートされない。</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.melgvar.MelVar.get" title="cymel.utils.melgvar.MelVar.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(key[, default])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.melgvar.MelVar.has_key" title="cymel.utils.melgvar.MelVar.has_key"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_key</span></code></a>(key)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.melgvar.MelVar.items" title="cymel.utils.melgvar.MelVar.items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">items</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.melgvar.MelVar.keys" title="cymel.utils.melgvar.MelVar.keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keys</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.melgvar.MelVar.values" title="cymel.utils.melgvar.MelVar.values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.melgvar.MelVar.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.melgvar.MelVar.get" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.melgvar.MelVar.has_key">
+<span class="sig-name descname"><span class="pre">has_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.melgvar.MelVar.has_key" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.melgvar.MelVar.items">
+<span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.melgvar.MelVar.items" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.melgvar.MelVar.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.melgvar.MelVar.keys" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.melgvar.MelVar.values">
+<span class="sig-name descname"><span class="pre">values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.melgvar.MelVar.values" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>前のトピックへ</h4>
-  <p class="topless"><a href="../cymel.utils.melgvar.html"
-                        title="前の章へ">cymel.utils.melgvar</a></p>
-  <h4>次のトピックへ</h4>
-  <p class="topless"><a href="../cymel.utils.namespace.html"
-                        title="次の章へ">cymel.utils.namespace</a></p>
+  <div>
+    <h3><a href="../../index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.utils.melgvar.MelVar</a><ul>
+<li><a class="reference internal" href="#cymel.utils.melgvar.MelVar"><code class="docutils literal notranslate"><span class="pre">MelVar</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.utils.melgvar.MelVar.get"><code class="docutils literal notranslate"><span class="pre">MelVar.get()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.melgvar.MelVar.has_key"><code class="docutils literal notranslate"><span class="pre">MelVar.has_key()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.melgvar.MelVar.items"><code class="docutils literal notranslate"><span class="pre">MelVar.items()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.melgvar.MelVar.keys"><code class="docutils literal notranslate"><span class="pre">MelVar.keys()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.melgvar.MelVar.values"><code class="docutils literal notranslate"><span class="pre">MelVar.values()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="../cymel.utils.melgvar.html"
+                          title="前の章へ">cymel.utils.melgvar</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="../cymel.utils.namespace.html"
+                          title="次の章へ">cymel.utils.namespace</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>このページ</h3>
     <ul class="this-page-menu">
@@ -58,94 +151,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>クイック検索</h3>
+  <h3 id="searchlabel">クイック検索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="検索" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="class-cymel-utils-melgvar-melvar">
-<h1>class cymel.utils.melgvar.MelVar<a class="headerlink" href="#class-cymel-utils-melgvar-melvar" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="graphviz"><img src="../../_images/inheritance-2d7ce82303ba90c8779a16550bb7a35eb6229564.png" alt="Inheritance diagram of MelVar" usemap="#inheritance7c69afa3d9" class="inheritance graphviz" /></div>
-<map id="inheritance7c69afa3d9" name="inheritance7c69afa3d9">
-<area shape="rect" id="node1" href="#cymel.utils.melgvar.MelVar" target="_top" title="MELグローバル変数ラッパークラス。" alt="" coords="5,5,77,29"/>
-</map><dl class="class">
-<dt id="cymel.utils.melgvar.MelVar">
-<em class="property">class </em><code class="descclassname">cymel.utils.melgvar.</code><code class="descname">MelVar</code><a class="headerlink" href="#cymel.utils.melgvar.MelVar" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>MELグローバル変数ラッパークラス。</p>
-<p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> のような振る舞いをする。
-唯一のインスタンス <code class="xref py py-obj docutils literal notranslate"><span class="pre">melvar</span></code> が生成済み。</p>
-<p>参照のみが可能で、セットや削除はサポートされない。</p>
-<p class="rubric">Methods:</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.utils.melgvar.MelVar.get" title="cymel.utils.melgvar.MelVar.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(key[,&nbsp;default])</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.utils.melgvar.MelVar.has_key" title="cymel.utils.melgvar.MelVar.has_key"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_key</span></code></a>(key)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.utils.melgvar.MelVar.items" title="cymel.utils.melgvar.MelVar.items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">items</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.utils.melgvar.MelVar.keys" title="cymel.utils.melgvar.MelVar.keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keys</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.utils.melgvar.MelVar.values" title="cymel.utils.melgvar.MelVar.values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></a>()</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods Details:</p>
-<dl class="method">
-<dt id="cymel.utils.melgvar.MelVar.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>key</em>, <em>default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.melgvar.MelVar.get" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.utils.melgvar.MelVar.has_key">
-<code class="descname">has_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.melgvar.MelVar.has_key" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.utils.melgvar.MelVar.items">
-<code class="descname">items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.melgvar.MelVar.items" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.utils.melgvar.MelVar.keys">
-<code class="descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.melgvar.MelVar.keys" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.utils.melgvar.MelVar.values">
-<code class="descname">values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.melgvar.MelVar.values" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</div>
-
-
-          </div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -165,14 +179,15 @@
         <li class="right" >
           <a href="../cymel.utils.melgvar.html" title="cymel.utils.melgvar"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../cymel.utils.melgvar.html" >cymel.utils.melgvar</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="../cymel.utils.melgvar.html" >cymel.utils.melgvar</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.utils.melgvar.MelVar</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, ryusas.
-      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 で生成しました。
+        &#169; Copyright 2020-2023, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
     </div>
   </body>
 </html>

@@ -1,4 +1,4 @@
-cymel.ui.uitemplate
+﻿cymel.ui.uitemplate
 ===================
 
 .. automodule:: cymel.ui.uitemplate

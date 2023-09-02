@@ -1,4 +1,4 @@
-cymel.pyutils.finalizer
+﻿cymel.pyutils.finalizer
 =======================
 
 .. automodule:: cymel.pyutils.finalizer

@@ -1,4 +1,4 @@
-cymel.core.cyobjects.shape
+﻿cymel.core.cyobjects.shape
 ==========================
 
 .. automodule:: cymel.core.cyobjects.shape

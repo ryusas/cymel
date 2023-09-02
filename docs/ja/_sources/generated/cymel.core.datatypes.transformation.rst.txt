@@ -1,4 +1,4 @@
-cymel.core.datatypes.transformation
+﻿cymel.core.datatypes.transformation
 ===================================
 
 .. automodule:: cymel.core.datatypes.transformation

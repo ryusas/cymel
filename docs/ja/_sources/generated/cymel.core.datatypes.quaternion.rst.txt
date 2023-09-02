@@ -1,4 +1,4 @@
-cymel.core.datatypes.quaternion
+﻿cymel.core.datatypes.quaternion
 ===============================
 
 .. automodule:: cymel.core.datatypes.quaternion

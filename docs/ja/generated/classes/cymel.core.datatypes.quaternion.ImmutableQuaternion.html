@@ -1,22 +1,19 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<html lang="ja">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.core.datatypes.quaternion.ImmutableQuaternion &#8212; cymel 0.19.2023042300 ドキュメント</title>
-    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.datatypes.quaternion.ImmutableQuaternion &#8212; cymel 0.20.2023090200 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="class cymel.core.datatypes.quaternion.Quaternion" href="cymel.core.datatypes.quaternion.Quaternion.html" />
@@ -37,19 +34,287 @@
         <li class="right" >
           <a href="../cymel.core.datatypes.quaternion.html" title="cymel.core.datatypes.quaternion"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" accesskey="U">cymel.core.datatypes.quaternion</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" accesskey="U">cymel.core.datatypes.quaternion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.quaternion.ImmutableQuaternion</a></li> 
       </ul>
-    </div>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-datatypes-quaternion-immutablequaternion">
+<h1>class cymel.core.datatypes.quaternion.ImmutableQuaternion<a class="headerlink" href="#class-cymel-core-datatypes-quaternion-immutablequaternion" title="この見出しへのパーマリンク">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-572c3802312340cb3d3924fb5b7180745801392e.png" alt="Inheritance diagram of ImmutableQuaternion" usemap="#inheritance4e5df8d071" class="inheritance graphviz" /></div>
+<map id="inheritance4e5df8d071" name="inheritance4e5df8d071">
+<area shape="rect" id="node1" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion" target="_top" title="ImmutableQuaternion" alt="" coords="5,44,128,68"/>
+<area shape="rect" id="node2" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" target="_top" title="クォータニオンクラス。" alt="" coords="29,5,104,29"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.ImmutableQuaternion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.core.datatypes.quaternion.</span></span><span class="sig-name descname"><span class="pre">ImmutableQuaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-class docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+<p><cite>Quaternion</cite> の <cite>immutable</cite> ラッパー。</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.conjugateIt" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.conjugateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">conjugateIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>共役クォータニオンをセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.invertIt" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.invertIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invertIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>逆クォータニオンをセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.negateIt" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.negateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">negateIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>符号反転クォータニオンをセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.normalize" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a>(*args, **kwargs)</p></td>
+<td><p>正規化クォータニオンをセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.normalizeIt" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.normalizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalizeIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>正規化クォータニオンをセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.set" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(*args, **kwargs)</p></td>
+<td><p>他の値をセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setAngle" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.setAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAngle</span></code></a>(*args, **kwargs)</p></td>
+<td><p>クォータニオンの持つ回転角度を書き換える。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToIdentity" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToIdentity</span></code></a>(*args, **kwargs)</p></td>
+<td><p>単位クォータニオンをセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToXAxis" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToXAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToXAxis</span></code></a>(*args, **kwargs)</p></td>
+<td><p>X軸回りの回転角度をセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToYAxis" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToYAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToYAxis</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Y軸回りの回転角度をセットする。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToZAxis" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToZAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToZAxis</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Z軸回りの回転角度をセットする。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setValue" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.setValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValue</span></code></a>(*args, **kwargs)</p></td>
+<td><p>他の値をセットする。</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.ImmutableQuaternion.conjugateIt">
+<span class="sig-name descname"><span class="pre">conjugateIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.conjugateIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>共役クォータニオンをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.ImmutableQuaternion.invertIt">
+<span class="sig-name descname"><span class="pre">invertIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.invertIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>逆クォータニオンをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.ImmutableQuaternion.negateIt">
+<span class="sig-name descname"><span class="pre">negateIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.negateIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>符号反転クォータニオンをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.ImmutableQuaternion.normalize">
+<span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.normalize" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>正規化クォータニオンをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.ImmutableQuaternion.normalizeIt">
+<span class="sig-name descname"><span class="pre">normalizeIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.normalizeIt" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>正規化クォータニオンをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.ImmutableQuaternion.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.set" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>他の値をセットする。</p>
+<p>コンストラクタと同様に、以下の値を指定可能。</p>
+<ul class="simple">
+<li><p><cite>Quaternion</cite></p></li>
+<li><p>x, y, z, w</p></li>
+<li><p>4値までのシーケンス</p></li>
+<li><p>回転軸 (<cite>.Vector</cite>), 角度</p></li>
+<li><p>角度, 回転軸 (<cite>.Vector</cite>)</p></li>
+<li><p><cite>.EulerRotation</cite></p></li>
+<li><p><cite>.Matrix</cite></p></li>
+<li><p><cite>.Vector</cite></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.ImmutableQuaternion.setAngle">
+<span class="sig-name descname"><span class="pre">setAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setAngle" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クォータニオンの持つ回転角度を書き換える。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 角度。</p></li>
+<li><p><strong>correctAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 現在の w が負
+（πより大きい回転角度を持っている）
+なら、軸を反転補正させた上での角度をセットする。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToIdentity">
+<span class="sig-name descname"><span class="pre">setToIdentity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToIdentity" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>単位クォータニオンをセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>self</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToXAxis">
+<span class="sig-name descname"><span class="pre">setToXAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToXAxis" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>X軸回りの回転角度をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 角度。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToYAxis">
+<span class="sig-name descname"><span class="pre">setToYAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToYAxis" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Y軸回りの回転角度をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 角度。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToZAxis">
+<span class="sig-name descname"><span class="pre">setToZAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToZAxis" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Z軸回りの回転角度をセットする。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) -- 角度。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.ImmutableQuaternion.setValue">
+<span class="sig-name descname"><span class="pre">setValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setValue" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>他の値をセットする。</p>
+<p>コンストラクタと同様に、以下の値を指定可能。</p>
+<ul class="simple">
+<li><p><cite>Quaternion</cite></p></li>
+<li><p>x, y, z, w</p></li>
+<li><p>4値までのシーケンス</p></li>
+<li><p>回転軸 (<cite>.Vector</cite>), 角度</p></li>
+<li><p>角度, 回転軸 (<cite>.Vector</cite>)</p></li>
+<li><p><cite>.EulerRotation</cite></p></li>
+<li><p><cite>.Matrix</cite></p></li>
+<li><p><cite>.Vector</cite></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Quaternion</cite> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>前のトピックへ</h4>
-  <p class="topless"><a href="../cymel.core.datatypes.quaternion.html"
-                        title="前の章へ">cymel.core.datatypes.quaternion</a></p>
-  <h4>次のトピックへ</h4>
-  <p class="topless"><a href="cymel.core.datatypes.quaternion.Quaternion.html"
-                        title="次の章へ">class cymel.core.datatypes.quaternion.Quaternion</a></p>
+  <div>
+    <h3><a href="../../index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.datatypes.quaternion.ImmutableQuaternion</a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion"><code class="docutils literal notranslate"><span class="pre">ImmutableQuaternion</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.conjugateIt"><code class="docutils literal notranslate"><span class="pre">ImmutableQuaternion.conjugateIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.invertIt"><code class="docutils literal notranslate"><span class="pre">ImmutableQuaternion.invertIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.negateIt"><code class="docutils literal notranslate"><span class="pre">ImmutableQuaternion.negateIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.normalize"><code class="docutils literal notranslate"><span class="pre">ImmutableQuaternion.normalize()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.normalizeIt"><code class="docutils literal notranslate"><span class="pre">ImmutableQuaternion.normalizeIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.set"><code class="docutils literal notranslate"><span class="pre">ImmutableQuaternion.set()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setAngle"><code class="docutils literal notranslate"><span class="pre">ImmutableQuaternion.setAngle()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToIdentity"><code class="docutils literal notranslate"><span class="pre">ImmutableQuaternion.setToIdentity()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToXAxis"><code class="docutils literal notranslate"><span class="pre">ImmutableQuaternion.setToXAxis()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToYAxis"><code class="docutils literal notranslate"><span class="pre">ImmutableQuaternion.setToYAxis()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToZAxis"><code class="docutils literal notranslate"><span class="pre">ImmutableQuaternion.setToZAxis()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setValue"><code class="docutils literal notranslate"><span class="pre">ImmutableQuaternion.setValue()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="../cymel.core.datatypes.quaternion.html"
+                          title="前の章へ">cymel.core.datatypes.quaternion</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="cymel.core.datatypes.quaternion.Quaternion.html"
+                          title="次の章へ">class cymel.core.datatypes.quaternion.Quaternion</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>このページ</h3>
     <ul class="this-page-menu">
@@ -58,148 +323,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>クイック検索</h3>
+  <h3 id="searchlabel">クイック検索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="検索" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="class-cymel-core-datatypes-quaternion-immutablequaternion">
-<h1>class cymel.core.datatypes.quaternion.ImmutableQuaternion<a class="headerlink" href="#class-cymel-core-datatypes-quaternion-immutablequaternion" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="graphviz"><img src="../../_images/inheritance-ee30a3a7a6bb49c0d55f3fd9911d1ffd93c51df9.png" alt="Inheritance diagram of ImmutableQuaternion" usemap="#inheritance4e5df8d071" class="inheritance graphviz" /></div>
-<map id="inheritance4e5df8d071" name="inheritance4e5df8d071">
-<area shape="rect" id="node1" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion" target="_top" title="ImmutableQuaternion" alt="" coords="5,44,128,68"/>
-<area shape="rect" id="node2" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" target="_top" title="クォータニオンクラス。" alt="" coords="29,5,104,29"/>
-</map><dl class="class">
-<dt id="cymel.core.datatypes.quaternion.ImmutableQuaternion">
-<em class="property">class </em><code class="descclassname">cymel.core.datatypes.quaternion.</code><code class="descname">ImmutableQuaternion</code><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-class docutils literal notranslate"><span class="pre">cymel.core.datatypes.quaternion.Quaternion</span></code></a></p>
-<p><a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> の <code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code> ラッパー。</p>
-<p class="rubric">Methods:</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.conjugateIt" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.conjugateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">conjugateIt</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.invertIt" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.invertIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invertIt</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.negateIt" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.negateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">negateIt</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.normalize" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.normalizeIt" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.normalizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalizeIt</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.set" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setAngle" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.setAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAngle</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToIdentity" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToIdentity</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToXAxis" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToXAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToXAxis</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToYAxis" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToYAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToYAxis</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToZAxis" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToZAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToZAxis</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setValue" title="cymel.core.datatypes.quaternion.ImmutableQuaternion.setValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValue</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods Details:</p>
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.ImmutableQuaternion.conjugateIt">
-<code class="descname">conjugateIt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.conjugateIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.ImmutableQuaternion.invertIt">
-<code class="descname">invertIt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.invertIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.ImmutableQuaternion.negateIt">
-<code class="descname">negateIt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.negateIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.ImmutableQuaternion.normalize">
-<code class="descname">normalize</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.normalize" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.ImmutableQuaternion.normalizeIt">
-<code class="descname">normalizeIt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.normalizeIt" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.ImmutableQuaternion.set">
-<code class="descname">set</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.set" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.ImmutableQuaternion.setAngle">
-<code class="descname">setAngle</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setAngle" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToIdentity">
-<code class="descname">setToIdentity</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToIdentity" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToXAxis">
-<code class="descname">setToXAxis</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToXAxis" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToYAxis">
-<code class="descname">setToYAxis</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToYAxis" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.ImmutableQuaternion.setToZAxis">
-<code class="descname">setToZAxis</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setToZAxis" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cymel.core.datatypes.quaternion.ImmutableQuaternion.setValue">
-<code class="descname">setValue</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.ImmutableQuaternion.setValue" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</div>
-
-
-          </div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -219,14 +351,15 @@
         <li class="right" >
           <a href="../cymel.core.datatypes.quaternion.html" title="cymel.core.datatypes.quaternion"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" >cymel.core.datatypes.quaternion</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" >cymel.core.datatypes.quaternion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.quaternion.ImmutableQuaternion</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, ryusas.
-      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 で生成しました。
+        &#169; Copyright 2020-2023, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
     </div>
   </body>
 </html>

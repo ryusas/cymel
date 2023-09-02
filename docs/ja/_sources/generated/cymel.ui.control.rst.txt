@@ -1,4 +1,4 @@
-cymel.ui.control
+﻿cymel.ui.control
 ================
 
 .. automodule:: cymel.ui.control

@@ -1,22 +1,19 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<html lang="ja">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>class cymel.utils.operation.NonUndoable &#8212; cymel 0.19.2023042300 ドキュメント</title>
-    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.utils.operation.NonUndoable &#8212; cymel 0.20.2023090200 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="class cymel.utils.operation.PreserveSelection" href="cymel.utils.operation.PreserveSelection.html" />
@@ -37,58 +34,30 @@
         <li class="right" >
           <a href="../cymel.utils.operation.html" title="cymel.utils.operation"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../cymel.utils.operation.html" accesskey="U">cymel.utils.operation</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="../cymel.utils.operation.html" accesskey="U">cymel.utils.operation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.utils.operation.NonUndoable</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h4>前のトピックへ</h4>
-  <p class="topless"><a href="../cymel.utils.operation.html"
-                        title="前の章へ">cymel.utils.operation</a></p>
-  <h4>次のトピックへ</h4>
-  <p class="topless"><a href="cymel.utils.operation.PreserveSelection.html"
-                        title="次の章へ">class cymel.utils.operation.PreserveSelection</a></p>
-  <div role="note" aria-label="source link">
-    <h3>このページ</h3>
-    <ul class="this-page-menu">
-      <li><a href="../../_sources/generated/classes/cymel.utils.operation.NonUndoable.rst.txt"
-            rel="nofollow">ソースコードを表示</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>クイック検索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="検索" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="class-cymel-utils-operation-nonundoable">
-<h1>class cymel.utils.operation.NonUndoable<a class="headerlink" href="#class-cymel-utils-operation-nonundoable" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="graphviz"><img src="../../_images/inheritance-1ec0c2870e32c198f0e3038a044f6ed66837806c.png" alt="Inheritance diagram of NonUndoable" usemap="#inheritance0545e0b82b" class="inheritance graphviz" /></div>
+  <section id="class-cymel-utils-operation-nonundoable">
+<h1>class cymel.utils.operation.NonUndoable<a class="headerlink" href="#class-cymel-utils-operation-nonundoable" title="この見出しへのパーマリンク">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-e400fea3fefba4767633c0fbf33b087df449b0f5.png" alt="Inheritance diagram of NonUndoable" usemap="#inheritance0545e0b82b" class="inheritance graphviz" /></div>
 <map id="inheritance0545e0b82b" name="inheritance0545e0b82b">
 <area shape="rect" id="node1" href="#cymel.utils.operation.NonUndoable" target="_top" title="アンドゥ不可で実行するコンテキスト。" alt="" coords="5,5,92,29"/>
-</map><dl class="class">
-<dt id="cymel.utils.operation.NonUndoable">
-<em class="property">class </em><code class="descclassname">cymel.utils.operation.</code><code class="descname">NonUndoable</code><a class="headerlink" href="#cymel.utils.operation.NonUndoable" title="この定義へのパーマリンク">¶</a></dt>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.utils.operation.NonUndoable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.utils.operation.</span></span><span class="sig-name descname"><span class="pre">NonUndoable</span></span><a class="headerlink" href="#cymel.utils.operation.NonUndoable" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>アンドゥ不可で実行するコンテキスト。</p>
-<p>インスタンス <code class="xref py py-obj docutils literal notranslate"><span class="pre">nonUndoable</span></code> が生成済み。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">maya.cmds</span> <span class="k">as</span> <span class="nn">cmds</span>
+<p>インスタンス <cite>nonUndoable</cite> が生成済み。</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">maya.cmds</span> <span class="k">as</span> <span class="nn">cmds</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">cymel.main</span> <span class="k">as</span> <span class="nn">cm</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">f</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="go">u&#39;untitled&#39;</span>
@@ -109,42 +78,82 @@
 </pre></div>
 </div>
 <div class="admonition warning">
-<p class="first admonition-title">警告</p>
+<p class="admonition-title">警告</p>
 <p>利用の際には、Mayaの状態に深刻な矛盾を発生させないよう
 細心の注意が必要である。</p>
 <p>例えば、以下のコードを実行してアンドゥことで、
 Maya を容易にクラッシュさせることが出来る。:</p>
-<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s1">&#39;transform&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s1">&#39;transform&#39;</span><span class="p">)</span>
 <span class="k">with</span> <span class="n">cm</span><span class="o">.</span><span class="n">nonUndoable</span><span class="p">:</span>
     <span class="n">cmds</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <p class="rubric">Methods:</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#cymel.utils.operation.NonUndoable.__init__" title="cymel.utils.operation.NonUndoable.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>()</td>
-<td>x.__init__(...) initializes x; see help(type(x)) for signature</td>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.operation.NonUndoable.__init__" title="cymel.utils.operation.NonUndoable.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>()</p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Methods Details:</p>
-<dl class="method">
-<dt id="cymel.utils.operation.NonUndoable.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.operation.NonUndoable.__init__" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
-</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.operation.NonUndoable.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.operation.NonUndoable.__init__" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.utils.operation.NonUndoable</a><ul>
+<li><a class="reference internal" href="#cymel.utils.operation.NonUndoable"><code class="docutils literal notranslate"><span class="pre">NonUndoable</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.utils.operation.NonUndoable.__init__"><code class="docutils literal notranslate"><span class="pre">NonUndoable.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="../cymel.utils.operation.html"
+                          title="前の章へ">cymel.utils.operation</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="cymel.utils.operation.PreserveSelection.html"
+                          title="次の章へ">class cymel.utils.operation.PreserveSelection</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.utils.operation.NonUndoable.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -164,14 +173,15 @@ Maya を容易にクラッシュさせることが出来る。:</p>
         <li class="right" >
           <a href="../cymel.utils.operation.html" title="cymel.utils.operation"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.19.2023042300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../cymel.utils.operation.html" >cymel.utils.operation</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="../cymel.utils.operation.html" >cymel.utils.operation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.utils.operation.NonUndoable</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, ryusas.
-      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 で生成しました。
+        &#169; Copyright 2020-2023, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
     </div>
   </body>
 </html>
