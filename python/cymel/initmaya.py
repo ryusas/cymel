@@ -19,7 +19,7 @@ from .pyutils import (
     IS_WINDOWS as _IS_WINDOWS,
     USER_DOC_PATH as _USER_DOC_PATH,
     insertEnvPath as _insertEnvPath,
-    execfile as _execfile,
+    #execfile as _execfile,
 )
 
 __all__ = [
@@ -408,7 +408,8 @@ def _initMayaStandalone():
     u"""
     Maya standalone を初期化する。
     """
-    # 2020以前なら、この時点の sys.path に在る userSetup.py が先頭から順に _execfile される。
+    # 初期化と同時に sys.path に在る userSetup.py が先頭から順に _execfile される。
+    # 呼び出されないバージョンもあったような記憶があるが現在は見当たらない。
     print('# Initializing Maya...')
     import maya.standalone as _maya_standalone
     _maya_standalone.initialize(name='cymel')
@@ -430,9 +431,9 @@ def _initMayaStandalone():
         import atexit
         atexit.register(_uninitialize)
 
-    # 2021以降の場合は userSetup.py を呼び出す。
-    if _is2021orLater():
-        _call_userSetup_pys()
+    # 初期化で userSetup.py が呼び出されない場合はここで呼び出す（不明）。
+    #if _is2021orLater():
+    #    _call_userSetup_pys()
 
     print('# OK, done.')
 
@@ -445,17 +446,17 @@ def _is2021orLater():
         return False
 
 
-def _call_userSetup_pys():
-    u"""
-    userSetup.py を全てコールする。
-    """
-    for path in list(sys.path):
-        file = _os_path_join(path, 'userSetup.py')
-        if _os_path_isfile(file):
-            try:
-                _execfile(file)
-            except:
-                pass
+#def _call_userSetup_pys():
+#    u"""
+#    userSetup.py を全てコールする。
+#    """
+#    for path in list(sys.path):
+#        file = _os_path_join(path, 'userSetup.py')
+#        if _os_path_isfile(file):
+#            try:
+#                _execfile(file)
+#            except:
+#                pass
 
 
 def _initCymelConstants():
