@@ -1595,6 +1595,10 @@ def _setAttr_raw_angles(name, val, **kwargs):
 #    _setAttr(name, *[_2_MTime_rawToUI(x) for x in val])
 
 
+def _setAttr_componentList(name, val):
+    _setAttr(name, len(val), *val, type='componentList')
+
+
 def _makeScalarArraySetter(typename):
     def setter(name, val):
         _setAttr(name, val, type=typename)
@@ -1655,6 +1659,8 @@ _CMD_SETUVAL_DICT = {
     'spectrum': _setAttr_vals,
 
     'generic': _setAttr_generic,
+
+    'componentList': _setAttr_componentList,
 
     'doubleArray': _makeScalarArraySetter('doubleArray'),
     'floatArray': _makeScalarArraySetter('floatArray'),

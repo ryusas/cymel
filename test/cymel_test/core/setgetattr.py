@@ -102,6 +102,8 @@ def doit(s=13):
     #_testSetGet(expr.addAttr('reflectance', 'reflectance', getPlug=True), _randColor())
     #_testSetGet(expr.addAttr('spectrum', 'spectrum', getPlug=True), _randColor())
 
+    _testSetGet(expr.addAttr('complist', 'componentList', getPlug=True), ['f[10:20]', 'f[40:60]', 'f[80:90]'])
+
     _testSetGetArray(expr.addAttr('dblarr', 'doubleArray', getPlug=True), _randFArr, lrange(8))
     _testSetGetArray(expr.addAttr('fltarr', 'floatArray', getPlug=True), _randFArr, lrange(8), _compareFArr)
     _testSetGetArray(expr.addAttr('i32arr', 'Int32Array', getPlug=True), _randIArr, lrange(8))

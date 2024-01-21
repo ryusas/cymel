@@ -1485,10 +1485,12 @@ def _parseSetAttrCmds(lines):
             tkns.extend(_RE_SETATTR_VAL_TOKENS_findall(line))
     return eval('[' + ','.join([_YESNO_TO_BOOLSTR(x, x) for x in tkns]) + ']')
 
-_RE_SETATTR_CMD_VAL_match = re.compile(r'.*setAttr .+(?: -type "[^"]+")? (.*?);?$').match  #: setAttr のコマンド開始行にマッチ。
-#_RE_SETATTR_VAL_match = re.compile(r'(.*?);?$').match  #: setAttr の後続行にマッチ。
-_RE_SETATTR_VAL_TOKENS_findall = re.compile(r'((?<!\\)".*(?<!\\)"|\S+)').findall  #: setAttr 値のトークン分割。
+#_RE_SETATTR_CMD_VAL_match = re.compile(r'.*setAttr .+(?: -type "[^"]+")? (.*?);?$').match  #: setAttr のコマンド開始行にマッチ。
+#_RE_SETATTR_VAL_TOKENS_findall = re.compile(r'((?<!\\)".*(?<!\\)"|\S+)').findall  #: setAttr 値のトークン分割。
+_RE_SETATTR_CMD_VAL_match = re.compile(r'.*setAttr "[^"]+"(?: -type "[^"]+")? (.*?);?$').match  #: setAttr のコマンド開始行にマッチ。
+_RE_SETATTR_VAL_TOKENS_findall = re.compile(r'((?<!\\)"[^"]*(?<!\\)"|\S+)').findall  #: setAttr 値のトークン分割。
 _YESNO_TO_BOOLSTR = {'yes': 'True', 'no': 'False'}.get
+#_RE_SETATTR_VAL_match = re.compile(r'(.*?);?$').match  #: setAttr の後続行にマッチ。
 
 
 def _dataValueByParsing(mobj, datatype, mplug=None, parser=None):
@@ -1505,18 +1507,24 @@ def _dataValueByParsing(mobj, datatype, mplug=None, parser=None):
                 break
             mplug = toNonNetworkedMPlug(mps[0])
             lines = mplug.getSetAttrCmds()
+
+        # setAttr 文字列が得られない場合。
+        if not lines:
+            # コンパウンドだったら getAttr コマンドに頼る。
+            # TODO: コールスタックの手前でプラグ階層を再帰的に取得しても良いかも。
+            if datatype == 'compound':
+                res = _getAttr(getMPlugName(mplug))
+                return res and list(res[0])
+
+            # getAttr で得られるものは、共有テンポラリアトリビュートを汚さずに得てしまう。
+            if datatype == 'componentList':
+                return _getAttr(getMPlugName(mplug))
     else:
         lines = None
 
-    # MPlug が渡されなかったか MPlug からはどうしてもコマンドを得られなかった場合。
+    # MPlug が渡されなかったか MPlug からはどうしてもコマンドを得られなかった場合、
+    # 共有テンポラリアトリビュートに値をセットしてから得る。
     if not lines:
-        # コンパウンドだったら getAttr コマンドに頼る。
-        # TODO: コールスタックの手前でプラグ階層を再帰的に取得しても良いかも。
-        if mplug and datatype == 'compound':
-            res = _getAttr(getMPlugName(mplug))
-            return res and list(res[0])
-
-        # 共有テンポラリアトリビュートに値をセットしてから得る。
         tmpmp = _getCommonTempMPlug(datatype)
         tmpmp.setMObject(mobj)
         lines = tmpmp.getSetAttrCmds()
@@ -1578,6 +1586,8 @@ _MPLUG_DECODE_DICT = {
     'matrixArray': _decode_matrixArray,
 
     #'fltMatrix': _decode_floatMatrix,  # data でも kMatrixData になるので不要ぽい。
+
+    'componentList': (lambda x: x[1:]),
 }
 _MPLUG_DECODE_DICT_get = _MPLUG_DECODE_DICT.get
 
