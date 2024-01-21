@@ -272,12 +272,34 @@ _initializedMels = set()
 
 def callUserSetupMel():
     u"""
-    最優先の MEL パスに在る ``userSetup.mel`` を呼び出す。
+    ``userSetup.mel`` を呼び出す。
+
+    Mayaの仕様に合わせ、バージョンによって挙動が異なる。
+
+    2020までは、MELパス上に存在する ``userSetup.mel`` のうち最優先の1つのみが呼び出されるが、
+    それより後のバージョンでは全てがパス順に呼び出される。
     """
     from maya.mel import eval as mel_eval
-    if mel_eval('exists userSetup'):
-        mel_eval('source userSetup')
-        print('# userSetup.mel is done.')
+
+    if _is2021orLater():
+        num = 0
+        for path in os.environ.get('MAYA_SCRIPT_PATH').split(os.pathsep):
+            file = _os_path_join(path, 'userSetup.mel')
+            if _os_path_isfile(file):
+                try:
+                    mel_eval('source "%s"' % (file.replace('\\', '/'),))
+                    num += 1
+                except:
+                    pass
+        if num:
+            print('# userSetup.mel is done. (%s file%s)' % (num, ('' if num == 1 else 's')))
+
+    elif mel_eval('exists userSetup'):
+        try:
+            mel_eval('source userSetup')
+            print('# userSetup.mel is done.')
+        except:
+            pass
 
 
 def initAutoPlugins():
@@ -409,16 +431,18 @@ def _initMayaStandalone():
         atexit.register(_uninitialize)
 
     # 2021以降の場合は userSetup.py を呼び出す。
-    try:
-        import maya.cmds as cmds
-        v = int(cmds.about(mjv=True))
-    except:
-        pass
-    else:
-        if v >= 2021:
-            _call_userSetup_pys()
+    if _is2021orLater():
+        _call_userSetup_pys()
 
     print('# OK, done.')
+
+
+def _is2021orLater():
+    try:
+        import maya.cmds as cmds
+        return int(cmds.about(mjv=True)) >= 2021
+    except:
+        return False
 
 
 def _call_userSetup_pys():
@@ -439,6 +463,8 @@ def _initCymelConstants():
     Mayaの状態を表す cymel の定数を初期化する。
     """
     global MAYA_PRODUCT_VERSION, MAYA_VERSION, MAYA_VERSION_STR, IS_UIMODE, warning
+    if MAYA_VERSION:
+        return
 
     import maya.cmds as cmds
     _about = cmds.about
