@@ -1049,6 +1049,7 @@ class DagNodeMixin(object):
                 mpath = self._mpath_()
                 if mpath.length() > 1:
                     x *= _newM(self._mpath_().exclusiveMatrix())
+                    x.clear('is')
             return x
         else:
             if ws:

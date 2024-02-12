@@ -264,10 +264,16 @@ class Transformation(object):
         _SETTER_DICT[name](self.__data, val)
 
     def __len__(self):
+        # setAttr コマンド用に list として評価できるようにするため。
         return 14
 
     def __getitem__(self, i):
-        return getattr(self, _SHORTNAMES[i]) if i else 'xform'
+        # setAttr コマンド用に list として評価できるようにするため。
+        if i == _IS_INDEX:
+            v = self.__data.get('is')
+            return _newIV(_MP(1. / v[0], 1. / v[1], 1. / v[2])) if v else _V_One  # xform の setAttr は is アトリビュートと異なり本当に逆スケール。
+        else:
+            return _GETTER_DICT[_SHORTNAMES[i]](self.__data) if i else 'xform'
 
     def __mul__(self, v):
         if hasattr(v, '_Transformation__data'):
@@ -394,7 +400,7 @@ class Transformation(object):
             ' '.join([str(x) for x in getattr(self, 'rpt')]),
             ' '.join([str(x) for x in getattr(self, 'ra')]),
             ' '.join([str(x) for x in getattr(self, 'jo')]),
-            ' '.join([str(x) for x in getattr(self, 'is')]),
+            ' '.join([str(1. / x) for x in getattr(self, 'is')]),  # xform の setAttr は is アトリビュートと異なり本当に逆スケール。
             ('yes' if getattr(self, 'ssc') else 'no'),
         ]
 
@@ -406,7 +412,7 @@ class Transformation(object):
         tkns = ' '.join(lines).split()[5:]
         p = tkns.pop
         kwargs = {'ssc': p() == 'yes;'}
-        kwargs['is'] = [float(p()), float(p()), float(p())][::-1]
+        kwargs['is'] = [1. / float(p()), 1. / float(p()), 1. / float(p())][::-1]  # xform の setAttr は is アトリビュートと異なり本当に逆スケール。
         kwargs['jo'] = [float(p()), float(p()), float(p()), float(p())][::-1]
         kwargs['ra'] = [float(p()), float(p()), float(p()), float(p())][::-1]
         kwargs['rpt'] = [float(p()), float(p()), float(p())][::-1]
@@ -460,6 +466,7 @@ _ATTR_NAMES = (
     ('q', 'quaternion'),
 )  #: アトリビュート名テーブル。_SHORTNAMES のために順番が重要。
 _SHORTNAMES = [x[0] for x in _ATTR_NAMES][:-1]  #: data の setAttr に指定する順のアトリビュート名。
+_IS_INDEX = _SHORTNAMES.index('is')
 
 _TO_SHORTNAME = dict([x[::-1] for x in _ATTR_NAMES])
 _TO_SHORTNAME['is_'] = 'is'
@@ -1044,7 +1051,7 @@ _GETTER_DICT = {
     'ro': _getRO,
 
     'ssc': lambda d: d.get('ssc', True),
-    'is': lambda d: d.get('spt', _V_One),
+    'is': lambda d: d.get('is', _V_One),
     'jo': lambda d: d.get('jo', _Q_Identity),
     'ra': lambda d: d.get('ra', _Q_Identity),
     'rp': lambda d: d.get('rp', _V_Zero),
@@ -1200,8 +1207,11 @@ def _makeClearAttrProc(name):
     トランスフォーメーション修飾属性のクリア処理。
     """
     def clearer(data):
-        if data.pop(name, None) is not None:
-             data.pop('m', None)
+        if name in data:
+            if 'm' not in data:
+                _getM(data)
+            _clearElemAttrs(data)
+            del data[name]
     return clearer
 
 _CLEARER_DICT = {
