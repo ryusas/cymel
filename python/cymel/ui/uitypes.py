@@ -520,7 +520,7 @@ _UITYPE_TO_UICMD = {
         cmds.checkBoxGrp, cmds.floatFieldGrp, cmds.floatSliderButtonGrp, cmds.floatSliderGrp, cmds.intFieldGrp,
         cmds.intSliderGrp, cmds.radioButtonGrp, cmds.textFieldButtonGrp, cmds.textFieldGrp, cmds.attrEnumOptionMenuGrp,
         cmds.optionMenuGrp,),
-    'popupMenu': (cmds.optionMenu, cmds.popupMenu,),
+    'popupMenu': (cmds.optionMenu, cmds.popupMenu, cmds.control,),
     'TcolorIndexSlider': 'colorIndexSliderGrp',
     'TcolorSlider': (cmds.colorSliderButtonGrp, cmds.colorSliderGrp,),
     'port3D': (cmds.floatSlider2, cmds.gradientControl, cmds.gradientControlNoAttr, cmds.swatchDisplayPort,),
