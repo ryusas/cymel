@@ -135,7 +135,10 @@ def _setXform(obj, x=None, **kwargs):
     """
     print('# %r.setX: (%s)' % (obj, _optstr(kwargs)))
     if not x:
-        x = randX(obj.isJoint())
+        x = randX(obj.isJoint() and obj.plug('is').get())
+
+    global XFORM
+    XFORM = x
 
     obj.setX(x, **kwargs)
     s = x.m
@@ -178,7 +181,15 @@ def _testFitAll(dst, src):
         _fittest(dst, src, 'S', ws=ws)
         _fittest(dst, src, 'Sh', ws=ws)
         _fittest(dst, src, 'T', ws=ws, at=4)
+        src_ssc = not ws and src.isJoint() and src.ssc.get()
+        if not ws:
+            if dst.isJoint():
+                dst.ssc.set(False)
+            if src_ssc:
+                src.ssc.set(False)
         _compare(dst, src, 'M', ws=ws)
+        if src_ssc:
+            src.ssc.set(True)
 
         # マトリックス。
         _setXform(dst, xform)
@@ -208,13 +219,18 @@ def _compare(dst, src, key, s=None, **kwargs):
     if not s:
         s = getattr(src, 'get' + key)(**kwargs)
     d = getattr(dst, 'get' + key)(**kwargs)
-    if key != 'X' or dst.isJoint() == src.isJoint():
-        assert d.isEquivalent(s), '%r <- %r : %s(%s) : %r, %r' % (dst, src, key, _optstr(kwargs), d, s)
-    else:
-        assert d.m.isEquivalent(s.m), '%r <- %r : %s(%s).m : %r, %r' % (dst, src, key, _optstr(kwargs), d.m, s.m)
-        assert d.s.isEquivalent(s.s), '%r <- %r : %s(%s).s : %r, %r' % (dst, src, key, _optstr(kwargs), d.s, s.s)
-        assert d.sh.isEquivalent(s.sh), '%r <- %r : %s(%s).sh : %r, %r' % (dst, src, key, _optstr(kwargs), d.sh, s.sh)
-        assert d.ra.isEquivalent(s.ra), '%r <- %r : %s(%s).ra : %r, %r' % (dst, src, key, _optstr(kwargs), d.ra, s.ra)
+
+    if key == 'X':
+        no_ssc = not(s.hasValue('is') or d.hasValue('is')) or not(s.ssc or d.ssc)
+        if dst.isJoint() != src.isJoint() or not no_ssc:
+            assert d.m.isEquivalent(s.m), '%r <- %r : %s(%s).m : %r, %r' % (dst, src, key, _optstr(kwargs), d.m, s.m)
+            assert d.ra.isEquivalent(s.ra), '%r <- %r : %s(%s).ra : %r, %r' % (dst, src, key, _optstr(kwargs), d.ra, s.ra)
+            if no_ssc:
+                assert d.s.isEquivalent(s.s), '%r <- %r : %s(%s).s : %r, %r' % (dst, src, key, _optstr(kwargs), d.s, s.s)
+                assert d.sh.isEquivalent(s.sh), '%r <- %r : %s(%s).sh : %r, %r' % (dst, src, key, _optstr(kwargs), d.sh, s.sh)
+            return
+
+    assert d.isEquivalent(s), '%r <- %r : %s(%s) : %r, %r' % (dst, src, key, _optstr(kwargs), d, s)
 
 
 def _checkXform(obj, x=None, **kwargs):
@@ -301,7 +317,7 @@ def randScl(v):
     return uniform(0., v), uniform(0., v), uniform(0., v)
 
 
-def randX(isJoint=False):
+def randX(ssc_is=None):
     opts = dict(
         t=rand3(5),
         r=randE(),
@@ -309,10 +325,11 @@ def randX(isJoint=False):
         s=randScl(2),
         ra=randQ(),
     )
-    if isJoint:
+    if ssc_is:
         if HAS_JOINT_SHEAR_BUG:
             del opts['sh']
         opts['jo'] = randQ()
+        opts['is'] = ssc_is
     else:
         opts['rpt'] = rand3(2)
         opts['rp'] = rand3(2)

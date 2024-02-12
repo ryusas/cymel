@@ -243,7 +243,8 @@ class Transformation(object):
         elif 'q' in dt and 'r' in dt:
             dt = dict(dt)
             del dt['q']
-        return '(' + ', '.join(['%s=%r' % kv for kv in dt.items()]) + ')'
+        #return '(' + ', '.join(['%s=%r' % kv for kv in dt.items()]) + ')'
+        return '(' + ', '.join(['%s=%r' % (k, dt[k]) for k in _ORDERED_NAMES if k in dt]) + ')'
 
     def __eq__(self, other):
         try:
@@ -467,6 +468,10 @@ _ATTR_NAMES = (
 )  #: アトリビュート名テーブル。_SHORTNAMES のために順番が重要。
 _SHORTNAMES = [x[0] for x in _ATTR_NAMES][:-1]  #: data の setAttr に指定する順のアトリビュート名。
 _IS_INDEX = _SHORTNAMES.index('is')
+
+_ORDERED_NAMES = _SHORTNAMES[1:]
+_ORDERED_NAMES.insert(_ORDERED_NAMES.index('r'), 'q')
+_ORDERED_NAMES.append('m')
 
 _TO_SHORTNAME = dict([x[::-1] for x in _ATTR_NAMES])
 _TO_SHORTNAME['is_'] = 'is'

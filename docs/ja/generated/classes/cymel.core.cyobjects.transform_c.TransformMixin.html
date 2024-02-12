@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.cyobjects.transform_c.TransformMixin &#8212; cymel 0.20.2023090200 ドキュメント</title>
+    <title>class cymel.core.cyobjects.transform_c.TransformMixin &#8212; cymel 0.22.2024021203 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.transform_c.html" title="cymel.core.cyobjects.transform_c"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.22.2024021203 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.transform_c.html" accesskey="U">cymel.core.cyobjects.transform_c</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.transform_c.TransformMixin</a></li> 
@@ -54,7 +54,7 @@
 </map><dl class="py class">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.transform_c.TransformMixin">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.transform_c.</span></span><span class="sig-name descname"><span class="pre">TransformMixin</span></span><a class="headerlink" href="#cymel.core.cyobjects.transform_c.TransformMixin" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p><cite>.Transform</cite> クラスでサポートする機能の中核。</p>
 <p class="rubric">Methods:</p>
 <table class="autosummary longtable docutils align-default">
@@ -122,11 +122,11 @@
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>m</strong> (<cite>.Matrix</cite>) -- セットしたいマトリックス。</p></li>
-<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ワールド空間でセットするかどうか。</p></li>
-<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- アトリビュートがロックされていているなどのために
+<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間でセットするかどうか。</p></li>
+<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- アトリビュートがロックされていているなどのために
 セットできない場合もエラーにならない。
 また、 double3 のセットできる箇所だけセットされる。</p></li>
-<li><p><strong>get</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 実際にはセットせず、
+<li><p><strong>get</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 実際にはセットせず、
 セットされるべきアトリビュート値だけ計算する。</p></li>
 </ul>
 </dd>
@@ -161,14 +161,14 @@ jointOrient か rotateAxis になる。</p>
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>q</strong> (<cite>.Quaternion</cite>) -- セットしたいクォータニオン。</p></li>
-<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ワールド空間でセットするかどうか。</p></li>
-<li><p><strong>ra</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- rotateAxis を含んでいるかどうか。</p></li>
-<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- rotate を含んでいるかどうか。</p></li>
-<li><p><strong>jo</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- jointOrient を含んでいるかどうか。</p></li>
-<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- アトリビュートがロックされていているなどのために
+<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間でセットするかどうか。</p></li>
+<li><p><strong>ra</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- rotateAxis を含んでいるかどうか。</p></li>
+<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- rotate を含んでいるかどうか。</p></li>
+<li><p><strong>jo</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- jointOrient を含んでいるかどうか。</p></li>
+<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- アトリビュートがロックされていているなどのために
 セットできない場合もエラーにならない。
 また、 double3 のセットできる箇所だけセットされる。</p></li>
-<li><p><strong>get</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 実際にはセットせず、
+<li><p><strong>get</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 実際にはセットせず、
 セットされるべき rotate アトリビュート値だけ計算する。</p></li>
 </ul>
 </dd>
@@ -206,11 +206,11 @@ inverseScale の影響は無視される。</p>
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>v</strong> (<em>sequence</em>) -- セットしたい scale 値。</p></li>
-<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ワールド空間でセットするかどうか。</p></li>
-<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- アトリビュートがロックされていているなどのために
+<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間でセットするかどうか。</p></li>
+<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- アトリビュートがロックされていているなどのために
 セットできない場合もエラーにならない。
 また、 double3 のセットできる箇所だけセットされる。</p></li>
-<li><p><strong>get</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 実際にはセットせず、
+<li><p><strong>get</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 実際にはセットせず、
 セットされるべき scale アトリビュート値を得る。</p></li>
 </ul>
 </dd>
@@ -245,11 +245,11 @@ inverseScale の影響は無視される。</p>
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>v</strong> (<em>sequence</em>) -- セットしたい shear 値。</p></li>
-<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ワールド空間でセットするかどうか。</p></li>
-<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- アトリビュートがロックされていているなどのために
+<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間でセットするかどうか。</p></li>
+<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- アトリビュートがロックされていているなどのために
 セットできない場合もエラーにならない。
 また、 double3 のセットできる箇所だけセットされる。</p></li>
-<li><p><strong>get</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 実際にはセットせず、
+<li><p><strong>get</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 実際にはセットせず、
 セットされるべき shear アトリビュート値だけ計算する。</p></li>
 </ul>
 </dd>
@@ -289,11 +289,11 @@ inverseScale の影響は無視される。</p>
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>x</strong> (<cite>.Transformation</cite>) -- セットしたいトランスフォーメーション情報。</p></li>
-<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ワールド空間でセットするかどうか。</p></li>
-<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- アトリビュートがロックされていているなどのために
+<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間でセットするかどうか。</p></li>
+<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- アトリビュートがロックされていているなどのために
 セットできない場合もエラーにならない。
 また、 double3 のセットできる箇所だけセットされる。</p></li>
-<li><p><strong>get</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 実際にはセットせず、
+<li><p><strong>get</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 実際にはセットせず、
 セットされるべきアトリビュート値だけ計算する。</p></li>
 </ul>
 </dd>
@@ -315,8 +315,8 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>v</strong> (<em>sequence</em>) -- セットしたい位置。</p></li>
-<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ワールド空間でセットするかどうか。</p></li>
-<li><p><strong>at</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- <p>どのアトリビュートに相当する位置でセットするか。</p>
+<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間でセットするかどうか。</p></li>
+<li><p><strong>at</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- <p>どのアトリビュートに相当する位置でセットするか。</p>
 <ul>
 <li><p>0 だとローカル原点（親の matrix 位置）。</p></li>
 <li><p>1 だと translate の位置。</p></li>
@@ -325,10 +325,10 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <li><p>4 以上だと matrix の位置。</p></li>
 </ul>
 </p></li>
-<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- アトリビュートがロックされていているなどのために
+<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- アトリビュートがロックされていているなどのために
 セットできない場合もエラーにならない。
 また、 double3 のセットできる箇所だけセットされる。</p></li>
-<li><p><strong>get</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 実際にはセットせず、
+<li><p><strong>get</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 実際にはセットせず、
 セットされるべき shear アトリビュート値だけ計算する。</p></li>
 </ul>
 </dd>
@@ -433,14 +433,14 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
         <li class="right" >
           <a href="../cymel.core.cyobjects.transform_c.html" title="cymel.core.cyobjects.transform_c"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.22.2024021203 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.transform_c.html" >cymel.core.cyobjects.transform_c</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.transform_c.TransformMixin</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020-2023, ryusas.
+        &#169; Copyright 2020-2024, ryusas.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
     </div>
   </body>

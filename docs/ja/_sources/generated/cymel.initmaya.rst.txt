@@ -17,6 +17,7 @@
 
     .. autosummary::
     
+        addCymelPluginsPathToAllowedlist
         callUserSetupMel
         getUserPrefsDir
         initApiImmutables
@@ -56,6 +57,7 @@
     .. rubric:: Functions Details:
 
     
+    .. autofunction:: addCymelPluginsPathToAllowedlist
     .. autofunction:: callUserSetupMel
     .. autofunction:: getUserPrefsDir
     .. autofunction:: initApiImmutables

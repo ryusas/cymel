@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.cyobjects.plug_c.Plug_c &#8212; cymel 0.20.2023090200 ドキュメント</title>
+    <title>class cymel.core.cyobjects.plug_c.Plug_c &#8212; cymel 0.22.2024021203 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.plug_c.html" title="cymel.core.cyobjects.plug_c"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.22.2024021203 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.plug_c.html" accesskey="U">cymel.core.cyobjects.plug_c</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.plug_c.Plug_c</a></li> 
@@ -476,7 +476,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- アトリビュートのロング名。</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- アトリビュートのロング名。</p></li>
 <li><p><strong>node</strong> (<cite>.Node</cite>) -- アトリビュートを追加するノード。
 省略すると、このプラグのノードになる。</p></li>
 <li><p><strong>kwargs</strong> -- その他に <cite>.Node.addAttr</cite> のオプション引数を指定可能。</p></li>
@@ -498,7 +498,7 @@
 ユーティリティ関数 <cite>.affectedAttrNames</cite> が利用できる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>worldSpace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- <p>ワールドスペースアトリビュートの依存関係も確実に得るかどうか。</p>
+<dd class="field-odd"><p><strong>worldSpace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- <p>ワールドスペースアトリビュートの依存関係も確実に得るかどうか。</p>
 <p>デフォルトの False だと、
 例えば <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> ノードの
 translate が影響を与えるアトリビュートとして
@@ -521,7 +521,7 @@ matrix は得られるが worldMatrix は得ることができない。</p>
 ユーティリティ関数 <cite>.affectingAttrNames</cite> が利用できる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>worldSpace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- <p>ワールドスペースアトリビュートの依存関係も確実に得るかどうか。</p>
+<dd class="field-odd"><p><strong>worldSpace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- <p>ワールドスペースアトリビュートの依存関係も確実に得るかどうか。</p>
 <p>デフォルトの False だと、
 例えば <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> ノードの
 worldMatrix が影響を受けるアトリビュートとして
@@ -577,8 +577,8 @@ translate 等を得ることはできない。</p>
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>val</strong> -- セットする値。</p></li>
-<li><p><strong>reset</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 現在の値もリセットする。</p></li>
-<li><p><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ダイナミックアトリビュートでなくても許容する。
+<li><p><strong>reset</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 現在の値もリセットする。</p></li>
+<li><p><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ダイナミックアトリビュートでなくても許容する。
 つまり、このプラグ以外にも影響する操作を許容するかどうか。</p></li>
 </ul>
 </dd>
@@ -593,8 +593,8 @@ translate 等を得ることはできない。</p>
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>val</strong> -- セットする値。</p></li>
-<li><p><strong>reset</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 現在の値もリセットする。</p></li>
-<li><p><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ダイナミックアトリビュートでなくても許容する。
+<li><p><strong>reset</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 現在の値もリセットする。</p></li>
+<li><p><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ダイナミックアトリビュートでなくても許容する。
 つまり、このプラグ以外にも影響する操作を許容するかどうか。</p></li>
 </ul>
 </dd>
@@ -607,7 +607,7 @@ translate 等を得ることはできない。</p>
 <dd><p>undoに対応せずにプラグのロック状態をセットする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- セットする値。</p>
+<dd class="field-odd"><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- セットする値。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -644,7 +644,7 @@ translate 等を得ることはできない。</p>
 <dd><p>コンパウンドアトリビュートの idx 番目の子を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 得たい子のインデックス</p>
+<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 得たい子のインデックス</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><cite>.Plug</cite></p>
@@ -658,7 +658,7 @@ translate 等を得ることはできない。</p>
 <dd><p>コンパウンドアトリビュートの子アトリビュート名リストを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>long</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ロング名で得るかどうか。</p>
+<dd class="field-odd"><p><strong>long</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ロング名で得るかどうか。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><cite>list</cite></p>
@@ -685,7 +685,7 @@ translate 等を得ることはできない。</p>
 （接続操作の後は乱れており、シーンを開き直すと整列される）</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 0 ～ <cite>numConnectedElements</cite> ()-1 の範囲の物理インデックス。</p>
+<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 0 ～ <cite>numConnectedElements</cite> ()-1 の範囲の物理インデックス。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><cite>.Plug</cite></p>
@@ -713,19 +713,19 @@ translate 等を得ることはできない。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>s</strong><strong>|</strong><strong>source</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 上流のコネクションを得る。</p></li>
-<li><p><strong>d</strong><strong>|</strong><strong>destination</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 下流のコネクションを得る。</p></li>
-<li><p><strong>c</strong><strong>|</strong><strong>connections</strong><strong>|</strong><strong>asPair</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- コネクト元のプラグもエアで得る。</p></li>
-<li><p><strong>t</strong><strong>|</strong><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- 指定したノードタイプに限定する。</p></li>
-<li><p><strong>et</strong><strong>|</strong><strong>exactType</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- type指定の場合に、派生タイプを許容せずに
+<li><p><strong>s</strong><strong>|</strong><strong>source</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 上流のコネクションを得る。</p></li>
+<li><p><strong>d</strong><strong>|</strong><strong>destination</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 下流のコネクションを得る。</p></li>
+<li><p><strong>c</strong><strong>|</strong><strong>connections</strong><strong>|</strong><strong>asPair</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- コネクト元のプラグもエアで得る。</p></li>
+<li><p><strong>t</strong><strong>|</strong><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 指定したノードタイプに限定する。</p></li>
+<li><p><strong>et</strong><strong>|</strong><strong>exactType</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- type指定の場合に、派生タイプを許容せずに
 指定タイプとの厳密な一致のみとするかどうか。</p></li>
-<li><p><strong>scn</strong><strong>|</strong><strong>skipConversionNodes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/unitConversion.html">unitConversion</a> 系ノードをスキップするかどうか。</p></li>
-<li><p><strong>asNode</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- コネクト先をプラグではなくノードで得る。</p></li>
-<li><p><strong>checkChildren</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- コンパウンドの下層もチェックする。
+<li><p><strong>scn</strong><strong>|</strong><strong>skipConversionNodes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/unitConversion.html">unitConversion</a> 系ノードをスキップするかどうか。</p></li>
+<li><p><strong>asNode</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- コネクト先をプラグではなくノードで得る。</p></li>
+<li><p><strong>checkChildren</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- コンパウンドの下層もチェックする。
 デフォルトで True なので False を明示すると無効化できる。</p></li>
-<li><p><strong>checkElements</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- マルチプラグの要素もチェックする。
+<li><p><strong>checkElements</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- マルチプラグの要素もチェックする。
 デフォルトで True なので False を明示すると無効化できる。</p></li>
-<li><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 結果を1つだけ得る場合にインデックスを指定する。
+<li><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 結果を1つだけ得る場合にインデックスを指定する。
 負数も指定可能。
 結果は <cite>list</cite> ではなく単一となる（得られない場合は None ）。
 範囲外を指定してもエラーにはならず None となる。</p></li>
@@ -804,7 +804,7 @@ translate 等を得ることはできない。</p>
 <p>論理インデックスの並びは昇順となる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 得たい要素の物理インデックス</p>
+<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 得たい要素の物理インデックス</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><cite>.Plug</cite></p>
@@ -818,7 +818,7 @@ translate 等を得ることはできない。</p>
 <dd><p>マルチアトリビュートの要素が存在しているかどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 自身がマルチのとき、調べるインデックスを指定する。
+<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 自身がマルチのとき、調べるインデックスを指定する。
 自身が要素（実在は不明）のときは省略する。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -845,7 +845,7 @@ translate 等を得ることはできない。</p>
 <dd><p>enum アトリビュートの値から名前を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- enum値。</p>
+<dd class="field-odd"><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- enum値。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><cite>str</cite></p>
@@ -859,7 +859,7 @@ translate 等を得ることはできない。</p>
 <dd><p>enum アトリビュートの名前から値を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- enum名。</p>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- enum名。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><cite>int</cite></p>
@@ -1004,7 +1004,7 @@ translate 等を得ることはできない。</p>
 <dd><p>ノードが指定ファンクションタイプと互換性があるかどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>fn</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MFn.html">MFn</a> タイプ。</p>
+<dd class="field-odd"><p><strong>fn</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MFn.html">MFn</a> タイプ。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><cite>bool</cite></p>
@@ -1152,7 +1152,7 @@ translate 等を得ることはできない。</p>
 <dd><p>値がデータブロックにキャッシュされるかどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>static</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 静的な設定をチェックする。</p>
+<dd class="field-odd"><p><strong>static</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 静的な設定をチェックする。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><cite>bool</cite></p>
@@ -1166,7 +1166,7 @@ translate 等を得ることはできない。</p>
 <dd><p>値がデータブロックにキャッシュされるかどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>static</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 静的な設定をチェックする。</p>
+<dd class="field-odd"><p><strong>static</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 静的な設定をチェックする。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><cite>bool</cite></p>
@@ -1225,8 +1225,8 @@ translate 等を得ることはできない。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
-<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
+<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
+<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -1259,8 +1259,8 @@ translate 等を得ることはできない。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
-<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
+<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
+<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -1321,8 +1321,8 @@ translate 等を得ることはできない。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
-<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
+<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
+<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -1346,8 +1346,8 @@ translate 等を得ることはできない。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
-<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
+<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
+<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -1429,8 +1429,8 @@ translate 等を得ることはできない。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
-<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
+<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
+<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -1494,7 +1494,7 @@ True となる。</p>
 <dd><p>ノードが指定タイプの派生型かどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>typename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- ノードタイプ名。</p>
+<dd class="field-odd"><p><strong>typename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- ノードタイプ名。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><cite>bool</cite></p>
@@ -1571,8 +1571,8 @@ True となる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
-<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
+<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
+<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -1667,8 +1667,8 @@ True となる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
-<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
+<li><p><strong>ancestors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 上位プラグもチェックするかどうか。</p></li>
+<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 下位プラグもチェックするかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -1683,7 +1683,7 @@ True となる。</p>
 <dd><p>マルチやコンパウンドの階層を下って、リーフのプラグのリストを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>evaluate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 未評価のマルチ要素プラグを取りこぼさないように、
+<dd class="field-odd"><p><strong>evaluate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 未評価のマルチ要素プラグを取りこぼさないように、
 マルチプラグを評価する。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -1851,12 +1851,12 @@ True となる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) -- 検索を開始するインデックス。
+<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 検索を開始するインデックス。
 デフォルトだと、最後のコネクションの次のインデックスからとなる。
 途中のインデックスも見つけるなら 0 などを指定する。</p></li>
-<li><p><strong>asPlug</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- 結果を <cite>Plug</cite> で得る。</p></li>
-<li><p><strong>checkLocked</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ロックされたプラグをスキップする。</p></li>
-<li><p><strong>checkChildren</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- コンパウンドの子やその中のマルチもチェックする。</p></li>
+<li><p><strong>asPlug</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 結果を <cite>Plug</cite> で得る。</p></li>
+<li><p><strong>checkLocked</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ロックされたプラグをスキップする。</p></li>
+<li><p><strong>checkChildren</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- コンパウンドの子やその中のマルチもチェックする。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -1995,7 +1995,7 @@ True となる。</p>
 Pythonの名前と衝突する場合のためにこのメソッドがある。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- アトリビュート名。</p>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- アトリビュート名。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><cite>.Plug</cite></p>
@@ -2010,8 +2010,8 @@ Pythonの名前と衝突する場合のためにこのメソッドがある。</
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>short</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- アトリビュート名をショート名で得るかどうか。</p></li>
-<li><p><strong>fullAttrPath</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- コンパウンドアトリビュート階層をフルパスで得るかどうか。</p></li>
+<li><p><strong>short</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- アトリビュート名をショート名で得るかどうか。</p></li>
+<li><p><strong>fullAttrPath</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- コンパウンドアトリビュート階層をフルパスで得るかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -2028,7 +2028,7 @@ Pythonの名前と衝突する場合のためにこのメソッドがある。</
 Pythonの名前と衝突する場合のためにこのメソッドがある。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) -- アトリビュート名。</p>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- アトリビュート名。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><cite>.Plug</cite></p>
@@ -2055,7 +2055,7 @@ Pythonの名前と衝突する場合のためにこのメソッドがある。</
 <dd><p>コンパウンドのルートプラグを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>completely</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) -- ルートがマルチ要素プラグの場合は、そこからさらにマルチプラグを得る。</p>
+<dd class="field-odd"><p><strong>completely</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ルートがマルチ要素プラグの場合は、そこからさらにマルチプラグを得る。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><cite>.Plug</cite></p>
@@ -2376,14 +2376,14 @@ Pythonの名前と衝突する場合のためにこのメソッドがある。</
         <li class="right" >
           <a href="../cymel.core.cyobjects.plug_c.html" title="cymel.core.cyobjects.plug_c"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.20.2023090200 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.22.2024021203 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.plug_c.html" >cymel.core.cyobjects.plug_c</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.plug_c.Plug_c</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020-2023, ryusas.
+        &#169; Copyright 2020-2024, ryusas.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
     </div>
   </body>
