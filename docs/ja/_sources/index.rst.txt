@@ -18,16 +18,11 @@ Maya バージョンアップ時に大きな変更があった場合など、C++
 Contents
 =====================================
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
     installation
     whycymel
     gettingstarted
-    cyobjects
-    datatypes
-    customclass
-    utilities
-    uicontrols
     modules
 
 

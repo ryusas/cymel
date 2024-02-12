@@ -16,7 +16,7 @@
     <script src="_static/translations.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="ノードとプラグのラッパークラス" href="cyobjects.html" />
+    <link rel="next" title="モジュールリファレンスマニュアル" href="modules.html" />
     <link rel="prev" title="なぜ cymel ?" href="whycymel.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -29,7 +29,7 @@
           <a href="py-modindex.html" title="Pythonモジュール索引"
              >モジュール</a> |</li>
         <li class="right" >
-          <a href="cyobjects.html" title="ノードとプラグのラッパークラス"
+          <a href="modules.html" title="モジュールリファレンスマニュアル"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
           <a href="whycymel.html" title="なぜ cymel ?"
@@ -159,7 +159,7 @@ cymel では、あえてそこまではやらず、ごく最低限のことに�
 <p>ただし、互換性のないクラスを指定するとエラーになります。
 たとえば、 <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/joint.html">joint</a> は <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> でもありますが <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/shape.html">shape</a> ではないので、 <cite>.Shape</cite> クラスを指定するとエラーになります。</p>
 <p>やはり、通常は、クラスを明示するよりも <cite>.CyObject</cite> を指定するのが簡単で確実です。
-クラスの明示は、 <a class="reference internal" href="customclass.html#customclass-node"><span class="std std-ref">カスタムノードクラス</span></a> を作り未登録のまま使う場合や、あえて抽象的な振る舞いをさせたいような場合に使用します。
+クラスの明示は、 <a class="reference internal" href="#gettingstarted-customclasses-nodes"><span class="std std-ref">カスタムノードクラス</span></a> を作り未登録のまま使う場合や、あえて抽象的な振る舞いをさせたいような場合に使用します。
 たとえば、 <cite>.DagNode</cite> 派生クラスは DAGパスを含んでいるため、同一ノードのインスタンスでもパスが異なれば違うものとして扱われます。
 しかし、より抽象的な <cite>.Node</cite> インスタンスとして扱えば、DAGパスは含まれないため、同じものになります。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">f</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -186,7 +186,7 @@ cymel では、あえてそこまではやらず、ごく最低限のことに�
 </pre></div>
 </div>
 <p>この弱点は設計段階から把握された上で、あえてそのようになっています。</p>
-<p>何故かというと、 <a class="reference internal" href="customclass.html#customclass-node"><span class="std std-ref">カスタムノードクラス</span></a> を自由に作れるという仕組みによって、
+<p>何故かというと、 <span class="xref std std-ref">customclass-node</span> を自由に作れるという仕組みによって、
 isinstance でタイプ判別ができるという前提は既に崩れているからです。
 pymel も然りです。</p>
 <p>そこで、確実にノードタイプを判別するには、
@@ -199,7 +199,7 @@ isinstance ではなく、以下のように <cite>~.Node_c.isType</cite> か <c
 </div>
 <p>とはいえ、純粋にノードタイプを判別したいという用途ではなく、文字通り、派生クラスのインスタンスかどうかを判別したいのならば
 isinstance は有用です。
-たとえば、 <a class="reference internal" href="customclass.html#customclass-node"><span class="std std-ref">カスタムノードクラス</span></a> ではノードタイプ以外の条件も加味してクラスを決定できるため、そういった条件込みで判別したい場合などには有用です。</p>
+たとえば、 <span class="xref std std-ref">customclass-node</span> ではノードタイプ以外の条件も加味してクラスを決定できるため、そういった条件込みで判別したい場合などには有用です。</p>
 </section>
 </section>
 <section id="gettingstarted-plugs">
@@ -814,6 +814,168 @@ shear は隠されていますが変更可能です（Maya 2019 から 2020.0 �
 </div>
 </section>
 </section>
+<section id="gettingstarted-customclasses">
+<span id="id15"></span><h2>カスタムクラス<a class="headerlink" href="#gettingstarted-customclasses" title="この見出しへのパーマリンク">¶</a></h2>
+<p>cymel では、標準で備わっているノードやプラグのクラスを継承した独自のクラスを使用することができます。</p>
+<section id="gettingstarted-customclasses-nodes">
+<span id="id16"></span><h3>カスタムノードクラス<a class="headerlink" href="#gettingstarted-customclasses-nodes" title="この見出しへのパーマリンク">¶</a></h3>
+<p>独自のノードクラスを使用する最も簡単な方法は、そのノードタイプに対応する標準のクラスを継承したクラスを実装し、使用する際はただそれを明示することです。</p>
+<p>次のコードでは、標準の Transform クラスを継承した MyTransform クラスを作っています。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyTransform</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">clearRestPose</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mfn</span><span class="p">()</span><span class="o">.</span><span class="n">clearRestPosition</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">saveRestPose</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mfn</span><span class="p">()</span><span class="o">.</span><span class="n">setRestPosition</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mfn</span><span class="p">()</span><span class="o">.</span><span class="n">transformation</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">gotoRestPose</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">mfn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mfn</span><span class="p">()</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">mfn</span><span class="o">.</span><span class="n">restPosition</span><span class="p">()</span>
+        <span class="n">u</span> <span class="o">=</span> <span class="n">mfn</span><span class="o">.</span><span class="n">transformation</span><span class="p">()</span>
+        <span class="n">setx</span> <span class="o">=</span> <span class="n">mfn</span><span class="o">.</span><span class="n">setTransformation</span>
+        <span class="n">cm</span><span class="o">.</span><span class="n">docmd</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">setx</span><span class="p">(</span><span class="n">r</span><span class="p">),</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">setx</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Maya API の MFnTransformation クラスの持つ Rest Position 機能を利用して、現在のポーズを一時的に保存したり、どの状態に戻ったりするメソッドを実装しています。APIのこの機能は、Maya内部では使用されず、シーンファイルにも保存されない、APIレベルの一時的なキャッシュです。
+APIでの操作となると通常はアンドゥはできませんが、この実装では cymel の <cite>docmd</cite> を使用してアンドゥにも対応させています。</p>
+<p>以下はこのクラスの使用例です。</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">polyCube</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">MyTransform</span><span class="p">(</span><span class="n">cmds</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">sl</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">set</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">setu</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">s</span><span class="o">.</span><span class="n">set</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">saveRestPose</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">s</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">gotoRestPose</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">undo</span><span class="p">()</span>
+<span class="go"># Undo: obj.gotoRestPose() #</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">redo</span><span class="p">()</span>
+<span class="go"># Redo: obj.gotoRestPose() #</span>
+</pre></div>
+</div>
+<p>この例では、実装した MyTransform クラスを明示してインスタンスを得る必要があります。 <cite>sel</cite> や <cite>selected</cite> でカレントセレクションから得たり、親や子の transform やコネクションを辿って得られるオブジェジェクトでは通常の <cite>Transform</cite> クラスが使用されてしまい MyTransform クラスが使用されることはありません。</p>
+</section>
+<section id="gettingstarted-customclasses-registration">
+<span id="id17"></span><h3>検査メソッド付きノードクラスの登録<a class="headerlink" href="#gettingstarted-customclasses-registration" title="この見出しへのパーマリンク">¶</a></h3>
+<p>カスタムクラスを明示せずにそのインスタンスを得られるようにするには、そのクラスを <cite>cymel.nt</cite> に登録する必要があります。登録するには <cite>cm.nt.registerNodeClass</cite> を使用します。</p>
+<p>早速 MyTransform クラスを登録してみましょう、といきたいところですが、このクラスは transform ノードタイプに対応する標準の <cite>Transform</cite> クラスを継承したものなので、そのまま登録しようとすると transform に対応するクラスが2つになってしまい、その使い分けをどうするかが問題になります。</p>
+<p>この問題を解決するには、同じ transform タイプでも MyTransform を利用すべきかどうでないかを判別するためのタグ情報をノードに実際に追加するようにします。どのようなタグにするかは完全に自由ですが、シーンファイルに保存されることが望ましいので、カスタムアトリビュートを使用することが一般的です。</p>
+<p>クラスでタグを識別する仕組みと、ノードを新規に作成した際にタグを追加する仕組みは、cymel のクラスでサポートされているので、さきほどの MyTransform クラスに、次の2つのメソッドを追加実装します（これらのメソッドは cyeml のクラスタシステムで決められているルールです）。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyTransform</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">):</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_verifyNode</span><span class="p">(</span><span class="n">mfn</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">mfn</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s1">&#39;myNodeTag&#39;</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">createNode</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">nodename</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">MyTransform</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">cmds</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span><span class="n">nodename</span><span class="p">,</span> <span class="n">ln</span><span class="o">=</span><span class="s1">&#39;myNodeTag&#39;</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">nodename</span>
+
+    <span class="c1"># (実装済みのメソッドが続きます)</span>
+</pre></div>
+</div>
+<p>絶対に必要なのは検査メソッド <cite>_verifyNode</cite> のみで、生成メソッド <cite>createNode</cite> は実装が推奨されているくらいの位置付けです。</p>
+<p>そして、次のようにしてクラスを登録します。</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">registerNodeClass</span><span class="p">(</span><span class="n">MyTransform</span><span class="p">,</span> <span class="s1">&#39;transform&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>cymelの通常の使用方法として、ノードクラスのインスタンスを得る際に既存の名前を指定しなければ <cite>createNode</cite> が発動します。
+次のように使用できます。</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MyTransform</span><span class="p">()</span>
+<span class="go"># Result: MyTransform(&#39;myTransform1&#39;) #</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">MyTransform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="go"># Result: MyTransform(&#39;foo&#39;) #</span>
+</pre></div>
+</div>
+<p>このように作成したノードは、識別タグ（カスタムアトリビュート）が設定されているので、 <cite>cm.sel</cite> などで普通に得ることができます。</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span>
+<span class="go"># Result: MyTransform(&#39;foo&#39;) #</span>
+</pre></div>
+</div>
+<p>しかし、先ほどの例のように作成済みのキューブなどには利用できないので、既存の transform にもタグのアトリビュートを追加するメソッドを追加すれば良いです。そのやり方は完全に自由で、システムでも何もサポートされていません。ここでは、次のように addClassTag クラスメソッドを追加し、先ほどの <cite>createNode</cite> メソッドでもそれを呼ぶように変更します。 <cite>_verifyNode</cite> やその他のメソッドはそのままです。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyTransform</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">):</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">createNode</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">nodename</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">MyTransform</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">addClassTag</span><span class="p">(</span><span class="n">nodename</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">nodename</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">addClassTag</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">nodename</span><span class="p">):</span>
+        <span class="n">cmds</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span><span class="n">nodename</span><span class="p">,</span> <span class="n">ln</span><span class="o">=</span><span class="s1">&#39;myNodeTag&#39;</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># (実装済みのメソッドが続きます)</span>
+</pre></div>
+</div>
+<p>これで以下のように既存 transform にもタグを追加することで、 MyTransform が使用されるようにできます。</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MyTransform</span><span class="o">.</span><span class="n">addClassTag</span><span class="p">(</span><span class="n">cmds</span><span class="o">.</span><span class="n">polyCube</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span>
+<span class="go"># Result: MyTransform(&#39;pCube1&#39;) #</span>
+</pre></div>
+</div>
+</section>
+<section id="gettingstarted-customclasses-basic-registration">
+<span id="id18"></span><h3>ベーシックノードクラスの登録<a class="headerlink" href="#gettingstarted-customclasses-basic-registration" title="この見出しへのパーマリンク">¶</a></h3>
+<p>先ほどの MyTransform は、標準のクラス Transform が在った上で、それに機能追加したクラスを実装していました。
+しかし、標準のクラスを完全に乗っ取ってしまいたいこともあります。</p>
+<p>実際は、標準のクラスを乗っ取るというより、標準だと何の機能も実装されていないノードタイプのクラスを自前で実装したいことがあります。</p>
+<p>cymel では全てのノードタイプに対応したクラスが提供されますが、本当に機能が実装されたクラスはごくわずかで、ほとんどのものは自動生成されるクラスでノードタイプ階層をクラス階層にマップする意義くらいしかありません。
+全てのノードタイプクラスは <cite>cm.nt</cite> で提供されますが、標準で機能が実装されていないクラスは最初にアクセスした際に自動生成されます。それは、クラスの出自を確認することで判別できます。</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">DagNode</span>
+<span class="go"># Result: &lt;class &#39;cymel.core.cyobjects.dagnode.DagNode&#39;&gt; #</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span>
+<span class="go"># Result: &lt;class &#39;cymel.core.cyobjects.transform.Transform&#39;&gt; #</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Shape</span>
+<span class="go"># Result: &lt;class &#39;cymel.core.cyobjects.shape.Shape&#39;&gt; #</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Joint</span>
+<span class="go"># Result: &lt;class &#39;cymel.core.typeregistry.Joint&#39;&gt; #</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">ObjectSet</span>
+<span class="go"># Result: &lt;class &#39;cymel.core.typeregistry.ObjectSet&#39;&gt; #</span>
+</pre></div>
+</div>
+<p><cite>cymel.core.typeregistry</cite> (<cite>cm.nt</cite> はその別名です) に在るのが自動生成されたクラスです。上記の例では <cite>Joint</cite> と <cite>ObjectSet</cite> がそれにあたります。それらは、ただそのノードタイプに対応したクラスがあるだけで、特別な機能は何も持っていません。
+もちろん、プラグインで追加したノードタイプに対応するクラスも自動生成されますが、当然、何も特別な機能は持ちません。</p>
+<p>それらを自分で実装してしまっても良いでしょう。</p>
+<p>ノードタイプに一対一で対応させる場合は、検査メソッド <cite>_verifyNode</cite> や生成メソッド <cite>createNode</cite> は不要です。ただ <cite>registerNodeClass</cite> するだけです。
+ただし、クラス階層が実際のノードタイプ階層と完全に一致している必要があるので、クラスの継承は正確に指定する必要があります。自動で解決されるように記述するには <cite>parentBasicNodeClass</cite> メソッドの使用が便利です。</p>
+<p>次の例は objectSet タイプに対応するクラスの実装例です（あくまでも簡易的な実装で、あまり深くは考えていません）。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ObjectSet</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">parentBasicNodeClass</span><span class="p">(</span><span class="s1">&#39;objectSet&#39;</span><span class="p">)):</span>
+    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">cmds</span><span class="o">.</span><span class="n">sets</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">im</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">cmds</span><span class="o">.</span><span class="n">sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="n">q</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="n">cmds</span><span class="o">.</span><span class="n">sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="n">q</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">no</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="n">i</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">items</span><span class="p">):</span>
+        <span class="n">cmds</span><span class="o">.</span><span class="n">sets</span><span class="p">(</span><span class="o">*</span><span class="n">items</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">items</span><span class="p">):</span>
+        <span class="n">cmds</span><span class="o">.</span><span class="n">sets</span><span class="p">(</span><span class="o">*</span><span class="n">items</span><span class="p">,</span> <span class="n">rm</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
+
+<span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">registerNodeClass</span><span class="p">(</span><span class="n">ObjectSet</span><span class="p">,</span> <span class="s1">&#39;objectSet&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>もし、そのノードタイプに対してクラスが既に生成されていたら次のような警告が出力された上で上書き登録されます。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Warning: node class deregistered: &lt;class &#39;cymel.core.typeregistry.ObjectSet&#39;&gt; #</span>
+</pre></div>
+</div>
+<p>そのクラスを継承しているクラスが存在するならいったん全て登録抹消されます。それらのノードタイプのクラスも次に評価された際に再生成されますが、生成済みのインスタンスは登録抹消されたクラスのままとなるので気をつけてください。このようなことから、クラスの登録は Maya 起動後の早い段階でやるのが望ましいといえます。</p>
+</section>
+<section id="gettingstarted-customclasses-plugs">
+<span id="id19"></span><h3>カスタムプラグクラス<a class="headerlink" href="#gettingstarted-customclasses-plugs" title="この見出しへのパーマリンク">¶</a></h3>
+<p>(工事中)</p>
+</section>
+</section>
+<section id="gettingstarted-utilities">
+<span id="id20"></span><h2>ユーティリティ<a class="headerlink" href="#gettingstarted-utilities" title="この見出しへのパーマリンク">¶</a></h2>
+<p>(工事中)</p>
+</section>
 <section id="ui">
 <span id="gettingstarted-uicontrols"></span><h2>UIコントロールクラス<a class="headerlink" href="#ui" title="この見出しへのパーマリンク">¶</a></h2>
 <p>cymel は、MELの全てのUIコントロールをラップしたクラスを提供します。</p>
@@ -872,6 +1034,14 @@ shear は隠されていますが変更可能です（Maya 2019 から 2020.0 �
 <li><a class="reference internal" href="#gettingstarted-datatypes-attr">アトリビュートとデータタイプのさらなる使用例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#gettingstarted-customclasses">カスタムクラス</a><ul>
+<li><a class="reference internal" href="#gettingstarted-customclasses-nodes">カスタムノードクラス</a></li>
+<li><a class="reference internal" href="#gettingstarted-customclasses-registration">検査メソッド付きノードクラスの登録</a></li>
+<li><a class="reference internal" href="#gettingstarted-customclasses-basic-registration">ベーシックノードクラスの登録</a></li>
+<li><a class="reference internal" href="#gettingstarted-customclasses-plugs">カスタムプラグクラス</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gettingstarted-utilities">ユーティリティ</a></li>
 <li><a class="reference internal" href="#ui">UIコントロールクラス</a></li>
 </ul>
 </li>
@@ -885,8 +1055,8 @@ shear は隠されていますが変更可能です（Maya 2019 から 2020.0 �
   </div>
   <div>
     <h4>次のトピックへ</h4>
-    <p class="topless"><a href="cyobjects.html"
-                          title="次の章へ">ノードとプラグのラッパークラス</a></p>
+    <p class="topless"><a href="modules.html"
+                          title="次の章へ">モジュールリファレンスマニュアル</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>このページ</h3>
@@ -919,7 +1089,7 @@ shear は隠されていますが変更可能です（Maya 2019 から 2020.0 �
           <a href="py-modindex.html" title="Pythonモジュール索引"
              >モジュール</a> |</li>
         <li class="right" >
-          <a href="cyobjects.html" title="ノードとプラグのラッパークラス"
+          <a href="modules.html" title="モジュールリファレンスマニュアル"
              >次へ</a> |</li>
         <li class="right" >
           <a href="whycymel.html" title="なぜ cymel ?"

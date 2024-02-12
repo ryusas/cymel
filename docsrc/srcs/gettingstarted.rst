@@ -138,7 +138,7 @@ Transform('foo1')
 たとえば、 :mayanode:`joint` は :mayanode:`transform` でもありますが :mayanode:`shape` ではないので、 `.Shape` クラスを指定するとエラーになります。
 
 やはり、通常は、クラスを明示するよりも `.CyObject` を指定するのが簡単で確実です。
-クラスの明示は、 :ref:`customclass-node` を作り未登録のまま使う場合や、あえて抽象的な振る舞いをさせたいような場合に使用します。
+クラスの明示は、 :ref:`gettingstarted-customclasses-nodes` を作り未登録のまま使う場合や、あえて抽象的な振る舞いをさせたいような場合に使用します。
 たとえば、 `.DagNode` 派生クラスは DAGパスを含んでいるため、同一ノードのインスタンスでもパスが異なれば違うものとして扱われます。
 しかし、より抽象的な `.Node` インスタンスとして扱えば、DAGパスは含まれないため、同じものになります。
 
@@ -883,6 +883,211 @@ Matrix(((1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1)))
 >>> a.bar.reset()
 >>> a.bar.get()
 Transformation(s=Vector(1.000000, 1.000000, 1.000000), sh=Vector(0.000000, 0.000000, 0.000000), r=EulerRotation(0, 0, 0, XYZ), t=Vector(0.000000, 0.000000, 0.000000))
+
+
+
+.. _gettingstarted-customclasses:
+
+カスタムクラス
+====================================
+cymel では、標準で備わっているノードやプラグのクラスを継承した独自のクラスを使用することができます。
+
+
+.. _gettingstarted-customclasses-nodes:
+
+カスタムノードクラス
+-------------------------------------------
+独自のノードクラスを使用する最も簡単な方法は、そのノードタイプに対応する標準のクラスを継承したクラスを実装し、使用する際はただそれを明示することです。
+
+次のコードでは、標準の Transform クラスを継承した MyTransform クラスを作っています。
+
+.. code-block:: python
+
+    class MyTransform(cm.nt.Transform):
+        def clearRestPose(self):
+            self.mfn().clearRestPosition()
+
+        def saveRestPose(self):
+            self.mfn().setRestPosition(self.mfn().transformation())
+
+        def gotoRestPose(self):
+            mfn = self.mfn()
+            r = mfn.restPosition()
+            u = mfn.transformation()
+            setx = mfn.setTransformation
+            cm.docmd(lambda: setx(r), lambda: setx(u))
+
+Maya API の MFnTransformation クラスの持つ Rest Position 機能を利用して、現在のポーズを一時的に保存したり、どの状態に戻ったりするメソッドを実装しています。APIのこの機能は、Maya内部では使用されず、シーンファイルにも保存されない、APIレベルの一時的なキャッシュです。
+APIでの操作となると通常はアンドゥはできませんが、この実装では cymel の `docmd` を使用してアンドゥにも対応させています。
+
+以下はこのクラスの使用例です。
+
+>>> cmds.polyCube()
+>>> obj = MyTransform(cmds.ls(sl=True)[0])
+>>> obj.t.set((1, 2, 3))
+>>> obj.r.setu((10, 20, 30))
+>>> obj.s.set((2, 4, 6))
+>>> obj.saveRestPose()
+>>> obj.t.reset()
+>>> obj.r.reset()
+>>> obj.s.reset()
+>>> obj.gotoRestPose()
+>>> cmds.undo()
+# Undo: obj.gotoRestPose() # 
+>>> cmds.redo()
+# Redo: obj.gotoRestPose() #
+
+この例では、実装した MyTransform クラスを明示してインスタンスを得る必要があります。 `sel` や `selected` でカレントセレクションから得たり、親や子の transform やコネクションを辿って得られるオブジェジェクトでは通常の `Transform` クラスが使用されてしまい MyTransform クラスが使用されることはありません。
+
+
+
+.. _gettingstarted-customclasses-registration:
+
+検査メソッド付きノードクラスの登録
+-------------------------------------------
+カスタムクラスを明示せずにそのインスタンスを得られるようにするには、そのクラスを `cymel.nt` に登録する必要があります。登録するには `cm.nt.registerNodeClass` を使用します。
+
+早速 MyTransform クラスを登録してみましょう、といきたいところですが、このクラスは transform ノードタイプに対応する標準の `Transform` クラスを継承したものなので、そのまま登録しようとすると transform に対応するクラスが2つになってしまい、その使い分けをどうするかが問題になります。
+
+この問題を解決するには、同じ transform タイプでも MyTransform を利用すべきかどうでないかを判別するためのタグ情報をノードに実際に追加するようにします。どのようなタグにするかは完全に自由ですが、シーンファイルに保存されることが望ましいので、カスタムアトリビュートを使用することが一般的です。
+
+クラスでタグを識別する仕組みと、ノードを新規に作成した際にタグを追加する仕組みは、cymel のクラスでサポートされているので、さきほどの MyTransform クラスに、次の2つのメソッドを追加実装します（これらのメソッドは cyeml のクラスタシステムで決められているルールです）。
+
+.. code-block:: python
+
+    class MyTransform(cm.nt.Transform):
+        @staticmethod
+        def _verifyNode(mfn, name):
+            return mfn.hasAttribute('myNodeTag')
+
+        @classmethod
+        def createNode(cls, **kwargs):
+            nodename = super(MyTransform, cls).createNode(**kwargs)
+            cmds.addAttr(nodename, ln='myNodeTag', at='message', h=True)
+            return nodename
+
+        # (実装済みのメソッドが続きます)
+
+絶対に必要なのは検査メソッド `_verifyNode` のみで、生成メソッド `createNode` は実装が推奨されているくらいの位置付けです。
+
+そして、次のようにしてクラスを登録します。
+
+>>> cm.nt.registerNodeClass(MyTransform, 'transform')
+
+cymelの通常の使用方法として、ノードクラスのインスタンスを得る際に既存の名前を指定しなければ `createNode` が発動します。
+次のように使用できます。
+
+>>> MyTransform()
+# Result: MyTransform('myTransform1') # 
+>>> MyTransform(n='foo')
+# Result: MyTransform('foo') # 
+
+このように作成したノードは、識別タグ（カスタムアトリビュート）が設定されているので、 `cm.sel` などで普通に得ることができます。
+
+>>> cm.sel
+# Result: MyTransform('foo') # 
+
+しかし、先ほどの例のように作成済みのキューブなどには利用できないので、既存の transform にもタグのアトリビュートを追加するメソッドを追加すれば良いです。そのやり方は完全に自由で、システムでも何もサポートされていません。ここでは、次のように addClassTag クラスメソッドを追加し、先ほどの `createNode` メソッドでもそれを呼ぶように変更します。 `_verifyNode` やその他のメソッドはそのままです。
+
+.. code-block:: python
+
+    class MyTransform(cm.nt.Transform):
+        @classmethod
+        def createNode(cls, **kwargs):
+            nodename = super(MyTransform, cls).createNode(**kwargs)
+            cls.addClassTag(nodename)
+            return nodename
+
+        @classmethod
+        def addClassTag(cls, nodename):
+            cmds.addAttr(nodename, ln='myNodeTag', at='message', h=True)
+
+        # (実装済みのメソッドが続きます)
+
+これで以下のように既存 transform にもタグを追加することで、 MyTransform が使用されるようにできます。
+
+>>> MyTransform.addClassTag(cmds.polyCube()[0])
+>>> cm.sel
+# Result: MyTransform('pCube1') # 
+
+
+
+.. _gettingstarted-customclasses-basic-registration:
+
+ベーシックノードクラスの登録
+-------------------------------------------
+先ほどの MyTransform は、標準のクラス Transform が在った上で、それに機能追加したクラスを実装していました。
+しかし、標準のクラスを完全に乗っ取ってしまいたいこともあります。
+
+実際は、標準のクラスを乗っ取るというより、標準だと何の機能も実装されていないノードタイプのクラスを自前で実装したいことがあります。
+
+cymel では全てのノードタイプに対応したクラスが提供されますが、本当に機能が実装されたクラスはごくわずかで、ほとんどのものは自動生成されるクラスでノードタイプ階層をクラス階層にマップする意義くらいしかありません。
+全てのノードタイプクラスは `cm.nt` で提供されますが、標準で機能が実装されていないクラスは最初にアクセスした際に自動生成されます。それは、クラスの出自を確認することで判別できます。
+
+>>> cm.nt.DagNode
+# Result: <class 'cymel.core.cyobjects.dagnode.DagNode'> # 
+>>> cm.nt.Transform
+# Result: <class 'cymel.core.cyobjects.transform.Transform'> # 
+>>> cm.nt.Shape
+# Result: <class 'cymel.core.cyobjects.shape.Shape'> # 
+>>> cm.nt.Joint
+# Result: <class 'cymel.core.typeregistry.Joint'> # 
+>>> cm.nt.ObjectSet
+# Result: <class 'cymel.core.typeregistry.ObjectSet'> # 
+
+`cymel.core.typeregistry` (`cm.nt` はその別名です) に在るのが自動生成されたクラスです。上記の例では `Joint` と `ObjectSet` がそれにあたります。それらは、ただそのノードタイプに対応したクラスがあるだけで、特別な機能は何も持っていません。
+もちろん、プラグインで追加したノードタイプに対応するクラスも自動生成されますが、当然、何も特別な機能は持ちません。
+
+それらを自分で実装してしまっても良いでしょう。
+
+ノードタイプに一対一で対応させる場合は、検査メソッド `_verifyNode` や生成メソッド `createNode` は不要です。ただ `registerNodeClass` するだけです。
+ただし、クラス階層が実際のノードタイプ階層と完全に一致している必要があるので、クラスの継承は正確に指定する必要があります。自動で解決されるように記述するには `parentBasicNodeClass` メソッドの使用が便利です。
+
+次の例は objectSet タイプに対応するクラスの実装例です（あくまでも簡易的な実装で、あまり深くは考えていません）。
+
+.. code-block:: python
+
+    class ObjectSet(cm.nt.parentBasicNodeClass('objectSet')):
+        def __contains__(self, item):
+            return cmds.sets(item, im=self.name())
+
+        def __len__(self):
+            return cmds.sets(self.name(), q=True, s=True)
+
+        def __getitem__(self, i):
+            return cm.O(cmds.sets(self.name(), q=True, no=True)[i])
+
+        def add(self, *items):
+            cmds.sets(*items, add=self.name())
+
+        def remove(self, *items):
+            cmds.sets(*items, rm=self.name())
+
+    cm.nt.registerNodeClass(ObjectSet, 'objectSet')
+
+もし、そのノードタイプに対してクラスが既に生成されていたら次のような警告が出力された上で上書き登録されます。
+
+.. code-block:: python
+
+    # Warning: node class deregistered: <class 'cymel.core.typeregistry.ObjectSet'> # 
+
+そのクラスを継承しているクラスが存在するならいったん全て登録抹消されます。それらのノードタイプのクラスも次に評価された際に再生成されますが、生成済みのインスタンスは登録抹消されたクラスのままとなるので気をつけてください。このようなことから、クラスの登録は Maya 起動後の早い段階でやるのが望ましいといえます。
+
+
+
+.. _gettingstarted-customclasses-plugs:
+
+カスタムプラグクラス
+-------------------------------------------
+(工事中)
+
+
+
+.. _gettingstarted-utilities:
+
+ユーティリティ
+====================================
+(工事中)
 
 
 

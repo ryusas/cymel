@@ -180,7 +180,7 @@ class NodeTypes(with_metaclass(Singleton, object)):
                             invalid = False
                         break
                 if invalid:
-                    raise ValueError("class inheritance missmatch for maya nodetype hierarchy: %s(%s)" % (cls.__name__, base.__name__))
+                    raise ValueError("class inheritance missmatch for maya nodetype hierarchy: %s(%s)" % (cls.__name__, cls.mro()[1].__name__))
 
             # ノードタイプの登録が既にあれば、警告を出力しつつ削除する。
             oldcls = _basicClsDict_get(nodetype)
