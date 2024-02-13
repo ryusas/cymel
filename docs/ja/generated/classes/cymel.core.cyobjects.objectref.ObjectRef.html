@@ -56,8 +56,8 @@
 <dt class="sig sig-object py" id="cymel.core.cyobjects.objectref.ObjectRef">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.objectref.</span></span><span class="sig-name descname"><span class="pre">ObjectRef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.objectref.ObjectRef" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベースクラス: <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">CyObject</span></code></a></p>
-<p><cite>.CyObject</cite> の参照が切れていても再取得が可能な弱参照ラッパー。</p>
-<p>これ自身も <cite>.CyObject</cite> であるため、参照先を得ずとも、
+<p><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> の参照が切れていても再取得が可能な弱参照ラッパー。</p>
+<p>これ自身も <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> であるため、参照先を得ずとも、
 基底でサポートする範囲でオリジナルのようにも振る舞える。</p>
 <p class="rubric">Methods:</p>
 <table class="autosummary longtable docutils align-default">
@@ -89,7 +89,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.objectref.ObjectRef.CLASS_TYPE">
 <span class="sig-name descname"><span class="pre">CLASS_TYPE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">-1</span></em><a class="headerlink" href="#cymel.core.cyobjects.objectref.ObjectRef.CLASS_TYPE" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ラッパークラスの種類が <cite>ObjectRef</cite> であることを表す。</p>
+<dd><p>ラッパークラスの種類が <a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef" title="cymel.core.cyobjects.objectref.ObjectRef"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObjectRef</span></code></a> であることを表す。</p>
 </dd></dl>
 
 <p class="rubric">Methods Details:</p>
@@ -98,7 +98,7 @@
 <span class="sig-name descname"><span class="pre">internalData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.objectref.ObjectRef.internalData" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>内部データを返す。</p>
 <p>派生クラスで内部データを拡張する場合にオーバーライドする。
-その場合、 <cite>newObject</cite> クラスメソッドもオーバーライドし、
+その場合、 <a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.newObject" title="cymel.core.cyobjects.objectref.ObjectRef.newObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">newObject</span></code></a> クラスメソッドもオーバーライドし、
 拡張に対応させる。</p>
 <p>内部データはブラックボックスであるものとし、
 拡張データでは基底のデータも内包させる必要がある。</p>
@@ -111,12 +111,12 @@
 <p>内部データはブラックボックスであるものとし、
 本メソッドをオーバーライドする場合も、
 基底メソッドを呼び出して処理を完遂させなければならない。</p>
-<p>内部データを拡張する場合は <cite>internalData</cite> も
+<p>内部データを拡張する場合は <a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.internalData" title="cymel.core.cyobjects.objectref.ObjectRef.internalData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">internalData</span></code></a> も
 オーバーライドすること。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cls</strong> (<cite>type</cite>) -- 生成するインスタンスのクラス。</p></li>
+<li><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a>) -- 生成するインスタンスのクラス。</p></li>
 <li><p><strong>data</strong> -- インスタンスにセットする内部データ。</p></li>
 </ul>
 </dd>
@@ -132,7 +132,7 @@
 <dd><p>ノードを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>.Node</cite> 派生クラス</p>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a> 派生クラス</p>
 </dd>
 </dl>
 </dd></dl>
@@ -143,7 +143,7 @@
 <dd><p>弱参照が切れていなければオブジェクトを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>.CyObject</cite></p>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -166,7 +166,7 @@
 <dd><p>弱参照を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>weakref.ref</cite></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/weakref.html#weakref.ref" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weakref.ref</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>

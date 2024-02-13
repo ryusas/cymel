@@ -60,7 +60,7 @@ html_static_path = ['../static']
 
 
 # -----------------------------------------------------------------------
-#default_role = 'py:obj'
+default_role = 'py:obj'  # autodoc されたドキュメント内へのリンクを簡単に書くために重要。
 
 #source_suffix = ['.rst', '.md']
 source_suffix = '.rst'

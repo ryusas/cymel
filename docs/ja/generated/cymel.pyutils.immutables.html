@@ -52,7 +52,7 @@
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="classes/cymel.pyutils.immutables.ImmutableDict.html#cymel.pyutils.immutables.ImmutableDict" title="cymel.pyutils.immutables.ImmutableDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImmutableDict</span></code></a></p></td>
-<td><p>イミュータブル <cite>dict</cite></p></td>
+<td><p>イミュータブル <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -60,7 +60,7 @@
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.pyutils.immutables.CymelImmutableError" title="cymel.pyutils.immutables.CymelImmutableError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CymelImmutableError</span></code></a></p></td>
-<td><p><cite>immutable</cite> ラップされたオブジェクトが書き換えられた。</p></td>
+<td><p><a class="reference internal" href="#cymel.pyutils.immutables.immutable" title="cymel.pyutils.immutables.immutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code></a> ラップされたオブジェクトが書き換えられた。</p></td>
 </tr>
 </tbody>
 </table>
@@ -86,7 +86,7 @@
 <dl class="py exception">
 <dt class="sig sig-object py" id="cymel.pyutils.immutables.CymelImmutableError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.pyutils.immutables.</span></span><span class="sig-name descname"><span class="pre">CymelImmutableError</span></span><a class="headerlink" href="#cymel.pyutils.immutables.CymelImmutableError" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><cite>immutable</cite> ラップされたオブジェクトが書き換えられた。</p>
+<dd><p><a class="reference internal" href="#cymel.pyutils.immutables.immutable" title="cymel.pyutils.immutables.immutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code></a> ラップされたオブジェクトが書き換えられた。</p>
 </dd></dl>
 
 <p class="rubric">Functions Details:</p>
@@ -94,7 +94,7 @@
 <dt class="sig sig-object py" id="cymel.pyutils.immutables.immutable">
 <span class="sig-prename descclassname"><span class="pre">cymel.pyutils.immutables.</span></span><span class="sig-name descname"><span class="pre">immutable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_or_obj</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.immutables.immutable" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>オブジェクトが変更不可になるラッパーを生成する。</p>
-<p><cite>immutableType</cite> を呼び出し、
+<p><a class="reference internal" href="#cymel.pyutils.immutables.immutableType" title="cymel.pyutils.immutables.immutableType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutableType</span></code></a> を呼び出し、
 デフォルト設定でラッパークラスを得て、
 それでラップした新規インスタンスが返される。</p>
 <dl class="field-list simple">
@@ -138,11 +138,11 @@
 クラス名が省略された場合には任意の名前としても再利用される。</p>
 <p>ラッパークラスでは、オブジェクトの属性値を書き換える
 メソッドがオーバーライドされ、それらがコールされた際に
-<cite>CymelImmutableError</cite> が送出されるようになる。</p>
+<a class="reference internal" href="#cymel.pyutils.immutables.CymelImmutableError" title="cymel.pyutils.immutables.CymelImmutableError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CymelImmutableError</span></code></a> が送出されるようになる。</p>
 <p>どのメソッドをオーバーライドすべきかは、特殊メソッドの
 有無を検査する事で自動決定されるが、
 それだけでは補い切れないクラスに関しては
-<cite>OPTIONAL_MUTATOR_DICT</cite> 辞書で管理している為、
+<a class="reference internal" href="#cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT" title="cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OPTIONAL_MUTATOR_DICT</span></code></a> 辞書で管理している為、
 必要に応じて拡張しなければならない。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
@@ -156,7 +156,7 @@ __module__ 属性にセットされる。
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>type</cite></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></p>
 </dd>
 </dl>
 <div class="admonition warning">
@@ -167,12 +167,12 @@ __module__ 属性にセットされる。
 </div>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p><cite>OPTIONAL_MUTATOR_DICT</cite> には、インスタンスを変更する
+<p><a class="reference internal" href="#cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT" title="cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OPTIONAL_MUTATOR_DICT</span></code></a> には、インスタンスを変更する
 メソッド名をクラスごとに列挙する必要がある。
 これは、対応させたいクラスごとに拡張する必要がある事を
 意味する。ただし、全てのメソッドについて列挙する必要が
 あるわけではない。
-<cite>OPTIONAL_MUTATOR_DICT</cite> をあえて拡張せずとも、
+<a class="reference internal" href="#cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT" title="cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OPTIONAL_MUTATOR_DICT</span></code></a> をあえて拡張せずとも、
 属性の設定、削除、代入演算子などはデフォルトで封じられる。
 あえてメソッド名を列挙する必要があるのは以下のケースである。</p>
 <ul class="simple">

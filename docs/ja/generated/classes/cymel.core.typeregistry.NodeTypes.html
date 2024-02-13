@@ -56,7 +56,7 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.core.typeregistry.</span></span><span class="sig-name descname"><span class="pre">NodeTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeregistry.NodeTypes" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ノードタイプのラッパークラスのマネージャー。</p>
-<p>唯一のインスタンスである <cite>nodetypes</cite> が生成済み。</p>
+<p>唯一のインスタンスである <code class="xref py py-obj docutils literal notranslate"><span class="pre">nodetypes</span></code> が生成済み。</p>
 <p>全てのノードクラスはこの属性としてアクセスできる。</p>
 <p>cymel では、プラグインも含む全てのノードタイプの
 ラッパークラスが提供されるが、機能実装のために
@@ -69,11 +69,11 @@
 その他の任意の条件によって決まるものでも良い。</p>
 <p>カスタムクラスは、
 システムに登録するなどせずにそのまま利用可能だが、
-<cite>registerNodeClass</cite> によって登録することもできる。
+<a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.registerNodeClass" title="cymel.core.typeregistry.NodeTypes.registerNodeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerNodeClass</span></code></a> によって登録することもできる。
 インスタンスを得る場合、
 そのクラスを直接指定すればインスタンスを得られるが、
 クラスが登録してあれば
-<cite>.CyObject</cite> からインスタンスを得ることで
+<a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> からインスタンスを得ることで
 自動的にクラスを決定させることができる。</p>
 <p class="rubric">Methods:</p>
 <table class="autosummary longtable docutils align-default">
@@ -109,7 +109,7 @@
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>type</cite></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -121,7 +121,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cls</strong> (<cite>type</cite>) -- 登録を削除するクラス。</p></li>
+<li><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a>) -- 登録を削除するクラス。</p></li>
 <li><p><strong>warn</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 削除しながら警告メッセージを出力するかどうか。</p></li>
 </ul>
 </dd>
@@ -141,7 +141,7 @@
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>type</cite> ('node' を指定した場合のみ <cite>None</cite> となる)</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a> ('node' を指定した場合のみ <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> となる)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -165,7 +165,7 @@ Python API 2 の <a class="reference external" href="http://docs.autodesk.com/MA
 </li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">_verifyNode</span></code> を実装した場合、さらに
-<cite>Node.createNode &lt;.Node_c.createNode&gt;</cite>
+<a class="reference internal" href="cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c.createNode" title="cymel.core.cyobjects.node_c.Node_c.createNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node.createNode</span></code></a>
 もオーバーライドして、
 ノード生成時に条件を満たすようにすることを推奨する。</p>
 <p>ベーシッククラスは、ノードタイプへの紐付けが厳格で、
@@ -174,7 +174,7 @@ Python API 2 の <a class="reference external" href="http://docs.autodesk.com/MA
 カスタムクラスをベーシッククラスとして登録する場合も、
 ノードタイプと矛盾しない親クラスを継承しなければならない。
 クラス実装で、継承すべき親クラスを取得するには
-<cite>parentBasicNodeClass</cite> が便利である。
+<a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.parentBasicNodeClass" title="cymel.core.typeregistry.NodeTypes.parentBasicNodeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parentBasicNodeClass</span></code></a> が便利である。
 1つのノードタイプへの競合する登録は上書き登録となり、
 警告が出力された上で古いクラスの登録はサブクラスも含めて
 全て抹消される（システムが先んじて行った自動登録を上書き
@@ -191,7 +191,7 @@ Python API 2 の <a class="reference external" href="http://docs.autodesk.com/MA
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cls</strong> (<cite>type</cite>) -- 登録するクラス。</p></li>
+<li><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a>) -- 登録するクラス。</p></li>
 <li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 紐付けるノードタイプ名。</p></li>
 </ul>
 </dd>
@@ -207,10 +207,10 @@ Python API 2 の <a class="reference external" href="http://docs.autodesk.com/MA
 複数タイプへの紐付けも有り得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>cls</strong> (<cite>type</cite>) -- クラス。</p>
+<dd class="field-odd"><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a>) -- クラス。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>tuple</cite></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>

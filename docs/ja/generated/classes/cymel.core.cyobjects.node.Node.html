@@ -75,13 +75,13 @@
 <td><p>ノードを削除する。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.listAliases" title="cymel.core.cyobjects.node.Node.listAliases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listAliases</span></code></a>()</p></td>
-<td><p><cite>aliases</cite> の別名。</p></td>
+<td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.aliases" title="cymel.core.cyobjects.node.Node.aliases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aliases</span></code></a> の別名。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.listAttr" title="cymel.core.cyobjects.node.Node.listAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listAttr</span></code></a>(**kwargs)</p></td>
-<td><p><cite>plugs</cite> の別名。</p></td>
+<td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.plugs" title="cymel.core.cyobjects.node.Node.plugs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugs</span></code></a> の別名。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.lock" title="cymel.core.cyobjects.node.Node.lock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lock</span></code></a>([val])</p></td>
-<td><p><cite>setLocked</cite> の別名。</p></td>
+<td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.setLocked" title="cymel.core.cyobjects.node.Node.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a> の別名。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.namespace" title="cymel.core.cyobjects.node.Node.namespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">namespace</span></code></a>()</p></td>
 <td><p>ネームスペースを得る。</p></td>
@@ -122,8 +122,8 @@
 <li><p>デフォルト値や最大値や最小値の指定を改善。</p>
 <ul>
 <li><p>-dt 型でもデフォルト値を指定可能。</p></li>
-<li><p>matrix 型は <cite>.Matrix</cite> でも <cite>.Transformation</cite> でも指定可能。</p></li>
-<li><p>数値コンパウンドでは <cite>list</cite> 形式での子の値を指定可能。</p></li>
+<li><p>matrix 型は <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> でも <a class="reference internal" href="cymel.core.datatypes.transformation.Transformation.html#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> でも指定可能。</p></li>
+<li><p>数値コンパウンドでは <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> 形式での子の値を指定可能。</p></li>
 <li><p><a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/addAttr.html">addAttr</a> コマンドの振る舞いの通り、
 内部単位（例えば角度ならラジアン）で指定する。</p></li>
 </ul>
@@ -143,7 +143,7 @@
 （例えば matrix は dt となり、double3 は at となる）。</p>
 <p>タイプ名に <code class="docutils literal notranslate"><span class="pre">at:</span></code> か <code class="docutils literal notranslate"><span class="pre">dt:</span></code> の接頭辞を付加することで
 どちらの型かを明示することができる。
-ちなみに <cite>.Plug.type</cite> は、
+ちなみに <code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug.type</span></code> は、
 同じ型名が2バージョン存在する場合はこの形式で返す。</p>
 <p>このオプションではなく、本来の
 attibuteType(at) か dataType(dt)
@@ -180,12 +180,12 @@ doubleLinear や doubleAngle などの単位付きアトリビュートと
 <li><p><strong>proxy</strong><strong>|</strong><strong>pxy</strong> -- プロキシアトリビュートを追加する場合のマスターアトリビュートを指定する。
 これを指定した場合は usedAsProxy(uac) オプションは自動指定されるので
 指定不要である。</p></li>
-<li><p><strong>getPlug</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 戻り値として <cite>.Plug</cite> を得るかどうか。</p></li>
+<li><p><strong>getPlug</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 戻り値として <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> を得るかどうか。</p></li>
 <li><p><strong>kwargs</strong> -- その他、 <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/addAttr.html">addAttr</a> コマンドのオプションを指定可能。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p>None or <cite>.Plug</cite></p>
+<dd class="field-even"><p>None or <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -194,10 +194,10 @@ doubleLinear や doubleAngle などの単位付きアトリビュートと
 <dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.aliases">
 <span class="sig-name descname"><span class="pre">aliases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.aliases" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>別名が定義されているアトリビュートのリストを得る。</p>
-<p>別名と <cite>.Plug</cite> のペアのリストが得られる。</p>
+<p>別名と <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> のペアのリストが得られる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>list</cite></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -209,7 +209,7 @@ doubleLinear や doubleAngle などの単位付きアトリビュートと
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>val</strong> (<cite>.UUID</cite>) -- アサインする UUID を指定する。
+<li><p><strong>val</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code>) -- アサインする UUID を指定する。
 py=True の場合は None を指定して消去することもできる。</p></li>
 <li><p><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- <p>Maya 標準機能ではなく Python の機能を使って生成する
 UUID は uuid という名前のアトリビュートに保存される。
@@ -233,19 +233,19 @@ UUID は uuid という名前のアトリビュートに保存される。
 <dl class="py method">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.listAliases">
 <span class="sig-name descname"><span class="pre">listAliases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.listAliases" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><cite>aliases</cite> の別名。</p>
+<dd><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.aliases" title="cymel.core.cyobjects.node.Node.aliases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aliases</span></code></a> の別名。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.listAttr">
 <span class="sig-name descname"><span class="pre">listAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.listAttr" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><cite>plugs</cite> の別名。</p>
+<dd><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.plugs" title="cymel.core.cyobjects.node.Node.plugs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugs</span></code></a> の別名。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.lock">
 <span class="sig-name descname"><span class="pre">lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.lock" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><cite>setLocked</cite> の別名。</p>
+<dd><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.setLocked" title="cymel.core.cyobjects.node.Node.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a> の別名。</p>
 </dd></dl>
 
 <dl class="py method">
@@ -254,7 +254,7 @@ UUID は uuid という名前のアトリビュートに保存される。
 <dd><p>ネームスペースを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>.Namespace</cite></p>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.utils.namespace.Namespace.html#cymel.utils.namespace.Namespace" title="cymel.utils.namespace.Namespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Namespace</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -272,7 +272,7 @@ m=True を指定しても要素は得られない
 （worldSpace の場合はインデックスを明示しない方が良いため）。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>list</cite></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -283,7 +283,7 @@ m=True を指定しても要素は得られない
 <dd><p>ノードがリファレンスの場合、それを管理する <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/reference.html">reference</a> ノードを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>.Reference</cite> or None</p>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.cyobjects.reference.Reference.html#cymel.core.cyobjects.reference.Reference" title="cymel.core.cyobjects.reference.Reference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reference</span></code></a> or None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -352,13 +352,13 @@ UUID は uuid という名前のアトリビュートに保存される。
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>.UUID</cite></p>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code></p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>指定UUIDをアサインするには <cite>assignUUID</cite> 、
-UUIDからノードを得るには <cite>.CyObject.byUUID</cite> を利用する。</p>
+<p>指定UUIDをアサインするには <a class="reference internal" href="#cymel.core.cyobjects.node.Node.assignUUID" title="cymel.core.cyobjects.node.Node.assignUUID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assignUUID</span></code></a> 、
+UUIDからノードを得るには <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.byUUID" title="cymel.core.cyobjects.cyobject.CyObject.byUUID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject.byUUID</span></code></a> を利用する。</p>
 </div>
 </dd></dl>
 

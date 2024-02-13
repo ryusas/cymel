@@ -49,7 +49,7 @@
 <span id="cymel-initmaya"></span><h1>cymel.initmaya<a class="headerlink" href="#module-cymel.initmaya" title="この見出しへのパーマリンク">¶</a></h1>
 <p>スタンドアロン python (mayapy) からの Maya の初期化。</p>
 <p>cymel 内の Maya に依存するモジュールがインポートされる際に
-<cite>initialize</cite> がデフォルト設定で呼び出されるため、
+<a class="reference internal" href="#cymel.initmaya.initialize" title="cymel.initmaya.initialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialize</span></code></a> がデフォルト設定で呼び出されるため、
 このモジュールを明示的に使用する必要はほとんどないが、
 初期化プロセスをカスタマイズしたい場合などに利用できる。</p>
 <p class="rubric">Functions:</p>
@@ -65,7 +65,7 @@
 <td><p>ユーザープリファレンスディレクトリのパスを得る。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.initmaya.initApiImmutables" title="cymel.initmaya.initApiImmutables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initApiImmutables</span></code></a>()</p></td>
-<td><p>Maya API の数学クラスを <cite>.immutable</cite> ラップのための定義をする。</p></td>
+<td><p>Maya API の数学クラスを <a class="reference internal" href="cymel.pyutils.immutables.html#cymel.pyutils.immutables.immutable" title="cymel.pyutils.immutables.immutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code></a> ラップのための定義をする。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.initmaya.initAutoPlugins" title="cymel.initmaya.initAutoPlugins"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initAutoPlugins</span></code></a>()</p></td>
 <td><p>オートロード設定のされたプラグインをロードする。</p></td>
@@ -135,7 +135,7 @@
 <dd><p>ユーザープリファレンスディレクトリのパスを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>str</cite></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -143,7 +143,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cymel.initmaya.initApiImmutables">
 <span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">initApiImmutables</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.initApiImmutables" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Maya API の数学クラスを <cite>.immutable</cite> ラップのための定義をする。</p>
+<dd><p>Maya API の数学クラスを <a class="reference internal" href="cymel.pyutils.immutables.html#cymel.pyutils.immutables.immutable" title="cymel.pyutils.immutables.immutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code></a> ラップのための定義をする。</p>
 </dd></dl>
 
 <dl class="py function">
@@ -168,13 +168,13 @@
 <span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">initMaya</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.initMaya" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Maya が初期化済みなら False を、未初期化なら初期化して True を返す。</p>
 <p>いずれにせよ、
-<cite>MAYA_VERSION</cite> などの cymel の定数は初期化される。</p>
+<a class="reference internal" href="#cymel.initmaya.MAYA_VERSION" title="cymel.initmaya.MAYA_VERSION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAYA_VERSION</span></code></a> などの cymel の定数は初期化される。</p>
 <p>初期化時に、パス上の全ての <code class="docutils literal notranslate"><span class="pre">userSetup.py</span></code> が呼び出されるが、
 <code class="docutils literal notranslate"><span class="pre">userSetup.mel</span></code> は呼び出されない。</p>
 <p>繰り返し呼び出しても問題はない。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>bool</cite></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -213,33 +213,33 @@ pymelに倣いデフォルトは True としてる。</p></li>
 <dd><p>必要な初期化を全て行う。</p>
 <p>以下が行われる。</p>
 <ul>
-<li><p><cite>initCymelPluginsPath</cite></p></li>
-<li><p><cite>initMaya</cite> (既に初期化済みなら False となり何もされない)</p>
+<li><p><a class="reference internal" href="#cymel.initmaya.initCymelPluginsPath" title="cymel.initmaya.initCymelPluginsPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initCymelPluginsPath</span></code></a></p></li>
+<li><p><a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> (既に初期化済みなら False となり何もされない)</p>
 <p>初期化されたら、さらに</p>
 <ul class="simple">
-<li><p>mels=True なら <cite>initMels</cite> (plugins=plugins)</p></li>
-<li><p>mels=False で plugins=True なら <cite>initAutoPlugins</cite></p></li>
-<li><p>userSetup=True なら <cite>callUserSetupMel</cite></p></li>
+<li><p>mels=True なら <a class="reference internal" href="#cymel.initmaya.initMels" title="cymel.initmaya.initMels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMels</span></code></a> (plugins=plugins)</p></li>
+<li><p>mels=False で plugins=True なら <a class="reference internal" href="#cymel.initmaya.initAutoPlugins" title="cymel.initmaya.initAutoPlugins"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initAutoPlugins</span></code></a></p></li>
+<li><p>userSetup=True なら <a class="reference internal" href="#cymel.initmaya.callUserSetupMel" title="cymel.initmaya.callUserSetupMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callUserSetupMel</span></code></a></p></li>
 </ul>
 </li>
-<li><p><cite>initApiImmutables</cite></p></li>
+<li><p><a class="reference internal" href="#cymel.initmaya.initApiImmutables" title="cymel.initmaya.initApiImmutables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initApiImmutables</span></code></a></p></li>
 </ul>
 <p>初期化済みなら何もされないので、
 繰り返し呼び出しても問題はない。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>mels</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- <cite>initMaya</cite> が True のときに <cite>initMels</cite> を呼び出すかどうか。
+<dd class="field-odd"><p><strong>mels</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- <a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> が True のときに <a class="reference internal" href="#cymel.initmaya.initMels" title="cymel.initmaya.initMels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMels</span></code></a> を呼び出すかどうか。
 Maya の設定に依存する処理をしないなら、呼び出さなくても問題はないため、
 デフォルトでは False としている。</p>
 </dd>
 </dl>
 <dl>
-<dt>:param <cite>bool</cite> plugins</dt><dd><p>プラグインをオートロードするかどうか。</p>
+<dt>:param <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> plugins</dt><dd><p>プラグインをオートロードするかどうか。</p>
 <p>プラグインは、シーンの requires で動的に解決されるし、
 バッチ処理で必要な場合は明示的にロードするようにすべきであり、
 処理負荷も大きいので、デフォルトでは False としている。</p>
 </dd>
-<dt>:param <cite>bool</cite> userSetup</dt><dd><p><cite>initMaya</cite> が True のときに <cite>callUserSetupMel</cite> を呼び出すかどうか。</p>
+<dt>:param <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> userSetup</dt><dd><p><a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> が True のときに <a class="reference internal" href="#cymel.initmaya.callUserSetupMel" title="cymel.initmaya.callUserSetupMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callUserSetupMel</span></code></a> を呼び出すかどうか。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -250,7 +250,7 @@ Maya の設定に依存する処理をしないなら、呼び出さなくても
 <dd><p>Maya が初期化済みかどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>bool</cite></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>

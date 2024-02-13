@@ -65,15 +65,15 @@ w が 1 の場合は、長さ 3 のシーケンスとして振る舞う。
 その場合、w はインデックス指定では参照できず、
 属性としてのみ参照できる。</p>
 <p>w が 1 以外の場合は、長さ 4 のシーケンスとして振る舞う。
-また、その場合のみ <cite>str</cite> や <cite>repr</cite> で確認できる。</p>
-<p><cite>.Matrix</cite> を乗じると、
+また、その場合のみ <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> や <a class="reference external" href="https://docs.python.org/3/library/functions.html#repr" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">repr</span></code></a> で確認できる。</p>
+<p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> を乗じると、
 <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MPoint.html">MPoint</a> のように平行移動が可能だが、
 <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MVector.html">MVector</a> のように平行移動無しの変換をするには
-w を 0 に設定せずとも <cite>xform3</cite> メソッドを利用できる。</p>
+w を 0 に設定せずとも <a class="reference internal" href="#cymel.core.datatypes.vector.Vector.xform3" title="cymel.core.datatypes.vector.Vector.xform3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xform3</span></code></a> メソッドを利用できる。</p>
 <p>つまり、同次座標表現をしない限り、w は常に 1 で使用すると良い。</p>
 <p>コンストラクタでは以下の値を指定可能。</p>
 <ul class="simple">
-<li><p><cite>Vector</cite></p></li>
+<li><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p></li>
 <li><p>x, y, z, w</p></li>
 <li><p>x, y, z</p></li>
 <li><p>x, y</p></li>
@@ -87,7 +87,7 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MVector.html">MVector</a> コンストラクタのように長さ 4 の
 シーケンスを受け付けないものにも渡すことができる。</p>
 <p>また、w に 1 以外を明示した場合は、<a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MPoint.html">MPoint</a> や
-<cite>list</cite> などと交換した際にも、きちんとその情報が継承される。</p>
+<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> などと交換した際にも、きちんとその情報が継承される。</p>
 </div>
 <p class="rubric">Methods:</p>
 <table class="autosummary longtable docutils align-default">
@@ -289,7 +289,7 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <p>abs 組み込み関数を使用する場合と等価。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>Vector</cite></p>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -300,10 +300,10 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <dd><p>4次元ベクトルの和を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> (<cite>Vector</cite>) -- もう1方のベクトル</p>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- もう1方のベクトル</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite></p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -314,10 +314,10 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <dd><p>2つの3次元ベクトルの成す角を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> (<cite>Vector</cite>) -- もう1方のベクトル。</p>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- もう1方のベクトル。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>float</cite></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -329,7 +329,7 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <p>(W*x, W*y, W*z, W) が (x, y, z, 1) に変換される。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>Vector</cite> (self)</p>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -341,10 +341,10 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <p>演算子 ^ と同じ。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> (<cite>Vector</cite>) -- もう1方のベクトル。</p>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- もう1方のベクトル。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite></p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -355,10 +355,10 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <dd><p>2つの位置ベクトル間の2乗距離を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> (<cite>Vector</cite>) -- もう1方の位置。</p>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- もう1方の位置。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>float</cite></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -369,10 +369,10 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <dd><p>2つの位置ベクトル間の距離を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> (<cite>Vector</cite>) -- もう1方の位置。</p>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- もう1方の位置。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>float</cite></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -384,12 +384,12 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>v</strong> (<cite>Vector</cite> or <cite>Number</cite>) -- 分母のベクトル、またはスカラー。</p></li>
+<li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">Number</span></code>) -- 分母のベクトル、またはスカラー。</p></li>
 <li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- ゼロ除算を避ける為の許容誤差。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite></p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -402,10 +402,10 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <p>演算子 * と同じ。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> (<cite>Vector</cite>) -- もう1方のベクトル。</p>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- もう1方のベクトル。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>float</cite></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -417,10 +417,10 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <p>1x4 と 4x1 の行列としての乗算ともいえる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> (<cite>Vector</cite>) -- もう1方のベクトル。</p>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- もう1方のベクトル。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>float</cite></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -431,10 +431,10 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <dd><p>4次元ベクトルを 4x1 と 1x4 の行列として乗算する。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> (<cite>Vector</cite>) -- もう1方のベクトル。</p>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- もう1方のベクトル。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>.Matrix</cite></p>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -449,7 +449,7 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <dd class="field-odd"><p><strong>asId</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 結果をIDで得る。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite>, <cite>int</cite> or None</p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> or None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -461,7 +461,7 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <p>(x, y, z, W) が (W*x, W*y, W*z, W) に変換される。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>Vector</cite> (self)</p>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -472,7 +472,7 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <dd><p>4次元ベクトルの各要素を絶対値にする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>Vector</cite> (self)</p>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -483,10 +483,10 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <dd><p>4次元ベクトルの和をセットする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> (<cite>Vector</cite> or <cite>Number</cite>) -- もう1方のベクトル。</p>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">Number</span></code>) -- もう1方のベクトル。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite> (self)</p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -498,12 +498,12 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>v</strong> (<cite>Vector</cite> or <cite>Number</cite>) -- 分母のベクトル、またはスカラー。</p></li>
+<li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">Number</span></code>) -- 分母のベクトル、またはスカラー。</p></li>
 <li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- ゼロ除算を避ける為の許容誤差。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite> (self)</p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -514,10 +514,10 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <dd><p>4次元ベクトルの積をセットする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> (<cite>Vector</cite> or <cite>Number</cite>) -- もう1方のベクトル、またはスカラー。</p>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">Number</span></code>) -- もう1方のベクトル、またはスカラー。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite> (self)</p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -528,7 +528,7 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <dd><p>4次元ベクトルの符号反転をセットする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>Vector</cite></p>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -540,18 +540,18 @@ API 等の他のオブジェクトとの可換性を確保するため。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>v</strong> (<cite>Vector</cite>) -- 比較するベクトル。</p></li>
+<li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 比較するベクトル。</p></li>
 <li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 許容誤差。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>bool</cite></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p><a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MPoint.html">MPoint</a> の isEquivalent とは挙動が異なることに注意。
-<a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MPoint.html">MPoint</a> では <cite>cartesianize</cite> での差の距離が比較されるが、
+<a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MPoint.html">MPoint</a> では <a class="reference internal" href="#cymel.core.datatypes.vector.Vector.cartesianize" title="cymel.core.datatypes.vector.Vector.cartesianize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cartesianize</span></code></a> での差の距離が比較されるが、
 w=0 の場合に望ましくない結果になるなどの問題がある。
 本メソッドの場合は単純でコストも低い要素ごとの単純比較としている。</p>
 </div>
@@ -564,12 +564,12 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>v</strong> (<cite>Vector</cite>) -- 比較するベクトル。</p></li>
+<li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 比較するベクトル。</p></li>
 <li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 許容誤差。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>bool</cite></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -583,7 +583,7 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd class="field-odd"><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 許容誤差。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>bool</cite></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -594,10 +594,10 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd><p>4次元ベクトルの和をセットする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> (<cite>Vector</cite> or <cite>Number</cite>) -- もう1方のベクトル。</p>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">Number</span></code>) -- もう1方のベクトル。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite> (self)</p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -608,7 +608,7 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd><p>3次元ベクトルの長さを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>float</cite></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -619,7 +619,7 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd><p>3次元ベクトルの長さの2乗を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>float</cite></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -633,7 +633,7 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd class="field-odd"><p><strong>noSign</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 符号ビットを含まない軸ID (0～2) を得る。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>int</cite></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -647,7 +647,7 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd class="field-odd"><p><strong>noSign</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 符号ビットを含まない軸ID (0～2) を得る。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>int</cite></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -658,10 +658,10 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd><p>4次元ベクトルの積を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> (<cite>Vector</cite> or <cite>Number</cite>) -- もう1方のベクトル、またはスカラー。</p>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">Number</span></code>) -- もう1方のベクトル、またはスカラー。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite></p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -672,7 +672,7 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd><p>4次元ベクトルの符号反転を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>Vector</cite></p>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -683,7 +683,7 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd><p>正規化3次元ベクトルを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>Vector</cite></p>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -694,7 +694,7 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd><p>正規化3次元ベクトルをセットする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>Vector</cite> (self)</p>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -705,7 +705,7 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd><p>正規化3次元ベクトルをセットする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>Vector</cite> (self)</p>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -716,10 +716,10 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd><p>指定ベクトルに直交化したベクトルを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>vec</strong> (<cite>Vector</cite>) -- 軸ベクトル。</p>
+<dd class="field-odd"><p><strong>vec</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 軸ベクトル。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite></p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -730,10 +730,10 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd><p>指定ベクトルに直交化したベクトルをセットする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>vec</strong> (<cite>Vector</cite>) -- 軸ベクトル。</p>
+<dd class="field-odd"><p><strong>vec</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 軸ベクトル。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite> (self)</p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -745,7 +745,7 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <p>(W*x, W*y, W*z, W) が (x, y, z, W) に変換される。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>Vector</cite> (self)</p>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -757,10 +757,10 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <p>演算子 * でクォータニオンを乗じることと同じ。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>q</strong> (<cite>.Quaternion</cite>) -- クォータニオン。</p>
+<dd class="field-odd"><p><strong>q</strong> (<a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- クォータニオン。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite></p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -769,17 +769,17 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dt class="sig sig-object py" id="cymel.core.datatypes.vector.Vector.rotateTo">
 <span class="sig-name descname"><span class="pre">rotateTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.Vector.rotateTo" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベクトルを指定方向に向ける最小弧回転を得る。</p>
-<p><cite>.Quaternion</cite>
+<p><a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>
 に2つのベクトルを渡して生成することと同じ。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>v</strong> (<cite>Vector</cite>) -- 向ける方向。</p></li>
+<li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 向ける方向。</p></li>
 <li><p><strong>factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 完全に向ける量を 1.0 とする回転量。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>.Quaternion</cite></p>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -790,7 +790,7 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd><p>他の値をセットする。</p>
 <p>コンストラクタと同様に、以下の値を指定可能。</p>
 <ul class="simple">
-<li><p><cite>Vector</cite></p></li>
+<li><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p></li>
 <li><p>x, y, z, w</p></li>
 <li><p>x, y, z</p></li>
 <li><p>x, y</p></li>
@@ -798,7 +798,7 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 </ul>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>Vector</cite> (self)</p>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -810,8 +810,8 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>p0</strong> (<cite>Vector</cite>) -- 始点。</p></li>
-<li><p><strong>p1</strong> (<cite>Vector</cite>) -- 終点。</p></li>
+<li><p><strong>p0</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 始点。</p></li>
+<li><p><strong>p1</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 終点。</p></li>
 <li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 0.0～1.0の補間係数。範囲外も指定可。</p></li>
 <li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- スピン値。
 デフォルトの0は最短方向、-1は逆方向、
@@ -819,7 +819,7 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite></p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -830,10 +830,10 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd><p>4次元ベクトルの和を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> (<cite>Vector</cite>) -- もう1方のベクトル</p>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- もう1方のベクトル</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite></p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -844,10 +844,10 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <dd><p>法線ベクトルとしてトランスフォームしたベクトルを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>m</strong> (<cite>.Matrix</cite>) -- 変換マトリックス。</p>
+<dd class="field-odd"><p><strong>m</strong> (<a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a>) -- 変換マトリックス。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite></p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -865,10 +865,10 @@ w=0 の場合に望ましくない結果になるなどの問題がある。
 <p>演算子 * で行列を乗じることと同じ。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>m</strong> (<cite>.Matrix</cite>) -- 変換マトリックス。</p>
+<dd class="field-odd"><p><strong>m</strong> (<a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a>) -- 変換マトリックス。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>Vector</cite></p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>

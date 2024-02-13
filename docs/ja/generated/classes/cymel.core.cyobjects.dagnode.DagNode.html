@@ -102,7 +102,7 @@
 <dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode.DagNode.commonAncestor">
 <span class="sig-name descname"><span class="pre">commonAncestor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skipFirst</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode.DagNode.commonAncestor" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>指定したノードとの共通の先祖ノードを得る。</p>
-<p><cite>findCommonAncestor</cite> を [self, other] で呼び出すことと同じ。</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor" title="cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">findCommonAncestor</span></code></a> を [self, other] で呼び出すことと同じ。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -112,7 +112,7 @@
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>DagNode</cite> or None</p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a> or None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -130,7 +130,7 @@
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>DagNode</cite> or None</p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a> or None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -154,7 +154,7 @@
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p>yeild <cite>DagNode</cite></p>
+<dd class="field-even"><p>yeild <a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -172,7 +172,7 @@
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p>yeild <cite>DagNode</cite></p>
+<dd class="field-even"><p>yeild <a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -197,7 +197,7 @@
 </p></li>
 <li><p><strong>includeTurn</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- <p>上昇から下降への折り返し点を含めるかどうか。</p>
 <p>折り返し点とは、イテレーション中の最上位に位置するノードのことで、
-<cite>commonAncestor</cite> で取得できるものと同じく、始点と終点の共通の先祖である。</p>
+<a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.commonAncestor" title="cymel.core.cyobjects.dagnode.DagNode.commonAncestor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">commonAncestor</span></code></a> で取得できるものと同じく、始点と終点の共通の先祖である。</p>
 <p>下降のみ（始点が終点の先祖）の場合の始点や
 上昇のみ（始点が終点の子孫）の場合の終点は、
 始点や終点であると同時に折り返し点でもあるという扱いになる。
@@ -207,7 +207,7 @@ True でないと取得されない。</p>
 </ul>
 </dd>
 <dt class="field-even">戻り値<span class="colon">:</span></dt>
-<dd class="field-even"><p><p>yield (<cite>DagNode</cite>, <cite>int</cite>)</p>
+<dd class="field-even"><p><p>yield (<a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>)</p>
 <p>整数値は次の値をとり、辿っている方向を示す。</p>
 <ul class="simple">
 <li><p>0 - 下降。</p></li>
@@ -232,7 +232,7 @@ True でないと取得されない。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>parent</strong> -- 親の <cite>.Transform</cite> や名前。省略すればペアレント解除。</p></li>
+<li><p><strong>parent</strong> -- 親の <a class="reference internal" href="cymel.core.cyobjects.transform.Transform.html#cymel.core.cyobjects.transform.Transform" title="cymel.core.cyobjects.transform.Transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transform</span></code></a> や名前。省略すればペアレント解除。</p></li>
 <li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 現在のローカル変換を維持するかどうか。
 デフォルトではワールド空間で維持される。</p></li>
 <li><p><strong>add</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 移動ではなくパスを追加する（インスタンス）。</p></li>

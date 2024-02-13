@@ -53,7 +53,7 @@
 <li><p>__del__ 中の例外は補足できない。</p></li>
 <li><p>インタプリタが終了する時に呼ばれる事は保証されない。</p></li>
 <li><p>循環参照がある場合で且つ __del__ が在ると解放されなくなる。
-（循環参照があると <cite>gc</cite> は __del__ を呼び出す適切なタイミングを保証出来なくなる為）</p></li>
+（循環参照があると <a class="reference external" href="https://docs.python.org/3/library/gc.html#module-gc" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gc</span></code></a> は __del__ を呼び出す適切なタイミングを保証出来なくなる為）</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
@@ -98,7 +98,7 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>int</cite> (ファイナライザID)</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -111,14 +111,14 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>obj</strong> -- 対象のオブジェクト。</p></li>
-<li><p><strong>logger</strong> -- ログ用に <cite>str</cite> を受け取れる任意の実行可能オブジェクト。
+<li><p><strong>logger</strong> -- ログ用に <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> を受け取れる任意の実行可能オブジェクト。
 省略時は print される。</p></li>
 <li><p><strong>maxChars</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- ログ出力される repr の文字数がこの数を超える場合に
 メッセージを調整する。ゼロの場合はその判定をしない。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>int</cite> (ファイナライザID)</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
 </dd>
 </dl>
 </dd></dl>
