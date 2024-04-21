@@ -17,10 +17,18 @@ from ._api2mplug import (
     makePlugTypeInfo,
     toNonNetworkedMPlug,
 )
+from ._api2attrname import (
+    findMPlug as _findMPlug,
+    findMAttr as _findMAttr,
+    findComplexMPlug as _findComplexMPlug,
+    argToFindComplexMPlug as _argToFindComplexMPlug,
+    IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES,
+)
 import maya.api.OpenMaya as _api2
 import maya.OpenMaya as _api1
 
 __all__ = [
+    'IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES',
     'BIT_DAGNODE', 'BIT_TRANSFORM', 'BIT_SHAPE',
     'CyObject', 'O',
     'cyObjects', 'Os',
@@ -524,9 +532,10 @@ def _makePlugData(noderef, mplug, typeinfo=None, typename=None, attrname=None):
         typeinfo = makePlugTypeInfo(mplug.attribute(), typename)
     if not attrname:
         attrname = '.' + mplug.partialName(includeNonMandatoryIndices=True, includeInstancedIndices=True)
-    node_getname = noderef._CyObject__data['getname']
+    noderef_data = noderef._CyObject__data
+    node_getname = noderef_data['getname']
     data = {
-        'hash': hash((noderef._CyObject__data['hash'], attrname)),
+        'hash': hash((noderef_data['hash'], attrname)),
         'mplug': mplug,
         'noderef': noderef,
         'attrname': attrname,
@@ -537,15 +546,15 @@ def _makePlugData(noderef, mplug, typeinfo=None, typename=None, attrname=None):
 
     attr_isAlive = typeinfo['isAlive']
     if attr_isAlive:
-        node_isAlive = noderef._CyObject__data['isAlive']
-        node_isValid = noderef._CyObject__data['isValid']
-        node_hasAttr = noderef._CyObject__data['mfn'].hasAttribute
-        shortname = typeinfo['shortname']
-        data['isValid'] = lambda: attr_isAlive() and node_isValid() and node_hasAttr(shortname)
+        node_isAlive = noderef_data['isAlive']
+        node_isValid = noderef_data['isValid']
+        node_hasAttr = noderef_data['mfn'].hasAttribute
+        keyname = _getAttrKeyName(typeinfo)
+        data['isValid'] = lambda: attr_isAlive() and node_isValid() and node_hasAttr(keyname)
         isAlive = lambda: attr_isAlive() and node_isAlive()
     else:
-        data['isValid'] = noderef._CyObject__data['isValid']
-        isAlive = noderef._CyObject__data['isAlive']
+        data['isValid'] = noderef_data['isValid']
+        isAlive = noderef_data['isAlive']
     data['isAlive'] = isAlive
 
     def eq(self, other):
@@ -561,6 +570,15 @@ def _makePlugData(noderef, mplug, typeinfo=None, typename=None, attrname=None):
     return data
 
 
+if IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES:
+    def _getAttrKeyName(typeinfo):
+        return '.' + typeinfo['mfn'].pathName(False, False)  # 先頭にドットが重複しても問題ない
+
+else:
+    def _getAttrKeyName(typeinfo):
+        return typeinfo['shortname']
+
+
 def _initAPI1Objects(data):
     u"""
     API1 オブジェクトを初期化する。
@@ -573,24 +591,23 @@ def _initAPI1Objects(data):
         _initAPI1Objects(nodedata)
         mfnnode = nodedata['mfn1']
 
-        # ノードからプラグを得る為に、マルチプラグのインデックスを収集する。
-        attrTkns = [s.split('[') for s in data['mplug'].info.split('.')[1:]]
-        ss = attrTkns.pop(-1)
-        leafName = ss[0]
-        leafIdx = int(ss[1][:-1]) if len(ss) > 1 else None
-        ancestorIdxs = [(ss[0], int(ss[1][:-1])) for ss in attrTkns if len(ss) > 1]
+        # mplug のパスを得て分解。
+        attrTkns = _argToFindComplexMPlug(data['mplug'].info.split('.')[1:])
 
         # ノードからプラグを取得。
+        # MPlug から得たパスなので _findMPlug には strict=True を指定でき、それ以上のチェックも不要。
         try:
             # 末尾のプラグを得る。
-            mplug1 = mfnnode.findPlug(leafName, False)
+            mplug1 = _findMPlug(mfnnode, attrTkns, False, True)
+            leafIdx = attrTkns.pop(-1)[1]
 
             # 上位のロジカルインデックスを選択する。
-            for name, i in ancestorIdxs:
-                mplug1.selectAncestorLogicalIndex(i, mfnnode.attribute(name))
+            for i, (name, idx) in enumerate(attrTkns):
+                if idx is not None and idx >= 0:  # API1では、負だとエラーになる。
+                    mplug1.selectAncestorLogicalIndex(idx, _findMAttr(mfnnode, attrTkns, i, True))
 
             # 末尾のロジカルインデックスを選択する。
-            if leafIdx is not None:
+            if leafIdx is not None and leafIdx >= 0:
                 mplug1.selectAncestorLogicalIndex(leafIdx)
             data['mplug1'] = mplug1
             data['mfn1'] = getattr(_api1, type(data['typeinfo']['mfn']).__name__)(mplug1.attribute())
@@ -828,7 +845,7 @@ def _anyClsObjByName(cls, name):
             pass
         else:
             # getPlugがエラーにならない場合があるので isNull をチェック。
-            if mplug.isNull:
+            if not mplug.isNull:
                 # TODO: 選択中のプラグの下位のプラグを得る。
                 raise NotImplementedError('inferiror plug from selection')
 
@@ -845,9 +862,9 @@ def _anyClsObjByName(cls, name):
             #nodename = mpath.partialPathName()
 
     # ノードからプラグを取得。
-    ancestorIdxs, leafName, leafIdx = _argsToFindComplexMPlug(tkns[1:])
+    argToFind = _argToFindComplexMPlug(tkns[1:])
     try:
-        mplug = _findComplexMPlug(mfn, ancestorIdxs, leafName, leafIdx)
+        mplug = _findComplexMPlug(mfn, argToFind)
 
     # 得られなかったらシェイプからの取得も試みる。
     except RuntimeError:
@@ -861,7 +878,7 @@ def _anyClsObjByName(cls, name):
         mnode = mpath.node()
         mfn = _mnodeFn(mpath, mnode)
         try:
-            mplug = _findComplexMPlug(mfn, ancestorIdxs, leafName, leafIdx)
+            mplug = _findComplexMPlug(mfn, argToFind)
         except RuntimeError:
             raise KeyError('not exist: ' + name)
         #nodename = mpath.partialPathName()
@@ -977,62 +994,6 @@ def _initFnNodeDict():
     return dict(defs), [x[0] for x in defs]
 
 _APITYPE_FNNODE_DICT, _FNNODE_APITYPES = _initFnNodeDict()
-
-
-#------------------------------------------------------------------------------
-def _findComplexMPlug(mfnnode, ancestorIdxs, leafName, leafIdx, wantNetworked=False):
-    u"""
-    プラグ階層途中の省略表記やインデックス -1 などにも対応して MPlug を得る。
-
-    :param `iterable` ancestorIdxs:
-        途中のマルチアトリビュート部のインデックスを選択する為の
-        名前とインデックスのペアのシーケンス。
-    :param `str` leafName:
-        末尾のアトリビュート名。
-    :param `int` leafIdx:
-        末尾がマルチエレメントの場合のインデックス。
-        そうでない場合は None を指定。
-    """
-    # 末尾のプラグを得る。
-    if ancestorIdxs or leafIdx is not None:
-        mplug = mfnnode.findPlug(leafName, wantNetworked)
-    else:
-        # コンパウンドやマルチエレメントでない名前が指定された場合はエイリアス名の可能性がある。
-        try:
-            mplug = mfnnode.findPlug(leafName, wantNetworked)
-        except RuntimeError:
-            mattr = mfnnode.findAlias(leafName)
-            if mattr.isNull():
-                raise
-            mplug = mfnnode.findPlug(mattr, False)
-
-    # 上位のロジカルインデックスを選択する。
-    for name, idx in ancestorIdxs:
-        mplug.selectAncestorLogicalIndex(idx, mfnnode.attribute(name))
-
-    # 末尾のロジカルインデックスを選択する。
-    if leafIdx is not None:
-        if wantNetworked:
-            mplug = mplug.elementByLogicalIndex(leafIdx)
-        else:
-            mplug.selectAncestorLogicalIndex(leafIdx)
-    return mplug
-
-
-def _argsToFindComplexMPlug(attrPathTkns):
-    u"""
-    プラグ名トークンから _findComplexMPlug の為の引数を構成する。
-
-    :param `iterable` attrPathTkns:
-        ノード名部分を含まないアトリビュートパスを
-        ドッドで分離したリスト。
-    :returns: ancestorIdxs, leafName, leafIdx
-    """
-    attrTkns = [s.split('[') for s in attrPathTkns]
-    ss = attrTkns.pop(-1)
-    leafName = ss[0]
-    leafIdx = int(ss[1][:-1]) if len(ss) > 1 else None
-    return [(ss[0], int(ss[1][:-1])) for ss in attrTkns if len(ss) > 1], leafName, leafIdx
 
 
 #------------------------------------------------------------------------------

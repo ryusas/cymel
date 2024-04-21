@@ -14,6 +14,21 @@ from ..datatypes.matrix import _newM
 from ..datatypes.transformation import (
     X, _MM_makeS, _MM_makeT, _MM_setT,
 )
+from .dagnode_c import (
+    _Transform_t,
+    _Transform_r,
+    _Transform_s,
+    _Transform_sh,
+    _Transform_ro,
+    _Transform_ra,
+    _Transform_rp,
+    _Transform_rpt,
+    _Transform_sp,
+    _Transform_spt,
+    _Joint_jo,
+    _Joint_ssc,
+    _Joint_is,
+)
 import maya.api.OpenMaya as _api2
 
 __all__ = []
@@ -74,15 +89,15 @@ class TransformMixin(object):
                 m *= mpath.exclusiveMatrixInverse()
                 if mpath.hasFn(_MFn_kJoint):
                     findPlug = self.mfn_().findPlug
-                    if findPlug('ssc', True).asBool():
-                        s = mplug_get_nums(findPlug('is', True))
+                    if findPlug(_Joint_ssc, True).asBool():
+                        s = mplug_get_nums(findPlug(_Joint_is, True))
                         m *= _MM_makeS(s)
                 val = _MX(m).scale(_MSpace_kTransform)
 
             elif mpath.hasFn(_MFn_kJoint):
                 findPlug = self.mfn_().findPlug
-                if findPlug('ssc', True).asBool():
-                    s = mplug_get_nums(findPlug('is', True))
+                if findPlug(_Joint_ssc, True).asBool():
+                    s = mplug_get_nums(findPlug(_Joint_is, True))
                     if s != _ONE3_LIST:
                         m = _MX(mpath.inclusiveMatrix()).setScale(v, _MSpace_kTransform).asMatrix()
                         m *= _MM_makeS(s)
@@ -130,15 +145,15 @@ class TransformMixin(object):
                 m *= mpath.exclusiveMatrixInverse()
                 if mpath.hasFn(_MFn_kJoint):
                     findPlug = self.mfn_().findPlug
-                    if findPlug('ssc', True).asBool():
-                        s = mplug_get_nums(findPlug('is', True))
+                    if findPlug(_Joint_ssc, True).asBool():
+                        s = mplug_get_nums(findPlug(_Joint_is, True))
                         m *= _MM_makeS(s)
                 val = _MX(m).shear(_MSpace_kTransform)
 
             elif mpath.hasFn(_MFn_kJoint):
                 findPlug = self.mfn_().findPlug
-                if findPlug('ssc', True).asBool():
-                    s = mplug_get_nums(findPlug('is', True))
+                if findPlug(_Joint_ssc, True).asBool():
+                    s = mplug_get_nums(findPlug(_Joint_is, True))
                     if s != _ONE3_LIST:
                         m = _MX(mpath.inclusiveMatrix()).setShear(v, _MSpace_kTransform).asMatrix()
                         m *= _MM_makeS(s)
@@ -197,7 +212,7 @@ class TransformMixin(object):
         findPlug = mfn.findPlug
 
         q = _MQ(q._Quaternion__data)
-        ro = findPlug('ro', True).asShort()
+        ro = findPlug(_Transform_ro, True).asShort()
         ra_q = None
         r_q = None
 
@@ -212,11 +227,11 @@ class TransformMixin(object):
             if mpath.length() > 1:
                 # r も ra も上位の非一様 scale の影響を受けてから取り除く。
                 if not r:
-                    v = mplug_get_nums(findPlug('r', True))
+                    v = mplug_get_nums(findPlug(_Transform_r, True))
                     r_q = _ME(v, ro).asQuaternion()
                     q = r_q * q
                 if not ra:
-                    v = mplug_get_nums(findPlug('ra', True))
+                    v = mplug_get_nums(findPlug(_Transform_ra, True))
                     ra_q = _ME(v).asQuaternion()
                     q = ra_q * q
 
@@ -225,8 +240,8 @@ class TransformMixin(object):
             else:
                 m = None
 
-            if jo and findPlug('ssc', True).asBool():
-                s = mplug_get_nums(findPlug('is', True))
+            if jo and findPlug(_Joint_ssc, True).asBool():
+                s = mplug_get_nums(findPlug(_Joint_is, True))
                 if s != _ONE3_LIST:
                     if not m:
                         m = q.asMatrix()
@@ -247,10 +262,10 @@ class TransformMixin(object):
             q = r_q.conjugate() * q
         if r:
             if ra:
-                v = mplug_get_nums(findPlug('ra', True))
+                v = mplug_get_nums(findPlug(_Transform_ra, True))
                 q = _ME(-v[0], -v[1], -v[2], ZYX).asQuaternion() * q
             if jo:
-                v = mplug_get_nums(findPlug('jo', True))
+                v = mplug_get_nums(findPlug(_Joint_jo, True))
                 q *= _ME(-v[0], -v[1], -v[2], ZYX).asQuaternion()
             if ro:
                 e = _ME(0., 0., 0., ro).setValue(q)
@@ -313,21 +328,21 @@ class TransformMixin(object):
             mfn = self.mfn_()
             findPlug = mfn.findPlug
             attrs = {
-                'ra': mplug_get_nums(findPlug('ra', True)),
-                'rp': mplug_get_nums(findPlug('rp', True)),
-                'rpt': mplug_get_nums(findPlug('rpt', True)),
+                'ra': mplug_get_nums(findPlug(_Transform_ra, True)),
+                'rp': mplug_get_nums(findPlug(_Transform_rp, True)),
+                'rpt': mplug_get_nums(findPlug(_Transform_rpt, True)),
             }
             if mpath.hasFn(_MFn_kJoint):
-                attrs['ssc'] = findPlug('ssc', True).asBool()
-                attrs['is'] = mplug_get_nums(findPlug('is', True))
-                attrs['jo'] = mplug_get_nums(findPlug('jo', True))
+                attrs['ssc'] = findPlug(_Joint_ssc, True).asBool()
+                attrs['is'] = mplug_get_nums(findPlug(_Joint_is, True))
+                attrs['jo'] = mplug_get_nums(findPlug(_Joint_jo, True))
             if at >= 4:
-                attrs['sp'] = mplug_get_nums(findPlug('sp', True))
-                attrs['spt'] = mplug_get_nums(findPlug('spt', True))
+                attrs['sp'] = mplug_get_nums(findPlug(_Transform_sp, True))
+                attrs['spt'] = mplug_get_nums(findPlug(_Transform_spt, True))
             else:
                 attrs['spt'] = (
-                    _MV(mplug_get_nums(findPlug('spt', True))) +
-                    _MV(mplug_get_nums(findPlug('sp', True)))
+                    _MV(mplug_get_nums(findPlug(_Transform_spt, True))) +
+                    _MV(mplug_get_nums(findPlug(_Transform_sp, True)))
                 )
 
             m = mfn.transformationMatrix()
@@ -340,20 +355,20 @@ class TransformMixin(object):
             findPlug = self.mfn_().findPlug
             attrs = {
                 'rpt': (
-                    _MV(mplug_get_nums(findPlug('rpt', True))) +
-                    _MV(mplug_get_nums(findPlug('rp', True)))
+                    _MV(mplug_get_nums(findPlug(_Transform_rpt, True))) +
+                    _MV(mplug_get_nums(findPlug(_Transform_rp, True)))
                 ),
             }
             if mpath.hasFn(_MFn_kJoint):
-                attrs['ssc'] = findPlug('ssc', True).asBool()
-                attrs['is'] = mplug_get_nums(findPlug('is', True))
+                attrs['ssc'] = findPlug(_Joint_ssc, True).asBool()
+                attrs['is'] = mplug_get_nums(findPlug(_Joint_is, True))
 
             x = X(_newM(_MM_makeT(v)), **attrs)
             v = x.t
 
         elif at < 1:
             v = _MV(v)
-            v -= _MV(mplug_get_nums(self.mfn_().findPlug('t', True)))
+            v -= _MV(mplug_get_nums(self.mfn_().findPlug(_Transform_t, True)))
 
         if get:
             return list(v)
@@ -396,17 +411,17 @@ class TransformMixin(object):
 
         findPlug = self.mfn_().findPlug
         attrs = {
-            'ro': findPlug('ro', True).asShort(),
-            'ra': mplug_get_nums(findPlug('ra', True)),
-            'rp': mplug_get_nums(findPlug('rp', True)),
-            'rpt': mplug_get_nums(findPlug('rpt', True)),
-            'sp': mplug_get_nums(findPlug('sp', True)),
-            'spt': mplug_get_nums(findPlug('spt', True)),
+            'ro': findPlug(_Transform_ro, True).asShort(),
+            'ra': mplug_get_nums(findPlug(_Transform_ra, True)),
+            'rp': mplug_get_nums(findPlug(_Transform_rp, True)),
+            'rpt': mplug_get_nums(findPlug(_Transform_rpt, True)),
+            'sp': mplug_get_nums(findPlug(_Transform_sp, True)),
+            'spt': mplug_get_nums(findPlug(_Transform_spt, True)),
         }
         if mpath.hasFn(_MFn_kJoint):
-            attrs['ssc'] = findPlug('ssc', True).asBool()
-            attrs['is'] = mplug_get_nums(findPlug('is', True))
-            attrs['jo'] = mplug_get_nums(findPlug('jo', True))
+            attrs['ssc'] = findPlug(_Joint_ssc, True).asBool()
+            attrs['is'] = mplug_get_nums(findPlug(_Joint_is, True))
+            attrs['jo'] = mplug_get_nums(findPlug(_Joint_jo, True))
 
         x = X(m, **attrs)
 
@@ -466,7 +481,7 @@ class TransformMixin(object):
             clear('rpt')
             clear('sp')
             clear('spt')
-            x.is_ = _newV(_MP(mplug_get_nums(self.mfn_().findPlug('is', True))))
+            x.is_ = _newV(_MP(mplug_get_nums(self.mfn_().findPlug(_Joint_is, True))))
         else:
             clear('jo')
             clear('ssc')

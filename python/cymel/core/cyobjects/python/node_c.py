@@ -13,13 +13,17 @@ from ..typeinfo import (
     isAbstractType as _isAbstractType,
 )
 from ..typeregistry import nodetypes
+from ._api2attrname import (
+    hasNodeAttribute as _hasNodeAttribute,
+    findSimpleMPlug as _findSimpleMPlug,
+    findComplexMPlug as _findComplexMPlug,
+    argToFindComplexMPlug as _argToFindComplexMPlug,
+)
 from .cyobject import (
     CyObject,
     CY_NODE,
     _initAPI1Objects,
     _newNodePlug,
-    _argsToFindComplexMPlug,
-    _findComplexMPlug,
     _node4ArgsByMPlug,
     _newNodeObjByMPath,
     BIT_TRANSFORM,
@@ -166,42 +170,42 @@ class Node_c(CyObject):
         """
         if name == '__apiobject__':
             raise _apiobject_error
-        mplug = self.__findMPlug(name)
+        mplug = _findSimpleMPlug(self.mfn(), name)
         if mplug:
             return _newNodePlug(self.plugClass(), self, mplug)
         if self.isTransform():
             shape = self._shape()
             if shape:
-                mplug = shape.__findMPlug(name)
+                mplug = _findSimpleMPlug(shape.mfn(), name)
                 if mplug:
                     return _newNodePlug(shape.plugClass(), shape, mplug)
         raise AttributeError('no attribute exists: %s.%s' % (self.name_(), name))
 
-    def __findMPlug(self, name):
-        mfn = self.mfn()
-        try:
-            return mfn.findPlug(name, False)
-        except RuntimeError:
-            mattr = mfn.findAlias(name)
-            if not mattr.isNull():
-                return mfn.findPlug(mattr, False)
-
-    def hasAttr(self, name, alias=True, shape=True):
+    def hasAttr(self, name, alias=True, shape=True, strict=False):
         u"""
         指定した名前のアトリビュートが在るかどうか。
 
+        `plug` メソッドと同様、
+        :mayaapi2:`MFnAttribute` の hasAttribute よりも判定基準はゆるく、
+        ドットから始まるフルパス指定が必要な場合でも省略を許容する。
+
+        :param `str` name:
+            アトリビュート名かパス名。
+            マルチアトリビュートのインデックスは含めてはならない。
+            ドットから始まるフルパス表記も指定可能。
+            エイリアス名も指定可能。
         :param `bool` alias: エイリアス名を認める。
         :param `bool` shape: シェイプからも探す。
+        :param `bool` strict:
+            先頭ドットが指定されてもトップレベル以外のユニーク名のアトリビュートなら許容する。
         :rtype: `bool`
         """
-        mfn = self.mfn()
-        if mfn.hasAttribute(name) or (alias and not mfn.findAlias(name).isNull()):
+        if _hasNodeAttribute(self.mfn(), name, alias, strict):
             return True
         if shape and self.isTransform():
             shape = self._shape()
             if shape:
-                mfn = shape.mfn()
-                return mfn.hasAttribute(name) or (alias and not mfn.findAlias(name).isNull())
+                return _hasNodeAttribute(shape.mfn(), name, alias, strict)
         return False
 
     def node(self):
@@ -673,89 +677,65 @@ class Node_c(CyObject):
             else:
                 return ':' + name
 
-    u'''
-    def mplug(self, name):
-        u"""
-        `~.CyObject.checkValid` を省略して、ノードのアトリビュートの :mayaapi2:`MPlug` を得る。
-
-        :param `str` name:
-            アトリビュートを特定する名前。
-            単一の名前に限らず、コンパウンド階層や
-            マルチインデックスも混在して指定できる。
-        :rtype: :mayaapi2:`MPlug`
-        """
-        self.checkValid()
-        return self.mplug_(name)
-
-    def mplug_(self, name):
-        u"""
-        `~.CyObject.checkValid` を省略して、ノードのアトリビュートの :mayaapi2:`MPlug` を得る。
-
-        :param `str` name:
-            アトリビュートを特定する名前。
-            単一の名前に限らず、コンパウンド階層や
-            マルチインデックスも混在して指定できる。
-        :rtype: :mayaapi2:`MPlug`
-        """
-        tkns = name.split('.')
-        ancestorIdxs, leafName, leafIdx = _argsToFindComplexMPlug(tkns)
-        try:
-            return _findComplexMPlug(self._CyObject__data['mfn'], ancestorIdxs, leafName, leafIdx)
-        except RuntimeError:
-            if self.isTransform():
-                shape = self._shape()
-                if shape:
-                    try:
-                        return _findComplexMPlug(shape._CyObject__data['mfn'], ancestorIdxs, leafName, leafIdx)
-                    except RuntimeError:
-                        pass
-            raise AttributeError('no attribute exists: %s.%s' % (self.name_(), name))
-    '''
-
-    def plug(self, name, pcls=None):
+    def plug(self, name, pcls=None, strict=False):
         u"""
         ノードのアトリビュートを得る。
 
         Python属性としても同じように取得できるが、
         Pythonの名前と衝突する場合のためにこのメソッドがある。
 
+        `hasAttribute` メソッドと同様、
+        :mayaapi2:`MFnAttribute` の attribute よりも判定基準はゆるく、
+        ドットから始まるフルパス指定が必要な場合でも省略を許容する。
+
         :param `str` name:
             アトリビュートを特定する名前。
             単一の名前に限らず、コンパウンド階層や
             マルチインデックスも混在して指定できる。
+            ドットから始まるフルパス表記も指定可能。
+            エイリアス名も指定可能。
         :param `type` pcls:
             得たいプラグオブジェクトのクラス。
             省略時は `plugClass` で得られる
             現在のデフォルトプラグクラスが使用される。
+        :param `bool` strict:
+            先頭ドットが指定されてもトップレベル以外のユニーク名のアトリビュートなら許容される。
         :rtype: `.Plug`
         """
         self.checkValid()
-        return self.plug_(name, pcls)
+        return self.plug_(name, pcls, strict)
 
-    def plug_(self, name, pcls=None):
+    def plug_(self, name, pcls=None, strict=False):
         u"""
         `~.CyObject.checkValid` を省略して、ノードのアトリビュートを得る。
+
+        `hasAttribute` メソッドと同様、
+        :mayaapi2:`MFnAttribute` の attribute よりも判定基準はゆるく、
+        ドットから始まるフルパス指定が必要な場合でも省略を許容する。
 
         :param `str` name:
             アトリビュートを特定する名前。
             単一の名前に限らず、コンパウンド階層や
             マルチインデックスも混在して指定できる。
+            ドットから始まるフルパス表記も指定可能。
+            エイリアス名も指定可能。
         :param `type` pcls:
             得たいプラグオブジェクトのクラス。
             省略時は `plugClass` で得られる
             現在のデフォルトプラグクラスが使用される。
+        :param `bool` strict:
+            先頭ドットが指定されてもトップレベル以外のユニーク名のアトリビュートなら許容される。
         :rtype: `.Plug`
         """
-        tkns = name.split('.')
-        ancestorIdxs, leafName, leafIdx = _argsToFindComplexMPlug(tkns)
+        argToFind = _argToFindComplexMPlug(name.split('.'))
         try:
-            mplug = _findComplexMPlug(self._CyObject__data['mfn'], ancestorIdxs, leafName, leafIdx)
+            mplug = _findComplexMPlug(self._CyObject__data['mfn'], argToFind, False, strict)
         except RuntimeError:
             if self.isTransform():
                 shape = self._shape()
                 if shape:
                     try:
-                        mplug = _findComplexMPlug(shape._CyObject__data['mfn'], ancestorIdxs, leafName, leafIdx)
+                        mplug = _findComplexMPlug(shape._CyObject__data['mfn'], argToFind, False, strict)
                     except RuntimeError:
                         pass
                     else:

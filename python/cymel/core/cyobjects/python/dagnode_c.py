@@ -7,6 +7,7 @@ from __future__ import division
 from __future__ import print_function
 
 from ...common import *
+from ._api2attrname import IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES
 from .cyobject import _newNodeObjByMPath
 from .objectref import _getObjectRef
 from ._api2mplug import mplug_get_nums, mplug_get_xformmatrix
@@ -40,6 +41,29 @@ _MFn_kJoint = _MFn.kJoint
 _2_getAllPathsTo = _2_MDagPath.getAllPathsTo
 _2_getAPathTo = _2_MDagPath.getAPathTo
 _MSpace_kTransform = _api2.MSpace.kTransform
+
+if IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES:
+    __nodeAttr = lambda f, n: f.attribute('.' + n)
+else:
+    __nodeAttr = lambda f, n: f.attribute(n)
+
+_TransformCls = _api2.MNodeClass('transform')
+_Transform_xm = __nodeAttr(_TransformCls, 'xm')
+_Transform_t = __nodeAttr(_TransformCls, 't')
+_Transform_r = __nodeAttr(_TransformCls, 'r')
+_Transform_s = __nodeAttr(_TransformCls, 's')
+_Transform_sh = __nodeAttr(_TransformCls, 'sh')
+_Transform_ro = __nodeAttr(_TransformCls, 'ro')
+_Transform_ra = __nodeAttr(_TransformCls, 'ra')
+_Transform_rp = __nodeAttr(_TransformCls, 'rp')
+_Transform_rpt = __nodeAttr(_TransformCls, 'rpt')
+_Transform_sp = __nodeAttr(_TransformCls, 'sp')
+_Transform_spt = __nodeAttr(_TransformCls, 'spt')
+
+_JointCls = _api2.MNodeClass('joint')
+_Joint_jo = __nodeAttr(_JointCls, 'jo')
+_Joint_ssc = __nodeAttr(_JointCls, 'ssc')
+_Joint_is = __nodeAttr(_JointCls, 'is')
 
 
 #------------------------------------------------------------------------------
@@ -1042,7 +1066,7 @@ class DagNodeMixin(object):
         :rtype: `.Transformation`
         """
         if self.isTransform():
-            x = mplug_get_xformmatrix(self.mfn().findPlug('xm', True))
+            x = mplug_get_xformmatrix(self.mfn().findPlug(_Transform_xm, True))
             if ws:
                 # Transformation に Matrix を乗じることで、
                 # ピボットなどの各基準位置もワールド空間で一致させる。
@@ -1074,7 +1098,7 @@ class DagNodeMixin(object):
         if ws:
             return _newV(_MP(_MX(self._mpath().inclusiveMatrix()).scale(_MSpace_kTransform)))
         if self.isTransform():
-            return _newV(_MP(mplug_get_nums(self.mfn().findPlug('s', True))))
+            return _newV(_MP(mplug_get_nums(self.mfn().findPlug(_Transform_s, True))))
         return _newV(_MP(1., 1., 1.))
 
     getS = getScaling  #: `getScaling` の別名。
@@ -1094,7 +1118,7 @@ class DagNodeMixin(object):
         if ws:
             return _newV(_MP(_MX(self._mpath().inclusiveMatrix()).shear(_MSpace_kTransform)))
         if self.isTransform():
-            return _newV(_MP(mplug_get_nums(self.mfn().findPlug('sh', True))))
+            return _newV(_MP(mplug_get_nums(self.mfn().findPlug(_Transform_sh, True))))
         return _newV(_MP())
 
     getSh = getShearing  #: `getShearing` の別名。
@@ -1156,11 +1180,11 @@ class DagNodeMixin(object):
                     q = _MQ().setValue(self._mpath().inclusiveMatrix().homogenize())
                     if not ra:
                         findPlug = mfn.findPlug
-                        v = mplug_get_nums(findPlug('ra', True))
+                        v = mplug_get_nums(findPlug(_Transform_ra, True))
                         q = _ME(-v[0], -v[1], -v[2], ZYX).asQuaternion() * q
                         if not r:
-                            v = mplug_get_nums(findPlug('r', True))
-                            q = _ME(-v[0], -v[1], -v[2], _REVERSE_RO[findPlug('ro', True).asShort()]).asQuaternion() * q
+                            v = mplug_get_nums(findPlug(_Transform_r, True))
+                            q = _ME(-v[0], -v[1], -v[2], _REVERSE_RO[findPlug(_Transform_ro, True).asShort()]).asQuaternion() * q
                 else:
                     q = _MQ().setValue(self._mpath().exclusiveMatrix().homogenize())
             else:
@@ -1178,18 +1202,18 @@ class DagNodeMixin(object):
                 mfn = self.mfn()
                 if ra:
                     findPlug = mfn.findPlug
-                    q = _ME(mplug_get_nums(findPlug('ra', True))).asQuaternion()
+                    q = _ME(mplug_get_nums(findPlug(_Transform_ra, True))).asQuaternion()
                     if r:
-                        q *= _ME(mplug_get_nums(findPlug('r', True)), findPlug('ro', True).asShort()).asQuaternion()
+                        q *= _ME(mplug_get_nums(findPlug(_Transform_r, True)), findPlug(_Transform_ro, True).asShort()).asQuaternion()
                         if jo and mfn.object().hasFn(_MFn_kJoint):
-                            q *= _ME(mplug_get_nums(findPlug('jo', True))).asQuaternion()
+                            q *= _ME(mplug_get_nums(findPlug(_Joint_jo, True))).asQuaternion()
                 elif r:
                     findPlug = mfn.findPlug
-                    q = _ME(mplug_get_nums(findPlug('r', True)), findPlug('ro', True).asShort()).asQuaternion()
+                    q = _ME(mplug_get_nums(findPlug(_Transform_r, True)), findPlug(_Transform_ro, True).asShort()).asQuaternion()
                     if jo and mfn.object().hasFn(_MFn_kJoint):
-                        q *= _ME(mplug_get_nums(findPlug('jo', True))).asQuaternion()
+                        q *= _ME(mplug_get_nums(findPlug(_Joint_jo, True))).asQuaternion()
                 elif jo and mfn.object().hasFn(_MFn_kJoint):
-                    q = _ME(mplug_get_nums(mfn.findPlug('jo', True))).asQuaternion()
+                    q = _ME(mplug_get_nums(mfn.findPlug(_Joint_jo, True))).asQuaternion()
                 else:
                     return _newQ(_MQ())
             else:
@@ -1245,7 +1269,7 @@ class DagNodeMixin(object):
                 m = self.mfn().transformationMatrix()
             if at >= 4:
                 return _newV(_MP(m[12], m[13], m[14]))
-            p = _MP(mplug_get_nums(self.mfn_().findPlug('sp', True)))
+            p = _MP(mplug_get_nums(self.mfn_().findPlug(_Transform_sp, True)))
             p *= m
             return _newV(p)
 
@@ -1258,13 +1282,13 @@ class DagNodeMixin(object):
 
         mfn = self.mfn()
         findPlug = mfn.findPlug
-        p = _MP(mplug_get_nums(findPlug('t', True)))
+        p = _MP(mplug_get_nums(findPlug(_Transform_t, True)))
 
         if at >= 2:
-            v = _MV(mplug_get_nums(findPlug('rp', True)))
-            v += _MV(mplug_get_nums(findPlug('rpt', True)))
-            if mfn.object().hasFn(_MFn_kJoint) and findPlug('ssc', True).asBool():
-                s = mplug_get_nums(findPlug('is', True))
+            v = _MV(mplug_get_nums(findPlug(_Transform_rp, True)))
+            v += _MV(mplug_get_nums(findPlug(_Transform_rpt, True)))
+            if mfn.object().hasFn(_MFn_kJoint) and findPlug(_Joint_ssc, True).asBool():
+                s = mplug_get_nums(findPlug(_Joint_is, True))
                 v *= _MM([
                     1. / s[0], 0., 0., 0.,
                     0., 1. / s[1], 0., 0.,

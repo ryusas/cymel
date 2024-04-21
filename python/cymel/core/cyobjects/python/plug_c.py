@@ -9,6 +9,11 @@ from __future__ import print_function
 from ...common import *
 from functools import partial
 from ..typeinfo import isDerivedNodeType as _isDerivedNodeType
+from ._api2attrname import (
+    IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES,
+    findMAttrToGetInferiorPlug as _findMAttrToGetInferiorPlug,
+    isAncestorAttrOf as _isAncestorAttrOf,
+)
 from .cyobject import (
     CyObject,
     CY_NODE, CY_PLUG, CY_OBJREF,
@@ -309,6 +314,73 @@ class Plug_c(CyObject):
         self.checkValid()
         fixUnitTypeInfo(self._CyObject__data['typeinfo'])
         return self._CyObject__data['typeinfo'].get('unittype')
+
+    if IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES:
+        def isEnforcingUniqueName(self):
+            u"""
+            これが固有のアトリビュート名であることをノードに強制しているかどうか。
+
+            Maya 2025 以降はアトリビュートごとの設定値（デフォルトは True）が返され、
+            それより前のバージョンだと常に True が返される。
+
+            :rtype: `bool`
+            """
+            return self.mfn().enforcingUniqueName
+
+        def pathName(self, useLongName=True, useCompression=True):
+            u"""
+            アトリビュートのユニークなパス名を返す。インデックスは含まない。
+
+            Maya 2025 以降で非ユニーク名なら . (ドット) で区切られたパスが返される。
+            ユニーク名で且つ useCompression=True (デフォルト) か、
+            2024 以前なら常に単一のアトリビュート名が返される。
+
+            :param `bool` useLongName:
+                デフォルトの True だとロング名が使用される。
+                False を指定するとショート名が使用される。
+            :param `bool` useCompression:
+                デフォルトの True だと可能な限り短いパス名が返される
+                （DAGパスでいうところの partial path name ）。
+                False を指定するとトップレベルからのパス名が返されるが、
+                ユニークである限り先頭のドットは付加されない（APIの挙動）。
+            :rtype: `str`
+            """
+            return self.mfn().pathName(useLongName, useCompression)
+
+    else:
+        def isEnforcingUniqueName(self):
+            u"""
+            これが固有のアトリビュート名であることをノードに強制しているかどうか。
+
+            Maya 2025 以降はアトリビュートごとの設定値（デフォルトは True）が返され、
+            それより前のバージョンだと常に True が返される。
+
+            :rtype: `bool`
+            """
+            return True
+
+        def pathName(self, useLongName=True, useCompression=True):
+            u"""
+            アトリビュートのユニークなパス名を返す。インデックスは含まない。
+
+            Maya 2025 以降で非ユニーク名なら . (ドット) で区切られたパスが返される。
+            ユニーク名で且つ useCompression=True (デフォルト) か、
+            2024 以前なら常に単一のアトリビュート名が返される。
+
+            :param `bool` useLongName:
+                デフォルトの True だとロング名が使用される。
+                False を指定するとショート名が使用される。
+            :param `bool` useCompression:
+                デフォルトの True だと可能な限り短いパス名が返される
+                （DAGパスでいうところの partial path name ）。
+                False を指定するとトップレベルからのパス名が返されるが、
+                ユニークである限り先頭のドットは付加されない（APIの挙動）。
+            :rtype: `str`
+            """
+            return '.'.join([
+                x.split('[')[0]
+                for x in self._CyObject__data['mplug'].partialName(useFullAttributePath=not useCompression, useLongNames=useLongName).split('.')
+            ])
 
     def isAffectsAppearance(self):
         u"""
@@ -816,40 +888,45 @@ class Plug_c(CyObject):
         u"""
         下位のプラグを得る共通ルーチン。
         """
-        mplug = self._CyObject__data['mplug']
-        if not mplug.isCompound:
+        thisMPlug = self._CyObject__data['mplug']
+        if not thisMPlug.isCompound:
             raise TypeError('plug is not a compound: ' + self.name_())
 
         noderef = self._CyObject__data['noderef']
         mfnnode = noderef._CyObject__data['mfn']
-        mattr = mfnnode.attribute(name)
-        if not mattr.isNull():
-            # これ自身がマルチでなければ、子を直接得てみる。
-            # マルチ（インデックスが未解決）の場合は、そのまま子に下ると不具合が生じる。
-            if not mplug.isArray:
-                try:
-                    mp = mplug.child(mattr)
-                except RuntimeError:
-                    pass
-                else:
-                    # 子が得られない場合、エラーではなく同じ MPlug になるようだ。
-                    if mp != mplug:
-                        return _newNodeRefPlug(_type(self), noderef, mp, typename=self._CyObject__data['typeinfo'].get('subtype'))
+        mattr = _findMAttrToGetInferiorPlug(mfnnode, name, self)  # Maya2025以降でないと下位とは限らない。
+        if mattr.isNull():
+            raise AttributeError('no inferior attribute exists: %s.%s' % (self.name_(), name))
 
-            # ノードから得て、それが本当に下位のプラグかチェックした上で返す。
-            mp = mfnnode.findPlug(mattr, False)
-            pp = mp.array() if mp.isElement else mp
-            while pp.isChild:
-                pp = pp.parent()
-                if pp == mplug:
-                    # 上位にマルチ要素が在る場合、このプラグにインデックスを合わせる。
-                    for ia in self.__elementIndexAttrs():
-                        mp.selectAncestorLogicalIndex(*ia)
-                    return _newNodeRefPlug(_type(self), noderef, mp)
-                if pp.isElement:
-                    pp = pp.array()
+        # これ自身がマルチでなければ、子を直接得てみる。
+        # マルチ（インデックスが未解決）の場合は、そのまま子に下ると不具合が生じる。
+        if not thisMPlug.isArray:
+            try:
+                mplug = thisMPlug.child(mattr)
+            except RuntimeError:
+                pass
+            else:
+                # 子が得られない場合、エラーではなく同じ MPlug になるようだ。
+                if mplug != thisMPlug:
+                    return _newNodeRefPlug(_type(self), noderef, mplug, typename=self._CyObject__data['typeinfo'].get('subtype'))
 
-        raise AttributeError('no inferior attribute exists: %s.%s' % (self.name_(), name))
+        # ノードから得る。
+        mplug = mfnnode.findPlug(mattr, False)
+
+        # 上位にマルチ要素が在る場合、このプラグにインデックスを合わせる。これで階層チェックも兼ねる。
+        idxAttrs = self.__elementIndexAttrs()
+        if idxAttrs:
+            try:
+                for ia in self.__elementIndexAttrs():
+                    mplug.selectAncestorLogicalIndex(*ia)
+            except:
+                raise AttributeError('no inferior attribute exists: %s.%s' % (self.name_(), name))
+
+        # 上位にマルチ要素が無い場合、Maya2025以降でないなら、アトリビュートが下位のものかチェックする。
+        elif not IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES and not _isAncestorAttrOf(thisMPlug.attribute(), mattr):
+            raise AttributeError('no inferior attribute exists: %s.%s' % (self.name_(), name))
+
+        return _newNodeRefPlug(_type(self), noderef, mplug)
 
     def __elementIndexAttrs(self):
         u"""

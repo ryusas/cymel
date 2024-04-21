@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.cyobjects.node_c.Node_c &#8212; cymel 0.22.2024021203 ドキュメント</title>
+    <title>class cymel.core.cyobjects.node_c.Node_c &#8212; cymel 0.23.2024042100 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.node_c.html" title="cymel.core.cyobjects.node_c"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.22.2024021203 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.23.2024042100 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.node_c.html" accesskey="U">cymel.core.cyobjects.node_c</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.node_c.Node_c</a></li> 
@@ -85,7 +85,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.destinationsWithConversions" title="cymel.core.cyobjects.node_c.Node_c.destinationsWithConversions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">destinationsWithConversions</span></code></a>(**kwargs)</p></td>
 <td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.outputs" title="cymel.core.cyobjects.node_c.Node_c.outputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputs</span></code></a> の別名（unitConversionノードをスキップせずに、出力先のプラグかノードのリストを得る）。</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.hasAttr" title="cymel.core.cyobjects.node_c.Node_c.hasAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasAttr</span></code></a>(name[, alias, shape])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.hasAttr" title="cymel.core.cyobjects.node_c.Node_c.hasAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasAttr</span></code></a>(name[, alias, shape, strict])</p></td>
 <td><p>指定した名前のアトリビュートが在るかどうか。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.hasFn" title="cymel.core.cyobjects.node_c.Node_c.hasFn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasFn</span></code></a>(fn)</p></td>
@@ -187,13 +187,13 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.outputs" title="cymel.core.cyobjects.node_c.Node_c.outputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputs</span></code></a>(**kwargs)</p></td>
 <td><p>下流のコネクションを得る。</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plug" title="cymel.core.cyobjects.node_c.Node_c.plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug</span></code></a>(name[, pcls])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plug" title="cymel.core.cyobjects.node_c.Node_c.plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug</span></code></a>(name[, pcls, strict])</p></td>
 <td><p>ノードのアトリビュートを得る。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plugClass" title="cymel.core.cyobjects.node_c.Node_c.plugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugClass</span></code></a>()</p></td>
 <td><p>プラグクラスを得る。</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plug_" title="cymel.core.cyobjects.node_c.Node_c.plug_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug_</span></code></a>(name[, pcls])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plug_" title="cymel.core.cyobjects.node_c.Node_c.plug_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug_</span></code></a>(name[, pcls, strict])</p></td>
 <td><p><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a> を省略して、ノードのアトリビュートを得る。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.pluginName" title="cymel.core.cyobjects.node_c.Node_c.pluginName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pluginName</span></code></a>()</p></td>
@@ -370,13 +370,21 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.node_c.Node_c.hasAttr">
-<span class="sig-name descname"><span class="pre">hasAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.hasAttr" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-name descname"><span class="pre">hasAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.hasAttr" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>指定した名前のアトリビュートが在るかどうか。</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plug" title="cymel.core.cyobjects.node_c.Node_c.plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug</span></code></a> メソッドと同様、
+<a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MFnAttribute.html">MFnAttribute</a> の hasAttribute よりも判定基準はゆるく、
+ドットから始まるフルパス指定が必要な場合でも省略を許容する。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- アトリビュート名かパス名。
+マルチアトリビュートのインデックスは含めてはならない。
+ドットから始まるフルパス表記も指定可能。
+エイリアス名も指定可能。</p></li>
 <li><p><strong>alias</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- エイリアス名を認める。</p></li>
 <li><p><strong>shape</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- シェイプからも探す。</p></li>
+<li><p><strong>strict</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 先頭ドットが指定されてもトップレベル以外のユニーク名のアトリビュートなら許容する。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -787,19 +795,25 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.node_c.Node_c.plug">
-<span class="sig-name descname"><span class="pre">plug</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pcls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.plug" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-name descname"><span class="pre">plug</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pcls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.plug" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ノードのアトリビュートを得る。</p>
 <p>Python属性としても同じように取得できるが、
 Pythonの名前と衝突する場合のためにこのメソッドがある。</p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasAttribute</span></code> メソッドと同様、
+<a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MFnAttribute.html">MFnAttribute</a> の attribute よりも判定基準はゆるく、
+ドットから始まるフルパス指定が必要な場合でも省略を許容する。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- アトリビュートを特定する名前。
 単一の名前に限らず、コンパウンド階層や
-マルチインデックスも混在して指定できる。</p></li>
+マルチインデックスも混在して指定できる。
+ドットから始まるフルパス表記も指定可能。
+エイリアス名も指定可能。</p></li>
 <li><p><strong>pcls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><em>type</em></a>) -- 得たいプラグオブジェクトのクラス。
 省略時は <a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plugClass" title="cymel.core.cyobjects.node_c.Node_c.plugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugClass</span></code></a> で得られる
 現在のデフォルトプラグクラスが使用される。</p></li>
+<li><p><strong>strict</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 先頭ドットが指定されてもトップレベル以外のユニーク名のアトリビュートなら許容される。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -824,17 +838,23 @@ Pythonの名前と衝突する場合のためにこのメソッドがある。</
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.node_c.Node_c.plug_">
-<span class="sig-name descname"><span class="pre">plug_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pcls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.plug_" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-name descname"><span class="pre">plug_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pcls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.Node_c.plug_" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a> を省略して、ノードのアトリビュートを得る。</p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasAttribute</span></code> メソッドと同様、
+<a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MFnAttribute.html">MFnAttribute</a> の attribute よりも判定基準はゆるく、
+ドットから始まるフルパス指定が必要な場合でも省略を許容する。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- アトリビュートを特定する名前。
 単一の名前に限らず、コンパウンド階層や
-マルチインデックスも混在して指定できる。</p></li>
+マルチインデックスも混在して指定できる。
+ドットから始まるフルパス表記も指定可能。
+エイリアス名も指定可能。</p></li>
 <li><p><strong>pcls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><em>type</em></a>) -- 得たいプラグオブジェクトのクラス。
 省略時は <a class="reference internal" href="#cymel.core.cyobjects.node_c.Node_c.plugClass" title="cymel.core.cyobjects.node_c.Node_c.plugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugClass</span></code></a> で得られる
 現在のデフォルトプラグクラスが使用される。</p></li>
+<li><p><strong>strict</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 先頭ドットが指定されてもトップレベル以外のユニーク名のアトリビュートなら許容される。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -1130,7 +1150,7 @@ None を指定するとクリアする。</p>
         <li class="right" >
           <a href="../cymel.core.cyobjects.node_c.html" title="cymel.core.cyobjects.node_c"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.22.2024021203 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.23.2024042100 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.node_c.html" >cymel.core.cyobjects.node_c</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.node_c.Node_c</a></li> 

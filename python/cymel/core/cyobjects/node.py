@@ -11,7 +11,10 @@ from ...common import *
 from ...utils.namespace import _wrapNS, _mayaNS
 from ..typeregistry import nodetypes, _FIX_SLOTS
 from .node_c import Node_c
-from .cyobject import CyObject, UUID_ATTR_NAME
+from .cyobject import (
+    CyObject, UUID_ATTR_NAME,
+    IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES,
+)
 
 __all__ = ['Node']
 
@@ -328,6 +331,10 @@ class Node(Node_c):
         if shortName:
             kwargs['sn'] = shortName
 
+        # アトリビュートパス名。
+        # NOTE: 2025以降のトップレベルは . を先頭に付加するようにしたが、ノード名との境界が .. になっても問題ないようだ。
+        pathname = _pathnameToAddAttr(name, kwargs)
+
         # proxy オプションはクラッシュしやすいので usedAsProxy を使わなければならないのをカバーする。
         if proxy:
             proxy = CyObject(proxy)
@@ -464,8 +471,8 @@ class Node(Node_c):
                 childArgs_pop('indexMatters', childArgs_pop('im', None))
                 childArgs_pop('usedAsColor', childArgs_pop('uac', None))
                 childArgs_pop('numberOfChildren', childArgs_pop('nc', None))
-                childArgs['p'] = name
-                kwargs_pop('parent', None)
+                childArgs['p'] = pathname
+                childArgs.pop('parent', None)
 
                 # 子の型指定。
                 # デフォルト値の指定ができない型なら、あとでサポートするようにする。
@@ -491,6 +498,7 @@ class Node(Node_c):
             default = kwargs_pop('defaultValue', kwargs_pop('dv', None))
 
         # アトリビュート生成。
+        #print(nodename, kwargs)
         _addAttr(nodename, **kwargs)
         plug = None
 
@@ -504,7 +512,7 @@ class Node(Node_c):
 
             # 子の処理。
             if default is not None:
-                plug = self.plug_(name)
+                plug = self.plug_(pathname)
                 if isinstance(default, LIST_OR_TUPLE):
                     for p, v in zip(plug.children(), default):
                         if v:
@@ -512,31 +520,35 @@ class Node(Node_c):
                 else:
                     for p in plug.children():
                         p.apiSetDefault(default, True, True)
-            if channelBox:
-                if isinstance(channelBox, Iterable):
-                    for x, v in zip(childNames, channelBox):
-                        if v:
-                            _setAttr(nodename_ + x, cb=True)
-                else:
-                    for x in childNames:
-                        _setAttr(nodename_ + x, cb=True)
-            if proxy:
-                for x, src in zip(childNames, masterChildren):
-                    _connectAttr(src.name_(), nodename_ + x)
+
+            if channelBox or proxy:
+                pre_ = nodename_ + (pathname[1:] if pathname.startswith('.') else pathname) + '.'
+                if channelBox:
+                    if isinstance(channelBox, Iterable):
+                        for x, v in zip(childNames, channelBox):
+                            if v:
+                                _setAttr(pre_ + x, cb=True)
+                    else:
+                        for x in childNames:
+                            _setAttr(pre_ + x, cb=True)
+                if proxy:
+                    for x, src in zip(childNames, masterChildren):
+                        _connectAttr(src.name_(), pre_ + x)
 
         else:
             # 単体のアトリビュートの処理。
             if default is not None:
-                plug = self.plug_(name)
+                plug = self.plug_(pathname)
                 plug.apiSetDefault(default, True, True)
+            tgt = nodename_ + (pathname[1:] if pathname.startswith('.') else pathname)
             if channelBox:
-                _setAttr(nodename_ + name, cb=True)
+                _setAttr(tgt, cb=True)
             if proxy:
-                _connectAttr(proxy.name_(), nodename_ + name)
+                _connectAttr(proxy.name_(), tgt)
 
         # Plug オブジェクトを返す。
         if getPlug:
-            return plug or self.plug_(name)
+            return plug or self.plug_(pathname)
 
     def plugs(self, **kwargs):
         u"""
@@ -575,6 +587,14 @@ nodetypes.registerNodeClass(Node, 'node')
 
 
 #------------------------------------------------------------------------------
+if IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES:
+    def _pathnameToAddAttr(name, opts):
+        return (opts.get('parent') or opts.get('p', '')) + '.' + name
+else:
+    def _pathnameToAddAttr(name, opts):
+        return name
+
+
 def _distinguishAttrType(typename, _kwargs):
     u"""
     タイプ名が -at か -dt か判別してオプション辞書にセットする。

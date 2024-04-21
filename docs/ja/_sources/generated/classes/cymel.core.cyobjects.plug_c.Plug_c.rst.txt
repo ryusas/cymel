@@ -79,6 +79,7 @@ class cymel.core.cyobjects.plug_c.Plug_c
         isDestination
         isDynamic
         isElement
+        isEnforcingUniqueName
         isExtension
         isFreeToChange
         isFromReferencedFile
@@ -136,6 +137,7 @@ class cymel.core.cyobjects.plug_c.Plug_c
         numElements
         outputs
         parent
+        pathName
         plug
         plugName
         plug_
@@ -229,6 +231,7 @@ class cymel.core.cyobjects.plug_c.Plug_c
     .. automethod:: isDestination
     .. automethod:: isDynamic
     .. automethod:: isElement
+    .. automethod:: isEnforcingUniqueName
     .. automethod:: isExtension
     .. automethod:: isFreeToChange
     .. automethod:: isFromReferencedFile
@@ -286,6 +289,7 @@ class cymel.core.cyobjects.plug_c.Plug_c
     .. automethod:: numElements
     .. automethod:: outputs
     .. automethod:: parent
+    .. automethod:: pathName
     .. automethod:: plug
     .. automethod:: plugName
     .. automethod:: plug_
