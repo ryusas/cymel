@@ -11,7 +11,7 @@ from ..typeregistry import _FIX_SLOTS
 from .plug_c import Plug_c
 from .cyobject import CyObject
 from ..datatypes import Matrix, Transformation, Vector, Quaternion
-from ...utils import docmd, listEnum, correctNodeName
+from ...utils import docmd, listEnum, correctNodeName, undoChunk
 import maya.OpenMaya as api1
 import maya.api.OpenMaya as api2
 
@@ -661,74 +661,75 @@ class Plug(Plug_c):
         isRefNode = self.isNodeFromReferencedFile()
         isArray = self.isArray()
 
-        # force でコネクションがある場合は、このプラグの上位と、下流の接続先プラグとその上位を一時的にアンロックする。
-        # （ロックそのものはエラーにならないが、コネクションがロックされているとエラーになる）
-        # この操作は undo 可能でないと、条件によってはコネクションが復元されないようだ。
-        tmpUnlocked = []
-        if force:
-            breakConn = True
-            for dst in self.connections(False, True):
-                if not dst.isNodeFromReferencedFile():
-                    tmpUnlocked.extend(dst.unlock())
-            if not isRefNode and (tmpUnlocked or self.isDestination(below=True)):
-                tmpUnlocked.extend(self.unlock())
+        with undoChunk:
+            # force でコネクションがある場合は、このプラグの上位と、下流の接続先プラグとその上位を一時的にアンロックする。
+            # （ロックそのものはエラーにならないが、コネクションがロックされているとエラーになる）
+            # この操作は undo 可能でないと、条件によってはコネクションが復元されないようだ。
+            tmpUnlocked = []
+            if force:
+                breakConn = True
+                for dst in self.connections(False, True):
+                    if not dst.isNodeFromReferencedFile():
+                        tmpUnlocked.extend(dst.unlock())
+                if not isRefNode and (tmpUnlocked or self.isDestination(children=True)):
+                    tmpUnlocked.extend(self.unlock())
 
-        # undoで状態が完全に戻るようにする対策。
-        # 下位の本当にロックされているプラグをアンロックする。
-        # 下位のコネクションの無い要素プラグを下層から順に削除操作対象にする。
-        if isRefNode:
-            thisUnlocked = EMPTY_TUPLE
-            queue = [p for p in self.iterHierarchy(evaluate=True) if p.isElement() and not p.isConnected()]
-        else:
-            queue = list(self.iterHierarchy(evaluate=True))
-            # このプラグ以下のロック判別のために上位を一時的にアンロックし、
+            # undoで状態が完全に戻るようにする対策。
             # 下位の本当にロックされているプラグをアンロックする。
-            uppers = self.unlock()
-            thisUnlocked = [_unlockCmd(p) for p in queue if p.isLocked()]
-            if uppers:
-                for x in uppers:
-                    x.apiSetLocked(True)
-                if uppers[-1] == self:
-                    _unlockCmd(self)
-                    thisUnlocked.insert(0, self)
-            queue = [p for p in queue if p.isElement() and not p.isConnected()]
-        queue.reverse()
+            # 下位のコネクションの無い要素プラグを下層から順に削除操作対象にする。
+            if isRefNode:
+                thisUnlocked = EMPTY_TUPLE
+                queue = [p for p in self.iterHierarchy(evaluate=True) if p.isElement() and not p.isConnected()]
+            else:
+                queue = list(self.iterHierarchy(evaluate=True))
+                # このプラグ以下のロック判別のために上位を一時的にアンロックし、
+                # 下位の本当にロックされているプラグをアンロックする。
+                uppers = self.unlock()
+                thisUnlocked = [_unlockCmd(p) for p in queue if p.isLocked()]
+                if uppers:
+                    for x in uppers:
+                        x.apiSetLocked(True)
+                    if uppers[-1] == self:
+                        _unlockCmd(self)
+                        thisUnlocked.insert(0, self)
+                queue = [p for p in queue if p.isElement() and not p.isConnected()]
+            queue.reverse()
 
-        #print('tmpUnlocked=%r' % (tmpUnlocked,))
-        #print('thisUnlocked=%r' % (thisUnlocked,))
-        #print('removeElems=%r' % (queue,))
+            #print('tmpUnlocked=%r' % (tmpUnlocked,))
+            #print('thisUnlocked=%r' % (thisUnlocked,))
+            #print('removeElems=%r' % (queue,))
 
-        # 下位から順に削除。
-        try:
-            removedElems = []
-            name = None
-            for plug in queue:
-                name = plug.name_()
-                _removeMultiInstance(name, b=breakConn)
-                removedElems.append(plug)
+            # 下位から順に削除。
+            try:
+                removedElems = []
+                name = None
+                for plug in queue:
+                    name = plug.name_()
+                    _removeMultiInstance(name, b=breakConn)
+                    removedElems.append(plug)
 
-        # エラー発生時の処理。
-        except Exception as err:
-            # 既に削除したものを復元。
-            if removedElems:
-                removedElems.reverse()
-                _addElement(removedElems)
-            # undo時の復元保証のためにアンロックしたものを復元。
-            for x in thisUnlocked:
-                _setAttr(x.name_(), l=True)
-
-            # コマンドのメッセージだと格好悪いので自身のエラーに変更。
-            if u'connected' in UNICODE(err):
-                if not isArray or not name:
-                    name = self.name_()
-                raise RuntimeError('attribute is connected: ' + name)
-            raise
-
-        # 一時的に解除したロックの復元。
-        finally:
-            for x in tmpUnlocked:
-                if x.isValid():
+            # エラー発生時の処理。
+            except Exception as err:
+                # 既に削除したものを復元。
+                if removedElems:
+                    removedElems.reverse()
+                    _addElement(removedElems)
+                # undo時の復元保証のためにアンロックしたものを復元。
+                for x in thisUnlocked:
                     _setAttr(x.name_(), l=True)
+
+                # コマンドのメッセージだと格好悪いので自身のエラーに変更。
+                if u'connected' in UNICODE(err):
+                    if not isArray or not name:
+                        name = self.name_()
+                    raise RuntimeError('attribute is connected: ' + name)
+                raise
+
+            # 一時的に解除したロックの復元。
+            finally:
+                for x in tmpUnlocked:
+                    if x.isValid():
+                        _setAttr(x.name_(), l=True)
 
         return len(queue)
 
@@ -747,58 +748,59 @@ class Plug(Plug_c):
 
         isRefNode = self.isNodeFromReferencedFile()
 
-        # force でコネクションがある場合は、このプラグの上位と、下流の接続先プラグとその上位を一時的にアンロックする。
-        # この操作は undo 可能でないと、条件によってはコネクションが復元されないようだ。
-        tmpUnlocked = []
-        if force:
-            if not isRefNode:
-                tmpUnlocked = self.unlock()
-            for dst in self.connections(False, True):
-                if not dst.isNodeFromReferencedFile():
-                    tmpUnlocked.extend(dst.unlock())
-        elif self.isLocked():
-            raise RuntimeError('attribute is locked: ' + self.name_())
+        with undoChunk:
+            # force でコネクションがある場合は、このプラグの上位と、下流の接続先プラグとその上位を一時的にアンロックする。
+            # この操作は undo 可能でないと、条件によってはコネクションが復元されないようだ。
+            tmpUnlocked = []
+            if force:
+                if not isRefNode:
+                    tmpUnlocked = self.unlock()
+                for dst in self.connections(False, True):
+                    if not dst.isNodeFromReferencedFile():
+                        tmpUnlocked.extend(dst.unlock())
+            elif self.isLocked():
+                raise RuntimeError('attribute is locked: ' + self.name_())
 
-        # undoで状態が完全に戻るようにする対策。
-        # 下位の本当にロックされているプラグをアンロック。
-        # 下位のコネクションの無い要素プラグを下層から順に削除操作対象にする。
-        if isRefNode:
-            thisUnlocked = EMPTY_TUPLE
-            queue = [p for p in self.iterHierarchy(evaluate=True) if p.isElement() and not p.isConnected()]
-        else:
-            queue = list(self.iterHierarchy(evaluate=True))
-            thisUnlocked = [_unlockCmd(p) for p in queue if p.isLocked()]
-            queue = [p for p in queue if p.isElement() and not p.isConnected()]
-        queue.reverse()
+            # undoで状態が完全に戻るようにする対策。
+            # 下位の本当にロックされているプラグをアンロック。
+            # 下位のコネクションの無い要素プラグを下層から順に削除操作対象にする。
+            if isRefNode:
+                thisUnlocked = EMPTY_TUPLE
+                queue = [p for p in self.iterHierarchy(evaluate=True) if p.isElement() and not p.isConnected()]
+            else:
+                queue = list(self.iterHierarchy(evaluate=True))
+                thisUnlocked = [_unlockCmd(p) for p in queue if p.isLocked()]
+                queue = [p for p in queue if p.isElement() and not p.isConnected()]
+            queue.reverse()
 
-        #print('tmpUnlocked=%r' % (tmpUnlocked,))
-        #print('thisUnlocked=%r' % (thisUnlocked,))
-        #print('removeElems=%r' % (queue,))
+            #print('tmpUnlocked=%r' % (tmpUnlocked,))
+            #print('thisUnlocked=%r' % (thisUnlocked,))
+            #print('removeElems=%r' % (queue,))
 
-        # 下位の要素から順に削除。
-        try:
-            removedElems = []
-            for plug in queue:
-                _removeMultiInstance(plug.name_(), b=True)
-                removedElems.append(plug)
-            _deleteAttr(self.name_())
+            # 下位の要素から順に削除。
+            try:
+                removedElems = []
+                for plug in queue:
+                    _removeMultiInstance(plug.name_(), b=True)
+                    removedElems.append(plug)
+                _deleteAttr(self.name_())
 
-        # エラー発生時の処理。
-        except Exception as err:
-            # 既に削除したものを復元。
-            if removedElems:
-                removedElems.reverse()
-                _addElement(removedElems)
-            # undo時の復元保証のためにアンロックしたものを復元。
-            for x in thisUnlocked:
-                _setAttr(x.name_(), l=True)
-            raise
-
-        # 一時的に解除したロックの復元。
-        finally:
-            for x in tmpUnlocked:
-                if x.isValid():
+            # エラー発生時の処理。
+            except Exception as err:
+                # 既に削除したものを復元。
+                if removedElems:
+                    removedElems.reverse()
+                    _addElement(removedElems)
+                # undo時の復元保証のためにアンロックしたものを復元。
+                for x in thisUnlocked:
                     _setAttr(x.name_(), l=True)
+                raise
+
+            # 一時的に解除したロックの復元。
+            finally:
+                for x in tmpUnlocked:
+                    if x.isValid():
+                        _setAttr(x.name_(), l=True)
 
     def iterHierarchy(self, evaluate=False, connected=False, checker=gettrue):
         u"""
