@@ -23,8 +23,6 @@ _2_MDagPath = _api2.MDagPath
 _2_getAllPathsTo = _2_MDagPath.getAllPathsTo
 _2_NullObj = _api2.MObject.kNullObj
 
-# _constraint = cmds.constraint
-
 
 #------------------------------------------------------------------------------
 class Constraint(nodetypes.parentBasicNodeClass('constraint')):

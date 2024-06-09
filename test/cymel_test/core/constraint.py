@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 u"""
-カスタムクラス関連のテスト。
+constraint related tests
 """
 from __future__ import print_function
 from __future__ import absolute_import

@@ -6,9 +6,6 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-# import sys, os
-#
-# sys.path.insert(0, os.path.join(__path__[0], '..', '..', 'python'))
 
 import unittest
 from cymel_test import (
