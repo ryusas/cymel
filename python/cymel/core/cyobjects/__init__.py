@@ -15,6 +15,7 @@ from .dagnode import *
 from .transform import *
 from .shape import *
 from .reference import *
+from .constraint import *
 
 def _all():
     from types import ModuleType

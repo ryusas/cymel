@@ -8,12 +8,14 @@ from __future__ import print_function
 import unittest
 from cymel_test.core import (
     cyobjects,
+    constraint,
 )
 
 
 def suite():
      return unittest.TestSuite((
         cyobjects.suite(),
+        constraint.suite(),
     ))
 
 
