@@ -46,10 +46,9 @@ class Constraint(nodetypes.parentBasicNodeClass('constraint')):
 
         :rtype: list
         """
-        name = self.name()
         return list(
             map(
-                lambda x: CyObject('{}.{}'.format(name, x)),
+                self.plug_,
                 self._cmd(self, weightAliasList=True, q=True)
             )
         )
