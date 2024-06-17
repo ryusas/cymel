@@ -16,13 +16,29 @@ class TestConstraints(unittest.TestCase):
     u"""
     Test of Constraint.
     """
-    def test_Constraint(self):
+
+    def setUp(self):
         cmds.file(f=True, new=True)
 
         # given
-        a = cmds.createNode('transform', ss=1)
-        b = cmds.createNode('transform', ss=1)
-        c = cmds.createNode('transform', ss=1)
+        self.a = cmds.createNode('transform', ss=1)
+        self.b = cmds.createNode('transform', ss=1)
+        self.c = cmds.createNode('transform', ss=1)
+
+    def test_Constraint_constraint_node_can_initialize_with_Constraint_class(self):
+        con = cmds.parentConstraint(self.a, self.b)[0]
+        conObj = cm.nt.Constraint(con)
+        self.assertIsInstance(
+            conObj,
+            cm.nt.Constraint
+        )
+
+    def test_Constraint(self):
+
+        # given
+        a = self.a
+        b = self.b
+        c = self.c
 
         for conType in [
             'parentConstraint',
@@ -35,6 +51,7 @@ class TestConstraints(unittest.TestCase):
             conName = conCmd(a, b, c)
             conObj = cm.O(conName[0])
             self._runAssertionsFor(conType, conObj)
+
             cmds.delete(conObj)
 
     def _runAssertionsFor(self, conType, conObj):

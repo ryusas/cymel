@@ -19,15 +19,25 @@ class Constraint(nodetypes.parentBasicNodeClass('constraint')):
     :mayanode:`constraint`
     """
     if _FIX_SLOTS:
-        __slots__ = tuple()
+        __slots__ = ('_cmd',)
+
+    def __init__(self, *args, **kwargs):
+        super(Constraint, self).__init__()
+        self._cmd = getattr(cmds, self.type())
+
+    def _getTargetList(self):
+        """Return the list of target objects.
+
+        :rtype: list[str]
+        """
+        return self._cmd(self, targetList=True, q=True)
 
     def getTargetList(self):
         """Return the list of target objects.
 
-        :rtype: list
+        :rtype: list[Constraint]
         """
-        inFunc = getattr(cmds, self.type())
-        return [CyObject(obj) for obj in inFunc(self, targetList=True, q=True)]
+        return list(map(CyObject, self._getTargetList()))
 
     def getWeightAliasList(self):
         """
@@ -36,20 +46,23 @@ class Constraint(nodetypes.parentBasicNodeClass('constraint')):
 
         :rtype: list
         """
-        inFunc = getattr(cmds, self.type())
-        return [CyObject('{}.{}'.format(self.name(), obj)) for obj in inFunc(self, weightAliasList=True, q=True)]
+        name = self.name()
+        return list(
+            map(
+                lambda x: CyObject('{}.{}'.format(name, x)),
+                self._cmd(self, weightAliasList=True, q=True)
+            )
+        )
 
     def setWeight(self, weight, *targetObjects):
         """
         Sets the weight value for the specified targetObject(s).
         """
-        inFunc = getattr(cmds, self.type())
-        if not targetObjects:
-            targetObjects = self.getTargetList()
-
-        constraintObj = self.constraintParentInverseMatrix.inputs()[0].node()
-        args = list(targetObjects) + [constraintObj]
-        return inFunc(*args, **{'edit': True, 'weight': weight})
+        if targetObjects:
+            self._cmd(targetObjects + (self,), e=True, weight=weight)
+        else:
+            name = self.name()
+            self._cmd(self._getTargetList() + [name], e=True, weight=weight)
 
     def getWeight(self, *targetObjects):
         """
@@ -57,13 +70,11 @@ class Constraint(nodetypes.parentBasicNodeClass('constraint')):
 
         :rtype: float
         """
-        inFunc = getattr(cmds, self.type())
-        if not targetObjects:
-            targetObjects = self.getTargetList()
-
-        constraintObj = self.constraintParentInverseMatrix.inputs()[0].node()
-        args = list(targetObjects) + [constraintObj]
-        return inFunc(*args, **{'query': True, 'weight': True})
+        if targetObjects:
+            return self._cmd(targetObjects + (self,), q=True, weight=True)
+        else:
+            name = self.name()
+            return self._cmd(self._getTargetList() + [name], q=True, weight=True)
 
 
 nodetypes.registerNodeClass(Constraint, 'constraint')
