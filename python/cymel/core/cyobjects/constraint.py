@@ -9,19 +9,8 @@ from __future__ import print_function
 from ...common import *
 from ..typeregistry import nodetypes, _FIX_SLOTS
 from .cyobject import CyObject
-import maya.api.OpenMaya as _api2
-import itertools
 
 __all__ = ['Constraint']
-
-_from_iterable = itertools.chain.from_iterable
-
-_MFn_kDagNode = _api2.MFn.kDagNode
-_MFn_kTransform = _api2.MFn.kTransform
-_MFn_kConstraint = _api2.MFn.kConstraint
-_2_MDagPath = _api2.MDagPath
-_2_getAllPathsTo = _2_MDagPath.getAllPathsTo
-_2_NullObj = _api2.MObject.kNullObj
 
 
 #------------------------------------------------------------------------------
