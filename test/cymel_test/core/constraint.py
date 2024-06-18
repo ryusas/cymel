@@ -33,6 +33,14 @@ class TestConstraints(unittest.TestCase):
             cm.nt.Constraint
         )
 
+    def test_Constraint_getWeight_returns_empty_list_if_target_doesnot_exists(self):
+        con = cmds.createNode('parentConstraint')
+        conObj = cm.nt.Constraint(con)
+        self.assertEqual(
+            conObj.getWeight(),
+            []
+        )
+
     def test_Constraint(self):
 
         # given
@@ -72,6 +80,15 @@ class TestConstraints(unittest.TestCase):
 
         # when
         aliases = conObj.getWeightAliasList()
+
+        # then
+        self.assertListEqual(
+            aliases,
+            ['transform1W0', 'transform2W1']
+        )
+
+        # when
+        aliases = conObj.getWeightPlugList()
 
         # then
         self.assertListEqual(
