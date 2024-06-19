@@ -44,6 +44,7 @@ CyObjects
     cymel.core.cyobjects.shape
     cymel.core.cyobjects.transform
     cymel.core.cyobjects.transform_c
+    cymel.core.cyobjects.constraint
 
     cymel.core.typeinfo
     cymel.core.typeregistry
