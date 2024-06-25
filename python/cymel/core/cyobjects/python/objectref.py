@@ -113,6 +113,7 @@ class ObjectRef(CyObject):
         obj = self.refclass().newObject(self.__data['DATA'])
         obj._CyObject__ref = self
         self.__data['wref'] = _wref(obj)
+        #obj.__init__()  # NOTE: Plug.node() や Plug.connections() などでも __init__() をサポートするなら必要。
         return obj
 
     def node(self):
