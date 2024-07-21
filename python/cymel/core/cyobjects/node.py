@@ -9,6 +9,7 @@ from __future__ import print_function
 from uuid import uuid4 as _uuid4, UUID as _UUID
 from ...common import *
 from ...utils.namespace import _wrapNS, _mayaNS
+from ...utils.operation import undoChunk
 from ..typeregistry import nodetypes, _FIX_SLOTS
 from .node_c import Node_c
 from .cyobject import (
@@ -497,58 +498,74 @@ class Node(Node_c):
         else:
             default = kwargs_pop('defaultValue', kwargs_pop('dv', None))
 
-        # アトリビュート生成。
         #print(nodename, kwargs)
-        _addAttr(nodename, **kwargs)
-        plug = None
 
+        # コンパウンドアトリビュート生成。
         if childArgs:
-            # 子の生成。
-            for opts in childrenOpts:
-                args = dict(childArgs)
-                args.update(opts)
-                #print(nodename, args)
-                _addAttr(nodename, **args)
+            with undoChunk:
+                _addAttr(nodename, **kwargs)
 
-            # 子の処理。
-            if default is not None:
-                plug = self.plug_(pathname)
-                if isinstance(default, LIST_OR_TUPLE):
-                    for p, v in zip(plug.children(), default):
-                        if v:
-                            p.apiSetDefault(v, True, True)
-                else:
-                    for p in plug.children():
-                        p.apiSetDefault(default, True, True)
+                # 子の生成。
+                for opts in childrenOpts:
+                    args = dict(childArgs)
+                    args.update(opts)
+                    #print(nodename, args)
+                    _addAttr(nodename, **args)
 
-            if channelBox or proxy:
-                pre_ = nodename_ + (pathname[1:] if pathname.startswith('.') else pathname) + '.'
-                if channelBox:
+                # Attribute に対する処理。
+                if channelBox or default is not None:
+                    plug = self.plug_(pathname)
+                    children = plug.children()
+
+                    # デフォルト値は Plug ではなく Attribute に設定するので、undo/redo のときに何もしなくても元に戻る。
+                    if isinstance(default, LIST_OR_TUPLE):
+                        for p, v in zip(children, default):
+                            if v is not None:
+                                p.apiSetDefault(v, True, True)
+                    elif default is not None:
+                        for p in children:
+                            p.apiSetDefault(default, True, True)
+
+                    # フラグも Plug ではなく Attribute に設定すれば、undo/redo のときに何もしなくても元に戻る。
                     if isinstance(channelBox, Iterable):
-                        for x, v in zip(childNames, channelBox):
+                        for p, v in zip(children, channelBox):
                             if v:
-                                _setAttr(pre_ + x, cb=True)
-                    else:
-                        for x in childNames:
-                            _setAttr(pre_ + x, cb=True)
+                                p.mfn().channelBox = True
+                    elif channelBox:
+                        for p in children:
+                            p.mfn().channelBox = True
+                else:
+                    plug = None
+
+                # Plug に対する処理。
                 if proxy:
+                    pre_ = nodename_ + (pathname[1:] if pathname.startswith('.') else pathname) + '.'
                     for x, src in zip(childNames, masterChildren):
                         _connectAttr(src.name_(), pre_ + x)
 
+        # 単体のアトリビュートの生成。
+        elif proxy:
+            with undoChunk:
+                plug = self.__addOneAttr(nodename, pathname, default, channelBox, **kwargs)
+                _connectAttr(proxy.name_(), nodename_ + (pathname[1:] if pathname.startswith('.') else pathname))
         else:
-            # 単体のアトリビュートの処理。
-            if default is not None:
-                plug = self.plug_(pathname)
-                plug.apiSetDefault(default, True, True)
-            tgt = nodename_ + (pathname[1:] if pathname.startswith('.') else pathname)
-            if channelBox:
-                _setAttr(tgt, cb=True)
-            if proxy:
-                _connectAttr(proxy.name_(), tgt)
+            with undoChunk:
+                plug = self.__addOneAttr(nodename, pathname, default, channelBox, **kwargs)
 
         # Plug オブジェクトを返す。
         if getPlug:
             return plug or self.plug_(pathname)
+
+    def __addOneAttr(self, nodename, pathname, default, channelBox, **kwargs):
+        _addAttr(nodename, **kwargs)
+
+        if channelBox or default is not None:
+            plug = self.plug_(pathname)
+            if default is not None:
+                plug.apiSetDefault(default, True, True)
+            if channelBox:
+                plug.mfn().channelBox = True
+            return plug
 
     def plugs(self, **kwargs):
         u"""
