@@ -583,7 +583,7 @@ class Node(Node_c):
         :rtype: `list`
         """
         p = self.plug_
-        return [p(x) for x in _listAttr(self.name(), **kwargs)]
+        return [p(x) for x in (_listAttr(self.name(), **kwargs) or EMPTY_TUPLE)]
 
     listAttr = plugs  #: `plugs` の別名。
 

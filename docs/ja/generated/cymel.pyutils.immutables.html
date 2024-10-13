@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.pyutils.immutables &#8212; cymel 0.25.2024062500 ドキュメント</title>
+    <title>cymel.pyutils.immutables &#8212; cymel 0.27.2024101300 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="cymel.pyutils.finalizer.html" title="cymel.pyutils.finalizer"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.pyutils.immutables</a></li> 
       </ul>
@@ -52,7 +52,7 @@
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="classes/cymel.pyutils.immutables.ImmutableDict.html#cymel.pyutils.immutables.ImmutableDict" title="cymel.pyutils.immutables.ImmutableDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImmutableDict</span></code></a></p></td>
-<td><p>イミュータブル <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p></td>
+<td><p>イミュータブル <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -105,8 +105,8 @@
 インスタンスが指定された場合のラッパーの初期化引数は
 インスタンス自身となる為、コピーコンストラクタが実装
 されている場合にのみ動作する。</p></li>
-<li><p><strong>args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) -- type_or_obj にクラスが指定された場合の初期化引数。</p></li>
-<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><em>dict</em></a>) -- type_or_obj にクラスが指定された場合の初期化引数。</p></li>
+<li><p><strong>args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a>) -- type_or_obj にクラスが指定された場合の初期化引数。</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) -- type_or_obj にクラスが指定された場合の初期化引数。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値<span class="colon">:</span></dt>
@@ -147,16 +147,16 @@
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><em>type</em></a>) -- イミュータブル化する元のクラス。</p></li>
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- ラッパークラスの名前。
+<li><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.13)"><em>type</em></a>) -- イミュータブル化する元のクラス。</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- ラッパークラスの名前。
 省略時は <code class="docutils literal notranslate"><span class="pre">'Immutable元のクラス名'</span></code> となる。</p></li>
-<li><p><strong>module</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- ラッパークラスを提供するモジュール名。
+<li><p><strong>module</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- ラッパークラスを提供するモジュール名。
 __module__ 属性にセットされる。
 省略時は、元のクラスの __module__ 属性を引き継ぐ。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></p>
 </dd>
 </dl>
 <div class="admonition warning">
@@ -250,7 +250,7 @@ __module__ 属性にセットされる。
         <li class="right" >
           <a href="cymel.pyutils.finalizer.html" title="cymel.pyutils.finalizer"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.pyutils.immutables</a></li> 
       </ul>

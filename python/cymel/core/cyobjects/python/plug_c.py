@@ -1325,31 +1325,45 @@ class Plug_c(CyObject):
         u"""
         マルチアトリビュートのコネクトされている要素を物理インデックスで得る。
 
-        論理インデックスの並びは必ずしも昇順とはならない。
-        （接続操作の後は乱れており、シーンを開き直すと整列される）
+        論理インデックスの並びは昇順となる。
+
+        インデックスを得たいだけなら `connectedElementIndices` の方が効率が良い。
 
         :param `int` idx:
             0 ～ `numConnectedElements` ()-1 の範囲の物理インデックス。
         :rtype: `.Plug`
+
+        .. note::
+            API の MPlug.connectionByPhysicalIndex(i) で得られるプラグの並び順は、
+            接続操作を繰り返した後は乱れていることがあり、シーンを開き直したときに整列されるようだ。
+            しかし、このメソッドでは、論理インデックスの昇順に得られることを保証する。
         """
         self.checkValid()
         mplug = self._CyObject__data['mplug']
         if not mplug.isArray:
             raise TypeError('plug is not an array: ' + self.name_())
+        getConElem = mplug.connectionByPhysicalIndex
+        # NOTE: selectAncestorLogicalIndex は toNonNetworkedElemMPlug(multi, elem) 相当の操作。
         return _newNodeRefPlug(
             _type(self),
             self._CyObject__data['noderef'],
-            toNonNetworkedElemMPlug(mplug, mplug.connectionByPhysicalIndex(idx)),
+            _2_MPlug(mplug).selectAncestorLogicalIndex(sorted([getConElem(i).logicalIndex() for i in range(mplug.numConnectedElements())])[idx]),
             self._CyObject__data['typeinfo'])
 
     def connectedElements(self):
         u"""
-        マルチアトリビュートのコネクトされている要素のリストを得る。
+        マルチアトリビュートのコネクトされている要素リストを得る。
 
-        論理インデックスの並びは必ずしも昇順とはならない。
-        （接続操作の後は乱れており、シーンを開き直すと整列される）
+        論理インデックスの並びは昇順となる。
+
+        インデックスを得たいだけなら `connectedElementIndices` の方が効率が良い。
 
         :rtype: `list`
+
+        .. note::
+            API の MPlug.connectionByPhysicalIndex(i) で得られるプラグの並び順は、
+            接続操作を繰り返した後は乱れていることがあり、シーンを開き直したときに整列されるようだ。
+            しかし、このメソッドでは、論理インデックスの昇順に得られることを保証する。
         """
         self.checkValid()
         mplug = self._CyObject__data['mplug']
@@ -1359,10 +1373,33 @@ class Plug_c(CyObject):
         noderef = self._CyObject__data['noderef']
         info = self._CyObject__data['typeinfo']
         getConElem = mplug.connectionByPhysicalIndex
+        # NOTE: selectAncestorLogicalIndex は toNonNetworkedElemMPlug(multi, elem) 相当の操作。
         return [
-            _newNodeRefPlug(cls, noderef, toNonNetworkedElemMPlug(mplug, getConElem(i)), info)
-            for i in range(mplug.numElements())
+            _newNodeRefPlug(cls, noderef, _2_MPlug(mplug).selectAncestorLogicalIndex(i), info)
+            for i in sorted([getConElem(i).logicalIndex() for i in range(mplug.numConnectedElements())])
         ]
+
+    def connectedElementIndices(self):
+        u"""
+        マルチアトリビュートのコネクトされている要素のインデックスのリストを得る。
+
+        論理インデックスの並びは昇順となる。
+
+        インデックスを得たいだけなら `connectedElement` や `connectedElements` より効率が良い。
+
+        :rtype: `list`
+
+        .. note::
+            API の MPlug.connectionByPhysicalIndex(i) で得られるプラグの並び順は、
+            接続操作を繰り返した後は乱れていることがあり、シーンを開き直したときに整列されるようだ。
+            しかし、このメソッドでは、論理インデックスの昇順に得られることを保証する。
+        """
+        self.checkValid()
+        mplug = self._CyObject__data['mplug']
+        if not mplug.isArray:
+            raise TypeError('plug is not an array: ' + self.name_())
+        getConElem = mplug.connectionByPhysicalIndex
+        return sorted([getConElem(i).logicalIndex() for i in range(mplug.numConnectedElements())])
 
     def index(self):
         u"""

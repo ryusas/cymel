@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.datatypes.transformation.Transformation &#8212; cymel 0.25.2024062500 ドキュメント</title>
+    <title>class cymel.core.datatypes.transformation.Transformation &#8212; cymel 0.27.2024101300 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="cymel.core.datatypes.transformation.ImmutableTransformation.html" title="class cymel.core.datatypes.transformation.ImmutableTransformation"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.transformation.html" accesskey="U">cymel.core.datatypes.transformation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.transformation.Transformation</a></li> 
@@ -54,7 +54,7 @@
 </map><dl class="py class">
 <dt class="sig sig-object py" id="cymel.core.datatypes.transformation.Transformation">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.core.datatypes.transformation.</span></span><span class="sig-name descname"><span class="pre">Transformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.transformation.Transformation" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>トランスフォーメーション情報クラス。</p>
 <p>Maya の matrix データ型アトリビュートには、
 マトリックスの値そのものの他に、
@@ -97,8 +97,8 @@ matrix や quaternion といった属性の他に、
 <p>マトリックスからこれらの値に直接分解することはできず、
 分解・合成するための補助属性という位置づけである。</p>
 <ul class="simple">
-<li><p>rotateOrder (ro) (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>)</p></li>
-<li><p>segmentScaleCompensate (ssc) (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>)</p></li>
+<li><p>rotateOrder (ro) (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>)</p></li>
+<li><p>segmentScaleCompensate (ssc) (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>)</p></li>
 <li><p>inverseScale (is) (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p></li>
 <li><p>jointOrient (jo) (<a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>)</p></li>
 <li><p>rotateAxis (ra) (<a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>)</p></li>
@@ -167,7 +167,7 @@ t, r(q), sh, s の値を得る。</p></li>
 そのままセットすることができる。
 例えば、rotateAxis 属性の型は
 <a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>
-だが Radians の 3値の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> をセットしても、
+だが Radians の 3値の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> をセットしても、
 適切に Quaternion に変換される。</p></li>
 <li><p><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> か <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a>
 と乗算できる。</p></li>
@@ -205,7 +205,7 @@ matrix データ型アトリビュートへの
 <dd><p>指定した基準位置を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>at</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- <p>どのアトリビュートに相当する位置を得るか。</p>
+<dd class="field-odd"><p><strong>at</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- <p>どのアトリビュートに相当する位置を得るか。</p>
 <ul class="simple">
 <li><p>0 だと原点（ゼロ）。</p></li>
 <li><p>1 だと translate の位置（属性値そのもの）。</p></li>
@@ -224,7 +224,7 @@ matrix データ型アトリビュートへの
 <dd><p>トランスフォーメーション修飾属性をクリアする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- トランスフォーメーション修飾属性名。</p>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- トランスフォーメーション修飾属性名。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -242,7 +242,7 @@ matrix データ型アトリビュートへの
 <p>コマンド構文のアトリビュート名の部分は &quot;%s&quot; となる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -253,10 +253,10 @@ matrix データ型アトリビュートへの
 <dd><p>デフォルト値ではない修飾属性の値を持っているかどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- トランスフォーメーション修飾属性名。</p>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- トランスフォーメーション修飾属性名。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -272,11 +272,11 @@ matrix データ型アトリビュートへの
 <a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> か
 <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a>
 を指定可能。</p></li>
-<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 許容誤差。</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- 許容誤差。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -356,7 +356,7 @@ matrix データ型アトリビュートへの
         <li class="right" >
           <a href="cymel.core.datatypes.transformation.ImmutableTransformation.html" title="class cymel.core.datatypes.transformation.ImmutableTransformation"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.transformation.html" >cymel.core.datatypes.transformation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.transformation.Transformation</a></li> 

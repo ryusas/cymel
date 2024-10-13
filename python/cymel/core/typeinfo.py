@@ -17,7 +17,6 @@ __all__ = [
     'iterNodetypeTree',
 ]
 
-_allNodeTypes = cmds.allNodeTypes
 _nodeType = cmds.nodeType
 
 
@@ -159,6 +158,34 @@ def iterNodetypeTree(nodetype='node', breadthFirst=False):
 
 
 #------------------------------------------------------------------------------
+def _get_allNodeTypes_ia():
+    #return partial(cmds.allNodeTypes, ia=True)
+
+    # NOTE: (2024/8/19)
+    #   exprespy のコードの中で cymel をインポートすると初回にエラーになる問題の対処。
+    #   原因は不明だが、allNodeTypes(ia=True) がエラーになる。直接そのコマンド呼び出しを書いてもエラー。
+    #   スクリプトで生成した際は問題ないが、それを編集する（codeをsetAttrする）とエラー。
+    #
+    #   mayapyだと問題なし（エラーでの出るファイルを開いても正常）。
+    #   シーンファイルを開いたときエラー状態でも export selection して読み直すと正常になる。
+    #   シーンの save だと、エラーがでていなかったものも開き直すとエラーになる。
+    #   違いはUI情報の有無ではなく、カメラ情報が書かれているどうからしい（perspShape の有無で変わった）。
+    #   それ以上は追っていない。
+    #
+    #   Windowsで確認したバージョン
+    #    - エラー: 2025, 2024, 2023, 2022, 2020
+    #    - 問題なし: 2012
+    #
+    #   mel.eval でラップすることが有効な解決策。
+    #
+    from maya.mel import eval as _mel_eval
+    return partial(_mel_eval, 'allNodeTypes("-ia")')
+
+_allNodeTypes_ia = _get_allNodeTypes_ia()
+
+del _get_allNodeTypes_ia
+
+
 if MAYA_VERSION < (2016, 5):
     # allNodeTypes コマンドの返す情報の間違いの修正。
     def _bugFixedAllNodeTypes():
@@ -166,7 +193,7 @@ if MAYA_VERSION < (2016, 5):
         :mayacmd:`allNodeTypes` コマンドによって全ノードタイプ情報を得る。
         バージョンによって `list` か `set` かは不定とする。
         """
-        res = set(_allNodeTypes(ia=True))
+        res = set(_allNodeTypes_ia())
         res.difference_update(_WRONG_TYPE_DESCS)
         res.update(_FIXED_TYPE_DESCS)
         return res
@@ -235,7 +262,7 @@ if MAYA_VERSION < (2016, 5):
 else:
     # allNodeTypes コマンドによって全ノードタイプ情報を得る。
     # バージョンによって list か set かは不定とする。
-    _bugFixedAllNodeTypes = partial(_allNodeTypes, ia=True)
+    _bugFixedAllNodeTypes = _allNodeTypes_ia
 
 _FIXED_NODETYPE_INHERIT_INFO = {
     'node': ('node',),

@@ -120,10 +120,10 @@ def addCymelPluginsPathToAllowedlist():
     if MAYA_API_VERSION >= 20220000:
         import maya.cmds as cmds
         if not cmds.about(b=True):
-            path = _os_path_join(_os_path_dirname(__file__), 'plugins')
+            path = '/'.join(_os_path_join(_os_path_dirname(__file__), 'plugins').split('\\'))
             pathSet = set((cmds.optionVar(ex='SafeModeAllowedlistPaths') and cmds.optionVar(q='SafeModeAllowedlistPaths')) or [])
             if path not in pathSet:
-                print('Added cymel plugin path to SafeModeAllowedlistPaths.')
+                print('# Added cymel plugin path to SafeModeAllowedlistPaths.')
                 cmds.optionVar(sva=('SafeModeAllowedlistPaths', path))
 
 

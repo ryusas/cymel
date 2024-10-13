@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.cyobjects.node.Node &#8212; cymel 0.25.2024062500 ドキュメント</title>
+    <title>class cymel.core.cyobjects.node.Node &#8212; cymel 0.27.2024101300 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.node.html" title="cymel.core.cyobjects.node"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.node.html" accesskey="U">cymel.core.cyobjects.node</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.node.Node</a></li> 
@@ -123,7 +123,7 @@
 <ul>
 <li><p>-dt 型でもデフォルト値を指定可能。</p></li>
 <li><p>matrix 型は <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> でも <a class="reference internal" href="cymel.core.datatypes.transformation.Transformation.html#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> でも指定可能。</p></li>
-<li><p>数値コンパウンドでは <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> 形式での子の値を指定可能。</p></li>
+<li><p>数値コンパウンドでは <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> 形式での子の値を指定可能。</p></li>
 <li><p><a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/addAttr.html">addAttr</a> コマンドの振る舞いの通り、
 内部単位（例えば角度ならラジアン）で指定する。</p></li>
 </ul>
@@ -133,9 +133,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>longName</strong><strong>|</strong><strong>ln</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- アトリビュートのロング名。
+<li><p><strong>longName</strong><strong>|</strong><strong>ln</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- アトリビュートのロング名。
 最低限、ロング名のショート名のどちらかの指定が必要。</p></li>
-<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- <p>アトリビュートのタイプ名。省略時は double となる。</p>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- <p>アトリビュートのタイプ名。省略時は double となる。</p>
 <p>attibuteType(at)系とdataType(dt)系の違いを気にせずに
 指定することができる。
 中にはどちらにも同じ型名が存在するものがあるが、
@@ -160,14 +160,14 @@ subType（デフォルトは double ）が共通の場合に限り、
 childNames、childShortNames、childSuffixes
 のいずれかを指定することで、子を自動生成できる。</p>
 </p></li>
-<li><p><strong>subType</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- <p>コンパウンドの子が自動生成される場合の、共通の子タイプを指定する。
+<li><p><strong>subType</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- <p>コンパウンドの子が自動生成される場合の、共通の子タイプを指定する。
 attibuteType(at)系のみを指定可能。</p>
 <p>double3 等の数値コンパウンドの子のタイプ名を明示することを
 主目的とするオプションだが、その場合
 doubleLinear や doubleAngle などの単位付きアトリビュートと
 したい場合だけ明示すれば良い。</p>
 </p></li>
-<li><p><strong>channelBox</strong><strong>|</strong><strong>cb</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- channelBox フラグを指定する。</p></li>
+<li><p><strong>channelBox</strong><strong>|</strong><strong>cb</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- channelBox フラグを指定する。</p></li>
 <li><p><strong>childNames</strong> (<em>sequence</em>) -- コンパウンドの子アトリビュートのロング名を指定するリスト。
 省略すると childSuffixes から自動で決まる。</p></li>
 <li><p><strong>childShortNames</strong> (<em>sequence</em>) -- コンパウンドの子アトリビュートのショート名を指定するリスト。
@@ -180,7 +180,7 @@ doubleLinear や doubleAngle などの単位付きアトリビュートと
 <li><p><strong>proxy</strong><strong>|</strong><strong>pxy</strong> -- プロキシアトリビュートを追加する場合のマスターアトリビュートを指定する。
 これを指定した場合は usedAsProxy(uac) オプションは自動指定されるので
 指定不要である。</p></li>
-<li><p><strong>getPlug</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 戻り値として <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> を得るかどうか。</p></li>
+<li><p><strong>getPlug</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 戻り値として <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> を得るかどうか。</p></li>
 <li><p><strong>kwargs</strong> -- その他、 <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/addAttr.html">addAttr</a> コマンドのオプションを指定可能。</p></li>
 </ul>
 </dd>
@@ -197,7 +197,7 @@ doubleLinear や doubleAngle などの単位付きアトリビュートと
 <p>別名と <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> のペアのリストが得られる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -211,7 +211,7 @@ doubleLinear や doubleAngle などの単位付きアトリビュートと
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>val</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code>) -- アサインする UUID を指定する。
 py=True の場合は None を指定して消去することもできる。</p></li>
-<li><p><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- <p>Maya 標準機能ではなく Python の機能を使って生成する
+<li><p><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- <p>Maya 標準機能ではなく Python の機能を使って生成する
 UUID は uuid という名前のアトリビュートに保存される。
 2016 未満では常に True 扱いとなる。</p>
 <p>2016 以降では、
@@ -272,7 +272,7 @@ m=True を指定しても要素は得られない
 （worldSpace の場合はインデックスを明示しない方が良いため）。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -295,8 +295,8 @@ m=True を指定しても要素は得られない
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 新しい名前。</p></li>
-<li><p><strong>ignoreShape</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- シェイプの名前は維持する。</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- 新しい名前。</p></li>
+<li><p><strong>ignoreShape</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- シェイプの名前は維持する。</p></li>
 </ul>
 </dd>
 </dl>
@@ -308,7 +308,7 @@ m=True を指定しても要素は得られない
 <dd><p>ロック、又はアンロックする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- True だとロック、 False だとアンロック。</p>
+<dd class="field-odd"><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- True だとロック、 False だとアンロック。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -320,8 +320,8 @@ m=True を指定しても要素は得られない
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ns</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- ネームスペース。</p></li>
-<li><p><strong>ignoreShape</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- シェイプの名前は維持する。</p></li>
+<li><p><strong>ns</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- ネームスペース。</p></li>
+<li><p><strong>ignoreShape</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- シェイプの名前は維持する。</p></li>
 </ul>
 </dd>
 </dl>
@@ -340,8 +340,8 @@ m=True を指定しても要素は得られない
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>new</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 既存の ID 破棄して新しい ID を割り当てる。</p></li>
-<li><p><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- <p>Maya 標準機能ではなく Python の機能を使って生成する
+<li><p><strong>new</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 既存の ID 破棄して新しい ID を割り当てる。</p></li>
+<li><p><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- <p>Maya 標準機能ではなく Python の機能を使って生成する
 UUID は uuid という名前のアトリビュートに保存される。
 2016 未満では常に True 扱いとなる。</p>
 <p>2016 以降では、
@@ -446,7 +446,7 @@ UUIDからノードを得るには <a class="reference internal" href="cymel.cor
         <li class="right" >
           <a href="../cymel.core.cyobjects.node.html" title="cymel.core.cyobjects.node"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.node.html" >cymel.core.cyobjects.node</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.node.Node</a></li> 

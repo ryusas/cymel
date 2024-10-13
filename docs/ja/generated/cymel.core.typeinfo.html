@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.core.typeinfo &#8212; cymel 0.25.2024062500 ドキュメント</title>
+    <title>cymel.core.typeinfo &#8212; cymel 0.27.2024101300 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="classes/cymel.core.cyobjects.constraint.Constraint.html" title="class cymel.core.cyobjects.constraint.Constraint"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.core.typeinfo</a></li> 
       </ul>
@@ -79,9 +79,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 起点。これ以下をダンプする。</p></li>
+<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- 起点。これ以下をダンプする。</p></li>
 <li><p><strong>writer</strong> (<em>callable</em>) -- ライター。</p></li>
-<li><p><strong>indent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- インデント数。</p></li>
+<li><p><strong>indent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- インデント数。</p></li>
 </ul>
 </dd>
 </dl>
@@ -94,18 +94,18 @@
 <p>キャッシュされているので <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/nodeType.html">nodeType</a> コマンドなどで
 調べるより、大幅に高速である。</p>
 <p>指定タイプ名を含む継承タイプ名全てを得られる。
-<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> の場合は、昇順に並んでいる。</p>
+<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> の場合は、昇順に並んでいる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- ノードタイプ名。</p></li>
-<li><p><strong>node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 実際のノードを特定する名前。
+<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- ノードタイプ名。</p></li>
+<li><p><strong>node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- 実際のノードを特定する名前。
 必須ではないが、指定すると新規に情報作成される場合にやや高速。</p></li>
-<li><p><strong>asSet</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 結果を <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">frozenset</span></code></a> で得る。</p></li>
+<li><p><strong>asSet</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 結果を <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">frozenset</span></code></a> で得る。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">frozenset</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">frozenset</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -115,14 +115,14 @@
 <span class="sig-prename descclassname"><span class="pre">cymel.core.typeinfo.</span></span><span class="sig-name descname"><span class="pre">getNodetypeTreeDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'node'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeinfo.getNodetypeTreeDict" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ノードタイプツリーの辞書を得る。</p>
 <p>キーは「ノードタイプ名」、
-値は「子タイプ名の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a> 」
+値は「子タイプ名の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a> 」
 となる辞書を得られる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 起点。これ以下の情報を生成する。</p>
+<dd class="field-odd"><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- 起点。これ以下の情報を生成する。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -142,13 +142,13 @@
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- ノードタイプ名。</p></li>
-<li><p><strong>node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 実際のノードを特定する名前。
+<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- ノードタイプ名。</p></li>
+<li><p><strong>node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- 実際のノードを特定する名前。
 必須ではないが、指定すると新規に情報作成される場合にやや高速。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -162,14 +162,14 @@
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- ノードタイプ名。</p></li>
-<li><p><strong>basetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- チェックするベースタイプ名。</p></li>
-<li><p><strong>node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 実際のノードを特定する名前。
+<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- ノードタイプ名。</p></li>
+<li><p><strong>basetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- チェックするベースタイプ名。</p></li>
+<li><p><strong>node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) -- 実際のノードを特定する名前。
 必須ではないが、指定すると新規に情報作成される場合にやや高速。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -249,7 +249,7 @@
         <li class="right" >
           <a href="classes/cymel.core.cyobjects.constraint.Constraint.html" title="class cymel.core.cyobjects.constraint.Constraint"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.core.typeinfo</a></li> 
       </ul>

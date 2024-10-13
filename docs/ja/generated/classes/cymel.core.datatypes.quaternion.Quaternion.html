@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.datatypes.quaternion.Quaternion &#8212; cymel 0.25.2024062500 ドキュメント</title>
+    <title>class cymel.core.datatypes.quaternion.Quaternion &#8212; cymel 0.27.2024101300 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html" title="class cymel.core.datatypes.quaternion.ImmutableQuaternion"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" accesskey="U">cymel.core.datatypes.quaternion</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.quaternion.Quaternion</a></li> 
@@ -54,7 +54,7 @@
 </map><dl class="py class">
 <dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.core.datatypes.quaternion.</span></span><span class="sig-name descname"><span class="pre">Quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>クォータニオンクラス。</p>
 <p>コンストラクタでは以下の値を指定可能。</p>
 <ul class="simple">
@@ -86,7 +86,7 @@
 <td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a> の別名。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a>([order, correct])</p></td>
-<td><p>オイラー角回転を度数法の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> として得る。</p></td>
+<td><p>オイラー角回転を度数法の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> として得る。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asE" title="cymel.core.datatypes.quaternion.Quaternion.asE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asE</span></code></a>([order, correct])</p></td>
 <td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a> の別名。</p></td>
@@ -279,11 +279,11 @@
 <li><p><strong>naxis</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 回転軸が分かっている場合はそれを指定する。
 <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a> で得られるベクトルと平行でなければならない。
 反転した軸も指定可能で、その場合、反転した角度が得られる。</p></li>
-<li><p><strong>bound</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ±π の範囲に収めた角度を得るかどうか。</p></li>
+<li><p><strong>bound</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- ±π の範囲に収めた角度を得るかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -294,7 +294,7 @@
 <dd><p>軸ベクトルと回転角度として得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -306,7 +306,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
 デフォルトでは、階層上位から見て曲げてから捻るが、
 True を指定すると捻ってから曲げる分解になる。</p></li>
 <li><p><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- ボーン方向ベクトル。</p></li>
@@ -327,18 +327,18 @@ True を指定すると捻ってから曲げる分解になる。</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asDegrees">
 <span class="sig-name descname"><span class="pre">asDegrees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>オイラー角回転を度数法の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> として得る。</p>
+<dd><p>オイラー角回転を度数法の <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> として得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 得たい回転オーダー。</p></li>
-<li><p><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 得られるオイラー角回転値を再度クォータニオン化したときに
+<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- 得たい回転オーダー。</p></li>
+<li><p><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 得られるオイラー角回転値を再度クォータニオン化したときに
 元の符号と一致するように補正する。
 不適切な場合に <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reverseDirection</span></code></a> することと等しい。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -365,8 +365,8 @@ True を指定すると捻ってから曲げる分解になる。</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 得たい回転オーダー。</p></li>
-<li><p><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 得られるオイラー角回転値を再度クォータニオン化したときに
+<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- 得たい回転オーダー。</p></li>
+<li><p><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 得られるオイラー角回転値を再度クォータニオン化したときに
 元の符号と一致するように補正する。
 不適切な場合に <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reverseDirection</span></code></a> することと等しい。</p></li>
 </ul>
@@ -440,7 +440,7 @@ reverse オプションはない。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
 デフォルトでは、階層上位から見て曲げてから捻るが、
 True を指定すると捻ってから曲げる分解になる。</p></li>
 <li><p><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- ボーン方向ベクトル。</p></li>
@@ -463,7 +463,7 @@ True を指定すると捻ってから曲げる分解になる。</p></li>
 <li><p><strong>axisOri</strong> -- 基準軸を回転（クォータニオン）で指定する。
 その空間のX軸がボーン方向、Y軸がアップ方向に相当する。
 デフォルトの None は単位クォータニオンと同じである。</p></li>
-<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
 デフォルトでは、階層上位から見て曲げてから捻るが、
 True を指定すると捻ってから曲げる分解になる。</p></li>
 </ul>
@@ -532,7 +532,7 @@ True を指定すると捻ってから曲げる分解になる。</p></li>
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 分母のクォータニオン。</p></li>
-<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- ゼロ除算を避ける為の許容誤差。</p></li>
+<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- ゼロ除算を避ける為の許容誤差。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -550,7 +550,7 @@ True を指定すると捻ってから曲げる分解になる。</p></li>
 <dd class="field-odd"><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- もう一方のクォータニオン。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -574,7 +574,7 @@ True を指定すると捻ってから曲げる分解になる。</p></li>
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>vec</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 3次元ベクトル</p></li>
-<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- w値</p></li>
+<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- w値</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -591,7 +591,7 @@ True を指定すると捻ってから曲げる分解になる。</p></li>
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 分母のクォータニオン。</p></li>
-<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- ゼロ除算を避ける為の許容誤差。</p></li>
+<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- ゼロ除算を避ける為の許容誤差。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -646,11 +646,11 @@ True を指定すると捻ってから曲げる分解になる。</p></li>
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 比較するクォータニオン。</p></li>
-<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 許容誤差。</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- 許容誤差。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -670,10 +670,10 @@ True を指定すると捻ってから曲げる分解になる。</p></li>
 <p>単位クォータニオンと <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSignedEquivalent</span></code></a> で比較することと等しい。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 許容誤差。</p>
+<dd class="field-odd"><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- 許容誤差。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -688,11 +688,11 @@ True を指定すると捻ってから曲げる分解になる。</p></li>
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 比較するクォータニオン。</p></li>
-<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 許容誤差。</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- 許容誤差。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -703,7 +703,7 @@ True を指定すると捻ってから曲げる分解になる。</p></li>
 <dd><p>クォータニオンの絶対値を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -714,7 +714,7 @@ True を指定すると捻ってから曲げる分解になる。</p></li>
 <dd><p>クォータニオンの絶対値の2乗を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -750,7 +750,7 @@ True を指定すると捻ってから曲げる分解になる。</p></li>
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>rhv</strong> -- [roll, bendH, bendV]</p></li>
-<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
 デフォルトでは、階層上位から見て曲げてから捻るが、
 True を指定すると捻ってから曲げる合成になる。</p></li>
 <li><p><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- ボーン方向ベクトル。</p></li>
@@ -774,7 +774,7 @@ True を指定すると捻ってから曲げる合成になる。</p></li>
 <li><p><strong>axisOri</strong> -- 基準軸を回転（クォータニオン）で指定する。
 その空間のX軸がボーン方向、Y軸がアップ方向に相当する。
 デフォルトの None は単位クォータニオンと同じである。</p></li>
-<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 曲げ・捻りの順番を反転するかどうか。
 デフォルトでは、階層上位から見て曲げてから捻るが、
 True を指定すると捻ってから曲げる合成になる。</p></li>
 </ul>
@@ -884,8 +884,8 @@ True を指定すると捻ってから曲げる合成になる。</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>theta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 角度。</p></li>
-<li><p><strong>correctAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 現在の w が負
+<li><p><strong>theta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- 角度。</p></li>
+<li><p><strong>correctAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 現在の w が負
 （πより大きい回転角度を持っている）
 なら、軸を反転補正させた上での角度をセットする。</p></li>
 </ul>
@@ -913,7 +913,7 @@ True を指定すると捻ってから曲げる合成になる。</p></li>
 <dd><p>X軸回りの回転角度をセットする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 角度。</p>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- 角度。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
@@ -927,7 +927,7 @@ True を指定すると捻ってから曲げる合成になる。</p></li>
 <dd><p>Y軸回りの回転角度をセットする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 角度。</p>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- 角度。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
@@ -941,7 +941,7 @@ True を指定すると捻ってから曲げる合成になる。</p></li>
 <dd><p>Z軸回りの回転角度をセットする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 角度。</p>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- 角度。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
@@ -979,7 +979,7 @@ True を指定すると捻ってから曲げる合成になる。</p></li>
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>vec</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) -- 3次元ベクトル</p></li>
-<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- w値</p></li>
+<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- w値</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -997,8 +997,8 @@ True を指定すると捻ってから曲げる合成になる。</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>p</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 始点クォータニオン。</p></li>
 <li><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 終点クォータニオン。</p></li>
-<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 0.0～1.0の補間係数。範囲外も指定可。</p></li>
-<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- スピン値。
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- 0.0～1.0の補間係数。範囲外も指定可。</p></li>
+<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- スピン値。
 デフォルトの0は最短方向、-1は逆方向、
 さらに+1や-1すると余分に周回する。</p></li>
 </ul>
@@ -1016,8 +1016,8 @@ True を指定すると捻ってから曲げる合成になる。</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 0.0～1.0の補間係数。範囲外も指定可。</p></li>
-<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- スピン値。
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- 0.0～1.0の補間係数。範囲外も指定可。</p></li>
+<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- スピン値。
 デフォルトの0は正方向、-1は逆方向、
 さらに+1や-1すると余分に周回する。</p></li>
 </ul>
@@ -1039,8 +1039,8 @@ True を指定すると捻ってから曲げる合成になる。</p></li>
 <li><p><strong>a</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 始点側の制御点。</p></li>
 <li><p><strong>b</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 終点側の制御点。</p></li>
 <li><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) -- 終点クォータニオン。</p></li>
-<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 0.0～1.0の補間係数。範囲外も指定可。</p></li>
-<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- スピン値。
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) -- 0.0～1.0の補間係数。範囲外も指定可。</p></li>
+<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- スピン値。
 デフォルトの0は正方向、-1は逆方向、
 さらに+1や-1すると余分に周回する。</p></li>
 </ul>
@@ -1197,7 +1197,7 @@ True を指定すると捻ってから曲げる合成になる。</p></li>
         <li class="right" >
           <a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html" title="class cymel.core.datatypes.quaternion.ImmutableQuaternion"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" >cymel.core.datatypes.quaternion</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.quaternion.Quaternion</a></li> 

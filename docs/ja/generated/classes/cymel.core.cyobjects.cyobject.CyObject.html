@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.cyobjects.cyobject.CyObject &#8212; cymel 0.25.2024062500 ドキュメント</title>
+    <title>class cymel.core.cyobjects.cyobject.CyObject &#8212; cymel 0.27.2024101300 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.cyobject.html" title="cymel.core.cyobjects.cyobject"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.cyobject.html" accesskey="U">cymel.core.cyobjects.cyobject</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.cyobject.CyObject</a></li> 
@@ -54,7 +54,7 @@
 </map><dl class="py class">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.cyobject.</span></span><span class="sig-name descname"><span class="pre">CyObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Mayaラッパーオブジェクトの抽象基底クラス。</p>
 <p>ラッパークラスは、大きく分けて
 <a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a> と <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> とがある。</p>
@@ -134,14 +134,14 @@ Python API 2.0 オブジェクトを指定することで、
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>val</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code>) -- 単一の UUID かそのリスト。
-個々の UUID の型は <code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code> か <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> を指定できる。</p></li>
+個々の UUID の型は <code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code> か <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> を指定できる。</p></li>
 <li><p><strong>candidates</strong> (<em>iterable</em>) -- py=True の場合の候補を事前に絞りたい場合に指定する。</p></li>
-<li><p><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- Maya 標準機能ではなく uuid というアトリビュートに保存されているものから得る。
+<li><p><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- Maya 標準機能ではなく uuid というアトリビュートに保存されているものから得る。
 2016 未満では常に True 扱いとなる。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -180,7 +180,7 @@ Python API 2.0 オブジェクトを指定することで、
 <p>これは、 <a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass" title="cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGlobalPlugClass</span></code></a> で変更可能。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -203,7 +203,7 @@ Python API 2.0 オブジェクトを指定することで、
 <p>オブジェクトが削除されていても、undo可能な状態で残っていれば真となる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -215,7 +215,7 @@ Python API 2.0 オブジェクトを指定することで、
 <p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.isAlive" title="cymel.core.cyobjects.cyobject.CyObject.isAlive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAlive</span></code></a> が真でも、オブジェクトが削除されている場合は無効と判断される。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -226,7 +226,7 @@ Python API 2.0 オブジェクトを指定することで、
 <dd><p><a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/ls.html">ls</a> コマンドの結果をクラスに適合するものに限定してオブジェクトとして得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -239,7 +239,7 @@ Python API 2.0 オブジェクトを指定することで、
 ノード名、DAGパーシャルパス名、それらを含むプラグ名などが得られる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -252,7 +252,7 @@ Python API 2.0 オブジェクトを指定することで、
 ノード名、DAGパーシャルパス名、それらを含むプラグ名などが得られる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -269,7 +269,7 @@ Python API 2.0 オブジェクトを指定することで、
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a>) -- 生成するインスタンスのクラス。</p></li>
+<li><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a>) -- 生成するインスタンスのクラス。</p></li>
 <li><p><strong>data</strong> -- インスタンスにセットする内部データ。</p></li>
 </ul>
 </dd>
@@ -296,7 +296,7 @@ Python API 2.0 オブジェクトを指定することで、
 <dd><p>グローバル設定のプラグクラスをセットする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><em>type</em></a>) -- <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> 派生クラス。
+<dd class="field-odd"><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.13)"><em>type</em></a>) -- <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> 派生クラス。
 None を指定するとクリアする。</p>
 </dd>
 </dl>
@@ -385,7 +385,7 @@ None を指定するとクリアする。</p>
         <li class="right" >
           <a href="../cymel.core.cyobjects.cyobject.html" title="cymel.core.cyobjects.cyobject"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.cyobject.html" >cymel.core.cyobjects.cyobject</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.cyobject.CyObject</a></li> 

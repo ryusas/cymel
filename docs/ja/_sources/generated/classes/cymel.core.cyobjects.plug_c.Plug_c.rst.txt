@@ -33,6 +33,7 @@ class cymel.core.cyobjects.plug_c.Plug_c
         childNames
         children
         connectedElement
+        connectedElementIndices
         connectedElements
         connections
         default
@@ -185,6 +186,7 @@ class cymel.core.cyobjects.plug_c.Plug_c
     .. automethod:: childNames
     .. automethod:: children
     .. automethod:: connectedElement
+    .. automethod:: connectedElementIndices
     .. automethod:: connectedElements
     .. automethod:: connections
     .. automethod:: default

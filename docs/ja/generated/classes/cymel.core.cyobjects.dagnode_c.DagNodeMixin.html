@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.cyobjects.dagnode_c.DagNodeMixin &#8212; cymel 0.25.2024062500 ドキュメント</title>
+    <title>class cymel.core.cyobjects.dagnode_c.DagNodeMixin &#8212; cymel 0.27.2024101300 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.dagnode_c.html" title="cymel.core.cyobjects.dagnode_c"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.dagnode_c.html" accesskey="U">cymel.core.cyobjects.dagnode_c</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.dagnode_c.DagNodeMixin</a></li> 
@@ -54,7 +54,7 @@
 </map><dl class="py class">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.dagnode_c.</span></span><span class="sig-name descname"><span class="pre">DagNodeMixin</span></span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p><a class="reference internal" href="cymel.core.cyobjects.dagnode.DagNode.html#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a> クラスでサポートする機能の中核。</p>
 <p class="rubric">Methods:</p>
 <table class="autosummary longtable docutils align-default">
@@ -225,7 +225,7 @@
 <p>自身がルートノードなら同じ参照が返される。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -236,7 +236,7 @@
 <dd><p>バウンディングボックスを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p>
+<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.boundingbox.BoundingBox.html#cymel.core.datatypes.boundingbox.BoundingBox" title="cymel.core.datatypes.boundingbox.BoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundingBox</span></code></a></p>
@@ -253,12 +253,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- インデックス。
+<li><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- インデックス。
 shapes や intermediates オプションによって、
 同じインデックスでも得られるものが変わることがある。
 無効なインデックスを指定するとエラーではなく None となる。</p></li>
-<li><p><strong>shapes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- シェイプも含めるかどうか。</p></li>
-<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- shapes=True のとき、さらに
+<li><p><strong>shapes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- シェイプも含めるかどうか。</p></li>
+<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- shapes=True のとき、さらに
 インターミディエイトオブジェクトも含めるかどうか。</p></li>
 </ul>
 </dd>
@@ -277,13 +277,13 @@ shapes や intermediates オプションによって、
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>shapes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- シェイプも含めるかどうか。</p></li>
-<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- shapes=True のとき、さらに
+<li><p><strong>shapes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- シェイプも含めるかどうか。</p></li>
+<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- shapes=True のとき、さらに
 インターミディエイトオブジェクトも含めるかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -294,7 +294,7 @@ shapes や intermediates オプションによって、
 <dd><p>フルパス名を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -306,7 +306,7 @@ shapes や intermediates オプションによって、
 <p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getQuaternion</span></code></a> の r=False 指定と同じ。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p>
+<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
@@ -327,9 +327,9 @@ shapes や intermediates オプションによって、
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p></li>
-<li><p><strong>p</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 親のマトリックスを得るかどうか。</p></li>
-<li><p><strong>inv</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 逆行列を得るかどうか。</p></li>
+<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p></li>
+<li><p><strong>p</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 親のマトリックスを得るかどうか。</p></li>
+<li><p><strong>inv</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 逆行列を得るかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -359,10 +359,10 @@ inverseScale の影響は無視される。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p></li>
-<li><p><strong>ra</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- rotateAxis を含めるかどうか。</p></li>
-<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- rotate を含めるかどうか。</p></li>
-<li><p><strong>jo</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- jointOrient を含めるかどうか。</p></li>
+<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p></li>
+<li><p><strong>ra</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- rotateAxis を含めるかどうか。</p></li>
+<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- rotate を含めるかどうか。</p></li>
+<li><p><strong>jo</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- jointOrient を含めるかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -412,7 +412,7 @@ segmentScaleCompensate で常に非一様 scale が打ち消されていれば�
 inverseScale の影響は無視される。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p>
+<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
@@ -436,7 +436,7 @@ inverseScale の影響は無視される。</p>
 inverseScale の影響は無視される。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p>
+<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
@@ -459,7 +459,7 @@ inverseScale の影響は無視される。</p>
 オプションでワールドスペースの値を得ることもできる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p>
+<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.transformation.Transformation.html#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a></p>
@@ -478,8 +478,8 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p></li>
-<li><p><strong>at</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- <p>どのアトリビュートに相当する位置を得るか。</p>
+<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- ワールド空間で得るかどうか。</p></li>
+<li><p><strong>at</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- <p>どのアトリビュートに相当する位置を得るか。</p>
 <ul>
 <li><p>0 だとローカル原点（親の matrix 位置）。</p></li>
 <li><p>1 だと translate の位置。</p></li>
@@ -508,7 +508,7 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd><p>シェイプ下にアンダーワールドノード（カーブオンサーフェース等）を持つかどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -519,7 +519,7 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd><p>アンダーワールド（カーブオンサーフェース等）かどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -530,7 +530,7 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd><p>インスタンス番号からインスタンスを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- インスタンス番号。</p>
+<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- インスタンス番号。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="cymel.core.cyobjects.dagnode.DagNode.html#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a> or None</p>
@@ -544,7 +544,7 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd><p>インスタンス番号を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -561,10 +561,10 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd><p>インスタンスのリストを返す。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>noSelf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 自身を含めないようにする。</p>
+<dd class="field-odd"><p><strong>noSelf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 自身を含めないようにする。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -580,11 +580,11 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>node</strong> (<a class="reference internal" href="cymel.core.cyobjects.dagnode.DagNode.html#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a>) -- チェックするノード。</p></li>
 <li><p><strong>exact</strong> -- インスタンス関係は考慮せず、DAGパスに沿った判定のみとするかどうか。</p></li>
-<li><p><strong>underWorld</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- アンダーワールド（カーブオンサーフェース）の親シェイプも判定する。</p></li>
+<li><p><strong>underWorld</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- アンダーワールド（カーブオンサーフェース）の親シェイプも判定する。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -595,7 +595,7 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd><p>インスタンス可能かどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -606,10 +606,10 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd><p>インスタンスされているかどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>indirect</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 直接インスタンス化されたポイント以外も含めるかどうか。</p>
+<dd class="field-odd"><p><strong>indirect</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 直接インスタンス化されたポイント以外も含めるかどうか。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -620,7 +620,7 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd><p>インターミディエイトオブジェクトかどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -636,11 +636,11 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>node</strong> (<a class="reference internal" href="cymel.core.cyobjects.dagnode.DagNode.html#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a>) -- チェックするノード。</p></li>
 <li><p><strong>exact</strong> -- インスタンス関係は考慮せず、DAGパスに沿った判定のみとするかどうか。</p></li>
-<li><p><strong>underWorld</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- アンダーワールド（カーブオンサーフェース）の親シェイプも判定する。</p></li>
+<li><p><strong>underWorld</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- アンダーワールド（カーブオンサーフェース）の親シェイプも判定する。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -651,7 +651,7 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd><p>ルートノードかどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -662,7 +662,7 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd><p>テンプレート化されているかどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -673,7 +673,7 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd><p>可視性を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -686,7 +686,7 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 下ることはされない。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -697,7 +697,7 @@ Maya の機能（Local Axis 表示位置やコンストレイン）が
 <dd><p>DAGパスを構成するノード数と、兄弟インデックスリストのペアを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p>(int, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>)</p>
+<dd class="field-odd"><p>(int, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>)</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -716,13 +716,13 @@ DAG階層の幅優先ソートとなる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>shapes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- シェイプも含めるかどうか。</p></li>
-<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- shapes=True のとき、さらに
+<li><p><strong>shapes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- シェイプも含めるかどうか。</p></li>
+<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- shapes=True のとき、さらに
 インターミディエイトオブジェクトも含めるかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -733,10 +733,10 @@ DAG階層の幅優先ソートとなる。</p>
 <dd><p>インスタンス数を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>indirect</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 直接インスタンス化されたポイント以外も含めるかどうか。</p>
+<dd class="field-odd"><p><strong>indirect</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- 直接インスタンス化されたポイント以外も含めるかどうか。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -747,10 +747,10 @@ DAG階層の幅優先ソートとなる。</p>
 <dd><p>このノードインスタンスを子に持つ親ノードの数を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>indirect</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- インスタンスポイント以外も含まれる親のパス全てを得る。</p>
+<dd class="field-odd"><p><strong>indirect</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- インスタンスポイント以外も含まれる親のパス全てを得る。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -761,10 +761,10 @@ DAG階層の幅優先ソートとなる。</p>
 <dd><p><a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> の持つ <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/shape.html">shape</a> ノード数を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- インターミディエイトオブジェクトも含めるかどうか。</p>
+<dd class="field-odd"><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- インターミディエイトオブジェクトも含めるかどうか。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -775,7 +775,7 @@ DAG階層の幅優先ソートとなる。</p>
 <dd><p>設定されているオブジェクトカラーを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -788,7 +788,7 @@ DAG階層の幅優先ソートとなる。</p>
 親シェイプを得ることもできる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 遡るノード数。
+<dd class="field-odd"><p><strong>step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- 遡るノード数。
 API の <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MDagPath.html">MDagPath</a> の pop とは異なり、
 カーブオンサーフェースと親シェイプとの間に存在する
 シーン上では見えない『ワールド』ノードはカウントしない。</p>
@@ -818,10 +818,10 @@ API の <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013
 <dd><p>このノードインスタンスを子に持つ親ノードのリストを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>indirect</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- インスタンスポイント以外も含まれる親のパス全てを得る。</p>
+<dd class="field-odd"><p><strong>indirect</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- インスタンスポイント以外も含まれる親のパス全てを得る。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -833,7 +833,7 @@ API の <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013
 <p><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.name" title="cymel.core.cyobjects.cyobject.CyObject.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a> と同じ。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -847,7 +847,7 @@ API の <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013
 API の <a class="reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MDagPath.html">MDagPath</a> の length() とは異なる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -883,14 +883,14 @@ DAG階層の兄弟順保証無しの幅優先ソートとなる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- <p>得たいシェイプのインデックス。
+<li><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- <p>得たいシェイプのインデックス。
 自身がシェイプの場合は無視される。</p>
 <p>intermediates オプションによって、
 同じインデックスでも得られるものが変わることがある。
 無効なインデックスを指定するとエラーではなく None となる。</p>
 <p>Python的な負のインデックスも指定可能。</p>
 </p></li>
-<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- インターミディエイトオブジェクトも含めるかどうか。</p></li>
+<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- インターミディエイトオブジェクトも含めるかどうか。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
@@ -905,10 +905,10 @@ DAG階層の兄弟順保証無しの幅優先ソートとなる。</p>
 <dd><p><a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> の持つ <a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/shape.html">shape</a> ノードのリストを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- インターミディエイトオブジェクトも含めるかどうか。</p>
+<dd class="field-odd"><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) -- インターミディエイトオブジェクトも含めるかどうか。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -919,7 +919,7 @@ DAG階層の兄弟順保証無しの幅優先ソートとなる。</p>
 <dd><p>兄弟におけるインデックスを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -930,7 +930,7 @@ DAG階層の兄弟順保証無しの幅優先ソートとなる。</p>
 <dd><p>DAGパス中の全ノードの兄弟インデックスリストを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -948,7 +948,7 @@ DAG階層の深さ優先ソートとなる。</p>
 <dd><p>自分以外の兄弟ノードのリストを返す。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -974,7 +974,7 @@ DAG階層の深さ優先ソートとなる。</p>
 <dd><p>シェイプ下のアンダーワールドノード（カーブオンサーフェース等）のリストを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -985,7 +985,7 @@ DAG階層の深さ優先ソートとなる。</p>
 <dd><p>オブジェクトカラーが使用される設定になっているかどうか。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1111,7 +1111,7 @@ DAG階層の深さ優先ソートとなる。</p>
         <li class="right" >
           <a href="../cymel.core.cyobjects.dagnode_c.html" title="cymel.core.cyobjects.dagnode_c"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.25.2024062500 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.dagnode_c.html" >cymel.core.cyobjects.dagnode_c</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.dagnode_c.DagNodeMixin</a></li> 
