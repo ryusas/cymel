@@ -13,6 +13,7 @@ from ._api2attrname import (
     IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES,
     findMAttrToGetInferiorPlug as _findMAttrToGetInferiorPlug,
     isAncestorAttrOf as _isAncestorAttrOf,
+    _MayaAPI2RuntimeError,
 )
 from .cyobject import (
     CyObject,
@@ -903,7 +904,7 @@ class Plug_c(CyObject):
         if not thisMPlug.isArray:
             try:
                 mplug = thisMPlug.child(mattr)
-            except RuntimeError:
+            except _MayaAPI2RuntimeError:
                 pass
             else:
                 # 子が得られない場合、エラーではなく同じ MPlug になるようだ。

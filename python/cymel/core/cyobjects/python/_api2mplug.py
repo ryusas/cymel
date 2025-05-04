@@ -8,6 +8,7 @@ from __future__ import print_function
 
 from ...common import *
 from ..datatypes import Matrix, Transformation
+from ._api2attrname import _MayaAPI2RuntimeError
 import maya.api.OpenMaya as _api2
 import maya.OpenMaya as _api1
 
@@ -580,7 +581,7 @@ if (2016,) <= MAYA_VERSION < (2016, 5):
     def _mplug_get_generic(mplug):
         try:
             mobj = _2_MPlug(mplug).asMObject()
-        except RuntimeError:
+        except _MayaAPI2RuntimeError:
             try:
                 return _2_MPlug(mplug).asDouble()
             except:
@@ -601,7 +602,7 @@ else:
         """
         try:
             mobj = mplug.asMObject()
-        except RuntimeError:
+        except _MayaAPI2RuntimeError:
             try:
                 return mplug.asDouble()
             except:

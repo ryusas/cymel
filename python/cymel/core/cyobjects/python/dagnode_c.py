@@ -7,7 +7,7 @@ from __future__ import division
 from __future__ import print_function
 
 from ...common import *
-from ._api2attrname import IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES
+from ._api2attrname import IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES, _MayaAPI2RuntimeError
 from .cyobject import _newNodeObjByMPath
 from .objectref import _getObjectRef
 from ._api2mplug import mplug_get_nums, mplug_get_xformmatrix
@@ -866,7 +866,7 @@ class DagNodeMixin(object):
         mpath = _2_MDagPath(self._CyObject__data['mpath'])
         try:
             mpath.pop()
-        except RuntimeError:
+        except _MayaAPI2RuntimeError:
             return
 
         # キャッシュが在ればそれを再利用、無ければ新規生成する。

@@ -23,6 +23,7 @@ from ._api2attrname import (
     findComplexMPlug as _findComplexMPlug,
     argToFindComplexMPlug as _argToFindComplexMPlug,
     IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES,
+    _MayaAPI2RuntimeError, _MayaAPI2Errors,
 )
 import maya.api.OpenMaya as _api2
 import maya.OpenMaya as _api1
@@ -867,19 +868,19 @@ def _anyClsObjByName(cls, name):
         mplug = _findComplexMPlug(mfn, argToFind)
 
     # 得られなかったらシェイプからの取得も試みる。
-    except RuntimeError:
+    except _MayaAPI2Errors:
         if not mnode.hasFn(_MFn_kTransform):
             raise KeyError('not exist: ' + name)
         try:
             mpath.extendToShape()
-        except RuntimeError:
+        except _MayaAPI2RuntimeError:
             raise KeyError('not exist: ' + name)
 
         mnode = mpath.node()
         mfn = _mnodeFn(mpath, mnode)
         try:
             mplug = _findComplexMPlug(mfn, argToFind)
-        except RuntimeError:
+        except _MayaAPI2Errors:
             raise KeyError('not exist: ' + name)
         #nodename = mpath.partialPathName()
 

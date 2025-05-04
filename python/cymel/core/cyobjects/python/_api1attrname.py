@@ -18,6 +18,33 @@ IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES = hasattr(_MFnAttribute, 'isEnforcingUniqueN
 
 _HEAD_DOTS_sub = re.compile('^\.+').sub
 
+#------------------------------------------------------------------------------
+# FIX: Maya2026 UnicodeDecodeError Bug
+#
+# Maya 2026 日本語UI 時の API2 のエラーが軒並み UnicodeDecodeError になってしまうバグの対策。
+# API1 のエラーは日本語になっていても問題ない。
+# 特定のメソッドに限らず、日本語のメッセージを出すものは全てそうなっているようなので、根本的に全てを対策するのは難しく、
+# API2 を使うプログラム全体に波及する問題で、範囲を絞りきれないため、
+# 各所の excet でエラーを明示するのをできるだけやめるか、明示する場合は以下の _MayaAPI2RuntimeError か _MayaAPI2Errors を使う。
+#
+# - _MayaAPI2RuntimeError ... API2がraiseするRuntimeError相当の型。Maya2026のバグが考慮されて切り替わる。
+# - _MayaAPI2Errors ... API2と混在した周辺スクリプトがraiseするRuntimeError相当の型、またはそれらのtuple。
+#
+# ちなみに findPlug() は API1 と API2 で挙動が同じなので、関数を共有しているため _CommonApiError を使用しているが、
+# attribute() は API1 では RuntimeError だが API2 では Null MObject を返す仕様なため共有していないため問題ない。
+#
+_MayaAPI2RuntimeError = RuntimeError
+try:
+    if _api.MGlobal.apiVersion() >= 20260000 and not _api.MGlobal.isDefaultLanguage():
+        _MayaAPI2RuntimeError = UnicodeDecodeError
+except:
+    pass
+if _MayaAPI2RuntimeError is RuntimeError:
+    _CommonApiError = _MayaAPI2RuntimeError
+else:
+    _CommonApiError = (_MayaAPI2RuntimeError, RuntimeError)
+_MayaAPI2Errors = _CommonApiError
+
 
 #------------------------------------------------------------------------------
 def argToFindComplexMPlug(attrPathTkns):
@@ -54,7 +81,7 @@ if IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES:
     def findMPlugAsNodeAttr(mfnnode, name):
         try:
             return mfnnode.findPlug(name, False)
-        except RuntimeError:
+        except _CommonApiError:
             return mfnnode.findPlug('.' + name, False)
 
     findMPlugAsNodeAttr.__doc__ = __findMPlugAsNodeAttr.__doc__
@@ -84,14 +111,14 @@ if IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES:
         if not name.startswith('.'):
             try:
                 return mfnnode.findPlug(name, wantNetworked)
-            except RuntimeError:
+            except _CommonApiError:
                 return mfnnode.findPlug('.' + name, wantNetworked)
         elif strict:
             return mfnnode.findPlug(name, wantNetworked)
         else:
             try:
                 return mfnnode.findPlug(name, wantNetworked)
-            except RuntimeError:
+            except _CommonApiError:
                 return mfnnode.findPlug(_HEAD_DOTS_sub('', name), wantNetworked)
 
     findMPlug.__doc__ = __findMPlug.__doc__
@@ -100,7 +127,7 @@ if IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES:
 #------------------------------------------------------------------------------
 def findMAttr(mfnnode, attrTkns, i=-1, strict=False):
     u"""
-    【API 1 2 兼用】argToFindComplexMPlug で分解したパス（インデックス指定で途中までの解釈も可能）からアトリビュート MObject を得る。
+    argToFindComplexMPlug で分解したパス（インデックス指定で途中までの解釈も可能）からアトリビュート MObject を得る。
 
       * 2025以降では、パス指定に基づいて取得される。
         先頭ドットを省略した場合はトップレベルが優先される（先頭ドット無しで得られない場合は、先頭ドットを付けて再取得が試みられる）。
@@ -108,6 +135,8 @@ def findMAttr(mfnnode, attrTkns, i=-1, strict=False):
 
       * 2024以前では、末尾でのみ取得されるだけでパスのチェックはされない。
         strict フラグもここでは無視される。
+
+    得られない場合は RuntimeError になる（API2と異なる）。
     """
     return mfnnode.attribute(attrTkns[i][0])
 
@@ -146,14 +175,16 @@ def selectAncestorLogicalIndices(mplug, mfnnode, attrTkns, strict=False):
     inferior = None
     for i, (name, idx) in list(enumerate(attrTkns))[-2::-1]:
         if name:
-            mattr = findMAttr(mfnnode, attrTkns, i, True)
-            if mattr.isNull():
+            try:
+                mattr = findMAttr(mfnnode, attrTkns, i, True)
+            except RuntimeError:
                 if i:
                     raise RuntimeError()
                 refPlug = _findAliasMPlug(mfnnode, name, False)
                 if refPlug.isElement() and idx is not None:
                     raise RuntimeError()
                 _selectAncestorIndicesByMPlug(mplug, refPlug)
+
             if idx is not None:
                 mplug.selectAncestorLogicalIndex(idx, mattr)
 
@@ -178,14 +209,16 @@ if IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES:
     def selectAncestorLogicalIndices(mplug, mfnnode, attrTkns, strict=False):
         for i, (name, idx) in enumerate(attrTkns[:-1]):
             if name:
-                mattr = findMAttr(mfnnode, attrTkns, i, True)
-                if mattr.isNull():
+                try:
+                    mattr = findMAttr(mfnnode, attrTkns, i, True)
+                except RuntimeError:
                     if i:
                         raise RuntimeError()
                     refPlug = _findAliasMPlug(mfnnode, name, False)
                     if refPlug.isElement() and idx is not None:
                         raise RuntimeError()
                     _selectAncestorIndicesByMPlug(mplug, refPlug)
+
                 if idx is not None:
                     mplug.selectAncestorLogicalIndex(idx, mattr)
 

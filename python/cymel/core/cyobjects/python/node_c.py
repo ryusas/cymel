@@ -18,6 +18,7 @@ from ._api2attrname import (
     findSimpleMPlug as _findSimpleMPlug,
     findComplexMPlug as _findComplexMPlug,
     argToFindComplexMPlug as _argToFindComplexMPlug,
+    _MayaAPI2RuntimeError, _MayaAPI2Errors,
 )
 from .cyobject import (
     CyObject,
@@ -730,13 +731,13 @@ class Node_c(CyObject):
         argToFind = _argToFindComplexMPlug(name.split('.'))
         try:
             mplug = _findComplexMPlug(self._CyObject__data['mfn'], argToFind, False, strict)
-        except RuntimeError:
+        except _MayaAPI2Errors:
             if self.isTransform():
                 shape = self._shape()
                 if shape:
                     try:
                         mplug = _findComplexMPlug(shape._CyObject__data['mfn'], argToFind, False, strict)
-                    except RuntimeError:
+                    except _MayaAPI2Errors:
                         pass
                     else:
                         return _newNodePlug(pcls or shape.plugClass(), shape, mplug)
@@ -966,7 +967,7 @@ class Node_c(CyObject):
             mpath = _2_MDagPath(orig)
             try:
                 mpath.extendToShape(idx)
-            except RuntimeError:
+            except _MayaAPI2RuntimeError:
                 return
             return self.__getShapeWithCache(idx, None, mpath.node(), mpath)
 

@@ -13,13 +13,17 @@ from ._api1attrname import (
     IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES,
     findMPlugAsNodeAttr,
     findMPlug,
-    findMAttr,
     argToFindComplexMPlug,
     _HEAD_DOTS_sub,
+    _MayaAPI2RuntimeError, _MayaAPI2Errors,
 )
 import maya.api.OpenMaya as _api
 
 _MFnAttribute = _api.MFnAttribute
+
+
+# NOTE: mfn.attribute(name) は失敗すると Null MObject を返すが、2012以前では RuntimeError になる。
+# しかし、cymel python 実装は 2015 以降のサポートのため考慮しない。
 
 
 #------------------------------------------------------------------------------
@@ -27,17 +31,55 @@ def findMAttrToGetInferiorPlug(mfnnode, name, plug):
     u"""
     Plug の下位の MPlug を得るためのアトリビュート MObject を得る。
     2025以降はPlugのパスから下層のものとして取得されるが、2024以前は名前から取得されるだけで下層のものである保証はされない。
+
+    得られない場合もエラーにはならず Null の MObject が返される。
     """
-    return mfnnode.attribute(name)
+    return mfnnode.attribute(name)  # NOTE: Maya2012以前は要注意。
+
+__findMAttrToGetInferiorPlug = findMAttrToGetInferiorPlug
 
 
 if IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES:
-    __findMAttrToGetInferiorPlug = findMAttrToGetInferiorPlug
-
     def findMAttrToGetInferiorPlug(mfnnode, name, plug):
         return mfnnode.attribute(plug.mfn_().pathName() + '.' + name)  # 直接の子でなくても下位にあれば通る。
 
     findMAttrToGetInferiorPlug.__doc__ = __findMAttrToGetInferiorPlug.__doc__
+
+
+#------------------------------------------------------------------------------
+def findMAttr(mfnnode, attrTkns, i=-1, strict=False):
+    u"""
+    argToFindComplexMPlug で分解したパス（インデックス指定で途中までの解釈も可能）からアトリビュート MObject を得る。
+
+      * 2025以降では、パス指定に基づいて取得される。
+        先頭ドットを省略した場合はトップレベルが優先される（先頭ドット無しで得られない場合は、先頭ドットを付けて再取得が試みられる）。
+        strint=False ならば、先頭ドットが指定されてもトップレベル以外のユニーク名のアトリビュートを得られる。
+
+      * 2024以前では、末尾でのみ取得されるだけでパスのチェックはされない。
+        strict フラグもここでは無視される。
+
+    得られない場合もエラーにはならず Null の MObject が返される（API1と異なる）。
+    """
+    return mfnnode.attribute(attrTkns[i][0])  # NOTE: Maya2012以前は要注意。
+
+__findMAttr = findMAttr
+
+
+if IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES:
+    def findMAttr(mfnnode, attrTkns, i=-1, strict=False):
+        if i != -1:
+            attrTkns = attrTkns[:i + 1]
+        name = '.'.join([x[0] for x in attrTkns])
+        if not name.startswith('.'):
+            o = mfnnode.attribute(name)
+            return mfnnode.attribute('.' + name) if o.isNull() else o
+        elif strict:
+            return mfnnode.attribute(name)
+        else:
+            o = mfnnode.attribute(name)
+            return mfnnode.attribute(_HEAD_DOTS_sub('', name)) if o.isNull() else o
+
+    findMAttr.__doc__ = __findMAttr.__doc__
 
 
 #------------------------------------------------------------------------------
@@ -61,7 +103,7 @@ def hasNodeAttribute(mfnnode, name, alias=False, strict=False):
         return mfnnode.hasAttribute(name) or (alias and not mfnnode.findAlias(name).isNull())
 
     # 上位のパスのチェック。
-    mattr = mfnnode.attribute(name)
+    mattr = mfnnode.attribute(name)  # NOTE: Maya2012以前は要注意。
     if mattr.isNull():
         return False
     while tkns:
@@ -70,7 +112,7 @@ def hasNodeAttribute(mfnnode, name, alias=False, strict=False):
         if mattr.isNull():
             return not name and not tkns
 
-        parent = mfnnode.attribute(name)
+        parent = mfnnode.attribute(name)  # NOTE: Maya2012以前は要注意。
         if parent.isNull():
             if not alias or (tkns and (tkns[-1] or len(tkns) > 1)):
                 return False
@@ -131,7 +173,7 @@ def findNodeMAttr(mfnnode, name, alias=False, strict=False):
         name = _HEAD_DOTS_sub('', name)
     tkns = name.split('.')
     name = tkns.pop()
-    mattr = mfnnode.attribute(name)
+    mattr = mfnnode.attribute(name)  # NOTE: Maya2012以前は要注意。
     if not tkns:
         if not mattr.isNull():
             return mattr
@@ -152,7 +194,7 @@ def findNodeMAttr(mfnnode, name, alias=False, strict=False):
                 return mattr
             return
 
-        parent = mfnnode.attribute(name)
+        parent = mfnnode.attribute(name)  # NOTE: Maya2012以前は要注意。
         if parent.isNull():
             if not alias or (tkns and (tkns[-1] or len(tkns) > 1)):
                 return
@@ -270,7 +312,7 @@ def _selectAliasAttrAncestorIndices(mplug, mfnnode, aliasName, leafIdx=None, lea
     attrTkns = argToFindComplexMPlug(dict(mfnnode.getAliasList())[aliasName].split('.'))
     for i, (name, idx) in enumerate(attrTkns[:-1]):
         if name and idx is not None:
-            mplug.selectAncestorLogicalIndex(idx, findMAttr(mfnnode, attrTkns, i, True))
+            mplug.selectAncestorLogicalIndex(idx, __findMAttr(mfnnode, attrTkns, i, True))
     idx = attrTkns[-1][1]
     if idx is not None:
         if leafIdx is not None:
@@ -300,7 +342,7 @@ def findSimpleMPlug(mfnnode, name):
     """
     try:
         return findMPlugAsNodeAttr(mfnnode, name)
-    except RuntimeError:
+    except _MayaAPI2RuntimeError:
         mattr = mfnnode.findAlias(name)
         if not mattr.isNull():
             mplug = mfnnode.findPlug(mattr, False)
@@ -320,7 +362,7 @@ def findComplexMPlug(mfnnode, attrTkns, wantNetworked=False, strict=False):
         # 末尾のプラグを得る。2025以降ならこの時点でパスもチェックされる。
         mplug = findMPlug(mfnnode, attrTkns, wantNetworked, strict)
 
-    except RuntimeError:
+    except _MayaAPI2RuntimeError:
         # 上位が指定されている場合はエイリアス名ではない。
         if nTkns > 2 or (nTkns == 2 and attrTkns[0][0]):
             raise
