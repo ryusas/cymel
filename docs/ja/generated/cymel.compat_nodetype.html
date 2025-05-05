@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel.compat_nodetype &#8212; cymel 0.29.2025050600 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="class cymel.compat_nodetype.CompatNodeTypeMap" href="classes/cymel.compat_nodetype.CompatNodeTypeMap.html" />
+    <link rel="prev" title="cymel.all" href="cymel.all.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="classes/cymel.compat_nodetype.CompatNodeTypeMap.html" title="class cymel.compat_nodetype.CompatNodeTypeMap"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="cymel.all.html" title="cymel.all"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025050600 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.compat_nodetype</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-cymel.compat_nodetype">
+<span id="cymel-compat-nodetype"></span><h1>cymel.compat_nodetype<a class="headerlink" href="#module-cymel.compat_nodetype" title="この見出しへのパーマリンク">¶</a></h1>
+<p>Mayaバージョンによるノードタイプ名変更のサポート。</p>
+<p>新旧バージョン互換のために、そのバージョンでの正しい名前を得ることができる。</p>
+<p>唯一のインスタンス <code class="xref py py-obj docutils literal notranslate"><span class="pre">compat_nodetype_map</span></code> の属性アクセスという形で、
+Mayaノードタイプ名を指定することで、正しい名前の文字列を得られる。</p>
+<ul class="simple">
+<li><p>基本的には、変更後の新しい名前から、そのバージョンでの正しい名前を得られる</p></li>
+<li><p>ノードタイプ名が変更され、元の名前が別のノードに置き換えられたものを指定すると、
+新旧互換性が無いという意味で <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AttributeError" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeError</span></code></a> となる</p></li>
+<li><p>振る舞いの一貫性は欠くものの、
+ノードタイプ名が変更され、元の名前が廃止されたものを指定すると、
+新しい正しい名前を得られる。</p></li>
+<li><p>上記いずれにも当てはまらない場合は、指定したものがそのまま得られる。</p></li>
+</ul>
+<p class="rubric">Classes:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="classes/cymel.compat_nodetype.CompatNodeTypeMap.html#cymel.compat_nodetype.CompatNodeTypeMap" title="cymel.compat_nodetype.CompatNodeTypeMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CompatNodeTypeMap</span></code></a></p></td>
+<td><p>Mayaバージョンによるノードタイプ名変更に伴う新旧バージョン互換性確保のための名前変換器。</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Constants:</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.compat_nodetype.MAYA2026_DELETED_TYPENAMES">
+<span class="sig-prename descclassname"><span class="pre">cymel.compat_nodetype.</span></span><span class="sig-name descname"><span class="pre">MAYA2026_DELETED_TYPENAMES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">frozenset({'addDoubleLinear',</span> <span class="pre">'multDoubleLinear',</span> <span class="pre">'pointMatrixMult'})</span></em><a class="headerlink" href="#cymel.compat_nodetype.MAYA2026_DELETED_TYPENAMES" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Maya 2026 で廃止されたノードタイプ名のセット。</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.compat_nodetype.MAYA2026_DL_TO_OLD">
+<span class="sig-prename descclassname"><span class="pre">cymel.compat_nodetype.</span></span><span class="sig-name descname"><span class="pre">MAYA2026_DL_TO_OLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'absoluteDL':</span> <span class="pre">'absolute',</span> <span class="pre">'acosDL':</span> <span class="pre">'acos',</span> <span class="pre">'addDL':</span> <span class="pre">'addDoubleLinear',</span> <span class="pre">'angleBetweenDL':</span> <span class="pre">'angleBetween',</span> <span class="pre">'asinDL':</span> <span class="pre">'asin',</span> <span class="pre">'atan2DL':</span> <span class="pre">'atan2',</span> <span class="pre">'atanDL':</span> <span class="pre">'atan',</span> <span class="pre">'averageDL':</span> <span class="pre">'average',</span> <span class="pre">'axisFromMatrixDL':</span> <span class="pre">'axisFromMatrix',</span> <span class="pre">'ceilDL':</span> <span class="pre">'ceil',</span> <span class="pre">'clampRangeDL':</span> <span class="pre">'clampRange',</span> <span class="pre">'columnFromMatrixDL':</span> <span class="pre">'columnFromMatrix',</span> <span class="pre">'cosDL':</span> <span class="pre">'cos',</span> <span class="pre">'crossProductDL':</span> <span class="pre">'crossProduct',</span> <span class="pre">'determinantDL':</span> <span class="pre">'determinant',</span> <span class="pre">'distanceBetweenDL':</span> <span class="pre">'distanceBetween',</span> <span class="pre">'divideDL':</span> <span class="pre">'divide',</span> <span class="pre">'dotProductDL':</span> <span class="pre">'dotProduct',</span> <span class="pre">'equalDL':</span> <span class="pre">'equal',</span> <span class="pre">'floorDL':</span> <span class="pre">'floor',</span> <span class="pre">'greaterThanDL':</span> <span class="pre">'greaterThan',</span> <span class="pre">'inverseLerpDL':</span> <span class="pre">'inverseLerp',</span> <span class="pre">'lengthDL':</span> <span class="pre">'length',</span> <span class="pre">'lerpDL':</span> <span class="pre">'lerp',</span> <span class="pre">'lessThanDL':</span> <span class="pre">'lessThan',</span> <span class="pre">'logDL':</span> <span class="pre">'log',</span> <span class="pre">'maxDL':</span> <span class="pre">'max',</span> <span class="pre">'minDL':</span> <span class="pre">'min',</span> <span class="pre">'moduloDL':</span> <span class="pre">'modulo',</span> <span class="pre">'multDL':</span> <span class="pre">'multDoubleLinear',</span> <span class="pre">'multiplyDL':</span> <span class="pre">'multiply',</span> <span class="pre">'multiplyPointByMatrixDL':</span> <span class="pre">'multiplyPointByMatrix',</span> <span class="pre">'multiplyVectorByMatrixDL':</span> <span class="pre">'multiplyVectorByMatrix',</span> <span class="pre">'negateDL':</span> <span class="pre">'negate',</span> <span class="pre">'normalizeDL':</span> <span class="pre">'normalize',</span> <span class="pre">'pointMatrixMultDL':</span> <span class="pre">'pointMatrixMult',</span> <span class="pre">'powerDL':</span> <span class="pre">'power',</span> <span class="pre">'rotateVectorDL':</span> <span class="pre">'rotateVector',</span> <span class="pre">'roundDL':</span> <span class="pre">'round',</span> <span class="pre">'rowFromMatrixDL':</span> <span class="pre">'rowFromMatrix',</span> <span class="pre">'scaleFromMatrixDL':</span> <span class="pre">'scaleFromMatrix',</span> <span class="pre">'sinDL':</span> <span class="pre">'sin',</span> <span class="pre">'smoothStepDL':</span> <span class="pre">'smoothStep',</span> <span class="pre">'subtractDL':</span> <span class="pre">'subtract',</span> <span class="pre">'sumDL':</span> <span class="pre">'sum',</span> <span class="pre">'tanDL':</span> <span class="pre">'tan',</span> <span class="pre">'translationFromMatrixDL':</span> <span class="pre">'translationFromMatrix',</span> <span class="pre">'truncateDL':</span> <span class="pre">'truncate'}</span></em><a class="headerlink" href="#cymel.compat_nodetype.MAYA2026_DL_TO_OLD" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Maya 2026 の DL ノードタイプ名から旧タイプ名への辞書。</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel.compat_nodetype</a><ul>
+<li><a class="reference internal" href="#cymel.compat_nodetype.MAYA2026_DELETED_TYPENAMES"><code class="docutils literal notranslate"><span class="pre">MAYA2026_DELETED_TYPENAMES</span></code></a></li>
+<li><a class="reference internal" href="#cymel.compat_nodetype.MAYA2026_DL_TO_OLD"><code class="docutils literal notranslate"><span class="pre">MAYA2026_DL_TO_OLD</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="cymel.all.html"
+                          title="前の章へ">cymel.all</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="classes/cymel.compat_nodetype.CompatNodeTypeMap.html"
+                          title="次の章へ">class cymel.compat_nodetype.CompatNodeTypeMap</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.compat_nodetype.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="classes/cymel.compat_nodetype.CompatNodeTypeMap.html" title="class cymel.compat_nodetype.CompatNodeTypeMap"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="cymel.all.html" title="cymel.all"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025050600 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.compat_nodetype</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020-2025, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
+    </div>
+  </body>
+</html>

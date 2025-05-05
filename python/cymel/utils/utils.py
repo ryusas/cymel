@@ -7,10 +7,13 @@ from __future__ import division
 from __future__ import print_function
 
 from ..common import *
+from ..compat_nodetype import compat_nodetype_map
 import maya.api.OpenMaya as _api2
 import maya.OpenMaya as _api1
 
 __all__ = [
+    'createNode',
+
     'correctNodeName',
     'correctNodeNameNS',
     'escapeForMel',
@@ -25,6 +28,7 @@ __all__ = [
     'listEnum',
 ]
 
+_createNode = cmds.createNode
 _pluginInfo = cmds.pluginInfo
 _affects = cmds.affects
 _attributeQuery = cmds.attributeQuery
@@ -34,6 +38,36 @@ _2_MSelectionList = _api2.MSelectionList
 _2_MPlug = _api2.MPlug
 
 _api1_executeCommand = _api1.MGlobal.executeCommand
+
+_cntm_correctName = compat_nodetype_map.correctName
+_cntm_futureName = compat_nodetype_map.futureName
+
+_CyObject = None
+
+
+#------------------------------------------------------------------------------
+def createNode(nodetype, **kwargs):
+    u"""
+    ノードを生成する。
+
+    :mayacmd:`createNode` コマンドの置き換えとして機能する。
+
+    `~.compat_nodetype` による新旧バージョン互換のためのノードタイプ名置換がされつつ、
+    `~.CyObject` が返される。
+    """
+    global _CyObject
+    if not _CyObject:
+        from ..core import CyObject as _CyObject
+
+    instead = _cntm_futureName(nodetype)
+    compat = _cntm_correctName(nodetype)
+    if not compat:
+        warning('Not compatible node type name between old and new versions: %s (use %s instead)' % (nodetype, instead))
+        compat = nodetype
+
+    if 'name' not in kwargs and 'n' not in kwargs:
+        kwargs['name'] = instead + '#'
+    return _CyObject(_createNode(compat, **kwargs))
 
 
 #------------------------------------------------------------------------------

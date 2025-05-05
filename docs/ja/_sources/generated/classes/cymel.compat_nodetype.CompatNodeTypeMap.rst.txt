@@ -1,0 +1,38 @@
+class cymel.compat_nodetype.CompatNodeTypeMap
+=============================================
+
+.. currentmodule:: cymel.compat_nodetype
+
+
+.. inheritance-diagram:: CompatNodeTypeMap
+    :parts: 1
+
+
+
+.. autoclass:: CompatNodeTypeMap
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        correctName
+        futureName
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: correctName
+    .. automethod:: futureName
+
+

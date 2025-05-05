@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.utils.utils &#8212; cymel 0.27.2024101300 ドキュメント</title>
+    <title>cymel.utils.utils &#8212; cymel 0.29.2025050600 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="classes/cymel.utils.optionvar.OptionVar.html" title="class cymel.utils.optionvar.OptionVar"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025050600 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.utils.utils</a></li> 
       </ul>
@@ -63,19 +63,22 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.correctNodeNameNS" title="cymel.utils.utils.correctNodeNameNS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">correctNodeNameNS</span></code></a>(name)</p></td>
 <td><p>任意の名前をノード名として問題ない形に修正する。ネームスペースを許容。</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.enablePlugin" title="cymel.utils.utils.enablePlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enablePlugin</span></code></a>(name[, proc])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.createNode" title="cymel.utils.utils.createNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createNode</span></code></a>(nodetype, **kwargs)</p></td>
+<td><p>ノードを生成する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.enablePlugin" title="cymel.utils.utils.enablePlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enablePlugin</span></code></a>(name[, proc])</p></td>
 <td><p>プラグインを利用可能にする。</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.escapeForMel" title="cymel.utils.utils.escapeForMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">escapeForMel</span></code></a>(s)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.escapeForMel" title="cymel.utils.utils.escapeForMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">escapeForMel</span></code></a>(s)</p></td>
 <td><p>melの文字列向けのエスケープをする。</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.listEnum" title="cymel.utils.utils.listEnum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listEnum</span></code></a>(name[, attrname, reverse])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.listEnum" title="cymel.utils.utils.listEnum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listEnum</span></code></a>(name[, attrname, reverse])</p></td>
 <td><p>enum アトリビュートの名前と値のペアのリストを得る。</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.loadPlugin" title="cymel.utils.utils.loadPlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadPlugin</span></code></a>(name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.loadPlugin" title="cymel.utils.utils.loadPlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadPlugin</span></code></a>(name)</p></td>
 <td><p>プラグインがロードされていなければロードする。</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.makeNiceName" title="cymel.utils.utils.makeNiceName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeNiceName</span></code></a>(name)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.makeNiceName" title="cymel.utils.utils.makeNiceName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeNiceName</span></code></a>(name)</p></td>
 <td><p>mixedCase や CamelCase の名前から Maya の Nice Name を得る。</p></td>
 </tr>
 </tbody>
@@ -141,6 +144,15 @@
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.utils.createNode">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.utils.</span></span><span class="sig-name descname"><span class="pre">createNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetype</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.createNode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードを生成する。</p>
+<p><a class="reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/createNode.html">createNode</a> コマンドの置き換えとして機能する。</p>
+<p><a class="reference internal" href="cymel.compat_nodetype.html#module-cymel.compat_nodetype" title="cymel.compat_nodetype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compat_nodetype</span></code></a> による新旧バージョン互換のためのノードタイプ名置換がされつつ、
+<a class="reference internal" href="classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> が返される。</p>
 </dd></dl>
 
 <dl class="py function">
@@ -250,6 +262,7 @@
 <li><a class="reference internal" href="#cymel.utils.utils.affectingAttrNames"><code class="docutils literal notranslate"><span class="pre">affectingAttrNames()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.utils.utils.correctNodeName"><code class="docutils literal notranslate"><span class="pre">correctNodeName()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.utils.utils.correctNodeNameNS"><code class="docutils literal notranslate"><span class="pre">correctNodeNameNS()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.utils.createNode"><code class="docutils literal notranslate"><span class="pre">createNode()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.utils.utils.enablePlugin"><code class="docutils literal notranslate"><span class="pre">enablePlugin()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.utils.utils.escapeForMel"><code class="docutils literal notranslate"><span class="pre">escapeForMel()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.utils.utils.listEnum"><code class="docutils literal notranslate"><span class="pre">listEnum()</span></code></a></li>
@@ -306,13 +319,13 @@
         <li class="right" >
           <a href="classes/cymel.utils.optionvar.OptionVar.html" title="class cymel.utils.optionvar.OptionVar"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.27.2024101300 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025050600 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.utils.utils</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020-2024, ryusas.
+        &#169; Copyright 2020-2025, ryusas.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
     </div>
   </body>

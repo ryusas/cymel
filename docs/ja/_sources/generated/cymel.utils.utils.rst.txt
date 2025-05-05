@@ -21,6 +21,7 @@
         affectingAttrNames
         correctNodeName
         correctNodeNameNS
+        createNode
         enablePlugin
         escapeForMel
         listEnum
@@ -52,6 +53,7 @@
     .. autofunction:: affectingAttrNames
     .. autofunction:: correctNodeName
     .. autofunction:: correctNodeNameNS
+    .. autofunction:: createNode
     .. autofunction:: enablePlugin
     .. autofunction:: escapeForMel
     .. autofunction:: listEnum

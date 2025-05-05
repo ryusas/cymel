@@ -18,6 +18,7 @@ Main
     :toctree: generated/
 
     cymel.all
+    cymel.compat_nodetype
     cymel.constants
     cymel.initmaya
     cymel.main

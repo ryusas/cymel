@@ -9,6 +9,7 @@ from __future__ import print_function
 from ..common import *
 from ..pyutils import Singleton, parentClasses
 from .typeinfo import isDerivedNodeType, getInheritedNodeTypes
+from ..compat_nodetype import compat_nodetype_map
 import maya.api.OpenMaya as _api2
 
 __all__ = ['nodetypes']
@@ -16,6 +17,9 @@ __all__ = ['nodetypes']
 _FIX_SLOTS = True  #: 標準 CyObject クラスのスロットを固定する。
 
 _2_MNodeClass = _api2.MNodeClass
+
+_cntm_correctName = compat_nodetype_map.correctName
+_cntm_futureName = compat_nodetype_map.futureName
 
 
 #------------------------------------------------------------------------------
@@ -47,6 +51,13 @@ class NodeTypes(with_metaclass(Singleton, object)):
     クラスが登録してあれば
     `.CyObject` からインスタンスを得ることで
     自動的にクラスを決定させることができる。
+
+    .. note::
+        2026でのノードタイプ名の変更など、
+        バージョン間の互換性を維持した名前指定に対応しており、
+        常に新しいタイプ名
+        （たとえば、2026未満でも接尾辞 `DL` を付けた名前）
+        での指定が推奨される。
     """
     def __getattr__(self, name):
         u"""
@@ -65,11 +76,12 @@ class NodeTypes(with_metaclass(Singleton, object)):
         :param `str` name: クラス名。
         :rtype: `type`
         """
+        #print('# __getattr__: ' + repr(name))
         if _RE_STARTS_WITH_CAPITAL_match(name):
             try:
                 return self.basicNodeClass(name[0].lower() + name[1:])
             except ValueError:
-                return self.basicNodeClass(name)
+                return _basicClsDict_get(name) or self.__newBasicNodeClass(getInheritedNodeTypes(name), None)
         raise ValueError('unknown class name: ' + name)
 
     def registerNodeClass(self, cls, nodetype):
@@ -234,7 +246,37 @@ class NodeTypes(with_metaclass(Singleton, object)):
             必須ではないが、指定すると未知のタイプの処理がやや高速。
         :rtype: `type`
         """
-        return _basicClsDict_get(nodetype) or self.__newBasicNodeClass(getInheritedNodeTypes(nodetype, nodename))
+        truetype = _cntm_correctName(nodetype)
+        if truetype:
+            cls = _basicClsDict_get(truetype)
+            if cls:
+                return cls
+            instead = _cntm_futureName(nodetype)
+            if instead == truetype:
+                return self.__newBasicNodeClass(getInheritedNodeTypes(truetype, nodename), None)
+            elif _cntm_correctName(truetype):
+                return self.__newBasicNodeClass(getInheritedNodeTypes(truetype, nodename), [instead, truetype])
+            else:
+                return self.__newBasicNodeClass(getInheritedNodeTypes(truetype, nodename), [instead])
+        else:
+            instead = _cntm_futureName(nodetype)
+            warning('Not compatible node type name between old and new versions: %s (use %s instead)' % (nodetype, instead))
+            return _basicClsDict_get(nodetype) or self.__newBasicNodeClass(getInheritedNodeTypes(nodetype, nodename), [instead])
+
+    def __basicNodeClass(self, nodetype, nodename=None):
+        u"""
+        `__decideClass` から呼ばれる簡易的な `basicNodeClass` メソッド。
+        """
+        cls = _basicClsDict_get(nodetype)
+        if cls:
+            return cls
+        instead = _cntm_futureName(nodetype)
+        if instead == nodetype:
+            return self.__newBasicNodeClass(getInheritedNodeTypes(nodetype, nodename), None)
+        elif _cntm_correctName(nodetype):
+            return self.__newBasicNodeClass(getInheritedNodeTypes(nodetype, nodename), [instead, nodetype])
+        else:
+            return self.__newBasicNodeClass(getInheritedNodeTypes(nodetype, nodename), [instead])
 
     def parentBasicNodeClass(self, nodetype, nodename=None):
         u"""
@@ -248,9 +290,9 @@ class NodeTypes(with_metaclass(Singleton, object)):
         """
         inherited = getInheritedNodeTypes(nodetype, nodename)[1:]
         if inherited:
-            return _basicClsDict_get(inherited[0]) or self.__newBasicNodeClass(inherited)
+            return _basicClsDict_get(inherited[0]) or self.__newBasicNodeClass(inherited, None)
 
-    def __newBasicNodeClass(self, inherited):
+    def __newBasicNodeClass(self, inherited, otherNames):
         u"""
         ノードタイプ名のみを条件として決まるベーシッククラスを新規に登録して得る。
 
@@ -259,8 +301,13 @@ class NodeTypes(with_metaclass(Singleton, object)):
         継承タイプ（それらも必要なら登録）を順次得て、指定タイプを登録する。
 
         :param `list` inherited: 先頭を指定タイプとする継承リスト。
+        :param otherNames:
+            実際のタイプ名と異なるタイプ名のリスト。
+            1つめがクラス名と属性名に使用される架空のタイプ。
+            2つめ以降がさらに追加の属性名で登録される。
         :rtype: `type`
         """
+        #print('# __newBasicNodeClass: %r' % (inherited,))
         i = 1
         typ = inherited[i]
         cls = _basicClsDict_get(typ)
@@ -271,7 +318,14 @@ class NodeTypes(with_metaclass(Singleton, object)):
         i -= 1
         while i >= 0:
             typ = inherited[i]
-            cls = type(typ[0].upper() + typ[1:], (cls,), _CLS_DEFAULT_ATTRS)
+            if not i and otherNames:
+                x = otherNames[0]
+                cls = type(x[0].upper() + x[1:], (cls,), _CLS_DEFAULT_ATTRS)
+                for x in otherNames[1:]:
+                    #print('# (setattr) %s = %s %r' % (x[0].upper() + x[1:], typ, cls))
+                    setattr(self, x[0].upper() + x[1:], cls)
+            else:
+                cls = type(typ[0].upper() + typ[1:], (cls,), _CLS_DEFAULT_ATTRS)
             self.__registerBasicNodeCls(typ, cls)
             i -= 1
         return cls
@@ -282,7 +336,7 @@ class NodeTypes(with_metaclass(Singleton, object)):
 
         同名の検査メソッド付きクラスがあったとしても属性では優先される。
         """
-        #print('# RegisterBasicNodeClass: %s %r' % (nodetype, cls))
+        #print('# RegisterBasicNodeClass: %s = %s %r' % (cls.__name__, nodetype, cls))
         _basicClsDict[nodetype] = cls
         _clsNodeTypeDict[cls] = (nodetype,)
         cls._Node_c__apiinfo = _2_MNodeClass(nodetype)
@@ -332,7 +386,7 @@ class NodeTypes(with_metaclass(Singleton, object)):
                             return cls
 
             # ベーシックノードクラスを得る。
-            return self.basicNodeClass(nodetype, nodename)
+            return self.__basicNodeClass(nodetype, nodename)
 
     def __deregisterNodeClass(self, dic, cls, warn):
         u"""

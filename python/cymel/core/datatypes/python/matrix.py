@@ -471,7 +471,7 @@ class Matrix(object):
             u"""
             各要素同士を除算し自身を更新する。
 
-            ゼロ除算を避ける為、分母が `~Happy.util.avoidZeroDiv`
+            ゼロ除算を避ける為、分母が `~.avoidZeroDiv`
             でフィルタされてから実行される。
 
             :param iterable v: 要素数16個以上のシーケンス。
@@ -828,7 +828,7 @@ class Matrix(object):
             u"""
             各要素同士を除算し自身を更新する。
 
-            ゼロ除算を避ける為、分母が `~Happy.util.avoidZeroDiv`
+            ゼロ除算を避ける為、分母が `~.avoidZeroDiv`
             でフィルタされてから実行される。
 
             :param iterable v: 要素数16個以上のシーケンス。
