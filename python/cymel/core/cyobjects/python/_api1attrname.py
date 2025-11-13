@@ -21,7 +21,7 @@ _HEAD_DOTS_sub = re.compile('^\.+').sub
 #------------------------------------------------------------------------------
 # FIX: Maya2026 UnicodeDecodeError Bug
 #
-# Maya 2026 日本語UI 時の API2 のエラーが軒並み UnicodeDecodeError になってしまうバグの対策。
+# Maya 2026.0-2026.1 の日本語UI時の API2 のエラーが軒並み UnicodeDecodeError になってしまうバグの対策。
 # API1 のエラーは日本語になっていても問題ない。
 # 特定のメソッドに限らず、日本語のメッセージを出すものは全てそうなっているようなので、根本的に全てを対策するのは難しく、
 # API2 を使うプログラム全体に波及する問題で、範囲を絞りきれないため、
@@ -35,7 +35,7 @@ _HEAD_DOTS_sub = re.compile('^\.+').sub
 #
 _MayaAPI2RuntimeError = RuntimeError
 try:
-    if _api.MGlobal.apiVersion() >= 20260000 and not _api.MGlobal.isDefaultLanguage():
+    if 20260000 <= _api.MGlobal.apiVersion() < 20260200 and not _api.MGlobal.isDefaultLanguage():
         _MayaAPI2RuntimeError = UnicodeDecodeError
 except:
     pass
