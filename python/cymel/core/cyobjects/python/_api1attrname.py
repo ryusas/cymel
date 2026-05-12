@@ -16,7 +16,7 @@ _MFnAttribute = _api.MFnAttribute
 
 IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES = hasattr(_MFnAttribute, 'isEnforcingUniqueName')  #: ユニークでないアトリビュート名をサポートしているバージョンかどうか。
 
-_HEAD_DOTS_sub = re.compile('^\.+').sub
+_HEAD_DOTS_sub = re.compile(r'^\.+').sub
 
 #------------------------------------------------------------------------------
 # FIX: Maya2026 UnicodeDecodeError Bug
