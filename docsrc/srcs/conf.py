@@ -48,6 +48,9 @@ extensions = [
 templates_path = ['../templates']
 exclude_patterns = [u'_build', 'Thumbs.db', '.DS_Store']
 
+locale_dirs = ['../locale/']
+gettext_compact = False
+
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -60,7 +63,7 @@ html_static_path = ['../static']
 
 
 # -----------------------------------------------------------------------
-default_role = 'py:obj'  # autodoc ���ꂽ�h�L�������g���ւ̃����N���ȒP�ɏ������߂ɏd�v�B
+default_role = 'py:obj'  # autodoc されたドキュメント内へのリンクを簡単に書くために重要。
 
 #source_suffix = ['.rst', '.md']
 source_suffix = '.rst'
