@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.utils.operation.PreserveSelection.rst:2
+msgid "class cymel.utils.operation.PreserveSelection"
+msgstr "class cymel.utils.operation.PreserveSelection"
+
+#: cymel.utils.operation.PreserveSelection:1 of
+msgid "元の選択状態を復元できるコンテキスト。"
+msgstr "A context in which the original selection state can be restored."
+
+#: ../srcs/generated/classes/cymel.utils.operation.PreserveSelection.rst:26:<autosummary>:1
+#: cymel.utils.operation.PreserveSelection:17
+#: cymel.utils.operation.PreserveSelection.__init__:1 of
+msgid "初期化。"
+msgstr "Initialization."
+
+#: ../srcs/generated/classes/cymel.utils.operation.PreserveSelection.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.utils.operation.PreserveSelection:19
+#: cymel.utils.operation.PreserveSelection.__init__:3 of
+msgid "コンテキストから抜ける際のセレクション復元処理を コマンドキューを消費せずに行うかどうか。"
+msgstr ""
+"Whether to restore the selection when exiting the context without consuming "
+"the command queue."
+
+#: ../srcs/generated/classes/cymel.utils.operation.PreserveSelection.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.utils.operation.PreserveSelection.rst:26:<autosummary>:1
+msgid ""
+":py:obj:`__init__ <cymel.utils.operation.PreserveSelection.__init__>`\\ "
+"\\(\\[nocmd\\]\\)"
+msgstr ""
+":py:obj:`__init__ <cymel.utils.operation.PreserveSelection.__init__>`\\ "
+"\\(\\[nocmd\\]\\)"
+
+#: ../srcs/generated/classes/cymel.utils.operation.PreserveSelection.rst:29
+msgid "Attributes:"
+msgstr "Attributes:"
+
+#: ../srcs/generated/classes/cymel.utils.operation.PreserveSelection.rst:38
+msgid "Methods Details:"
+msgstr "Method Details:"

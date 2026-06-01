@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:2
+msgid "cymel.pyutils.immutables"
+msgstr "cymel.pyutils.immutables"
+
+#: cymel.pyutils.immutables:1 of
+msgid "簡易的なイミュータブル化ラッパー。"
+msgstr "A simple immutable wrapper."
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:9
+msgid "Classes:"
+msgstr "Classes:"
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:19:<autosummary>:1
+msgid ":py:obj:`ImmutableDict <cymel.pyutils.immutables.ImmutableDict>`"
+msgstr ":py:obj:`ImmutableDict <cymel.pyutils.immutables.ImmutableDict>`"
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:19:<autosummary>:1
+msgid "イミュータブル `dict`"
+msgstr "immutable `dict`"
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:21
+msgid "Exceptions:"
+msgstr "Exceptions:"
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:29:<autosummary>:1
+msgid ""
+":py:obj:`CymelImmutableError <cymel.pyutils.immutables.CymelImmutableError>`"
+msgstr ""
+":py:obj:`CymelImmutableError <cymel.pyutils.immutables.CymelImmutableError>`"
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:29:<autosummary>:1
+#: cymel.pyutils.immutables.CymelImmutableError:1 of
+msgid "`immutable` ラップされたオブジェクトが書き換えられた。"
+msgstr "`immutable` The wrapped object has been rewritten."
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:31
+msgid "Functions:"
+msgstr "Functions:"
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:46:<autosummary>:1
+msgid ""
+":py:obj:`immutable <cymel.pyutils.immutables.immutable>`\\ "
+"\\(type\\_or\\_obj\\, \\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`immutable <cymel.pyutils.immutables.immutable>`\\ "
+"\\(type\\_or\\_obj\\, \\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:46:<autosummary>:1
+#: cymel.pyutils.immutables.immutable:1 of
+msgid "オブジェクトが変更不可になるラッパーを生成する。"
+msgstr "Generates a wrapper that makes the object immutable."
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:46:<autosummary>:1
+msgid ""
+":py:obj:`immutableType <cymel.pyutils.immutables.immutableType>`\\ "
+"\\(cls\\[\\, name\\, module\\]\\)"
+msgstr ""
+":py:obj:`immutableType <cymel.pyutils.immutables.immutableType>`\\ "
+"\\(cls\\[\\, name\\, module\\]\\)"
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:46:<autosummary>:1
+#: cymel.pyutils.immutables.immutableType:1 of
+msgid "オブジェクトが変更不可になるラッパークラスを生成する。"
+msgstr "Generate a wrapper class that makes the object immutable."
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:49
+msgid "Constants:"
+msgstr "Constants:"
+
+#: cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT:1 of
+msgid "クラスごとの追加ミューテーターを把握するための辞書。適切なメンテナンスが必要。"
+msgstr ""
+"A dictionary to keep track of additional mutators per class. Requires proper"
+" maintenance."
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:58
+msgid "Exceptions Details:"
+msgstr "Exceptions Details:"
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:67
+msgid "Functions Details:"
+msgstr "Function Details:"
+
+#: cymel.pyutils.immutables.immutable:3 of
+msgid "`immutableType` を呼び出し、 デフォルト設定でラッパークラスを得て、 それでラップした新規インスタンスが返される。"
+msgstr ""
+"Call `immutableType` to get a wrapper class with default settings, and a new"
+" instance wrapped in it is returned."
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst
+#: cymel.pyutils.immutables.immutable of
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.pyutils.immutables.immutable:13 of
+msgid ""
+"ラップするオブジェクトのクラス、又はインスタンス。 旧スタイルのクラスは非サポート。 インスタンスが指定された場合のラッパーの初期化引数は "
+"インスタンス自身となる為、コピーコンストラクタが実装 されている場合にのみ動作する。"
+msgstr ""
+"The class or instance of the object to wrap. Old style classes are not "
+"supported. When an instance is specified, the wrapper's initialization "
+"argument is the instance itself, so it only works if a copy constructor is "
+"implemented."
+
+#: cymel.pyutils.immutables.immutable:19 cymel.pyutils.immutables.immutable:21
+#: of
+msgid "type_or_obj にクラスが指定された場合の初期化引数。"
+msgstr "Initialization argument when a class is specified for type_or_obj."
+
+#: cymel.pyutils.immutables.immutable of
+msgid "戻り値"
+msgstr "return value"
+
+#: cymel.pyutils.immutables.immutable:23 of
+msgid "ラッパーオブジェクト。"
+msgstr "wrapper object."
+
+#: cymel.pyutils.immutables.immutableType:9 of
+msgid "ラッパークラスはそのクラス名とともにキャッシュされ再利用される。"
+msgstr "Wrapper classes are cached and reused along with their class name."
+
+#: cymel.pyutils.immutables.immutableType:11 of
+msgid "型ごとに初めて生成されたラッパークラスは、型のみをキーとしてもキャッシュされ、 クラス名が省略された場合には任意の名前としても再利用される。"
+msgstr ""
+"The wrapper class generated for the first time for each type is cached using"
+" only the type as a key, and if the class name is omitted, it is reused with"
+" any name."
+
+#: cymel.pyutils.immutables.immutableType:14 of
+msgid ""
+"ラッパークラスでは、オブジェクトの属性値を書き換える メソッドがオーバーライドされ、それらがコールされた際に `CymelImmutableError`"
+" が送出されるようになる。"
+msgstr ""
+"The wrapper class overrides the methods that rewrite the object's attribute "
+"values ​​and raises `CymelImmutableError` when they are called."
+
+#: cymel.pyutils.immutables.immutableType:18 of
+msgid ""
+"どのメソッドをオーバーライドすべきかは、特殊メソッドの 有無を検査する事で自動決定されるが、 それだけでは補い切れないクラスに関しては "
+"`OPTIONAL_MUTATOR_DICT` 辞書で管理している為、 必要に応じて拡張しなければならない。"
+msgstr ""
+"Which method to override is automatically determined by checking the "
+"presence or absence of special methods, but classes that cannot be covered "
+"by this alone are managed by the `OPTIONAL_MUTATOR_DICT` dictionary, which "
+"must be extended as necessary."
+
+#: cymel.pyutils.immutables.immutableType:24 of
+msgid "イミュータブル化する元のクラス。"
+msgstr "The original class to be immutable."
+
+#: cymel.pyutils.immutables.immutableType:26 of
+msgid "ラッパークラスの名前。 省略時は ``'Immutable元のクラス名'`` となる。"
+msgstr ""
+"Name of the wrapper class. If omitted, ``'Immutable original class name'`` "
+"is used."
+
+#: cymel.pyutils.immutables.immutableType:29 of
+msgid ""
+"ラッパークラスを提供するモジュール名。 __module__ 属性にセットされる。 省略時は、元のクラスの __module__ 属性を引き継ぐ。"
+msgstr ""
+"The name of the module that provides the wrapper class. Set in the "
+"__module__ attribute. If omitted, the __module__ attribute of the original "
+"class is inherited."
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.pyutils.immutables.immutableType:33 of
+msgid "`type`"
+msgstr "`type`"
+
+#: cymel.pyutils.immutables.immutableType:36 of
+msgid ""
+"name も module も省略した場合は、 指定したクラスで最初に生成された immutable ラッパークラスが "
+"再利用されるため、結果的にどちらも不定となる。"
+msgstr ""
+"If both name and module are omitted, the immutable wrapper class first "
+"generated for the specified class will be reused, resulting in both being "
+"undefined."
+
+#: cymel.pyutils.immutables.immutableType:41 of
+msgid ""
+"`OPTIONAL_MUTATOR_DICT` には、インスタンスを変更する メソッド名をクラスごとに列挙する必要がある。 "
+"これは、対応させたいクラスごとに拡張する必要がある事を 意味する。ただし、全てのメソッドについて列挙する必要が あるわけではない。 "
+"`OPTIONAL_MUTATOR_DICT` をあえて拡張せずとも、 属性の設定、削除、代入演算子などはデフォルトで封じられる。 "
+"あえてメソッド名を列挙する必要があるのは以下のケースである。"
+msgstr ""
+"`OPTIONAL_MUTATOR_DICT` needs to list the names of methods that modify "
+"instances for each class. This means that you need to extend it for each "
+"class you want to support. However, it is not necessary to list all methods."
+" Even if you do not intentionally extend `OPTIONAL_MUTATOR_DICT`, attributes"
+" setting, deletion, assignment operators, etc. are blocked by default. The "
+"following cases require enumerating method names."
+
+#: cymel.pyutils.immutables.immutableType:50 of
+msgid "属性のメソッドを呼び出すメソッド。"
+msgstr "A method that calls an attribute's method."
+
+#: cymel.pyutils.immutables.immutableType:51 of
+msgid "組み込みやバイナリモジュールで提供される型のメソッド。"
+msgstr "Methods on types provided by built-in and binary modules."

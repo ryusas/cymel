@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.ui.window.Window &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="cymel.utils.files" href="../cymel.utils.files.html" />
+    <link rel="prev" title="class cymel.ui.window.DockControl" href="cymel.ui.window.DockControl.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.utils.files.html" title="cymel.utils.files"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cymel.ui.window.DockControl.html" title="class cymel.ui.window.DockControl"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.ui.window.html" accesskey="U">cymel.ui.window</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.ui.window.Window</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-ui-window-window">
+<h1>class cymel.ui.window.Window<a class="headerlink" href="#class-cymel-ui-window-window" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-9d1e822148a1b36c5fe237f6a93dabfb73ea6fce.png" alt="Inheritance diagram of Window" usemap="#inheritance13815536a8" class="inheritance graphviz" /></div>
+<map id="inheritance13815536a8" name="inheritance13815536a8">
+<area shape="rect" id="node1" href="cymel.ui.control.Control.html#cymel.ui.control.Control" target="_top" title="mel UI の :mayacmd:`control` ラッパークラス。" alt="" coords="5,5,77,29"/>
+<area shape="rect" id="node2" href="#cymel.ui.window.Window" target="_top" title="mel UI の :mayacmd:`window` ラッパークラス。" alt="" coords="5,44,77,68"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.ui.window.Window">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.ui.window.</span></span><span class="sig-name descname"><span class="pre">Window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.window.Window" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="cymel.ui.control.Control.html#cymel.ui.control.Control" title="cymel.ui.control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">Control</span></code></a></p>
+<p><a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/window.html">window</a> wrapper class for mel UI.</p>
+<p><a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/setParent.html">setParent</a> can be done with <code class="xref py py-obj docutils literal notranslate"><span class="pre">with</span></code>.</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.window.Window.UICMD" title="cymel.ui.window.Window.UICMD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UICMD</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.window.Window.changeToDockControl" title="cymel.ui.window.Window.changeToDockControl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">changeToDockControl</span></code></a>([allowedArea, area])</p></td>
+<td><p>Turn the window into a docking control.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.window.Window.children" title="cymel.ui.window.Window.children"><code class="xref py py-obj docutils literal notranslate"><span class="pre">children</span></code></a>()</p></td>
+<td><p>Get all child controls of the window.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.window.Window.delete" title="cymel.ui.window.Window.delete"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete</span></code></a>()</p></td>
+<td><p>Delete the window.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.window.Window.layout" title="cymel.ui.window.Window.layout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">layout</span></code></a>()</p></td>
+<td><p>Gets one layout that the window has.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.window.Window.layouts" title="cymel.ui.window.Window.layouts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">layouts</span></code></a>()</p></td>
+<td><p>Get all the layouts a window has.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.window.Window.makeCurrent" title="cymel.ui.window.Window.makeCurrent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeCurrent</span></code></a>()</p></td>
+<td><p>Make this the current parent.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.window.Window.name" title="cymel.ui.window.Window.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a>()</p></td>
+<td><p>Get window name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.window.Window.parent" title="cymel.ui.window.Window.parent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></a>()</p></td>
+<td><p>Parents can't get it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.window.Window.show" title="cymel.ui.window.Window.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>()</p></td>
+<td><p>Show window.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.window.Window.window" title="cymel.ui.window.Window.window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window</span></code></a>()</p></td>
+<td><p>Get this window itself.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.ui.window.Window.UICMD">
+<span class="sig-name descname"><span class="pre">UICMD</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.window.Window.UICMD" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.ui.window.Window.changeToDockControl">
+<span class="sig-name descname"><span class="pre">changeToDockControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">allowedArea</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('left',</span> <span class="pre">'right')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.window.Window.changeToDockControl" title="Link to this definition">¶</a></dt>
+<dd><p>Turn the window into a docking control.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.ui.window.DockControl.html#cymel.ui.window.DockControl" title="cymel.ui.window.DockControl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DockControl</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.ui.window.Window.children">
+<span class="sig-name descname"><span class="pre">children</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.window.Window.children" title="Link to this definition">¶</a></dt>
+<dd><p>Get all child controls of the window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.ui.window.Window.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.window.Window.delete" title="Link to this definition">¶</a></dt>
+<dd><p>Delete the window.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.ui.window.Window.layout">
+<span class="sig-name descname"><span class="pre">layout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.window.Window.layout" title="Link to this definition">¶</a></dt>
+<dd><p>Gets one layout that the window has.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.ui.layout.Layout.html#cymel.ui.layout.Layout" title="cymel.ui.layout.Layout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Layout</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.ui.window.Window.layouts">
+<span class="sig-name descname"><span class="pre">layouts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.window.Window.layouts" title="Link to this definition">¶</a></dt>
+<dd><p>Get all the layouts a window has.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.ui.window.Window.makeCurrent">
+<span class="sig-name descname"><span class="pre">makeCurrent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.window.Window.makeCurrent" title="Link to this definition">¶</a></dt>
+<dd><p>Make this the current parent.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.ui.window.Window.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.window.Window.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get window name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.ui.window.Window.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.window.Window.parent" title="Link to this definition">¶</a></dt>
+<dd><p>Parents can’t get it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.ui.window.Window.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.window.Window.show" title="Link to this definition">¶</a></dt>
+<dd><p>Show window.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.ui.window.Window.window">
+<span class="sig-name descname"><span class="pre">window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.window.Window.window" title="Link to this definition">¶</a></dt>
+<dd><p>Get this window itself.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.ui.window.Window" title="cymel.ui.window.Window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Window</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.ui.window.Window</a><ul>
+<li><a class="reference internal" href="#cymel.ui.window.Window"><code class="docutils literal notranslate"><span class="pre">Window</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.ui.window.Window.UICMD"><code class="docutils literal notranslate"><span class="pre">Window.UICMD()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.ui.window.Window.changeToDockControl"><code class="docutils literal notranslate"><span class="pre">Window.changeToDockControl()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.ui.window.Window.children"><code class="docutils literal notranslate"><span class="pre">Window.children()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.ui.window.Window.delete"><code class="docutils literal notranslate"><span class="pre">Window.delete()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.ui.window.Window.layout"><code class="docutils literal notranslate"><span class="pre">Window.layout()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.ui.window.Window.layouts"><code class="docutils literal notranslate"><span class="pre">Window.layouts()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.ui.window.Window.makeCurrent"><code class="docutils literal notranslate"><span class="pre">Window.makeCurrent()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.ui.window.Window.name"><code class="docutils literal notranslate"><span class="pre">Window.name()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.ui.window.Window.parent"><code class="docutils literal notranslate"><span class="pre">Window.parent()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.ui.window.Window.show"><code class="docutils literal notranslate"><span class="pre">Window.show()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.ui.window.Window.window"><code class="docutils literal notranslate"><span class="pre">Window.window()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cymel.ui.window.DockControl.html"
+                          title="previous chapter">class cymel.ui.window.DockControl</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../cymel.utils.files.html"
+                          title="next chapter">cymel.utils.files</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.ui.window.Window.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.utils.files.html" title="cymel.utils.files"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cymel.ui.window.DockControl.html" title="class cymel.ui.window.DockControl"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.ui.window.html" >cymel.ui.window</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.ui.window.Window</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

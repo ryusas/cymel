@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.utils.operation.UndoTransaction.rst:2
+msgid "class cymel.utils.operation.UndoTransaction"
+msgstr "class cymel.utils.operation.UndoTransaction"
+
+#: cymel.utils.operation.UndoTransaction:1 of
+msgid "コンテキストで例外が発生した場合にアンドゥするトランザクション。"
+msgstr "Transaction to undo if an exception occurs in the context."
+
+#: cymel.utils.operation.UndoTransaction:3 of
+msgid "インスタンス `undoTransaction` が生成済み。"
+msgstr "Instance `undoTransaction` has been created."
+
+#: ../srcs/generated/classes/cymel.utils.operation.UndoTransaction.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.utils.operation.UndoTransaction.rst:30:<autosummary>:1
+msgid ""
+":py:obj:`decorate <cymel.utils.operation.UndoTransaction.decorate>`\\ "
+"\\(proc\\)"
+msgstr ""
+":py:obj:`decorate <cymel.utils.operation.UndoTransaction.decorate>`\\ "
+"\\(proc\\)"
+
+#: ../srcs/generated/classes/cymel.utils.operation.UndoTransaction.rst:33
+msgid "Methods Details:"
+msgstr "Method Details:"

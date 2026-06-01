@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:2
+msgid "class cymel.ui.menu.Menu"
+msgstr "class cymel.ui.menu.Menu"
+
+#: cymel.ui.menu.Menu:1 of
+msgid "mel UI の :mayacmd:`menu` ラッパークラス。"
+msgstr ":mayacmd:`menu` wrapper class for mel UI."
+
+#: cymel.ui.menu.Menu:3 of
+msgid "`with` で :mayacmd:`setParent` が行える。"
+msgstr ":mayacmd:`setParent` can be done with `with`."
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+msgid ":py:obj:`UICMD <cymel.ui.menu.Menu.UICMD>`"
+msgstr ":py:obj:`UICMD <cymel.ui.menu.Menu.UICMD>`"
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+msgid ":py:obj:`child <cymel.ui.menu.Menu.child>`\\ \\(\\[idxOrPath\\]\\)"
+msgstr ":py:obj:`child <cymel.ui.menu.Menu.child>`\\ \\(\\[idxOrPath\\]\\)"
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+#: cymel.ui.menu.Menu.child:1 of
+msgid "階層下のメニューアイテムを得る。"
+msgstr "Get the menu item below the hierarchy."
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+msgid ":py:obj:`childNames <cymel.ui.menu.Menu.childNames>`\\ \\(\\)"
+msgstr ":py:obj:`childNames <cymel.ui.menu.Menu.childNames>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+#: cymel.ui.menu.Menu.childNames:1 of
+msgid "子のメニューアイテム名リストを得る。"
+msgstr "Get a list of child menu item names."
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+msgid ":py:obj:`children <cymel.ui.menu.Menu.children>`\\ \\(\\)"
+msgstr ":py:obj:`children <cymel.ui.menu.Menu.children>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+#: cymel.ui.menu.Menu.children:1 of
+msgid "子のメニューアイテムのリストを得る。"
+msgstr "Get a list of child menu items."
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+msgid ":py:obj:`clear <cymel.ui.menu.Menu.clear>`\\ \\(\\)"
+msgstr ":py:obj:`clear <cymel.ui.menu.Menu.clear>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+#: cymel.ui.menu.Menu.clear:1 of
+msgid "子のメニューアイテムを全て削除する。"
+msgstr "Delete all child menu items."
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+msgid ":py:obj:`getCurrent <cymel.ui.menu.Menu.getCurrent>`\\ \\(\\)"
+msgstr ":py:obj:`getCurrent <cymel.ui.menu.Menu.getCurrent>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+#: cymel.ui.menu.Menu.getCurrent:1 of
+msgid "カレントペアレントメニューを得る。"
+msgstr "Get the current parent menu."
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+msgid ":py:obj:`makeCurrent <cymel.ui.menu.Menu.makeCurrent>`\\ \\(\\)"
+msgstr ":py:obj:`makeCurrent <cymel.ui.menu.Menu.makeCurrent>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+#: cymel.ui.menu.Menu.makeCurrent:1 of
+msgid "これをカレントペアレントメニューにする。"
+msgstr "Make this the current parent menu."
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+msgid ":py:obj:`numChildren <cymel.ui.menu.Menu.numChildren>`\\ \\(\\)"
+msgstr ":py:obj:`numChildren <cymel.ui.menu.Menu.numChildren>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+#: cymel.ui.menu.Menu.numChildren:1 of
+msgid "メニューアイテム数を得る。"
+msgstr "Get the number of menu items."
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+msgid ":py:obj:`pop <cymel.ui.menu.Menu.pop>`\\ \\(\\)"
+msgstr ":py:obj:`pop <cymel.ui.menu.Menu.pop>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:38:<autosummary>:1
+#: cymel.ui.menu.Menu.pop:1 of
+msgid "カレントペアレントメニューを一つ上に移動させる。"
+msgstr "Move the current parent menu up one level."
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst:41
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.ui.menu.Menu.child:3 of
+msgid "子のインデックス（ゼロオリジン）か、 階層下の相対パス。"
+msgstr "Child index (zero origin) or relative path down the hierarchy."
+
+#: ../srcs/generated/classes/cymel.ui.menu.Menu.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.ui.menu.Menu.child:6 of
+msgid "`.Control`"
+msgstr "`.Control`"
+
+#: cymel.ui.menu.Menu.childNames:3 cymel.ui.menu.Menu.children:3 of
+msgid "`list`"
+msgstr "`list`"
+
+#: cymel.ui.menu.Menu.getCurrent:3 of
+msgid "`Menu`"
+msgstr "`Menu`"
+
+#: cymel.ui.menu.Menu.numChildren:3 of
+msgid "`int`"
+msgstr "`int`"

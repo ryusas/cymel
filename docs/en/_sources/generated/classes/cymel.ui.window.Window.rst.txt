@@ -1,0 +1,56 @@
+class cymel.ui.window.Window
+============================
+
+.. currentmodule:: cymel.ui.window
+
+
+.. inheritance-diagram:: Window
+    :parts: 1
+
+
+
+.. autoclass:: Window
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+        changeToDockControl
+        children
+        delete
+        layout
+        layouts
+        makeCurrent
+        name
+        parent
+        show
+        window
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+    .. automethod:: changeToDockControl
+    .. automethod:: children
+    .. automethod:: delete
+    .. automethod:: layout
+    .. automethod:: layouts
+    .. automethod:: makeCurrent
+    .. automethod:: name
+    .. automethod:: parent
+    .. automethod:: show
+    .. automethod:: window
+
+

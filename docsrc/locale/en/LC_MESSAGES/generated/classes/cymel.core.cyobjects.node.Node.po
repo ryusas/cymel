@@ -1,0 +1,532 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:2
+msgid "class cymel.core.cyobjects.node.Node"
+msgstr "class cymel.core.cyobjects.node.Node"
+
+#: cymel.core.cyobjects.node.Node:1 of
+msgid ":mayanode:`node` ノードタイプラッパークラス。"
+msgstr ":mayanode:`node` Node type wrapper class."
+
+#: cymel.core.cyobjects.node.Node:3 of
+msgid "固定引数無しでのクラスインスタンス生成時のノード生成をサポート。"
+msgstr ""
+"Supports node generation when creating a class instance without fixed "
+"arguments."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ""
+":py:obj:`addAttr <cymel.core.cyobjects.node.Node.addAttr>`\\ "
+"\\(\\[longName\\, type\\, subType\\, ...\\]\\)"
+msgstr ""
+":py:obj:`addAttr <cymel.core.cyobjects.node.Node.addAttr>`\\ "
+"\\(\\[longName\\, type\\, subType\\, ...\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.addAttr:1 of
+msgid "アトリビュートを追加する。"
+msgstr "Add attributes."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ":py:obj:`aliases <cymel.core.cyobjects.node.Node.aliases>`\\ \\(\\)"
+msgstr ":py:obj:`aliases <cymel.core.cyobjects.node.Node.aliases>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.aliases:1 of
+msgid "別名が定義されているアトリビュートのリストを得る。"
+msgstr "Get a list of attributes that have aliases defined."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ""
+":py:obj:`assignUUID <cymel.core.cyobjects.node.Node.assignUUID>`\\ "
+"\\(val\\[\\, py\\]\\)"
+msgstr ""
+":py:obj:`assignUUID <cymel.core.cyobjects.node.Node.assignUUID>`\\ "
+"\\(val\\[\\, py\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.assignUUID:1 of
+msgid "UUID をアサインする。"
+msgstr "Assign a UUID."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ":py:obj:`delete <cymel.core.cyobjects.node.Node.delete>`\\ \\(\\)"
+msgstr ":py:obj:`delete <cymel.core.cyobjects.node.Node.delete>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.delete:1 of
+msgid "ノードを削除する。"
+msgstr "Delete a node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ":py:obj:`listAliases <cymel.core.cyobjects.node.Node.listAliases>`\\ \\(\\)"
+msgstr ":py:obj:`listAliases <cymel.core.cyobjects.node.Node.listAliases>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.aliases:1 of
+msgid "`aliases` の別名。"
+msgstr "Aliases for `aliases`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ""
+":py:obj:`listAttr <cymel.core.cyobjects.node.Node.listAttr>`\\ "
+"\\(\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`listAttr <cymel.core.cyobjects.node.Node.listAttr>`\\ "
+"\\(\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.plugs:1 of
+msgid "`plugs` の別名。"
+msgstr "Alternative name for `plugs`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ":py:obj:`lock <cymel.core.cyobjects.node.Node.lock>`\\ \\(\\[val\\]\\)"
+msgstr ":py:obj:`lock <cymel.core.cyobjects.node.Node.lock>`\\ \\(\\[val\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.setLocked:1 of
+msgid "`setLocked` の別名。"
+msgstr "Alternative name for `setLocked`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ":py:obj:`namespace <cymel.core.cyobjects.node.Node.namespace>`\\ \\(\\)"
+msgstr ":py:obj:`namespace <cymel.core.cyobjects.node.Node.namespace>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.namespace:1 of
+msgid "ネームスペースを得る。"
+msgstr "Get namespace."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ":py:obj:`plugs <cymel.core.cyobjects.node.Node.plugs>`\\ \\(\\*\\*kwargs\\)"
+msgstr ":py:obj:`plugs <cymel.core.cyobjects.node.Node.plugs>`\\ \\(\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.plugs:1 of
+msgid "指定した条件にマッチするプラグのリストを得る。"
+msgstr "Get a list of plugs that match the specified criteria."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ""
+":py:obj:`referenceNode <cymel.core.cyobjects.node.Node.referenceNode>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`referenceNode <cymel.core.cyobjects.node.Node.referenceNode>`\\ "
+"​​\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.referenceNode:1 of
+msgid "ノードがリファレンスの場合、それを管理する :mayanode:`reference` ノードを得る。"
+msgstr ""
+"If the node is a reference, get the :mayanode:`reference` node that manages "
+"it."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ""
+":py:obj:`rename <cymel.core.cyobjects.node.Node.rename>`\\ \\(name\\[\\, "
+"ignoreShape\\]\\)"
+msgstr ""
+":py:obj:`rename <cymel.core.cyobjects.node.Node.rename>`\\ \\(name\\[\\, "
+"ignoreShape\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.rename:1 of
+msgid "リネームする。"
+msgstr "Rename."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ":py:obj:`setLocked <cymel.core.cyobjects.node.Node.setLocked>`\\ \\(\\[val\\]\\)"
+msgstr ""
+":py:obj:`setLocked <cymel.core.cyobjects.node.Node.setLocked>`\\ "
+"\\(\\[val\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.setLocked:1 of
+msgid "ロック、又はアンロックする。"
+msgstr "lock or unlock."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ""
+":py:obj:`setNamespace <cymel.core.cyobjects.node.Node.setNamespace>`\\ "
+"\\(ns\\[\\, ignoreShape\\]\\)"
+msgstr ""
+":py:obj:`setNamespace <cymel.core.cyobjects.node.Node.setNamespace>`\\ "
+"\\(ns\\[\\, ignoreShape\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.setNamespace:1 of
+msgid "ネームスペースをセットする。"
+msgstr "Set namespace."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ":py:obj:`unlock <cymel.core.cyobjects.node.Node.unlock>`\\ \\(\\)"
+msgstr ":py:obj:`unlock <cymel.core.cyobjects.node.Node.unlock>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.unlock:1 of
+msgid "アンロックする。"
+msgstr "Unlock."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+msgid ":py:obj:`uuid <cymel.core.cyobjects.node.Node.uuid>`\\ \\(\\[new\\, py\\]\\)"
+msgstr ":py:obj:`uuid <cymel.core.cyobjects.node.Node.uuid>`\\ \\(\\[new\\, py\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:44:<autosummary>:1
+#: cymel.core.cyobjects.node.Node.uuid:1 of
+msgid "UUID を得る。"
+msgstr "Get the UUID."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst:47
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: cymel.core.cyobjects.node.Node.addAttr:3 of
+msgid ":mayacmd:`addAttr` コマンドを使いやすくするラッパーである。"
+msgstr "A wrapper that makes the :mayacmd:`addAttr` command easier to use."
+
+#: cymel.core.cyobjects.node.Node.addAttr:5 of
+msgid "型名の指定で -at と -dt を使い分ける煩わしさから解放。"
+msgstr ""
+"Free yourself from the hassle of using -at and -dt when specifying type "
+"names."
+
+#: cymel.core.cyobjects.node.Node.addAttr:7 of
+msgid "コンパウンドの子の自動生成（特に double3 等の数値コンパウンド）。"
+msgstr ""
+"Automatic generation of compound children (especially numeric compounds such"
+" as double3)."
+
+#: cymel.core.cyobjects.node.Node.addAttr:9 of
+msgid "proxy 指定の簡易化。"
+msgstr "Simplified proxy specification."
+
+#: cymel.core.cyobjects.node.Node.addAttr:11 of
+msgid "デフォルト値や最大値や最小値の指定を改善。"
+msgstr ""
+"Improved specification of default value, maximum value, and minimum value."
+
+#: cymel.core.cyobjects.node.Node.addAttr:13 of
+msgid "-dt 型でもデフォルト値を指定可能。"
+msgstr "Default values ​​can also be specified for the -dt type."
+
+#: cymel.core.cyobjects.node.Node.addAttr:14 of
+msgid "matrix 型は `.Matrix` でも `.Transformation` でも指定可能。"
+msgstr ""
+"The matrix type can be specified with either `.Matrix` or `.Transformation`."
+
+#: cymel.core.cyobjects.node.Node.addAttr:15 of
+msgid "数値コンパウンドでは `list` 形式での子の値を指定可能。"
+msgstr "Numeric compounds can specify child values ​​in `list` format."
+
+#: cymel.core.cyobjects.node.Node.addAttr:16 of
+msgid ":mayacmd:`addAttr` コマンドの振る舞いの通り、 内部単位（例えば角度ならラジアン）で指定する。"
+msgstr ""
+"As per the behavior of the :mayacmd:`addAttr` command, specify it in "
+"internal units (for example, radians for angles)."
+
+#: cymel.core.cyobjects.node.Node.addAttr:19 of
+msgid ":mayacmd:`addAttr` コマンドのオプションも全て利用可能。"
+msgstr "All options of the :mayacmd:`addAttr` command are also available."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.core.cyobjects.node.Node.addAttr:21 of
+msgid "アトリビュートのロング名。 最低限、ロング名のショート名のどちらかの指定が必要。"
+msgstr ""
+"Long name of the attribute. At a minimum, you must specify either the long "
+"name or the short name."
+
+#: cymel.core.cyobjects.node.Node.addAttr:25 of
+msgid ""
+"アトリビュートのタイプ名。省略時は double となる。  attibuteType(at)系とdataType(dt)系の違いを気にせずに "
+"指定することができる。 中にはどちらにも同じ型名が存在するものがあるが、 その場合はより一般的な方が採用される （例えば matrix は dt "
+"となり、double3 は at となる）。  タイプ名に ``at:`` か ``dt:`` の接頭辞を付加することで "
+"どちらの型かを明示することができる。 ちなみに `.Plug.type` は、 同じ型名が2バージョン存在する場合はこの形式で返す。  "
+"このオプションではなく、本来の attibuteType(at) か dataType(dt) を使用して明示することもできる。  proxy "
+"を指定した場合は、このオプションは無効となり、 強制的にそれと同じタイプになる。  double3 等の数値コンパウンドタイプの場合は、 "
+"子アトリビュートも自動生成される。 子のタイプや名前も自動決定されるが、 "
+"subType、childNames、childShortNames、childSuffixes で明示することもできる。  "
+"一般コンパウンドタイプ(compound)の場合でも、 subType（デフォルトは double ）が共通の場合に限り、 "
+"childNames、childShortNames、childSuffixes のいずれかを指定することで、子を自動生成できる。"
+msgstr ""
+"Attribute type name. If omitted, it will be double.  You can specify the "
+"attributeType(at) type and dataType(dt) type without worrying about the "
+"difference. Some types have the same type name, but in that case the more "
+"general one is used (for example, matrix becomes dt, double3 becomes at).  "
+"You can specify which type it is by adding the ``at:`` or ``dt:`` prefix to "
+"the type name. By the way, `.Plug.type` returns this format if there are two"
+" versions of the same type name.  You can also specify this using the native"
+" attributeType(at) or dataType(dt) instead of using this option.  If proxy "
+"is specified, this option has no effect and will force the same type.  For "
+"numeric compound types such as double3, child attributes are also "
+"automatically generated. The type and name of the child are automatically "
+"determined, but they can also be specified using subType, childNames, "
+"childShortNames, and childSuffixes.  Even in the case of a general compound "
+"type (compound), children can be automatically generated by specifying "
+"either childNames, childShortNames, or childSuffixes only if the subType "
+"(default is double) is common."
+
+#: cymel.core.cyobjects.node.Node.addAttr:26 of
+msgid "アトリビュートのタイプ名。省略時は double となる。"
+msgstr "Attribute type name. If omitted, it will be double."
+
+#: cymel.core.cyobjects.node.Node.addAttr:28 of
+msgid ""
+"attibuteType(at)系とdataType(dt)系の違いを気にせずに 指定することができる。 "
+"中にはどちらにも同じ型名が存在するものがあるが、 その場合はより一般的な方が採用される （例えば matrix は dt となり、double3 は "
+"at となる）。"
+msgstr ""
+"You can specify the attributeType(at) type and dataType(dt) type without "
+"worrying about the difference. Some types have the same type name, but in "
+"that case the more general one is used (for example, matrix becomes dt, "
+"double3 becomes at)."
+
+#: cymel.core.cyobjects.node.Node.addAttr:34 of
+msgid ""
+"タイプ名に ``at:`` か ``dt:`` の接頭辞を付加することで どちらの型かを明示することができる。 ちなみに `.Plug.type` は、"
+" 同じ型名が2バージョン存在する場合はこの形式で返す。"
+msgstr ""
+"You can specify which type it is by adding the ``at:`` or ``dt:`` prefix to "
+"the type name. By the way, `.Plug.type` returns this format if there are two"
+" versions of the same type name."
+
+#: cymel.core.cyobjects.node.Node.addAttr:39 of
+msgid "このオプションではなく、本来の attibuteType(at) か dataType(dt) を使用して明示することもできる。"
+msgstr ""
+"You can also specify this using the native attributeType(at) or dataType(dt)"
+" instead of using this option."
+
+#: cymel.core.cyobjects.node.Node.addAttr:43 of
+msgid "proxy を指定した場合は、このオプションは無効となり、 強制的にそれと同じタイプになる。"
+msgstr ""
+"If proxy is specified, this option has no effect and will force the same "
+"type."
+
+#: cymel.core.cyobjects.node.Node.addAttr:46 of
+msgid ""
+"double3 等の数値コンパウンドタイプの場合は、 子アトリビュートも自動生成される。 子のタイプや名前も自動決定されるが、 "
+"subType、childNames、childShortNames、childSuffixes で明示することもできる。"
+msgstr ""
+"For numeric compound types such as double3, child attributes are also "
+"automatically generated. The type and name of the child are automatically "
+"determined, but they can also be specified using subType, childNames, "
+"childShortNames, and childSuffixes."
+
+#: cymel.core.cyobjects.node.Node.addAttr:52 of
+msgid ""
+"一般コンパウンドタイプ(compound)の場合でも、 subType（デフォルトは double ）が共通の場合に限り、 "
+"childNames、childShortNames、childSuffixes のいずれかを指定することで、子を自動生成できる。"
+msgstr ""
+"Even in the case of a general compound type (compound), children can be "
+"automatically generated by specifying either childNames, childShortNames, or"
+" childSuffixes only if the subType (default is double) is common."
+
+#: cymel.core.cyobjects.node.Node.addAttr:57 of
+msgid ""
+"コンパウンドの子が自動生成される場合の、共通の子タイプを指定する。 attibuteType(at)系のみを指定可能。  double3 "
+"等の数値コンパウンドの子のタイプ名を明示することを 主目的とするオプションだが、その場合 doubleLinear や doubleAngle "
+"などの単位付きアトリビュートと したい場合だけ明示すれば良い。"
+msgstr ""
+"Specifies the common child type when compound children are automatically "
+"generated. Only attributeType(at) type can be specified.  The main purpose "
+"of this option is to specify the type name of the child of a numeric "
+"compound such as double3, but in that case, it only needs to be specified if"
+" you want it to be an attribute with units such as doubleLinear or "
+"doubleAngle."
+
+#: cymel.core.cyobjects.node.Node.addAttr:58 of
+msgid "コンパウンドの子が自動生成される場合の、共通の子タイプを指定する。 attibuteType(at)系のみを指定可能。"
+msgstr ""
+"Specifies the common child type when compound children are automatically "
+"generated. Only attributeType(at) type can be specified."
+
+#: cymel.core.cyobjects.node.Node.addAttr:61 of
+msgid ""
+"double3 等の数値コンパウンドの子のタイプ名を明示することを 主目的とするオプションだが、その場合 doubleLinear や "
+"doubleAngle などの単位付きアトリビュートと したい場合だけ明示すれば良い。"
+msgstr ""
+"The main purpose of this option is to specify the type name of the child of "
+"a numeric compound such as double3, but in that case, it only needs to be "
+"specified if you want it to be an attribute with units such as doubleLinear "
+"or doubleAngle."
+
+#: cymel.core.cyobjects.node.Node.addAttr:66 of
+msgid "channelBox フラグを指定する。"
+msgstr "Specify the channelBox flag."
+
+#: cymel.core.cyobjects.node.Node.addAttr:69 of
+msgid "コンパウンドの子アトリビュートのロング名を指定するリスト。 省略すると childSuffixes から自動で決まる。"
+msgstr ""
+"A list specifying the long names of the compound's child attributes. If "
+"omitted, it will be automatically determined from childSuffixes."
+
+#: cymel.core.cyobjects.node.Node.addAttr:73 of
+msgid "コンパウンドの子アトリビュートのショート名を指定するリスト。 省略すると childSuffixes から自動で決まる。"
+msgstr ""
+"A list specifying the short names of the compound's child attributes. If "
+"omitted, it will be automatically determined from childSuffixes."
+
+#: cymel.core.cyobjects.node.Node.addAttr:77 of
+msgid ""
+"コンパウンドの子アトリビュート名を親名に準じた名前に 自動指定するためのロング名用の接尾辞リスト。 ショート名用には小文字化されたものになる。 "
+"省略すると usedAsColor かどうかによって ``XYZW`` か ``RGBA`` になる。"
+msgstr ""
+"A suffix list for long names to automatically name compound child attributes"
+" according to their parent names. It is lowercase for short names. If "
+"omitted, it will be ``XYZW`` or ``RGBA`` depending on whether usedAsColor is"
+" set."
+
+#: cymel.core.cyobjects.node.Node.addAttr:84 of
+msgid ""
+"プロキシアトリビュートを追加する場合のマスターアトリビュートを指定する。 これを指定した場合は usedAsProxy(uac) "
+"オプションは自動指定されるので 指定不要である。"
+msgstr ""
+"Specify the master attribute when adding a proxy attribute. If this is "
+"specified, the usedAsProxy(uac) option is automatically specified and does "
+"not need to be specified."
+
+#: cymel.core.cyobjects.node.Node.addAttr:89 of
+msgid "戻り値として `.Plug` を得るかどうか。"
+msgstr "Whether to get `.Plug` as the return value."
+
+#: cymel.core.cyobjects.node.Node.addAttr:91 of
+msgid "その他、 :mayacmd:`addAttr` コマンドのオプションを指定可能。"
+msgstr "Other options for the :mayacmd:`addAttr` command can be specified."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node.Node.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.core.cyobjects.node.Node.addAttr:93 of
+msgid "None or `.Plug`"
+msgstr "None or `.Plug`"
+
+#: cymel.core.cyobjects.node.Node.aliases:3 of
+msgid "別名と `.Plug` のペアのリストが得られる。"
+msgstr "You will get a list of alias and `.Plug` pairs."
+
+#: cymel.core.cyobjects.node.Node.aliases:5
+#: cymel.core.cyobjects.node.Node.plugs:12 of
+msgid "`list`"
+msgstr "`list`"
+
+#: cymel.core.cyobjects.node.Node.assignUUID:4 of
+msgid "アサインする UUID を指定する。 py=True の場合は None を指定して消去することもできる。"
+msgstr ""
+"Specify the UUID to assign. If py=True, you can also delete it by specifying"
+" None."
+
+#: cymel.core.cyobjects.node.Node.assignUUID:7
+#: cymel.core.cyobjects.node.Node.uuid:5 of
+msgid ""
+"Maya 標準機能ではなく Python の機能を使って生成する UUID は uuid という名前のアトリビュートに保存される。 2016 "
+"未満では常に True 扱いとなる。  2016 以降では、 それ以前に作られたファイルをリファレンスしていると "
+"シーンを開くたびにUUIDが変わってしまう問題を 回避する目的で利用できる。"
+msgstr ""
+"UUIDs that are generated using Python functionality rather than Maya's "
+"standard functionality are stored in an attribute named uuid. For versions "
+"below 2016, it is always treated as True.  In 2016 and later, it can be used"
+" to avoid the problem where the UUID changes every time the scene is opened "
+"if a file created before that is referenced."
+
+#: cymel.core.cyobjects.node.Node.assignUUID:8
+#: cymel.core.cyobjects.node.Node.uuid:6 of
+msgid ""
+"Maya 標準機能ではなく Python の機能を使って生成する UUID は uuid という名前のアトリビュートに保存される。 2016 "
+"未満では常に True 扱いとなる。"
+msgstr ""
+"UUIDs that are generated using Python functionality rather than Maya's "
+"standard functionality are stored in an attribute named uuid. For versions "
+"below 2016, it is always treated as True."
+
+#: cymel.core.cyobjects.node.Node.assignUUID:12
+#: cymel.core.cyobjects.node.Node.uuid:10 of
+msgid ""
+"2016 以降では、 それ以前に作られたファイルをリファレンスしていると シーンを開くたびにUUIDが変わってしまう問題を 回避する目的で利用できる。"
+msgstr ""
+"In 2016 and later, it can be used to avoid the problem where the UUID "
+"changes every time the scene is opened if a file created before that is "
+"referenced."
+
+#: cymel.core.cyobjects.node.Node.namespace:3 of
+msgid "`.Namespace`"
+msgstr "`.Namespace`"
+
+#: cymel.core.cyobjects.node.Node.plugs:3 of
+msgid ""
+":mayacmd:`listAttr` コマンドの単純なラッパーであり、 オプションで条件を指定しなければ、 ノードの全アトリビュートが得られる。"
+msgstr ""
+"A simple wrapper around the :mayacmd:`listAttr` command, which returns all "
+"attributes of a node without any optional conditions."
+
+#: cymel.core.cyobjects.node.Node.plugs:7 of
+msgid ""
+"ただし、 m=True を指定しなければマルチ要素は得られない。 また、 worldSpace アトリビュートの場合は、 m=True "
+"を指定しても要素は得られない （worldSpace の場合はインデックスを明示しない方が良いため）。"
+msgstr ""
+"However, multi-element cannot be obtained unless m=True is specified. Also, "
+"in the case of the worldSpace attribute, you will not get the element even "
+"if you specify m=True (because in the case of worldSpace, it is better not "
+"to specify the index)."
+
+#: cymel.core.cyobjects.node.Node.referenceNode:3 of
+msgid "`.Reference` or None"
+msgstr "`.Reference` or None"
+
+#: cymel.core.cyobjects.node.Node.rename:3 of
+msgid "新しい名前。"
+msgstr "New name."
+
+#: cymel.core.cyobjects.node.Node.rename:4
+#: cymel.core.cyobjects.node.Node.setNamespace:4 of
+msgid "シェイプの名前は維持する。"
+msgstr "Keep the shape name."
+
+#: cymel.core.cyobjects.node.Node.setLocked:3 of
+msgid "True だとロック、 False だとアンロック。"
+msgstr "Locks if True, unlocks if False."
+
+#: cymel.core.cyobjects.node.Node.setNamespace:3 of
+msgid "ネームスペース。"
+msgstr "namespace."
+
+#: cymel.core.cyobjects.node.Node.uuid:3 of
+msgid "既存の ID 破棄して新しい ID を割り当てる。"
+msgstr "Discard the existing ID and assign a new one."
+
+#: cymel.core.cyobjects.node.Node.uuid:14 of
+msgid "`.UUID`"
+msgstr "`.UUID`"
+
+#: cymel.core.cyobjects.node.Node.uuid:17 of
+msgid ""
+"指定UUIDをアサインするには `assignUUID` 、 UUIDからノードを得るには `.CyObject.byUUID` を利用する。"
+msgstr ""
+"Use `assignUUID` to assign a specified UUID, and `.CyObject.byUUID` to "
+"obtain a node from the UUID."

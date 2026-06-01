@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.utils.operation.rst:2
+msgid "cymel.utils.operation"
+msgstr "cymel.utils.operation"
+
+#: cymel.utils.operation:1 of
+msgid "Maya操作関連。"
+msgstr "Maya operation related."
+
+#: ../srcs/generated/cymel.utils.operation.rst:9
+msgid "Classes:"
+msgstr "Classes:"
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid ":py:obj:`NonUndoable <cymel.utils.operation.NonUndoable>`"
+msgstr ":py:obj:`NonUndoable <cymel.utils.operation.NonUndoable>`"
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid "アンドゥ不可で実行するコンテキスト。"
+msgstr "Context to run without undo."
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid ":py:obj:`PreserveSelection <cymel.utils.operation.PreserveSelection>`"
+msgstr ":py:obj:`PreserveSelection <cymel.utils.operation.PreserveSelection>`"
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid "元の選択状態を復元できるコンテキスト。"
+msgstr "A context in which the original selection state can be restored."
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid ":py:obj:`UndoChunk <cymel.utils.operation.UndoChunk>`"
+msgstr ":py:obj:`UndoChunk <cymel.utils.operation.UndoChunk>`"
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid "1つのアンドゥチャンクを作るコンテキスト。"
+msgstr "Context to create one undo chunk."
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid ":py:obj:`UndoTransaction <cymel.utils.operation.UndoTransaction>`"
+msgstr ":py:obj:`UndoTransaction <cymel.utils.operation.UndoTransaction>`"
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid "コンテキストで例外が発生した場合にアンドゥするトランザクション。"
+msgstr "Transaction to undo if an exception occurs in the context."
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid ":py:obj:`WaitCursor <cymel.utils.operation.WaitCursor>`"
+msgstr ":py:obj:`WaitCursor <cymel.utils.operation.WaitCursor>`"
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid "ウェイトカーソルを表示するコンテキスト。"
+msgstr "Context in which to display the weight cursor."
+
+#: ../srcs/generated/cymel.utils.operation.rst:29
+msgid "Functions:"
+msgstr "Functions:"
+
+#: ../srcs/generated/cymel.utils.operation.rst:51:<autosummary>:1
+msgid ":py:obj:`docmd <cymel.utils.operation.docmd>`\\ \\(do\\, undo\\[\\, redo\\]\\)"
+msgstr ":py:obj:`docmd <cymel.utils.operation.docmd>`\\ \\(do\\, undo\\[\\, redo\\]\\)"
+
+#: ../srcs/generated/cymel.utils.operation.rst:51:<autosummary>:1
+#: cymel.utils.operation.docmd:1 of
+msgid "任意の callable オブジェクトを与えて undo 可能なコマンドとして実行する。"
+msgstr ""
+"Given an arbitrary callable object, execute it as an undoable command."
+
+#: ../srcs/generated/cymel.utils.operation.rst:54
+msgid "Functions Details:"
+msgstr "Function Details:"
+
+#: cymel.utils.operation.docmd:3 of
+msgid "そのままだと undo/redo が不可能な処理を undo 可能として実行することが出来る。"
+msgstr ""
+"Processes that would otherwise be impossible to undo/redo can be executed as"
+" undoable."
+
+#: cymel.utils.operation.docmd of
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.utils.operation.docmd:5 of
+msgid "最初の実行用の実行可能オブジェクト。"
+msgstr "Executable object for first run."
+
+#: cymel.utils.operation.docmd:7 of
+msgid "undo 用の実行可能オブジェクト。"
+msgstr "Executable object for undo."
+
+#: cymel.utils.operation.docmd:9 of
+msgid "redo 用の実行可能オブジェクト。 省略すると do が使用される。"
+msgstr "Executable object for redo. If omitted, do is used."

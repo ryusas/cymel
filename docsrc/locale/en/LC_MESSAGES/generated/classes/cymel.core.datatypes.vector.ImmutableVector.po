@@ -1,0 +1,279 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:2
+msgid "class cymel.core.datatypes.vector.ImmutableVector"
+msgstr "class cymel.core.datatypes.vector.ImmutableVector"
+
+#: cymel.core.datatypes.vector.ImmutableVector:1 of
+msgid "`Vector` の `immutable` ラッパー。"
+msgstr "`immutable` wrapper for `Vector`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+msgid ""
+":py:obj:`cartesianize "
+"<cymel.core.datatypes.vector.ImmutableVector.cartesianize>`\\ \\(\\*args\\, "
+"\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`cartesianize "
+"<cymel.core.datatypes.vector.ImmutableVector.cartesianize>`\\ \\(\\*args\\, "
+"\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "同次座標を直交座標(W=1)に変換する。"
+msgstr "Convert homogeneous coordinates to Cartesian coordinates (W=1)."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+msgid ""
+":py:obj:`homogenize "
+"<cymel.core.datatypes.vector.ImmutableVector.homogenize>`\\ \\(\\*args\\, "
+"\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`homogenize "
+"<cymel.core.datatypes.vector.ImmutableVector.homogenize>`\\ \\(\\*args\\, "
+"\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "有理形式の座標を同次座標に変換する。"
+msgstr "Convert rational form coordinates to homogeneous coordinates."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+msgid ""
+":py:obj:`iabs <cymel.core.datatypes.vector.ImmutableVector.iabs>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`iabs <cymel.core.datatypes.vector.ImmutableVector.iabs>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "4次元ベクトルの各要素を絶対値にする。"
+msgstr "Set each element of a 4-dimensional vector to an absolute value."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+msgid ""
+":py:obj:`iadd <cymel.core.datatypes.vector.ImmutableVector.iadd>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`iadd <cymel.core.datatypes.vector.ImmutableVector.iadd>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "4次元ベクトルの和をセットする。"
+msgstr "Sets the sum of 4-dimensional vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+msgid ""
+":py:obj:`idiv <cymel.core.datatypes.vector.ImmutableVector.idiv>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`idiv <cymel.core.datatypes.vector.ImmutableVector.idiv>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "4次元ベクトルの商をセットする。"
+msgstr "Sets the quotient of a 4-dimensional vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+msgid ""
+":py:obj:`imul <cymel.core.datatypes.vector.ImmutableVector.imul>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`imul <cymel.core.datatypes.vector.ImmutableVector.imul>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "4次元ベクトルの積をセットする。"
+msgstr "Sets the product of 4-dimensional vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+msgid ""
+":py:obj:`ineg <cymel.core.datatypes.vector.ImmutableVector.ineg>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`ineg <cymel.core.datatypes.vector.ImmutableVector.ineg>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "4次元ベクトルの符号反転をセットする。"
+msgstr "Sets the sign inversion of a 4-dimensional vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+msgid ""
+":py:obj:`isub <cymel.core.datatypes.vector.ImmutableVector.isub>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`isub <cymel.core.datatypes.vector.ImmutableVector.isub>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+msgid ""
+":py:obj:`normalize "
+"<cymel.core.datatypes.vector.ImmutableVector.normalize>`\\ \\(\\*args\\, "
+"\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`normalize "
+"<cymel.core.datatypes.vector.ImmutableVector.normalize>`\\ \\(\\*args\\, "
+"\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "正規化3次元ベクトルをセットする。"
+msgstr "Set the normalized 3D vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+msgid ""
+":py:obj:`normalizeIt "
+"<cymel.core.datatypes.vector.ImmutableVector.normalizeIt>`\\ \\(\\*args\\, "
+"\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`normalizeIt "
+"<cymel.core.datatypes.vector.ImmutableVector.normalizeIt>`\\ \\(\\*args\\, "
+"\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+msgid ""
+":py:obj:`orthogonalize "
+"<cymel.core.datatypes.vector.ImmutableVector.orthogonalize>`\\ \\(\\*args\\,"
+" \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`orthogonalize "
+"<cymel.core.datatypes.vector.ImmutableVector.orthogonalize>`\\ \\(\\*args\\,"
+" \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "指定ベクトルに直交化したベクトルをセットする。"
+msgstr "Sets a vector that is orthogonal to the specified vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+msgid ""
+":py:obj:`rationalize "
+"<cymel.core.datatypes.vector.ImmutableVector.rationalize>`\\ \\(\\*args\\, "
+"\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`rationalize "
+"<cymel.core.datatypes.vector.ImmutableVector.rationalize>`\\ \\(\\*args\\, "
+"\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "同次座標を有利形式に変換する。"
+msgstr "Convert homogeneous coordinates to advantageous form."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+msgid ""
+":py:obj:`set <cymel.core.datatypes.vector.ImmutableVector.set>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`set <cymel.core.datatypes.vector.ImmutableVector.set>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:42:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "他の値をセットする。"
+msgstr "Set other values."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst:45
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:3 of
+msgid "(W*x, W*y, W*z, W) が (x, y, z, 1) に変換される。"
+msgstr "(W*x, W*y, W*z, W) is converted to (x, y, z, 1)."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:5
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:6
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:11 of
+msgid "`Vector` (self)"
+msgstr "`Vector` (self)"
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:3 of
+msgid "(x, y, z, W) が (W*x, W*y, W*z, W) に変換される。"
+msgstr "(x, y, z, W) is converted to (W*x, W*y, W*z, W)."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:4 of
+msgid "もう1方のベクトル。"
+msgstr "The other vector."
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:4 of
+msgid "分母のベクトル、またはスカラー。"
+msgstr "Denominator vector or scalar."
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:5 of
+msgid "ゼロ除算を避ける為の許容誤差。"
+msgstr "Tolerance to avoid division by zero."
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:4 of
+msgid "もう1方のベクトル、またはスカラー。"
+msgstr "The other vector or scalar."
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:5 of
+msgid "`Vector`"
+msgstr "`Vector`"
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:4 of
+msgid "軸ベクトル。"
+msgstr "Axis vector."
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:3 of
+msgid "(W*x, W*y, W*z, W) が (x, y, z, W) に変換される。"
+msgstr "(W*x, W*y, W*z, W) is converted to (x, y, z, W)."
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:3 of
+msgid "コンストラクタと同様に、以下の値を指定可能。"
+msgstr "Similar to the constructor, the following values ​​can be specified."
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:6 of
+msgid "x, y, z, w"
+msgstr "x, y, z, w"
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:7 of
+msgid "x, y, z"
+msgstr "x, y, z"
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:8 of
+msgid "x, y"
+msgstr "x, y"
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:9 of
+msgid "4値までのシーケンス"
+msgstr "Sequence up to 4 values"

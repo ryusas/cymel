@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.cyobjects.node.Node &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="cymel.core.cyobjects.node_c" href="../cymel.core.cyobjects.node_c.html" />
+    <link rel="prev" title="cymel.core.cyobjects.node" href="../cymel.core.cyobjects.node.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.node_c.html" title="cymel.core.cyobjects.node_c"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.node.html" title="cymel.core.cyobjects.node"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.node.html" accesskey="U">cymel.core.cyobjects.node</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.node.Node</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-cyobjects-node-node">
+<h1>class cymel.core.cyobjects.node.Node<a class="headerlink" href="#class-cymel-core-cyobjects-node-node" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-d9ebdc9cccc10c8afa6f0008adc32ed484e6f705.png" alt="Inheritance diagram of Node" usemap="#inheritanceaafc11817e" class="inheritance graphviz" /></div>
+<map id="inheritanceaafc11817e" name="inheritanceaafc11817e">
+<area shape="rect" id="node1" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" target="_top" title="Mayaラッパーオブジェクトの抽象基底クラス。" alt="" coords="5,5,77,29"/>
+<area shape="rect" id="node3" href="cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c" target="_top" title="`.Node` クラスでサポートする機能の中核。" alt="" coords="5,44,77,68"/>
+<area shape="rect" id="node2" href="#cymel.core.cyobjects.node.Node" target="_top" title=":mayanode:`node` ノードタイプラッパークラス。" alt="" coords="5,83,77,107"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.node.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c" title="cymel.core.cyobjects.node_c.Node_c"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node_c</span></code></a></p>
+<p><a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/node.html">node</a> Node type wrapper class.</p>
+<p>Supports node generation when creating a class instance without fixed arguments.</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.addAttr" title="cymel.core.cyobjects.node.Node.addAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addAttr</span></code></a>([longName, type, subType, ...])</p></td>
+<td><p>Add attributes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.aliases" title="cymel.core.cyobjects.node.Node.aliases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aliases</span></code></a>()</p></td>
+<td><p>Get a list of attributes that have aliases defined.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.assignUUID" title="cymel.core.cyobjects.node.Node.assignUUID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assignUUID</span></code></a>(val[, py])</p></td>
+<td><p>Assign a UUID.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.delete" title="cymel.core.cyobjects.node.Node.delete"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete</span></code></a>()</p></td>
+<td><p>Delete a node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.listAliases" title="cymel.core.cyobjects.node.Node.listAliases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listAliases</span></code></a>()</p></td>
+<td><p>Aliases for <a class="reference internal" href="#cymel.core.cyobjects.node.Node.aliases" title="cymel.core.cyobjects.node.Node.aliases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aliases</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.listAttr" title="cymel.core.cyobjects.node.Node.listAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listAttr</span></code></a>(**kwargs)</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.node.Node.plugs" title="cymel.core.cyobjects.node.Node.plugs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugs</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.lock" title="cymel.core.cyobjects.node.Node.lock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lock</span></code></a>([val])</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.node.Node.setLocked" title="cymel.core.cyobjects.node.Node.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.namespace" title="cymel.core.cyobjects.node.Node.namespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">namespace</span></code></a>()</p></td>
+<td><p>Get namespace.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.plugs" title="cymel.core.cyobjects.node.Node.plugs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugs</span></code></a>(**kwargs)</p></td>
+<td><p>Get a list of plugs that match the specified criteria.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.referenceNode" title="cymel.core.cyobjects.node.Node.referenceNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">referenceNode</span></code></a>​​()</p></td>
+<td><p>If the node is a reference, get the <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/reference.html">reference</a> node that manages it.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.rename" title="cymel.core.cyobjects.node.Node.rename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename</span></code></a>(name[, ignoreShape])</p></td>
+<td><p>Rename.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.setLocked" title="cymel.core.cyobjects.node.Node.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>([val])</p></td>
+<td><p>lock or unlock.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.setNamespace" title="cymel.core.cyobjects.node.Node.setNamespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setNamespace</span></code></a>(ns[, ignoreShape])</p></td>
+<td><p>Set namespace.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.unlock" title="cymel.core.cyobjects.node.Node.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>()</p></td>
+<td><p>Unlock.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node.Node.uuid" title="cymel.core.cyobjects.node.Node.uuid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uuid</span></code></a>([new, py])</p></td>
+<td><p>Get the UUID.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.addAttr">
+<span class="sig-name descname"><span class="pre">addAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">longName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subType</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channelBox</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">childNames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">childShortNames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">childSuffixes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getPlug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.addAttr" title="Link to this definition">¶</a></dt>
+<dd><p>Add attributes.</p>
+<p>A wrapper that makes the <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/addAttr.html">addAttr</a> command easier to use.</p>
+<ul class="simple">
+<li><p>Free yourself from the hassle of using -at and -dt when specifying type names.</p></li>
+<li><p>Automatic generation of compound children (especially numeric compounds such as double3).</p></li>
+<li><p>Simplified proxy specification.</p></li>
+<li><p>Improved specification of default value, maximum value, and minimum value.</p>
+<ul>
+<li><p>Default values ​​can also be specified for the -dt type.</p></li>
+<li><p>The matrix type can be specified with either <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> or <a class="reference internal" href="cymel.core.datatypes.transformation.Transformation.html#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a>.</p></li>
+<li><p>Numeric compounds can specify child values ​​in <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> format.</p></li>
+<li><p>As per the behavior of the <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/addAttr.html">addAttr</a> command, specify it in internal units (for example, radians for angles).</p></li>
+</ul>
+</li>
+<li><p>All options of the <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/addAttr.html">addAttr</a> command are also available.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>longName</strong><strong>|</strong><strong>ln</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Long name of the attribute. At a minimum, you must specify either the long name or the short name.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Attribute type name. If omitted, it will be double.  You can specify the attributeType(at) type and dataType(dt) type without worrying about the difference. Some types have the same type name, but in that case the more general one is used (for example, matrix becomes dt, double3 becomes at).  You can specify which type it is by adding the <code class="docutils literal notranslate"><span class="pre">at:</span></code> or <code class="docutils literal notranslate"><span class="pre">dt:</span></code> prefix to the type name. By the way, <code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug.type</span></code> returns this format if there are two versions of the same type name.  You can also specify this using the native attributeType(at) or dataType(dt) instead of using this option.  If proxy is specified, this option has no effect and will force the same type.  For numeric compound types such as double3, child attributes are also automatically generated. The type and name of the child are automatically determined, but they can also be specified using subType, childNames, childShortNames, and childSuffixes.  Even in the case of a general compound type (compound), children can be automatically generated by specifying either childNames, childShortNames, or childSuffixes only if the subType (default is double) is common.</p></li>
+<li><p><strong>subType</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Specifies the common child type when compound children are automatically generated. Only attributeType(at) type can be specified.  The main purpose of this option is to specify the type name of the child of a numeric compound such as double3, but in that case, it only needs to be specified if you want it to be an attribute with units such as doubleLinear or doubleAngle.</p></li>
+<li><p><strong>channelBox</strong><strong>|</strong><strong>cb</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Specify the channelBox flag.</p></li>
+<li><p><strong>childNames</strong> (<em>sequence</em>) – A list specifying the long names of the compound’s child attributes. If omitted, it will be automatically determined from childSuffixes.</p></li>
+<li><p><strong>childShortNames</strong> (<em>sequence</em>) – A list specifying the short names of the compound’s child attributes. If omitted, it will be automatically determined from childSuffixes.</p></li>
+<li><p><strong>childSuffixes</strong> (<em>sequence</em>) – A suffix list for long names to automatically name compound child attributes according to their parent names. It is lowercase for short names. If omitted, it will be <code class="docutils literal notranslate"><span class="pre">XYZW</span></code> or <code class="docutils literal notranslate"><span class="pre">RGBA</span></code> depending on whether usedAsColor is set.</p></li>
+<li><p><strong>proxy</strong><strong>|</strong><strong>pxy</strong> – Specify the master attribute when adding a proxy attribute. If this is specified, the usedAsProxy(uac) option is automatically specified and does not need to be specified.</p></li>
+<li><p><strong>getPlug</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> as the return value.</p></li>
+<li><p><strong>kwargs</strong> – Other options for the <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/addAttr.html">addAttr</a> command can be specified.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None or <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.aliases">
+<span class="sig-name descname"><span class="pre">aliases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.aliases" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of attributes that have aliases defined.</p>
+<p>You will get a list of alias and <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> pairs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.assignUUID">
+<span class="sig-name descname"><span class="pre">assignUUID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">py</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.assignUUID" title="Link to this definition">¶</a></dt>
+<dd><p>Assign a UUID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>val</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code>) – Specify the UUID to assign. If py=True, you can also delete it by specifying None.</p></li>
+<li><p><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – UUIDs that are generated using Python functionality rather than Maya’s standard functionality are stored in an attribute named uuid. For versions below 2016, it is always treated as True.  In 2016 and later, it can be used to avoid the problem where the UUID changes every time the scene is opened if a file created before that is referenced.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.delete" title="Link to this definition">¶</a></dt>
+<dd><p>Delete a node.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.listAliases">
+<span class="sig-name descname"><span class="pre">listAliases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.listAliases" title="Link to this definition">¶</a></dt>
+<dd><p>Aliases for <a class="reference internal" href="#cymel.core.cyobjects.node.Node.aliases" title="cymel.core.cyobjects.node.Node.aliases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aliases</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.listAttr">
+<span class="sig-name descname"><span class="pre">listAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.listAttr" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.node.Node.plugs" title="cymel.core.cyobjects.node.Node.plugs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugs</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.lock">
+<span class="sig-name descname"><span class="pre">lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.lock" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.node.Node.setLocked" title="cymel.core.cyobjects.node.Node.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.namespace" title="Link to this definition">¶</a></dt>
+<dd><p>Get namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.utils.namespace.Namespace.html#cymel.utils.namespace.Namespace" title="cymel.utils.namespace.Namespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Namespace</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.plugs">
+<span class="sig-name descname"><span class="pre">plugs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.plugs" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of plugs that match the specified criteria.</p>
+<p>A simple wrapper around the <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/listAttr.html">listAttr</a> command, which returns all attributes of a node without any optional conditions.</p>
+<p>However, multi-element cannot be obtained unless m=True is specified. Also, in the case of the worldSpace attribute, you will not get the element even if you specify m=True (because in the case of worldSpace, it is better not to specify the index).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.referenceNode">
+<span class="sig-name descname"><span class="pre">referenceNode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.referenceNode" title="Link to this definition">¶</a></dt>
+<dd><p>If the node is a reference, get the <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/reference.html">reference</a> node that manages it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.cyobjects.reference.Reference.html#cymel.core.cyobjects.reference.Reference" title="cymel.core.cyobjects.reference.Reference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reference</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.rename">
+<span class="sig-name descname"><span class="pre">rename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignoreShape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.rename" title="Link to this definition">¶</a></dt>
+<dd><p>Rename.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – New name.</p></li>
+<li><p><strong>ignoreShape</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Keep the shape name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.setLocked">
+<span class="sig-name descname"><span class="pre">setLocked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.setLocked" title="Link to this definition">¶</a></dt>
+<dd><p>lock or unlock.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Locks if True, unlocks if False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.setNamespace">
+<span class="sig-name descname"><span class="pre">setNamespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignoreShape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.setNamespace" title="Link to this definition">¶</a></dt>
+<dd><p>Set namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ns</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – namespace.</p></li>
+<li><p><strong>ignoreShape</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Keep the shape name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.unlock">
+<span class="sig-name descname"><span class="pre">unlock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.unlock" title="Link to this definition">¶</a></dt>
+<dd><p>Unlock.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.node.Node.uuid">
+<span class="sig-name descname"><span class="pre">uuid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">py</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node.Node.uuid" title="Link to this definition">¶</a></dt>
+<dd><p>Get the UUID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>new</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Discard the existing ID and assign a new one.</p></li>
+<li><p><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – UUIDs that are generated using Python functionality rather than Maya’s standard functionality are stored in an attribute named uuid. For versions below 2016, it is always treated as True.  In 2016 and later, it can be used to avoid the problem where the UUID changes every time the scene is opened if a file created before that is referenced.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <a class="reference internal" href="#cymel.core.cyobjects.node.Node.assignUUID" title="cymel.core.cyobjects.node.Node.assignUUID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assignUUID</span></code></a> to assign a specified UUID, and <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.byUUID" title="cymel.core.cyobjects.cyobject.CyObject.byUUID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject.byUUID</span></code></a> to obtain a node from the UUID.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.cyobjects.node.Node</a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.addAttr"><code class="docutils literal notranslate"><span class="pre">Node.addAttr()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.aliases"><code class="docutils literal notranslate"><span class="pre">Node.aliases()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.assignUUID"><code class="docutils literal notranslate"><span class="pre">Node.assignUUID()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.delete"><code class="docutils literal notranslate"><span class="pre">Node.delete()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.listAliases"><code class="docutils literal notranslate"><span class="pre">Node.listAliases()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.listAttr"><code class="docutils literal notranslate"><span class="pre">Node.listAttr()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.lock"><code class="docutils literal notranslate"><span class="pre">Node.lock()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.namespace"><code class="docutils literal notranslate"><span class="pre">Node.namespace()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.plugs"><code class="docutils literal notranslate"><span class="pre">Node.plugs()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.referenceNode"><code class="docutils literal notranslate"><span class="pre">Node.referenceNode()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.rename"><code class="docutils literal notranslate"><span class="pre">Node.rename()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.setLocked"><code class="docutils literal notranslate"><span class="pre">Node.setLocked()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.setNamespace"><code class="docutils literal notranslate"><span class="pre">Node.setNamespace()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.unlock"><code class="docutils literal notranslate"><span class="pre">Node.unlock()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.node.Node.uuid"><code class="docutils literal notranslate"><span class="pre">Node.uuid()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../cymel.core.cyobjects.node.html"
+                          title="previous chapter">cymel.core.cyobjects.node</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../cymel.core.cyobjects.node_c.html"
+                          title="next chapter">cymel.core.cyobjects.node_c</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.core.cyobjects.node.Node.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.node_c.html" title="cymel.core.cyobjects.node_c"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.node.html" title="cymel.core.cyobjects.node"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.node.html" >cymel.core.cyobjects.node</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.node.Node</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

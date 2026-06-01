@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel.pyutils.immutables &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
+    <script src="../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class cymel.pyutils.immutables.ImmutableDict" href="classes/cymel.pyutils.immutables.ImmutableDict.html" />
+    <link rel="prev" title="cymel.pyutils.finalizer" href="cymel.pyutils.finalizer.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="classes/cymel.pyutils.immutables.ImmutableDict.html" title="class cymel.pyutils.immutables.ImmutableDict"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cymel.pyutils.finalizer.html" title="cymel.pyutils.finalizer"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.pyutils.immutables</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-cymel.pyutils.immutables">
+<span id="cymel-pyutils-immutables"></span><h1>cymel.pyutils.immutables<a class="headerlink" href="#module-cymel.pyutils.immutables" title="Link to this heading">¶</a></h1>
+<p>A simple immutable wrapper.</p>
+<p class="rubric">Classes:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="classes/cymel.pyutils.immutables.ImmutableDict.html#cymel.pyutils.immutables.ImmutableDict" title="cymel.pyutils.immutables.ImmutableDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImmutableDict</span></code></a></p></td>
+<td><p>immutable <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Exceptions:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.pyutils.immutables.CymelImmutableError" title="cymel.pyutils.immutables.CymelImmutableError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CymelImmutableError</span></code></a></p></td>
+<td><p><a class="reference internal" href="#cymel.pyutils.immutables.immutable" title="cymel.pyutils.immutables.immutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code></a> The wrapped object has been rewritten.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Functions:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.pyutils.immutables.immutable" title="cymel.pyutils.immutables.immutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code></a>(type_or_obj, *args, **kwargs)</p></td>
+<td><p>Generates a wrapper that makes the object immutable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.pyutils.immutables.immutableType" title="cymel.pyutils.immutables.immutableType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutableType</span></code></a>(cls[, name, module])</p></td>
+<td><p>Generate a wrapper class that makes the object immutable.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Constants:</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.immutables.</span></span><span class="sig-name descname"><span class="pre">OPTIONAL_MUTATOR_DICT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{&lt;class</span> <span class="pre">'OpenMaya.MEulerRotation'&gt;:</span> <span class="pre">('boundIt',</span> <span class="pre">'incrementalRotateBy',</span> <span class="pre">'invertIt',</span> <span class="pre">'reorderIt',</span> <span class="pre">'setToAlternateSolution',</span> <span class="pre">'setToClosestCut',</span> <span class="pre">'setToClosestSolution',</span> <span class="pre">'setValue'),</span> <span class="pre">&lt;class</span> <span class="pre">'OpenMaya.MMatrix'&gt;:</span> <span class="pre">('setElement',</span> <span class="pre">'setToIdentity',</span> <span class="pre">'setToProduct'),</span> <span class="pre">&lt;class</span> <span class="pre">'OpenMaya.MPoint'&gt;:</span> <span class="pre">('cartesianize',</span> <span class="pre">'rationalize',</span> <span class="pre">'homogenize'),</span> <span class="pre">&lt;class</span> <span class="pre">'OpenMaya.MQuaternion'&gt;:</span> <span class="pre">('conjugateIt',</span> <span class="pre">'invertIt',</span> <span class="pre">'negateIt',</span> <span class="pre">'normalizeIt',</span> <span class="pre">'setToXAxis',</span> <span class="pre">'setToYAxis',</span> <span class="pre">'setToZAxis',</span> <span class="pre">'setValue'),</span> <span class="pre">&lt;class</span> <span class="pre">'OpenMaya.MVector'&gt;:</span> <span class="pre">('normalize',),</span> <span class="pre">&lt;class</span> <span class="pre">'cymel.core.datatypes.boundingbox.BoundingBox'&gt;:</span> <span class="pre">('clear',</span> <span class="pre">'transformUsing',</span> <span class="pre">'expand'),</span> <span class="pre">&lt;class</span> <span class="pre">'cymel.core.datatypes.eulerrotation.EulerRotation'&gt;:</span> <span class="pre">('set',</span> <span class="pre">'setValue',</span> <span class="pre">'incrementalRotateBy',</span> <span class="pre">'invertIt',</span> <span class="pre">'reorderIt',</span> <span class="pre">'boundIt',</span> <span class="pre">'setToAlternateSolution',</span> <span class="pre">'setToClosestSolution',</span> <span class="pre">'setToClosestCut',</span> <span class="pre">'setToReverseDirection'),</span> <span class="pre">&lt;class</span> <span class="pre">'cymel.core.datatypes.matrix.Matrix'&gt;:</span> <span class="pre">('set',</span> <span class="pre">'setRow',</span> <span class="pre">'setRows',</span> <span class="pre">'setColumn',</span> <span class="pre">'setColumns',</span> <span class="pre">'setAxis',</span> <span class="pre">'setAxes',</span> <span class="pre">'imulidivsetTranslation',</span> <span class="pre">'setT',</span> <span class="pre">'addTranslation',</span> <span class="pre">'addT',</span> <span class="pre">'subTranslation',</span> <span class="pre">'subT',</span> <span class="pre">'mirrorIt',</span> <span class="pre">'setToIdentity',</span> <span class="pre">'init3x3',</span> <span class="pre">'initTranslation',</span> <span class="pre">'initT',</span> <span class="pre">'setElem',</span> <span class="pre">'transposeIt',</span> <span class="pre">'invertIt',</span> <span class="pre">'adjugateIt',</span> <span class="pre">'adjointIt',</span> <span class="pre">'homogenizeIt',</span> <span class="pre">'orthonormalizeIt'),</span> <span class="pre">&lt;class</span> <span class="pre">'cymel.core.datatypes.quaternion.Quaternion'&gt;:</span> <span class="pre">('set',</span> <span class="pre">'setValue',</span> <span class="pre">'setToIdentity',</span> <span class="pre">'setToXAxis',</span> <span class="pre">'setToYAxis',</span> <span class="pre">'setToZAxis',</span> <span class="pre">'setAngle',</span> <span class="pre">'conjugateIt',</span> <span class="pre">'invertIt',</span> <span class="pre">'normalize',</span> <span class="pre">'normalizeIt',</span> <span class="pre">'negateIt'),</span> <span class="pre">&lt;class</span> <span class="pre">'cymel.core.datatypes.transformation.Transformation'&gt;:</span> <span class="pre">('clear',),</span> <span class="pre">&lt;class</span> <span class="pre">'cymel.core.datatypes.vector.Vector'&gt;:</span> <span class="pre">('set',</span> <span class="pre">'normalize',</span> <span class="pre">'normalizeIt',</span> <span class="pre">'cartesianize',</span> <span class="pre">'rationalize',</span> <span class="pre">'homogenize',</span> <span class="pre">'iabs',</span> <span class="pre">'ineg',</span> <span class="pre">'iadd',</span> <span class="pre">'isub',</span> <span class="pre">'imul',</span> <span class="pre">'idiv',</span> <span class="pre">'orthogonalize'),</span> <span class="pre">&lt;class</span> <span class="pre">'dict'&gt;:</span> <span class="pre">('clear',</span> <span class="pre">'pop',</span> <span class="pre">'popitem',</span> <span class="pre">'setdefault',</span> <span class="pre">'update'),</span> <span class="pre">&lt;class</span> <span class="pre">'list'&gt;:</span> <span class="pre">('append',</span> <span class="pre">'extend',</span> <span class="pre">'insert'),</span> <span class="pre">&lt;class</span> <span class="pre">'maya.OpenMaya.MEulerRotation'&gt;:</span> <span class="pre">('boundIt',</span> <span class="pre">'incrementalRotateBy',</span> <span class="pre">'invertIt',</span> <span class="pre">'reorderIt',</span> <span class="pre">'setToAlternateSolution',</span> <span class="pre">'setToClosestCut',</span> <span class="pre">'setToClosestSolution',</span> <span class="pre">'setValue'),</span> <span class="pre">&lt;class</span> <span class="pre">'maya.OpenMaya.MMatrix'&gt;:</span> <span class="pre">['setToIdentity',</span> <span class="pre">'setToProduct'],</span> <span class="pre">&lt;class</span> <span class="pre">'maya.OpenMaya.MPoint'&gt;:</span> <span class="pre">('cartesianize',</span> <span class="pre">'rationalize',</span> <span class="pre">'homogenize'),</span> <span class="pre">&lt;class</span> <span class="pre">'maya.OpenMaya.MQuaternion'&gt;:</span> <span class="pre">['conjugateIt',</span> <span class="pre">'invertIt',</span> <span class="pre">'negateIt',</span> <span class="pre">'normalizeIt',</span> <span class="pre">'setToXAxis',</span> <span class="pre">'setToYAxis',</span> <span class="pre">'setToZAxis'],</span> <span class="pre">&lt;class</span> <span class="pre">'maya.OpenMaya.MVector'&gt;:</span> <span class="pre">('normalize',),</span> <span class="pre">&lt;class</span> <span class="pre">'set'&gt;:</span> <span class="pre">('update',</span> <span class="pre">'intersection_update',</span> <span class="pre">'difference_update',</span> <span class="pre">'symmetric_difference_update',</span> <span class="pre">'add',</span> <span class="pre">'remove',</span> <span class="pre">'discard',</span> <span class="pre">'pop',</span> <span class="pre">'clear')}</span></span><a class="headerlink" href="#cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary to keep track of additional mutators per class. Requires proper maintenance.</p>
+</dd></dl>
+
+<p class="rubric">Exceptions Details:</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="cymel.pyutils.immutables.CymelImmutableError">
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.pyutils.immutables.</span></span><span class="sig-name descname"><span class="pre">CymelImmutableError</span></span><a class="headerlink" href="#cymel.pyutils.immutables.CymelImmutableError" title="Link to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#cymel.pyutils.immutables.immutable" title="cymel.pyutils.immutables.immutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code></a> The wrapped object has been rewritten.</p>
+</dd></dl>
+
+<p class="rubric">Function Details:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.immutables.immutable">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.immutables.</span></span><span class="sig-name descname"><span class="pre">immutable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_or_obj</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.immutables.immutable" title="Link to this definition">¶</a></dt>
+<dd><p>Generates a wrapper that makes the object immutable.</p>
+<p>Call <a class="reference internal" href="#cymel.pyutils.immutables.immutableType" title="cymel.pyutils.immutables.immutableType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutableType</span></code></a> to get a wrapper class with default settings, and a new instance wrapped in it is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type_or_obj</strong> – The class or instance of the object to wrap. Old style classes are not supported. When an instance is specified, the wrapper’s initialization argument is the instance itself, so it only works if a copy constructor is implemented.</p></li>
+<li><p><strong>args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a>) – Initialization argument when a class is specified for type_or_obj.</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a>) – Initialization argument when a class is specified for type_or_obj.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>wrapper object.</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">cymel.main</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cm</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">immutable</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">woo</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">foo</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">boo</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># construct a immutable dict.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">immutable</span><span class="p">({</span><span class="s1">&#39;woo&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;boo&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">})</span>  <span class="c1"># same result via copying.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">]</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># d[&#39;foo&#39;] = 9   # CymelImmutableError</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="vm">__class__</span> <span class="ow">is</span> <span class="nb">dict</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">immutable</span><span class="p">({})</span><span class="o">.</span><span class="vm">__class__</span> <span class="ow">is</span> <span class="n">d</span><span class="o">.</span><span class="vm">__class__</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.pyutils.immutables.immutableType">
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.immutables.</span></span><span class="sig-name descname"><span class="pre">immutableType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.immutables.immutableType" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a wrapper class that makes the object immutable.</p>
+<p>Wrapper classes are cached and reused along with their class name.</p>
+<p>The wrapper class generated for the first time for each type is cached using only the type as a key, and if the class name is omitted, it is reused with any name.</p>
+<p>The wrapper class overrides the methods that rewrite the object’s attribute values ​​and raises <a class="reference internal" href="#cymel.pyutils.immutables.CymelImmutableError" title="cymel.pyutils.immutables.CymelImmutableError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CymelImmutableError</span></code></a> when they are called.</p>
+<p>Which method to override is automatically determined by checking the presence or absence of special methods, but classes that cannot be covered by this alone are managed by the <a class="reference internal" href="#cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT" title="cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OPTIONAL_MUTATOR_DICT</span></code></a> dictionary, which must be extended as necessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><em>type</em></a>) – The original class to be immutable.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Name of the wrapper class. If omitted, <code class="docutils literal notranslate"><span class="pre">'Immutable</span> <span class="pre">original</span> <span class="pre">class</span> <span class="pre">name'</span></code> is used.</p></li>
+<li><p><strong>module</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – The name of the module that provides the wrapper class. Set in the __module__ attribute. If omitted, the __module__ attribute of the original class is inherited.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If both name and module are omitted, the immutable wrapper class first generated for the specified class will be reused, resulting in both being undefined.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT" title="cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OPTIONAL_MUTATOR_DICT</span></code></a> needs to list the names of methods that modify instances for each class. This means that you need to extend it for each class you want to support. However, it is not necessary to list all methods. Even if you do not intentionally extend <a class="reference internal" href="#cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT" title="cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OPTIONAL_MUTATOR_DICT</span></code></a>, attributes setting, deletion, assignment operators, etc. are blocked by default. The following cases require enumerating method names.</p>
+<ul class="simple">
+<li><p>A method that calls an attribute’s method.</p></li>
+<li><p>Methods on types provided by built-in and binary modules.</p></li>
+</ul>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel.pyutils.immutables</a><ul>
+<li><a class="reference internal" href="#cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT"><code class="docutils literal notranslate"><span class="pre">OPTIONAL_MUTATOR_DICT</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.immutables.CymelImmutableError"><code class="docutils literal notranslate"><span class="pre">CymelImmutableError</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.immutables.immutable"><code class="docutils literal notranslate"><span class="pre">immutable()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.pyutils.immutables.immutableType"><code class="docutils literal notranslate"><span class="pre">immutableType()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cymel.pyutils.finalizer.html"
+                          title="previous chapter">cymel.pyutils.finalizer</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="classes/cymel.pyutils.immutables.ImmutableDict.html"
+                          title="next chapter">class cymel.pyutils.immutables.ImmutableDict</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.pyutils.immutables.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="classes/cymel.pyutils.immutables.ImmutableDict.html" title="class cymel.pyutils.immutables.ImmutableDict"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cymel.pyutils.finalizer.html" title="cymel.pyutils.finalizer"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.pyutils.immutables</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

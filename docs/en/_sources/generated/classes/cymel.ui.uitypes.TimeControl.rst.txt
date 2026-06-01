@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.TimeControl
+==================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: TimeControl
+    :parts: 1
+
+
+
+.. autoclass:: TimeControl
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

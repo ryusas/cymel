@@ -1,0 +1,375 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:2
+msgid "class cymel.core.cyobjects.cyobject.CyObject"
+msgstr "class cymel.core.cyobjects.cyobject.CyObject"
+
+#: cymel.core.cyobjects.cyobject.CyObject:1 of
+msgid "Mayaラッパーオブジェクトの抽象基底クラス。"
+msgstr "Abstract base class for Maya wrapper objects."
+
+#: cymel.core.cyobjects.cyobject.CyObject:3 of
+msgid "ラッパークラスは、大きく分けて `.Node` と `.Plug` とがある。"
+msgstr "Wrapper classes are broadly divided into `.Node` and `.Plug`."
+
+#: cymel.core.cyobjects.cyobject.CyObject:6 of
+msgid ""
+"`CyObject` コンストラクタに、 シーン中の既存ノードやプラグを特定するための名前や Python API 2.0 "
+"オブジェクトを指定することで、 適切なクラスのインスタンスを得ることができる。"
+msgstr ""
+"By specifying a name to identify an existing node or plug in the scene or a "
+"Python API 2.0 object to the `CyObject` constructor, you can obtain an "
+"instance of the appropriate class."
+
+#: cymel.core.cyobjects.cyobject.CyObject:11 of
+msgid ""
+"ノードクラスはノードタイプごとに用意されているか自動生成される。 プラグクラスは、システムで用意しているのは1種類だけである。 "
+"いずれも、クラスを継承してカスタムクラスを作ることができる。"
+msgstr ""
+"Node classes are prepared or automatically generated for each node type. The"
+" system provides only one type of plug class. You can create custom classes "
+"by inheriting any of these classes."
+
+#: cymel.core.cyobjects.cyobject.CyObject:15 of
+msgid ""
+"ノードクラスの場合、 `nodetypes.registerNodeClass <.NodeTypes.registerNodeClass>` "
+"でシステムに登録すると便利である。"
+msgstr ""
+"For node classes, it is convenient to register them in the system with "
+"`nodetypes.registerNodeClass <.NodeTypes.registerNodeClass>`."
+
+#: cymel.core.cyobjects.cyobject.CyObject:19 of
+msgid ""
+"プラグクラスの場合、 `CyObject.setGlobalPlugClass <setGlobalPlugClass>` や "
+"`Node.setPlugClass <.Node_c.setPlugClass>` を用いて、一時的に使用するクラスを指定すると便利である。"
+msgstr ""
+"For plug classes, it is convenient to specify the class to be used "
+"temporarily using `CyObject.setGlobalPlugClass <setGlobalPlugClass>` or "
+"`Node.setPlugClass <.Node_c.setPlugClass>`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+msgid ""
+":py:obj:`byUUID <cymel.core.cyobjects.cyobject.CyObject.byUUID>`\\ "
+"\\(val\\[\\, candidates\\, py\\]\\)"
+msgstr ""
+":py:obj:`byUUID <cymel.core.cyobjects.cyobject.CyObject.byUUID>`\\ "
+"\\(val\\[\\, candidates\\, py\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+#: cymel.core.cyobjects.cyobject.CyObject.byUUID:1 of
+msgid "UUID からノードリストを得る。"
+msgstr "Get node list from UUID."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+msgid ""
+":py:obj:`checkValid <cymel.core.cyobjects.cyobject.CyObject.checkValid>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`checkValid <cymel.core.cyobjects.cyobject.CyObject.checkValid>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+#: cymel.core.cyobjects.cyobject.CyObject.checkValid:1 of
+msgid "内部ハンドルの有効性チェック。無効なら `.CymelInvalidHandle` エラーとなる。"
+msgstr ""
+"Internal handle validity check. If it is invalid, a `.CymelInvalidHandle` "
+"error will occur."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+msgid ""
+":py:obj:`checktype <cymel.core.cyobjects.cyobject.CyObject.checktype>`\\ "
+"\\(obj\\)"
+msgstr ""
+":py:obj:`checktype <cymel.core.cyobjects.cyobject.CyObject.checktype>`\\ "
+"\\(obj\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+#: cymel.core.cyobjects.cyobject.CyObject.checktype:1 of
+msgid "指定したオブジェクトがクラスにマッチするかチェックする。"
+msgstr "Checks whether the specified object matches the class."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+msgid ""
+":py:obj:`globalPlugClass "
+"<cymel.core.cyobjects.cyobject.CyObject.globalPlugClass>`\\ \\(\\)"
+msgstr ""
+":py:obj:`globalPlugClass "
+"<cymel.core.cyobjects.cyobject.CyObject.globalPlugClass>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+#: cymel.core.cyobjects.cyobject.CyObject.globalPlugClass:1 of
+msgid "グローバル設定のプラグクラスを得る。"
+msgstr "Get the global configuration plug class."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+msgid ""
+":py:obj:`internalData "
+"<cymel.core.cyobjects.cyobject.CyObject.internalData>`\\ \\(\\)"
+msgstr ""
+":py:obj:`internalData "
+"<cymel.core.cyobjects.cyobject.CyObject.internalData>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+#: cymel.core.cyobjects.cyobject.CyObject.internalData:1 of
+msgid "内部データを返す。"
+msgstr "Return internal data."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+msgid ":py:obj:`isAlive <cymel.core.cyobjects.cyobject.CyObject.isAlive>`\\ \\(\\)"
+msgstr ":py:obj:`isAlive <cymel.core.cyobjects.cyobject.CyObject.isAlive>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+#: cymel.core.cyobjects.cyobject.CyObject.isAlive:1 of
+msgid "内部ハンドルがメモリ上に存在しているかどうかを得る。"
+msgstr "Gets whether an internal handle exists in memory."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+msgid ":py:obj:`isValid <cymel.core.cyobjects.cyobject.CyObject.isValid>`\\ \\(\\)"
+msgstr ":py:obj:`isValid <cymel.core.cyobjects.cyobject.CyObject.isValid>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+#: cymel.core.cyobjects.cyobject.CyObject.isValid:1 of
+msgid "内部ハンドルが正常な状態かどうかを得る。"
+msgstr "Gets whether the internal handle is in a normal state."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+msgid ""
+":py:obj:`ls <cymel.core.cyobjects.cyobject.CyObject.ls>`\\ \\(\\*args\\, "
+"\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`ls <cymel.core.cyobjects.cyobject.CyObject.ls>`\\ \\(\\*args\\, "
+"\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+#: cymel.core.cyobjects.cyobject.CyObject.ls:1 of
+msgid ":mayacmd:`ls` コマンドの結果をクラスに適合するものに限定してオブジェクトとして得る。"
+msgstr ""
+":mayacmd:`ls` Restricts the results of the command to those that match the "
+"class and obtains them as objects."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+msgid ":py:obj:`name <cymel.core.cyobjects.cyobject.CyObject.name>`\\ \\(\\)"
+msgstr ":py:obj:`name <cymel.core.cyobjects.cyobject.CyObject.name>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+#: cymel.core.cyobjects.cyobject.CyObject.name:1 of
+msgid "オブジェクトのユニーク名を得る。"
+msgstr "Get the object's unique name."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+msgid ":py:obj:`name_ <cymel.core.cyobjects.cyobject.CyObject.name_>`\\ \\(\\)"
+msgstr ":py:obj:`name_ <cymel.core.cyobjects.cyobject.CyObject.name_>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+#: cymel.core.cyobjects.cyobject.CyObject.name_:1 of
+msgid "`checkValid` を省略して、オブジェクトのユニーク名を得る。"
+msgstr "Omit `checkValid` to get the object's unique name."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+msgid ""
+":py:obj:`newObject <cymel.core.cyobjects.cyobject.CyObject.newObject>`\\ "
+"\\(data\\)"
+msgstr ""
+":py:obj:`newObject <cymel.core.cyobjects.cyobject.CyObject.newObject>`\\ "
+"\\(data\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+#: cymel.core.cyobjects.cyobject.CyObject.newObject:1 of
+msgid "内部データとともにインスタンスを生成する。"
+msgstr "Create an instance with internal data."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+msgid ":py:obj:`node <cymel.core.cyobjects.cyobject.CyObject.node>`\\ \\(\\)"
+msgstr ":py:obj:`node <cymel.core.cyobjects.cyobject.CyObject.node>`\\ ​​\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+#: cymel.core.cyobjects.cyobject.CyObject.node:1 of
+msgid "ノードを得る。"
+msgstr "Get a node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+msgid ""
+":py:obj:`setGlobalPlugClass "
+"<cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass>`\\ "
+"\\(\\[pcls\\]\\)"
+msgstr ""
+":py:obj:`setGlobalPlugClass "
+"<cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass>`\\ "
+"\\(\\[pcls\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:38:<autosummary>:1
+#: cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass:1 of
+msgid "グローバル設定のプラグクラスをセットする。"
+msgstr "Set the plug class for global settings."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:41
+msgid "Attributes:"
+msgstr "Attributes:"
+
+#: cymel.core.cyobjects.cyobject.CyObject.CLASS_TYPE:1 of
+msgid "ラッパークラスの種類を表す (0=CyObject, 1=Node, 2=Plug, -1=ObjectRef)"
+msgstr ""
+"Represents the type of wrapper class (0=CyObject, 1=Node, 2=Plug, "
+"-1=ObjectRef)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst:50
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: cymel.core.cyobjects.cyobject.CyObject.byUUID:3 of
+msgid "重複も起こり得るので、戻り値はリストである。"
+msgstr "The return value is a list since duplicates are possible."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.core.cyobjects.cyobject.CyObject.byUUID:6 of
+msgid "単一の UUID かそのリスト。 個々の UUID の型は `.UUID` か `str` を指定できる。"
+msgstr ""
+"A single UUID or a list of them. The type of each UUID can be specified as "
+"`.UUID` or `str`."
+
+#: cymel.core.cyobjects.cyobject.CyObject.byUUID:9 of
+msgid "py=True の場合の候補を事前に絞りたい場合に指定する。"
+msgstr ""
+"Specify this when you want to narrow down the candidates in advance when "
+"py=True."
+
+#: cymel.core.cyobjects.cyobject.CyObject.byUUID:11 of
+msgid "Maya 標準機能ではなく uuid というアトリビュートに保存されているものから得る。 2016 未満では常に True 扱いとなる。"
+msgstr ""
+"Obtain it from what is stored in the attribute called uuid instead of Maya "
+"standard functionality. For versions below 2016, it is always treated as "
+"True."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.core.cyobjects.cyobject.CyObject.byUUID:14
+#: cymel.core.cyobjects.cyobject.CyObject.ls:3 of
+msgid "`list`"
+msgstr "`list`"
+
+#: cymel.core.cyobjects.cyobject.CyObject.checktype:3 of
+msgid "`CyObject` 派生オブジェクトを指定した場合、 マッチすればそれ自身、 マッチしない場合は None が返される。"
+msgstr ""
+"If a `CyObject` derived object is specified, it will be returned if it "
+"matches, or None if it does not match."
+
+#: cymel.core.cyobjects.cyobject.CyObject.checktype:7 of
+msgid ""
+"それ以外の値（文字列や Python API 2.0 オブジェクトなど `CyObject` コンストラクタに指定可能なもの）を指定した場合、 "
+"マッチすれば適切な型の `CyObject` 派生オブジェクト、 マッチしない場合は None が返される。"
+msgstr ""
+"If you specify any other value (such as a string or a Python API 2.0 object "
+"that can be specified to the `CyObject` constructor), a `CyObject` derived "
+"object of the appropriate type is returned if there is a match, otherwise "
+"None is returned."
+
+#: cymel.core.cyobjects.cyobject.CyObject.checktype:12 of
+msgid "チェックするオブジェクト。"
+msgstr "Object to check."
+
+#: cymel.core.cyobjects.cyobject.CyObject.checktype:13 of
+msgid "`CyObject` or None"
+msgstr "`CyObject` or None"
+
+#: cymel.core.cyobjects.cyobject.CyObject.globalPlugClass:3 of
+msgid "これは、 `setGlobalPlugClass` で変更可能。"
+msgstr "This can be changed with `setGlobalPlugClass`."
+
+#: cymel.core.cyobjects.cyobject.CyObject.globalPlugClass:5 of
+msgid "`type`"
+msgstr "`type`"
+
+#: cymel.core.cyobjects.cyobject.CyObject.internalData:3 of
+msgid ""
+"派生クラスで内部データを拡張する場合にオーバーライドする。 その場合、 `newObject` クラスメソッドもオーバーライドし、 拡張に対応させる。"
+msgstr ""
+"Override to extend internal data in a derived class. In that case, also "
+"override the `newObject` class method to support extension."
+
+#: cymel.core.cyobjects.cyobject.CyObject.internalData:7 of
+msgid "内部データはブラックボックスであるものとし、 拡張データでは基底のデータも内包させる必要がある。"
+msgstr ""
+"The internal data is assumed to be a black box, and the extended data must "
+"also include the base data."
+
+#: cymel.core.cyobjects.cyobject.CyObject.isAlive:3 of
+msgid "オブジェクトが削除されていても、undo可能な状態で残っていれば真となる。"
+msgstr "True if the object remains undoable even if it has been deleted."
+
+#: cymel.core.cyobjects.cyobject.CyObject.isAlive:5
+#: cymel.core.cyobjects.cyobject.CyObject.isValid:5 of
+msgid "`bool`"
+msgstr "`bool`"
+
+#: cymel.core.cyobjects.cyobject.CyObject.isValid:3 of
+msgid "`isAlive` が真でも、オブジェクトが削除されている場合は無効と判断される。"
+msgstr ""
+"Even if `isAlive` is true, if the object has been deleted, it is considered "
+"invalid."
+
+#: cymel.core.cyobjects.cyobject.CyObject.name:3
+#: cymel.core.cyobjects.cyobject.CyObject.name_:3 of
+msgid "オブジェクトの種類に応じて、 ノード名、DAGパーシャルパス名、それらを含むプラグ名などが得られる。"
+msgstr ""
+"Depending on the type of object, you can get the node name, DAG partial path"
+" name, plug name containing them, etc."
+
+#: cymel.core.cyobjects.cyobject.CyObject.name:6
+#: cymel.core.cyobjects.cyobject.CyObject.name_:6 of
+msgid "`str`"
+msgstr "`str`"
+
+#: cymel.core.cyobjects.cyobject.CyObject.newObject:3 of
+msgid ""
+"内部データはブラックボックスであるものとし、 本メソッドをオーバーライドする場合も、 基底メソッドを呼び出して処理を完遂させなければならない。"
+msgstr ""
+"Internal data is assumed to be a black box, and even when overriding this "
+"method, the base method must be called to complete the process."
+
+#: cymel.core.cyobjects.cyobject.CyObject.newObject:7 of
+msgid "内部データを拡張する場合は `internalData` も オーバーライドすること。"
+msgstr "If you want to extend internal data, also override `internalData`."
+
+#: cymel.core.cyobjects.cyobject.CyObject.newObject:11 of
+msgid "生成するインスタンスのクラス。"
+msgstr "Class of instance to generate."
+
+#: cymel.core.cyobjects.cyobject.CyObject.newObject:12 of
+msgid "インスタンスにセットする内部データ。"
+msgstr "Internal data to be set in the instance."
+
+#: cymel.core.cyobjects.cyobject.CyObject.node:3 of
+msgid "`.Node` 派生クラス"
+msgstr "`.Node` derived class"
+
+#: cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass:3 of
+msgid "`.Plug` 派生クラス。 None を指定するとクリアする。"
+msgstr "`.Plug` derived class. Clear by specifying None."

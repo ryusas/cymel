@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel.constants &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
+    <script src="../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cymel.initmaya" href="cymel.initmaya.html" />
+    <link rel="prev" title="class cymel.compat_nodetype.CompatNodeTypeMap" href="classes/cymel.compat_nodetype.CompatNodeTypeMap.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.initmaya.html" title="cymel.initmaya"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classes/cymel.compat_nodetype.CompatNodeTypeMap.html" title="class cymel.compat_nodetype.CompatNodeTypeMap"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.constants</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-cymel.constants">
+<span id="cymel-constants"></span><h1>cymel.constants<a class="headerlink" href="#module-cymel.constants" title="Link to this heading">¶</a></h1>
+<p>Main constants used throughout cymel.</p>
+<p>It may be a good idea to import it with * as it has been carefully selected for frequently used items.</p>
+<p class="rubric">Constants:</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.AVOID_ZERO_DIV_PRECISION">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">AVOID_ZERO_DIV_PRECISION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1e-13</span></span><a class="headerlink" href="#cymel.constants.AVOID_ZERO_DIV_PRECISION" title="Link to this definition">¶</a></dt>
+<dd><p>In Maya, even if you set scale=0, the matrix value seems to be maintained at around 1.e-12 without being crushed, so keep this in mind when setting the minimum value.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.AXIS_NEG_X">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">AXIS_NEG_X</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></span><a class="headerlink" href="#cymel.constants.AXIS_NEG_X" title="Link to this definition">¶</a></dt>
+<dd><p>-X direction ID.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.AXIS_NEG_Y">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">AXIS_NEG_Y</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">17</span></span><a class="headerlink" href="#cymel.constants.AXIS_NEG_Y" title="Link to this definition">¶</a></dt>
+<dd><p>-Y direction ID.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.AXIS_NEG_Z">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">AXIS_NEG_Z</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">18</span></span><a class="headerlink" href="#cymel.constants.AXIS_NEG_Z" title="Link to this definition">¶</a></dt>
+<dd><p>-Z direction ID.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.AXIS_X">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">AXIS_X</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></span><a class="headerlink" href="#cymel.constants.AXIS_X" title="Link to this definition">¶</a></dt>
+<dd><p>X axis (+X direction ID) (0)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.AXIS_Y">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">AXIS_Y</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#cymel.constants.AXIS_Y" title="Link to this definition">¶</a></dt>
+<dd><p>Y-axis (+X direction ID) (1)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.AXIS_Z">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">AXIS_Z</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></span><a class="headerlink" href="#cymel.constants.AXIS_Z" title="Link to this definition">¶</a></dt>
+<dd><p>Z axis (+X direction ID) (2)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.TO_DEG">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">TO_DEG</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">57.29577951308232</span></span><a class="headerlink" href="#cymel.constants.TO_DEG" title="Link to this definition">¶</a></dt>
+<dd><p>Factor for converting Radians to Degrees.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.TO_RAD">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">TO_RAD</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.017453292519943295</span></span><a class="headerlink" href="#cymel.constants.TO_RAD" title="Link to this definition">¶</a></dt>
+<dd><p>Factor for converting Degrees to Radians.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.XYZ">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">XYZ</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></span><a class="headerlink" href="#cymel.constants.XYZ" title="Link to this definition">¶</a></dt>
+<dd><p>Rotation order XYZ (0)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.XZY">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">XZY</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></span><a class="headerlink" href="#cymel.constants.XZY" title="Link to this definition">¶</a></dt>
+<dd><p>Rotation order XZY (3)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.YXZ">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">YXZ</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></span><a class="headerlink" href="#cymel.constants.YXZ" title="Link to this definition">¶</a></dt>
+<dd><p>Rotation order YXZ (4)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.YZX">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">YZX</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#cymel.constants.YZX" title="Link to this definition">¶</a></dt>
+<dd><p>Rotation order YZX (1)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.ZXY">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">ZXY</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></span><a class="headerlink" href="#cymel.constants.ZXY" title="Link to this definition">¶</a></dt>
+<dd><p>Rotation order ZXY (2)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.constants.ZYX">
+<span class="sig-prename descclassname"><span class="pre">cymel.constants.</span></span><span class="sig-name descname"><span class="pre">ZYX</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></span><a class="headerlink" href="#cymel.constants.ZYX" title="Link to this definition">¶</a></dt>
+<dd><p>Rotation order ZYX (5)</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel.constants</a><ul>
+<li><a class="reference internal" href="#cymel.constants.AVOID_ZERO_DIV_PRECISION"><code class="docutils literal notranslate"><span class="pre">AVOID_ZERO_DIV_PRECISION</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.AXIS_NEG_X"><code class="docutils literal notranslate"><span class="pre">AXIS_NEG_X</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.AXIS_NEG_Y"><code class="docutils literal notranslate"><span class="pre">AXIS_NEG_Y</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.AXIS_NEG_Z"><code class="docutils literal notranslate"><span class="pre">AXIS_NEG_Z</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.AXIS_X"><code class="docutils literal notranslate"><span class="pre">AXIS_X</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.AXIS_Y"><code class="docutils literal notranslate"><span class="pre">AXIS_Y</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.AXIS_Z"><code class="docutils literal notranslate"><span class="pre">AXIS_Z</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.TO_DEG"><code class="docutils literal notranslate"><span class="pre">TO_DEG</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.TO_RAD"><code class="docutils literal notranslate"><span class="pre">TO_RAD</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.XYZ"><code class="docutils literal notranslate"><span class="pre">XYZ</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.XZY"><code class="docutils literal notranslate"><span class="pre">XZY</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.YXZ"><code class="docutils literal notranslate"><span class="pre">YXZ</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.YZX"><code class="docutils literal notranslate"><span class="pre">YZX</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.ZXY"><code class="docutils literal notranslate"><span class="pre">ZXY</span></code></a></li>
+<li><a class="reference internal" href="#cymel.constants.ZYX"><code class="docutils literal notranslate"><span class="pre">ZYX</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="classes/cymel.compat_nodetype.CompatNodeTypeMap.html"
+                          title="previous chapter">class cymel.compat_nodetype.CompatNodeTypeMap</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cymel.initmaya.html"
+                          title="next chapter">cymel.initmaya</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.constants.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.initmaya.html" title="cymel.initmaya"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="classes/cymel.compat_nodetype.CompatNodeTypeMap.html" title="class cymel.compat_nodetype.CompatNodeTypeMap"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.constants</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

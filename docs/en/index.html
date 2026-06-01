@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel for Maya (Preview Version) &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fb40bcac" />
+    <script src="_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="install" href="installation.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="install"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">cymel 0.29.2025111300 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel for Maya (Preview Version)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="cymel-for-maya-preview-version">
+<h1>cymel for Maya (Preview Version)<a class="headerlink" href="#cymel-for-maya-preview-version" title="Link to this heading">¶</a></h1>
+<p>An open source Python module that makes Maya scripting as concise and intuitive as Python. It was developed with great influence from <a class="reference external" href="https://github.com/LumaPictures/pymel">pymel</a>, but it allows for lighter and more nimble programming than the original.</p>
+<p>C in cymel is C in C++. The core is implemented in C++ and aims to run at high speed. It’s currently a preview version written entirely in Python, but it’s still very lightweight.</p>
+<p>The core of the official version will be replaced by a C++ implementation, but the plan is to maintain the Python version and allow it to be switched at any time. The Python version allows you to quickly complete tasks that would require a lot of effort in a C++ implementation, such as when major changes are made when upgrading Maya, and it also guarantees the minimum level of operation even if binaries cannot be built on all platforms.</p>
+<section id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#maya">Support Maya version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#id2">install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#c-python">Switching between C++ and Python implementations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="whycymel.html">Why cymel?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Introduction to cymel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#gettingstarted-import">import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#gettingstarted-nodes">wrapper class for node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#gettingstarted-plugs">Attribute wrapper class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#api">Combining commands and APIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#gettingstarted-datatypes">data type class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#gettingstarted-customclasses">custom class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#gettingstarted-utilities">utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#ui">UI control class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Module reference manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#main">Main</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#cyobjects">CyObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#data-types">Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#ui-controls">UI Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#utilities">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#utilities-independent-of-maya">Utilities (Independent of Maya)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel for Maya (Preview Version)</a><ul>
+<li><a class="reference internal" href="#contents">Contents</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="installation.html"
+                          title="next chapter">install</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="install"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">cymel 0.29.2025111300 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel for Maya (Preview Version)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

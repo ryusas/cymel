@@ -1,0 +1,48 @@
+﻿cymel.core.datatypes.boundingbox
+================================
+
+.. automodule:: cymel.core.datatypes.boundingbox
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        BoundingBox
+        ImmutableBoundingBox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Aliases:
+
+    
+    .. autodata:: BB
+
+
+
+
+
+
+
+
+
+
+
+
+
+

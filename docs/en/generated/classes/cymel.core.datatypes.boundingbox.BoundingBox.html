@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.datatypes.boundingbox.BoundingBox &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class cymel.core.datatypes.boundingbox.ImmutableBoundingBox" href="cymel.core.datatypes.boundingbox.ImmutableBoundingBox.html" />
+    <link rel="prev" title="cymel.core.datatypes.boundingbox" href="../cymel.core.datatypes.boundingbox.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.core.datatypes.boundingbox.ImmutableBoundingBox.html" title="class cymel.core.datatypes.boundingbox.ImmutableBoundingBox"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.boundingbox.html" title="cymel.core.datatypes.boundingbox"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.boundingbox.html" accesskey="U">cymel.core.datatypes.boundingbox</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.boundingbox.BoundingBox</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-datatypes-boundingbox-boundingbox">
+<h1>class cymel.core.datatypes.boundingbox.BoundingBox<a class="headerlink" href="#class-cymel-core-datatypes-boundingbox-boundingbox" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-b2cb137e34dfcd953cc0a8e5b9c134cd501a35e4.png" alt="Inheritance diagram of BoundingBox" usemap="#inheritance1aafb4a4e0" class="inheritance graphviz" /></div>
+<map id="inheritance1aafb4a4e0" name="inheritance1aafb4a4e0">
+<area shape="rect" id="node1" href="#cymel.core.datatypes.boundingbox.BoundingBox" target="_top" title="3Dバウンディングボックスクラス。" alt="" coords="5,5,92,29"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.datatypes.boundingbox.</span></span><span class="sig-name descname"><span class="pre">BoundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>3D bounding box class.</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.clear" title="cymel.core.datatypes.boundingbox.BoundingBox.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.contains" title="cymel.core.datatypes.boundingbox.BoundingBox.contains"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contains</span></code></a>(p)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.cornerPoints" title="cymel.core.datatypes.boundingbox.BoundingBox.cornerPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cornerPoints</span></code></a>()</p></td>
+<td><p>Get 8 points for the corner.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.depth" title="cymel.core.datatypes.boundingbox.BoundingBox.depth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">depth</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween" title="cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween"><code class="xref py py-obj docutils literal notranslate"><span class="pre">distanceBetween</span></code></a>(bb)</p></td>
+<td><p>Get distance with different boxes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint" title="cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">distanceToPoint</span></code></a>(pnt)</p></td>
+<td><p>Get the distance to a point.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.expand" title="cymel.core.datatypes.boundingbox.BoundingBox.expand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expand</span></code></a>(v)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.height" title="cymel.core.datatypes.boundingbox.BoundingBox.height"><code class="xref py py-obj docutils literal notranslate"><span class="pre">height</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox" title="cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersectedBox</span></code></a>(bb)</p></td>
+<td><p>Get the area of ​​intersection with another box as a new box.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume" title="cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersectedVolume</span></code></a>(bb)</p></td>
+<td><p>Get the volume of the area of ​​intersection with another box.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance" title="cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersectedVolumeOrDistance</span></code></a>(bb)</p></td>
+<td><p>Obtain the volume of the intersection area with another box, or the inversion of the distance.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersects" title="cymel.core.datatypes.boundingbox.BoundingBox.intersects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersects</span></code></a>(bb[, tol])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.max" title="cymel.core.datatypes.boundingbox.BoundingBox.max"><code class="xref py py-obj docutils literal notranslate"><span class="pre">max</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.min" title="cymel.core.datatypes.boundingbox.BoundingBox.min"><code class="xref py py-obj docutils literal notranslate"><span class="pre">min</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.transformUsing" title="cymel.core.datatypes.boundingbox.BoundingBox.transformUsing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transformUsing</span></code></a>(m)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.width" title="cymel.core.datatypes.boundingbox.BoundingBox.width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">width</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.clear" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.contains">
+<span class="sig-name descname"><span class="pre">contains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.contains" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.cornerPoints">
+<span class="sig-name descname"><span class="pre">cornerPoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.cornerPoints" title="Link to this definition">¶</a></dt>
+<dd><p>Get 8 points for the corner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.depth">
+<span class="sig-name descname"><span class="pre">depth</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.depth" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween">
+<span class="sig-name descname"><span class="pre">distanceBetween</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween" title="Link to this definition">¶</a></dt>
+<dd><p>Get distance with different boxes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bb</strong> (<a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox" title="cymel.core.datatypes.boundingbox.BoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundingBox</span></code></a>) – Another bounding box.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint">
+<span class="sig-name descname"><span class="pre">distanceToPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pnt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint" title="Link to this definition">¶</a></dt>
+<dd><p>Get the distance to a point.</p>
+<p>If it is within the box, 0. is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pnt</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Point of reference.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.expand">
+<span class="sig-name descname"><span class="pre">expand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.expand" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.height">
+<span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.height" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox">
+<span class="sig-name descname"><span class="pre">intersectedBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox" title="Link to this definition">¶</a></dt>
+<dd><p>Get the area of ​​intersection with another box as a new box.</p>
+<p>If they do not intersect, None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bb</strong> (<a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox" title="cymel.core.datatypes.boundingbox.BoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundingBox</span></code></a>) – Another bounding box.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox" title="cymel.core.datatypes.boundingbox.BoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundingBox</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume">
+<span class="sig-name descname"><span class="pre">intersectedVolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume" title="Link to this definition">¶</a></dt>
+<dd><p>Get the volume of the area of ​​intersection with another box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bb</strong> (<a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox" title="cymel.core.datatypes.boundingbox.BoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundingBox</span></code></a>) – Another bounding box.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance">
+<span class="sig-name descname"><span class="pre">intersectedVolumeOrDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance" title="Link to this definition">¶</a></dt>
+<dd><p>Obtain the volume of the intersection area with another box, or the inversion of the distance.</p>
+<p>If they intersect, the volume of the area is returned, otherwise the distance is returned as a negative number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bb</strong> (<a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox" title="cymel.core.datatypes.boundingbox.BoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundingBox</span></code></a>) – Another bounding box.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.intersects">
+<span class="sig-name descname"><span class="pre">intersects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersects" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.max">
+<span class="sig-name descname"><span class="pre">max</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.max" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.min">
+<span class="sig-name descname"><span class="pre">min</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.min" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.transformUsing">
+<span class="sig-name descname"><span class="pre">transformUsing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.transformUsing" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.boundingbox.BoundingBox.width">
+<span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.boundingbox.BoundingBox.width" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.datatypes.boundingbox.BoundingBox</a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox"><code class="docutils literal notranslate"><span class="pre">BoundingBox</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.clear"><code class="docutils literal notranslate"><span class="pre">BoundingBox.clear()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.contains"><code class="docutils literal notranslate"><span class="pre">BoundingBox.contains()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.cornerPoints"><code class="docutils literal notranslate"><span class="pre">BoundingBox.cornerPoints()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.depth"><code class="docutils literal notranslate"><span class="pre">BoundingBox.depth()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween"><code class="docutils literal notranslate"><span class="pre">BoundingBox.distanceBetween()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint"><code class="docutils literal notranslate"><span class="pre">BoundingBox.distanceToPoint()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.expand"><code class="docutils literal notranslate"><span class="pre">BoundingBox.expand()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.height"><code class="docutils literal notranslate"><span class="pre">BoundingBox.height()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox"><code class="docutils literal notranslate"><span class="pre">BoundingBox.intersectedBox()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume"><code class="docutils literal notranslate"><span class="pre">BoundingBox.intersectedVolume()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance"><code class="docutils literal notranslate"><span class="pre">BoundingBox.intersectedVolumeOrDistance()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.intersects"><code class="docutils literal notranslate"><span class="pre">BoundingBox.intersects()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.max"><code class="docutils literal notranslate"><span class="pre">BoundingBox.max()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.min"><code class="docutils literal notranslate"><span class="pre">BoundingBox.min()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.transformUsing"><code class="docutils literal notranslate"><span class="pre">BoundingBox.transformUsing()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.boundingbox.BoundingBox.width"><code class="docutils literal notranslate"><span class="pre">BoundingBox.width()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../cymel.core.datatypes.boundingbox.html"
+                          title="previous chapter">cymel.core.datatypes.boundingbox</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cymel.core.datatypes.boundingbox.ImmutableBoundingBox.html"
+                          title="next chapter">class cymel.core.datatypes.boundingbox.ImmutableBoundingBox</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.core.datatypes.boundingbox.ImmutableBoundingBox.html" title="class cymel.core.datatypes.boundingbox.ImmutableBoundingBox"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.boundingbox.html" title="cymel.core.datatypes.boundingbox"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.boundingbox.html" >cymel.core.datatypes.boundingbox</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.boundingbox.BoundingBox</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

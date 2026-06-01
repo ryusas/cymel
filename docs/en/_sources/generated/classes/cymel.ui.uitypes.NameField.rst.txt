@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.NameField
+================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: NameField
+    :parts: 1
+
+
+
+.. autoclass:: NameField
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

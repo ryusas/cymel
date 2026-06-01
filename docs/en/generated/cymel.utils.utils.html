@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel.utils.utils &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
+    <script src="../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cymel.pyutils.finalizer" href="cymel.pyutils.finalizer.html" />
+    <link rel="prev" title="class cymel.utils.optionvar.OptionVar" href="classes/cymel.utils.optionvar.OptionVar.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.pyutils.finalizer.html" title="cymel.pyutils.finalizer"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classes/cymel.utils.optionvar.OptionVar.html" title="class cymel.utils.optionvar.OptionVar"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.utils.utils</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-cymel.utils.utils">
+<span id="cymel-utils-utils"></span><h1>cymel.utils.utils<a class="headerlink" href="#module-cymel.utils.utils" title="Link to this heading">¶</a></h1>
+<p>Various helpers for Maya.</p>
+<p class="rubric">Functions:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.affectedAttrNames" title="cymel.utils.utils.affectedAttrNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">affectedAttrNames</span></code></a>(nodetype, attrname)</p></td>
+<td><p>Given a node type name and attribute name, get a list of attribute names of the same node that it affects.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.affectingAttrNames" title="cymel.utils.utils.affectingAttrNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">affectingAttrNames</span></code></a>(nodetype, attrname)</p></td>
+<td><p>Given a node type name and an attribute name, get a list of attribute names for the same node that it affects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.correctNodeName" title="cymel.utils.utils.correctNodeName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">correctNodeName</span></code></a>(name)</p></td>
+<td><p>Correct any name into a valid node name without namespace.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.correctNodeNameNS" title="cymel.utils.utils.correctNodeNameNS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">correctNodeNameNS</span></code></a>(name)</p></td>
+<td><p>Correct any name into a form that is acceptable as a node name. Allows namespaces.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.createNode" title="cymel.utils.utils.createNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createNode</span></code></a>​​(nodetype, **kwargs)</p></td>
+<td><p>Generate a node.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.enablePlugin" title="cymel.utils.utils.enablePlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enablePlugin</span></code></a>(name[, proc])</p></td>
+<td><p>Make the plugin available.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.escapeForMel" title="cymel.utils.utils.escapeForMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">escapeForMel</span></code></a>(s)</p></td>
+<td><p>Escape for mel strings.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.listEnum" title="cymel.utils.utils.listEnum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listEnum</span></code></a>(name[, attrname, reverse])</p></td>
+<td><p>Get a list of enum attribute name/value pairs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.loadPlugin" title="cymel.utils.utils.loadPlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadPlugin</span></code></a>(name)</p></td>
+<td><p>Load the plugin if it is not loaded.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.makeNiceName" title="cymel.utils.utils.makeNiceName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeNiceName</span></code></a>(name)</p></td>
+<td><p>Get a nice Maya name from a mixedCase or CamelCase name.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Function Details:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.utils.affectedAttrNames">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.utils.</span></span><span class="sig-name descname"><span class="pre">affectedAttrNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.affectedAttrNames" title="Link to this definition">¶</a></dt>
+<dd><p>Given a node type name and attribute name, get a list of attribute names of the same node that it affects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Node type name.</p></li>
+<li><p><strong>attrname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Attribute name.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.utils.affectingAttrNames">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.utils.</span></span><span class="sig-name descname"><span class="pre">affectingAttrNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.affectingAttrNames" title="Link to this definition">¶</a></dt>
+<dd><p>Given a node type name and an attribute name, get a list of attribute names for the same node that it affects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Node type name.</p></li>
+<li><p><strong>attrname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Attribute name.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.utils.correctNodeName">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.utils.</span></span><span class="sig-name descname"><span class="pre">correctNodeName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.correctNodeName" title="Link to this definition">¶</a></dt>
+<dd><p>Correct any name into a valid node name without namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Any name.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.utils.correctNodeNameNS">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.utils.</span></span><span class="sig-name descname"><span class="pre">correctNodeNameNS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.correctNodeNameNS" title="Link to this definition">¶</a></dt>
+<dd><p>Correct any name into a form that is acceptable as a node name. Allows namespaces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Any name.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.utils.createNode">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.utils.</span></span><span class="sig-name descname"><span class="pre">createNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetype</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.createNode" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a node.</p>
+<p>Acts as a replacement for the <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/createNode.html">createNode</a> command.</p>
+<p><a class="reference internal" href="classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> is returned while the node type name is replaced by <a class="reference internal" href="cymel.compat_nodetype.html#module-cymel.compat_nodetype" title="cymel.compat_nodetype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compat_nodetype</span></code></a> for compatibility between old and new versions.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.utils.enablePlugin">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.utils.</span></span><span class="sig-name descname"><span class="pre">enablePlugin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">&lt;function</span> <span class="pre">loadPlugin&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.enablePlugin" title="Link to this definition">¶</a></dt>
+<dd><p>Make the plugin available.</p>
+<p>Use this when you do not want an error to occur even if the plugin does not exist.</p>
+<p>Returns a <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> value indicating success or failure.</p>
+<p>By default, <a class="reference internal" href="#cymel.utils.utils.loadPlugin" title="cymel.utils.utils.loadPlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadPlugin</span></code></a> is called, so if the plugin is not loaded, it will be loaded, but if the plugin does not exist, no error will occur and retries will be suppressed when the same name plugin is called for the second time or later.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Plugin name.</p></li>
+<li><p><strong>proc</strong> (<em>callable</em>) – Function used to load plugins. By default, <a class="reference internal" href="#cymel.utils.utils.loadPlugin" title="cymel.utils.utils.loadPlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadPlugin</span></code></a> is used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.utils.escapeForMel">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.utils.</span></span><span class="sig-name descname"><span class="pre">escapeForMel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.escapeForMel" title="Link to this definition">¶</a></dt>
+<dd><p>Escape for mel strings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>s</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – string.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.utils.listEnum">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.utils.</span></span><span class="sig-name descname"><span class="pre">listEnum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.listEnum" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of enum attribute name/value pairs.</p>
+<p>The specification method differs depending on whether it is a static attribute or a dynamic attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Plug name for dynamic attributes, node type for static attributes.</p></li>
+<li><p><strong>attrname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Attribute name for static attributes.</p></li>
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Reorder the pairs so that they are (value, name) instead of (name, value).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.utils.loadPlugin">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.utils.</span></span><span class="sig-name descname"><span class="pre">loadPlugin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.loadPlugin" title="Link to this definition">¶</a></dt>
+<dd><p>Load the plugin if it is not loaded.</p>
+<p>The plugin name is returned only if newly loaded.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Plugin name.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.utils.makeNiceName">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.utils.</span></span><span class="sig-name descname"><span class="pre">makeNiceName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.makeNiceName" title="Link to this definition">¶</a></dt>
+<dd><p>Get a nice Maya name from a mixedCase or CamelCase name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Any name.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel.utils.utils</a><ul>
+<li><a class="reference internal" href="#cymel.utils.utils.affectedAttrNames"><code class="docutils literal notranslate"><span class="pre">affectedAttrNames()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.utils.affectingAttrNames"><code class="docutils literal notranslate"><span class="pre">affectingAttrNames()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.utils.correctNodeName"><code class="docutils literal notranslate"><span class="pre">correctNodeName()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.utils.correctNodeNameNS"><code class="docutils literal notranslate"><span class="pre">correctNodeNameNS()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.utils.createNode"><code class="docutils literal notranslate"><span class="pre">createNode()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.utils.enablePlugin"><code class="docutils literal notranslate"><span class="pre">enablePlugin()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.utils.escapeForMel"><code class="docutils literal notranslate"><span class="pre">escapeForMel()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.utils.listEnum"><code class="docutils literal notranslate"><span class="pre">listEnum()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.utils.loadPlugin"><code class="docutils literal notranslate"><span class="pre">loadPlugin()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.utils.makeNiceName"><code class="docutils literal notranslate"><span class="pre">makeNiceName()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="classes/cymel.utils.optionvar.OptionVar.html"
+                          title="previous chapter">class cymel.utils.optionvar.OptionVar</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cymel.pyutils.finalizer.html"
+                          title="next chapter">cymel.pyutils.finalizer</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.utils.utils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.pyutils.finalizer.html" title="cymel.pyutils.finalizer"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="classes/cymel.utils.optionvar.OptionVar.html" title="class cymel.utils.optionvar.OptionVar"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.utils.utils</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

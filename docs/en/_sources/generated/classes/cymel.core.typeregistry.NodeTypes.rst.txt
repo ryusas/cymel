@@ -1,0 +1,44 @@
+class cymel.core.typeregistry.NodeTypes
+=======================================
+
+.. currentmodule:: cymel.core.typeregistry
+
+
+.. inheritance-diagram:: NodeTypes
+    :parts: 1
+
+
+
+.. autoclass:: NodeTypes
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        basicNodeClass
+        deregisterNodeClass
+        parentBasicNodeClass
+        registerNodeClass
+        relatedNodeTypes
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: basicNodeClass
+    .. automethod:: deregisterNodeClass
+    .. automethod:: parentBasicNodeClass
+    .. automethod:: registerNodeClass
+    .. automethod:: relatedNodeTypes
+
+

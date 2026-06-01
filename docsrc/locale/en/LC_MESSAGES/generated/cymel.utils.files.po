@@ -1,0 +1,179 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.utils.files.rst:2
+msgid "cymel.utils.files"
+msgstr "cymel.utils.files"
+
+#: cymel.utils.files:1 of
+msgid "Mayaファイル関連。"
+msgstr "Maya file related."
+
+#: ../srcs/generated/cymel.utils.files.rst:17
+msgid "Functions:"
+msgstr "Functions:"
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+msgid ""
+":py:obj:`exportSceneFile <cymel.utils.files.exportSceneFile>`\\ "
+"\\(fname\\[\\, sel\\, all\\, ftype\\]\\)"
+msgstr ""
+":py:obj:`exportSceneFile <cymel.utils.files.exportSceneFile>`\\ "
+"\\(fname\\[\\, sel\\, all\\, ftype\\]\\)"
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+#: cymel.utils.files.exportSceneFile:1 of
+msgid "シーンファイルをエクスポートする。"
+msgstr "Export the scene file."
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+msgid ""
+":py:obj:`importSceneFile <cymel.utils.files.importSceneFile>`\\ "
+"\\(fname\\[\\, namespace\\, prefix\\]\\)"
+msgstr ""
+":py:obj:`importSceneFile <cymel.utils.files.importSceneFile>`\\ "
+"\\(fname\\[\\, namespace\\, prefix\\]\\)"
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+#: cymel.utils.files.importSceneFile:1 of
+msgid "シーンファイルをインポートする。"
+msgstr "Import the scene file."
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+msgid ""
+":py:obj:`openSceneFile <cymel.utils.files.openSceneFile>`\\ \\(fname\\[\\, "
+"addRecent\\]\\)"
+msgstr ""
+":py:obj:`openSceneFile <cymel.utils.files.openSceneFile>`\\ \\(fname\\[\\, "
+"addRecent\\]\\)"
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+#: cymel.utils.files.openSceneFile:1 of
+msgid "シーンファイルをオープンする。"
+msgstr "Open a scene file."
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+msgid ""
+":py:obj:`referenceSceneFile <cymel.utils.files.referenceSceneFile>`\\ "
+"\\(fname\\[\\, namespace\\, prefix\\]\\)"
+msgstr ""
+":py:obj:`referenceSceneFile <cymel.utils.files.referenceSceneFile>`\\ "
+"\\(fname\\[\\, namespace\\, prefix\\]\\)"
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+#: cymel.utils.files.referenceSceneFile:1 of
+msgid "シーンファイルをリファレンスする。"
+msgstr "Reference the scene file."
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+msgid ""
+":py:obj:`saveSceneFile <cymel.utils.files.saveSceneFile>`\\ \\(\\[fname\\, "
+"ftype\\, addRecent\\]\\)"
+msgstr ""
+":py:obj:`saveSceneFile <cymel.utils.files.saveSceneFile>`\\ \\(\\[fname\\, "
+"ftype\\, addRecent\\]\\)"
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+#: cymel.utils.files.saveSceneFile:1 of
+msgid "シーンファイルをセーブする。"
+msgstr "Save the scene file."
+
+#: ../srcs/generated/cymel.utils.files.rst:46
+msgid "Functions Details:"
+msgstr "Function Details:"
+
+#: ../srcs/generated/cymel.utils.files.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.utils.files.exportSceneFile:3 of
+msgid "シーンファイル名。 ディレクトリが存在しない場合は自動的に生成される。"
+msgstr ""
+"Scene file name. If the directory does not exist, it will be automatically "
+"created."
+
+#: cymel.utils.files.exportSceneFile:6 of
+msgid "all=False の場合に出力するノードの名前やリスト。 省略すると選択されているものがエクスポートされる。"
+msgstr ""
+"Names or list of nodes to output when all=False. If omitted, the selected "
+"item will be exported."
+
+#: cymel.utils.files.exportSceneFile:9 of
+msgid "シーン全体をエクスポートするかどうか。"
+msgstr "Whether to export the entire scene."
+
+#: cymel.utils.files.exportSceneFile:11 cymel.utils.files.saveSceneFile:6 of
+msgid "ファイルタイプ名。拡張子から推測できる場合は省略可能。"
+msgstr ""
+"File type name. Can be omitted if it can be inferred from the extension."
+
+#: ../srcs/generated/cymel.utils.files.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.utils.files.exportSceneFile:13 cymel.utils.files.importSceneFile:11
+#: cymel.utils.files.openSceneFile:7 cymel.utils.files.referenceSceneFile:11
+#: cymel.utils.files.saveSceneFile:10 of
+msgid "`str`"
+msgstr "`str`"
+
+#: cymel.utils.files.importSceneFile:3 cymel.utils.files.openSceneFile:3
+#: cymel.utils.files.referenceSceneFile:3 of
+msgid "シーンファイル名。"
+msgstr "Scene file name."
+
+#: cymel.utils.files.importSceneFile:5 of
+msgid "インポートしたノードにネームスペースを付加する場合に指定する。 文字列ではない真値を指定すると、ファイル名から自動決定される。"
+msgstr ""
+"Specify this when adding a namespace to the imported node. If you specify a "
+"true value that is not a string, it will be automatically determined from "
+"the file name."
+
+#: cymel.utils.files.importSceneFile:8 of
+msgid "インポートしたノードにプレフィックスを付加する場合に指定する。 文字列ではない真値を指定すると、ファイル名から自動決定される。"
+msgstr ""
+"Specify this when adding a prefix to the imported node. If you specify a "
+"true value that is not a string, it will be automatically determined from "
+"the file name."
+
+#: cymel.utils.files.openSceneFile:5 cymel.utils.files.saveSceneFile:8 of
+msgid "Recent Files に追加するかどうか。"
+msgstr "Whether to add to Recent Files."
+
+#: cymel.utils.files.referenceSceneFile:5 of
+msgid "リファレンスしたノードにネームスペースを付加する場合に指定する。 文字列ではない真値を指定すると、ファイル名から自動決定される。"
+msgstr ""
+"Specify this when adding a namespace to the referenced node. If you specify "
+"a true value that is not a string, it will be automatically determined from "
+"the file name."
+
+#: cymel.utils.files.referenceSceneFile:8 of
+msgid "リファレンスしたノードにプレフィックスを付加する場合に指定する。 文字列ではない真値を指定すると、ファイル名から自動決定される。"
+msgstr ""
+"Specify this when adding a prefix to the referenced node. If you specify a "
+"true value that is not a string, it will be automatically determined from "
+"the file name."
+
+#: cymel.utils.files.saveSceneFile:3 of
+msgid "シーンファイル名。新規やリネームでなければ省略可能。 ディレクトリが存在しない場合は自動的に生成される。"
+msgstr ""
+"Scene file name. Can be omitted unless it is new or renamed. If the "
+"directory does not exist, it will be automatically created."

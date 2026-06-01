@@ -1,0 +1,442 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:2
+msgid "cymel.pyutils.pyutils"
+msgstr "cymel.pyutils.pyutils"
+
+#: cymel.pyutils.pyutils:1 of
+msgid "Mayaに依存しない諸機能。"
+msgstr "Functions that do not depend on Maya."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:9
+msgid "Classes:"
+msgstr "Classes:"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:23:<autosummary>:1
+msgid ":py:obj:`Singleton <cymel.pyutils.pyutils.Singleton>`"
+msgstr ":py:obj:`Singleton <cymel.pyutils.pyutils.Singleton>`"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:23:<autosummary>:1
+msgid "シングルトンクラスを作る為のメタクラス。"
+msgstr "Metaclass for creating singleton classes."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:25
+msgid "Functions:"
+msgstr "Functions:"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ""
+":py:obj:`assembleCodeToCallFunction "
+"<cymel.pyutils.pyutils.assembleCodeToCallFunction>`\\ \\(name\\, \\*args\\, "
+"\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`assembleCodeToCallFunction "
+"<cymel.pyutils.pyutils.assembleCodeToCallFunction>`\\ \\(name\\, \\*args\\, "
+"\\*\\*kwargs\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.assembleCodeToCallFunction:1 of
+msgid "関数呼び出し用のコード文字列を生成する。"
+msgstr "Generate a code string for a function call."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`avoidZeroDiv <cymel.pyutils.pyutils.avoidZeroDiv>`\\ \\(v\\[\\, pre\\]\\)"
+msgstr ""
+":py:obj:`avoidZeroDiv <cymel.pyutils.pyutils.avoidZeroDiv>`\\ \\(v\\[\\, "
+"pre\\]\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.avoidZeroDiv:1 of
+msgid "Maya を模倣したゼロ割を防ぐ為の分母を得る。"
+msgstr "Obtain a denominator to prevent zero division by imitating Maya."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`boundAngle <cymel.pyutils.pyutils.boundAngle>`\\ \\(a\\)"
+msgstr ":py:obj:`boundAngle <cymel.pyutils.pyutils.boundAngle>`\\ \\(a\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.boundAngle:1 of
+msgid "角度を±πの範囲におさめる。"
+msgstr "Keep the angle within ±π."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ""
+":py:obj:`convIntToBaseN <cymel.pyutils.pyutils.convIntToBaseN>`\\ \\(i\\[\\,"
+" chars\\]\\)"
+msgstr ""
+":py:obj:`convIntToBaseN <cymel.pyutils.pyutils.convIntToBaseN>`\\ \\(i\\[\\,"
+" chars\\]\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.convIntToBaseN:1 of
+msgid "整数を N 進数表記の文字列に変換する。"
+msgstr "Convert an integer to a string in N-ary notation."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`donothing <cymel.pyutils.pyutils.donothing>`\\ \\(\\*a\\)"
+msgstr ":py:obj:`donothing <cymel.pyutils.pyutils.donothing>`\\ \\(\\*a\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.donothing:1 cymel.pyutils.pyutils.ucToStrList:1 of
+msgid "何もしない。"
+msgstr "Do nothing."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ""
+":py:obj:`execfile <cymel.pyutils.pyutils.execfile>`\\ \\(fname\\[\\, "
+"globals\\, locals\\]\\)"
+msgstr ""
+":py:obj:`execfile <cymel.pyutils.pyutils.execfile>`\\ \\(fname\\[\\, "
+"globals\\, locals\\]\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`fround <cymel.pyutils.pyutils.fround>`\\ \\(f\\[\\, ndigits\\]\\)"
+msgstr ":py:obj:`fround <cymel.pyutils.pyutils.fround>`\\ \\(f\\[\\, ndigits\\]\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.fround:1 of
+msgid "常にfloat型を返すround。ただし、py2は四捨五入、py3は偶数への丸め(bankers' rounding)という違いはある。"
+msgstr ""
+"round that always returns a float type. However, the difference is that py2 "
+"rounds to the nearest whole number, and py3 rounds to an even number "
+"(bankers' rounding)."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ""
+":py:obj:`getTempFilename <cymel.pyutils.pyutils.getTempFilename>`\\ "
+"\\(\\[suffix\\, prefix\\, dir\\, n\\, chars\\]\\)"
+msgstr ""
+":py:obj:`getTempFilename <cymel.pyutils.pyutils.getTempFilename>`\\ "
+"\\(\\[suffix\\, prefix\\, dir\\, n\\, chars\\]\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.getTempFilename:1 of
+msgid "任意に使えるテンポラリファイル名をフルパスで得る。"
+msgstr "Get any temporary file name with full path."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`gettrue <cymel.pyutils.pyutils.gettrue>`\\ \\(\\*a\\)"
+msgstr ":py:obj:`gettrue <cymel.pyutils.pyutils.gettrue>`\\ \\(\\*a\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.gettrue:1 of
+msgid "常に真。"
+msgstr "Always true."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`incrementName <cymel.pyutils.pyutils.incrementName>`\\ \\(name\\)"
+msgstr ":py:obj:`incrementName <cymel.pyutils.pyutils.incrementName>`\\ \\(name\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.incrementName:1 of
+msgid "名前の末尾の数字をインクリメントする。"
+msgstr "Increment the number at the end of the name."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ""
+":py:obj:`insertEnvPath <cymel.pyutils.pyutils.insertEnvPath>`\\ \\(path\\, "
+"name\\[\\, index\\, noCheck\\, ...\\]\\)"
+msgstr ""
+":py:obj:`insertEnvPath <cymel.pyutils.pyutils.insertEnvPath>`\\ \\(path\\, "
+"name\\[\\, index\\, noCheck\\, ...\\]\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.insertEnvPath:1 of
+msgid "様々なパス環境変数にパスを追加する。"
+msgstr "Add paths to various path environment variables."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ""
+":py:obj:`insertSysPath <cymel.pyutils.pyutils.insertSysPath>`\\ "
+"\\(path\\[\\, index\\, noCheck\\]\\)"
+msgstr ""
+":py:obj:`insertSysPath <cymel.pyutils.pyutils.insertSysPath>`\\ "
+"\\(path\\[\\, index\\, noCheck\\]\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.insertSysPath:1 of
+msgid "`sys.path` にパスを追加する。"
+msgstr "Add path to `sys.path`."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ""
+":py:obj:`iterTreeBreadthFirst "
+"<cymel.pyutils.pyutils.iterTreeBreadthFirst>`\\ \\(nodes\\, proc\\)"
+msgstr ""
+":py:obj:`iterTreeBreadthFirst "
+"<cymel.pyutils.pyutils.iterTreeBreadthFirst>`\\ \\(nodes\\, proc\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.iterTreeBreadthFirst:1 of
+msgid "木を幅優先反復する。"
+msgstr "Iterate breadth-first through the tree."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ""
+":py:obj:`iterTreeDepthFirst <cymel.pyutils.pyutils.iterTreeDepthFirst>`\\ "
+"\\(nodes\\, proc\\)"
+msgstr ""
+":py:obj:`iterTreeDepthFirst <cymel.pyutils.pyutils.iterTreeDepthFirst>`\\ "
+"\\(nodes\\, proc\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.iterTreeDepthFirst:1 of
+msgid "木を深さ優先反復する。"
+msgstr "Iterate through the tree depth-first."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`parentClasses <cymel.pyutils.pyutils.parentClasses>`\\ \\(cls\\)"
+msgstr ":py:obj:`parentClasses <cymel.pyutils.pyutils.parentClasses>`\\ \\(cls\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: cymel.pyutils.pyutils.parentClasses:1 of
+msgid "親クラスのリストを得る。"
+msgstr "Get a list of parent classes."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`ucToStrList <cymel.pyutils.pyutils.ucToStrList>`\\ \\(xx\\)"
+msgstr ":py:obj:`ucToStrList <cymel.pyutils.pyutils.ucToStrList>`\\ \\(xx\\)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:53
+msgid "Aliases:"
+msgstr "Aliases:"
+
+#: cymel.pyutils.pyutils.<lambda>:1 of
+msgid "`dict` から items リストを得る。"
+msgstr "Get the items list from `dict`."
+
+#: cymel.pyutils.pyutils.<lambda>:1 of
+msgid "`dict` から keys リストを得る。"
+msgstr "Get the keys list from `dict`."
+
+#: cymel.pyutils.pyutils.<lambda>:1 of
+msgid "`dict` から values リストを得る。"
+msgstr "Get the values ​​list from `dict`."
+
+#: cymel.pyutils.pyutils.<lambda>:1 of
+msgid "`dict` から dict_items を得る。"
+msgstr "Get dict_items from `dict`."
+
+#: cymel.pyutils.pyutils.<lambda>:1 of
+msgid "`dict` から items イテレータを得る。"
+msgstr "Get items iterator from `dict`."
+
+#: cymel.pyutils.pyutils.<lambda>:1 of
+msgid "`dict` から keys イテレータを得る。"
+msgstr "Get keys iterator from `dict`."
+
+#: cymel.pyutils.pyutils.<lambda>:1 of
+msgid "`dict` から values イテレータを得る。"
+msgstr "Get a values ​​iterator from `dict`."
+
+#: cymel.pyutils.pyutils.<lambda>:1 of
+msgid "`dict` から dict_keys を得る。"
+msgstr "Get dict_keys from `dict`."
+
+#: cymel.pyutils.pyutils.<lambda>:1 of
+msgid "`dict` から dict_values を得る。"
+msgstr "Get dict_values ​​from `dict`."
+
+#: cymel.pyutils.pyutils.<lambda>:1 of
+msgid "list を返す filter (Python 3 には無い)"
+msgstr "filter that returns a list (not in Python 3)"
+
+#: cymel.pyutils.pyutils.<lambda>:1 of
+msgid "list を返す map (Python 3 には無い)"
+msgstr "map that returns a list (not in Python 3)"
+
+#: cymel.pyutils.pyutils.<lambda>:1 of
+msgid "list を返す range (Python 2 の標準)"
+msgstr "range returning a list (standard in Python 2)"
+
+#: cymel.pyutils.pyutils.<lambda>:1 of
+msgid "list を返す zip (Python 3 には無い)"
+msgstr "zip that returns a list (not in Python 3)"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:74
+msgid "Constants:"
+msgstr "Constants:"
+
+#: cymel.pyutils.pyutils.IS_WINDOWS:1 of
+msgid "OS が Windows かどうか。"
+msgstr "Whether the OS is Windows."
+
+#: cymel.pyutils.pyutils.MAXINT32:1 of
+msgid "32bit符号付き整数の最大値。Maya の sys.maxint はこれ（py3 で廃止）。"
+msgstr ""
+"Maximum value of a 32bit signed integer. Maya's sys.maxint is this (obsolete"
+" in py3)."
+
+#: cymel.pyutils.pyutils.MAXINT64:1 of
+msgid "64bit符号付き整数の最大値。Maya の sys.maxsize はこれ。"
+msgstr "Maximum value of a 64bit signed integer. Maya's sys.maxsize is this."
+
+#: cymel.pyutils.pyutils.USER_DOC_PATH:1 of
+msgid "ユーザードキュメントディレクトリ。Unix 系ではホーム、Windows ではマイドキュメントとしている。"
+msgstr ""
+"User documentation directory. It is called Home on Unix systems, and My "
+"Documents on Windows."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:90
+msgid "Functions Details:"
+msgstr "Function Details:"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst
+#: cymel.pyutils.pyutils.convIntToBaseN of
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.pyutils.pyutils.assembleCodeToCallFunction:3 of
+msgid "関数名。"
+msgstr "Function name."
+
+#: cymel.pyutils.pyutils.assembleCodeToCallFunction:4 of
+msgid "引数リスト。"
+msgstr "argument list."
+
+#: cymel.pyutils.pyutils.assembleCodeToCallFunction:5 of
+msgid "キーワード引数辞書。"
+msgstr "Keyword argument dictionary."
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst
+#: cymel.pyutils.pyutils.convIntToBaseN of
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.pyutils.pyutils.assembleCodeToCallFunction:6
+#: cymel.pyutils.pyutils.convIntToBaseN:6
+#: cymel.pyutils.pyutils.getTempFilename:8 of
+msgid "`str`"
+msgstr "`str`"
+
+#: cymel.pyutils.pyutils.avoidZeroDiv:3 of
+msgid ""
+"Maya では scale=0 を設定しても matrix が特異値とならないように 0.0 は 1.e-12 "
+"くらいでリミットして保持するようなので、それを意識 したリミットを掛けた値を返す。"
+msgstr ""
+"In Maya, even if scale=0 is set, 0.0 is limited and held at around 1.e-12 so"
+" that matrix does not become a singular value, so the value multiplied by "
+"the limit with this in mind is returned."
+
+#: cymel.pyutils.pyutils.avoidZeroDiv:7 of
+msgid "チェックする値。"
+msgstr "Value to check."
+
+#: cymel.pyutils.pyutils.avoidZeroDiv:8 of
+msgid "最小値。デフォルトは `AVOID_ZERO_DIV_PRECISION` 。"
+msgstr "Minimum value. Default is `AVOID_ZERO_DIV_PRECISION`."
+
+#: cymel.pyutils.pyutils.convIntToBaseN:3 of
+msgid "桁の文字を 0～N-1 まで並べた文字列。 デフォルトは小文字の16進数。"
+msgstr ""
+"A string of digit characters arranged from 0 to N-1. The default is "
+"lowercase hexadecimal."
+
+#: cymel.pyutils.pyutils.getTempFilename:3 of
+msgid "ファイル名に付ける任意の接頭辞を指定する。"
+msgstr "Specify an arbitrary prefix to be added to the file name."
+
+#: cymel.pyutils.pyutils.getTempFilename:4 of
+msgid "ファイル名に付ける任意の接尾辞を指定する。"
+msgstr "Specify an arbitrary suffix to add to the file name."
+
+#: cymel.pyutils.pyutils.getTempFilename:5 of
+msgid "ファイルを生成するディレクトリパスを指定する。"
+msgstr "Specify the directory path to generate the file."
+
+#: cymel.pyutils.pyutils.getTempFilename:6 of
+msgid "ランダムに決まる部分の文字数を指定する。"
+msgstr "Specify the number of characters in the randomly determined part."
+
+#: cymel.pyutils.pyutils.getTempFilename:7 of
+msgid "ランダムに決まる部分に使用される文字。"
+msgstr "Characters used for randomly determined parts."
+
+#: cymel.pyutils.pyutils.insertEnvPath:3 of
+msgid "パスが存在せず追加されなかったら 0 、 既にリストに含まれていたら 1 、 新規に追加されたなら 2 が返される。"
+msgstr ""
+"Returns 0 if the path does not exist and was not added, 1 if it is already "
+"in the list, and 2 if it is newly added."
+
+#: cymel.pyutils.pyutils.insertEnvPath:7 cymel.pyutils.pyutils.insertSysPath:7
+#: of
+msgid "追加するパス。"
+msgstr "Path to add."
+
+#: cymel.pyutils.pyutils.insertEnvPath:8 of
+msgid "環境変数名。"
+msgstr "Environment variable name."
+
+#: cymel.pyutils.pyutils.insertEnvPath:9 cymel.pyutils.pyutils.insertSysPath:8
+#: of
+msgid "追加する位置。負数であれば末尾に追加、 そうでなければこの位置の手前に挿入される。"
+msgstr ""
+"Position to add. If it is a negative number, it will be added to the end, "
+"otherwise it will be inserted before this position."
+
+#: cymel.pyutils.pyutils.insertEnvPath:12
+#: cymel.pyutils.pyutils.insertSysPath:11 of
+msgid "パスの存在の有無をチェックしない。 デフォルトでは、実際に存在しないパスは追加されない。"
+msgstr ""
+"Do not check whether the path exists. By default, paths that do not actually"
+" exist are not added."
+
+#: cymel.pyutils.pyutils.insertEnvPath:15
+#: cymel.pyutils.pyutils.insertSysPath:14 of
+msgid "パスが既に含まれていたら更新しない。 デフォルトでは、既にリストに含まれているパスなら、 一旦それを削除してから追加し直される。"
+msgstr ""
+"Do not update if path is already included. By default, if a path is already "
+"in the list, it will be removed and re-added."
+
+#: cymel.pyutils.pyutils.insertEnvPath:19
+#: cymel.pyutils.pyutils.insertSysPath:18 of
+msgid "`int`"
+msgstr "`int`"
+
+#: cymel.pyutils.pyutils.insertSysPath:3 of
+msgid "パスが存在せず追加されなかったら 0 、 既にリストに含まれていて追加し直されたら 1 、 新規に追加されたなら 2 が返される。"
+msgstr ""
+"Returns 0 if the path does not exist and was not added, 1 if it was already "
+"in the list and was added again, and 2 if it was newly added."
+
+#: cymel.pyutils.pyutils.iterTreeBreadthFirst:3
+#: cymel.pyutils.pyutils.iterTreeDepthFirst:3 of
+msgid "基点ノードリスト。"
+msgstr "Base node list."
+
+#: cymel.pyutils.pyutils.iterTreeBreadthFirst:4
+#: cymel.pyutils.pyutils.iterTreeDepthFirst:4 of
+msgid "子ノード群を得るプロシージャ。"
+msgstr "Procedure to get child nodes."
+
+#: cymel.pyutils.pyutils.iterTreeBreadthFirst:7
+#: cymel.pyutils.pyutils.iterTreeDepthFirst:7 of
+msgid "循環していると無限ループになる。"
+msgstr "If it cycles, it will become an infinite loop."
+
+#: cymel.pyutils.pyutils.parentClasses:4 of
+msgid "クラス。"
+msgstr "class."
+
+#: cymel.pyutils.pyutils.parentClasses:5 of
+msgid "`list`"
+msgstr "`list`"

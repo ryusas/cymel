@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:2
+msgid "class cymel.core.datatypes.boundingbox.BoundingBox"
+msgstr "class cymel.core.datatypes.boundingbox.BoundingBox"
+
+#: cymel.core.datatypes.boundingbox.BoundingBox:1 of
+msgid "3Dバウンディングボックスクラス。"
+msgstr "3D bounding box class."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`clear <cymel.core.datatypes.boundingbox.BoundingBox.clear>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`clear <cymel.core.datatypes.boundingbox.BoundingBox.clear>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`contains <cymel.core.datatypes.boundingbox.BoundingBox.contains>`\\"
+" \\(p\\)"
+msgstr ""
+":py:obj:`contains <cymel.core.datatypes.boundingbox.BoundingBox.contains>`\\"
+" \\(p\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`cornerPoints "
+"<cymel.core.datatypes.boundingbox.BoundingBox.cornerPoints>`\\ \\(\\)"
+msgstr ""
+":py:obj:`cornerPoints "
+"<cymel.core.datatypes.boundingbox.BoundingBox.cornerPoints>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+#: cymel.core.datatypes.boundingbox.BoundingBox.cornerPoints:1 of
+msgid "コーナーの8点を得る。"
+msgstr "Get 8 points for the corner."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`depth <cymel.core.datatypes.boundingbox.BoundingBox.depth>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`depth <cymel.core.datatypes.boundingbox.BoundingBox.depth>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`distanceBetween "
+"<cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween>`\\ \\(bb\\)"
+msgstr ""
+":py:obj:`distanceBetween "
+"<cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween>`\\ \\(bb\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+#: cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween:1 of
+msgid "別のボックスとの距離を得る。"
+msgstr "Get distance with different boxes."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`distanceToPoint "
+"<cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint>`\\ \\(pnt\\)"
+msgstr ""
+":py:obj:`distanceToPoint "
+"<cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint>`\\ \\(pnt\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+#: cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint:1 of
+msgid "点との距離を得る。"
+msgstr "Get the distance to a point."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`expand <cymel.core.datatypes.boundingbox.BoundingBox.expand>`\\ "
+"\\(v\\)"
+msgstr ""
+":py:obj:`expand <cymel.core.datatypes.boundingbox.BoundingBox.expand>`\\ "
+"\\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`height <cymel.core.datatypes.boundingbox.BoundingBox.height>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`height <cymel.core.datatypes.boundingbox.BoundingBox.height>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`intersectedBox "
+"<cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox>`\\ \\(bb\\)"
+msgstr ""
+":py:obj:`intersectedBox "
+"<cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox>`\\ \\(bb\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+#: cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox:1 of
+msgid "別のボックスとの交差領域を新しいボックスとして得る。"
+msgstr "Get the area of ​​intersection with another box as a new box."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`intersectedVolume "
+"<cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume>`\\ \\(bb\\)"
+msgstr ""
+":py:obj:`intersectedVolume "
+"<cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume>`\\ \\(bb\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+#: cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume:1 of
+msgid "別のボックスとの交差領域の体積を得る。"
+msgstr "Get the volume of the area of ​​intersection with another box."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`intersectedVolumeOrDistance "
+"<cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance>`\\"
+" \\(bb\\)"
+msgstr ""
+":py:obj:`intersectedVolumeOrDistance "
+"<cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance>`\\"
+" \\(bb\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+#: cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance:1
+#: of
+msgid "別のボックスとの交差領域の体積、又は距離の反転を得る。"
+msgstr ""
+"Obtain the volume of the intersection area with another box, or the "
+"inversion of the distance."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`intersects "
+"<cymel.core.datatypes.boundingbox.BoundingBox.intersects>`\\ \\(bb\\[\\, "
+"tol\\]\\)"
+msgstr ""
+":py:obj:`intersects "
+"<cymel.core.datatypes.boundingbox.BoundingBox.intersects>`\\ \\(bb\\[\\, "
+"tol\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ":py:obj:`max <cymel.core.datatypes.boundingbox.BoundingBox.max>`\\ \\(\\)"
+msgstr ":py:obj:`max <cymel.core.datatypes.boundingbox.BoundingBox.max>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ":py:obj:`min <cymel.core.datatypes.boundingbox.BoundingBox.min>`\\ \\(\\)"
+msgstr ":py:obj:`min <cymel.core.datatypes.boundingbox.BoundingBox.min>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`transformUsing "
+"<cymel.core.datatypes.boundingbox.BoundingBox.transformUsing>`\\ \\(m\\)"
+msgstr ""
+":py:obj:`transformUsing "
+"<cymel.core.datatypes.boundingbox.BoundingBox.transformUsing>`\\ \\(m\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:45:<autosummary>:1
+msgid ""
+":py:obj:`width <cymel.core.datatypes.boundingbox.BoundingBox.width>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`width <cymel.core.datatypes.boundingbox.BoundingBox.width>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst:48
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.core.datatypes.boundingbox.BoundingBox.cornerPoints:3 of
+msgid "`list`"
+msgstr "`list`"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.BoundingBox.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween:4
+#: cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox:6
+#: cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume:4
+#: cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance:7
+#: of
+msgid "別のバウンディングボックス。"
+msgstr "Another bounding box."
+
+#: cymel.core.datatypes.boundingbox.BoundingBox.distanceBetween:5
+#: cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint:7
+#: cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolume:5
+#: cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance:8
+#: of
+msgid "`float`"
+msgstr "`float`"
+
+#: cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint:3 of
+msgid "ボックス内に位置する場合は 0. が返される。"
+msgstr "If it is within the box, 0. is returned."
+
+#: cymel.core.datatypes.boundingbox.BoundingBox.distanceToPoint:6 of
+msgid "参照する点。"
+msgstr "Point of reference."
+
+#: cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox:3 of
+msgid "交差していなければ None となる。"
+msgstr "If they do not intersect, None."
+
+#: cymel.core.datatypes.boundingbox.BoundingBox.intersectedBox:7 of
+msgid "`BoundingBox`"
+msgstr "`BoundingBox`"
+
+#: cymel.core.datatypes.boundingbox.BoundingBox.intersectedVolumeOrDistance:3
+#: of
+msgid "交差していればその領域の体積が返され、 していなければ距離が負数で返される。"
+msgstr ""
+"If they intersect, the volume of the area is returned, otherwise the "
+"distance is returned as a negative number."

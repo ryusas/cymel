@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.ScriptTable
+==================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: ScriptTable
+    :parts: 1
+
+
+
+.. autoclass:: ScriptTable
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

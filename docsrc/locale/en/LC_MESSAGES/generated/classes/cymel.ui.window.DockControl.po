@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.ui.window.DockControl.rst:2
+msgid "class cymel.ui.window.DockControl"
+msgstr "class cymel.ui.window.DockControl"
+
+#: cymel.ui.window.DockControl:1 of
+msgid "mel UI の :mayacmd:`dockControl` ラッパークラス。"
+msgstr ":mayacmd:`dockControl` wrapper class for mel UI."
+
+#: cymel.ui.window.DockControl:3 of
+msgid ""
+"mel のクラスとしては、 ドッキング状態の場合は :mayacmd:`layout` であり、 フローティング状態の場合は "
+":mayacmd:`window` となるように 動的に切り替わるため、 ラッパークラスとしては `.Control` 派生に固定されている。"
+msgstr ""
+"The mel class dynamically switches between :mayacmd:`layout` when docked and"
+" :mayacmd:`window` when floating, so the wrapper class is fixed to "
+"`.Control` derived."
+
+#: ../srcs/generated/classes/cymel.ui.window.DockControl.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.ui.window.DockControl.rst:30:<autosummary>:1
+msgid ":py:obj:`UICMD <cymel.ui.window.DockControl.UICMD>`"
+msgstr ":py:obj:`UICMD <cymel.ui.window.DockControl.UICMD>`"
+
+#: ../srcs/generated/classes/cymel.ui.window.DockControl.rst:33
+msgid "Methods Details:"
+msgstr "Method Details:"

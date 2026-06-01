@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.ProgressBar
+==================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: ProgressBar
+    :parts: 1
+
+
+
+.. autoclass:: ProgressBar
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

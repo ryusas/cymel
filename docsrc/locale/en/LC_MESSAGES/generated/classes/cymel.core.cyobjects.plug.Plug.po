@@ -1,0 +1,1126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:2
+msgid "class cymel.core.cyobjects.plug.Plug"
+msgstr "class cymel.core.cyobjects.plug.Plug"
+
+#: cymel.core.cyobjects.plug.Plug:1 of
+msgid "プラグラッパークラス。"
+msgstr "Plug wrapper class."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`addElement <cymel.core.cyobjects.plug.Plug.addElement>`\\ "
+"\\(\\[idx\\]\\)"
+msgstr ""
+":py:obj:`addElement <cymel.core.cyobjects.plug.Plug.addElement>`\\ "
+"\\(\\[idx\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.addElement:1 of
+msgid "undo可能な形でマルチアトリビュート要素を追加する。"
+msgstr "Add multi-attribute elements in an undoable manner."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`animCurve <cymel.core.cyobjects.plug.Plug.animCurve>`\\ \\(\\[dk\\,"
+" direct\\]\\)"
+msgstr ""
+":py:obj:`animCurve <cymel.core.cyobjects.plug.Plug.animCurve>`\\ \\(\\[dk\\,"
+" direct\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.animCurve:1 of
+msgid "アトリビュートに接続された animCurve を1つ得る。"
+msgstr "Get one animCurve connected to the attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`animCurves <cymel.core.cyobjects.plug.Plug.animCurves>`\\ "
+"\\(\\[dk\\]\\)"
+msgstr ""
+":py:obj:`animCurves <cymel.core.cyobjects.plug.Plug.animCurves>`\\ "
+"\\(\\[dk\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.animCurves:1 of
+msgid "アトリビュートに接続された全 animCurve のリストを得る。"
+msgstr "Get a list of all animCurves connected to an attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`animLayers <cymel.core.cyobjects.plug.Plug.animLayers>`\\ "
+"\\(\\[selected\\, exact\\]\\)"
+msgstr ""
+":py:obj:`animLayers <cymel.core.cyobjects.plug.Plug.animLayers>`\\ "
+"\\(\\[selected\\, exact\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.animLayers:1 of
+msgid "プラグが属するアニメーションレイヤー名リストを得る。"
+msgstr "Get a list of animation layer names to which the plug belongs."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`belongsToLayer <cymel.core.cyobjects.plug.Plug.belongsToLayer>`\\ "
+"\\(layer\\)"
+msgstr ""
+":py:obj:`belongsToLayer <cymel.core.cyobjects.plug.Plug.belongsToLayer>`\\ "
+"\\(layer\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.belongsToLayer:1 of
+msgid "指定したアニメーションレイヤーのメンバーかどうか。"
+msgstr "Whether it is a member of the specified animation layer."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`connect <cymel.core.cyobjects.plug.Plug.connect>`\\ \\(src\\[\\, "
+"force\\, f\\, lock\\, l\\, ...\\]\\)"
+msgstr ""
+":py:obj:`connect <cymel.core.cyobjects.plug.Plug.connect>`\\ \\(src\\[\\, "
+"force\\, f\\, lock\\, l\\, ...\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.connect:1 of
+msgid "指定プラグからこのプラグへ接続する。"
+msgstr "Connect from the specified plug to this plug."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`connectTo <cymel.core.cyobjects.plug.Plug.connectTo>`\\ \\(dst\\, "
+"\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`connectTo <cymel.core.cyobjects.plug.Plug.connectTo>`\\ \\(dst\\, "
+"\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.connectTo:1 of
+msgid "このプラグから指定プラグへ接続する。"
+msgstr "Connect from this plug to the specified plug."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`createAnimCurve <cymel.core.cyobjects.plug.Plug.createAnimCurve>`\\"
+" \\(\\[unitless\\, cls\\]\\)"
+msgstr ""
+":py:obj:`createAnimCurve <cymel.core.cyobjects.plug.Plug.createAnimCurve>`\\"
+" \\(\\[unitless\\, cls\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.createAnimCurve:1 of
+msgid "アトリビュート型に応じた animCurve ノードを生成する。"
+msgstr "Generate animCurve node according to the attribute type."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ":py:obj:`delete <cymel.core.cyobjects.plug.Plug.delete>`\\ \\(\\[force\\]\\)"
+msgstr ":py:obj:`delete <cymel.core.cyobjects.plug.Plug.delete>`\\ \\(\\[force\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.delete:1 of
+msgid "ダイナミックアトリビュートを削除する。"
+msgstr "Delete dynamic attributes."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`disconnect <cymel.core.cyobjects.plug.Plug.disconnect>`\\ "
+"\\(\\[src\\, force\\, f\\, nextAvailable\\, na\\]\\)"
+msgstr ""
+":py:obj:`disconnect <cymel.core.cyobjects.plug.Plug.disconnect>`\\ "
+"\\(\\[src\\, force\\, f\\, nextAvailable\\, na\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.disconnect:1 of
+msgid "入力コネクションを切断する。"
+msgstr "Disconnect the input connection."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ":py:obj:`isMuted <cymel.core.cyobjects.plug.Plug.isMuted>`\\ \\(\\)"
+msgstr ":py:obj:`isMuted <cymel.core.cyobjects.plug.Plug.isMuted>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.isMuted:1 of
+msgid "ミュートされているかどうか。"
+msgstr "Whether muted or not."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`iterElements <cymel.core.cyobjects.plug.Plug.iterElements>`\\ "
+"\\(\\[start\\, end\\, step\\, all\\, infinite\\]\\)"
+msgstr ""
+":py:obj:`iterElements <cymel.core.cyobjects.plug.Plug.iterElements>`\\ "
+"\\(\\[start\\, end\\, step\\, all\\, infinite\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.iterElements:1 of
+msgid "マルチアトリビュート要素をイテレーションする。"
+msgstr "Iterate over multi-attribute elements."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`iterHierarchy <cymel.core.cyobjects.plug.Plug.iterHierarchy>`\\ "
+"\\(\\[evaluate\\, connected\\, checker\\]\\)"
+msgstr ""
+":py:obj:`iterHierarchy <cymel.core.cyobjects.plug.Plug.iterHierarchy>`\\ "
+"\\(\\[evaluate\\, connected\\, checker\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.iterHierarchy:1 of
+msgid "プラグ階層下（マルチ要素、コンパウンドの子）をイテレーションする。"
+msgstr "Iterate under the plug hierarchy (multi-element, compound child)."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`layeredPlug <cymel.core.cyobjects.plug.Plug.layeredPlug>`\\ "
+"\\(\\[layer\\, selected\\, exact\\, best\\, ...\\]\\)"
+msgstr ""
+":py:obj:`layeredPlug <cymel.core.cyobjects.plug.Plug.layeredPlug>`\\ "
+"\\(\\[layer\\, selected\\, exact\\, best\\, ...\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:1 of
+msgid "アニメーションレイヤーによる代理プラグを得る。"
+msgstr "Get surrogate plugs with animation layers."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`listEnum <cymel.core.cyobjects.plug.Plug.listEnum>`\\ "
+"\\(\\[reverse\\]\\)"
+msgstr ""
+":py:obj:`listEnum <cymel.core.cyobjects.plug.Plug.listEnum>`\\ "
+"\\(\\[reverse\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.listEnum:1 of
+msgid "enum アトリビュートの名前と値のペアのリストを得る。"
+msgstr "Get a list of enum attribute name/value pairs."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ":py:obj:`lock <cymel.core.cyobjects.plug.Plug.lock>`\\ \\(\\[val\\, leaf\\]\\)"
+msgstr ":py:obj:`lock <cymel.core.cyobjects.plug.Plug.lock>`\\ \\(\\[val\\, leaf\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.setLocked:1 of
+msgid "`setLocked` の別名。"
+msgstr "Alternative name for `setLocked`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ":py:obj:`mute <cymel.core.cyobjects.plug.Plug.mute>`\\ \\(\\*\\*kwargs\\)"
+msgstr ":py:obj:`mute <cymel.core.cyobjects.plug.Plug.mute>`\\ \\(\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.mute:1 of
+msgid "ミュートする。"
+msgstr "Mute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`pairBlendPlug <cymel.core.cyobjects.plug.Plug.pairBlendPlug>`\\ "
+"\\(\\[in1\\, in2\\, cur\\, inUse\\, byWeight\\]\\)"
+msgstr ""
+":py:obj:`pairBlendPlug <cymel.core.cyobjects.plug.Plug.pairBlendPlug>`\\ "
+"\\(\\[in1\\, in2\\, cur\\, inUse\\, byWeight\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.pairBlendPlug:1 of
+msgid ":mayanode:`pairBlend` の入力プラグを得る。"
+msgstr ":mayanode:Get the input plug for `pairBlend`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`remove <cymel.core.cyobjects.plug.Plug.remove>`\\ \\(\\[b\\, f\\, "
+"force\\]\\)"
+msgstr ""
+":py:obj:`remove <cymel.core.cyobjects.plug.Plug.remove>`\\ \\(\\[b\\, f\\, "
+"force\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.remove:1 of
+msgid "自身がマルチアトリビュートの要素プラグの場合にそれを削除する。"
+msgstr "Delete if itself is a multi-attribute element plug."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`removeAllElements "
+"<cymel.core.cyobjects.plug.Plug.removeAllElements>`\\ \\(\\[b\\, f\\, "
+"force\\]\\)"
+msgstr ""
+":py:obj:`removeAllElements "
+"<cymel.core.cyobjects.plug.Plug.removeAllElements>`\\ \\(\\[b\\, f\\, "
+"force\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.removeAllElements:1 of
+msgid "自身がマルチアトリビュートのマルチプラグの場合にその全要素を削除する。"
+msgstr ""
+"If the plug itself is a multi-attribute multi-plug, delete all its elements."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`removeElement <cymel.core.cyobjects.plug.Plug.removeElement>`\\ "
+"\\(\\[idx\\, b\\, f\\, force\\]\\)"
+msgstr ""
+":py:obj:`removeElement <cymel.core.cyobjects.plug.Plug.removeElement>`\\ "
+"\\(\\[idx\\, b\\, f\\, force\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.removeElement:1 of
+msgid "マルチアトリビュートの要素を削除する。"
+msgstr "Delete multi-attribute elements."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ":py:obj:`reset <cymel.core.cyobjects.plug.Plug.reset>`\\ \\(\\)"
+msgstr ":py:obj:`reset <cymel.core.cyobjects.plug.Plug.reset>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.reset:1 of
+msgid "デフォルト値にリセットする。"
+msgstr "Reset to default value."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ":py:obj:`set <cymel.core.cyobjects.plug.Plug.set>`\\ \\(val\\[\\, safe\\]\\)"
+msgstr ":py:obj:`set <cymel.core.cyobjects.plug.Plug.set>`\\ \\(val\\[\\, safe\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.set:1 of
+msgid "アトリビュート値を内部単位でセットする。"
+msgstr "Set the attribute value in internal units."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ":py:obj:`setAlias <cymel.core.cyobjects.plug.Plug.setAlias>`\\ \\(\\[name\\]\\)"
+msgstr ""
+":py:obj:`setAlias ​​<cymel.core.cyobjects.plug.Plug.setAlias>`\\ "
+"\\(\\[name\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.setAlias:1 of
+msgid "プラグの別名を設定、又は削除する。"
+msgstr "Set or delete a plug alias."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`setCached <cymel.core.cyobjects.plug.Plug.setCached>`\\ "
+"\\(val\\[\\, leaf\\]\\)"
+msgstr ""
+":py:obj:`setCached <cymel.core.cyobjects.plug.Plug.setCached>`\\ "
+"\\(val\\[\\, leaf\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.setCaching:1 of
+msgid "Caching フラグを設定する。"
+msgstr "Set the Caching flag."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`setCaching <cymel.core.cyobjects.plug.Plug.setCaching>`\\ "
+"\\(val\\[\\, leaf\\]\\)"
+msgstr ""
+":py:obj:`setCaching <cymel.core.cyobjects.plug.Plug.setCaching>`\\ "
+"\\(val\\[\\, leaf\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`setChannelBox <cymel.core.cyobjects.plug.Plug.setChannelBox>`\\ "
+"\\(val\\[\\, leaf\\]\\)"
+msgstr ""
+":py:obj:`setChannelBox <cymel.core.cyobjects.plug.Plug.setChannelBox>`\\ "
+"\\(val\\[\\, leaf\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.setChannelBox:1 of
+msgid "Keyable でなくてもチャンネルボックスに出すかどうかを設定する。"
+msgstr "Set whether to output to the channel box even if it is not keyable."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ":py:obj:`setKey <cymel.core.cyobjects.plug.Plug.setKey>`\\ \\(\\*\\*kwargs\\)"
+msgstr ":py:obj:`setKey <cymel.core.cyobjects.plug.Plug.setKey>`\\ \\(\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.setKey:1 of
+msgid "キーフレームをセットする。"
+msgstr "Set keyframes."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`setKeyable <cymel.core.cyobjects.plug.Plug.setKeyable>`\\ "
+"\\(val\\[\\, leaf\\]\\)"
+msgstr ""
+":py:obj:`setKeyable <cymel.core.cyobjects.plug.Plug.setKeyable>`\\ "
+"\\(val\\[\\, leaf\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.setKeyable:1 of
+msgid "Keyable フラグを設定する。"
+msgstr "Set the Keyable flag."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`setLocked <cymel.core.cyobjects.plug.Plug.setLocked>`\\ "
+"\\(\\[val\\, leaf\\]\\)"
+msgstr ""
+":py:obj:`setLocked <cymel.core.cyobjects.plug.Plug.setLocked>`\\ "
+"\\(\\[val\\, leaf\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.setLocked:1 of
+msgid "ロック、又はアンロックする。"
+msgstr "lock or unlock."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ":py:obj:`setu <cymel.core.cyobjects.plug.Plug.setu>`\\ \\(val\\[\\, safe\\]\\)"
+msgstr ":py:obj:`setu <cymel.core.cyobjects.plug.Plug.setu>`\\ \\(val\\[\\, safe\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.setu:1 of
+msgid "アトリビュート値をUI設定単位でセットする。"
+msgstr "Set attribute values ​​for each UI setting."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ":py:obj:`toggle <cymel.core.cyobjects.plug.Plug.toggle>`\\ \\(\\)"
+msgstr ":py:obj:`toggle <cymel.core.cyobjects.plug.Plug.toggle>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.toggle:1 of
+msgid "アトリビュート値をトグルする。"
+msgstr "Toggle attribute values."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`unlock <cymel.core.cyobjects.plug.Plug.unlock>`\\ \\(\\[below\\, "
+"undoable\\]\\)"
+msgstr ""
+":py:obj:`unlock <cymel.core.cyobjects.plug.Plug.unlock>`\\ \\(\\[below\\, "
+"undoable\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.unlock:1 of
+msgid "このプラグと階層上位や、下位（オプション）のプラグをアンロックする。"
+msgstr ""
+"Unlocks this plug and the plugs above and below (optional) in the hierarchy."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+msgid ":py:obj:`unmute <cymel.core.cyobjects.plug.Plug.unmute>`\\ \\(\\*\\*kwargs\\)"
+msgstr ":py:obj:`unmute <cymel.core.cyobjects.plug.Plug.unmute>`\\ \\(\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:63:<autosummary>:1
+#: cymel.core.cyobjects.plug.Plug.unmute:1 of
+msgid "ミュート解除する。"
+msgstr "Unmute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst:66
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: cymel.core.cyobjects.plug.Plug.addElement:3 of
+msgid "上層の存在の有無も調べられ、 存在していない箇所の追加と undo も保証する。"
+msgstr ""
+"The presence or absence of the upper layer is also checked, and it is also "
+"guaranteed to add and undo parts that do not exist."
+
+#: cymel.core.cyobjects.plug.Plug.addElement:6 of
+msgid "処理したプラグが下位から並んだリストが返される （既に存在している場合は空リストとなる）。"
+msgstr ""
+"A list of processed plugs arranged from bottom to top is returned (if the "
+"plug already exists, it will be an empty list)."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.core.cyobjects.plug.Plug.addElement:9 of
+msgid "自身がマルチのとき、調べるインデックスを指定する。 自身が要素（実在は不明）のときは省略できる。 省略してもしなくても上位はチェックされる。"
+msgstr ""
+"Specifies the index to check when it is multi. Can be omitted when itself is"
+" an element (existence is unknown). The higher rank will be checked "
+"regardless of whether it is omitted or not."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.core.cyobjects.plug.Plug.addElement:13
+#: cymel.core.cyobjects.plug.Plug.animCurves:7
+#: cymel.core.cyobjects.plug.Plug.animLayers:13
+#: cymel.core.cyobjects.plug.Plug.listEnum:6
+#: cymel.core.cyobjects.plug.Plug.unlock:7 of
+msgid "`list`"
+msgstr "`list`"
+
+#: cymel.core.cyobjects.plug.Plug.animCurve:3
+#: cymel.core.cyobjects.plug.Plug.animCurves:6 of
+msgid "ドリブンキーも含めるかどうか。"
+msgstr "Whether to include driven keys as well."
+
+#: cymel.core.cyobjects.plug.Plug.animCurve:4 of
+msgid ""
+"直接接続された animCurve に限定して得るかどうか。 デフォルトでは、 :mayanode:`pairBlend` や "
+":mayanode:`mute` や アニメーションレイヤーの状態（レイヤー選択や Solo 設定など）が考慮された最適な animCurve "
+"が得られる。"
+msgstr ""
+"Whether to get only directly connected animCurves. By default, the optimal "
+"animCurve is obtained, taking into account :mayanode:`pairBlend`, "
+":mayanode:`mute`, and the state of the animation layer (layer selection, "
+"Solo setting, etc.)."
+
+#: cymel.core.cyobjects.plug.Plug.animCurve:10 of
+msgid "`.AnimCurve` 派生タイプ or None"
+msgstr "`.AnimCurve` derived type or None"
+
+#: cymel.core.cyobjects.plug.Plug.animCurves:3 of
+msgid "アニメーションレイヤーによって複数の animCurve を 持っている場合は、それら全てを得られる。"
+msgstr ""
+"If you have multiple animCurves depending on the animation layer, you will "
+"get them all."
+
+#: cymel.core.cyobjects.plug.Plug.animLayers:3 of
+msgid "`layeredPlug` に all=True を指定した場合と同様に レイヤー並びの降順に得られる。"
+msgstr ""
+"Similar to when all=True is specified for `layeredPlug`, the layers are "
+"obtained in descending order."
+
+#: cymel.core.cyobjects.plug.Plug.animLayers:6 of
+msgid "セレクト状態のレイヤーに限定する。 ただし、ベースレイヤーだけは、 デフォルトでは状態にかかわらず得られる。"
+msgstr ""
+"Limited to selected layers. However, only the base layer is obtained by "
+"default regardless of the state."
+
+#: cymel.core.cyobjects.plug.Plug.animLayers:10 of
+msgid "selected=True の場合に、 ベースレイヤーもセレクト状態に限定するかどうか。"
+msgstr ""
+"If selected=True, whether to limit the base layer to the selected state as "
+"well."
+
+#: cymel.core.cyobjects.plug.Plug.belongsToLayer:3 of
+msgid "アニメーションレイヤー名 （文字列か、文字列として評価してノード名になるもの）。 ベースレイヤーは実体が無いため指定出来ない。"
+msgstr ""
+"Animation layer name (either a string or something that evaluates to a "
+"string and becomes a node name). The base layer cannot be specified because "
+"it has no substance."
+
+#: cymel.core.cyobjects.plug.Plug.belongsToLayer:7
+#: cymel.core.cyobjects.plug.Plug.toggle:6 of
+msgid "`bool`"
+msgstr "`bool`"
+
+#: cymel.core.cyobjects.plug.Plug.connect:3
+#: cymel.core.cyobjects.plug.Plug.disconnect:3 of
+msgid "いかなる場合でも完全な undo をサポートしている。"
+msgstr "Full undo is supported in all cases."
+
+#: cymel.core.cyobjects.plug.Plug.connect:5 of
+msgid "常に出力側プラグが返され、 nextAvailable が False の場合はこのプラグ、 True の場合は決定した要素プラグとなる。"
+msgstr ""
+"The output side plug is always returned, and if nextAvailable is False, this"
+" plug will be returned, and if it is True, it will be the determined element"
+" plug."
+
+#: cymel.core.cyobjects.plug.Plug.connect:10 of
+msgid "入力元のアトリビュート。"
+msgstr "Input source attributes."
+
+#: cymel.core.cyobjects.plug.Plug.connect:11 of
+msgid "他の接続やロックなどのエラー要因を回避して接続する。"
+msgstr "Connect by avoiding error factors such as other connections or locks."
+
+#: cymel.core.cyobjects.plug.Plug.connect:13 of
+msgid "接続後にロックする。"
+msgstr "Lock after connecting."
+
+#: cymel.core.cyobjects.plug.Plug.connect:15 of
+msgid "次に利用可能なインデックスに接続する。 isIndexMatters 設定に限らず利用できる。 接続された要素プラグが返される。"
+msgstr ""
+"Connect to the next available index. Can be used not only for isIndexMatters"
+" setting. The connected element plug is returned."
+
+#: cymel.core.cyobjects.plug.Plug.connect:19 of
+msgid "`Plug` or None"
+msgstr "`Plug` or None"
+
+#: cymel.core.cyobjects.plug.Plug.connect:22 of
+msgid "オプション指定は出来ないが、 演算子 << でも同様の操作が可能。"
+msgstr ""
+"Although options cannot be specified, similar operations can be performed "
+"using the operator <<."
+
+#: cymel.core.cyobjects.plug.Plug.connect:26 of
+msgid ""
+"`disconnect` と統一性を持たせるため、 出力に対して入力を指定する仕様になっており、 pymel の connect "
+"とは指定方向が逆である。 pymel と同じ指定方向のものとして `connectTo` も利用できる。"
+msgstr ""
+"In order to maintain consistency with `disconnect`, the input is specified "
+"for the output, and the direction of specification is opposite to that of "
+"pymel's connect. `connectTo` can also be used in the same direction as "
+"pymel."
+
+#: cymel.core.cyobjects.plug.Plug.connectTo:4 of
+msgid "出力先のアトリビュート。"
+msgstr "Attributes to output to."
+
+#: cymel.core.cyobjects.plug.Plug.connectTo:5 of
+msgid "その他に `connect` のオプションを指定可能。"
+msgstr "Other `connect` options can be specified."
+
+#: cymel.core.cyobjects.plug.Plug.connectTo:6 of
+msgid "`Plug`"
+msgstr "`Plug`"
+
+#: cymel.core.cyobjects.plug.Plug.connectTo:9 of
+msgid "オプション指定は出来ないが、 演算子 >> でも同様の操作が可能。"
+msgstr ""
+"Although options cannot be specified, the same operation is possible with "
+"the operator >>."
+
+#: cymel.core.cyobjects.plug.Plug.createAnimCurve:3 of
+msgid "アトリビュートへの接続はしない。"
+msgstr "Do not connect to attributes."
+
+#: cymel.core.cyobjects.plug.Plug.createAnimCurve:5 of
+msgid "ドリブンキー用の animCurve を生成する。"
+msgstr "Generate animCurve for driven keys."
+
+#: cymel.core.cyobjects.plug.Plug.createAnimCurve:7 of
+msgid "得たいオブジェクトのクラス。 通常はデフォルトのままで良い。 `str` を指定すれば名前のまま得られる。"
+msgstr ""
+"The class of the object you want to get. Normally you can leave it as the "
+"default. If you specify `str`, you can get the name as is."
+
+#: cymel.core.cyobjects.plug.Plug.createAnimCurve:11 of
+msgid "`.AnimCurve` 派生タイプ"
+msgstr "`.AnimCurve` derived type"
+
+#: cymel.core.cyobjects.plug.Plug.delete:3 of
+msgid "コネクションがあったり、ロックされていたりなどの エラー要因を回避して削除する。"
+msgstr ""
+"Delete while avoiding error factors such as existing connections or being "
+"locked."
+
+#: cymel.core.cyobjects.plug.Plug.disconnect:5 of
+msgid "nextAvailable が False の場合は 切断した入力側プラグが返され、 True の場合は出力側プラグのリストが返される。"
+msgstr ""
+"If nextAvailable is False, the disconnected input plug is returned; if "
+"nextAvailable is True, a list of output plugs is returned."
+
+#: cymel.core.cyobjects.plug.Plug.disconnect:10 of
+msgid "切断する入力プラグ。省略可能。"
+msgstr "Input plug to disconnect. Optional."
+
+#: cymel.core.cyobjects.plug.Plug.disconnect:11 of
+msgid "ロックされていても極力エラーを回避して切断する （一時的にアンロックして元に戻す）。"
+msgstr ""
+"Even if it is locked, disconnect as much as possible to avoid errors "
+"(temporarily unlock it and restore it)."
+
+#: cymel.core.cyobjects.plug.Plug.disconnect:14 of
+msgid ""
+"マルチプラグと src を指定した場合に、 接続されている要素を探して切断する。 複数あれば全て切断され、そのリストが返される。 "
+"isIndexMatters 設定に限らず利用できる。"
+msgstr ""
+"When multiplug and src are specified, searches for connected elements and "
+"disconnects them. If there is more than one, they are all disconnected and a"
+" list of them is returned. Can be used not only for isIndexMatters setting."
+
+#: cymel.core.cyobjects.plug.Plug.disconnect:19 of
+msgid "`Plug` or `list`"
+msgstr "`Plug` or `list`"
+
+#: cymel.core.cyobjects.plug.Plug.disconnect:22 of
+msgid "オプション指定は出来ないが、 演算子 // でも同様の操作が可能。"
+msgstr ""
+"Although options cannot be specified, similar operations can be performed "
+"using the operator //."
+
+#: cymel.core.cyobjects.plug.Plug.iterElements:3 of
+msgid "Python のスライスと同じ感覚で、開始、終了、ステップを指定する。 それぞれ負数を指定することも可能。"
+msgstr ""
+"Specify the start, end, and step in the same way as Python's slice. It is "
+"also possible to specify negative numbers for each."
+
+#: cymel.core.cyobjects.plug.Plug.iterElements:6 of
+msgid "全ての引数を省略すると、存在する全要素がイテレーションされる。"
+msgstr ""
+"If all arguments are omitted, all present elements will be iterated over."
+
+#: cymel.core.cyobjects.plug.Plug.iterElements:8 of
+msgid ""
+"開始する論理インデックスを指定する。 負数を指定すると、存在する要素の末尾のインデックスを -1 として さかのぼった位置になる。 "
+"省略時(None)は、存在する要素の開始点となる （stepが正の場合は最小インデックス、負の場合は最大インデックス）。"
+msgstr ""
+"Specifies the logical index to start with. If you specify a negative number,"
+" the last index of the existing element will be set to -1 and the position "
+"will be moved backwards. If omitted (None), the starting point of the "
+"existing element is used (the minimum index if step is positive, the maximum"
+" index if step is negative)."
+
+#: cymel.core.cyobjects.plug.Plug.iterElements:14 of
+msgid ""
+"終了する論理インデックスを指定する。 実際に取得されるのはこの1つ前の位置までである。 負数を指定すると、存在する要素の末尾のインデックスを -1 "
+"として さかのぼった位置になる。 省略時(None)は、存在する要素の終了点の1つ先の位置となる "
+"（stepが正の場合は最小インデックス-1、負の場合は最大インデックス+1）。"
+msgstr ""
+"Specifies the ending logical index. What is actually retrieved is the "
+"position one position before this. If you specify a negative number, the "
+"last index of the existing element will be set to -1 and the position will "
+"be moved backwards. If omitted (None), the position will be one position "
+"beyond the end point of the existing element (if step is positive, the "
+"minimum index -1, if it is negative, the maximum index +1)."
+
+#: cymel.core.cyobjects.plug.Plug.iterElements:21 of
+msgid "インデックスのステップ数を指定する。"
+msgstr "Specify the number of index steps."
+
+#: cymel.core.cyobjects.plug.Plug.iterElements:23 of
+msgid "要素が存在するかどうかにかかわらず得るかどうか。 infinite=True の場合は all=True ともみなされる。"
+msgstr ""
+"Whether to get the element whether it exists or not. If infinite=True, "
+"all=True is also considered."
+
+#: cymel.core.cyobjects.plug.Plug.iterElements:26 of
+msgid ""
+"要素が存在するかどうかにかかわらず得るとともに、 end を無視し、無限にイテレーションする。 ただし、step が負の場合は 0 未満にはならない。 "
+"step が正の場合は無限ループに注意。"
+msgstr ""
+"Gets the element whether it exists or not, ignores end, and iterates "
+"infinitely. However, if step is negative, it will not be less than 0. Be "
+"careful of infinite loops if step is positive."
+
+#: cymel.core.cyobjects.plug.Plug.iterHierarchy:3 of
+msgid "マルチ要素を収集する際、マルチプラグを評価する。"
+msgstr "Evaluate multiplugs when collecting multielements."
+
+#: cymel.core.cyobjects.plug.Plug.iterHierarchy:5 of
+msgid "マルチ要素を収集する際、コネクションを元にする。"
+msgstr "When collecting multiple elements, use connections as the basis."
+
+#: cymel.core.cyobjects.plug.Plug.iterHierarchy:7 of
+msgid "プラグを1つ受け `bool` を返す関数を指定する。 False を返すところから下層には降りない。"
+msgstr ""
+"Specify a function that receives one plug and returns `bool`. It does not "
+"descend to the lower layer from the point where it returns False."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:3 of
+msgid ""
+"allowNonLayer=True とすることで、 アニメーションレイヤーが使われていなくても その他の仕組み（ "
+":mayanode:`pairBlend` と :mayanode:`mute` を想定 ）による代理プラグを得る手段としても利用できる。"
+msgstr ""
+"By setting allowNonLayer=True, it can also be used as a means to obtain "
+"proxy plugs using other mechanisms (assuming :mayanode:`pairBlend` and "
+":mayanode:`mute`) even if the animation layer is not used."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:9 of
+msgid "オプションの組み合わせ例を以下に示す。"
+msgstr "Examples of option combinations are shown below."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:11 of
+msgid "属する最上位のレイヤーのプラグを得る : デフォルト"
+msgstr "Get the plug of the top layer it belongs to: Default"
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:12 of
+msgid "現在の状態でキーを打つ際に対象となるレイヤーのプラグを得る : best=True"
+msgstr ""
+"Get the plug for the target layer when hitting a key in the current state: "
+"best=True"
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:13 of
+msgid "ベースレイヤーのプラグを得る : layer=''"
+msgstr "Get base layer plug: layer=''"
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:14 of
+msgid "プラグが属する全レイヤーのプラグを得る : all=True"
+msgstr "Get the plugs of all layers to which the plug belongs: all=True"
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:15 of
+msgid "プラグが属する選択レイヤーの上位のものを得る : selected=True"
+msgstr ""
+"Get the top of the selection layer to which the plug belongs: selected=True"
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:16 of
+msgid "プラグが属する選択レイヤーの全てを得る : all=True, selected=True"
+msgstr ""
+"Get all selected layers to which the plug belongs: all=True, selected=True"
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:17 of
+msgid "指定レイヤーに属していればそのプラグを得る : layer=\"レイヤー名\", exact=True"
+msgstr ""
+"Get the plug if it belongs to the specified layer: layer=\"layer name\", "
+"exact=True"
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:18 of
+msgid "指定レイヤーに属していればそのプラグ、そうでなければ上位から順次検索 : layer=\"レイヤー名\""
+msgstr ""
+"If it belongs to the specified layer, search for that plug, otherwise search"
+" from the top: layer=\"layer name\""
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:19 of
+msgid "指定レイヤーに属しており選択状態であればそのプラグを得る : layer=\"レイヤー名\", selected=True, exact=True"
+msgstr ""
+"If it belongs to the specified layer and is selected, get that plug: "
+"layer=\"layer name\", selected=True, exact=True"
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:20 of
+msgid "指定レイヤーに属しており選択状態であればそのプラグ、そうでなければ順次検索 : layer=\"レイヤー名\", selected=True"
+msgstr ""
+"If it belongs to the specified layer and is selected, search for that plug, "
+"otherwise search sequentially: layer=\"layer name\", selected=True"
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:22 of
+msgid ""
+"検索するアニメーションレイヤー。  デフォルトの None では、プラグが属するレイヤーを上位から優先して検索する。 "
+"\"\"（空文字列）を指定すると、ベースレイヤーを指定することと同義になる。  プラグが指定レイヤーに属していなかった場合、デフォルト動作では、 "
+"属するレイヤーが上位から順次検索される。 つまり、 `animLayers` と同様に、レイヤーエディターの並び順で得られる。"
+msgstr ""
+"Animation layer to search for.  With the default None, the layer to which "
+"the plug belongs will be searched from top to bottom. Specifying \"\" (empty"
+" string) is synonymous with specifying a base layer.  If the plug does not "
+"belong to the specified layer, the default behavior is to search for the "
+"layers it belongs to from the top. In other words, like `animLayers`, they "
+"are obtained in the order of the layer editor."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:23 of
+msgid "検索するアニメーションレイヤー。"
+msgstr "Animation layer to search for."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:25 of
+msgid ""
+"デフォルトの None では、プラグが属するレイヤーを上位から優先して検索する。 "
+"\"\"（空文字列）を指定すると、ベースレイヤーを指定することと同義になる。"
+msgstr ""
+"With the default None, the layer to which the plug belongs will be searched "
+"from top to bottom. Specifying \"\" (empty string) is synonymous with "
+"specifying a base layer."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:28 of
+msgid ""
+"プラグが指定レイヤーに属していなかった場合、デフォルト動作では、 属するレイヤーが上位から順次検索される。 つまり、 `animLayers` "
+"と同様に、レイヤーエディターの並び順で得られる。"
+msgstr ""
+"If the plug does not belong to the specified layer, the default behavior is "
+"to search for the layers it belongs to from the top. In other words, like "
+"`animLayers`, they are obtained in the order of the layer editor."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:32 of
+msgid ""
+"検索対象のレイヤーをセレクト状態のものに限定する。  layer が指定された場合、そのレイヤーがセレクト状態である場合に絞り込む。  layer "
+"が指定されない場合や、レイヤーがセレクト状態でなかったり プラグがメンバーでなかった場合に、順次検索されるレイヤーに対しても "
+"セレクト状態のもののみに絞り込む。"
+msgstr ""
+"Limit the search target layers to those in the selected state.  If layer is "
+"specified, filter when that layer is selected.  If layer is not specified, "
+"the layer is not selected, or the plug is not a member, the sequentially "
+"searched layers will be narrowed down to only those that are selected."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:33 of
+msgid "検索対象のレイヤーをセレクト状態のものに限定する。"
+msgstr "Limit the search target layers to those in the selected state."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:35 of
+msgid "layer が指定された場合、そのレイヤーがセレクト状態である場合に絞り込む。"
+msgstr "If layer is specified, filter when that layer is selected."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:37 of
+msgid ""
+"layer が指定されない場合や、レイヤーがセレクト状態でなかったり プラグがメンバーでなかった場合に、順次検索されるレイヤーに対しても "
+"セレクト状態のもののみに絞り込む。"
+msgstr ""
+"If layer is not specified, the layer is not selected, or the plug is not a "
+"member, the sequentially searched layers will be narrowed down to only those"
+" that are selected."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:41 of
+msgid ""
+"layer や selected オプションを修飾する。  デフォルトの False の場合、プラグが指定レイヤーのメンバーでない場合は "
+"他のレイヤーやベースレイヤーも順次探索される。 また、selected が指定されていても、レイヤーを順次探索した結果の最後と "
+"してのベースレイヤーについてはセレクト状態を問わない。  True を指定すると厳密な動作となり、 layer 指定時は、プラグがそのメンバーでなければ"
+" None が返される。 また、レイヤーを順次探索した結果の最後のベースレイヤーについても selected フラグがチェックされるようになる。"
+msgstr ""
+"Modify layer and selected options.  If the default is False, if the plug is "
+"not a member of the specified layer, other layers and base layers will be "
+"searched in turn. Also, even if selected is specified, the selected state "
+"does not matter for the base layer that is the last result of sequentially "
+"searching layers.  Specifying True will result in strict behavior, and when "
+"layer is specified, None will be returned if the plug is not a member of it."
+" Also, the selected flag will be checked for the last base layer as a result"
+" of sequentially searching layers."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:42 of
+msgid "layer や selected オプションを修飾する。"
+msgstr "Modify layer and selected options."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:44 of
+msgid ""
+"デフォルトの False の場合、プラグが指定レイヤーのメンバーでない場合は 他のレイヤーやベースレイヤーも順次探索される。 また、selected "
+"が指定されていても、レイヤーを順次探索した結果の最後と してのベースレイヤーについてはセレクト状態を問わない。"
+msgstr ""
+"If the default is False, if the plug is not a member of the specified layer,"
+" other layers and base layers will be searched in turn. Also, even if "
+"selected is specified, the selected state does not matter for the base layer"
+" that is the last result of sequentially searching layers."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:49 of
+msgid ""
+"True を指定すると厳密な動作となり、 layer 指定時は、プラグがそのメンバーでなければ None が返される。 "
+"また、レイヤーを順次探索した結果の最後のベースレイヤーについても selected フラグがチェックされるようになる。"
+msgstr ""
+"Specifying True will result in strict behavior, and when layer is specified,"
+" None will be returned if the plug is not a member of it. Also, the selected"
+" flag will be checked for the last base layer as a result of sequentially "
+"searching layers."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:54 of
+msgid "現在の状態でのキーを打つ対象となるレイヤーのプラグを得る。"
+msgstr ""
+"Gets the plug for the layer that is the target of keystrokes in its current "
+"state."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:57 of
+msgid ""
+"True を指定すると戻り値は必ず `list` となる。  layer が指定されないか、指定したレイヤーのメンバーでないか selected "
+"フラグが 一致しないかで、所属レイヤーが順次検索される場合の動作を変更する。 デフォルトの False では、layer が None か \"\" "
+"かにより、 上位優先で最初に見つけたレイヤーか最後のベースレイヤーのどれか一つのプラグが 返される。 True "
+"を指定すると、順次検索した全てレイヤー（selected チェックでの 絞り込みはされる）のプラグが取得される。"
+msgstr ""
+"If True is specified, the return value will always be `list`.  Changes the "
+"behavior when layers are sequentially searched because layer is not "
+"specified, the layer is not a member of the specified layer, or the selected"
+" flag does not match. With the default False, depending on whether layer is "
+"None or \"\", either the first found layer or the last base layer plug is "
+"returned, with top priority. If you specify True, plugs for all layers "
+"searched sequentially (narrowed down by the selected check) will be "
+"acquired."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:58 of
+msgid "True を指定すると戻り値は必ず `list` となる。"
+msgstr "If True is specified, the return value will always be `list`."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:60 of
+msgid ""
+"layer が指定されないか、指定したレイヤーのメンバーでないか selected フラグが "
+"一致しないかで、所属レイヤーが順次検索される場合の動作を変更する。 デフォルトの False では、layer が None か \"\" かにより、 "
+"上位優先で最初に見つけたレイヤーか最後のベースレイヤーのどれか一つのプラグが 返される。 True "
+"を指定すると、順次検索した全てレイヤー（selected チェックでの 絞り込みはされる）のプラグが取得される。"
+msgstr ""
+"Changes the behavior when layers are sequentially searched because layer is "
+"not specified, the layer is not a member of the specified layer, or the "
+"selected flag does not match. With the default False, depending on whether "
+"layer is None or \"\", either the first found layer or the last base layer "
+"plug is returned, with top priority. If you specify True, plugs for all "
+"layers searched sequentially (narrowed down by the selected check) will be "
+"acquired."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:67 of
+msgid "True を指定すると `Plug` と、それが対応するレイヤー名のペアが返される。"
+msgstr ""
+"If set to True, a pair of `Plug` and its corresponding layer name will be "
+"returned."
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:70 of
+msgid ""
+"プラグがベースレイヤーにしか属しておらず（レイヤーブレンドされていない）、 それ以外のスイッチ系のノードが挟まっている場合、その入力プラグを得る。 "
+":mayanode:`pairBlend` と :mayanode:`mute` を想定している。"
+msgstr ""
+"If the plug only belongs to the base layer (not layer blended) and other "
+"switch-type nodes are sandwiched, you will get that input plug. "
+":mayanode:`pairBlend` and :mayanode:`mute` are assumed."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug.Plug.rst
+msgid "戻り値"
+msgstr "return value"
+
+#: cymel.core.cyobjects.plug.Plug.layeredPlug:75 of
+msgid "`Plug` や (`Plug`, `str`) 、又はそれらの `list`"
+msgstr "`Plug` or (`Plug`, `str`) or their `list`"
+
+#: cymel.core.cyobjects.plug.Plug.listEnum:3 of
+msgid "ペアの並び順を入れ替え、 (名前, 値) ではなく (値, 名前) にする。"
+msgstr ""
+"Reorder the pairs so that they are (value, name) instead of (name, value)."
+
+#: cymel.core.cyobjects.plug.Plug.pairBlendPlug:3 of
+msgid "入力 1 のプラグを得る。"
+msgstr "Get a plug for input 1."
+
+#: cymel.core.cyobjects.plug.Plug.pairBlendPlug:4 of
+msgid "入力 2 のプラグを得る。"
+msgstr "Get a plug for input 2."
+
+#: cymel.core.cyobjects.plug.Plug.pairBlendPlug:5 of
+msgid "in1 と in2 の指定は無視して、 pairBlend の currentDriver をチェックして 1 か 2 を得る。"
+msgstr ""
+"Ignore the in1 and in2 specifications and check the currentDriver of "
+"pairBlend to get 1 or 2."
+
+#: cymel.core.cyobjects.plug.Plug.pairBlendPlug:8 of
+msgid "得たい入力系統が使用されている場合にのみ得る。"
+msgstr "Obtain only if the desired input system is used."
+
+#: cymel.core.cyobjects.plug.Plug.pairBlendPlug:10 of
+msgid ""
+"in1, in2, cur, そして inUse の指定を全て無視して、 pairBlend の mode や weight をチェックして、 "
+"利用されている入力のタプルを得る。"
+msgstr ""
+"Ignores all in1, in2, cur, and inUse specifications and checks the mode and "
+"weight of pairBlend to get the input tuples being used."
+
+#: cymel.core.cyobjects.plug.Plug.pairBlendPlug:14 of
+msgid ""
+"byWeight が True の場合は `tuple` 、 in1 と in2 が両方 True の場合は `tuple` 、 そうでない場合は単一の"
+" `Plug` か None。"
+msgstr ""
+"`tuple` if byWeight is True, `tuple` if in1 and in2 are both True, otherwise"
+" a single `Plug` or None."
+
+#: cymel.core.cyobjects.plug.Plug.remove:3 of
+msgid "`removeElement` にインデックスを指定しない場合と同じだが、 こちらの場合は要素プラグ以外で使用するとエラーになる。"
+msgstr ""
+"It is the same as when no index is specified for `removeElement`, but in "
+"this case, an error will occur if used in anything other than an element "
+"plug."
+
+#: cymel.core.cyobjects.plug.Plug.remove:6
+#: cymel.core.cyobjects.plug.Plug.removeAllElements:6
+#: cymel.core.cyobjects.plug.Plug.removeElement:3 of
+msgid "削除された要素の数が返される。 ただし、それにはアトリビュート階層下の マルチアトリビュート要素の数も含まれる。"
+msgstr ""
+"Returns the number of removed elements. However, it also includes the number"
+" of multi-attribute elements under the attribute hierarchy."
+
+#: cymel.core.cyobjects.plug.Plug.remove:10
+#: cymel.core.cyobjects.plug.Plug.removeAllElements:10
+#: cymel.core.cyobjects.plug.Plug.removeElement:11 of
+msgid "コネクションがあってもエラーにならずに削除する。"
+msgstr ""
+"Even if there is a connection, it will be deleted without causing an error."
+
+#: cymel.core.cyobjects.plug.Plug.remove:12
+#: cymel.core.cyobjects.plug.Plug.removeAllElements:12
+#: cymel.core.cyobjects.plug.Plug.removeElement:13 of
+msgid "コネクションだけでなく、ロックされていたりなどの エラー要因を可能な限り回避する。 こちらのオプションだけで b=True も兼ねる。"
+msgstr ""
+"Avoid not only connections but also error factors such as locking as much as"
+" possible. This option alone also serves as b=True."
+
+#: cymel.core.cyobjects.plug.Plug.remove:16
+#: cymel.core.cyobjects.plug.Plug.removeAllElements:16
+#: cymel.core.cyobjects.plug.Plug.removeElement:17 of
+msgid "`int`"
+msgstr "`int`"
+
+#: cymel.core.cyobjects.plug.Plug.removeAllElements:3 of
+msgid "`removeElement` にインデックスを指定しない場合と同じだが、 こちらの場合はマルチプラグ以外で使用するとエラーになる。"
+msgstr ""
+"This is the same as not specifying an index for `removeElement`, but in this"
+" case, an error will occur if used with anything other than multi-plug."
+
+#: cymel.core.cyobjects.plug.Plug.removeElement:7 of
+msgid "自身がマルチのとき、削除するインデックスを指定する。 省略すると、自身が要素ならそれが、 マルチなら全ての要素が削除される。"
+msgstr ""
+"Specifies the index to be deleted when it is multi. If omitted, if it is an "
+"element, it will be deleted, and if it is a multi, all elements will be "
+"deleted."
+
+#: cymel.core.cyobjects.plug.Plug.set:3 cymel.core.cyobjects.plug.Plug.setu:3
+#: of
+msgid "None を指定することで、 データ型アトリビュートの Null もセットできる。 もちろん undo も可能。"
+msgstr ""
+"By specifying None, you can also set the data type attribute to Null. Of "
+"course undo is also possible."
+
+#: cymel.core.cyobjects.plug.Plug.set:7 cymel.core.cyobjects.plug.Plug.setu:7
+#: of
+msgid "セットする値。"
+msgstr "Value to set."
+
+#: cymel.core.cyobjects.plug.Plug.set:8 cymel.core.cyobjects.plug.Plug.setu:8
+#: of
+msgid ""
+"アトリビュートがロックされていているなどのために セットできない場合もエラーにならない。 また、 double3 などの数値系コンパウンドの場合は "
+"セットできる箇所だけセットされる。 セットに失敗したアトリビュートの数が返される。"
+msgstr ""
+"An error does not occur even if the attribute cannot be set because it is "
+"locked. Also, in the case of numerical compounds such as double3, only the "
+"places that can be set are set. Returns the number of attributes that failed"
+" to set."
+
+#: cymel.core.cyobjects.plug.Plug.set:14
+#: cymel.core.cyobjects.plug.Plug.setu:14 of
+msgid "None or `int`"
+msgstr "None or `int`"
+
+#: cymel.core.cyobjects.plug.Plug.setAlias:3 of
+msgid "設定する別名。 None や空文字を指定すると、既存の設定を削除する。"
+msgstr ""
+"Alias ​​to set. If you specify None or an empty string, the existing "
+"settings will be deleted."
+
+#: cymel.core.cyobjects.plug.Plug.setCaching:3
+#: cymel.core.cyobjects.plug.Plug.setChannelBox:3
+#: cymel.core.cyobjects.plug.Plug.setKeyable:3 of
+msgid "True だと有効、 False だと無効。"
+msgstr "True means it is enabled, False means it is disabled."
+
+#: cymel.core.cyobjects.plug.Plug.setCaching:4
+#: cymel.core.cyobjects.plug.Plug.setChannelBox:4
+#: cymel.core.cyobjects.plug.Plug.setKeyable:4
+#: cymel.core.cyobjects.plug.Plug.setLocked:4 of
+msgid "プラグがコンパウンドの場合に True にすると、そのプラグは 処理されず、コンパウンド階層のリーフが探され纏めて処理される。"
+msgstr ""
+"If the plug is a compound and is set to True, the plug will not be "
+"processed, but the leaves of the compound hierarchy will be found and "
+"processed together."
+
+#: cymel.core.cyobjects.plug.Plug.setLocked:3 of
+msgid "True だとロック、 False だとアンロック。"
+msgstr "Locks if True, unlocks if False."
+
+#: cymel.core.cyobjects.plug.Plug.setLocked:9 of
+msgid "アンロックの場合は、プラグ階層上位や下位に対しても保証できる `unlock` メソッドが便利である。"
+msgstr ""
+"In the case of unlocking, the `unlock` method is convenient because it can "
+"guarantee the upper and lower plug hierarchy."
+
+#: cymel.core.cyobjects.plug.Plug.toggle:3 of
+msgid "現在の値の否定をセットするだけなので、 型が bool でなくとも動作はする。"
+msgstr ""
+"It only sets the negation of the current value, so it works even if the type"
+" is not bool."
+
+#: cymel.core.cyobjects.plug.Plug.unlock:3 of
+msgid "実際にアンロックされたプラグが上位から並んだリストが返される。"
+msgstr ""
+"A list of actually unlocked plugs arranged from top to bottom is returned."
+
+#: cymel.core.cyobjects.plug.Plug.unlock:5 of
+msgid "これより下層もアンロックする。"
+msgstr "This will also unlock the lower layers."
+
+#: cymel.core.cyobjects.plug.Plug.unlock:6 of
+msgid "undoの可否。"
+msgstr "Possibility of undo."
+
+#: cymel.core.cyobjects.plug.Plug.unlock:10 of
+msgid "ロック状態は上位から引き継がれるので、 上層をアンロックせずに下層の判定はできない。"
+msgstr ""
+"Since the lock status is inherited from the upper layer, it is not possible "
+"to judge the lower layer without unlocking the upper layer."

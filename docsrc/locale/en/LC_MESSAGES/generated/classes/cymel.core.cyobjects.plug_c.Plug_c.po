@@ -1,0 +1,2457 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:2
+msgid "class cymel.core.cyobjects.plug_c.Plug_c"
+msgstr "class cymel.core.cyobjects.plug_c.Plug_c"
+
+#: cymel.core.cyobjects.plug_c.Plug_c:1 of
+msgid "`.Plug` クラスでサポートする機能の中核。"
+msgstr "Core functionality supported by the `.Plug` class."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`addProxy <cymel.core.cyobjects.plug_c.Plug_c.addProxy>`\\ "
+"\\(name\\[\\, node\\]\\)"
+msgstr ""
+":py:obj:`addProxy <cymel.core.cyobjects.plug_c.Plug_c.addProxy>`\\ "
+"\\(name\\[\\, node\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.addProxy:1 of
+msgid "このプラグに対するプロキシアトリビュートを生成する。"
+msgstr "Generate proxy attributes for this plug."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`affectedAttrs <cymel.core.cyobjects.plug_c.Plug_c.affectedAttrs>`\\"
+" \\(\\[worldSpace\\, pcls\\]\\)"
+msgstr ""
+":py:obj:`affectedAttrs <cymel.core.cyobjects.plug_c.Plug_c.affectedAttrs>`\\"
+" \\(\\[worldSpace\\, pcls\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.affectedAttrs:1 of
+msgid "このプラグが同一ノード内で影響を与えるプラグのリストを得る。"
+msgstr "Get a list of plugs that this plug affects within the same node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`affectingAttrs "
+"<cymel.core.cyobjects.plug_c.Plug_c.affectingAttrs>`\\ \\(\\[worldSpace\\, "
+"pcls\\]\\)"
+msgstr ""
+":py:obj:`affectingAttrs "
+"<cymel.core.cyobjects.plug_c.Plug_c.affectingAttrs>`\\ \\(\\[worldSpace\\, "
+"pcls\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.affectingAttrs:1 of
+msgid "このプラグが同一ノード内で影響を受けるプラグのリストを得る。"
+msgstr "Get a list of plugs that this plug affects within the same node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`alias <cymel.core.cyobjects.plug_c.Plug_c.alias>`\\ \\(\\)"
+msgstr ":py:obj:`alias <cymel.core.cyobjects.plug_c.Plug_c.alias>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.alias:1 of
+msgid "別名を得る。"
+msgstr "Get an alias."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`apiGetSetNullProc "
+"<cymel.core.cyobjects.plug_c.Plug_c.apiGetSetNullProc>`\\ \\(\\)"
+msgstr ""
+":py:obj:`apiGetSetNullProc "
+"<cymel.core.cyobjects.plug_c.Plug_c.apiGetSetNullProc>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.apiGetSetNullProc:1 of
+msgid "undoに対応せずに Null をセットするための関数を得る。"
+msgstr "Get a function to set Null without supporting undo."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`apiGetUndoSetProc "
+"<cymel.core.cyobjects.plug_c.Plug_c.apiGetUndoSetProc>`\\ \\(\\)"
+msgstr ""
+":py:obj:`apiGetUndoSetProc "
+"<cymel.core.cyobjects.plug_c.Plug_c.apiGetUndoSetProc>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.apiGetUndoSetProc:1 of
+msgid "undoに対応せずに現在の値をセットするための関数を得る。"
+msgstr "Get a function to set the current value without supporting undo."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`apiSetDefault <cymel.core.cyobjects.plug_c.Plug_c.apiSetDefault>`\\"
+" \\(val\\[\\, reset\\, force\\]\\)"
+msgstr ""
+":py:obj:`apiSetDefault <cymel.core.cyobjects.plug_c.Plug_c.apiSetDefault>`\\"
+" \\(val\\[\\, reset\\, force\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.apiSetDefault:1 of
+msgid "undoに対応せずにアトリビュートのデフォルト値を内部単位でセットする。"
+msgstr ""
+"Set the default value of an attribute on an internal basis without "
+"supporting undo."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`apiSetDefaultu "
+"<cymel.core.cyobjects.plug_c.Plug_c.apiSetDefaultu>`\\ \\(val\\[\\, reset\\,"
+" force\\]\\)"
+msgstr ""
+":py:obj:`apiSetDefaultu "
+"<cymel.core.cyobjects.plug_c.Plug_c.apiSetDefaultu>`\\ \\(val\\[\\, reset\\,"
+" force\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.apiSetDefaultu:1 of
+msgid "undoに対応せずにアトリビュートのデフォルト値をUI設定単位でセットする。"
+msgstr ""
+"Set default values ​​of attributes for each UI setting without supporting "
+"undo."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`apiSetLocked <cymel.core.cyobjects.plug_c.Plug_c.apiSetLocked>`\\ "
+"\\(val\\)"
+msgstr ""
+":py:obj:`apiSetLocked <cymel.core.cyobjects.plug_c.Plug_c.apiSetLocked>`\\ "
+"\\(val\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.apiSetLocked:1 of
+msgid "undoに対応せずにプラグのロック状態をセットする。"
+msgstr "Sets the lock state of the plug without supporting undo."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`array <cymel.core.cyobjects.plug_c.Plug_c.array>`\\ \\(\\)"
+msgstr ":py:obj:`array <cymel.core.cyobjects.plug_c.Plug_c.array>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.array:1 of
+msgid "要素からマルチアトリビュートを得る。"
+msgstr "Get multiple attributes from an element."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`attrName <cymel.core.cyobjects.plug_c.Plug_c.attrName>`\\ \\(\\)"
+msgstr ":py:obj:`attrName <cymel.core.cyobjects.plug_c.Plug_c.attrName>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.attrName:1 of
+msgid "ノード名を含まずに、ドットから始まるプラグ名を得る。"
+msgstr ""
+"Get the plug name starting with a dot without including the node name."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`child <cymel.core.cyobjects.plug_c.Plug_c.child>`\\ \\(idx\\)"
+msgstr ":py:obj:`child <cymel.core.cyobjects.plug_c.Plug_c.child>`\\ \\(idx\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.child:1 of
+msgid "コンパウンドアトリビュートの idx 番目の子を得る。"
+msgstr "Get the idxth child of the compound attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`childNames <cymel.core.cyobjects.plug_c.Plug_c.childNames>`\\ "
+"\\(\\[long\\]\\)"
+msgstr ""
+":py:obj:`childNames <cymel.core.cyobjects.plug_c.Plug_c.childNames>`\\ "
+"\\(\\[long\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.childNames:1 of
+msgid "コンパウンドアトリビュートの子アトリビュート名リストを得る。"
+msgstr "Get a list of child attribute names of a compound attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`children <cymel.core.cyobjects.plug_c.Plug_c.children>`\\ \\(\\)"
+msgstr ":py:obj:`children <cymel.core.cyobjects.plug_c.Plug_c.children>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.children:1 of
+msgid "コンパウンドアトリビュートの子のリストを得る。"
+msgstr "Get the list of children of a compound attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`connectedElement "
+"<cymel.core.cyobjects.plug_c.Plug_c.connectedElement>`\\ \\(idx\\)"
+msgstr ""
+":py:obj:`connectedElement "
+"<cymel.core.cyobjects.plug_c.Plug_c.connectedElement>`\\ \\(idx\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElement:1 of
+msgid "マルチアトリビュートのコネクトされている要素を物理インデックスで得る。"
+msgstr "Get connected elements of multi-attribute by physical index."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`connectedElementIndices "
+"<cymel.core.cyobjects.plug_c.Plug_c.connectedElementIndices>`\\ \\(\\)"
+msgstr ""
+":py:obj:`connectedElementIndices "
+"<cymel.core.cyobjects.plug_c.Plug_c.connectedElementIndices>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElementIndices:1 of
+msgid "マルチアトリビュートのコネクトされている要素のインデックスのリストを得る。"
+msgstr "Get a list of connected element indices of a multi-attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`connectedElements "
+"<cymel.core.cyobjects.plug_c.Plug_c.connectedElements>`\\ \\(\\)"
+msgstr ""
+":py:obj:`connectedElements "
+"<cymel.core.cyobjects.plug_c.Plug_c.connectedElements>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElements:1 of
+msgid "マルチアトリビュートのコネクトされている要素リストを得る。"
+msgstr "Get a list of connected elements of a multi-attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`connections <cymel.core.cyobjects.plug_c.Plug_c.connections>`\\ "
+"\\(\\[s\\, d\\, c\\, t\\, et\\, scn\\, source\\, ...\\]\\)"
+msgstr ""
+":py:obj:`connections <cymel.core.cyobjects.plug_c.Plug_c.connections>`\\ "
+"\\(\\[s\\, d\\, c\\, t\\, et\\, scn\\, source\\, ...\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.connections:1 of
+msgid "コネクトされているプラグやノードのリストを得る。"
+msgstr "Get a list of connected plugs and nodes."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`default <cymel.core.cyobjects.plug_c.Plug_c.default>`\\ \\(\\)"
+msgstr ":py:obj:`default <cymel.core.cyobjects.plug_c.Plug_c.default>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.default:1 of
+msgid "デフォルト値を内部単位で得る。"
+msgstr "Get the default value in internal units."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`defaultu <cymel.core.cyobjects.plug_c.Plug_c.defaultu>`\\ \\(\\)"
+msgstr ":py:obj:`defaultu <cymel.core.cyobjects.plug_c.Plug_c.defaultu>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.defaultu:1 of
+msgid "デフォルト値をUI設定単位で得る。"
+msgstr "Get the default value for each UI setting."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`destinations <cymel.core.cyobjects.plug_c.Plug_c.destinations>`\\ "
+"\\(\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`destinations <cymel.core.cyobjects.plug_c.Plug_c.destinations>`\\ "
+"\\(\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.destinations:1 of
+msgid "unitConversionノードをスキップしつつ、出力先のプラグかノードのリストを得る。"
+msgstr ""
+"Get a list of plugs or nodes to output to, skipping the unitConversion node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`destinationsWithConversions "
+"<cymel.core.cyobjects.plug_c.Plug_c.destinationsWithConversions>`\\ "
+"\\(\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`destinationsWithConversions "
+"<cymel.core.cyobjects.plug_c.Plug_c.destinationsWithConversions>`\\ "
+"\\(\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.destinationsWithConversions:1 of
+msgid "unitConversionノードをスキップせずに、出力先のプラグかノードのリストを得る。"
+msgstr ""
+"Get a list of plugs or nodes to output to without skipping unitConversion "
+"nodes."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`disconnectBehavior "
+"<cymel.core.cyobjects.plug_c.Plug_c.disconnectBehavior>`\\ \\(\\)"
+msgstr ""
+":py:obj:`disconnectBehavior "
+"<cymel.core.cyobjects.plug_c.Plug_c.disconnectBehavior>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.disconnectBehavior:1 of
+msgid "マルチアトリビュートの要素の削除時の振る舞いを得る。"
+msgstr "Get the behavior when deleting a multi-attribute element."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`element <cymel.core.cyobjects.plug_c.Plug_c.element>`\\ \\(idx\\)"
+msgstr ":py:obj:`element <cymel.core.cyobjects.plug_c.Plug_c.element>`\\ \\(idx\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.element:1 of
+msgid "マルチアトリビュートの要素を物理インデックスで得る。"
+msgstr "Get the element of multi-attribute by physical index."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`elementExists <cymel.core.cyobjects.plug_c.Plug_c.elementExists>`\\"
+" \\(\\[idx\\]\\)"
+msgstr ""
+":py:obj:`elementExists <cymel.core.cyobjects.plug_c.Plug_c.elementExists>`\\"
+" \\(\\[idx\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.elementExists:1 of
+msgid "マルチアトリビュートの要素が存在しているかどうか。"
+msgstr "Whether a multi-attribute element exists."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`elements <cymel.core.cyobjects.plug_c.Plug_c.elements>`\\ \\(\\)"
+msgstr ":py:obj:`elements <cymel.core.cyobjects.plug_c.Plug_c.elements>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.elements:1 of
+msgid "マルチアトリビュートの要素のリストを得る。"
+msgstr "Get a list of multi-attribute elements."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`enumName <cymel.core.cyobjects.plug_c.Plug_c.enumName>`\\ \\(val\\)"
+msgstr ""
+":py:obj:`enumName <cymel.core.cyobjects.plug_c.Plug_c.enumName>`\\ \\(val\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.enumName:1 of
+msgid "enum アトリビュートの値から名前を得る。"
+msgstr "Get the name from the value of the enum attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`enumValue <cymel.core.cyobjects.plug_c.Plug_c.enumValue>`\\ "
+"\\(key\\)"
+msgstr ""
+":py:obj:`enumValue <cymel.core.cyobjects.plug_c.Plug_c.enumValue>`\\ "
+"\\(key\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.enumValue:1 of
+msgid "enum アトリビュートの名前から値を得る。"
+msgstr "Get the value from the name of an enum attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`evaluate <cymel.core.cyobjects.plug_c.Plug_c.evaluate>`\\ \\(\\)"
+msgstr ":py:obj:`evaluate <cymel.core.cyobjects.plug_c.Plug_c.evaluate>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.evaluate:1 of
+msgid "このプラグを評価する。"
+msgstr "Rate this plug."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`evaluateNumElements "
+"<cymel.core.cyobjects.plug_c.Plug_c.evaluateNumElements>`\\ \\(\\)"
+msgstr ""
+":py:obj:`evaluateNumElements "
+"<cymel.core.cyobjects.plug_c.Plug_c.evaluateNumElements>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.evaluateNumElements:1 of
+msgid "マルチアトリビュートを評価した上で要素数を得る。"
+msgstr "Obtain the number of elements after evaluating multi-attributes."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`evaluator <cymel.core.cyobjects.plug_c.Plug_c.evaluator>`\\ \\(\\)"
+msgstr ":py:obj:`evaluator <cymel.core.cyobjects.plug_c.Plug_c.evaluator>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.evaluator:1 of
+msgid "呼び出すとプラグを評価できる関数を得る。"
+msgstr "When called, you get a function that can evaluate the plug."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`get <cymel.core.cyobjects.plug_c.Plug_c.get>`\\ \\(\\)"
+msgstr ":py:obj:`get <cymel.core.cyobjects.plug_c.Plug_c.get>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.get:1 of
+msgid "アトリビュート値を内部単位で得る。"
+msgstr "Get the attribute value in internal units."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`getEnumName <cymel.core.cyobjects.plug_c.Plug_c.getEnumName>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`getEnumName <cymel.core.cyobjects.plug_c.Plug_c.getEnumName>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.getEnumName:1 of
+msgid "enum 型アトリビュートから現在の値の名前を得る。"
+msgstr "Get the name of the current value from an enum type attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`getM <cymel.core.cyobjects.plug_c.Plug_c.getM>`\\ \\(\\)"
+msgstr ":py:obj:`getM <cymel.core.cyobjects.plug_c.Plug_c.getM>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.getM:1 of
+msgid "matrix 型アトリビュートから matrix 値を得る。"
+msgstr "Get matrix value from matrix type attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`getProxies <cymel.core.cyobjects.plug_c.Plug_c.getProxies>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`getProxies <cymel.core.cyobjects.plug_c.Plug_c.getProxies>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.getProxies:1 of
+msgid "関連付けられたプロキシアトリビュートを全て得る。"
+msgstr "Get all associated proxy attributes."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`getu <cymel.core.cyobjects.plug_c.Plug_c.getu>`\\ \\(\\)"
+msgstr ":py:obj:`getu <cymel.core.cyobjects.plug_c.Plug_c.getu>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.getu:1 of
+msgid "アトリビュート値をUI設定単位で得る。"
+msgstr "Get the attribute value for each UI setting."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`hasMax <cymel.core.cyobjects.plug_c.Plug_c.hasMax>`\\ \\(\\)"
+msgstr ":py:obj:`hasMax <cymel.core.cyobjects.plug_c.Plug_c.hasMax>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.hasMax:1 of
+msgid "最大値を持っているかどうか。"
+msgstr "Does it have a maximum value?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`hasMin <cymel.core.cyobjects.plug_c.Plug_c.hasMin>`\\ \\(\\)"
+msgstr ":py:obj:`hasMin <cymel.core.cyobjects.plug_c.Plug_c.hasMin>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.hasMin:1 of
+msgid "最小値を持っているかどうか。"
+msgstr "Does it have a minimum value?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`hasNodeFn <cymel.core.cyobjects.plug_c.Plug_c.hasNodeFn>`\\ "
+"\\(fn\\)"
+msgstr ""
+":py:obj:`hasNodeFn <cymel.core.cyobjects.plug_c.Plug_c.hasNodeFn>`\\ "
+"\\(fn\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.hasNodeFn:1 of
+msgid "ノードが指定ファンクションタイプと互換性があるかどうか。"
+msgstr "Whether the node is compatible with the specified function type."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`hasProxy <cymel.core.cyobjects.plug_c.Plug_c.hasProxy>`\\ \\(\\)"
+msgstr ":py:obj:`hasProxy <cymel.core.cyobjects.plug_c.Plug_c.hasProxy>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.hasProxy:1 of
+msgid "関連付けられたプロキシアトリビュートを持つかどうか。"
+msgstr "Whether it has an associated proxy attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`hasSoftMax <cymel.core.cyobjects.plug_c.Plug_c.hasSoftMax>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`hasSoftMax <cymel.core.cyobjects.plug_c.Plug_c.hasSoftMax>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.hasSoftMax:1 of
+msgid "ソフト最大値を持っているかどうか。"
+msgstr "Whether it has a soft maximum."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`hasSoftMin <cymel.core.cyobjects.plug_c.Plug_c.hasSoftMin>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`hasSoftMin <cymel.core.cyobjects.plug_c.Plug_c.hasSoftMin>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.hasSoftMin:1 of
+msgid "ソフト最小値を持っているかどうか。"
+msgstr "Does it have a soft minimum?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`hasTransformation "
+"<cymel.core.cyobjects.plug_c.Plug_c.hasTransformation>`\\ \\(\\)"
+msgstr ""
+":py:obj:`hasTransformation "
+"<cymel.core.cyobjects.plug_c.Plug_c.hasTransformation>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.hasTransformation:1 of
+msgid "matrix 型アトリビュートが `.Transformation` 値を持つかどうか。"
+msgstr "Whether the matrix type attribute has a `.Transformation` value."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`index <cymel.core.cyobjects.plug_c.Plug_c.index>`\\ \\(\\)"
+msgstr ":py:obj:`index <cymel.core.cyobjects.plug_c.Plug_c.index>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.index:1 of
+msgid "マルチアトリビュートの要素の論理インデックスを得る。"
+msgstr "Get the logical index of a multi-attribute element."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`indexMatters <cymel.core.cyobjects.plug_c.Plug_c.indexMatters>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`indexMatters <cymel.core.cyobjects.plug_c.Plug_c.indexMatters>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.indexMatters:1 of
+msgid "マルチ要素のインデックスが意味を持つかどうか。"
+msgstr "Whether multi-element indices are meaningful."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`indices <cymel.core.cyobjects.plug_c.Plug_c.indices>`\\ \\(\\)"
+msgstr ":py:obj:`indices <cymel.core.cyobjects.plug_c.Plug_c.indices>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.indices:1 of
+msgid "マルチアトリビュートの論理インデックスのリストを得る。"
+msgstr "Get a list of logical indexes for a multi-attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`inputs <cymel.core.cyobjects.plug_c.Plug_c.inputs>`\\ "
+"\\(\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`inputs <cymel.core.cyobjects.plug_c.Plug_c.inputs>`\\ "
+"\\(\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.connections:3
+#: cymel.core.cyobjects.plug_c.Plug_c.inputs:1 of
+msgid "上流のコネクションを得る。"
+msgstr "Obtain upstream connections."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isAffectsAppearance "
+"<cymel.core.cyobjects.plug_c.Plug_c.isAffectsAppearance>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isAffectsAppearance "
+"<cymel.core.cyobjects.plug_c.Plug_c.isAffectsAppearance>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isAffectsAppearance:1 of
+msgid "ビューポートに影響を与えるかどうか。"
+msgstr "Whether to affect the viewport."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isAffectsWorldSpace "
+"<cymel.core.cyobjects.plug_c.Plug_c.isAffectsWorldSpace>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isAffectsWorldSpace "
+"<cymel.core.cyobjects.plug_c.Plug_c.isAffectsWorldSpace>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isAffectsWorldSpace:1 of
+msgid "ワールドスペースに影響を与えるかどうか。"
+msgstr "Does it affect world space?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`isArray <cymel.core.cyobjects.plug_c.Plug_c.isArray>`\\ \\(\\)"
+msgstr ":py:obj:`isArray <cymel.core.cyobjects.plug_c.Plug_c.isArray>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isArray:1 of
+msgid "マルチアトリビュートかどうか。"
+msgstr "Multi-attribute or not?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isAttrFromReferencedFile "
+"<cymel.core.cyobjects.plug_c.Plug_c.isAttrFromReferencedFile>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isAttrFromReferencedFile "
+"<cymel.core.cyobjects.plug_c.Plug_c.isAttrFromReferencedFile>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isAttrFromReferencedFile:1 of
+msgid "アトリビュートがリファレンスファイルのものかどうか。"
+msgstr "Whether the attribute is from a referenced file."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isCached <cymel.core.cyobjects.plug_c.Plug_c.isCached>`\\ "
+"\\(\\[static\\]\\)"
+msgstr ""
+":py:obj:`isCached <cymel.core.cyobjects.plug_c.Plug_c.isCached>`\\ "
+"\\(\\[static\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isCaching:1 of
+msgid "値がデータブロックにキャッシュされるかどうか。"
+msgstr "Whether the value is cached in the data block."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isCaching <cymel.core.cyobjects.plug_c.Plug_c.isCaching>`\\ "
+"\\(\\[static\\]\\)"
+msgstr ""
+":py:obj:`isCaching <cymel.core.cyobjects.plug_c.Plug_c.isCaching>`\\ "
+"\\(\\[static\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isChannelBox <cymel.core.cyobjects.plug_c.Plug_c.isChannelBox>`\\ "
+"\\(\\[static\\]\\)"
+msgstr ""
+":py:obj:`isChannelBox <cymel.core.cyobjects.plug_c.Plug_c.isChannelBox>`\\ "
+"\\(\\[static\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isChannelBox:1 of
+msgid "Keyable でなくてもチャンネルボックスに出すかどうか。"
+msgstr "Whether to send it to the channel box even if it is not keyable."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`isChild <cymel.core.cyobjects.plug_c.Plug_c.isChild>`\\ \\(\\)"
+msgstr ":py:obj:`isChild <cymel.core.cyobjects.plug_c.Plug_c.isChild>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isChild:1 of
+msgid "コンパウンドの子アトリビュートかどうか。"
+msgstr "Whether it is a child attribute of a compound."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isCompound <cymel.core.cyobjects.plug_c.Plug_c.isCompound>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`isCompound <cymel.core.cyobjects.plug_c.Plug_c.isCompound>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isCompound:1 of
+msgid "コンパウンドアトリビュートかどうか。"
+msgstr "Compound attribute or not."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isConnectable <cymel.core.cyobjects.plug_c.Plug_c.isConnectable>`\\"
+" \\(\\)"
+msgstr ""
+":py:obj:`isConnectable <cymel.core.cyobjects.plug_c.Plug_c.isConnectable>`\\"
+" \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isConnectable:1 of
+msgid "コネクト可能かどうか。"
+msgstr "Is it possible to connect?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isConnected <cymel.core.cyobjects.plug_c.Plug_c.isConnected>`\\ "
+"\\(\\[ancestors\\, children\\]\\)"
+msgstr ""
+":py:obj:`isConnected <cymel.core.cyobjects.plug_c.Plug_c.isConnected>`\\ "
+"\\(\\[ancestors\\, children\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isConnected:1 of
+msgid "入力か出力のコネクションを持つかどうか。"
+msgstr "Whether it has an input or output connection."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isConnectedTo <cymel.core.cyobjects.plug_c.Plug_c.isConnectedTo>`\\"
+" \\(dst\\)"
+msgstr ""
+":py:obj:`isConnectedTo <cymel.core.cyobjects.plug_c.Plug_c.isConnectedTo>`\\"
+" \\(dst\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isConnectedTo:1 of
+msgid "このプラグから指定プラグへ向かう接続が在るかどうか検査する。"
+msgstr "Checks if there is a connection from this plug to the specified plug."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isDestination <cymel.core.cyobjects.plug_c.Plug_c.isDestination>`\\"
+" \\(\\[ancestors\\, children\\]\\)"
+msgstr ""
+":py:obj:`isDestination <cymel.core.cyobjects.plug_c.Plug_c.isDestination>`\\"
+" \\(\\[ancestors\\, children\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isDestination:1 of
+msgid "入力コネクションを持つかどうか。"
+msgstr "Whether it has an input connection."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`isDynamic <cymel.core.cyobjects.plug_c.Plug_c.isDynamic>`\\ \\(\\)"
+msgstr ":py:obj:`isDynamic <cymel.core.cyobjects.plug_c.Plug_c.isDynamic>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isDynamic:1 of
+msgid "ダイナミックアトリビュートかどうか。"
+msgstr "Is it a dynamic attribute?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`isElement <cymel.core.cyobjects.plug_c.Plug_c.isElement>`\\ \\(\\)"
+msgstr ":py:obj:`isElement <cymel.core.cyobjects.plug_c.Plug_c.isElement>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isElement:1 of
+msgid "マルチアトリビュートの要素かどうか。"
+msgstr "Is it a multi-attribute element?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isEnforcingUniqueName "
+"<cymel.core.cyobjects.plug_c.Plug_c.isEnforcingUniqueName>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isEnforcingUniqueName "
+"<cymel.core.cyobjects.plug_c.Plug_c.isEnforcingUniqueName>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isEnforcingUniqueName:1 of
+msgid "これが固有のアトリビュート名であることをノードに強制しているかどうか。"
+msgstr "Whether this is forcing the node to be a unique attribute name."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isExtension <cymel.core.cyobjects.plug_c.Plug_c.isExtension>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`isExtension <cymel.core.cyobjects.plug_c.Plug_c.isExtension>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isExtension:1 of
+msgid "拡張アトリビュートかどうか。"
+msgstr "Is it an extended attribute?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isFreeToChange "
+"<cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange>`\\ \\(\\[ancestors\\, "
+"children\\]\\)"
+msgstr ""
+":py:obj:`isFreeToChange "
+"<cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange>`\\ \\(\\[ancestors\\, "
+"children\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange:1 of
+msgid "プラグの値が変更可能な状態にあるかどうか検査する。"
+msgstr "Checks whether the value of the plug can be changed."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isFromReferencedFile "
+"<cymel.core.cyobjects.plug_c.Plug_c.isFromReferencedFile>`\\ "
+"\\(\\[ancestors\\, children\\]\\)"
+msgstr ""
+":py:obj:`isFromReferencedFile "
+"<cymel.core.cyobjects.plug_c.Plug_c.isFromReferencedFile>`\\ "
+"\\(\\[ancestors\\, children\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isFromReferencedFile:1 of
+msgid "リファレンスファイルで作られた入力コネクションを持つかどうか。"
+msgstr "Whether to have input connections created with reference files."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`isHidden <cymel.core.cyobjects.plug_c.Plug_c.isHidden>`\\ \\(\\)"
+msgstr ":py:obj:`isHidden <cymel.core.cyobjects.plug_c.Plug_c.isHidden>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isHidden:1 of
+msgid "隠しアトリビュートかどうか。"
+msgstr "Is it a hidden attribute?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isIgnoredWhenRendering "
+"<cymel.core.cyobjects.plug_c.Plug_c.isIgnoredWhenRendering>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isIgnoredWhenRendering "
+"<cymel.core.cyobjects.plug_c.Plug_c.isIgnoredWhenRendering>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isIgnoredWhenRendering:1 of
+msgid "レンダリング中にはコネクションが無視されるかどうか。"
+msgstr "Whether connections are ignored during rendering."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isIndeterminant "
+"<cymel.core.cyobjects.plug_c.Plug_c.isIndeterminant>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isIndeterminant "
+"<cymel.core.cyobjects.plug_c.Plug_c.isIndeterminant>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isIndeterminant:1 of
+msgid ""
+"Hint to DG that this attr may not always be used when computing the attrs "
+"which are dependent upon it."
+msgstr ""
+"Hint to DG that this attr may not always be used when computing the attrs "
+"which are dependent upon it."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isIndexMatters "
+"<cymel.core.cyobjects.plug_c.Plug_c.isIndexMatters>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isIndexMatters "
+"<cymel.core.cyobjects.plug_c.Plug_c.isIndexMatters>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.indexMatters:1 of
+msgid "`indexMatters` の別名。"
+msgstr "Alternative name for `indexMatters`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isInternal <cymel.core.cyobjects.plug_c.Plug_c.isInternal>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`isInternal <cymel.core.cyobjects.plug_c.Plug_c.isInternal>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isInternal:1 of
+msgid "インターナルアトリビュートかどうか。"
+msgstr "Is it an internal attribute?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`isKeyable <cymel.core.cyobjects.plug_c.Plug_c.isKeyable>`\\ \\(\\)"
+msgstr ":py:obj:`isKeyable <cymel.core.cyobjects.plug_c.Plug_c.isKeyable>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isKeyable:1 of
+msgid "Keyable かどうか。"
+msgstr "Is it Keyable?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isLocked <cymel.core.cyobjects.plug_c.Plug_c.isLocked>`\\ "
+"\\(\\[ancestors\\, children\\]\\)"
+msgstr ""
+":py:obj:`isLocked <cymel.core.cyobjects.plug_c.Plug_c.isLocked>`\\ "
+"\\(\\[ancestors\\, children\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isLocked:1 of
+msgid "ロックされているかどうか。"
+msgstr "Locked or not."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`isMulti <cymel.core.cyobjects.plug_c.Plug_c.isMulti>`\\ \\(\\)"
+msgstr ":py:obj:`isMulti <cymel.core.cyobjects.plug_c.Plug_c.isMulti>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isArray:1 of
+msgid "`isArray` の別名。"
+msgstr "Alternative name for `isArray`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`isNewAttr <cymel.core.cyobjects.plug_c.Plug_c.isNewAttr>`\\ \\(\\)"
+msgstr ":py:obj:`isNewAttr <cymel.core.cyobjects.plug_c.Plug_c.isNewAttr>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute:1 of
+msgid "`isNewAttribute` の別名。"
+msgstr "Alternative name for `isNewAttribute`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isNewAttribute "
+"<cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isNewAttribute "
+"<cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute:1 of
+msgid "リファレンスではないアトリビュートかどうか。"
+msgstr "Is the attribute a non-reference?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isNodeFromReferencedFile "
+"<cymel.core.cyobjects.plug_c.Plug_c.isNodeFromReferencedFile>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isNodeFromReferencedFile "
+"<cymel.core.cyobjects.plug_c.Plug_c.isNodeFromReferencedFile>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isNodeFromReferencedFile:1 of
+msgid "ノードがリファレンスファイルのものかどうか。"
+msgstr "Whether the node is from a reference file."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isNodeType <cymel.core.cyobjects.plug_c.Plug_c.isNodeType>`\\ "
+"\\(typename\\)"
+msgstr ""
+":py:obj:`isNodeType <cymel.core.cyobjects.plug_c.Plug_c.isNodeType>`\\ "
+"\\(typename\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isNodeType:1 of
+msgid "ノードが指定タイプの派生型かどうか。"
+msgstr "Whether the node is a derived type of the specified type."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isNotInstanced "
+"<cymel.core.cyobjects.plug_c.Plug_c.isNotInstanced>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isNotInstanced "
+"<cymel.core.cyobjects.plug_c.Plug_c.isNotInstanced>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isNotInstanced:1 of
+msgid "解決されていないマルチアトリビュート要素が含まれているかどうか。"
+msgstr "Does it contain unresolved multi-attribute elements?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isProcedural <cymel.core.cyobjects.plug_c.Plug_c.isProcedural>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`isProcedural <cymel.core.cyobjects.plug_c.Plug_c.isProcedural>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isProcedural:1 of
+msgid "Maya が内部的に使用する手続き型プラグかどうか。"
+msgstr "Whether this is a procedural plug that Maya uses internally."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`isProxy <cymel.core.cyobjects.plug_c.Plug_c.isProxy>`\\ \\(\\)"
+msgstr ":py:obj:`isProxy <cymel.core.cyobjects.plug_c.Plug_c.isProxy>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isProxy:1 of
+msgid "プロキシアトリビュートかどうか。"
+msgstr "Is it a proxy attribute?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isReadable <cymel.core.cyobjects.plug_c.Plug_c.isReadable>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`isReadable <cymel.core.cyobjects.plug_c.Plug_c.isReadable>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isReadable:1 of
+msgid "読めるか（値をゲットしたりコネクションの入力元と成り得るか）どうか。"
+msgstr ""
+"Can it be read (can it get a value or serve as an input source for a "
+"connection)?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isRenderSource "
+"<cymel.core.cyobjects.plug_c.Plug_c.isRenderSource>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isRenderSource "
+"<cymel.core.cyobjects.plug_c.Plug_c.isRenderSource>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isRenderSource:1 of
+msgid "レンダーソースかどうか。"
+msgstr "Render source or not."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isSettable <cymel.core.cyobjects.plug_c.Plug_c.isSettable>`\\ "
+"\\(\\[ancestors\\, children\\]\\)"
+msgstr ""
+":py:obj:`isSettable <cymel.core.cyobjects.plug_c.Plug_c.isSettable>`\\ "
+"\\(\\[ancestors\\, children\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isWritableNow:1 of
+msgid "`isWritableNow` の別名。"
+msgstr "Alternative name for `isWritableNow`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isSource <cymel.core.cyobjects.plug_c.Plug_c.isSource>`\\ "
+"\\(\\[ancestors\\, children\\]\\)"
+msgstr ""
+":py:obj:`isSource <cymel.core.cyobjects.plug_c.Plug_c.isSource>`\\ "
+"\\(\\[ancestors\\, children\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isSource:1 of
+msgid "出力コネクションを持つかどうか。"
+msgstr "Whether it has an output connection."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isStorable <cymel.core.cyobjects.plug_c.Plug_c.isStorable>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`isStorable <cymel.core.cyobjects.plug_c.Plug_c.isStorable>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isStorable:1 of
+msgid "ファイルに保存されるかどうか。"
+msgstr "Whether it is saved to a file."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isUsedArrayDataBuilder "
+"<cymel.core.cyobjects.plug_c.Plug_c.isUsedArrayDataBuilder>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isUsedArrayDataBuilder "
+"<cymel.core.cyobjects.plug_c.Plug_c.isUsedArrayDataBuilder>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isUsedArrayDataBuilder:1 of
+msgid "API の MArrayDataBuilder が使われるかどうか。"
+msgstr "Whether the API's MArrayDataBuilder is used."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isUsedAsColor <cymel.core.cyobjects.plug_c.Plug_c.isUsedAsColor>`\\"
+" \\(\\)"
+msgstr ""
+":py:obj:`isUsedAsColor <cymel.core.cyobjects.plug_c.Plug_c.isUsedAsColor>`\\"
+" \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isUsedAsColor:1 of
+msgid "カラーとして使われるものかどうか。"
+msgstr "Is it used as a color?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isUsedAsFilename "
+"<cymel.core.cyobjects.plug_c.Plug_c.isUsedAsFilename>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isUsedAsFilename "
+"<cymel.core.cyobjects.plug_c.Plug_c.isUsedAsFilename>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isUsedAsFilename:1 of
+msgid "ファイル名として使われるものかどうか。"
+msgstr "Whether it is used as a file name."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isValidWorldElement "
+"<cymel.core.cyobjects.plug_c.Plug_c.isValidWorldElement>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isValidWorldElement "
+"<cymel.core.cyobjects.plug_c.Plug_c.isValidWorldElement>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isValidWorldElement:1 of
+msgid "`isWorldSpace` な要素プラグの場合にインデックスがDAGノードのインスタンス番号と矛盾が無いかどうか。"
+msgstr ""
+"In the case of an `isWorldSpace` element plug, whether the index is "
+"consistent with the instance number of the DAG node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isWorldSpace <cymel.core.cyobjects.plug_c.Plug_c.isWorldSpace>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`isWorldSpace <cymel.core.cyobjects.plug_c.Plug_c.isWorldSpace>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isWorldSpace:1 of
+msgid "DAGノードインスタンスに結びついたマルチアトリビュートかどうか。"
+msgstr "Whether it is a multi-attribute tied to a DAG node instance."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isWritable <cymel.core.cyobjects.plug_c.Plug_c.isWritable>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`isWritable <cymel.core.cyobjects.plug_c.Plug_c.isWritable>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isWritable:1 of
+msgid "書き込めるか（値をセットしたりコネクションの出力先と成り得るか）どうか。"
+msgstr ""
+"Is it possible to write to it (can it set a value or serve as an output "
+"destination for a connection)?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`isWritableNow <cymel.core.cyobjects.plug_c.Plug_c.isWritableNow>`\\"
+" \\(\\[ancestors\\, children\\]\\)"
+msgstr ""
+":py:obj:`isWritableNow <cymel.core.cyobjects.plug_c.Plug_c.isWritableNow>`\\"
+" \\(\\[ancestors\\, children\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.isWritableNow:1 of
+msgid "プラグの値が変更可能な状態にあるか。"
+msgstr "Are the plug values ​​changeable?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`leaves <cymel.core.cyobjects.plug_c.Plug_c.leaves>`\\ "
+"\\(\\[evaluate\\]\\)"
+msgstr ""
+":py:obj:`leaves <cymel.core.cyobjects.plug_c.Plug_c.leaves>`\\ "
+"\\(\\[evaluate\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.leaves:1 of
+msgid "マルチやコンパウンドの階層を下って、リーフのプラグのリストを得る。"
+msgstr "Go down the mulch and compound hierarchy to get a list of leaf plugs."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`longName <cymel.core.cyobjects.plug_c.Plug_c.longName>`\\ \\(\\)"
+msgstr ":py:obj:`longName <cymel.core.cyobjects.plug_c.Plug_c.longName>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.longName:1 of
+msgid "アトリビュートのロング名を得る。"
+msgstr "Get the long name of the attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`max <cymel.core.cyobjects.plug_c.Plug_c.max>`\\ \\(\\)"
+msgstr ":py:obj:`max <cymel.core.cyobjects.plug_c.Plug_c.max>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.max:1 of
+msgid "アトリビュートに設定されている最大値を内部単位で得る。"
+msgstr "Gets the maximum value set for the attribute in internal units."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`maxu <cymel.core.cyobjects.plug_c.Plug_c.maxu>`\\ \\(\\)"
+msgstr ":py:obj:`maxu <cymel.core.cyobjects.plug_c.Plug_c.maxu>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.maxu:1 of
+msgid "アトリビュートに設定されている最大値をUI設定単位で得る。"
+msgstr "Get the maximum value set for an attribute in UI setting units."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`mfn <cymel.core.cyobjects.plug_c.Plug_c.mfn>`\\ \\(\\)"
+msgstr ":py:obj:`mfn <cymel.core.cyobjects.plug_c.Plug_c.mfn>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.mfn:1 of
+msgid "Python API 2 のファンクションセットを得る。"
+msgstr "Get the Python API 2 function set."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`mfn1 <cymel.core.cyobjects.plug_c.Plug_c.mfn1>`\\ \\(\\)"
+msgstr ":py:obj:`mfn1 <cymel.core.cyobjects.plug_c.Plug_c.mfn1>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.mfn1:1 of
+msgid "Python API 1 のファンクションセットを得る。"
+msgstr "Get the Python API 1 function set."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`mfn1_ <cymel.core.cyobjects.plug_c.Plug_c.mfn1_>`\\ \\(\\)"
+msgstr ":py:obj:`mfn1_ <cymel.core.cyobjects.plug_c.Plug_c.mfn1_>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.mfn1_:1 of
+msgid "`~.CyObject.checkValid` を省略して、 Python API 1 のファンクションセットを得る。"
+msgstr "Omit `~.CyObject.checkValid` to get the Python API 1 function set."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`mfn_ <cymel.core.cyobjects.plug_c.Plug_c.mfn_>`\\ \\(\\)"
+msgstr ":py:obj:`mfn_ <cymel.core.cyobjects.plug_c.Plug_c.mfn_>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.mfn_:1 of
+msgid "`~.CyObject.checkValid` を省略して、 Python API 2 のファンクションセットを得る。"
+msgstr "Omit `~.CyObject.checkValid` to get the Python API 2 function set."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`min <cymel.core.cyobjects.plug_c.Plug_c.min>`\\ \\(\\)"
+msgstr ":py:obj:`min <cymel.core.cyobjects.plug_c.Plug_c.min>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.min:1 of
+msgid "アトリビュートに設定されている最小値を内部単位で得る。"
+msgstr "Gets the minimum value set for the attribute in internal units."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`minu <cymel.core.cyobjects.plug_c.Plug_c.minu>`\\ \\(\\)"
+msgstr ":py:obj:`minu <cymel.core.cyobjects.plug_c.Plug_c.minu>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.minu:1 of
+msgid "アトリビュートに設定されている最小値をUI設定単位で得る。"
+msgstr "Get the minimum value set for the attribute in UI setting units."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`mplug <cymel.core.cyobjects.plug_c.Plug_c.mplug>`\\ \\(\\)"
+msgstr ":py:obj:`mplug <cymel.core.cyobjects.plug_c.Plug_c.mplug>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.mplug:1 of
+msgid "Python API 2 の :mayaapi2:`MPlug` を得る。"
+msgstr "Get :mayaapi2:`MPlug` for Python API 2."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`mplug1 <cymel.core.cyobjects.plug_c.Plug_c.mplug1>`\\ \\(\\)"
+msgstr ":py:obj:`mplug1 <cymel.core.cyobjects.plug_c.Plug_c.mplug1>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.mplug1:1 of
+msgid "Python API 1 の :mayaapi1:`MPlug` を得る。"
+msgstr "Get :mayaapi1:`MPlug` for Python API 1."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`mplug1_ <cymel.core.cyobjects.plug_c.Plug_c.mplug1_>`\\ \\(\\)"
+msgstr ":py:obj:`mplug1_ <cymel.core.cyobjects.plug_c.Plug_c.mplug1_>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.mplug1_:1 of
+msgid "`~.CyObject.checkValid` を省略して、 Python API 1 の :mayaapi1:`MPlug` を得る。"
+msgstr ""
+"Omit `~.CyObject.checkValid` to get :mayaapi1:`MPlug` of Python API 1."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`mplug_ <cymel.core.cyobjects.plug_c.Plug_c.mplug_>`\\ \\(\\)"
+msgstr ":py:obj:`mplug_ <cymel.core.cyobjects.plug_c.Plug_c.mplug_>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.mplug_:1 of
+msgid "`~.CyObject.checkValid` を省略して、 Python API 2 の :mayaapi2:`MPlug` を得る。"
+msgstr ""
+"Omit `~.CyObject.checkValid` to get :mayaapi2:`MPlug` of Python API 2."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`multi <cymel.core.cyobjects.plug_c.Plug_c.multi>`\\ \\(\\)"
+msgstr ":py:obj:`multi <cymel.core.cyobjects.plug_c.Plug_c.multi>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.array:1 of
+msgid "`array` の別名。"
+msgstr "Alternative name for `array`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`newObject <cymel.core.cyobjects.plug_c.Plug_c.newObject>`\\ "
+"\\(data\\)"
+msgstr ""
+":py:obj:`newObject <cymel.core.cyobjects.plug_c.Plug_c.newObject>`\\ "
+"\\(data\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.newObject:1 of
+msgid "内部データとともにインスタンスを生成する。"
+msgstr "Create an instance with internal data."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`nextAvailable <cymel.core.cyobjects.plug_c.Plug_c.nextAvailable>`\\"
+" \\(\\[start\\, asPlug\\, checkLocked\\, ...\\]\\)"
+msgstr ""
+":py:obj:`nextAvailable <cymel.core.cyobjects.plug_c.Plug_c.nextAvailable>`\\"
+" \\(\\[start\\, asPlug\\, checkLocked\\, ...\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.nextAvailable:1 of
+msgid "マルチプラグの入力の次の空きインデックスを得る。"
+msgstr "Get the next free index of the multiplug's input."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`niceName <cymel.core.cyobjects.plug_c.Plug_c.niceName>`\\ "
+"\\(\\[noWorldIndex\\]\\)"
+msgstr ""
+":py:obj:`niceName <cymel.core.cyobjects.plug_c.Plug_c.niceName>`\\ "
+"\\(\\[noWorldIndex\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.niceName:1 of
+msgid "ナイス名を得る。"
+msgstr "Get a nice name."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`node <cymel.core.cyobjects.plug_c.Plug_c.node>`\\ \\(\\)"
+msgstr ":py:obj:`node <cymel.core.cyobjects.plug_c.Plug_c.node>`\\ ​​\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.node:1 of
+msgid "ノードを得る。"
+msgstr "Get a node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`nodeName <cymel.core.cyobjects.plug_c.Plug_c.nodeName>`\\ \\(\\)"
+msgstr ":py:obj:`nodeName <cymel.core.cyobjects.plug_c.Plug_c.nodeName>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.nodeName:1 of
+msgid "ノード名を得る。"
+msgstr "Get the node name."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`nodeType <cymel.core.cyobjects.plug_c.Plug_c.nodeType>`\\ \\(\\)"
+msgstr ":py:obj:`nodeType <cymel.core.cyobjects.plug_c.Plug_c.nodeType>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.nodeType:1 of
+msgid "ノードタイプ名を得る。"
+msgstr "Get the node type name."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`noderef <cymel.core.cyobjects.plug_c.Plug_c.noderef>`\\ \\(\\)"
+msgstr ":py:obj:`noderef <cymel.core.cyobjects.plug_c.Plug_c.noderef>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.noderef:1 of
+msgid "ノードの弱参照ラッパーを得る。"
+msgstr "Get a weak reference wrapper for a node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`numChildren <cymel.core.cyobjects.plug_c.Plug_c.numChildren>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`numChildren <cymel.core.cyobjects.plug_c.Plug_c.numChildren>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.numChildren:1 of
+msgid "コンパウンドアトリビュートの子の数を得る。"
+msgstr "Get the number of children of a compound attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`numConnectedElements "
+"<cymel.core.cyobjects.plug_c.Plug_c.numConnectedElements>`\\ \\(\\)"
+msgstr ""
+":py:obj:`numConnectedElements "
+"<cymel.core.cyobjects.plug_c.Plug_c.numConnectedElements>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.numConnectedElements:1 of
+msgid "マルチアトリビュートの接続を持つ要素数を得る。"
+msgstr "Get the number of elements with multi-attribute connections."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`numElements <cymel.core.cyobjects.plug_c.Plug_c.numElements>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`numElements <cymel.core.cyobjects.plug_c.Plug_c.numElements>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.numElements:1 of
+msgid "マルチアトリビュートの評価済みの要素数を得る。"
+msgstr "Get the number of evaluated elements of a multi-attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`outputs <cymel.core.cyobjects.plug_c.Plug_c.outputs>`\\ "
+"\\(\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`outputs <cymel.core.cyobjects.plug_c.Plug_c.outputs>`\\ "
+"\\(\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.connections:5
+#: cymel.core.cyobjects.plug_c.Plug_c.outputs:1 of
+msgid "下流のコネクションを得る。"
+msgstr "Obtain downstream connections."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`parent <cymel.core.cyobjects.plug_c.Plug_c.parent>`\\ \\(\\)"
+msgstr ":py:obj:`parent <cymel.core.cyobjects.plug_c.Plug_c.parent>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.parent:1 of
+msgid "親のコンパウンドアトリビュートを得る。"
+msgstr "Get the parent's compound attributes."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`pathName <cymel.core.cyobjects.plug_c.Plug_c.pathName>`\\ "
+"\\(\\[useLongName\\, useCompression\\]\\)"
+msgstr ""
+":py:obj:`pathName <cymel.core.cyobjects.plug_c.Plug_c.pathName>`\\ "
+"\\(\\[useLongName\\, useCompression\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.pathName:1 of
+msgid "アトリビュートのユニークなパス名を返す。インデックスは含まない。"
+msgstr "Returns the unique pathname of the attribute. Does not include index."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`plug <cymel.core.cyobjects.plug_c.Plug_c.plug>`\\ \\(name\\)"
+msgstr ":py:obj:`plug <cymel.core.cyobjects.plug_c.Plug_c.plug>`\\ \\(name\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.plug:1 of
+msgid "下位のプラグを得る。"
+msgstr "Get the lower plug."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`plugName <cymel.core.cyobjects.plug_c.Plug_c.plugName>`\\ "
+"\\(\\[short\\, fullAttrPath\\]\\)"
+msgstr ""
+":py:obj:`plugName <cymel.core.cyobjects.plug_c.Plug_c.plugName>`\\ "
+"\\(\\[short\\, fullAttrPath\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.plugName:1 of
+msgid "プラグ名を得る。"
+msgstr "Get the plug name."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`plug_ <cymel.core.cyobjects.plug_c.Plug_c.plug_>`\\ \\(name\\)"
+msgstr ":py:obj:`plug_ <cymel.core.cyobjects.plug_c.Plug_c.plug_>`\\ \\(name\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.plug_:1 of
+msgid "`~.CyObject.checkValid` を省略して、下位のプラグを得る。"
+msgstr "Omit `~.CyObject.checkValid` to get the lower level plug."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`proxyMaster <cymel.core.cyobjects.plug_c.Plug_c.proxyMaster>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`proxyMaster <cymel.core.cyobjects.plug_c.Plug_c.proxyMaster>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.proxyMaster:1 of
+msgid "プロキシアトリビュートのマスタープラグを得る。"
+msgstr "Get master plug for proxy attributes."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`root <cymel.core.cyobjects.plug_c.Plug_c.root>`\\ "
+"\\(\\[completely\\]\\)"
+msgstr ""
+":py:obj:`root <cymel.core.cyobjects.plug_c.Plug_c.root>`\\ "
+"\\(\\[completely\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.root:1 of
+msgid "コンパウンドのルートプラグを得る。"
+msgstr "Obtain a compound root plug."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`shortName <cymel.core.cyobjects.plug_c.Plug_c.shortName>`\\ \\(\\)"
+msgstr ":py:obj:`shortName <cymel.core.cyobjects.plug_c.Plug_c.shortName>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.shortName:1 of
+msgid "アトリビュートのショート名を得る。"
+msgstr "Get the attribute's short name."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`softMax <cymel.core.cyobjects.plug_c.Plug_c.softMax>`\\ \\(\\)"
+msgstr ":py:obj:`softMax <cymel.core.cyobjects.plug_c.Plug_c.softMax>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.softMax:1 of
+msgid "アトリビュートに設定されているソフト最大値を内部単位で得る。"
+msgstr "Gets the soft maximum value set for the attribute in internal units."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`softMaxu <cymel.core.cyobjects.plug_c.Plug_c.softMaxu>`\\ \\(\\)"
+msgstr ":py:obj:`softMaxu <cymel.core.cyobjects.plug_c.Plug_c.softMaxu>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.softMaxu:1 of
+msgid "アトリビュートに設定されているソフト最大値をUI設定単位で得る。"
+msgstr "Get the soft maximum value set for the attribute per UI setting."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`softMin <cymel.core.cyobjects.plug_c.Plug_c.softMin>`\\ \\(\\)"
+msgstr ":py:obj:`softMin <cymel.core.cyobjects.plug_c.Plug_c.softMin>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.softMin:1 of
+msgid "アトリビュートに設定されているソフト最小値を内部単位で得る。"
+msgstr "Gets the soft minimum value set on the attribute in internal units."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`softMinu <cymel.core.cyobjects.plug_c.Plug_c.softMinu>`\\ \\(\\)"
+msgstr ":py:obj:`softMinu <cymel.core.cyobjects.plug_c.Plug_c.softMinu>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.softMinu:1 of
+msgid "アトリビュートに設定されているソフト最小値をUI設定単位で得る。"
+msgstr "Get the soft minimum value set for an attribute per UI setting."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`source <cymel.core.cyobjects.plug_c.Plug_c.source>`\\ "
+"\\(\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`source <cymel.core.cyobjects.plug_c.Plug_c.source>`\\ "
+"\\(\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.source:1 of
+msgid "unitConversionノードをスキップしつつ、入力しているプラグかノードを得る。"
+msgstr "Get the input plug or node while skipping the unitConversion node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`sourceWithConversion "
+"<cymel.core.cyobjects.plug_c.Plug_c.sourceWithConversion>`\\ "
+"\\(\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`sourceWithConversion "
+"<cymel.core.cyobjects.plug_c.Plug_c.sourceWithConversion>`\\ "
+"\\(\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.sourceWithConversion:1 of
+msgid "unitConversionノードをスキップせずに、入力しているプラグかノードを得る。"
+msgstr "Get the input plug or node without skipping the unitConversion node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`subType <cymel.core.cyobjects.plug_c.Plug_c.subType>`\\ \\(\\)"
+msgstr ":py:obj:`subType <cymel.core.cyobjects.plug_c.Plug_c.subType>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.subType:1 of
+msgid "数値コンパウンド（ double3 等）アトリビュートの要素のタイプ名を得る。"
+msgstr ""
+"Gets the type name of the element of a numeric compound (e.g. double3) "
+"attribute."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ":py:obj:`type <cymel.core.cyobjects.plug_c.Plug_c.type>`\\ \\(\\)"
+msgstr ":py:obj:`type <cymel.core.cyobjects.plug_c.Plug_c.type>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.type:1 of
+msgid "アトリビュートタイプ名を得る。判別できないタイプは '' になる。"
+msgstr ""
+"Get the attribute type name. Types that cannot be determined are marked as "
+"''."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`worldElement <cymel.core.cyobjects.plug_c.Plug_c.worldElement>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`worldElement <cymel.core.cyobjects.plug_c.Plug_c.worldElement>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:161:<autosummary>:1
+#: cymel.core.cyobjects.plug_c.Plug_c.worldElement:1 of
+msgid "`isWorldSpace` なプラグの適切な要素を得る。"
+msgstr "Get the appropriate element for the `isWorldSpace` plug."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:164
+msgid "Attributes:"
+msgstr "Attributes:"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.CLASS_TYPE:1 of
+msgid "ラッパークラスの種類が `.Plug` であることを表す。"
+msgstr "Indicates that the wrapper class type is `.Plug`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst:173
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.addProxy:3 of
+msgid "アトリビュートのロング名。"
+msgstr "Long name of the attribute."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.addProxy:5 of
+msgid "アトリビュートを追加するノード。 省略すると、このプラグのノードになる。"
+msgstr ""
+"Node to add attributes to. If omitted, it becomes the node of this plug."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.addProxy:8 of
+msgid "その他に `.Node.addAttr` のオプション引数を指定可能。"
+msgstr "You can also specify optional arguments for `.Node.addAttr`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.addProxy:10 of
+msgid "None or `.Plug`"
+msgstr "None or `.Plug`"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.affectedAttrs:3 of
+msgid "逆に、影響元を得る場合は `affectingAttrs` が利用できる。"
+msgstr ""
+"Conversely, if you want to get the influence source, you can use "
+"`affectingAttrs`."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.affectedAttrs:5 of
+msgid ""
+"また、このメソッドは実際のプラグからプラグを得られるが、 実際のノードやプラグではなくノードタイプとアトリビュート名から調べるには ユーティリティ関数 "
+"`.affectedAttrNames` が利用できる。"
+msgstr ""
+"Also, although this method can retrieve plugs from actual plugs, you can use"
+" the utility function `.affectedAttrNames` to look up node types and "
+"attribute names rather than actual nodes or plugs."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.affectedAttrs:9 of
+msgid ""
+"ワールドスペースアトリビュートの依存関係も確実に得るかどうか。  デフォルトの False だと、 例えば :mayanode:`transform` "
+"ノードの translate が影響を与えるアトリビュートとして matrix は得られるが worldMatrix は得ることができない。"
+msgstr ""
+"Whether to make sure to also get world space attribute dependencies.  If the"
+" default is False, for example, you can get matrix as an attribute affected "
+"by the :mayanode:`transform` node's translate, but you cannot get "
+"worldMatrix."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.affectedAttrs:10
+#: cymel.core.cyobjects.plug_c.Plug_c.affectingAttrs:10 of
+msgid "ワールドスペースアトリビュートの依存関係も確実に得るかどうか。"
+msgstr "Whether to make sure to also get world space attribute dependencies."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.affectedAttrs:12 of
+msgid ""
+"デフォルトの False だと、 例えば :mayanode:`transform` ノードの translate が影響を与えるアトリビュートとして "
+"matrix は得られるが worldMatrix は得ることができない。"
+msgstr ""
+"If the default is False, for example, you can get matrix as an attribute "
+"affected by the :mayanode:`transform` node's translate, but you cannot get "
+"worldMatrix."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.affectedAttrs:16
+#: cymel.core.cyobjects.plug_c.Plug_c.affectingAttrs:16
+#: cymel.core.cyobjects.plug_c.Plug_c.childNames:4
+#: cymel.core.cyobjects.plug_c.Plug_c.children:3
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElementIndices:7
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElements:7
+#: cymel.core.cyobjects.plug_c.Plug_c.connections:32
+#: cymel.core.cyobjects.plug_c.Plug_c.destinations:10
+#: cymel.core.cyobjects.plug_c.Plug_c.destinationsWithConversions:9
+#: cymel.core.cyobjects.plug_c.Plug_c.elements:5
+#: cymel.core.cyobjects.plug_c.Plug_c.getProxies:3
+#: cymel.core.cyobjects.plug_c.Plug_c.indices:5
+#: cymel.core.cyobjects.plug_c.Plug_c.leaves:6 of
+msgid "`list`"
+msgstr "`list`"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.affectingAttrs:3 of
+msgid "逆に、影響先を得る場合は `affectedAttrs` が利用できる。"
+msgstr ""
+"Conversely, if you want to get the affected destinations, you can use "
+"`affectedAttrs`."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.affectingAttrs:5 of
+msgid ""
+"また、このメソッドは実際のプラグからプラグを得られるが、 実際のノードやプラグではなくノードタイプとアトリビュート名から調べるには ユーティリティ関数 "
+"`.affectingAttrNames` が利用できる。"
+msgstr ""
+"Also, although this method can retrieve plugs from actual plugs, you can use"
+" the utility function `.affectingAttrNames` to look up node types and "
+"attribute names rather than actual nodes or plugs."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.affectingAttrs:9 of
+msgid ""
+"ワールドスペースアトリビュートの依存関係も確実に得るかどうか。  デフォルトの False だと、 例えば :mayanode:`transform` "
+"ノードの worldMatrix が影響を受けるアトリビュートとして translate 等を得ることはできない。"
+msgstr ""
+"Whether to make sure to also get world space attribute dependencies.  If the"
+" default is False, for example, the :mayanode:`transform` node's worldMatrix"
+" will not be able to get translate etc. as an affected attribute."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.affectingAttrs:12 of
+msgid ""
+"デフォルトの False だと、 例えば :mayanode:`transform` ノードの worldMatrix "
+"が影響を受けるアトリビュートとして translate 等を得ることはできない。"
+msgstr ""
+"If the default is False, for example, the :mayanode:`transform` node's "
+"worldMatrix will not be able to get translate etc. as an affected attribute."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.alias:3
+#: cymel.core.cyobjects.plug_c.Plug_c.attrName:9
+#: cymel.core.cyobjects.plug_c.Plug_c.enumName:4
+#: cymel.core.cyobjects.plug_c.Plug_c.longName:3
+#: cymel.core.cyobjects.plug_c.Plug_c.niceName:3
+#: cymel.core.cyobjects.plug_c.Plug_c.nodeName:3
+#: cymel.core.cyobjects.plug_c.Plug_c.nodeType:3
+#: cymel.core.cyobjects.plug_c.Plug_c.pathName:15
+#: cymel.core.cyobjects.plug_c.Plug_c.plugName:7
+#: cymel.core.cyobjects.plug_c.Plug_c.shortName:3
+#: cymel.core.cyobjects.plug_c.Plug_c.type:3 of
+msgid "`str`"
+msgstr "`str`"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.apiGetSetNullProc:3
+#: cymel.core.cyobjects.plug_c.Plug_c.apiGetUndoSetProc:3 of
+msgid "得られる関数はこのオブジェクトの参照を保持しない。"
+msgstr "The resulting function does not hold a reference to this object."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.apiGetSetNullProc:5
+#: cymel.core.cyobjects.plug_c.Plug_c.apiGetUndoSetProc:5
+#: cymel.core.cyobjects.plug_c.Plug_c.evaluator:6 of
+msgid "`callable`"
+msgstr "`callable`"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.apiSetDefault:3
+#: cymel.core.cyobjects.plug_c.Plug_c.apiSetDefaultu:3
+#: cymel.core.cyobjects.plug_c.Plug_c.apiSetLocked:3 of
+msgid "セットする値。"
+msgstr "Value to set."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.apiSetDefault:4
+#: cymel.core.cyobjects.plug_c.Plug_c.apiSetDefaultu:4 of
+msgid "現在の値もリセットする。"
+msgstr "Also resets the current value."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.apiSetDefault:5
+#: cymel.core.cyobjects.plug_c.Plug_c.apiSetDefaultu:5 of
+msgid "ダイナミックアトリビュートでなくても許容する。 つまり、このプラグ以外にも影響する操作を許容するかどうか。"
+msgstr ""
+"Allowed even if it is not a dynamic attribute. That is, whether operations "
+"that affect more than just this plug are allowed."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.array:3
+#: cymel.core.cyobjects.plug_c.Plug_c.child:4
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElement:9
+#: cymel.core.cyobjects.plug_c.Plug_c.element:6
+#: cymel.core.cyobjects.plug_c.Plug_c.parent:3
+#: cymel.core.cyobjects.plug_c.Plug_c.plug:7
+#: cymel.core.cyobjects.plug_c.Plug_c.plug_:7
+#: cymel.core.cyobjects.plug_c.Plug_c.proxyMaster:6
+#: cymel.core.cyobjects.plug_c.Plug_c.root:5
+#: cymel.core.cyobjects.plug_c.Plug_c.worldElement:8 of
+msgid "`.Plug`"
+msgstr "`.Plug`"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.attrName:3 of
+msgid "プラグを特定する最短の名前からノード名を除去したものである。"
+msgstr ""
+"This is the shortest name that identifies the plug, with the node name "
+"removed."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.attrName:5 of
+msgid "`shortName` との違いは、 マルチ要素のインデックスが含まれることと、 それによるコンパウンド階層が含まれる場合もあることである。"
+msgstr ""
+"It differs from `shortName` in that it contains a multi-element index and "
+"may contain a resulting compound hierarchy."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.child:3 of
+msgid "得たい子のインデックス"
+msgstr "Index of the child you want to get"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.childNames:3 of
+msgid "ロング名で得るかどうか。"
+msgstr "Whether you get it with a long name or not."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElement:3
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElementIndices:3
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElements:3
+#: cymel.core.cyobjects.plug_c.Plug_c.element:3
+#: cymel.core.cyobjects.plug_c.Plug_c.elements:3
+#: cymel.core.cyobjects.plug_c.Plug_c.indices:3 of
+msgid "論理インデックスの並びは昇順となる。"
+msgstr "The logical indexes are arranged in ascending order."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElement:5
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElements:5 of
+msgid "インデックスを得たいだけなら `connectedElementIndices` の方が効率が良い。"
+msgstr ""
+"If you just want to get the index, `connectedElementIndices` is more "
+"efficient."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElement:7 of
+msgid "0 ～ `numConnectedElements` ()-1 の範囲の物理インデックス。"
+msgstr "Physical index in the range 0 to `numConnectedElements` ()-1."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElement:12
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElementIndices:10
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElements:10 of
+msgid ""
+"API の MPlug.connectionByPhysicalIndex(i) で得られるプラグの並び順は、 "
+"接続操作を繰り返した後は乱れていることがあり、シーンを開き直したときに整列されるようだ。 "
+"しかし、このメソッドでは、論理インデックスの昇順に得られることを保証する。"
+msgstr ""
+"The order of the plugs obtained using the API "
+"MPlug.connectionByPhysicalIndex(i) may become disordered after repeated "
+"connection operations, and it seems that they will be sorted when the scene "
+"is reopened. However, this method guarantees that the logical index is "
+"obtained in ascending order."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connectedElementIndices:5 of
+msgid "インデックスを得たいだけなら `connectedElement` や `connectedElements` より効率が良い。"
+msgstr ""
+"If you just want to get the index, it is more efficient than "
+"`connectedElement` or `connectedElements`."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connections:7 of
+msgid "コネクト元のプラグもエアで得る。"
+msgstr "The connecting source plug also gets air."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connections:9 of
+msgid "指定したノードタイプに限定する。"
+msgstr "Limit to specified node types."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connections:11 of
+msgid "type指定の場合に、派生タイプを許容せずに 指定タイプとの厳密な一致のみとするかどうか。"
+msgstr ""
+"If type is specified, whether to allow only an exact match with the "
+"specified type without allowing derived types."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connections:14 of
+msgid ":mayanode:`unitConversion` 系ノードをスキップするかどうか。"
+msgstr "Whether to skip :mayanode:`unitConversion` type nodes."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connections:16 of
+msgid "コネクト先をプラグではなくノードで得る。"
+msgstr "Get the connection destination as a node instead of a plug."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connections:18 of
+msgid "コンパウンドの下層もチェックする。 デフォルトで True なので False を明示すると無効化できる。"
+msgstr ""
+"Also check the lower layer of the compound. It is True by default, so you "
+"can disable it by specifying False."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connections:21 of
+msgid "マルチプラグの要素もチェックする。 デフォルトで True なので False を明示すると無効化できる。"
+msgstr ""
+"Also check multi-plug elements. It is True by default, so you can disable it"
+" by specifying False."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connections:24 of
+msgid ""
+"結果を1つだけ得る場合にインデックスを指定する。 負数も指定可能。 結果は `list` ではなく単一となる（得られない場合は None ）。 "
+"範囲外を指定してもエラーにはならず None となる。"
+msgstr ""
+"Specify an index if you want only one result. Negative numbers can also be "
+"specified. The result is a single result rather than a `list` (None if not "
+"available). Even if a value outside the range is specified, an error will "
+"not occur and None will be returned."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.connections:29 of
+msgid "得たいプラグオブジェクトのクラス。 省略時はこのオブジェクト自身と同じクラスになる。"
+msgstr ""
+"The class of the plug object you want to get. If omitted, it will be the "
+"same class as this object itself."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.destinations:3
+#: cymel.core.cyobjects.plug_c.Plug_c.destinationsWithConversions:3 of
+msgid "`outputs` に以下のオプションを指定することと同等であり、 その他のオプションは全て指定可能。"
+msgstr ""
+"This is equivalent to specifying the following options for `outputs`, and "
+"all other options can be specified."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.destinations:6
+#: cymel.core.cyobjects.plug_c.Plug_c.source:6 of
+msgid "skipConversionNodes=True"
+msgstr "skipConversionNodes=True"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.destinations:7
+#: cymel.core.cyobjects.plug_c.Plug_c.destinationsWithConversions:6
+#: cymel.core.cyobjects.plug_c.Plug_c.source:7
+#: cymel.core.cyobjects.plug_c.Plug_c.sourceWithConversion:6 of
+msgid "checkChildren=False"
+msgstr "checkChildren=False"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.destinations:8
+#: cymel.core.cyobjects.plug_c.Plug_c.destinationsWithConversions:7
+#: cymel.core.cyobjects.plug_c.Plug_c.source:8
+#: cymel.core.cyobjects.plug_c.Plug_c.sourceWithConversion:7 of
+msgid "checkElements=False"
+msgstr "checkElements=False"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.disconnectBehavior:3
+#: cymel.core.cyobjects.plug_c.Plug_c.enumValue:4
+#: cymel.core.cyobjects.plug_c.Plug_c.evaluateNumElements:3
+#: cymel.core.cyobjects.plug_c.Plug_c.index:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange:13
+#: cymel.core.cyobjects.plug_c.Plug_c.numChildren:3
+#: cymel.core.cyobjects.plug_c.Plug_c.numConnectedElements:5
+#: cymel.core.cyobjects.plug_c.Plug_c.numElements:5 of
+msgid "`int`"
+msgstr "`int`"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.element:5 of
+msgid "得たい要素の物理インデックス"
+msgstr "Physical index of the element you want to get"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.elementExists:3 of
+msgid "自身がマルチのとき、調べるインデックスを指定する。 自身が要素（実在は不明）のときは省略する。"
+msgstr ""
+"Specifies the index to check when it is multi. Omitted when itself is an "
+"element (existence is unknown)."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.elementExists:6
+#: cymel.core.cyobjects.plug_c.Plug_c.hasMax:3
+#: cymel.core.cyobjects.plug_c.Plug_c.hasMin:3
+#: cymel.core.cyobjects.plug_c.Plug_c.hasNodeFn:4
+#: cymel.core.cyobjects.plug_c.Plug_c.hasProxy:3
+#: cymel.core.cyobjects.plug_c.Plug_c.hasSoftMax:3
+#: cymel.core.cyobjects.plug_c.Plug_c.hasSoftMin:3
+#: cymel.core.cyobjects.plug_c.Plug_c.hasTransformation:3
+#: cymel.core.cyobjects.plug_c.Plug_c.indexMatters:5
+#: cymel.core.cyobjects.plug_c.Plug_c.isAffectsAppearance:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isAffectsWorldSpace:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isArray:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isAttrFromReferencedFile:8
+#: cymel.core.cyobjects.plug_c.Plug_c.isCaching:4
+#: cymel.core.cyobjects.plug_c.Plug_c.isChannelBox:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isChild:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isCompound:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isConnectable:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isConnected:5
+#: cymel.core.cyobjects.plug_c.Plug_c.isConnectedTo:9
+#: cymel.core.cyobjects.plug_c.Plug_c.isDestination:5
+#: cymel.core.cyobjects.plug_c.Plug_c.isDynamic:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isElement:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isEnforcingUniqueName:6
+#: cymel.core.cyobjects.plug_c.Plug_c.isExtension:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isFromReferencedFile:5
+#: cymel.core.cyobjects.plug_c.Plug_c.isHidden:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isIgnoredWhenRendering:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isIndeterminant:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isInternal:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isKeyable:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute:9
+#: cymel.core.cyobjects.plug_c.Plug_c.isNodeFromReferencedFile:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isNodeType:4
+#: cymel.core.cyobjects.plug_c.Plug_c.isNotInstanced:5
+#: cymel.core.cyobjects.plug_c.Plug_c.isProcedural:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isProxy:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isReadable:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isRenderSource:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isSource:5
+#: cymel.core.cyobjects.plug_c.Plug_c.isStorable:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isUsedArrayDataBuilder:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isUsedAsColor:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isUsedAsFilename:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isValidWorldElement:6
+#: cymel.core.cyobjects.plug_c.Plug_c.isWorldSpace:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isWritable:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isWritableNow:5 of
+msgid "`bool`"
+msgstr "`bool`"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.enumName:3 of
+msgid "enum値。"
+msgstr "enum value."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.enumValue:3 of
+msgid "enum名。"
+msgstr "enum name."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.evaluate:4 of
+msgid ""
+"これによって、起こる変化の undo はできないことに注意。 たとえば、マルチアトリビュートの要素を評価することで 要素が追加されても undo "
+"できない。 それをやりたい場合は `.Plug.addElement` が利用できる。"
+msgstr ""
+"Note that this does not allow you to undo the changes that occur. For "
+"example, if an element is added by evaluating a multi-attribute element, it "
+"cannot be undone. If you want to do that, you can use `.Plug.addElement`."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.evaluateNumElements:6 of
+msgid ""
+"このメソッドは `numElements` より効率が悪いと思われるが、 `numElements` よりも信頼性がある。 "
+"なお、このメソッドを呼び出した後は `numElements` も同じ値を 返すようになる。"
+msgstr ""
+"This method is likely to be less efficient than `numElements`, but more "
+"reliable than `numElements`. Note that after calling this method, "
+"`numElements` will also return the same value."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.evaluateNumElements:11 of
+msgid ""
+"ただし、出力コネクションのプラグはこれでもカウントされない場合がある。 コネクトされた要素数を知りたい場合は "
+"`numConnectedElements` を利用すること。"
+msgstr ""
+"However, output connection plugs may still not be counted. If you want to "
+"know the number of connected elements, use `numConnectedElements`."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.evaluator:3 of
+msgid "`evaluate` そのものが得られるとも言えるが、 自身への参照を保持していない点で異なる。"
+msgstr ""
+"It can be said that `evaluate` itself is obtained, but the difference is "
+"that it does not hold a reference to itself."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.get:3
+#: cymel.core.cyobjects.plug_c.Plug_c.getu:3 of
+msgid "MEL の場合と同様に、 `isWorldSpace` なアトリビュートで 要素を指定していない場合は自動的に補完される。"
+msgstr ""
+"As with MEL, if an element is not specified with the `isWorldSpace` "
+"attribute, it will be automatically completed."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.plug_c.Plug_c.rst
+msgid "戻り値"
+msgstr "return value"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.get:6
+#: cymel.core.cyobjects.plug_c.Plug_c.getu:6 of
+msgid "アトリビュート値。"
+msgstr "Attribute value."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.getM:3 of
+msgid ""
+"データ型 matrix アトリビュートは、 マトリックスだけでなく トランスフォーメーション情報形式での値の保存が可能で、 `get` "
+"メソッドでは、保持されている値の形式に応じて `.Matrix` か `.Transformation` が得られる。"
+msgstr ""
+"The data type matrix attribute can store values ​​in the form of "
+"transformation information as well as a matrix, and the `get` method returns"
+" either `.Matrix` or `.Transformation` depending on the format of the value "
+"being stored."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.getM:9 of
+msgid "一方、こちらのメソッドを使用すると、 保持されている値の形式にかかわらず、常に `.Matrix` で得ることができる。"
+msgstr ""
+"On the other hand, using this method, you can always get the value in "
+"`.Matrix`, regardless of the format of the value being held."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.getM:13 of
+msgid "`.Matrix` or None"
+msgstr "`.Matrix` or None"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.hasNodeFn:3 of
+msgid ":mayaapi2:`MFn` タイプ。"
+msgstr ":mayaapi2:`MFn` type."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.indexMatters:3 of
+msgid "この値と `isReadable` が False の場合に :mayacmd:`connectAttr` -na が使える。"
+msgstr ""
+":mayacmd:`connectAttr` -na can be used if this value and `isReadable` are "
+"False."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.inputs:3 of
+msgid "`connections` に s=True, d=False を指定することと同等であり、 その他のオプションは全て指定可能。"
+msgstr ""
+"This is equivalent to specifying s=True, d=False for `connections`, and all "
+"other options can be specified."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isAttrFromReferencedFile:3 of
+msgid "ノードがリファレンスファイルのものであっても、 その上に追加されたアトリビュートなら False となる。"
+msgstr ""
+"Even if the node is from a reference file, any attributes added on it will "
+"be False."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isAttrFromReferencedFile:6 of
+msgid "`isNewAttribute` の逆の結果が得られる。"
+msgstr "Obtains the opposite result of `isNewAttribute`."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isCaching:3 of
+msgid "静的な設定をチェックする。"
+msgstr "Check static configuration."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isConnected:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isDestination:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange:11
+#: cymel.core.cyobjects.plug_c.Plug_c.isFromReferencedFile:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isLocked:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isSource:3
+#: cymel.core.cyobjects.plug_c.Plug_c.isWritableNow:3 of
+msgid "上位プラグもチェックするかどうか。"
+msgstr "Should I also check the upper level plug?"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isConnected:4
+#: cymel.core.cyobjects.plug_c.Plug_c.isDestination:4
+#: cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange:12
+#: cymel.core.cyobjects.plug_c.Plug_c.isFromReferencedFile:4
+#: cymel.core.cyobjects.plug_c.Plug_c.isLocked:4
+#: cymel.core.cyobjects.plug_c.Plug_c.isSource:4
+#: cymel.core.cyobjects.plug_c.Plug_c.isWritableNow:4 of
+msgid "下位プラグもチェックするかどうか。"
+msgstr "Whether to check the lower level plugs as well."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isConnectedTo:4 of
+msgid ""
+"接続を検査する下流プラグ。  `isIndexMatters` が False のマルチプラグが指定された場合、 "
+"各要素とのコネクションの有無もチェックされる。"
+msgstr ""
+"Downstream plug to inspect connections.  If a multi-plug with "
+"`isIndexMatters` set to False is specified, the presence or absence of a "
+"connection with each element is also checked."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isConnectedTo:5 of
+msgid "接続を検査する下流プラグ。"
+msgstr "Downstream plug to inspect connections."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isConnectedTo:7 of
+msgid "`isIndexMatters` が False のマルチプラグが指定された場合、 各要素とのコネクションの有無もチェックされる。"
+msgstr ""
+"If a multi-plug with `isIndexMatters` set to False is specified, the "
+"presence or absence of a connection with each element is also checked."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isEnforcingUniqueName:3 of
+msgid ""
+"Maya 2025 以降はアトリビュートごとの設定値（デフォルトは True）が返され、 それより前のバージョンだと常に True が返される。"
+msgstr ""
+"For Maya 2025 and later, the setting value for each attribute (default is "
+"True) is returned, and for earlier versions, True is always returned."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isExtension:6 of
+msgid "拡張アトリビュートとは 2011 で追加された 既存ノードタイプにスタティックアトリビュートを追加する機能。"
+msgstr ""
+"What is Extended Attribute? A feature added in 2011 that allows you to add "
+"static attributes to existing node types."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange:3 of
+msgid "戻り値の意味は以下の通り。"
+msgstr "The meaning of the return value is as follows."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange:5 of
+msgid "0 ... 変更可能。"
+msgstr "0 ... Can be changed."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange:6 of
+msgid "1 ... そのプラグが変更不可。"
+msgstr "1 ... The plug cannot be changed."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange:7 of
+msgid "2 ... 下位プラグが変更不可（children=True 指定時のみチェック）。"
+msgstr ""
+"2 ... Lower plugs cannot be changed (checked only when children=True is "
+"specified)."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange:9 of
+msgid "children=True を指定した場合にのみ"
+msgstr "Only if you specify children=True"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange:16 of
+msgid "戻り値 `bool` として評価しないこと。 戻り値は `enum` であり、 0 は変更可能である。"
+msgstr ""
+"Do not evaluate the return value as `bool`. The return value is an `enum`, "
+"and 0 can be changed."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange:19 of
+msgid "静的な writable フラグはチェックされないため、 そもそもこのアトリビュートが変更不可であっても 0 が返される点も注意。"
+msgstr ""
+"Note that static writable flags are not checked, so 0 is returned even if "
+"the attribute is immutable in the first place."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isFreeToChange:22 of
+msgid "静的な状態も考慮する場合は `isWritableNow` メソッドが利用できる。"
+msgstr ""
+"If you also want to consider the static state, you can use the "
+"`isWritableNow` method."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isFromReferencedFile:8 of
+msgid ""
+"アトリビュートそのものがリファレンスファイル由来のものかどうかを チェックするには `isAttrFromReferencedFile` が利用できる。"
+msgstr ""
+"`isAttrFromReferencedFile` can be used to check whether the attribute itself"
+" comes from a referenced file."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isLocked:5 of
+msgid "`bool` or `int`"
+msgstr "`bool` or `int`"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isLocked:8 of
+msgid "デフォルトは ancestors=True であるため、 上位プラグがロックされていればロック扱いとなる。"
+msgstr ""
+"The default is ancestors=True, so if the upper plug is locked, it will be "
+"treated as a lock."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isLocked:11 of
+msgid ""
+"また、仮に False を指定したとしても、 Maya の API の制限により、 厳密なチェックはできない場合が多くある。 "
+"そのため、上位でロックされているものの、 そのプラグそのものがロックされているかどうか不明な場合は True ではなく 1 が返される。"
+msgstr ""
+"Also, even if you specify False, strict checks are often not possible due to"
+" Maya API limitations. Therefore, if it is locked at a higher level but it "
+"is unknown whether the plug itself is locked, 1 is returned instead of True."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute:3 of
+msgid "そもそもノードがリファレンスファイルのものでないか、 ファイルリファレンスした後に追加されたアトリビュートの場合に True となる。"
+msgstr ""
+"True if the node does not belong to the reference file, or if the attribute "
+"was added after referencing the file."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isNewAttribute:7 of
+msgid "`isAttrFromReferencedFile` の逆の結果が得られる。"
+msgstr "Obtains the opposite result of `isAttrFromReferencedFile`."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isNodeType:3 of
+msgid "ノードタイプ名。"
+msgstr "Node type name."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isNotInstanced:3 of
+msgid "要素化されていなかったり -1 の要素が含まれている場合に True となる。"
+msgstr "True if it is not elementized or contains -1 elements."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.isValidWorldElement:3 of
+msgid ""
+"そもそも `isWorldSpace` でなかったり、要素プラグでない場合や 未解決なインデックス要素(-1)の場合にも True が返される。"
+msgstr ""
+"True is also returned if it is not `isWorldSpace` in the first place, is not"
+" an element plug, or is an unresolved index element (-1)."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.leaves:3 of
+msgid "未評価のマルチ要素プラグを取りこぼさないように、 マルチプラグを評価する。"
+msgstr ""
+"Evaluate multi-plugs to avoid missing unevaluated multi-element plugs."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.mfn:3
+#: cymel.core.cyobjects.plug_c.Plug_c.mfn_:3 of
+msgid ":mayaapi2:`MFnAttribute` の派生"
+msgstr ":mayaapi2:`MFnAttribute` derivation"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.mfn1:3
+#: cymel.core.cyobjects.plug_c.Plug_c.mfn1_:3 of
+msgid ":mayaapi1:`MFnAttribute` の派生"
+msgstr ":mayaapi1:`MFnAttribute` derivation"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.mplug:3
+#: cymel.core.cyobjects.plug_c.Plug_c.mplug_:3 of
+msgid ":mayaapi2:`MPlug`"
+msgstr ":mayaapi2:`MPlug`"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.mplug1:3
+#: cymel.core.cyobjects.plug_c.Plug_c.mplug1_:3 of
+msgid ":mayaapi1:`MPlug`"
+msgstr ":mayaapi1:`MPlug`"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.newObject:3 of
+msgid ""
+"内部データはブラックボックスであるものとし、 本メソッドをオーバーライドする場合も、 基底メソッドを呼び出して処理を完遂させなければならない。"
+msgstr ""
+"Internal data is assumed to be a black box, and even when overriding this "
+"method, the base method must be called to complete the process."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.newObject:7 of
+msgid "内部データを拡張する場合は `~.CyObject.internalData` も オーバーライドすること。"
+msgstr ""
+"If you want to extend internal data, also override "
+"`~.CyObject.internalData`."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.newObject:11 of
+msgid "生成するインスタンスのクラス。"
+msgstr "Class of instance to generate."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.newObject:12 of
+msgid "インスタンスにセットする内部データ。"
+msgstr "Internal data to be set in the instance."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.nextAvailable:3 of
+msgid "`isIndexMatters` 設定に限らず利用できる。"
+msgstr "Can be used not only for the `isIndexMatters` setting."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.nextAvailable:5 of
+msgid ""
+"検索を開始するインデックス。 デフォルトだと、最後のコネクションの次のインデックスからとなる。 途中のインデックスも見つけるなら 0 などを指定する。"
+msgstr ""
+"Index to start the search. By default, it starts from the next index of the "
+"last connection. If you want to find intermediate indexes, specify 0, etc."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.nextAvailable:9 of
+msgid "結果を `Plug` で得る。"
+msgstr "Get the result with `Plug`."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.nextAvailable:10 of
+msgid "ロックされたプラグをスキップする。"
+msgstr "Skip locked plugs."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.nextAvailable:11 of
+msgid "コンパウンドの子やその中のマルチもチェックする。"
+msgstr "Also check the compound children and the mulch within them."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.nextAvailable:13 of
+msgid "`int` or `.Plug`"
+msgstr "`int` or `.Plug`"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.node:3 of
+msgid "`.Node` 派生クラス"
+msgstr "`.Node` derived class"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.noderef:3 of
+msgid "`.ObjectRef`"
+msgstr "`.ObjectRef`"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.numConnectedElements:3 of
+msgid "この数に基づいて要素を得るには `connectedElement` を利用できる。"
+msgstr "You can use `connectedElement` to get elements based on this number."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.numConnectedElements:8 of
+msgid ""
+"接続数を得たい場合に最も確実なメソッドである。 `numElements` や `evaluateNumElements` ではアクセス出来ない "
+"場合がある出力のみのプラグもカウントされる。"
+msgstr ""
+"This is the most reliable method when you want to get the number of "
+"connections. Output-only plugs that may not be accessible with `numElements`"
+" or `evaluateNumElements` are also counted."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.numElements:3 of
+msgid "この数に基づいて要素を得るには `element` を利用できる。"
+msgstr "You can use `element` to get the element based on this number."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.numElements:8 of
+msgid "コネクトされていても未評価のプラグはカウントされない点に注意。"
+msgstr "Note that plugs that are connected but not evaluated are not counted."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.numElements:10 of
+msgid ""
+"評価を保証したい場合は `evaluateNumElements` を使用すること。 `evaluateNumElements` "
+"を呼び出した後は、このメソッドも同じ値を 返すようになり、これに依存した操作も期待通り動作する。"
+msgstr ""
+"If you want to guarantee evaluation, use `evaluateNumElements`. After "
+"calling `evaluateNumElements`, this method will return the same value, and "
+"operations that depend on it will work as expected."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.outputs:3 of
+msgid "`connections` に s=False, d=True を指定することと同等であり、 その他のオプションは全て指定可能。"
+msgstr ""
+"This is equivalent to specifying s=False, d=True for `connections`, and all "
+"other options can be specified."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.pathName:3 of
+msgid ""
+"Maya 2025 以降で非ユニーク名なら . (ドット) で区切られたパスが返される。 ユニーク名で且つ useCompression=True "
+"(デフォルト) か、 2024 以前なら常に単一のアトリビュート名が返される。"
+msgstr ""
+"For Maya 2025 and later, non-unique names will return paths separated by . "
+"(dot). If it is a unique name and useCompression=True (default) or before "
+"2024, a single attribute name will always be returned."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.pathName:7 of
+msgid "デフォルトの True だとロング名が使用される。 False を指定するとショート名が使用される。"
+msgstr ""
+"The default, True, uses long names. If set to False, the short name will be "
+"used."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.pathName:10 of
+msgid ""
+"デフォルトの True だと可能な限り短いパス名が返される （DAGパスでいうところの partial path name ）。 False "
+"を指定するとトップレベルからのパス名が返されるが、 ユニークである限り先頭のドットは付加されない（APIの挙動）。"
+msgstr ""
+"The default value of True returns the shortest possible path name (partial "
+"path name in DAG paths). If False is specified, the path name from the top "
+"level will be returned, but the leading dot will not be added as long as it "
+"is unique (API behavior)."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.plug:3
+#: cymel.core.cyobjects.plug_c.Plug_c.plug_:3 of
+msgid "Python属性としても同じように取得できるが、 Pythonの名前と衝突する場合のためにこのメソッドがある。"
+msgstr ""
+"It can be retrieved in the same way as a Python attribute, but this method "
+"is provided in case there is a conflict with the Python name."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.plug:6
+#: cymel.core.cyobjects.plug_c.Plug_c.plug_:6 of
+msgid "アトリビュート名。"
+msgstr "Attribute name."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.plugName:3 of
+msgid "アトリビュート名をショート名で得るかどうか。"
+msgstr "Whether to get the attribute name as a short name."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.plugName:5 of
+msgid "コンパウンドアトリビュート階層をフルパスで得るかどうか。"
+msgstr "Whether to get the compound attribute hierarchy with full path."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.proxyMaster:3 of
+msgid "プロキシでなければ自身が返され、 マスターがコネクトされていないプロキシなら None が返される。"
+msgstr ""
+"If it is not a proxy, it returns itself, and if it is a proxy with no master"
+" connected, None is returned."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.root:3 of
+msgid "ルートがマルチ要素プラグの場合は、そこからさらにマルチプラグを得る。"
+msgstr "If the root is a multi-element plug, get more multi-plugs from it."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.source:3
+#: cymel.core.cyobjects.plug_c.Plug_c.sourceWithConversion:3 of
+msgid "`inputs` に以下のオプションを指定することと同等であり、 その他のオプションは全て指定可能。"
+msgstr ""
+"This is equivalent to specifying the following options for `inputs`, and all"
+" other options can be specified."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.source:9
+#: cymel.core.cyobjects.plug_c.Plug_c.sourceWithConversion:8 of
+msgid "index=0"
+msgstr "index=0"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.source:11
+#: cymel.core.cyobjects.plug_c.Plug_c.sourceWithConversion:10 of
+msgid "`.Plug`, `.Node`, or None"
+msgstr "`.Plug`, `.Node`, or None"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.subType:3 of
+msgid ""
+"一般コンパウンドでも数値コンパウンドと同等に扱うべきタイプの場合もそのタイプが返される。 たとえば、quatNodes "
+"プラグインのクォータニオンアトリビュートは一般コンパウンドだが double となる。"
+msgstr ""
+"If a general compound is of a type that should be treated the same as a "
+"numerical compound, that type is returned. For example, the quaternion "
+"attribute of the quatNodes plugin is a general compound, but it is double."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.subType:6 of
+msgid "`str` or `None`"
+msgstr "`str` or `None`"
+
+#: cymel.core.cyobjects.plug_c.Plug_c.worldElement:3 of
+msgid "自身がマルチでなく、その要素プラグやコンパウンドの子プラグの場合は 補正されたものが得られる。"
+msgstr ""
+"If the plug itself is not a multi and is a child plug of its element plug or"
+" compound, a corrected version will be obtained."
+
+#: cymel.core.cyobjects.plug_c.Plug_c.worldElement:6 of
+msgid "`isWorldSpace` でない場合や、既に適切な要素な場合は、自身が得られる。"
+msgstr ""
+"If it is not `isWorldSpace` or is already a suitable element, it will get "
+"itself."

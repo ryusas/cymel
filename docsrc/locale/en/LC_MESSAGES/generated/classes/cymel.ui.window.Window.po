@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:2
+msgid "class cymel.ui.window.Window"
+msgstr "class cymel.ui.window.Window"
+
+#: cymel.ui.window.Window:1 of
+msgid "mel UI の :mayacmd:`window` ラッパークラス。"
+msgstr ":mayacmd:`window` wrapper class for mel UI."
+
+#: cymel.ui.window.Window:3 of
+msgid "`with` で :mayacmd:`setParent` が行える。"
+msgstr ":mayacmd:`setParent` can be done with `with`."
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+msgid ":py:obj:`UICMD <cymel.ui.window.Window.UICMD>`"
+msgstr ":py:obj:`UICMD <cymel.ui.window.Window.UICMD>`"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+msgid ""
+":py:obj:`changeToDockControl <cymel.ui.window.Window.changeToDockControl>`\\"
+" \\(\\[allowedArea\\, area\\]\\)"
+msgstr ""
+":py:obj:`changeToDockControl <cymel.ui.window.Window.changeToDockControl>`\\"
+" \\(\\[allowedArea\\, area\\]\\)"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+#: cymel.ui.window.Window.changeToDockControl:1 of
+msgid "ウィンドウをドッキングコントロール化する。"
+msgstr "Turn the window into a docking control."
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+msgid ":py:obj:`children <cymel.ui.window.Window.children>`\\ \\(\\)"
+msgstr ":py:obj:`children <cymel.ui.window.Window.children>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+#: cymel.ui.window.Window.children:1 of
+msgid "ウィンドウが持つ子コントロールを全て得る。"
+msgstr "Get all child controls of the window."
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+msgid ":py:obj:`delete <cymel.ui.window.Window.delete>`\\ \\(\\)"
+msgstr ":py:obj:`delete <cymel.ui.window.Window.delete>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+#: cymel.ui.window.Window.delete:1 of
+msgid "ウィンドウを削除する。"
+msgstr "Delete the window."
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+msgid ":py:obj:`layout <cymel.ui.window.Window.layout>`\\ \\(\\)"
+msgstr ":py:obj:`layout <cymel.ui.window.Window.layout>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+#: cymel.ui.window.Window.layout:1 of
+msgid "ウィンドウが持つレイアウトを1つ得る。"
+msgstr "Gets one layout that the window has."
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+msgid ":py:obj:`layouts <cymel.ui.window.Window.layouts>`\\ \\(\\)"
+msgstr ":py:obj:`layouts <cymel.ui.window.Window.layouts>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+#: cymel.ui.window.Window.layouts:1 of
+msgid "ウィンドウが持つレイアウトを全て得る。"
+msgstr "Get all the layouts a window has."
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+msgid ":py:obj:`makeCurrent <cymel.ui.window.Window.makeCurrent>`\\ \\(\\)"
+msgstr ":py:obj:`makeCurrent <cymel.ui.window.Window.makeCurrent>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+#: cymel.ui.window.Window.makeCurrent:1 of
+msgid "これをカレントペアレントにする。"
+msgstr "Make this the current parent."
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+msgid ":py:obj:`name <cymel.ui.window.Window.name>`\\ \\(\\)"
+msgstr ":py:obj:`name <cymel.ui.window.Window.name>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+#: cymel.ui.window.Window.name:1 of
+msgid "ウィンドウ名を得る。"
+msgstr "Get window name."
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+msgid ":py:obj:`parent <cymel.ui.window.Window.parent>`\\ \\(\\)"
+msgstr ":py:obj:`parent <cymel.ui.window.Window.parent>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+#: cymel.ui.window.Window.parent:1 of
+msgid "親は得られない。"
+msgstr "Parents can't get it."
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+msgid ":py:obj:`show <cymel.ui.window.Window.show>`\\ \\(\\)"
+msgstr ":py:obj:`show <cymel.ui.window.Window.show>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+#: cymel.ui.window.Window.show:1 of
+msgid "ウィンドウを表示する。"
+msgstr "Show window."
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+msgid ":py:obj:`window <cymel.ui.window.Window.window>`\\ \\(\\)"
+msgstr ":py:obj:`window <cymel.ui.window.Window.window>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:40:<autosummary>:1
+#: cymel.ui.window.Window.window:1 of
+msgid "このウィンドウそのものを得る。"
+msgstr "Get this window itself."
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst:43
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: ../srcs/generated/classes/cymel.ui.window.Window.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.ui.window.Window.changeToDockControl:3 of
+msgid "`.DockControl`"
+msgstr "`.DockControl`"
+
+#: cymel.ui.window.Window.children:3 cymel.ui.window.Window.layouts:3 of
+msgid "`list`"
+msgstr "`list`"
+
+#: cymel.ui.window.Window.layout:3 of
+msgid "`.Layout`"
+msgstr "`.Layout`"
+
+#: cymel.ui.window.Window.name:3 of
+msgid "`str`"
+msgstr "`str`"
+
+#: cymel.ui.window.Window.window:3 of
+msgid "`Window`"
+msgstr "`Window`"

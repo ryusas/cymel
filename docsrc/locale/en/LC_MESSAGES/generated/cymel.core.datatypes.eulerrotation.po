@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.core.datatypes.eulerrotation.rst:2
+msgid "cymel.core.datatypes.eulerrotation"
+msgstr "cymel.core.datatypes.eulerrotation"
+
+#: ../srcs/generated/cymel.core.datatypes.eulerrotation.rst:24:<autosummary>:1
+#: cymel.core.datatypes.eulerrotation:1 of
+msgid "オイラー角回転クラス。"
+msgstr "Euler angle rotation class."
+
+#: ../srcs/generated/cymel.core.datatypes.eulerrotation.rst:9
+msgid "Classes:"
+msgstr "Classes:"
+
+#: ../srcs/generated/cymel.core.datatypes.eulerrotation.rst:24:<autosummary>:1
+msgid ""
+":py:obj:`EulerRotation <cymel.core.datatypes.eulerrotation.EulerRotation>`"
+msgstr ""
+":py:obj:`EulerRotation <cymel.core.datatypes.eulerrotation.EulerRotation>`"
+
+#: ../srcs/generated/cymel.core.datatypes.eulerrotation.rst:24:<autosummary>:1
+msgid ""
+":py:obj:`ImmutableEulerRotation "
+"<cymel.core.datatypes.eulerrotation.ImmutableEulerRotation>`"
+msgstr ""
+":py:obj:`ImmutableEulerRotation "
+"<cymel.core.datatypes.eulerrotation.ImmutableEulerRotation>`"
+
+#: ../srcs/generated/cymel.core.datatypes.eulerrotation.rst:24:<autosummary>:1
+msgid "`EulerRotation` の `immutable` ラッパー。"
+msgstr "`immutable` wrapper for `EulerRotation`."
+
+#: ../srcs/generated/cymel.core.datatypes.eulerrotation.rst:26
+msgid "Functions:"
+msgstr "Functions:"
+
+#: ../srcs/generated/cymel.core.datatypes.eulerrotation.rst:36:<autosummary>:1
+msgid ""
+":py:obj:`degrot <cymel.core.datatypes.eulerrotation.degrot>`\\ \\(x\\, y\\, "
+"z\\[\\, order\\]\\)"
+msgstr ""
+":py:obj:`degrot <cymel.core.datatypes.eulerrotation.degrot>`\\ \\(x\\, y\\, "
+"z\\[\\, order\\]\\)"
+
+#: ../srcs/generated/cymel.core.datatypes.eulerrotation.rst:36:<autosummary>:1
+#: cymel.core.datatypes.eulerrotation.degrot:1 of
+msgid "Degrees で `EulerRotation` を生成するショートカット。"
+msgstr "Shortcut to generate `EulerRotation` in Degrees."
+
+#: ../srcs/generated/cymel.core.datatypes.eulerrotation.rst:39
+msgid "Aliases:"
+msgstr "Aliases:"
+
+#: cymel.core.datatypes.eulerrotation.EulerRotation:1 of
+msgid "`EulerRotation` の別名。"
+msgstr "Alternative name for `EulerRotation`."
+
+#: ../srcs/generated/cymel.core.datatypes.eulerrotation.rst:56
+msgid "Functions Details:"
+msgstr "Function Details:"

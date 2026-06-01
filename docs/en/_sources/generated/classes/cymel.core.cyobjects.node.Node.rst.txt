@@ -1,0 +1,64 @@
+class cymel.core.cyobjects.node.Node
+====================================
+
+.. currentmodule:: cymel.core.cyobjects.node
+
+
+.. inheritance-diagram:: Node
+    :parts: 1
+
+
+
+.. autoclass:: Node
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        addAttr
+        aliases
+        assignUUID
+        delete
+        listAliases
+        listAttr
+        lock
+        namespace
+        plugs
+        referenceNode
+        rename
+        setLocked
+        setNamespace
+        unlock
+        uuid
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: addAttr
+    .. automethod:: aliases
+    .. automethod:: assignUUID
+    .. automethod:: delete
+    .. automethod:: listAliases
+    .. automethod:: listAttr
+    .. automethod:: lock
+    .. automethod:: namespace
+    .. automethod:: plugs
+    .. automethod:: referenceNode
+    .. automethod:: rename
+    .. automethod:: setLocked
+    .. automethod:: setNamespace
+    .. automethod:: unlock
+    .. automethod:: uuid
+
+

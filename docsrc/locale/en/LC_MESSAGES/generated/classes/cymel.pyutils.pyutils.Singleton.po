@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.pyutils.pyutils.Singleton.rst:2
+msgid "class cymel.pyutils.pyutils.Singleton"
+msgstr "class cymel.pyutils.pyutils.Singleton"
+
+#: cymel.pyutils.pyutils.Singleton:1 of
+msgid "シングルトンクラスを作る為のメタクラス。"
+msgstr "Metaclass for creating singleton classes."
+
+#: cymel.pyutils.pyutils.Singleton:3 of
+msgid "その型のインスタンスは1つしか生成されなくなる。"
+msgstr "Only one instance of that type will be created."
+
+#: cymel.pyutils.pyutils.Singleton:5 of
+msgid ""
+"インスタンスが生成されようとする時、同じ型のインスタンスが 既に存在していればそれが返されるだけである。 "
+"生成時の引数内容の違いも考慮されずに流用される点には注意が必要。"
+msgstr ""
+"When an instance is created, if an instance of the same type already exists,"
+" it will only be returned. Please note that it is used without taking into "
+"account the difference in argument contents at the time of generation."

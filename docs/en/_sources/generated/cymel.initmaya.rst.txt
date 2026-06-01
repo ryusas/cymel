@@ -1,0 +1,71 @@
+﻿cymel.initmaya
+==============
+
+.. automodule:: cymel.initmaya
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions:
+
+    .. autosummary::
+    
+        addCymelPluginsPathToAllowedlist
+        callUserSetupMel
+        getUserPrefsDir
+        initApiImmutables
+        initAutoPlugins
+        initCymelPluginsPath
+        initMaya
+        initMels
+        initialize
+        isMayaInitialized
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Constants:
+
+    
+    .. autodata:: IS_UIMODE
+    .. autodata:: MAYA_PRODUCT_VERSION
+    .. autodata:: MAYA_VERSION
+    .. autodata:: MAYA_VERSION_STR
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions Details:
+
+    
+    .. autofunction:: addCymelPluginsPathToAllowedlist
+    .. autofunction:: callUserSetupMel
+    .. autofunction:: getUserPrefsDir
+    .. autofunction:: initApiImmutables
+    .. autofunction:: initAutoPlugins
+    .. autofunction:: initCymelPluginsPath
+    .. autofunction:: initMaya
+    .. autofunction:: initMels
+    .. autofunction:: initialize
+    .. autofunction:: isMayaInitialized
+
+

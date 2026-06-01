@@ -1,0 +1,153 @@
+class cymel.core.datatypes.quaternion.Quaternion
+================================================
+
+.. currentmodule:: cymel.core.datatypes.quaternion
+
+
+.. inheritance-diagram:: Quaternion
+    :parts: 1
+
+
+
+.. autoclass:: Quaternion
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        asAA
+        asAngle
+        asAxisAngle
+        asBend
+        asD
+        asDegrees
+        asE
+        asEulerRotation
+        asM
+        asMatrix
+        asRHV
+        asRHV2
+        asRoll
+        asRollBendHV
+        asRollBendHV2
+        asTransformation
+        asVecW
+        asX
+        conjugate
+        conjugateIt
+        div
+        dot
+        exp
+        fromVecW
+        idiv
+        imul
+        inverse
+        invertIt
+        isEquivalent
+        isIdentity
+        isSignedEquivalent
+        length
+        lengthSq
+        log
+        makeRHV
+        makeRHV2
+        makeRollBendHV
+        makeRollBendHV2
+        mul
+        negateIt
+        normal
+        normalize
+        normalizeIt
+        safelog
+        set
+        setAngle
+        setToIdentity
+        setToXAxis
+        setToYAxis
+        setToZAxis
+        setValue
+        setVecW
+        slerp
+        slerp0
+        squad
+        squadPt
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: Identity
+    .. autoattribute:: Tolerance
+    .. autoattribute:: Zero
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: asAA
+    .. automethod:: asAngle
+    .. automethod:: asAxisAngle
+    .. automethod:: asBend
+    .. automethod:: asD
+    .. automethod:: asDegrees
+    .. automethod:: asE
+    .. automethod:: asEulerRotation
+    .. automethod:: asM
+    .. automethod:: asMatrix
+    .. automethod:: asRHV
+    .. automethod:: asRHV2
+    .. automethod:: asRoll
+    .. automethod:: asRollBendHV
+    .. automethod:: asRollBendHV2
+    .. automethod:: asTransformation
+    .. automethod:: asVecW
+    .. automethod:: asX
+    .. automethod:: conjugate
+    .. automethod:: conjugateIt
+    .. automethod:: div
+    .. automethod:: dot
+    .. automethod:: exp
+    .. automethod:: fromVecW
+    .. automethod:: idiv
+    .. automethod:: imul
+    .. automethod:: inverse
+    .. automethod:: invertIt
+    .. automethod:: isEquivalent
+    .. automethod:: isIdentity
+    .. automethod:: isSignedEquivalent
+    .. automethod:: length
+    .. automethod:: lengthSq
+    .. automethod:: log
+    .. automethod:: makeRHV
+    .. automethod:: makeRHV2
+    .. automethod:: makeRollBendHV
+    .. automethod:: makeRollBendHV2
+    .. automethod:: mul
+    .. automethod:: negateIt
+    .. automethod:: normal
+    .. automethod:: normalize
+    .. automethod:: normalizeIt
+    .. automethod:: safelog
+    .. automethod:: set
+    .. automethod:: setAngle
+    .. automethod:: setToIdentity
+    .. automethod:: setToXAxis
+    .. automethod:: setToYAxis
+    .. automethod:: setToZAxis
+    .. automethod:: setValue
+    .. automethod:: setVecW
+    .. automethod:: slerp
+    .. automethod:: slerp0
+    .. automethod:: squad
+    .. automethod:: squadPt
+
+

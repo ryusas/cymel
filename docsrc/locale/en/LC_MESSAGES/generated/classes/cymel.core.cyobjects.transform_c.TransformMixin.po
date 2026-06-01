@@ -1,0 +1,474 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:2
+msgid "class cymel.core.cyobjects.transform_c.TransformMixin"
+msgstr "class cymel.core.cyobjects.transform_c.TransformMixin"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin:1 of
+msgid "`.Transform` クラスでサポートする機能の中核。"
+msgstr "Core functionality supported by the `.Transform` class."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+msgid ""
+":py:obj:`setM <cymel.core.cyobjects.transform_c.TransformMixin.setM>`\\ "
+"\\(m\\[\\, ws\\, safe\\, get\\]\\)"
+msgstr ""
+":py:obj:`setM <cymel.core.cyobjects.transform_c.TransformMixin.setM>`\\ "
+"\\(m\\[\\, ws\\, safe\\, get\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+#: cymel.core.cyobjects.transform_c.TransformMixin.setMatrix:1 of
+msgid "`setMatrix` の別名。"
+msgstr "Alternative name for `setMatrix`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+msgid ""
+":py:obj:`setMatrix "
+"<cymel.core.cyobjects.transform_c.TransformMixin.setMatrix>`\\ \\(m\\[\\, "
+"ws\\, safe\\, get\\]\\)"
+msgstr ""
+":py:obj:`setMatrix "
+"<cymel.core.cyobjects.transform_c.TransformMixin.setMatrix>`\\ \\(m\\[\\, "
+"ws\\, safe\\, get\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+#: cymel.core.cyobjects.transform_c.TransformMixin.setMatrix:1 of
+msgid "マトリックスをセットする。"
+msgstr "Set the matrix."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+msgid ""
+":py:obj:`setQ <cymel.core.cyobjects.transform_c.TransformMixin.setQ>`\\ "
+"\\(q\\[\\, ws\\, ra\\, r\\, jo\\, safe\\, get\\]\\)"
+msgstr ""
+":py:obj:`setQ <cymel.core.cyobjects.transform_c.TransformMixin.setQ>`\\ "
+"\\(q\\[\\, ws\\, ra\\, r\\, jo\\, safe\\, get\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:1 of
+msgid "`setQuaternion` の別名。"
+msgstr "Alias ​​for `setQuaternion`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+msgid ""
+":py:obj:`setQuaternion "
+"<cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion>`\\ "
+"\\(q\\[\\, ws\\, ra\\, r\\, jo\\, safe\\, get\\]\\)"
+msgstr ""
+":py:obj:`setQuaternion "
+"<cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion>`\\ "
+"\\(q\\[\\, ws\\, ra\\, r\\, jo\\, safe\\, get\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:1 of
+msgid "ノードの回転のクォータニオンをセットする。"
+msgstr "Sets the node rotation quaternion."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+msgid ""
+":py:obj:`setS <cymel.core.cyobjects.transform_c.TransformMixin.setS>`\\ "
+"\\(v\\[\\, ws\\, safe\\, get\\]\\)"
+msgstr ""
+":py:obj:`setS <cymel.core.cyobjects.transform_c.TransformMixin.setS>`\\ "
+"\\(v\\[\\, ws\\, safe\\, get\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+#: cymel.core.cyobjects.transform_c.TransformMixin.setScaling:1 of
+msgid "`setScaling` の別名。"
+msgstr "Alternative name for `setScaling`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+msgid ""
+":py:obj:`setScaling "
+"<cymel.core.cyobjects.transform_c.TransformMixin.setScaling>`\\ \\(v\\[\\, "
+"ws\\, safe\\, get\\]\\)"
+msgstr ""
+":py:obj:`setScaling "
+"<cymel.core.cyobjects.transform_c.TransformMixin.setScaling>`\\ \\(v\\[\\, "
+"ws\\, safe\\, get\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+#: cymel.core.cyobjects.transform_c.TransformMixin.setScaling:1 of
+msgid "ノードのスケーリングの値をセットする。"
+msgstr "Sets the node's scaling value."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+msgid ""
+":py:obj:`setSh <cymel.core.cyobjects.transform_c.TransformMixin.setSh>`\\ "
+"\\(v\\[\\, ws\\, safe\\, get\\]\\)"
+msgstr ""
+":py:obj:`setSh <cymel.core.cyobjects.transform_c.TransformMixin.setSh>`\\ "
+"\\(v\\[\\, ws\\, safe\\, get\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+#: cymel.core.cyobjects.transform_c.TransformMixin.setShearing:1 of
+msgid "`setShearing` の別名。"
+msgstr "Alternative name for `setShearing`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+msgid ""
+":py:obj:`setShearing "
+"<cymel.core.cyobjects.transform_c.TransformMixin.setShearing>`\\ \\(v\\[\\, "
+"ws\\, safe\\, get\\]\\)"
+msgstr ""
+":py:obj:`setShearing "
+"<cymel.core.cyobjects.transform_c.TransformMixin.setShearing>`\\ \\(v\\[\\, "
+"ws\\, safe\\, get\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+#: cymel.core.cyobjects.transform_c.TransformMixin.setShearing:1 of
+msgid "ノードのシアーの値をセットする。"
+msgstr "Sets the node shear value."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+msgid ""
+":py:obj:`setT <cymel.core.cyobjects.transform_c.TransformMixin.setT>`\\ "
+"\\(v\\[\\, ws\\, at\\, safe\\, get\\]\\)"
+msgstr ""
+":py:obj:`setT <cymel.core.cyobjects.transform_c.TransformMixin.setT>`\\ "
+"\\(v\\[\\, ws\\, at\\, safe\\, get\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:1 of
+msgid "`setTranslation` の別名。"
+msgstr "Alternative name for `setTranslation`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+msgid ""
+":py:obj:`setTransformation "
+"<cymel.core.cyobjects.transform_c.TransformMixin.setTransformation>`\\ "
+"\\(x\\[\\, ws\\, safe\\, get\\]\\)"
+msgstr ""
+":py:obj:`setTransformation "
+"<cymel.core.cyobjects.transform_c.TransformMixin.setTransformation>`\\ "
+"\\(x\\[\\, ws\\, safe\\, get\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTransformation:1 of
+msgid "トランスフォーメーションをセットする。"
+msgstr "Set the transformation."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+msgid ""
+":py:obj:`setTranslation "
+"<cymel.core.cyobjects.transform_c.TransformMixin.setTranslation>`\\ "
+"\\(v\\[\\, ws\\, at\\, safe\\, get\\]\\)"
+msgstr ""
+":py:obj:`setTranslation "
+"<cymel.core.cyobjects.transform_c.TransformMixin.setTranslation>`\\ "
+"\\(v\\[\\, ws\\, at\\, safe\\, get\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:1 of
+msgid "ノードの位置をセットする。"
+msgstr "Set the position of the node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+msgid ""
+":py:obj:`setX <cymel.core.cyobjects.transform_c.TransformMixin.setX>`\\ "
+"\\(x\\[\\, ws\\, safe\\, get\\]\\)"
+msgstr ""
+":py:obj:`setX <cymel.core.cyobjects.transform_c.TransformMixin.setX>`\\ "
+"\\(x\\[\\, ws\\, safe\\, get\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:41:<autosummary>:1
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTransformation:1 of
+msgid "`setTransformation` の別名。"
+msgstr "Alias ​​for `setTransformation`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst:44
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setMatrix:3 of
+msgid ""
+"ws=True の場合は、 `setQuaternion` の ra=True 、 `setScaling` と `setShearing` そして "
+"`setTranslation` の at=4 を順番に全て行った結果と一致する （Scaling と Shear の順序は問わないが、 "
+"他はこの順序で行う必要がある）。"
+msgstr ""
+"If ws=True, it matches the result of performing `setQuaternion`'s ra=True, "
+"`setScaling` and `setShearing`, and `setTranslation`'s at=4 in order (the "
+"order of Scaling and Shear does not matter, but the others must be done in "
+"this order)."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setMatrix:11 of
+msgid ""
+"ws=False の場合は、 :mayanode:`joint` のセグメントスケール補正が効いていると、 `setTranslation` "
+"以外は一致しない。"
+msgstr ""
+"If ws=False, if segment scale correction of :mayanode:`joint` is effective, "
+"nothing other than `setTranslation` will match."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setMatrix:16 of
+msgid "セットしたいマトリックス。"
+msgstr "Matrix you want to set."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setMatrix:17
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:19
+#: cymel.core.cyobjects.transform_c.TransformMixin.setScaling:9
+#: cymel.core.cyobjects.transform_c.TransformMixin.setShearing:9
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTransformation:17
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:9 of
+msgid "ワールド空間でセットするかどうか。"
+msgstr "Whether to set it in world space."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setMatrix:18
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:23
+#: cymel.core.cyobjects.transform_c.TransformMixin.setScaling:10
+#: cymel.core.cyobjects.transform_c.TransformMixin.setShearing:10
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTransformation:18
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:19 of
+msgid ""
+"アトリビュートがロックされていているなどのために セットできない場合もエラーにならない。 また、 double3 のセットできる箇所だけセットされる。"
+msgstr ""
+"An error does not occur even if the attribute cannot be set because it is "
+"locked. Also, only the places where double3 can be set are set."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setMatrix:22
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTransformation:22 of
+msgid "実際にはセットせず、 セットされるべきアトリビュート値だけ計算する。"
+msgstr ""
+"It doesn't actually set it, only calculates the attribute value that should "
+"be set."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setMatrix:25
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTransformation:25 of
+msgid "`.Transformation` or None"
+msgstr "`.Transformation` or None"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:3 of
+msgid ""
+"デフォルトでは rotateAxis を含んでいない回転となり、 マトリックスからの分解結果とは一致しないが、 Maya の機能（Local Axis "
+"表示やコンストレイン）が ノードの回転方向とする基準と一致する。"
+msgstr ""
+"By default, the rotation does not include rotateAxis, so it does not match "
+"the decomposition result from the matrix, but it matches the criteria for "
+"the rotation direction of the node by Maya's functions (Local Axis display "
+"and constraints)."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:8 of
+msgid ""
+"ws=False の場合は、 3種の回転アトリビュートのみから合成された値を意味し、 :mayanode:`joint` "
+"ノードのローカルマトリックスには含まれる inverseScale の影響は無視される。"
+msgstr ""
+"If ws=False, it means the value is composited from only the three rotation "
+"attributes, and the influence of inverseScale included in the "
+":mayanode:`joint` node's local matrix is ​​ignored."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:13 of
+msgid ""
+"セットするアトリビュートは通常は rotate だが、 r=False の場合は、他のオプションによって jointOrient か "
+"rotateAxis になる。"
+msgstr ""
+"The attribute to set is usually rotate, but if r=False it will be "
+"jointOrient or rotateAxis depending on the other options."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:18 of
+msgid "セットしたいクォータニオン。"
+msgstr "The quaternion you want to set."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:20 of
+msgid "rotateAxis を含んでいるかどうか。"
+msgstr "Does it contain rotateAxis?"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:21 of
+msgid "rotate を含んでいるかどうか。"
+msgstr "Does it contain rotate?"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:22 of
+msgid "jointOrient を含んでいるかどうか。"
+msgstr "Does it contain jointOrient?"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:27 of
+msgid "実際にはセットせず、 セットされるべき rotate アトリビュート値だけ計算する。"
+msgstr ""
+"Does not actually set it, only calculates the rotate attribute value that "
+"should be set."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:30
+#: cymel.core.cyobjects.transform_c.TransformMixin.setScaling:17
+#: cymel.core.cyobjects.transform_c.TransformMixin.setShearing:17
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:26 of
+msgid "`list` or None"
+msgstr "`list` or None"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:33 of
+msgid "以下のオプションの組み合わせはエラーになる。"
+msgstr "Combinations of the following options will result in an error."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:35 of
+msgid "ws=False, ra=True, r=False, jo=True"
+msgstr "ws=False, ra=True, r=False, jo=True"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:36 of
+msgid "ws=True, jo=False"
+msgstr "ws=True, jo=False"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:37 of
+msgid "ws=True, ra=True, r=False"
+msgstr "ws=True, ra=True, r=False"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setQuaternion:38 of
+msgid "ws=True, r=False で joint ではない場合"
+msgstr "ws=True, r=False and not joint"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setScaling:3 of
+msgid ""
+"ws=False の場合は、 単に scale アトリビュートの値を意味し、 :mayanode:`joint` "
+"ノードのローカルマトリックスには含まれる inverseScale の影響は無視される。"
+msgstr ""
+"If ws=False, it simply means the value of the scale attribute, and the "
+"influence of inverseScale contained in the :mayanode:`joint` node's local "
+"matrix is ​​ignored."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setScaling:8 of
+msgid "セットしたい scale 値。"
+msgstr "The scale value you want to set."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setScaling:14 of
+msgid "実際にはセットせず、 セットされるべき scale アトリビュート値を得る。"
+msgstr ""
+"Gets the scale attribute value that should be set without actually setting "
+"it."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setScaling:20
+#: cymel.core.cyobjects.transform_c.TransformMixin.setShearing:20 of
+msgid ""
+"セグメントスケール補正されていない非一様スケーリングや シアー変換が上位に存在する場合は、 このノードの回転の影響も受けるため、 "
+"先に回転をセットしなければならない。"
+msgstr ""
+"If non-uniform scaling or shear transformation that has not been corrected "
+"for segment scale exists at the top, it will also be affected by the "
+"rotation of this node, so the rotation must be set first."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setShearing:3 of
+msgid ""
+"ws=False の場合は、 単に shear アトリビュートの値を意味し、 :mayanode:`joint` "
+"ノードのローカルマトリックスには含まれる inverseScale の影響は無視される。"
+msgstr ""
+"If ws=False, it simply means the value of the shear attribute, ignoring any "
+"inverseScale effects contained in the :mayanode:`joint` node's local matrix."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setShearing:8 of
+msgid "セットしたい shear 値。"
+msgstr "The shear value you want to set."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setShearing:14
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:23 of
+msgid "実際にはセットせず、 セットされるべき shear アトリビュート値だけ計算する。"
+msgstr ""
+"Does not actually set it, only calculates the shear attribute value that "
+"should be set."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTransformation:3 of
+msgid "ピボットや jointOrient などの修飾系アトリビュートも 一通りセットされる。"
+msgstr "Modifier attributes such as pivot and jointOrient are also set."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTransformation:6 of
+msgid ""
+":mayanode:`joint` ノードと :mayanode:`transform` ノードの トランスフォーメーションのコピーで、 "
+"相互に互換性の無いアトリビュートがある場合 （ピボット系、segmentScaleCompensate、jointOrientなど）、 "
+"マトリックスが一致するようにセットされる。"
+msgstr ""
+"When copying the transformations of the :mayanode:`joint` and "
+":mayanode:`transform` nodes, if there are mutually incompatible attributes "
+"(pivot, segmentScaleCompensate, jointOrient, etc.), the matrices are set to "
+"match."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTransformation:12 of
+msgid ":mayanode:`joint` ノードではピボット系アトリビュートは サポートされないものとして扱うが shear は利用する。"
+msgstr ""
+":mayanode:`joint` nodes treat pivot attributes as unsupported, but shear "
+"uses them."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTransformation:16 of
+msgid "セットしたいトランスフォーメーション情報。"
+msgstr "Transformation information you want to set."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:3 of
+msgid ""
+"デフォルトでは回転ピボットの位置を意味し、 マトリックスからの分解結果とは一致しないが、 Maya の機能（Local Axis "
+"表示位置やコンストレイン）が ノードの位置とする基準と一致する。"
+msgstr ""
+"By default, it means the position of the rotation pivot, which does not "
+"match the decomposition result from the matrix, but matches the criteria for"
+" the node's position by Maya's functions (Local Axis display position and "
+"constraints)."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:8 of
+msgid "セットしたい位置。"
+msgstr "The position you want to set."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:10 of
+msgid ""
+"どのアトリビュートに相当する位置でセットするか。  - 0 だとローカル原点（親の matrix 位置）。 - 1 だと translate の位置。 "
+"- 2 だと rotatePivot の位置。 - 3 だと scalePivot の位置。 - 4 以上だと matrix の位置。"
+msgstr ""
+"Which attribute should be set at the corresponding position?  - If 0, local "
+"origin (parent matrix position). - If it is 1, it is the position of "
+"translate. - If 2, rotatePivot position. - 3 is the scalePivot position. - "
+"If it is 4 or more, it is the matrix position."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:11 of
+msgid "どのアトリビュートに相当する位置でセットするか。"
+msgstr "Which attribute should be set at the corresponding position?"
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:13 of
+msgid "0 だとローカル原点（親の matrix 位置）。"
+msgstr "If 0, it is the local origin (parent matrix position)."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:14 of
+msgid "1 だと translate の位置。"
+msgstr "If it is 1, it is the position of translate."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:15 of
+msgid "2 だと rotatePivot の位置。"
+msgstr "2 is the rotatePivot position."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:16 of
+msgid "3 だと scalePivot の位置。"
+msgstr "3 is the scalePivot position."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:17 of
+msgid "4 以上だと matrix の位置。"
+msgstr "If it is 4 or more, it is the matrix position."
+
+#: cymel.core.cyobjects.transform_c.TransformMixin.setTranslation:29 of
+msgid ""
+"at=4 の場合、 `setScaling` 、 `setShearing` 、 `setQuaternion` の後で呼び出す必要がある。 "
+"そうしないと、ピボットがローカル原点にない場合に それらによって位置が変わってしまう。"
+msgstr ""
+"If at=4, it must be called after `setScaling`, `setShearing`, and "
+"`setQuaternion`. Otherwise, they will change the position if the pivot is "
+"not at the local origin."

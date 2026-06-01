@@ -1,0 +1,235 @@
+class cymel.core.datatypes.matrix.Matrix
+========================================
+
+.. currentmodule:: cymel.core.datatypes.matrix
+
+
+.. inheritance-diagram:: Matrix
+    :parts: 1
+
+
+
+.. autoclass:: Matrix
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        addT
+        addTranslation
+        adj
+        adjoint
+        adjointIt
+        adjugate
+        adjugateIt
+        as3x3
+        asD
+        asDegrees
+        asE
+        asEulerRotation
+        asQ
+        asQuaternion
+        asRM
+        asRotationMatrix
+        asS
+        asSM
+        asScaling
+        asScalingMatrix
+        asSh
+        asShearing
+        asT
+        asTM
+        asTransformation
+        asTranslation
+        asTranslationMatrix
+        asTransposed3x3
+        asX
+        axes
+        axis
+        cofactor
+        col
+        cols
+        column
+        columns
+        det
+        det2
+        det2x2
+        det3
+        det3x3
+        det4
+        det4x4
+        determinant
+        determinant2
+        determinant3
+        div
+        getElem
+        hasNonUniformScaling
+        homogenize
+        homogenizeIt
+        idiv
+        imul
+        init3x3
+        initT
+        initTranslation
+        inverse
+        invertIt
+        isEquivalent
+        isIdentity
+        isSingular
+        makeInvS
+        makeInvSh
+        makeInvT
+        makeInverseScaling
+        makeInverseShearing
+        makeInverseTranslation
+        makeR
+        makeRotation
+        makeS
+        makeScaling
+        makeSh
+        makeShearing
+        makeT
+        makeTranslation
+        mirror
+        mirrorIt
+        mul
+        orthonormalize
+        orthonormalizeIt
+        row
+        rows
+        set
+        setAxes
+        setAxis
+        setColumn
+        setColumns
+        setElem
+        setRow
+        setRows
+        setT
+        setToIdentity
+        setTranslation
+        subT
+        subTranslation
+        transpose
+        transposeIt
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: Identity
+    .. autoattribute:: Tolerance
+    .. autoattribute:: Zero
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: addT
+    .. automethod:: addTranslation
+    .. automethod:: adj
+    .. automethod:: adjoint
+    .. automethod:: adjointIt
+    .. automethod:: adjugate
+    .. automethod:: adjugateIt
+    .. automethod:: as3x3
+    .. automethod:: asD
+    .. automethod:: asDegrees
+    .. automethod:: asE
+    .. automethod:: asEulerRotation
+    .. automethod:: asQ
+    .. automethod:: asQuaternion
+    .. automethod:: asRM
+    .. automethod:: asRotationMatrix
+    .. automethod:: asS
+    .. automethod:: asSM
+    .. automethod:: asScaling
+    .. automethod:: asScalingMatrix
+    .. automethod:: asSh
+    .. automethod:: asShearing
+    .. automethod:: asT
+    .. automethod:: asTM
+    .. automethod:: asTransformation
+    .. automethod:: asTranslation
+    .. automethod:: asTranslationMatrix
+    .. automethod:: asTransposed3x3
+    .. automethod:: asX
+    .. automethod:: axes
+    .. automethod:: axis
+    .. automethod:: cofactor
+    .. automethod:: col
+    .. automethod:: cols
+    .. automethod:: column
+    .. automethod:: columns
+    .. automethod:: det
+    .. automethod:: det2
+    .. automethod:: det2x2
+    .. automethod:: det3
+    .. automethod:: det3x3
+    .. automethod:: det4
+    .. automethod:: det4x4
+    .. automethod:: determinant
+    .. automethod:: determinant2
+    .. automethod:: determinant3
+    .. automethod:: div
+    .. automethod:: getElem
+    .. automethod:: hasNonUniformScaling
+    .. automethod:: homogenize
+    .. automethod:: homogenizeIt
+    .. automethod:: idiv
+    .. automethod:: imul
+    .. automethod:: init3x3
+    .. automethod:: initT
+    .. automethod:: initTranslation
+    .. automethod:: inverse
+    .. automethod:: invertIt
+    .. automethod:: isEquivalent
+    .. automethod:: isIdentity
+    .. automethod:: isSingular
+    .. automethod:: makeInvS
+    .. automethod:: makeInvSh
+    .. automethod:: makeInvT
+    .. automethod:: makeInverseScaling
+    .. automethod:: makeInverseShearing
+    .. automethod:: makeInverseTranslation
+    .. automethod:: makeR
+    .. automethod:: makeRotation
+    .. automethod:: makeS
+    .. automethod:: makeScaling
+    .. automethod:: makeSh
+    .. automethod:: makeShearing
+    .. automethod:: makeT
+    .. automethod:: makeTranslation
+    .. automethod:: mirror
+    .. automethod:: mirrorIt
+    .. automethod:: mul
+    .. automethod:: orthonormalize
+    .. automethod:: orthonormalizeIt
+    .. automethod:: row
+    .. automethod:: rows
+    .. automethod:: set
+    .. automethod:: setAxes
+    .. automethod:: setAxis
+    .. automethod:: setColumn
+    .. automethod:: setColumns
+    .. automethod:: setElem
+    .. automethod:: setRow
+    .. automethod:: setRows
+    .. automethod:: setT
+    .. automethod:: setToIdentity
+    .. automethod:: setTranslation
+    .. automethod:: subT
+    .. automethod:: subTranslation
+    .. automethod:: transpose
+    .. automethod:: transposeIt
+
+

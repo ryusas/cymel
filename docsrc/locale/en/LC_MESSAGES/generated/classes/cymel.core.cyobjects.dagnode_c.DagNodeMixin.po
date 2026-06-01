@@ -1,0 +1,1230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:2
+msgid "class cymel.core.cyobjects.dagnode_c.DagNodeMixin"
+msgstr "class cymel.core.cyobjects.dagnode_c.DagNodeMixin"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin:1 of
+msgid "`.DagNode` クラスでサポートする機能の中核。"
+msgstr "Core functionality supported by the `.DagNode` class."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`allRoots <cymel.core.cyobjects.dagnode_c.DagNodeMixin.allRoots>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`allRoots <cymel.core.cyobjects.dagnode_c.DagNodeMixin.allRoots>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.allRoots:1 of
+msgid "このノードインスタンスを階層下に持つ全ルートノードのリストを得る。"
+msgstr "Get a list of all root nodes that have this node instance under them."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`boundingBox "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.boundingBox>`\\ \\(\\[ws\\]\\)"
+msgstr ""
+":py:obj:`boundingBox "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.boundingBox>`\\ \\(\\[ws\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.boundingBox:1 of
+msgid "バウンディングボックスを得る。"
+msgstr "Get the bounding box."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`child <cymel.core.cyobjects.dagnode_c.DagNodeMixin.child>`\\ "
+"\\(idx\\[\\, shapes\\, intermediates\\]\\)"
+msgstr ""
+":py:obj:`child <cymel.core.cyobjects.dagnode_c.DagNodeMixin.child>`\\ "
+"\\(idx\\[\\, shapes\\, intermediates\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.child:1 of
+msgid "インデックス指定で子ノードを1つ得る。"
+msgstr "Get one child node by index specification."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`children <cymel.core.cyobjects.dagnode_c.DagNodeMixin.children>`\\ "
+"\\(\\[shapes\\, intermediates\\]\\)"
+msgstr ""
+":py:obj:`children <cymel.core.cyobjects.dagnode_c.DagNodeMixin.children>`\\ "
+"\\(\\[shapes\\, intermediates\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.children:1 of
+msgid "DAGパス上の子ノードのリストを得る。"
+msgstr "Get list of child nodes on DAG path."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`fullPath <cymel.core.cyobjects.dagnode_c.DagNodeMixin.fullPath>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`fullPath <cymel.core.cyobjects.dagnode_c.DagNodeMixin.fullPath>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.fullPath:1 of
+msgid "フルパス名を得る。"
+msgstr "Get the full pathname."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`getJOQ <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getJOQ>`\\ "
+"\\(\\[ws\\]\\)"
+msgstr ""
+":py:obj:`getJOQ <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getJOQ>`\\ "
+"\\(\\[ws\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getJOQ:1 of
+msgid "ノードの jointOrient までのクォータニオンを得る。"
+msgstr "Get the quaternion up to jointOrient of the node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`getM <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getM>`\\ "
+"\\(\\[ws\\, p\\, inv\\]\\)"
+msgstr ""
+":py:obj:`getM <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getM>`\\ "
+"\\(\\[ws\\, p\\, inv\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix:1 of
+msgid "`getMatrix` の別名。"
+msgstr "Alternative name for `getMatrix`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`getMatrix "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix>`\\ \\(\\[ws\\, p\\, "
+"inv\\]\\)"
+msgstr ""
+":py:obj:`getMatrix "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix>`\\ \\(\\[ws\\, p\\, "
+"inv\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix:1 of
+msgid "ノードのトランスフォーメーションのマトリックスを得る。"
+msgstr "Obtain the transformation matrix of the node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`getQ <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQ>`\\ "
+"\\(\\[ws\\, ra\\, r\\, jo\\]\\)"
+msgstr ""
+":py:obj:`getQ <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQ>`\\ "
+"\\(\\[ws\\, ra\\, r\\, jo\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:1 of
+msgid "`getQuaternion` の別名。"
+msgstr "Alias ​​for `getQuaternion`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`getQuaternion "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion>`\\ \\(\\[ws\\, "
+"ra\\, r\\, jo\\]\\)"
+msgstr ""
+":py:obj:`getQuaternion "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion>`\\ \\(\\[ws\\, "
+"ra\\, r\\, jo\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:1 of
+msgid "ノードの回転のクォータニオンを得る。"
+msgstr "Get the rotation quaternion of the node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`getS <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getS>`\\ "
+"\\(\\[ws\\]\\)"
+msgstr ""
+":py:obj:`getS <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getS>`\\ "
+"\\(\\[ws\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling:1 of
+msgid "`getScaling` の別名。"
+msgstr "Alternative name for `getScaling`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`getScaling "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling>`\\ \\(\\[ws\\]\\)"
+msgstr ""
+":py:obj:`getScaling "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling>`\\ \\(\\[ws\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling:1 of
+msgid "ノードのスケーリングの値を得る。"
+msgstr "Get the node's scaling value."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`getSh <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getSh>`\\ "
+"\\(\\[ws\\]\\)"
+msgstr ""
+":py:obj:`getSh <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getSh>`\\ "
+"\\(\\[ws\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing:1 of
+msgid "`getShearing` の別名。"
+msgstr "Alternative name for `getShearing`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`getShearing "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing>`\\ \\(\\[ws\\]\\)"
+msgstr ""
+":py:obj:`getShearing "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing>`\\ \\(\\[ws\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing:1 of
+msgid "ノードのシアーの値を得る。"
+msgstr "Get the shear value of the node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`getT <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getT>`\\ "
+"\\(\\[ws\\, at\\]\\)"
+msgstr ""
+":py:obj:`getT <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getT>`\\ "
+"\\(\\[ws\\, at\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation:1 of
+msgid "`getTranslation` の別名。"
+msgstr "Alternative name for `getTranslation`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`getTransformation "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation>`\\ "
+"\\(\\[ws\\]\\)"
+msgstr ""
+":py:obj:`getTransformation "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation>`\\ "
+"\\(\\[ws\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation:1 of
+msgid "ノードのトランスフォーメーション情報を得る。"
+msgstr "Get transformation information for a node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`getTranslation "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation>`\\ \\(\\[ws\\, "
+"at\\]\\)"
+msgstr ""
+":py:obj:`getTranslation "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation>`\\ \\(\\[ws\\, "
+"at\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation:1 of
+msgid "ノードの位置を得る。"
+msgstr "Get the position of the node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`getX <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getX>`\\ "
+"\\(\\[ws\\]\\)"
+msgstr ""
+":py:obj:`getX <cymel.core.cyobjects.dagnode_c.DagNodeMixin.getX>`\\ "
+"\\(\\[ws\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation:1 of
+msgid "`getTransformation` の別名。"
+msgstr "Alias ​​for `getTransformation`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`hasUnderWorldNodes "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.hasUnderWorldNodes>`\\ \\(\\)"
+msgstr ""
+":py:obj:`hasUnderWorldNodes "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.hasUnderWorldNodes>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.hasUnderWorldNodes:1 of
+msgid "シェイプ下にアンダーワールドノード（カーブオンサーフェース等）を持つかどうか。"
+msgstr "Whether the shape has underworld nodes (curves on surfaces, etc.)."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`inUnderWorld "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.inUnderWorld>`\\ \\(\\)"
+msgstr ""
+":py:obj:`inUnderWorld "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.inUnderWorld>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.inUnderWorld:1 of
+msgid "アンダーワールド（カーブオンサーフェース等）かどうか。"
+msgstr "Is it underworld (curve-on-surface, etc.)?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`instance <cymel.core.cyobjects.dagnode_c.DagNodeMixin.instance>`\\ "
+"\\(idx\\)"
+msgstr ""
+":py:obj:`instance <cymel.core.cyobjects.dagnode_c.DagNodeMixin.instance>`\\ "
+"\\(idx\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.instance:1 of
+msgid "インスタンス番号からインスタンスを得る。"
+msgstr "Get instance from instance number."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`instanceIndex "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.instanceIndex>`\\ \\(\\)"
+msgstr ""
+":py:obj:`instanceIndex "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.instanceIndex>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.instanceIndex:1 of
+msgid "インスタンス番号を得る。"
+msgstr "Get the instance number."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`instances "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.instances>`\\ "
+"\\(\\[noSelf\\]\\)"
+msgstr ""
+":py:obj:`instances "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.instances>`\\ "
+"\\(\\[noSelf\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.instances:1 of
+msgid "インスタンスのリストを返す。"
+msgstr "Returns a list of instances."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`isAncestorOf "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf>`\\ \\(node\\[\\, "
+"exact\\, underWorld\\]\\)"
+msgstr ""
+":py:obj:`isAncestorOf "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf>`\\ \\(node\\[\\, "
+"exact\\, underWorld\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf:1 of
+msgid "指定ノードの上位ノードかどうか検査する。"
+msgstr "Checks whether the specified node is an upper node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`isInstanceable "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanceable>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isInstanceable "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanceable>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanceable:1 of
+msgid "インスタンス可能かどうか。"
+msgstr "Is it instantiable?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`isInstanced "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanced>`\\ "
+"\\(\\[indirect\\]\\)"
+msgstr ""
+":py:obj:`isInstanced "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanced>`\\ "
+"\\(\\[indirect\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanced:1 of
+msgid "インスタンスされているかどうか。"
+msgstr "Whether it is instantiated."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`isIntermediateObject "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isIntermediateObject>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isIntermediateObject "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isIntermediateObject>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isIntermediateObject:1 of
+msgid "インターミディエイトオブジェクトかどうか。"
+msgstr "Is it an intermediate object?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`isParentOf "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf>`\\ \\(node\\[\\, "
+"exact\\, underWorld\\]\\)"
+msgstr ""
+":py:obj:`isParentOf "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf>`\\ \\(node\\[\\, "
+"exact\\, underWorld\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf:1 of
+msgid "指定ノードの親かどうか検査する。"
+msgstr "Checks whether the specified node is a parent."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`isRoot <cymel.core.cyobjects.dagnode_c.DagNodeMixin.isRoot>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`isRoot <cymel.core.cyobjects.dagnode_c.DagNodeMixin.isRoot>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isRoot:1 of
+msgid "ルートノードかどうか。"
+msgstr "Is it a root node?"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`isTemplated "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isTemplated>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isTemplated "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isTemplated>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isTemplated:1 of
+msgid "テンプレート化されているかどうか。"
+msgstr "Templated or not."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`isVisible "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isVisible>`\\ \\(\\)"
+msgstr ""
+":py:obj:`isVisible "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.isVisible>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isVisible:1 of
+msgid "可視性を得る。"
+msgstr "Gain visibility."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`leaves <cymel.core.cyobjects.dagnode_c.DagNodeMixin.leaves>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`leaves <cymel.core.cyobjects.dagnode_c.DagNodeMixin.leaves>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.leaves:1 of
+msgid "階層下のリーフノードのリストを得る。"
+msgstr "Get a list of leaf nodes below the hierarchy."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`lengthAndSiblingIndices "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`lengthAndSiblingIndices "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices:1 of
+msgid "DAGパスを構成するノード数と、兄弟インデックスリストのペアを得る。"
+msgstr ""
+"Obtain the number of nodes that make up the DAG path and a pair of sibling "
+"index lists."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`numChildren "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.numChildren>`\\ \\(\\[shapes\\,"
+" intermediates\\]\\)"
+msgstr ""
+":py:obj:`numChildren "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.numChildren>`\\ \\(\\[shapes\\,"
+" intermediates\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.numChildren:1 of
+msgid "DAGパス上の子ノードの数を得る。"
+msgstr "Get the number of child nodes on the DAG path."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`numInstances "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.numInstances>`\\ "
+"\\(\\[indirect\\]\\)"
+msgstr ""
+":py:obj:`numInstances "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.numInstances>`\\ "
+"\\(\\[indirect\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.numInstances:1 of
+msgid "インスタンス数を得る。"
+msgstr "Get the number of instances."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`numParents "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.numParents>`\\ "
+"\\(\\[indirect\\]\\)"
+msgstr ""
+":py:obj:`numParents "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.numParents>`\\ "
+"\\(\\[indirect\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.numParents:1 of
+msgid "このノードインスタンスを子に持つ親ノードの数を得る。"
+msgstr ""
+"Get the number of parent nodes that have this node instance as a child."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`numShapes "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.numShapes>`\\ "
+"\\(\\[intermediates\\]\\)"
+msgstr ""
+":py:obj:`numShapes "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.numShapes>`\\ "
+"\\(\\[intermediates\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.numShapes:1 of
+msgid ":mayanode:`transform` の持つ :mayanode:`shape` ノード数を得る。"
+msgstr ""
+"Get the number of :mayanode:`shape` nodes that :mayanode:`transform` has."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`objectColor "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.objectColor>`\\ \\(\\)"
+msgstr ""
+":py:obj:`objectColor "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.objectColor>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.objectColor:1 of
+msgid "設定されているオブジェクトカラーを得る。"
+msgstr "Gets the set object color."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`parent <cymel.core.cyobjects.dagnode_c.DagNodeMixin.parent>`\\ "
+"\\(\\[step\\]\\)"
+msgstr ""
+":py:obj:`parent <cymel.core.cyobjects.dagnode_c.DagNodeMixin.parent>`\\ "
+"\\(\\[step\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.parent:1 of
+msgid "DAGパスに沿った親ノードを得る。"
+msgstr "Get the parent node along the DAG path."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`parentWorld "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.parentWorld>`\\ \\(\\)"
+msgstr ""
+":py:obj:`parentWorld "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.parentWorld>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.parentWorld:1 of
+msgid "アンダーワールド（カーブオンサーフェース等）における親空間シェイプを返す。"
+msgstr ""
+"Returns the parent spatial shape in the underworld (curve-on-surface, etc.)."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`parents <cymel.core.cyobjects.dagnode_c.DagNodeMixin.parents>`\\ "
+"\\(\\[indirect\\]\\)"
+msgstr ""
+":py:obj:`parents <cymel.core.cyobjects.dagnode_c.DagNodeMixin.parents>`\\ "
+"\\(\\[indirect\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.parents:1 of
+msgid "このノードインスタンスを子に持つ親ノードのリストを得る。"
+msgstr "Get a list of parent nodes that have this node instance as a child."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`partialPath "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.partialPath>`\\ \\(\\)"
+msgstr ""
+":py:obj:`partialPath "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.partialPath>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.partialPath:1 of
+msgid "パーシャルパス名を得る。"
+msgstr "Get partial path name."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`pathLength "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength>`\\ \\(\\)"
+msgstr ""
+":py:obj:`pathLength "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength:1 of
+msgid "DAGフルパスの長さを得る。"
+msgstr "Get the length of the DAG full path."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ":py:obj:`root <cymel.core.cyobjects.dagnode_c.DagNodeMixin.root>`\\ \\(\\)"
+msgstr ":py:obj:`root <cymel.core.cyobjects.dagnode_c.DagNodeMixin.root>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.root:1 of
+msgid "DAGパスに沿ったルートノードを得る。"
+msgstr "Get the root node along the DAG path."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`shape <cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape>`\\ "
+"\\(\\[idx\\, intermediates\\]\\)"
+msgstr ""
+":py:obj:`shape <cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape>`\\ "
+"\\(\\[idx\\, intermediates\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape:1 of
+msgid ":mayanode:`shape` ノードを得る。"
+msgstr "Get the :mayanode:`shape` node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`shapes <cymel.core.cyobjects.dagnode_c.DagNodeMixin.shapes>`\\ "
+"\\(\\[intermediates\\]\\)"
+msgstr ""
+":py:obj:`shapes <cymel.core.cyobjects.dagnode_c.DagNodeMixin.shapes>`\\ "
+"\\(\\[intermediates\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.shapes:1 of
+msgid ":mayanode:`transform` の持つ :mayanode:`shape` ノードのリストを得る。"
+msgstr "Get a list of :mayanode:`shape` nodes of :mayanode:`transform`."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`siblingIndex "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndex>`\\ \\(\\)"
+msgstr ""
+":py:obj:`siblingIndex "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndex>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndex:1 of
+msgid "兄弟におけるインデックスを得る。"
+msgstr "Get the index in siblings."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`siblingIndices "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices>`\\ \\(\\)"
+msgstr ""
+":py:obj:`siblingIndices "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices:1 of
+msgid "DAGパス中の全ノードの兄弟インデックスリストを得る。"
+msgstr "Get the sibling index list of all nodes in the DAG path."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`siblings <cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblings>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`siblings <cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblings>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblings:1 of
+msgid "自分以外の兄弟ノードのリストを返す。"
+msgstr "Returns a list of sibling nodes other than itself."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`transform "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.transform>`\\ \\(\\)"
+msgstr ""
+":py:obj:`transform "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.transform>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.transform:1 of
+msgid ":mayanode:`transform` ノードを得る。"
+msgstr "Get the :mayanode:`transform` node."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`underWorldNodes "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.underWorldNodes>`\\ \\(\\)"
+msgstr ""
+":py:obj:`underWorldNodes "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.underWorldNodes>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.underWorldNodes:1 of
+msgid "シェイプ下のアンダーワールドノード（カーブオンサーフェース等）のリストを得る。"
+msgstr ""
+"Get a list of underworld nodes (curves-on-surface, etc.) under a shape."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`useObjectColor "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.useObjectColor>`\\ \\(\\)"
+msgstr ""
+":py:obj:`useObjectColor "
+"<cymel.core.cyobjects.dagnode_c.DagNodeMixin.useObjectColor>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:81:<autosummary>:1
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.useObjectColor:1 of
+msgid "オブジェクトカラーが使用される設定になっているかどうか。"
+msgstr "Whether object colors are set to be used."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst:84
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.allRoots:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.root:3 of
+msgid "自身がルートノードなら同じ参照が返される。"
+msgstr "If itself is the root node, the same reference will be returned."
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.allRoots:5
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.children:11
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.instances:4
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.leaves:6
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.parents:5
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.shapes:5
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblings:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.underWorldNodes:3 of
+msgid "`list`"
+msgstr "`list`"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.boundingBox:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getJOQ:5
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:13
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling:8
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing:8
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation:7
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation:8 of
+msgid "ワールド空間で得るかどうか。"
+msgstr "Whether you get it in world space or not."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.boundingBox:4 of
+msgid "`.BoundingBox`"
+msgstr "`.BoundingBox`"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.child:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.children:3 of
+msgid ""
+"シェイプからアンダーワールドノード（カーブオンサーフェース等）を 得ることはできないため、その場合は `underWorldNodes` "
+"を利用すること。"
+msgstr ""
+"Since it is not possible to obtain underworld nodes (curve-on-surface, etc.)"
+" from a shape, use `underWorldNodes` in that case."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.child:6 of
+msgid ""
+"インデックス。 shapes や intermediates オプションによって、 同じインデックスでも得られるものが変わることがある。 "
+"無効なインデックスを指定するとエラーではなく None となる。"
+msgstr ""
+"index. Depending on the shapes and intermediates options, you may get "
+"different results for the same index. If an invalid index is specified, None"
+" will be returned instead of an error."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.child:11
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.children:6
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.numChildren:3 of
+msgid "シェイプも含めるかどうか。"
+msgstr "Whether to include shapes as well."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.child:13
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.children:8
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.numChildren:5 of
+msgid "shapes=True のとき、さらに インターミディエイトオブジェクトも含めるかどうか。"
+msgstr "When shapes=True, whether to also include intermediate objects."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.child:16
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.instance:4
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.parent:11 of
+msgid "`.DagNode` or None"
+msgstr "`.DagNode` or None"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.fullPath:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.partialPath:5 of
+msgid "`str`"
+msgstr "`str`"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getJOQ:3 of
+msgid "`getQuaternion` の r=False 指定と同じ。"
+msgstr "Same as r=False specification of `getQuaternion`."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getJOQ:6
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:17 of
+msgid "`.Quaternion`"
+msgstr "`.Quaternion`"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix:4 of
+msgid "親のマトリックスを得るかどうか。"
+msgstr "Whether to get the parent matrix."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix:5 of
+msgid "逆行列を得るかどうか。"
+msgstr "Whether to obtain the inverse of the matrix."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix:6 of
+msgid "`.Matrix`"
+msgstr "`.Matrix`"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:3 of
+msgid ""
+"デフォルトでは rotateAxis を含んでいない回転となり、 マトリックスからの分解結果とは一致しないが、 Maya の機能（Local Axis "
+"表示やコンストレイン）が ノードの回転方向とする基準と一致する。"
+msgstr ""
+"By default, the rotation does not include rotateAxis, so it does not match "
+"the decomposition result from the matrix, but it matches the criteria for "
+"the rotation direction of the node by Maya's functions (Local Axis display "
+"and constraints)."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:8 of
+msgid ""
+"ws=False の場合は、 3種の回転アトリビュートのみから合成された結果が得られ、 :mayanode:`joint` "
+"ノードのローカルマトリックスには含まれる inverseScale の影響は無視される。"
+msgstr ""
+"If ws=False, the result will be composited from only the three rotation "
+"attributes, and the local matrix of the :mayanode:`joint` node will ignore "
+"any inverseScale effects."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:14 of
+msgid "rotateAxis を含めるかどうか。"
+msgstr "Whether to include rotateAxis."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:15 of
+msgid "rotate を含めるかどうか。"
+msgstr "Whether to include rotate."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:16 of
+msgid "jointOrient を含めるかどうか。"
+msgstr "Whether to include jointOrient."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:20 of
+msgid ""
+"ws=True の場合の親までの非一様 scale や shear による影響や ws=False の場合の jointOrient は、  "
+":mayacmd:`xform` コマンドや :mayaapi2:`MTransformationMatrix` "
+"では考慮されないが、本メソッドでは考慮されている。"
+msgstr ""
+"The effects of non-uniform scale and shear up to the parent when ws=True and"
+" jointOrient when ws=False are not considered by the :mayacmd:`xform` "
+"command or :mayaapi2:`MTransformationMatrix`, but are taken into account by "
+"this method."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:25 of
+msgid ""
+"ws=True の結果は Legacy Viewport での Local Axis 表示と常に一致するが、 上位階層に 非一様 scale や "
+"shear が含まれる場合、 orientConstraint や parentConstraint の結果とは一致しない場合がある。 "
+"これは、コンストレイン側で考慮が足りていないからである。 ただし、segmentScaleCompensate で常に非一様 scale "
+"が打ち消されていれば一致する。"
+msgstr ""
+"The result of ws=True always matches the Local Axis display in Legacy "
+"Viewport, but it may not match the result of orientConstraint or "
+"parentConstraint if the upper hierarchy includes non-uniform scale or shear."
+" This is because there is not enough consideration on the constraint side. "
+"However, if non-uniform scale is always canceled in segmentScaleCompensate, "
+"they will match."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:31 of
+msgid ""
+"ws=False の結果は、上位階層に非一様 scale や shear が無いか、 segmentScaleCompensate で常に非一様 "
+"scale が打ち消されていれば、 親の getQ(ws=True, ra=True) を乗じた結果は getQ(ws=True) と一致する。"
+msgstr ""
+"The result of ws=False is that if there is no non-uniform scale or shear in "
+"the upper layer, or if non-uniform scale is always canceled by "
+"segmentScaleCompensate, the result of multiplying by the parent's "
+"getQ(ws=True, ra=True) will match getQ(ws=True)."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:36 of
+msgid "以下のオプションの組み合わせはエラーになる。"
+msgstr "Combinations of the following options will result in an error."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:38 of
+msgid "ws=False, ra=True, r=False, jo=True"
+msgstr "ws=False, ra=True, r=False, jo=True"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:39 of
+msgid "ws=True, ra=True, r=False"
+msgstr "ws=True, ra=True, r=False"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:40 of
+msgid "ws=True, ra=True, jo=False"
+msgstr "ws=True, ra=True, jo=False"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion:41 of
+msgid "ws=True, r=True, jo=False"
+msgstr "ws=True, r=True, jo=False"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling:3 of
+msgid ""
+"ws=False の場合は、 単に scale アトリビュートから得られ、 :mayanode:`joint` ノードのローカルマトリックスには含まれる"
+" inverseScale の影響は無視される。"
+msgstr ""
+"If ws=False, it is simply derived from the scale attribute, ignoring any "
+"inverseScale effects contained in the :mayanode:`joint` node's local matrix."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling:9
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing:9
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation:18 of
+msgid "`.Vector`"
+msgstr "`.Vector`"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing:3 of
+msgid ""
+"ws=False の場合は、 単に shear アトリビュートから得られ、 :mayanode:`joint` ノードのローカルマトリックスには含まれる"
+" inverseScale の影響は無視される。"
+msgstr ""
+"If ws=False, it is simply derived from the shear attribute, ignoring any "
+"inverseScale effects contained in the :mayanode:`joint` node's local matrix."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation:3 of
+msgid ""
+":mayanode:`transform` 派生ノードの アトリビュート ``xm`` の値を得ることと同じだが、 "
+"オプションでワールドスペースの値を得ることもできる。"
+msgstr ""
+":mayanode:`transform` Same as getting the value of the attribute ``xm`` on "
+"the derived node, but with the option of getting the world space value."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation:8 of
+msgid "`.Transformation`"
+msgstr "`.Transformation`"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation:3 of
+msgid ""
+"デフォルトでは回転ピボットの位置となり、 マトリックスからの分解結果とは一致しないが、 Maya の機能（Local Axis "
+"表示位置やコンストレイン）が ノードの位置とする基準と一致する。"
+msgstr ""
+"By default, it is the rotation pivot position, which does not match the "
+"decomposition result from the matrix, but matches the reference for the node"
+" position by Maya's functions (Local Axis display position and constraints)."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation:9 of
+msgid ""
+"どのアトリビュートに相当する位置を得るか。  - 0 だとローカル原点（親の matrix 位置）。 - 1 だと translate の位置。 - 2"
+" だと rotatePivot の位置。 - 3 だと scalePivot の位置。 - 4 以上だと matrix の位置。"
+msgstr ""
+"Which attribute to get the corresponding position.  - If 0, local origin "
+"(parent matrix position). - If it is 1, it is the position of translate. - "
+"If 2, rotatePivot position. - 3 is the scalePivot position. - If it is 4 or "
+"more, it is the matrix position."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation:10 of
+msgid "どのアトリビュートに相当する位置を得るか。"
+msgstr "Which attribute to get the corresponding position."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation:12 of
+msgid "0 だとローカル原点（親の matrix 位置）。"
+msgstr "If 0, it is the local origin (parent matrix position)."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation:13 of
+msgid "1 だと translate の位置。"
+msgstr "If it is 1, it is the position of translate."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation:14 of
+msgid "2 だと rotatePivot の位置。"
+msgstr "2 is the rotatePivot position."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation:15 of
+msgid "3 だと scalePivot の位置。"
+msgstr "3 is the scalePivot position."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation:16 of
+msgid "4 以上だと matrix の位置。"
+msgstr "If it is 4 or more, it is the matrix position."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.hasUnderWorldNodes:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.inUnderWorld:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf:12
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanceable:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanced:5
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isIntermediateObject:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf:12
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isRoot:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isTemplated:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isVisible:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.useObjectColor:3 of
+msgid "`bool`"
+msgstr "`bool`"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.instance:3 of
+msgid "インスタンス番号。"
+msgstr "Instance number."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.instanceIndex:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.numChildren:8
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.numInstances:5
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.numParents:5
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.numShapes:5
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.objectColor:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength:7
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndex:3 of
+msgid "`int`"
+msgstr "`int`"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.instanceIndex:6 of
+msgid ""
+"この番号は並び順の変更やインスタンス数の増減によって動的に変わる。 また、使用されているワールドスペースプラグのインデックスも それに合わせて変わる。"
+msgstr ""
+"This number changes dynamically as the sort order changes or the number of "
+"instances increases or decreases. Also, the index of the world space plug "
+"used will change accordingly."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.instances:3 of
+msgid "自身を含めないようにする。"
+msgstr "Avoid including yourself."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf:3 of
+msgid "直接の親かどうかをチェックする場合は `isParentOf` が利用できる。"
+msgstr ""
+"`isParentOf` can be used to check whether a parent is a direct parent."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf:7
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf:7 of
+msgid "チェックするノード。"
+msgstr "Node to check."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf:8
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf:8 of
+msgid "インスタンス関係は考慮せず、DAGパスに沿った判定のみとするかどうか。"
+msgstr ""
+"Whether to make judgments only along the DAG path without considering "
+"instance relationships."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf:10
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf:10 of
+msgid "アンダーワールド（カーブオンサーフェース）の親シェイプも判定する。"
+msgstr ""
+"Also determines the parent shape of the underworld (curve-on-surface)."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanced:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.numInstances:3 of
+msgid "直接インスタンス化されたポイント以外も含めるかどうか。"
+msgstr "Whether to include points that are not directly instantiated."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf:3 of
+msgid "直接の親に限らない上位ノードかどうかチェックする場合は `isAncestorOf` が利用できる。"
+msgstr ""
+"`isAncestorOf` can be used to check whether a node is a higher-level node "
+"that is not limited to a direct parent."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.leaves:3 of
+msgid "アンダーワールドノード（カーブオンサーフェース等）に 下ることはされない。"
+msgstr ""
+"Descending to underworld nodes (curve-on-surface, etc.) is not allowed."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices:3 of
+msgid "(int, `list`)"
+msgstr "(int, `list`)"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices:6 of
+msgid "ノードリストをソートするキー関数として利用すると、 DAG階層の幅優先ソートとなる。"
+msgstr ""
+"When used as a key function to sort the node list, it becomes a breadth-"
+"first sort of the DAG hierarchy."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices:9 of
+msgid "兄弟順保証が不要なら `pathLength` を、 深さ優先なら `siblingIndices` を利用する良い。"
+msgstr ""
+"If you do not need sibling order guarantee, use `pathLength`, and if depth "
+"is priority, use `siblingIndices`."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.numParents:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.parents:3 of
+msgid "インスタンスポイント以外も含まれる親のパス全てを得る。"
+msgstr "Get all parent paths including non-instance points."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.numShapes:3
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape:15
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.shapes:3 of
+msgid "インターミディエイトオブジェクトも含めるかどうか。"
+msgstr "Whether to also include intermediate objects."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.parent:3 of
+msgid "アンダーワールドノード（カーブオンサーフェース等）から 親シェイプを得ることもできる。"
+msgstr ""
+"Parent shapes can also be obtained from underworld nodes (such as curve-on-"
+"surface)."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.parent:6 of
+msgid ""
+"遡るノード数。 API の :mayaapi2:`MDagPath` の pop とは異なり、 カーブオンサーフェースと親シェイプとの間に存在する "
+"シーン上では見えない『ワールド』ノードはカウントしない。"
+msgstr ""
+"Number of nodes to go back to. Unlike the :mayaapi2:`MDagPath` pop of the "
+"API, the ``world'' nodes that exist between the curve-on-surface and the "
+"parent shape and are not visible on the scene are not counted."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.parentWorld:3 of
+msgid "本メソッドによって、カーブオンサーフェースから 親のサーフェースシェイプを得ることができる。"
+msgstr ""
+"This method allows you to obtain the parent surface shape from a curve-on-"
+"surface."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.parentWorld:6
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape:17 of
+msgid "`.Shape` or None"
+msgstr "`.Shape` or None"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.partialPath:3 of
+msgid "`~.CyObject.name` と同じ。"
+msgstr "Same as `~.CyObject.name`."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength:3 of
+msgid ""
+"カーブオンサーフェースと親シェイプとの間に存在する シーン上では見えない『ワールド』ノードはカウントされないため、 API の "
+":mayaapi2:`MDagPath` の length() とは異なる。"
+msgstr ""
+"This differs from the API's :mayaapi2:`MDagPath` length() because the "
+"``world'' nodes that exist between the curve-on-surface and the parent shape"
+" and are not visible on the scene are not counted."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength:10 of
+msgid "ノードリストをソートするキー関数として利用すると、 DAG階層の兄弟順保証無しの幅優先ソートとなる。"
+msgstr ""
+"If you use a node list as a key function to sort, it will be a breadth-first"
+" sort that does not guarantee the sibling order of the DAG hierarchy."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength:13 of
+msgid ""
+"兄弟順保証するなら `lengthAndSiblingIndices` を 深さ優先なら `siblingIndices` を利用すると良い。"
+msgstr ""
+"If you want to guarantee sibling order, use `lengthAndSiblingIndices`, and "
+"if you want depth priority, use `siblingIndices`."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.root:5 of
+msgid ""
+"API の :mayaapi2:`MDagPath` の dagRoot() とは異なり、 見えない『ワールド』ノードではなく、 "
+"シーン上のルートノードが得られる。"
+msgstr ""
+"Unlike the :mayaapi2:`MDagPath` dagRoot() API, you get the root node on the "
+"scene rather than the invisible ``world'' node."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.root:9
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.transform:6 of
+msgid "`.Transform` or None"
+msgstr "`.Transform` or None"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape:3 of
+msgid "自身がシェイプの場合は自身が、 :mayanode:`transform` の場合はそのシェイプが得られる。"
+msgstr ""
+"If self is a shape, you will get self, and if :mayanode:`transform`, you "
+"will get that shape."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape:6 of
+msgid ""
+"得たいシェイプのインデックス。 自身がシェイプの場合は無視される。  intermediates オプションによって、 "
+"同じインデックスでも得られるものが変わることがある。 無効なインデックスを指定するとエラーではなく None となる。  "
+"Python的な負のインデックスも指定可能。"
+msgstr ""
+"Index of the shape you want to get. Ignored if itself is a shape.  The "
+"intermediates option can change what you get for the same index. If an "
+"invalid index is specified, None will be returned instead of an error.  "
+"Python-like negative indexes can also be specified."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape:7 of
+msgid "得たいシェイプのインデックス。 自身がシェイプの場合は無視される。"
+msgstr "Index of the shape you want to get. Ignored if itself is a shape."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape:10 of
+msgid ""
+"intermediates オプションによって、 同じインデックスでも得られるものが変わることがある。 無効なインデックスを指定するとエラーではなく "
+"None となる。"
+msgstr ""
+"The intermediates option can change what you get for the same index. If an "
+"invalid index is specified, None will be returned instead of an error."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape:14 of
+msgid "Python的な負のインデックスも指定可能。"
+msgstr "Python-like negative indexes can also be specified."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices:6 of
+msgid "ノードリストをソートするキー関数として利用すると、 DAG階層の深さ優先ソートとなる。"
+msgstr ""
+"When used as a key function to sort the node list, it becomes a depth-first "
+"sort of the DAG hierarchy."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices:9 of
+msgid "幅優先なら `lengthAndSiblingIndices` を 兄弟順保証しない幅優先なら `pathLength` を使うと良い。"
+msgstr ""
+"For width-first, use `lengthAndSiblingIndices`; for breadth-first, which "
+"does not guarantee sibling order, use `pathLength`."
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.transform:3 of
+msgid "自身が :mayanode:`transform` の場合は自身が、"
+msgstr "If self is :mayanode:`transform`, self is"
+
+#: cymel.core.cyobjects.dagnode_c.DagNodeMixin.transform:4 of
+msgid ":mayanode:`shape` の場合はその親が得られる。"
+msgstr ":mayanode:`shape` gets its parent."

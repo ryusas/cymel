@@ -1,2 +1,6 @@
 /docs/ja/.doctrees
 /docsrc/srcs/generated
+.venv/
+/docsrc/my_translator.py
+*.mo
+docsrc/locale/*.pot

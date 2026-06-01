@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel.core.cyobjects.cyobject &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
+    <script src="../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class cymel.core.cyobjects.cyobject.CyObject" href="classes/cymel.core.cyobjects.cyobject.CyObject.html" />
+    <link rel="prev" title="cymel.ui" href="cymel.ui.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="classes/cymel.core.cyobjects.cyobject.CyObject.html" title="class cymel.core.cyobjects.cyobject.CyObject"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cymel.ui.html" title="cymel.ui"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.core.cyobjects.cyobject</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-cymel.core.cyobjects.cyobject">
+<span id="cymel-core-cyobjects-cyobject"></span><h1>cymel.core.cyobjects.cyobject<a class="headerlink" href="#module-cymel.core.cyobjects.cyobject" title="Link to this heading">¶</a></h1>
+<p>Abstract base class for Maya wrapper objects.</p>
+<p class="rubric">Classes:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a></p></td>
+<td><p>Abstract base class for Maya wrapper objects.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="classes/cymel.core.cyobjects.cyobject.ModuleForSel.html#cymel.core.cyobjects.cyobject.ModuleForSel" title="cymel.core.cyobjects.cyobject.ModuleForSel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModuleForSel</span></code></a></p></td>
+<td><p>Module class that adds properties to reflect the current selection.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Exceptions:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CymelInvalidHandle" title="cymel.core.cyobjects.cyobject.CymelInvalidHandle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CymelInvalidHandle</span></code></a></p></td>
+<td><p>The API handle held by <a class="reference internal" href="classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> is invalid.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Functions:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.cyObjects" title="cymel.core.cyobjects.cyobject.cyObjects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cyObjects</span></code></a>(val)</p></td>
+<td><p>Get a list of <a class="reference internal" href="classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> from name list etc.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Aliases:</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.O">
+<span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.cyobject.</span></span><span class="sig-name descname"><span class="pre">O</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;class</span> <span class="pre">'cymel.core.cyobjects.cyobject.CyObject'&gt;</span></span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.O" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.Os">
+<span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.cyobject.</span></span><span class="sig-name descname"><span class="pre">Os</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">cyObjects&gt;</span></span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.Os" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.cyobject.cyObjects" title="cymel.core.cyobjects.cyobject.cyObjects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cyObjects</span></code></a>.</p>
+</dd></dl>
+
+<p class="rubric">Constants:</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.BIT_DAGNODE">
+<span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.cyobject.</span></span><span class="sig-name descname"><span class="pre">BIT_DAGNODE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.BIT_DAGNODE" title="Link to this definition">¶</a></dt>
+<dd><p>Indicates that the node class supports the dagNode feature.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.BIT_SHAPE">
+<span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.cyobject.</span></span><span class="sig-name descname"><span class="pre">BIT_SHAPE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.BIT_SHAPE" title="Link to this definition">¶</a></dt>
+<dd><p>Indicates that the node class supports the shape feature.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.BIT_TRANSFORM">
+<span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.cyobject.</span></span><span class="sig-name descname"><span class="pre">BIT_TRANSFORM</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.BIT_TRANSFORM" title="Link to this definition">¶</a></dt>
+<dd><p>Indicates that the node class supports the transform feature.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.UUID_ATTR_NAME">
+<span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.cyobject.</span></span><span class="sig-name descname"><span class="pre">UUID_ATTR_NAME</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'uuid'</span></span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.UUID_ATTR_NAME" title="Link to this definition">¶</a></dt>
+<dd><p>An attribute that holds the UUID generated by the Python function rather than the Maya standard.</p>
+</dd></dl>
+
+<p class="rubric">Exceptions Details:</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CymelInvalidHandle">
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.cyobject.</span></span><span class="sig-name descname"><span class="pre">CymelInvalidHandle</span></span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CymelInvalidHandle" title="Link to this definition">¶</a></dt>
+<dd><p>The API handle held by <a class="reference internal" href="classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> is invalid.</p>
+</dd></dl>
+
+<p class="rubric">Function Details:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.cyObjects">
+<span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.cyobject.</span></span><span class="sig-name descname"><span class="pre">cyObjects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.cyObjects" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of <a class="reference internal" href="classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> from name list etc.</p>
+<p>It can accept either a string or a list of strings, and a value like None is interpreted as an empty list, so the return value of a Maya command can often be accepted as is.</p>
+<p>No matter what the arguments are, the return type will be <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>iterable</em>) – Node name, plug name, equivalent, or a list of them.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel.core.cyobjects.cyobject</a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.O"><code class="docutils literal notranslate"><span class="pre">O</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.Os"><code class="docutils literal notranslate"><span class="pre">Os</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.BIT_DAGNODE"><code class="docutils literal notranslate"><span class="pre">BIT_DAGNODE</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.BIT_SHAPE"><code class="docutils literal notranslate"><span class="pre">BIT_SHAPE</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.BIT_TRANSFORM"><code class="docutils literal notranslate"><span class="pre">BIT_TRANSFORM</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.UUID_ATTR_NAME"><code class="docutils literal notranslate"><span class="pre">UUID_ATTR_NAME</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CymelInvalidHandle"><code class="docutils literal notranslate"><span class="pre">CymelInvalidHandle</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.cyObjects"><code class="docutils literal notranslate"><span class="pre">cyObjects()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cymel.ui.html"
+                          title="previous chapter">cymel.ui</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="classes/cymel.core.cyobjects.cyobject.CyObject.html"
+                          title="next chapter">class cymel.core.cyobjects.cyobject.CyObject</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.core.cyobjects.cyobject.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="classes/cymel.core.cyobjects.cyobject.CyObject.html" title="class cymel.core.cyobjects.cyobject.CyObject"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cymel.ui.html" title="cymel.ui"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.core.cyobjects.cyobject</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

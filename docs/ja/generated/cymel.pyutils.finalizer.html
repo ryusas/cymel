@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 
-<html lang="ja">
+<html lang="ja" data-content_root="../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.pyutils.finalizer &#8212; cymel 0.29.2025050600 ドキュメント</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/translations.js"></script>
+    <title>cymel.pyutils.finalizer &#8212; cymel 0.29.2025111300 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
+    <script src="../_static/documentation_options.js?v=87034a31"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/translations.js?v=4755f45a"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
     <link rel="next" title="cymel.pyutils.immutables" href="cymel.pyutils.immutables.html" />
     <link rel="prev" title="cymel.utils.utils" href="cymel.utils.utils.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>ナビゲーション</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="cymel.utils.utils.html" title="cymel.utils.utils"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025050600 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025111300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.pyutils.finalizer</a></li> 
       </ul>
@@ -46,14 +46,14 @@
           <div class="body" role="main">
             
   <section id="module-cymel.pyutils.finalizer">
-<span id="cymel-pyutils-finalizer"></span><h1>cymel.pyutils.finalizer<a class="headerlink" href="#module-cymel.pyutils.finalizer" title="この見出しへのパーマリンク">¶</a></h1>
+<span id="cymel-pyutils-finalizer"></span><h1>cymel.pyutils.finalizer<a class="headerlink" href="#module-cymel.pyutils.finalizer" title="Link to this heading">¶</a></h1>
 <p>任意のオブジェクトが破棄されたときに呼び出されるファイナライザ機能。</p>
 <p>クラスの特殊メソッド __del__ には以下の問題がある。</p>
 <ul class="simple">
 <li><p>__del__ 中の例外は補足できない。</p></li>
 <li><p>インタプリタが終了する時に呼ばれる事は保証されない。</p></li>
 <li><p>循環参照がある場合で且つ __del__ が在ると解放されなくなる。
-（循環参照があると <a class="reference external" href="https://docs.python.org/3/library/gc.html#module-gc" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gc</span></code></a> は __del__ を呼び出す適切なタイミングを保証出来なくなる為）</p></li>
+（循環参照があると <a class="reference external" href="https://docs.python.org/3/library/gc.html#module-gc" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gc</span></code></a> は __del__ を呼び出す適切なタイミングを保証出来なくなる為）</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
@@ -77,18 +77,18 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
 <p class="rubric">Functions Details:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="cymel.pyutils.finalizer.deregisterFinalizer">
-<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.finalizer.</span></span><span class="sig-name descname"><span class="pre">deregisterFinalizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.finalizer.deregisterFinalizer" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.finalizer.</span></span><span class="sig-name descname"><span class="pre">deregisterFinalizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.finalizer.deregisterFinalizer" title="Link to this definition">¶</a></dt>
 <dd><p>登録済みファイナライザを削除する。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- 登録時に返されたID。</p>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- 登録時に返されたID。</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cymel.pyutils.finalizer.registerFinalizer">
-<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.finalizer.</span></span><span class="sig-name descname"><span class="pre">registerFinalizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.finalizer.registerFinalizer" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.finalizer.</span></span><span class="sig-name descname"><span class="pre">registerFinalizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.finalizer.registerFinalizer" title="Link to this definition">¶</a></dt>
 <dd><p>オブジェクトが破棄された時に呼び出されるプロシージャを登録する。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
@@ -98,27 +98,27 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cymel.pyutils.finalizer.trackDestruction">
-<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.finalizer.</span></span><span class="sig-name descname"><span class="pre">trackDestruction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxChars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.finalizer.trackDestruction" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cymel.pyutils.finalizer.</span></span><span class="sig-name descname"><span class="pre">trackDestruction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxChars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.pyutils.finalizer.trackDestruction" title="Link to this definition">¶</a></dt>
 <dd><p>ファイナライザを使って、オブジェクトの削除を簡易にログする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>obj</strong> -- 対象のオブジェクト。</p></li>
-<li><p><strong>logger</strong> -- ログ用に <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> を受け取れる任意の実行可能オブジェクト。
+<li><p><strong>logger</strong> -- ログ用に <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> を受け取れる任意の実行可能オブジェクト。
 省略時は print される。</p></li>
-<li><p><strong>maxChars</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) -- ログ出力される repr の文字数がこの数を超える場合に
+<li><p><strong>maxChars</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- ログ出力される repr の文字数がこの数を超える場合に
 メッセージを調整する。ゼロの場合はその判定をしない。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -130,7 +130,7 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../index.html">目次</a></h3>
@@ -161,7 +161,7 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
             rel="nofollow">ソースコードを表示</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">クイック検索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
@@ -169,13 +169,13 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
       <input type="submit" value="検索" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>ナビゲーション</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -190,14 +190,14 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
         <li class="right" >
           <a href="cymel.utils.utils.html" title="cymel.utils.utils"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025050600 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025111300 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.pyutils.finalizer</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020-2025, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
+    &#169; 著作権 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     </div>
   </body>
 </html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.cyobjects.objectref.ObjectRef &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="cymel.core.cyobjects.plug" href="../cymel.core.cyobjects.plug.html" />
+    <link rel="prev" title="cymel.core.cyobjects.objectref" href="../cymel.core.cyobjects.objectref.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.plug.html" title="cymel.core.cyobjects.plug"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.objectref.html" title="cymel.core.cyobjects.objectref"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.objectref.html" accesskey="U">cymel.core.cyobjects.objectref</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.objectref.ObjectRef</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-cyobjects-objectref-objectref">
+<h1>class cymel.core.cyobjects.objectref.ObjectRef<a class="headerlink" href="#class-cymel-core-cyobjects-objectref-objectref" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-546fdc802785d70abd2da2190176b85c436c02a1.png" alt="Inheritance diagram of ObjectRef" usemap="#inheritance9e1b9516ed" class="inheritance graphviz" /></div>
+<map id="inheritance9e1b9516ed" name="inheritance9e1b9516ed">
+<area shape="rect" id="node1" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" target="_top" title="Mayaラッパーオブジェクトの抽象基底クラス。" alt="" coords="5,5,77,29"/>
+<area shape="rect" id="node2" href="#cymel.core.cyobjects.objectref.ObjectRef" target="_top" title="`.CyObject` の参照が切れていても再取得が可能な弱参照ラッパー。" alt="" coords="5,44,77,68"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.objectref.ObjectRef">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.objectref.</span></span><span class="sig-name descname"><span class="pre">ObjectRef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.objectref.ObjectRef" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">CyObject</span></code></a></p>
+<p>A weak reference wrapper that allows you to re-obtain the reference to <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> even if it is lost.</p>
+<p>Since this itself is also <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a>, it can behave like the original as long as it is supported by the base without obtaining a reference.</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.internalData" title="cymel.core.cyobjects.objectref.ObjectRef.internalData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">internalData</span></code></a>()</p></td>
+<td><p>Return internal data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.newObject" title="cymel.core.cyobjects.objectref.ObjectRef.newObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">newObject</span></code></a>(data)</p></td>
+<td><p>Create an instance with internal data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.node" title="cymel.core.cyobjects.objectref.ObjectRef.node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code></a>​​()</p></td>
+<td><p>Get a node.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.object" title="cymel.core.cyobjects.objectref.ObjectRef.object"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a>()</p></td>
+<td><p>Gets the object if the weak reference is not broken.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.refclass" title="cymel.core.cyobjects.objectref.ObjectRef.refclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">refclass</span></code></a>()</p></td>
+<td><p>Get the class of the wrapped object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.refdata" title="cymel.core.cyobjects.objectref.ObjectRef.refdata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">refdata</span></code></a>()</p></td>
+<td><p>Get the internal data of the wrapped object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.weakref" title="cymel.core.cyobjects.objectref.ObjectRef.weakref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weakref</span></code></a>()</p></td>
+<td><p>Get a weak reference.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes:</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.objectref.ObjectRef.CLASS_TYPE">
+<span class="sig-name descname"><span class="pre">CLASS_TYPE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">-1</span></span><a class="headerlink" href="#cymel.core.cyobjects.objectref.ObjectRef.CLASS_TYPE" title="Link to this definition">¶</a></dt>
+<dd><p>Indicates that the wrapper class type is <a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef" title="cymel.core.cyobjects.objectref.ObjectRef"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObjectRef</span></code></a>.</p>
+</dd></dl>
+
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.objectref.ObjectRef.internalData">
+<span class="sig-name descname"><span class="pre">internalData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.objectref.ObjectRef.internalData" title="Link to this definition">¶</a></dt>
+<dd><p>Return internal data.</p>
+<p>Override to extend internal data in a derived class. In that case, also override the <a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.newObject" title="cymel.core.cyobjects.objectref.ObjectRef.newObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">newObject</span></code></a> class method to support extension.</p>
+<p>The internal data is assumed to be a black box, and the extended data must also include the base data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.objectref.ObjectRef.newObject">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">newObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.objectref.ObjectRef.newObject" title="Link to this definition">¶</a></dt>
+<dd><p>Create an instance with internal data.</p>
+<p>Internal data is assumed to be a black box, and even when overriding this method, the base method must be called to complete the process.</p>
+<p>If you want to extend internal data, also override <a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.internalData" title="cymel.core.cyobjects.objectref.ObjectRef.internalData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">internalData</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a>) – Class of instance to generate.</p></li>
+<li><p><strong>data</strong> – Internal data to be set in the instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>指定クラス</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.objectref.ObjectRef.node">
+<span class="sig-name descname"><span class="pre">node</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.objectref.ObjectRef.node" title="Link to this definition">¶</a></dt>
+<dd><p>Get a node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a> derived class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.objectref.ObjectRef.object">
+<span class="sig-name descname"><span class="pre">object</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.objectref.ObjectRef.object" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the object if the weak reference is not broken.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.objectref.ObjectRef.refclass">
+<span class="sig-name descname"><span class="pre">refclass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.objectref.ObjectRef.refclass" title="Link to this definition">¶</a></dt>
+<dd><p>Get the class of the wrapped object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.objectref.ObjectRef.refdata">
+<span class="sig-name descname"><span class="pre">refdata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.objectref.ObjectRef.refdata" title="Link to this definition">¶</a></dt>
+<dd><p>Get the internal data of the wrapped object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.objectref.ObjectRef.weakref">
+<span class="sig-name descname"><span class="pre">weakref</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.objectref.ObjectRef.weakref" title="Link to this definition">¶</a></dt>
+<dd><p>Get a weak reference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/weakref.html#weakref.ref" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weakref.ref</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.cyobjects.objectref.ObjectRef</a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef"><code class="docutils literal notranslate"><span class="pre">ObjectRef</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.CLASS_TYPE"><code class="docutils literal notranslate"><span class="pre">ObjectRef.CLASS_TYPE</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.internalData"><code class="docutils literal notranslate"><span class="pre">ObjectRef.internalData()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.newObject"><code class="docutils literal notranslate"><span class="pre">ObjectRef.newObject()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.node"><code class="docutils literal notranslate"><span class="pre">ObjectRef.node()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.object"><code class="docutils literal notranslate"><span class="pre">ObjectRef.object()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.refclass"><code class="docutils literal notranslate"><span class="pre">ObjectRef.refclass()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.refdata"><code class="docutils literal notranslate"><span class="pre">ObjectRef.refdata()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.objectref.ObjectRef.weakref"><code class="docutils literal notranslate"><span class="pre">ObjectRef.weakref()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../cymel.core.cyobjects.objectref.html"
+                          title="previous chapter">cymel.core.cyobjects.objectref</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../cymel.core.cyobjects.plug.html"
+                          title="next chapter">cymel.core.cyobjects.plug</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.plug.html" title="cymel.core.cyobjects.plug"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.objectref.html" title="cymel.core.cyobjects.objectref"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.objectref.html" >cymel.core.cyobjects.objectref</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.objectref.ObjectRef</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

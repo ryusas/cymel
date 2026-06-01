@@ -1,0 +1,44 @@
+class cymel.pyutils.immutables.ImmutableDict
+============================================
+
+.. currentmodule:: cymel.pyutils.immutables
+
+
+.. inheritance-diagram:: ImmutableDict
+    :parts: 1
+
+
+
+.. autoclass:: ImmutableDict
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        clear
+        pop
+        popitem
+        setdefault
+        update
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: clear
+    .. automethod:: pop
+    .. automethod:: popitem
+    .. automethod:: setdefault
+    .. automethod:: update
+
+

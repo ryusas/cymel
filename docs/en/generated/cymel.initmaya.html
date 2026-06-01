@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel.initmaya &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
+    <script src="../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cymel.main" href="cymel.main.html" />
+    <link rel="prev" title="cymel.constants" href="cymel.constants.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.main.html" title="cymel.main"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cymel.constants.html" title="cymel.constants"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.initmaya</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-cymel.initmaya">
+<span id="cymel-initmaya"></span><h1>cymel.initmaya<a class="headerlink" href="#module-cymel.initmaya" title="Link to this heading">¶</a></h1>
+<p>Initializing Maya from standalone python (mayapy).</p>
+<p><a class="reference internal" href="#cymel.initmaya.initialize" title="cymel.initmaya.initialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialize</span></code></a> is called with default settings when a module that depends on Maya in cymel is imported, so there is little need to use this module explicitly, but it can be used if you want to customize the initialization process.</p>
+<p class="rubric">Functions:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.initmaya.addCymelPluginsPathToAllowedlist" title="cymel.initmaya.addCymelPluginsPathToAllowedlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addCymelPluginsPathToAllowedlist</span></code></a>()</p></td>
+<td><p>Add the cymel plugin path to the trusted list for Maya 2022 or later UI mode.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.initmaya.callUserSetupMel" title="cymel.initmaya.callUserSetupMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callUserSetupMel</span></code></a>()</p></td>
+<td><p>Call <code class="docutils literal notranslate"><span class="pre">userSetup.mel</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.initmaya.getUserPrefsDir" title="cymel.initmaya.getUserPrefsDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUserPrefsDir</span></code></a>()</p></td>
+<td><p>Get the path of the user preferences directory.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.initmaya.initApiImmutables" title="cymel.initmaya.initApiImmutables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initApiImmutables</span></code></a>()</p></td>
+<td><p>Define a <a class="reference internal" href="cymel.pyutils.immutables.html#cymel.pyutils.immutables.immutable" title="cymel.pyutils.immutables.immutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code></a> wrapper for the Maya API math class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.initmaya.initAutoPlugins" title="cymel.initmaya.initAutoPlugins"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initAutoPlugins</span></code></a>()</p></td>
+<td><p>Load plugins that are set to autoload.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.initmaya.initCymelPluginsPath" title="cymel.initmaya.initCymelPluginsPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initCymelPluginsPath</span></code></a>()</p></td>
+<td><p>Set the path for the Maya plugin included with cymel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a>()</p></td>
+<td><p>Returns False if Maya has been initialized; initializes and returns True if Maya has not been initialized.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.initmaya.initMels" title="cymel.initmaya.initMels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMels</span></code></a>([userPrefs, startup, plugins, ...])</p></td>
+<td><p>Call (source) various initialization MELs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.initmaya.initialize" title="cymel.initmaya.initialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialize</span></code></a>([mels, plugins, userSetup])</p></td>
+<td><p>Perform all necessary initialization.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.initmaya.isMayaInitialized" title="cymel.initmaya.isMayaInitialized"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMayaInitialized</span></code></a>()</p></td>
+<td><p>Whether Maya has been initialized.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Constants:</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.initmaya.IS_UIMODE">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">IS_UIMODE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></span><a class="headerlink" href="#cymel.initmaya.IS_UIMODE" title="Link to this definition">¶</a></dt>
+<dd><p>Whether Maya is in UI mode.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.initmaya.MAYA_PRODUCT_VERSION">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">MAYA_PRODUCT_VERSION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'2027'</span></span><a class="headerlink" href="#cymel.initmaya.MAYA_PRODUCT_VERSION" title="Link to this definition">¶</a></dt>
+<dd><p>Maya version names that can exist separately, such as ‘2020’ or ‘2016.5’.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.initmaya.MAYA_VERSION">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">MAYA_VERSION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(2027,</span> <span class="pre">0,</span> <span class="pre">0)</span></span><a class="headerlink" href="#cymel.initmaya.MAYA_VERSION" title="Link to this definition">¶</a></dt>
+<dd><p>A tuple representing the Maya version. Updates can be detected from 2017 onwards. (majorVersion, minorVersion, patchVersion)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.initmaya.MAYA_VERSION_STR">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">MAYA_VERSION_STR</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'2027'</span></span><a class="headerlink" href="#cymel.initmaya.MAYA_VERSION_STR" title="Link to this definition">¶</a></dt>
+<dd><p>Maya version notation.</p>
+</dd></dl>
+
+<p class="rubric">Function Details:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.initmaya.addCymelPluginsPathToAllowedlist">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">addCymelPluginsPathToAllowedlist</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.addCymelPluginsPathToAllowedlist" title="Link to this definition">¶</a></dt>
+<dd><p>Add the cymel plugin path to the trusted list for Maya 2022 or later UI mode.</p>
+<p>You can do this without user confirmation by calling it from userSetup.py.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.initmaya.callUserSetupMel">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">callUserSetupMel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.callUserSetupMel" title="Link to this definition">¶</a></dt>
+<dd><p>Call <code class="docutils literal notranslate"><span class="pre">userSetup.mel</span></code>.</p>
+<p>Depending on the Maya specifications, the behavior differs depending on the version.</p>
+<p>Until 2020, only the highest priority <code class="docutils literal notranslate"><span class="pre">userSetup.mel</span></code> on the MEL path will be called, but in later versions all will be called in path order.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.initmaya.getUserPrefsDir">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">getUserPrefsDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.getUserPrefsDir" title="Link to this definition">¶</a></dt>
+<dd><p>Get the path of the user preferences directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.initmaya.initApiImmutables">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">initApiImmutables</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.initApiImmutables" title="Link to this definition">¶</a></dt>
+<dd><p>Define a <a class="reference internal" href="cymel.pyutils.immutables.html#cymel.pyutils.immutables.immutable" title="cymel.pyutils.immutables.immutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code></a> wrapper for the Maya API math class.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.initmaya.initAutoPlugins">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">initAutoPlugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.initAutoPlugins" title="Link to this definition">¶</a></dt>
+<dd><p>Load plugins that are set to autoload.</p>
+<p>Equivalent to calling:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">initMels</span><span class="p">(</span><span class="n">userPrefs</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">startup</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">plugins</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">namedCommand</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.initmaya.initCymelPluginsPath">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">initCymelPluginsPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.initCymelPluginsPath" title="Link to this definition">¶</a></dt>
+<dd><p>Set the path for the Maya plugin included with cymel.</p>
+<p>Even if it is called repeatedly, it will not be set twice.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.initmaya.initMaya">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">initMaya</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.initMaya" title="Link to this definition">¶</a></dt>
+<dd><p>Returns False if Maya has been initialized; initializes and returns True if Maya has not been initialized.</p>
+<p>In any case, cymel constants such as <a class="reference internal" href="#cymel.initmaya.MAYA_VERSION" title="cymel.initmaya.MAYA_VERSION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAYA_VERSION</span></code></a> are initialized.</p>
+<p>During initialization, all <code class="docutils literal notranslate"><span class="pre">userSetup.py</span></code> on the path are called, but <code class="docutils literal notranslate"><span class="pre">userSetup.mel</span></code> is not called.</p>
+<p>There is no problem even if you call it repeatedly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.initmaya.initMels">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">initMels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">userPrefs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plugins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namedCommand</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.initMels" title="Link to this definition">¶</a></dt>
+<dd><p>Call (source) various initialization MELs.</p>
+<p>If you do not perform any processing that depends on Maya settings, there is no problem even if you do not call it.</p>
+<p>Since MEL is not called repeatedly once it is called, there is no problem in calling this function repeatedly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>userPrefs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to call MEL related to user preferences. Set to True when plugins=True.</p></li>
+<li><p><strong>startup</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to call initStartup.mel. Set to True when plugins=True.</p></li>
+<li><p><strong>plugins</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to autoload plugins.  Plugins are dynamically resolved using the scene’s requires statement, and if they are needed in batch processing, they should be explicitly loaded, and the processing load is large, so this is set to False by default.</p></li>
+<li><p><strong>namedCommand</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to generate named commands. Since this is a concept for connecting mel code to hotkeys, it should normally be unnecessary if there is no UI, but since the processing load is not large, the default is set to True, following pymel.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.initmaya.initialize">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">initialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plugins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userSetup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.initialize" title="Link to this definition">¶</a></dt>
+<dd><p>Perform all necessary initialization.</p>
+<p>The following will take place:</p>
+<ul>
+<li><p><a class="reference internal" href="#cymel.initmaya.initCymelPluginsPath" title="cymel.initmaya.initCymelPluginsPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initCymelPluginsPath</span></code></a></p></li>
+<li><p><a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> (If it has already been initialized, it will be False and nothing will be done)</p>
+<p>Once initialized, further</p>
+<ul class="simple">
+<li><p>If mels=True then <a class="reference internal" href="#cymel.initmaya.initMels" title="cymel.initmaya.initMels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMels</span></code></a> (plugins=plugins)</p></li>
+<li><p>If mels=False and plugins=True then <a class="reference internal" href="#cymel.initmaya.initAutoPlugins" title="cymel.initmaya.initAutoPlugins"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initAutoPlugins</span></code></a></p></li>
+<li><p>If userSetup=True then <a class="reference internal" href="#cymel.initmaya.callUserSetupMel" title="cymel.initmaya.callUserSetupMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callUserSetupMel</span></code></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#cymel.initmaya.initApiImmutables" title="cymel.initmaya.initApiImmutables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initApiImmutables</span></code></a></p></li>
+</ul>
+<p>If it has been initialized, nothing will be done, so there is no problem in calling it repeatedly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mels</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to call <a class="reference internal" href="#cymel.initmaya.initMels" title="cymel.initmaya.initMels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMels</span></code></a> when <a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> is True. If you do not perform processing that depends on Maya settings, there is no problem even if you do not call it, so it is set to False by default.</p>
+</dd>
+</dl>
+<dl>
+<dt>:param <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> plugins</dt><dd><p>Whether to autoload plugins.</p>
+<p>Plugins are dynamically resolved using the scene’s requires statement, and if they are needed in batch processing, they should be explicitly loaded, and the processing load is large, so this is set to False by default.</p>
+</dd>
+<dt>:param <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> userSetup</dt><dd><p>Whether to call <a class="reference internal" href="#cymel.initmaya.callUserSetupMel" title="cymel.initmaya.callUserSetupMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callUserSetupMel</span></code></a> when <a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> is True.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.initmaya.isMayaInitialized">
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">isMayaInitialized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.isMayaInitialized" title="Link to this definition">¶</a></dt>
+<dd><p>Whether Maya has been initialized.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel.initmaya</a><ul>
+<li><a class="reference internal" href="#cymel.initmaya.IS_UIMODE"><code class="docutils literal notranslate"><span class="pre">IS_UIMODE</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.MAYA_PRODUCT_VERSION"><code class="docutils literal notranslate"><span class="pre">MAYA_PRODUCT_VERSION</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.MAYA_VERSION"><code class="docutils literal notranslate"><span class="pre">MAYA_VERSION</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.MAYA_VERSION_STR"><code class="docutils literal notranslate"><span class="pre">MAYA_VERSION_STR</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.addCymelPluginsPathToAllowedlist"><code class="docutils literal notranslate"><span class="pre">addCymelPluginsPathToAllowedlist()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.callUserSetupMel"><code class="docutils literal notranslate"><span class="pre">callUserSetupMel()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.getUserPrefsDir"><code class="docutils literal notranslate"><span class="pre">getUserPrefsDir()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.initApiImmutables"><code class="docutils literal notranslate"><span class="pre">initApiImmutables()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.initAutoPlugins"><code class="docutils literal notranslate"><span class="pre">initAutoPlugins()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.initCymelPluginsPath"><code class="docutils literal notranslate"><span class="pre">initCymelPluginsPath()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.initMaya"><code class="docutils literal notranslate"><span class="pre">initMaya()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.initMels"><code class="docutils literal notranslate"><span class="pre">initMels()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.initialize"><code class="docutils literal notranslate"><span class="pre">initialize()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.initmaya.isMayaInitialized"><code class="docutils literal notranslate"><span class="pre">isMayaInitialized()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cymel.constants.html"
+                          title="previous chapter">cymel.constants</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cymel.main.html"
+                          title="next chapter">cymel.main</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.initmaya.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.main.html" title="cymel.main"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cymel.constants.html" title="cymel.constants"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.initmaya</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.datatypes.quaternion.Quaternion &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="cymel.core.datatypes.transformation" href="../cymel.core.datatypes.transformation.html" />
+    <link rel="prev" title="class cymel.core.datatypes.quaternion.ImmutableQuaternion" href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.transformation.html" title="cymel.core.datatypes.transformation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html" title="class cymel.core.datatypes.quaternion.ImmutableQuaternion"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" accesskey="U">cymel.core.datatypes.quaternion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.quaternion.Quaternion</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-datatypes-quaternion-quaternion">
+<h1>class cymel.core.datatypes.quaternion.Quaternion<a class="headerlink" href="#class-cymel-core-datatypes-quaternion-quaternion" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-235f458fee2bf72d29aaa30c1ff68c9f9a89b2b6.png" alt="Inheritance diagram of Quaternion" usemap="#inheritance98e4d77901" class="inheritance graphviz" /></div>
+<map id="inheritance98e4d77901" name="inheritance98e4d77901">
+<area shape="rect" id="node1" href="#cymel.core.datatypes.quaternion.Quaternion" target="_top" title="クォータニオンクラス。" alt="" coords="5,5,80,29"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.datatypes.quaternion.</span></span><span class="sig-name descname"><span class="pre">Quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>quaternion class.</p>
+<p>The following values ​​can be specified in the constructor.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p></li>
+<li><p>x, y, z, w</p></li>
+<li><p>4-value sequence</p></li>
+<li><p>Rotation axis (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>), angle</p></li>
+<li><p>Angle, axis of rotation (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p></li>
+<li><p><a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a></p></li>
+<li><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></p></li>
+<li><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p></li>
+</ul>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAA" title="cymel.core.datatypes.quaternion.Quaternion.asAA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAA</span></code></a>()</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAngle</span></code></a>([naxis, bound])</p></td>
+<td><p>Get the rotation angle of the quaternion.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a>()</p></td>
+<td><p>Obtain as axis vector and rotation angle.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asBend" title="cymel.core.datatypes.quaternion.Quaternion.asBend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asBend</span></code></a>([reverse, aim])</p></td>
+<td><p>Obtain the bending component when the bone is rotated.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asD" title="cymel.core.datatypes.quaternion.Quaternion.asD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asD</span></code></a>([order, correct])</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a>([order, correct])</p></td>
+<td><p>Obtain the Euler angle rotation as a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> in degrees.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asE" title="cymel.core.datatypes.quaternion.Quaternion.asE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asE</span></code></a>([order, correct])</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a>([order, correct])</p></td>
+<td><p>Obtained as Euler angle rotation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asM" title="cymel.core.datatypes.quaternion.Quaternion.asM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asM</span></code></a>()</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asMatrix" title="cymel.core.datatypes.quaternion.Quaternion.asMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asMatrix</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asMatrix" title="cymel.core.datatypes.quaternion.Quaternion.asMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asMatrix</span></code></a>()</p></td>
+<td><p>Obtained as a rotation matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV" title="cymel.core.datatypes.quaternion.Quaternion.asRHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRHV</span></code></a>([reverse, aim, upv])</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRHV2</span></code></a>([axisOri, reverse])</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV2</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRoll" title="cymel.core.datatypes.quaternion.Quaternion.asRoll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRoll</span></code></a>([aim])</p></td>
+<td><p>Obtain the twist component when the bone is rotated.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV</span></code></a>([reverse, aim, upv])</p></td>
+<td><p>In the case of bone rotation, it is separated into three angles: twisting, horizontal bending, and vertical bending.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV2</span></code></a>([axisOri, reverse])</p></td>
+<td><p>In the case of bone rotation, it is separated into three angles: twisting, horizontal bending, and vertical bending.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asTransformation" title="cymel.core.datatypes.quaternion.Quaternion.asTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTransformation</span></code></a>()</p></td>
+<td><p>Get it as a transformation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asVecW" title="cymel.core.datatypes.quaternion.Quaternion.asVecW"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asVecW</span></code></a>()</p></td>
+<td><p>Get the 3D vector and w value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asX" title="cymel.core.datatypes.quaternion.Quaternion.asX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asX</span></code></a>()</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asTransformation" title="cymel.core.datatypes.quaternion.Quaternion.asTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTransformation</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.conjugate" title="cymel.core.datatypes.quaternion.Quaternion.conjugate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">conjugate</span></code></a>()</p></td>
+<td><p>Get a conjugated quaternion.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.conjugateIt" title="cymel.core.datatypes.quaternion.Quaternion.conjugateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">conjugateIt</span></code></a>()</p></td>
+<td><p>Set conjugate quaternion.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.div" title="cymel.core.datatypes.quaternion.Quaternion.div"><code class="xref py py-obj docutils literal notranslate"><span class="pre">div</span></code></a>(v[, pre])</p></td>
+<td><p>Obtain the quotient of each element of a 4-dimensional vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.dot" title="cymel.core.datatypes.quaternion.Quaternion.dot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dot</span></code></a>(q)</p></td>
+<td><p>Get the dot product of a quaternion.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.exp" title="cymel.core.datatypes.quaternion.Quaternion.exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exp</span></code></a>()</p></td>
+<td><p>Get a quaternion from a log quaternion. .</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.fromVecW" title="cymel.core.datatypes.quaternion.Quaternion.fromVecW"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromVecW</span></code></a>(vec, w)</p></td>
+<td><p>Get a quaternion from a 3D vector and w value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.idiv" title="cymel.core.datatypes.quaternion.Quaternion.idiv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idiv</span></code></a>(v[, pre])</p></td>
+<td><p>Sets the quotient for each 4-dimensional vector element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.imul" title="cymel.core.datatypes.quaternion.Quaternion.imul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imul</span></code></a>(v)</p></td>
+<td><p>Sets the product of each 4-dimensional vector element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.inverse" title="cymel.core.datatypes.quaternion.Quaternion.inverse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inverse</span></code></a>()</p></td>
+<td><p>Get the inverse quaternion.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.invertIt" title="cymel.core.datatypes.quaternion.Quaternion.invertIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invertIt</span></code></a>()</p></td>
+<td><p>Set an inverted quaternion.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isEquivalent</span></code></a>(q[, tol])</p></td>
+<td><p>Are they approximately equivalent? Reversal of sign is considered equivalent as representing the same rotational attitude.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isIdentity" title="cymel.core.datatypes.quaternion.Quaternion.isIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isIdentity</span></code></a>([tol])</p></td>
+<td><p>Is it a nearly unit quaternion?</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSignedEquivalent</span></code></a>(q[, tol])</p></td>
+<td><p>Is it almost the same value? Sign reversals are not considered equivalent.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.length" title="cymel.core.datatypes.quaternion.Quaternion.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a>()</p></td>
+<td><p>Get the absolute value of a quaternion.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.lengthSq" title="cymel.core.datatypes.quaternion.Quaternion.lengthSq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lengthSq</span></code></a>()</p></td>
+<td><p>Obtains the square of the absolute value of a quaternion.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.log" title="cymel.core.datatypes.quaternion.Quaternion.log"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log</span></code></a>()</p></td>
+<td><p>Get a log quaternion.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRHV</span></code></a>(rhv[, reverse, aim, upv])</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRHV2</span></code></a>(rhv[, axisOri, reverse])</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV2</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV</span></code></a>(rhv[, reverse, aim, upv])</p></td>
+<td><p>Compose quaternions from three angles: bone twist, horizontal bending, and vertical bending.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV2</span></code></a>(rhv[, axisOri, reverse])</p></td>
+<td><p>Compose quaternions from three angles: bone twist, horizontal bending, and vertical bending.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.mul" title="cymel.core.datatypes.quaternion.Quaternion.mul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mul</span></code></a>(v)</p></td>
+<td><p>Obtain the product of each element of a 4-dimensional vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.negateIt" title="cymel.core.datatypes.quaternion.Quaternion.negateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">negateIt</span></code></a>()</p></td>
+<td><p>Sets a negated quaternion.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normal" title="cymel.core.datatypes.quaternion.Quaternion.normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normal</span></code></a>()</p></td>
+<td><p>Get the normalized quaternion.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normalize" title="cymel.core.datatypes.quaternion.Quaternion.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a>()</p></td>
+<td><p>Set the normalization quaternion.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normalizeIt" title="cymel.core.datatypes.quaternion.Quaternion.normalizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalizeIt</span></code></a>()</p></td>
+<td><p>Set the normalization quaternion.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.safelog" title="cymel.core.datatypes.quaternion.Quaternion.safelog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">safelog</span></code></a>()</p></td>
+<td><p>Obtain a logarithmic quaternion whose absolute value does not exceed π/2.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.set" title="cymel.core.datatypes.quaternion.Quaternion.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(*args)</p></td>
+<td><p>Set other values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setAngle" title="cymel.core.datatypes.quaternion.Quaternion.setAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAngle</span></code></a>(theta[, correctAxis])</p></td>
+<td><p>Rewrite the rotation angle of the quaternion.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToIdentity" title="cymel.core.datatypes.quaternion.Quaternion.setToIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToIdentity</span></code></a>()</p></td>
+<td><p>Set the unit quaternion.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToXAxis" title="cymel.core.datatypes.quaternion.Quaternion.setToXAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToXAxis</span></code></a>(angle)</p></td>
+<td><p>Set the rotation angle around the X axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToYAxis" title="cymel.core.datatypes.quaternion.Quaternion.setToYAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToYAxis</span></code></a>(angle)</p></td>
+<td><p>Set the rotation angle around the Y axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToZAxis" title="cymel.core.datatypes.quaternion.Quaternion.setToZAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToZAxis</span></code></a>(angle)</p></td>
+<td><p>Set the rotation angle around the Z axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setValue" title="cymel.core.datatypes.quaternion.Quaternion.setValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValue</span></code></a>(*args)</p></td>
+<td><p>Set other values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setVecW" title="cymel.core.datatypes.quaternion.Quaternion.setVecW"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVecW</span></code></a>(vec, w)</p></td>
+<td><p>Set the 3D vector and w value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.slerp" title="cymel.core.datatypes.quaternion.Quaternion.slerp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slerp</span></code></a>(p, q, t[, spin])</p></td>
+<td><p>Perform spherical linear interpolation on quaternions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.slerp0" title="cymel.core.datatypes.quaternion.Quaternion.slerp0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slerp0</span></code></a>(t[, spin])</p></td>
+<td><p>Perform unit quaternion and spherical linear interpolation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squad" title="cymel.core.datatypes.quaternion.Quaternion.squad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squad</span></code></a>(p, a, b, q, t[, spin])</p></td>
+<td><p>Interpolate a quaternion with a spherical curve.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squadPt" title="cymel.core.datatypes.quaternion.Quaternion.squadPt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squadPt</span></code></a>(q0, q1, q2)</p></td>
+<td><p>Compute control points for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squad" title="cymel.core.datatypes.quaternion.Quaternion.squad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squad</span></code></a>.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes:</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.Identity">
+<span class="sig-name descname"><span class="pre">Identity</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">ImmutableQuaternion(0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">1)</span></span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.Identity" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.Tolerance">
+<span class="sig-name descname"><span class="pre">Tolerance</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1e-10</span></span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.Tolerance" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.Zero">
+<span class="sig-name descname"><span class="pre">Zero</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">ImmutableQuaternion(0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0)</span></span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.Zero" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asAA">
+<span class="sig-name descname"><span class="pre">asAA</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asAA" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asAngle">
+<span class="sig-name descname"><span class="pre">asAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">naxis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asAngle" title="Link to this definition">¶</a></dt>
+<dd><p>Get the rotation angle of the quaternion.</p>
+<p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a> can also obtain a small angle that is 0, but in that case it does not correspond to the axis obtained by <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a> (which will probably always be (0,0,1) when treated as 0 degrees).</p>
+<p>Also, if you know the axis of rotation in advance, you can obtain more accurate values ​​by specifying it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>naxis</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – If you know the rotation axis, specify it. It must be parallel to the vector given by <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a>. A reversed axis can also be specified, in which case the reversed angle will be obtained.</p></li>
+<li><p><strong>bound</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to obtain angles within ±π.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle">
+<span class="sig-name descname"><span class="pre">asAxisAngle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="Link to this definition">¶</a></dt>
+<dd><p>Obtain as axis vector and rotation angle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asBend">
+<span class="sig-name descname"><span class="pre">asBend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(1.000000,</span> <span class="pre">0.000000,</span> <span class="pre">0.000000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asBend" title="Link to this definition">¶</a></dt>
+<dd><p>Obtain the bending component when the bone is rotated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, the decomposition is performed by bending and then twisting when viewed from the top of the hierarchy, but if you specify True, the decomposition is performed by twisting and then bending.</p></li>
+<li><p><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Bone direction vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asD">
+<span class="sig-name descname"><span class="pre">asD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asD" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asDegrees">
+<span class="sig-name descname"><span class="pre">asDegrees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="Link to this definition">¶</a></dt>
+<dd><p>Obtain the Euler angle rotation as a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> in degrees.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – The rotating order you want to get.</p></li>
+<li><p><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – When the obtained Euler angle rotation value is requaternized, it is corrected so that it matches the original sign. Equivalent to <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reverseDirection</span></code></a> when inappropriate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to obtain the unit in degrees, use <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you try to set rotateAxis to a value obtained by specifying true for correct, it may not be set correctly, so it should not be specified for that purpose.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asE">
+<span class="sig-name descname"><span class="pre">asE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asE" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation">
+<span class="sig-name descname"><span class="pre">asEulerRotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="Link to this definition">¶</a></dt>
+<dd><p>Obtained as Euler angle rotation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – The rotating order you want to get.</p></li>
+<li><p><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – When the obtained Euler angle rotation value is requaternized, it is corrected so that it matches the original sign. Equivalent to <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reverseDirection</span></code></a> when inappropriate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The unit of <code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code> is in degree system, so if you want to obtain it in degree system, you should use <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you try to set rotateAxis to a value obtained by specifying true for correct, it may not be set correctly, so it should not be specified for that purpose.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asM">
+<span class="sig-name descname"><span class="pre">asM</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asM" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asMatrix" title="cymel.core.datatypes.quaternion.Quaternion.asMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asMatrix</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asMatrix">
+<span class="sig-name descname"><span class="pre">asMatrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asMatrix" title="Link to this definition">¶</a></dt>
+<dd><p>Obtained as a rotation matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asRHV">
+<span class="sig-name descname"><span class="pre">asRHV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(1.000000,</span> <span class="pre">0.000000,</span> <span class="pre">0.000000)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(0.000000,</span> <span class="pre">1.000000,</span> <span class="pre">0.000000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asRHV2">
+<span class="sig-name descname"><span class="pre">asRHV2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axisOri</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV2" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV2</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asRoll">
+<span class="sig-name descname"><span class="pre">asRoll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(1.000000,</span> <span class="pre">0.000000,</span> <span class="pre">0.000000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRoll" title="Link to this definition">¶</a></dt>
+<dd><p>Obtain the twist component when the bone is rotated.</p>
+<p>The idea of ​​decomposition is that the same value is obtained whether you bend and then twist, or twist and then bend, so there is no reverse option like <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asBend" title="cymel.core.datatypes.quaternion.Quaternion.asBend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asBend</span></code></a> or <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asRollBendHV</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Bone direction vector.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV">
+<span class="sig-name descname"><span class="pre">asRollBendHV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(1.000000,</span> <span class="pre">0.000000,</span> <span class="pre">0.000000)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(0.000000,</span> <span class="pre">1.000000,</span> <span class="pre">0.000000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV" title="Link to this definition">¶</a></dt>
+<dd><p>In the case of bone rotation, it is separated into three angles: twisting, horizontal bending, and vertical bending.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, the decomposition is performed by bending and then twisting when viewed from the top of the hierarchy, but if you specify True, the decomposition is performed by twisting and then bending.</p></li>
+<li><p><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Bone direction vector.</p></li>
+<li><p><strong>upv</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Bone up vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>[roll, bendH, bendV]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2">
+<span class="sig-name descname"><span class="pre">asRollBendHV2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axisOri</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2" title="Link to this definition">¶</a></dt>
+<dd><p>In the case of bone rotation, it is separated into three angles: twisting, horizontal bending, and vertical bending.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axisOri</strong> – Specify the reference axis as a rotation (quaternion). The X-axis of that space corresponds to the bone direction, and the Y-axis corresponds to the up direction. The default None is equivalent to a unit quaternion.</p></li>
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, the decomposition is performed by bending and then twisting when viewed from the top of the hierarchy, but if you specify True, the decomposition is performed by twisting and then bending.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>[roll, bendH, bendV]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asTransformation">
+<span class="sig-name descname"><span class="pre">asTransformation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asTransformation" title="Link to this definition">¶</a></dt>
+<dd><p>Get it as a transformation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.transformation.Transformation.html#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asVecW">
+<span class="sig-name descname"><span class="pre">asVecW</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asVecW" title="Link to this definition">¶</a></dt>
+<dd><p>Get the 3D vector and w value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector,</span> <span class="pre">`float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asX">
+<span class="sig-name descname"><span class="pre">asX</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asX" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asTransformation" title="cymel.core.datatypes.quaternion.Quaternion.asTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asTransformation</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.conjugate">
+<span class="sig-name descname"><span class="pre">conjugate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.conjugate" title="Link to this definition">¶</a></dt>
+<dd><p>Get a conjugated quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.conjugateIt">
+<span class="sig-name descname"><span class="pre">conjugateIt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.conjugateIt" title="Link to this definition">¶</a></dt>
+<dd><p>Set conjugate quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.div">
+<span class="sig-name descname"><span class="pre">div</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-13</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.div" title="Link to this definition">¶</a></dt>
+<dd><p>Obtain the quotient of each element of a 4-dimensional vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Denominator quaternion.</p></li>
+<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance to avoid division by zero.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.dot">
+<span class="sig-name descname"><span class="pre">dot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.dot" title="Link to this definition">¶</a></dt>
+<dd><p>Get the dot product of a quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – The other quaternion.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.exp">
+<span class="sig-name descname"><span class="pre">exp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.exp" title="Link to this definition">¶</a></dt>
+<dd><p>Get a quaternion from a log quaternion. .</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.fromVecW">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">fromVecW</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.fromVecW" title="Link to this definition">¶</a></dt>
+<dd><p>Get a quaternion from a 3D vector and w value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vec</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 3d vector</p></li>
+<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – w value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.idiv">
+<span class="sig-name descname"><span class="pre">idiv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-13</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.idiv" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the quotient for each 4-dimensional vector element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Denominator quaternion.</p></li>
+<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance to avoid division by zero.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.imul">
+<span class="sig-name descname"><span class="pre">imul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.imul" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the product of each 4-dimensional vector element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – The other quaternion.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.inverse">
+<span class="sig-name descname"><span class="pre">inverse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.inverse" title="Link to this definition">¶</a></dt>
+<dd><p>Get the inverse quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.invertIt">
+<span class="sig-name descname"><span class="pre">invertIt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.invertIt" title="Link to this definition">¶</a></dt>
+<dd><p>Set an inverted quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.isEquivalent">
+<span class="sig-name descname"><span class="pre">isEquivalent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.isEquivalent" title="Link to this definition">¶</a></dt>
+<dd><p>Are they approximately equivalent? Reversal of sign is considered equivalent as representing the same rotational attitude.</p>
+<p>If you do not want to consider sign reversal as equivalent, use <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSignedEquivalent</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – The quaternion to compare.</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MQuaternion.html">MQuaternion</a>’s isEquivalent did not treat sign reversal as equivalent before 2015, but changed so that it is considered equivalent after 2015.</p>
+<p>In accordance with the current API specifications, cymel consistently considers all versions to be equivalent.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.isIdentity">
+<span class="sig-name descname"><span class="pre">isIdentity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.isIdentity" title="Link to this definition">¶</a></dt>
+<dd><p>Is it a nearly unit quaternion?</p>
+<p>Equivalent to comparing a unit quaternion with <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSignedEquivalent</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent">
+<span class="sig-name descname"><span class="pre">isSignedEquivalent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent" title="Link to this definition">¶</a></dt>
+<dd><p>Is it almost the same value? Sign reversals are not considered equivalent.</p>
+<p>If you want to consider the sign reversal as equivalent, use <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isEquivalent</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – The quaternion to compare.</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.length">
+<span class="sig-name descname"><span class="pre">length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.length" title="Link to this definition">¶</a></dt>
+<dd><p>Get the absolute value of a quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.lengthSq">
+<span class="sig-name descname"><span class="pre">lengthSq</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.lengthSq" title="Link to this definition">¶</a></dt>
+<dd><p>Obtains the square of the absolute value of a quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.log">
+<span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.log" title="Link to this definition">¶</a></dt>
+<dd><p>Get a log quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.makeRHV">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">makeRHV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rhv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(1.000000,</span> <span class="pre">0.000000,</span> <span class="pre">0.000000)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(0.000000,</span> <span class="pre">1.000000,</span> <span class="pre">0.000000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.makeRHV2">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">makeRHV2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rhv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisOri</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV2" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeRollBendHV2</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">makeRollBendHV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rhv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(1.000000,</span> <span class="pre">0.000000,</span> <span class="pre">0.000000)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ImmutableVector(0.000000,</span> <span class="pre">1.000000,</span> <span class="pre">0.000000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV" title="Link to this definition">¶</a></dt>
+<dd><p>Compose quaternions from three angles: bone twist, horizontal bending, and vertical bending.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rhv</strong> – [roll, bendH, bendV]</p></li>
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, it bends and then twists when viewed from the top of the hierarchy, but if you specify True, the composition will twist and then bend.</p></li>
+<li><p><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Bone direction vector.</p></li>
+<li><p><strong>upv</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Bone up vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">makeRollBendHV2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rhv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisOri</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2" title="Link to this definition">¶</a></dt>
+<dd><p>Compose quaternions from three angles: bone twist, horizontal bending, and vertical bending.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rhv</strong> – [roll, bendH, bendV]</p></li>
+<li><p><strong>axisOri</strong> – Specify the reference axis as a rotation (quaternion). The X-axis of that space corresponds to the bone direction, and the Y-axis corresponds to the up direction. The default None is equivalent to a unit quaternion.</p></li>
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, it bends and then twists when viewed from the top of the hierarchy, but if you specify True, the composition will twist and then bend.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.mul">
+<span class="sig-name descname"><span class="pre">mul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.mul" title="Link to this definition">¶</a></dt>
+<dd><p>Obtain the product of each element of a 4-dimensional vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – The other quaternion.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.negateIt">
+<span class="sig-name descname"><span class="pre">negateIt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.negateIt" title="Link to this definition">¶</a></dt>
+<dd><p>Sets a negated quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.normal">
+<span class="sig-name descname"><span class="pre">normal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.normal" title="Link to this definition">¶</a></dt>
+<dd><p>Get the normalized quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.normalize">
+<span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.normalize" title="Link to this definition">¶</a></dt>
+<dd><p>Set the normalization quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.normalizeIt">
+<span class="sig-name descname"><span class="pre">normalizeIt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.normalizeIt" title="Link to this definition">¶</a></dt>
+<dd><p>Set the normalization quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.safelog">
+<span class="sig-name descname"><span class="pre">safelog</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.safelog" title="Link to this definition">¶</a></dt>
+<dd><p>Obtain a logarithmic quaternion whose absolute value does not exceed π/2.</p>
+<p>When w &lt; 0, <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.log" title="cymel.core.datatypes.quaternion.Quaternion.log"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log</span></code></a> is obtained after the sign is inverted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.set" title="Link to this definition">¶</a></dt>
+<dd><p>Set other values.</p>
+<p>Similar to the constructor, the following values ​​can be specified.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p></li>
+<li><p>x, y, z, w</p></li>
+<li><p>Sequence up to 4 values</p></li>
+<li><p>Rotation axis (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>), angle</p></li>
+<li><p>Angle, axis of rotation (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p></li>
+<li><p><a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a></p></li>
+<li><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></p></li>
+<li><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setAngle">
+<span class="sig-name descname"><span class="pre">setAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correctAxis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setAngle" title="Link to this definition">¶</a></dt>
+<dd><p>Rewrite the rotation angle of the quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – angle.</p></li>
+<li><p><strong>correctAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the current w is negative (has a rotation angle greater than π), set the angle after inverting the axis.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setToIdentity">
+<span class="sig-name descname"><span class="pre">setToIdentity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setToIdentity" title="Link to this definition">¶</a></dt>
+<dd><p>Set the unit quaternion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">self</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setToXAxis">
+<span class="sig-name descname"><span class="pre">setToXAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setToXAxis" title="Link to this definition">¶</a></dt>
+<dd><p>Set the rotation angle around the X axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – angle.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setToYAxis">
+<span class="sig-name descname"><span class="pre">setToYAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setToYAxis" title="Link to this definition">¶</a></dt>
+<dd><p>Set the rotation angle around the Y axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – angle.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setToZAxis">
+<span class="sig-name descname"><span class="pre">setToZAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setToZAxis" title="Link to this definition">¶</a></dt>
+<dd><p>Set the rotation angle around the Z axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – angle.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setValue">
+<span class="sig-name descname"><span class="pre">setValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setValue" title="Link to this definition">¶</a></dt>
+<dd><p>Set other values.</p>
+<p>Similar to the constructor, the following values ​​can be specified.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p></li>
+<li><p>x, y, z, w</p></li>
+<li><p>Sequence up to 4 values</p></li>
+<li><p>Rotation axis (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>), angle</p></li>
+<li><p>Angle, axis of rotation (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p></li>
+<li><p><a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a></p></li>
+<li><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></p></li>
+<li><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.setVecW">
+<span class="sig-name descname"><span class="pre">setVecW</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.setVecW" title="Link to this definition">¶</a></dt>
+<dd><p>Set the 3D vector and w value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vec</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 3d vector</p></li>
+<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – w value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.slerp">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">slerp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.slerp" title="Link to this definition">¶</a></dt>
+<dd><p>Perform spherical linear interpolation on quaternions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Starting quaternion.</p></li>
+<li><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Terminal quaternion.</p></li>
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Interpolation factor between 0.0 and 1.0. You can also specify outside the range.</p></li>
+<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Spin value. The default 0 is the shortest direction, -1 is the opposite direction, and +1 and -1 make extra laps.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.slerp0">
+<span class="sig-name descname"><span class="pre">slerp0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.slerp0" title="Link to this definition">¶</a></dt>
+<dd><p>Perform unit quaternion and spherical linear interpolation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Interpolation factor between 0.0 and 1.0. You can also specify outside the range.</p></li>
+<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Spin value. The default 0 means forward direction, -1 means backward direction, and +1 or -1 means extra laps.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.squad">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">squad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.squad" title="Link to this definition">¶</a></dt>
+<dd><p>Interpolate a quaternion with a spherical curve.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Starting quaternion.</p></li>
+<li><p><strong>a</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Control point on the starting point side.</p></li>
+<li><p><strong>b</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Control point on the end point side.</p></li>
+<li><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Terminal quaternion.</p></li>
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Interpolation factor between 0.0 and 1.0. You can also specify outside the range.</p></li>
+<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Spin value. The default 0 means forward direction, -1 means backward direction, and +1 or -1 means extra laps.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.squadPt">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">squadPt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.squadPt" title="Link to this definition">¶</a></dt>
+<dd><p>Compute control points for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squad" title="cymel.core.datatypes.quaternion.Quaternion.squad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squad</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q0</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – The first quaternion.</p></li>
+<li><p><strong>q1</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – The second quaternion.</p></li>
+<li><p><strong>q2</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – The third quaternion.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.datatypes.quaternion.Quaternion</a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion"><code class="docutils literal notranslate"><span class="pre">Quaternion</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.Identity"><code class="docutils literal notranslate"><span class="pre">Quaternion.Identity</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.Tolerance"><code class="docutils literal notranslate"><span class="pre">Quaternion.Tolerance</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.Zero"><code class="docutils literal notranslate"><span class="pre">Quaternion.Zero</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAA"><code class="docutils literal notranslate"><span class="pre">Quaternion.asAA()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAngle"><code class="docutils literal notranslate"><span class="pre">Quaternion.asAngle()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="docutils literal notranslate"><span class="pre">Quaternion.asAxisAngle()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asBend"><code class="docutils literal notranslate"><span class="pre">Quaternion.asBend()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asD"><code class="docutils literal notranslate"><span class="pre">Quaternion.asD()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="docutils literal notranslate"><span class="pre">Quaternion.asDegrees()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asE"><code class="docutils literal notranslate"><span class="pre">Quaternion.asE()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="docutils literal notranslate"><span class="pre">Quaternion.asEulerRotation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asM"><code class="docutils literal notranslate"><span class="pre">Quaternion.asM()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asMatrix"><code class="docutils literal notranslate"><span class="pre">Quaternion.asMatrix()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV"><code class="docutils literal notranslate"><span class="pre">Quaternion.asRHV()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRHV2"><code class="docutils literal notranslate"><span class="pre">Quaternion.asRHV2()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRoll"><code class="docutils literal notranslate"><span class="pre">Quaternion.asRoll()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV"><code class="docutils literal notranslate"><span class="pre">Quaternion.asRollBendHV()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2"><code class="docutils literal notranslate"><span class="pre">Quaternion.asRollBendHV2()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asTransformation"><code class="docutils literal notranslate"><span class="pre">Quaternion.asTransformation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asVecW"><code class="docutils literal notranslate"><span class="pre">Quaternion.asVecW()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asX"><code class="docutils literal notranslate"><span class="pre">Quaternion.asX()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.conjugate"><code class="docutils literal notranslate"><span class="pre">Quaternion.conjugate()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.conjugateIt"><code class="docutils literal notranslate"><span class="pre">Quaternion.conjugateIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.div"><code class="docutils literal notranslate"><span class="pre">Quaternion.div()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.dot"><code class="docutils literal notranslate"><span class="pre">Quaternion.dot()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.exp"><code class="docutils literal notranslate"><span class="pre">Quaternion.exp()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.fromVecW"><code class="docutils literal notranslate"><span class="pre">Quaternion.fromVecW()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.idiv"><code class="docutils literal notranslate"><span class="pre">Quaternion.idiv()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.imul"><code class="docutils literal notranslate"><span class="pre">Quaternion.imul()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.inverse"><code class="docutils literal notranslate"><span class="pre">Quaternion.inverse()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.invertIt"><code class="docutils literal notranslate"><span class="pre">Quaternion.invertIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isEquivalent"><code class="docutils literal notranslate"><span class="pre">Quaternion.isEquivalent()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isIdentity"><code class="docutils literal notranslate"><span class="pre">Quaternion.isIdentity()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent"><code class="docutils literal notranslate"><span class="pre">Quaternion.isSignedEquivalent()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.length"><code class="docutils literal notranslate"><span class="pre">Quaternion.length()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.lengthSq"><code class="docutils literal notranslate"><span class="pre">Quaternion.lengthSq()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.log"><code class="docutils literal notranslate"><span class="pre">Quaternion.log()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV"><code class="docutils literal notranslate"><span class="pre">Quaternion.makeRHV()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRHV2"><code class="docutils literal notranslate"><span class="pre">Quaternion.makeRHV2()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV"><code class="docutils literal notranslate"><span class="pre">Quaternion.makeRollBendHV()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2"><code class="docutils literal notranslate"><span class="pre">Quaternion.makeRollBendHV2()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.mul"><code class="docutils literal notranslate"><span class="pre">Quaternion.mul()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.negateIt"><code class="docutils literal notranslate"><span class="pre">Quaternion.negateIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normal"><code class="docutils literal notranslate"><span class="pre">Quaternion.normal()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normalize"><code class="docutils literal notranslate"><span class="pre">Quaternion.normalize()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.normalizeIt"><code class="docutils literal notranslate"><span class="pre">Quaternion.normalizeIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.safelog"><code class="docutils literal notranslate"><span class="pre">Quaternion.safelog()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.set"><code class="docutils literal notranslate"><span class="pre">Quaternion.set()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setAngle"><code class="docutils literal notranslate"><span class="pre">Quaternion.setAngle()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToIdentity"><code class="docutils literal notranslate"><span class="pre">Quaternion.setToIdentity()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToXAxis"><code class="docutils literal notranslate"><span class="pre">Quaternion.setToXAxis()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToYAxis"><code class="docutils literal notranslate"><span class="pre">Quaternion.setToYAxis()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setToZAxis"><code class="docutils literal notranslate"><span class="pre">Quaternion.setToZAxis()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setValue"><code class="docutils literal notranslate"><span class="pre">Quaternion.setValue()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.setVecW"><code class="docutils literal notranslate"><span class="pre">Quaternion.setVecW()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.slerp"><code class="docutils literal notranslate"><span class="pre">Quaternion.slerp()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.slerp0"><code class="docutils literal notranslate"><span class="pre">Quaternion.slerp0()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squad"><code class="docutils literal notranslate"><span class="pre">Quaternion.squad()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.squadPt"><code class="docutils literal notranslate"><span class="pre">Quaternion.squadPt()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html"
+                          title="previous chapter">class cymel.core.datatypes.quaternion.ImmutableQuaternion</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../cymel.core.datatypes.transformation.html"
+                          title="next chapter">cymel.core.datatypes.transformation</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.transformation.html" title="cymel.core.datatypes.transformation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html" title="class cymel.core.datatypes.quaternion.ImmutableQuaternion"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" >cymel.core.datatypes.quaternion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.quaternion.Quaternion</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

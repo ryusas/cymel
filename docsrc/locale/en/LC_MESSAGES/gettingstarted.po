@@ -1,0 +1,1498 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/gettingstarted.rst:6
+msgid "cymel入門"
+msgstr "Introduction to cymel"
+
+#: ../srcs/gettingstarted.rst:11
+msgid "インポート"
+msgstr "import"
+
+#: ../srcs/gettingstarted.rst:12
+msgid "cymel の機能は以下の3つを選択してインポートできます。"
+msgstr "You can select and import the following three functions of cymel."
+
+#: ../srcs/gettingstarted.rst:14
+msgid "UI以外の全機能 `cymel.main`"
+msgstr "All functions except UI `cymel.main`"
+
+#: ../srcs/gettingstarted.rst:15
+msgid "UIに関する機能 `cymel.ui`"
+msgstr "UI-related functions `cymel.ui`"
+
+#: ../srcs/gettingstarted.rst:16
+msgid "任意でグローバルに展開すると便利なごく僅かな定数 `cymel.constants`"
+msgstr ""
+"Very few constants that are convenient to optionally expand globally "
+"`cymel.constants`"
+
+#: ../srcs/gettingstarted.rst:18
+msgid "以下のようにインポートするのがおすすめです。"
+msgstr "We recommend importing as follows."
+
+#: ../srcs/gettingstarted.rst:26
+msgid ""
+"`cymel.constants` は `cymel.main` "
+"内にも展開されているため、グローバルスコープを汚すことを嫌う場合はインポートしなくても構いません。"
+msgstr ""
+"`cymel.constants` is also expanded within `cymel.main`, so you don't need to"
+" import it if you don't want to pollute the global scope."
+
+#: ../srcs/gettingstarted.rst:28
+msgid ""
+"また、以下のように `cymel.all` をインポートするだけで、すべてのインポートを一度に行うこともできます。 "
+"上記といくつかの推奨モジュールがインポートされます。"
+msgstr ""
+"You can also import all at once by just importing `cymel.all` as shown "
+"below. The above and some recommended modules will be imported."
+
+#: ../srcs/gettingstarted.rst:35
+msgid ""
+"スタンドアロン Python (mayapy) で cymel をインポートすると、 `cymel.initmaya` モジュールの働きによって "
+"Maya が初期化されます。"
+msgstr ""
+"When you import cymel in standalone Python (mayapy), the `cymel.initmaya` "
+"module initializes Maya."
+
+#: ../srcs/gettingstarted.rst:39
+msgid ""
+"本来の maya.standalone モジュールの initialize では userSetup.py は呼ばれますが userSetup.mel "
+"は呼ばれません。 cymel による初期化ではそれを補い、 userSetup.mel も呼ばれるようにしています。"
+msgstr ""
+"In initialize of the original maya.standalone module, userSetup.py is "
+"called, but userSetup.mel is not called. Initialization with cymel "
+"compensates for this by also calling userSetup.mel."
+
+#: ../srcs/gettingstarted.rst:42
+msgid ""
+"ちなみに、pymel.core をインポートすると Maya UI "
+"を起動したのに近い、さらに多くのことがされます（たとえば、プラグインの自動ロードなど）。 cymel "
+"では、あえてそこまではやらず、ごく最低限のことに留めています。"
+msgstr ""
+"By the way, importing pymel.core does much more than launch the Maya UI (for"
+" example, automatically loads plugins). At cymel, we purposely do not go "
+"that far and keep it to the bare minimum."
+
+#: ../srcs/gettingstarted.rst:50
+msgid "ノードのラッパークラス"
+msgstr "wrapper class for node"
+
+#: ../srcs/gettingstarted.rst:52
+msgid "ノードオブジェクトの取得"
+msgstr "Get node object"
+
+#: ../srcs/gettingstarted.rst:53
+msgid "cymel は、プラグインも含まれる全てのノードタイプのラッパークラスを提供します。"
+msgstr "cymel provides wrapper classes for all node types, including plugins."
+
+#: ../srcs/gettingstarted.rst:55
+msgid ""
+"全てのノードクラスは `.CyObject` を基底クラスとし、ノードタイプのツリーに沿って継承されています。 ノードをラップしたオブジェクトを得るには"
+" `.CyObject` コンストラクタを利用するのが簡単です。"
+msgstr ""
+"All node classes have a base class of `.CyObject` and are inherited along "
+"the node type tree. An easy way to get an object wrapped around a node is to"
+" use the `.CyObject` constructor."
+
+#: ../srcs/gettingstarted.rst:58
+msgid "たとえば、以下のようにノード名を指定します。"
+msgstr "For example, specify the node name as follows:"
+
+#: ../srcs/gettingstarted.rst:63
+msgid "pymel をご存知なら PyNode に相当するのが `.CyObject` です。"
+msgstr ""
+"If you are familiar with pymel, the equivalent of PyNode is `.CyObject`."
+
+#: ../srcs/gettingstarted.rst:65
+msgid "`.CyObject` には、別名 `.O` でもアクセスできます。"
+msgstr "`.CyObject` can also be accessed by the alias `.O`."
+
+#: ../srcs/gettingstarted.rst:70
+msgid "選択されているノードの場合はもっと簡単です。"
+msgstr "For selected nodes, it's easier."
+
+#: ../srcs/gettingstarted.rst:72
+msgid "選択ノードを1つ得るには `~.ModuleForSel.sel` を使います（複数選択されていても最初の1つとなります）。"
+msgstr ""
+"Use `~.ModuleForSel.sel` to get one selected node (even if multiple are "
+"selected, it will be the first one)."
+
+#: ../srcs/gettingstarted.rst:78
+msgid "または `~.ModuleForSel.selobj` 関数ではインデックスを指定できます。"
+msgstr "Or you can specify an index in the `~.ModuleForSel.selobj` function."
+
+#: ../srcs/gettingstarted.rst:83
+msgid ""
+"選択されているものをすべて得るには `~.ModuleForSel.selection` か、または pymel 風に "
+"`~.ModuleForSel.selected` 関数を使います。"
+msgstr ""
+"To get all the selected ones, use `~.ModuleForSel.selection` or, pymel-"
+"style, the `~.ModuleForSel.selected` function."
+
+#: ../srcs/gettingstarted.rst:94
+msgid "ノードクラスによる操作"
+msgstr "Operations with node classes"
+
+#: ../srcs/gettingstarted.rst:95
+msgid ""
+"全てのノードクラスは `.NodeTypes` のインスタンスである `cm.nt <.NodeTypes>` からアクセスできます "
+"（ごく一部の代表的なノードクラスは `cm <cymel.main>` からでもアクセスできます）。 "
+"クラス名は、ノードタイプ名の先頭を大文字にした名前となります。"
+msgstr ""
+"All node classes are accessible from `cm.nt <.NodeTypes>`, which is an "
+"instance of `.NodeTypes` (a few representative node classes are also "
+"accessible from `cm <cymel.main>`). The class name is the node type name "
+"with the first letter capitalized."
+
+#: ../srcs/gettingstarted.rst:102
+msgid "ノードクラスに既存ノードの名前を指定しないと、新規にノードが生成されます。"
+msgstr ""
+"If you do not specify the name of an existing node in the node class, a new "
+"node will be generated."
+
+#: ../srcs/gettingstarted.rst:107
+msgid "これには :mayacmd:`createNode` コマンドのオプション引数を指定できます。"
+msgstr ""
+"This can be an optional argument for the :mayacmd:`createNode` command."
+
+#: ../srcs/gettingstarted.rst:112
+msgid "また、ノードクラスは :mayacmd:`ls` コマンドのラッパーとしても機能します。"
+msgstr "The node class also acts as a wrapper for the :mayacmd:`ls` command."
+
+#: ../srcs/gettingstarted.rst:117
+msgid ""
+":mayacmd:`ls` コマンドに -type オプションが自動的に指定された結果を得られますが、その他のオプション引数は自由に指定できます。"
+msgstr ""
+"The -type option is automatically specified for the :mayacmd:`ls` command, "
+"but you can specify any other optional arguments."
+
+#: ../srcs/gettingstarted.rst:126
+msgid "ノードクラスを明示したオブジェクト取得"
+msgstr "Obtaining an object that specifies the node class"
+
+#: ../srcs/gettingstarted.rst:127
+msgid "既存のノード名を指定してラッパーオブジェクトを得るとき `.CyObject` ではないノードクラスを直接指定することもできます。"
+msgstr ""
+"When specifying an existing node name to obtain a wrapper object, you can "
+"also directly specify a node class other than `.CyObject`."
+
+#: ../srcs/gettingstarted.rst:132
+msgid "このとき、互換性のある（継承している）クラスなら全て指定できます（上位になるほど抽象的になり、サポートされる機能が少なくなります）。"
+msgstr ""
+"At this time, you can specify any compatible (inheriting) class (the higher "
+"the level, the more abstract it becomes, and the fewer features it "
+"supports)."
+
+#: ../srcs/gettingstarted.rst:137
+msgid ""
+"ただし、互換性のないクラスを指定するとエラーになります。 たとえば、 :mayanode:`joint` は :mayanode:`transform`"
+" でもありますが :mayanode:`shape` ではないので、 `.Shape` クラスを指定するとエラーになります。"
+msgstr ""
+"However, specifying incompatible classes will result in an error. For "
+"example, :mayanode:`joint` is also :mayanode:`transform` but not "
+":mayanode:`shape`, so specifying the `.Shape` class will result in an error."
+
+#: ../srcs/gettingstarted.rst:140
+msgid ""
+"やはり、通常は、クラスを明示するよりも `.CyObject` を指定するのが簡単で確実です。 クラスの明示は、 "
+":ref:`gettingstarted-customclasses-nodes` "
+"を作り未登録のまま使う場合や、あえて抽象的な振る舞いをさせたいような場合に使用します。 たとえば、 `.DagNode` 派生クラスは "
+"DAGパスを含んでいるため、同一ノードのインスタンスでもパスが異なれば違うものとして扱われます。 しかし、より抽象的な `.Node` "
+"インスタンスとして扱えば、DAGパスは含まれないため、同じものになります。"
+msgstr ""
+"Again, it is usually easier and more reliable to specify `.CyObject` than to"
+" specify the class explicitly. Specifying a class is used when creating "
+":ref:`gettingstarted-customclasses-nodes` and using it without registering "
+"it, or when you want to make it behave abstractly. For example, the "
+"`.DagNode` derived class includes a DAG path, so instances of the same node "
+"with different paths are treated as different. However, if you treat it as a"
+" more abstract `.Node` instance, it will be the same since it does not "
+"include the DAG path."
+
+#: ../srcs/gettingstarted.rst:156
+msgid ""
+"あるノードがあるノードタイプの派生タイプかどうかを調べたい場合、以下のように Python の insinstance "
+"が利用できると思われるかもしれません。"
+msgstr ""
+"If you want to check whether a node is a derived type of a certain node "
+"type, you might think that you can use Python's insinstance as shown below."
+
+#: ../srcs/gettingstarted.rst:161
+msgid ""
+"しかし、先に説明したように、抽象的なノードクラスを明示してそのインスタンスを取得できるということは、 以下のように isinstance "
+"ではノードタイプを厳密に判別できないことにもなります。"
+msgstr ""
+"However, as explained earlier, the fact that you can explicitly specify an "
+"abstract node class and obtain its instance also means that isinstance "
+"cannot accurately determine the node type, as shown below."
+
+#: ../srcs/gettingstarted.rst:167
+msgid "この弱点は設計段階から把握された上で、あえてそのようになっています。"
+msgstr ""
+"This weakness was identified from the design stage and was purposely "
+"designed this way."
+
+#: ../srcs/gettingstarted.rst:169
+msgid ""
+"何故かというと、 :ref:`gettingstarted-customclasses-nodes` を自由に作れるという仕組みによって、 "
+"isinstance でタイプ判別ができるという前提は既に崩れているからです。 pymel も然りです。"
+msgstr ""
+"The reason is that the assumption that type can be determined using "
+"isinstance has already been broken due to the mechanism that allows you to "
+"freely create :ref:`gettingstarted-customclasses-nodes`. The same goes for "
+"pymel."
+
+#: ../srcs/gettingstarted.rst:173
+msgid ""
+"そこで、確実にノードタイプを判別するには、 isinstance ではなく、以下のように `~.Node_c.isType` か "
+"`~.Node_c.hasFn` メソッドを利用してください。"
+msgstr ""
+"Therefore, to reliably determine the node type, use the `~.Node_c.isType` or"
+" `~.Node_c.hasFn` method instead of isinstance as shown below."
+
+#: ../srcs/gettingstarted.rst:181
+msgid ""
+"とはいえ、純粋にノードタイプを判別したいという用途ではなく、文字通り、派生クラスのインスタンスかどうかを判別したいのならば isinstance "
+"は有用です。 たとえば、 :ref:`gettingstarted-customclasses-nodes` "
+"ではノードタイプ以外の条件も加味してクラスを決定できるため、そういった条件込みで判別したい場合などには有用です。"
+msgstr ""
+"However, isinstance is useful if you want to literally determine whether a "
+"node is an instance of a derived class, rather than simply determining its "
+"type. For example, :ref:`gettingstarted-customclasses-nodes` allows you to "
+"determine the class by considering conditions other than the node type, so "
+"it is useful when you want to make a judgment based on such conditions."
+
+#: ../srcs/gettingstarted.rst:190
+msgid "アトリビュートのラッパークラス"
+msgstr "Attribute wrapper class"
+
+#: ../srcs/gettingstarted.rst:192
+msgid "プラグへのアクセス方法"
+msgstr "How to access the plug"
+
+#: ../srcs/gettingstarted.rst:193
+msgid "ノードをラッパーオブジェクトとして扱うと、プラグ（アトリビュート）へのアクセスも便利になります。"
+msgstr ""
+"Treating nodes as wrapper objects also makes it convenient to access plugs "
+"(attributes)."
+
+#: ../srcs/gettingstarted.rst:195
+msgid ""
+"以下のように、ノードオブジェクトの属性として、 `.Plug` クラスのオブジェクトを得られます。 `.Plug` は `.Node` "
+"と同様に、基底クラス `.CyObject` の派生型です。"
+msgstr ""
+"You can get an object of the `.Plug` class as an attribute of the node "
+"object as shown below. `.Plug`, like `.Node`, is a derived type of the base "
+"class `.CyObject`."
+
+#: ../srcs/gettingstarted.rst:198
+msgid "ショート名でもロング名でも同じものが得られます。"
+msgstr "You get the same thing with short or long names."
+
+#: ../srcs/gettingstarted.rst:208
+msgid ""
+"また、MELコマンドの場合と同様に、 :mayanode:`transform` から :mayanode:`shape` "
+"のアトリビュートに直接アクセスもできます。"
+msgstr ""
+"You can also access :mayanode:`shape` attributes directly from "
+":mayanode:`transform`, just like with the MEL command."
+
+#: ../srcs/gettingstarted.rst:214
+msgid ""
+"アトリビュート名は、まれに Pythonのキーワードや、ノードオブジェクトのメソッド名などと衝突する場合もあります。 そういった場合のために "
+"`~.Node_c.plug` メソッドでもアクセスできます。"
+msgstr ""
+"In rare cases, attribute names may conflict with Python keywords, node "
+"object method names, etc. For such cases, it can also be accessed using the "
+"`~.Node_c.plug` method."
+
+#: ../srcs/gettingstarted.rst:220
+msgid "コンパウンドアトリビュートから子アトリビュートを得ることもできますが、 ノードから直接得ることもできます。"
+msgstr ""
+"You can get child attributes from a compound attribute, but you can also get"
+" them directly from a node."
+
+#: ../srcs/gettingstarted.rst:228
+msgid "しかし、コンパウンドのマルチの場合、いきなり子プラグを得るとインデックスが未解決となってしまいます。"
+msgstr ""
+"However, in the case of a compound multi, if you suddenly get a child plug, "
+"the index will become unresolved."
+
+#: ../srcs/gettingstarted.rst:238
+msgid "そういった複雑なケースでは、マルチ要素を解決しながらコンパウンドを下っていけます。"
+msgstr ""
+"In such complex cases, you can move down the compound solving multi-factors."
+
+#: ../srcs/gettingstarted.rst:243
+msgid "他にも様々な方法でアクセスできます。"
+msgstr "There are many other ways to access it."
+
+#: ../srcs/gettingstarted.rst:256
+msgid "値のセットとゲット"
+msgstr "Set and get values"
+
+#: ../srcs/gettingstarted.rst:257
+msgid ""
+"`.Plug` クラスにも様々なメソッドがありますが、 たとえば `~.Plug.set` や `~.Plug_c.get` "
+"メソッドでは値のセットやゲットができます。"
+msgstr ""
+"The `.Plug` class also has various methods, such as the `~.Plug.set` and "
+"`~.Plug_c.get` methods that allow you to set and get values."
+
+#: ../srcs/gettingstarted.rst:266
+msgid ""
+"ここで、ひとつ重要な注意点があります。 それは、単位付きタイプの場合、 `~.Plug.set` や `~.Plug_c.get` "
+"では「内部単位」で扱われるという点です。"
+msgstr ""
+"There is one important thing to note here. The point is that for types with "
+"units, `~.Plug.set` and `~.Plug_c.get` treat them as ``internal units.''"
+
+#: ../srcs/gettingstarted.rst:269
+msgid ""
+"単位付きタイプには「距離」(doubleLinear)、「角度」(doubleAngle)、「時間」(time) がありますが、 内部単位は、それぞれ "
+"Centimeter、Radians、Second となっています。"
+msgstr ""
+"Types with units include \"distance\" (doubleLinear), \"angle\" "
+"(doubleAngle), and \"time\" (time), but the internal units are Centimeter, "
+"Radians, and Second, respectively."
+
+#: ../srcs/gettingstarted.rst:272
+msgid "たとえば、rotate では、通常の人が慣れた Degrees ではなく、以下のように Radians で扱う必要があります。"
+msgstr ""
+"For example, rotate should be handled in Radians instead of the Degrees that"
+" normal people are used to:"
+
+#: ../srcs/gettingstarted.rst:278
+msgid ""
+"一見面倒に見えるかもしれませんが、これは「シーン設定（単位）に依存しないプログラミングをすべき」という思想に基づいています。 "
+"もし、どうしても「UI設定単位」で扱いたい場合、 `~.Plug.setu` や `~.Plug_c.getu` を用いることもできます。"
+msgstr ""
+"Although it may seem troublesome at first glance, this is based on the idea "
+"that programming should be independent of scene settings (units). If you "
+"really want to handle it in \"UI setting units\", you can also use "
+"`~.Plug.setu` or `~.Plug_c.getu`."
+
+#: ../srcs/gettingstarted.rst:287
+msgid ""
+"ただし、 `~.Plug.setu` や `~.Plug_c.getu` を用いるのは、 "
+"スクリプトエディターでちょっとタイプして結果を得るようなインスタントなスクリプトに留めるのが無難です。"
+msgstr ""
+"However, it is best to use `~.Plug.setu` and `~.Plug_c.getu` only for "
+"instant scripts where you can type a little in a script editor and get the "
+"results."
+
+#: ../srcs/gettingstarted.rst:294
+msgid "コネクション編集"
+msgstr "Edit connection"
+
+#: ../srcs/gettingstarted.rst:295
+msgid "``>>`` や ``<<`` や `~.Plug.connect` メソッドで、プラグの接続ができます。"
+msgstr ""
+"You can connect a plug using the ``>>``, ``<<``, or `~.Plug.connect` "
+"methods."
+
+#: ../srcs/gettingstarted.rst:297
+msgid ""
+"また、接続を調べるには `.Node` の `~.Node_c.inputs` や `~.Node_c.outputs` 、 `.Plug` の "
+"`~.Plug_c.inputs` や `~.Plug_c.outputs` メソッドが利用できます。"
+msgstr ""
+"You can also use the `~.Node_c.inputs` and `~.Node_c.outputs` methods of "
+"`.Node` and the `~.Plug_c.inputs` and `~.Plug_c.outputs` methods of `.Plug` "
+"to check the connection."
+
+#: ../srcs/gettingstarted.rst:311
+msgid ""
+"`~.Plug.connect` メソッドは pymel と指定順序が逆なので注意してください。 これは `~.Plug.disconnect` "
+"メソッドと指定順を統一するためです。"
+msgstr ""
+"Please note that the `~.Plug.connect` method is specified in the opposite "
+"order as in pymel. This is to unify the specification order with the "
+"`~.Plug.disconnect` method."
+
+#: ../srcs/gettingstarted.rst:314
+msgid "そのため、演算子は ``>>`` よりも ``<<`` の利用を推奨します。"
+msgstr "Therefore, we recommend using the ``<<`` operator over ``>>``."
+
+#: ../srcs/gettingstarted.rst:323
+msgid "切断は ``//`` や `~.Plug.disconnect` メソッドで行えます。"
+msgstr ""
+"Disconnection can be done using ``//`` or the `~.Plug.disconnect` method."
+
+#: ../srcs/gettingstarted.rst:329
+msgid ""
+"``//`` は pymel と同じく左から右への接続の切断なので `~.Plug.disconnect` メソッドを利用した方が統一感があります。"
+msgstr ""
+"Since ``//`` disconnects from left to right like in pymel, it is more "
+"consistent to use the `~.Plug.disconnect` method."
+
+#: ../srcs/gettingstarted.rst:335
+msgid "ワールドスペースプラグ"
+msgstr "world space plug"
+
+#: ../srcs/gettingstarted.rst:336
+msgid ""
+"アトリビュートには、ワールドスペースの値を出力するマルチアトリビュートがあります。 それは `~.Plug` の "
+"`~.Plug_c.isWorldSpace` が True を返すものです。"
+msgstr ""
+"Attributes include multi-attributes that output values ​​in world space. "
+"That is what `~.Plug`'s `~.Plug_c.isWorldSpace` returns True."
+
+#: ../srcs/gettingstarted.rst:339
+msgid ""
+"たとえば :mayanode:`dagNode` の worldMatrix (wm) や :mayanode:`locator` の "
+"worldPosition (wp) など、様々なものがあります。"
+msgstr ""
+"For example, the worldMatrix (wm) of :mayanode:`dagNode` and the "
+"worldPosition (wp) of :mayanode:`locator`."
+
+#: ../srcs/gettingstarted.rst:341
+msgid ""
+"ワールドスペースプラグのインデックスは、DAGノードインスタンスの番号に依存して決められる必要があります。 "
+"インスタンス番号は、DAGノードインスタンスの削除時に自動で欠番が詰められるなど動的に変化するため、 "
+"ワールドスペースプラグのインデックスも動的に変化します。 "
+"そのため、MELコマンドでは、ワールドスペースプラグをインデックス指定した要素で直接扱うことは推奨されず、 DAGパスと矛盾のないインデックスが "
+"Maya によって自動補完されるようになっています。 cymel でもその仕様を踏襲し、ワールドスペースプラグは要素にしないで扱うことを推奨します。"
+msgstr ""
+"The world space plug index must be determined depending on the number of DAG"
+" node instances. Since the instance number changes dynamically, such as by "
+"automatically filling in the missing numbers when a DAG node instance is "
+"deleted, the index of the world space plug also changes dynamically. "
+"Therefore, in MEL commands, it is not recommended to directly handle world "
+"space plugs with indexed elements, and Maya automatically completes indexes "
+"that are consistent with the DAG path. It is recommended that cymel follow "
+"this specification and handle world space plugs without making them "
+"elements."
+
+#: ../srcs/gettingstarted.rst:348
+msgid "以下は使用例で、ロケータをインスタンスコピーし、その worldPosition をインデックス指定せずに参照しています。"
+msgstr ""
+"The following example shows how to instantiate a locator and reference its "
+"worldPosition without specifying an index."
+
+#: ../srcs/gettingstarted.rst:360
+msgid "以下のようにインデックス指定することが、本来のプラグへのアクセスになるのですが、ワールドスペースプラグではそれは推奨されません。"
+msgstr ""
+"Specifying the index as shown below is the original way to access the plug, "
+"but this is not recommended for world space plugs."
+
+#: ../srcs/gettingstarted.rst:372
+msgid "コマンドやAPIの併用"
+msgstr "Combining commands and APIs"
+
+#: ../srcs/gettingstarted.rst:373
+msgid ""
+"cymelは、pymelのように全てのMayaコマンドのラッパーを提供しません。 "
+"また、全てのノードタイプのクラスを提供するものの、APIやコマンドを完全に置き換えるほどの機能は提供しません。 "
+"頂点やポリゴンなどのコンポーネントもラップしません。"
+msgstr ""
+"Cymel does not provide wrappers for all Maya commands like pymel. Also, "
+"although it provides classes for all node types, it does not provide enough "
+"functionality to completely replace the API or commands. It also does not "
+"wrap components such as vertices or polygons."
+
+#: ../srcs/gettingstarted.rst:377
+msgid "しかし、ノードやプラグを扱う上での主要な機能は整っているので、それで足りない部分はコマンドやAPIを併用してください。"
+msgstr ""
+"However, the main functions for handling nodes and plugs are provided, so "
+"use commands and APIs in conjunction with the functions needed."
+
+#: ../srcs/gettingstarted.rst:379
+msgid "`.CyObject` を文字列として評価するとその名前になるので、Mayaコマンドの引数にそのまま渡すことができます。"
+msgstr ""
+"`.CyObject` evaluates to the name as a string, so you can pass it as an "
+"argument to a Maya command."
+
+#: ../srcs/gettingstarted.rst:381
+msgid "また、コマンドの返す結果を `.O` や `.Os` で受ければ、すぐに `.Node` や `.Plug` として扱えます。"
+msgstr ""
+"Also, if you receive the result returned by a command with `.O` or `.Os`, "
+"you can immediately handle it as `.Node` or `.Plug`."
+
+#: ../srcs/gettingstarted.rst:383
+msgid ""
+"`.CyObject` には、同じものを示す API オブジェクトを得るメソッドがあるので、API を併用する場合に便利です。 `Node.mnode "
+"<.Node_c.mnode>` では API2 の :mayaapi2:`MObject` 、 `Node.mpath "
+"<.Node_c.mpath>` では API2 の :mayaapi2:`MDagPath` 、 `Plug.mplug "
+"<.Plug_c.mplug>` では API2 の :mayaapi2:`MPlug` が得られます。 また、 `Node.mnode1 "
+"<.Node_c.mnode1>` では API1 の :mayaapi1:`MObject` 、 `Node.mpath1 "
+"<.Node_c.mpath1>` では API1 の :mayaapi1:`MDagPath` 、 `Plug.mplug1 "
+"<.Plug_c.mplug1>` では API1 の :mayaapi1:`MPlug` が得られます。"
+msgstr ""
+"`.CyObject` has a method to obtain an API object representing the same "
+"thing, which is useful when using APIs together. :mayaapi2:`MObject` of API2"
+" in `Node.mnode <.Node_c.mnode>`, :mayaapi2:`MDagPath` of API2 in "
+"`Node.mpath <.Node_c.mpath>`, :mayaapi2:`MPlug` of API2 in `Plug.mplug "
+"<.Plug_c.mplug>` is obtained. Also, `Node.mnode1 <.Node_c.mnode1>` uses "
+":mayaapi1:`MObject` of API1, `Node.mpath1 <.Node_c.mpath1>` uses "
+":mayaapi1:`MDagPath` of API1, and `Plug.mplug1 <.Plug_c.mplug1>` uses API1's"
+" :mayaapi1:`MObject`. :mayaapi1:`MPlug` is obtained."
+
+#: ../srcs/gettingstarted.rst:392
+msgid ""
+"さらに、 `.CyObject` のオブジェクトを得る際には、名前だけでなく、 API2 の :mayaapi2:`MObject` 、 "
+":mayaapi2:`MDagPath` 、 :mayaapi2:`MPlug` を指定することもできます （API1 "
+"のそれらはサポートされていません）。"
+msgstr ""
+"Furthermore, when getting a `.CyObject` object, you can specify not only the"
+" name but also :mayaapi2:`MObject`, :mayaapi2:`MDagPath`, :mayaapi2:`MPlug` "
+"from API2 (those from API1 are not supported)."
+
+#: ../srcs/gettingstarted.rst:402
+msgid "データタイプクラス"
+msgstr "data type class"
+
+#: ../srcs/gettingstarted.rst:404
+msgid "クラスの種類"
+msgstr "class type"
+
+#: ../srcs/gettingstarted.rst:405
+msgid "cymelは以下の数学クラスを提供します。カッコ内は別名です。"
+msgstr ""
+"cymel provides the following math classes. Names in parentheses are aliases."
+
+#: ../srcs/gettingstarted.rst:407
+msgid ":ref:`gettingstarted-datatypes-boundingbox` (`.BB`)  ... バウンディングボックス"
+msgstr ":ref:`gettingstarted-datatypes-boundingbox` (`.BB`)  ... バウンディングボックス"
+
+#: ../srcs/gettingstarted.rst:408
+msgid ":ref:`gettingstarted-datatypes-vector` (`.V`)  ... 3次元ベクトル"
+msgstr ":ref:`gettingstarted-datatypes-vector` (`.V`)  ... 3次元ベクトル"
+
+#: ../srcs/gettingstarted.rst:409
+msgid ":ref:`gettingstarted-datatypes-matrix` (`.M`)  ... 4x4行列"
+msgstr ":ref:`gettingstarted-datatypes-matrix` (`.M`)  ... 4x4行列"
+
+#: ../srcs/gettingstarted.rst:410
+msgid ":ref:`gettingstarted-datatypes-quaternion` (`.Q`)  ... クォータニオン"
+msgstr ":ref:`gettingstarted-datatypes-quaternion` (`.Q`)  ... クォータニオン"
+
+#: ../srcs/gettingstarted.rst:411
+msgid ":ref:`gettingstarted-datatypes-eulerrotation` (`.E`)  ... オイラー角回転"
+msgstr ":ref:`gettingstarted-datatypes-eulerrotation` (`.E`)  ... オイラー角回転"
+
+#: ../srcs/gettingstarted.rst:412
+msgid ""
+":ref:`gettingstarted-datatypes-transformation` (`.X`)  ... トランスフォーメーション情報"
+msgstr ""
+":ref:`gettingstarted-datatypes-transformation` (`.X`)  ... トランスフォーメーション情報"
+
+#: ../srcs/gettingstarted.rst:414
+msgid "それらの中には `.Plug` の値として直接セットしたり、直接ゲットしたりすることができるものもあります。"
+msgstr "Some of them can be set or gotten directly as values ​​in `.Plug`."
+
+#: ../srcs/gettingstarted.rst:416
+msgid "また、異なる型同士の変換操作もサポートされています。"
+msgstr "Conversion operations between different types are also supported."
+
+#: ../srcs/gettingstarted.rst:422
+msgid "BoundigBox"
+msgstr "BoundigBox"
+
+#: ../srcs/gettingstarted.rst:423
+msgid ""
+"`.BoundingBox` (`.BB`) はバウンディングボックスクラスで、Maya API の :mayaapi2:`MBoundingBox` "
+"に相当します。"
+msgstr ""
+"`.BoundingBox` (`.BB`) is a bounding box class and corresponds to "
+":mayaapi2:`MBoundingBox` in the Maya API."
+
+#: ../srcs/gettingstarted.rst:425
+msgid "`.DagNode` の `~.DagNodeMixin.boundingBox` メソッドで取得できます。"
+msgstr ""
+"It can be obtained using the `~.DagNodeMixin.boundingBox` method of "
+"`.DagNode`."
+
+#: ../srcs/gettingstarted.rst:427
+msgid "`.BoundingBox` の保持する位置情報には `.Vector` が利用されています。"
+msgstr ""
+"`.Vector` is used for the position information held by `.BoundingBox`."
+
+#: ../srcs/gettingstarted.rst:433
+msgid "Vector"
+msgstr "Vector"
+
+#: ../srcs/gettingstarted.rst:434
+msgid ""
+"`.Vector` (`.V`) は3次元ベクトルクラスで、 Maya API の :mayaapi2:`MPoint` と "
+":mayaapi2:`MVector` に相当します。 API では、位置を表すか方向を表すかで2種類を使いわける必要がありますが、cymelでは "
+"`.Vector` のみに統一されています。"
+msgstr ""
+"`.Vector` (`.V`) is a three-dimensional vector class and corresponds to "
+":mayaapi2:`MPoint` and :mayaapi2:`MVector` in the Maya API. In the API, it "
+"is necessary to use two types depending on whether to represent position or "
+"direction, but in cymel, only `.Vector` is used."
+
+#: ../srcs/gettingstarted.rst:438
+msgid ""
+"`.Vector` は :mayaapi2:`MPoint` と同じく同次座標表現が可能な w を持っていますが、 デフォルトの 1.0 "
+"である限りは隠蔽され、ほとんど意識する必要はありません。 また、方向ベクトルとして扱う場合も 0.0 "
+"にする必要はなく、メソッドの種類に応じて適切に扱われます。"
+msgstr ""
+"`.Vector`, like :mayaapi2:`MPoint`, has w that can be expressed in "
+"homogeneous coordinates, but as long as it is the default 1.0, it is hidden "
+"and there is almost no need to be aware of it. Also, when treating it as a "
+"direction vector, it does not need to be 0.0 and will be handled "
+"appropriately depending on the type of method."
+
+#: ../srcs/gettingstarted.rst:442
+msgid ""
+"たとえば、 ``*`` 演算子か `~.Vector.dot` メソッドで、3次元ベクトルの内積を計算しますが、 `.Vector.dot4` "
+"メソッドは4次元ベクトルの内積です。 また、 `~.Vector.dot4r` "
+"メソッドは、ベクトルが4x1行列と1x4行列であるものとして、行列の積を計算します。"
+msgstr ""
+"For example, the ``*`` operator or the `~.Vector.dot` method calculates the "
+"dot product of 3-dimensional vectors, while the `.Vector.dot4` method "
+"calculates the dot product of 4-dimensional vectors. The `~.Vector.dot4r` "
+"method also calculates the matrix product, assuming that the vectors are a "
+"4x1 matrix and a 1x4 matrix."
+
+#: ../srcs/gettingstarted.rst:456
+msgid "また、 ``^`` 演算子か `~.Vector.cross` メソッドでは、3次元ベクトルの外積を計算します。"
+msgstr ""
+"Additionally, the ``^`` operator or the `~.Vector.cross` method calculates "
+"the cross product of three-dimensional vectors."
+
+#: ../srcs/gettingstarted.rst:463
+msgid "他にも様々なメソッドがありますので、ドキュメントを参照してください。"
+msgstr "There are various other methods, please refer to the documentation."
+
+#: ../srcs/gettingstarted.rst:465
+msgid ""
+"`.Vector` は w を持っていますが、それがデフォルトの 1.0 である限り、長さ 3 のシーケンスとして振る舞います。 "
+"よって、4次元ベクトル値としては扱いにくいですが、3次元ベクトル値としては扱いやすいものになっています。"
+msgstr ""
+"`.Vector` has w, but as long as it defaults to 1.0, it behaves as a sequence"
+" of length 3. Therefore, although it is difficult to handle as a "
+"4-dimensional vector value, it is easy to handle as a 3-dimensional vector "
+"value."
+
+#: ../srcs/gettingstarted.rst:468
+msgid ""
+"たとえば、double3型アトリビュートの値に直接セットすることができます。 ゲットで得られるのは `list` ですが、そこからすぐに "
+"`.Vector` にすることもできます。"
+msgstr ""
+"For example, you can set it directly to the value of a double3 type "
+"attribute. What you get is a `list`, but you can also immediately turn it "
+"into a `.Vector`."
+
+#: ../srcs/gettingstarted.rst:481
+msgid "Matrix"
+msgstr "Matrix"
+
+#: ../srcs/gettingstarted.rst:482
+msgid "`.Matrix` (`.M`) は4x4行列クラスで、Maya API の :mayaapi2:`MMatrix` に相当します。"
+msgstr ""
+"`.Matrix` (`.M`) is a 4x4 matrix class and corresponds to "
+":mayaapi2:`MMatrix` in the Maya API."
+
+#: ../srcs/gettingstarted.rst:484
+msgid ""
+"matrix型アトリビュートのゲットやセットや `.DagNode` の `~.DagNodeMixin.getM` や "
+"`~.TransformMixin.setM` で直接サポートされます。"
+msgstr ""
+"It is directly supported by getting and setting matrix type attributes and "
+"by `.DagNode`'s `~.DagNodeMixin.getM` and `~.TransformMixin.setM`."
+
+#: ../srcs/gettingstarted.rst:486
+msgid ""
+"以下は、ローカルマトリックスを取得する例です。 プラグから得ることでも `~.DagNodeMixin.getM` "
+"を使用することでも、同じものが得られます。"
+msgstr ""
+"Below is an example to get the local matrix. You can get the same thing "
+"either from the plug or using `~.DagNodeMixin.getM`."
+
+#: ../srcs/gettingstarted.rst:499
+msgid "以下は、ワールドマトリックスを取得する例です。 `既に説明済み`__ ですが、 wm にはインデックスを指定しないことが推奨されます。"
+msgstr ""
+"Below is an example of getting the world matrix. As `already explained`__, "
+"it is recommended not to specify an index for wm."
+
+#: ../srcs/gettingstarted.rst:512
+msgid "以下は `~.TransformMixin.setM` の使用例です。"
+msgstr "Below is an example of using `~.TransformMixin.setM`."
+
+#: ../srcs/gettingstarted.rst:519
+msgid "``*`` 演算子で `.Matrix` 同士の積を計算できます。"
+msgstr "You can use the ``*`` operator to calculate the product of `.Matrix`."
+
+#: ../srcs/gettingstarted.rst:524
+msgid "`.Vector` に `.Matrix` を乗じるか `~.Vector.xform4` メソッドで、位置座標を変換できます。"
+msgstr ""
+"You can convert the position coordinates by multiplying `.Vector` by "
+"`.Matrix` or using the `~.Vector.xform4` method."
+
+#: ../srcs/gettingstarted.rst:532
+msgid ""
+"また、方向ベクトルを変換するには `~.Vetor.xform3` メソッドを使用します。 それは w が 0.0 の場合に似ていますが、 "
+"`~.Vector.xform3` を用いれば w はデフォルトの 1.0 のままです。"
+msgstr ""
+"Also, use the `~.Vetor.xform3` method to convert the direction vector. It is"
+" similar to when w is 0.0, but with `~.Vector.xform3` w remains at the "
+"default of 1.0."
+
+#: ../srcs/gettingstarted.rst:540
+msgid "`.Matrix` を他の型に変換する操作もサポートされています。"
+msgstr "Converting `.Matrix` to other types is also supported."
+
+#: ../srcs/gettingstarted.rst:542
+msgid ""
+"平行移動値を取り出す `~.Matrix.asTM` や `~.Matrix.asT` 、 回転を取り出す `~.Matrix.asRM` や "
+"`~.Matrix.asQ` や `~.Matrix.asE` や `~.Matrix.asD` 、 スケールやシアーを取り出す "
+"`~.Matrix.asSM` や `~.Matrix.asS` や `~.Matrix.asSh` 、 全部まとめて分解（ "
+"`.Transformation` を得る）する `~.Matrix.asX` などがあります。"
+msgstr ""
+"`~.Matrix.asTM` and `~.Matrix.asT` to extract the translation value, "
+"`~.Matrix.asRM`, `~.Matrix.asQ`, `~.Matrix.asE` and `~.Matrix.asD` to "
+"extract the rotation value, `~.Matrix.asSM` and `~.Matrix.asS` to extract "
+"the scale and shear. There is `~.Matrix.asSh`, `~.Matrix.asX` which "
+"decomposes everything (obtains `.Transformation`), etc."
+
+#: ../srcs/gettingstarted.rst:551
+msgid "Quaternion"
+msgstr "Quaternion"
+
+#: ../srcs/gettingstarted.rst:552
+msgid ""
+"`.Quaternion` (`.Q`) はクォータニオンクラスで、Maya API の :mayaapi2:`MQuaternion` に相当します。"
+msgstr ""
+"`.Quaternion` (`.Q`) is a quaternion class and corresponds to "
+":mayaapi2:`MQuaternion` in the Maya API."
+
+#: ../srcs/gettingstarted.rst:554
+msgid "長さ 4 のシーケンスとしても振る舞います。"
+msgstr "It also behaves as a sequence of length 4."
+
+#: ../srcs/gettingstarted.rst:556
+msgid "ノードの `~.DagNodeMixin.getQ` メソッドで、ノードの回転値を `.Quaternion` で得ることができます。"
+msgstr ""
+"You can get the node's rotation value in `.Quaternion` using the node's "
+"`~.DagNodeMixin.getQ` method."
+
+#: ../srcs/gettingstarted.rst:558
+msgid ""
+"以下のコードは :ref:`gettingstarted-datatypes-matrix` で説明した例の続きで、 "
+"`~.DagNodeMixin.getQ` の使用例です。"
+msgstr ""
+"The code below is a continuation of the example described in "
+":ref:`gettingstarted-datatypes-matrix` and is an example of the use of "
+"`~.DagNodeMixin.getQ`."
+
+#: ../srcs/gettingstarted.rst:570
+msgid ""
+"`~.DagNodeMixin.getQ` は、デフォルトでは rotateAxis を含まない回転を得られます（jointOrient や "
+"ws=True による上位の変換は含まれます）。 `~.DagNodeMixin.getJOQ` では、rotate "
+"を含まない回転（jointOrient まで）を得られます。 さきほどの例は、 :mayanode:`transform` ノードなので "
+"jointOrient を持たないため、親で `~.DagNodeMixin.getQ` することと等しくなります。"
+msgstr ""
+"`~.DagNodeMixin.getQ` gets a rotation that does not include rotateAxis by "
+"default (but does include higher-level transformations due to jointOrient "
+"and ws=True). `~.DagNodeMixin.getJOQ` allows you to get rotations (up to "
+"jointOrient) that do not include rotate. In the previous example, since it "
+"is a :mayanode:`transform` node, it does not have a jointOrient, so it is "
+"equivalent to doing `~.DagNodeMixin.getQ` on the parent."
+
+#: ../srcs/gettingstarted.rst:577
+msgid "``*`` 演算子でクォータニオン同士の積を計算できます。"
+msgstr "You can calculate the product of quaternions with the ``*`` operator."
+
+#: ../srcs/gettingstarted.rst:582
+msgid ""
+"上記で b と a のローカルクォータニオンの積が b のワールドクォータニオンと等しくならないのは、a が非一様 scale を持っているからです。 "
+"a の scale を初期化すれば等しくなります。"
+msgstr ""
+"The reason why the product of the local quaternions of b and a above is not "
+"equal to the world quaternion of b is because a has a nonuniform scale. "
+"Initializing the scale of a will make them equal."
+
+#: ../srcs/gettingstarted.rst:589 ../srcs/gettingstarted.rst:617
+msgid "回転情報を扱う他の型との変換操作もサポートされています。"
+msgstr ""
+"Conversion operations with other types that handle rotation information are "
+"also supported."
+
+#: ../srcs/gettingstarted.rst:591
+msgid ""
+"`.Matrix` とは、その `~.Matrix.asQ` と `.Quaternion` の `~.Quaternion.asM` "
+"とで相互に変換ができます。 また、 `.EulerRotation` とは、その `~.EulerRotation.asQ` と "
+"`.Quaternion` の `~.Quaternion.asE` とで相互に変換ができます。 `~.Quaternion.asD` "
+"では、オイラー角回転を Degrees で得られます。 さらに、 `~.Quaternion.asX` では `.Transformation` "
+"型に変換できます。"
+msgstr ""
+"`.Matrix` can be converted to `~.Matrix.asQ` and `~.Quaternion.asM` of "
+"`.Quaternion`. Also, `.EulerRotation` can be converted to "
+"`~.EulerRotation.asQ` and `~.Quaternion.asE` of `.Quaternion`. "
+"`~.Quaternion.asD` gives Euler angular rotation in Degrees. Additionally, "
+"`~.Quaternion.asX` allows you to convert to the `.Transformation` type."
+
+#: ../srcs/gettingstarted.rst:601
+msgid "EulerRotation"
+msgstr "EulerRotation"
+
+#: ../srcs/gettingstarted.rst:602
+msgid ""
+"`.EulerRotation` (`.E`) はオイラー角回転クラスで、Maya API の :mayaapi2:`MEulerRotation` "
+"に相当します。"
+msgstr ""
+"`.EulerRotation` (`.E`) is the Euler angle rotation class and corresponds to"
+" :mayaapi2:`MEulerRotation` in the Maya API."
+
+#: ../srcs/gettingstarted.rst:604
+msgid ""
+"rotateOrder も持っていますが、単なる長さ 3 のシーケンスとしても振る舞いますので、 オイラー角回転値を持つ rotate 、 "
+"rotateAxis 、 jointOrient などのアトリビュートのセットやゲットに便利です。"
+msgstr ""
+"It also has rotateOrder , but it also behaves as just a sequence of length "
+"3, making it useful for setting and getting attributes such as rotate , "
+"rotateAxis , and jointOrient that have Euler angle rotation values."
+
+#: ../srcs/gettingstarted.rst:612
+msgid "`.degrot` 関数によって、Degrees 単位の値から取得することもできます。"
+msgstr "You can also get the value in degrees using the `.degrot` function."
+
+#: ../srcs/gettingstarted.rst:619
+msgid ""
+"`.Matrix` とは、その `~.Matrix.asE` と `.EulerRotation` の `~.EulerRotation.asM` "
+"とで相互に変換ができます。 また、 `.Quaternion` とは、その `~.Quaternion.asE` と `.EulerRotation` "
+"の `~.EulerRotation.asQ` とで相互に変換ができます。 `~.EulerRotation.asD` では、オイラー角回転を "
+"Degrees で得られます。 さらに、 `~.EulerRotation.asX` では `.Transformation` 型に変換できます。"
+msgstr ""
+"`.Matrix` can be converted to `~.Matrix.asE` and `~.EulerRotation.asM` of "
+"`.EulerRotation`. Also, `.Quaternion` can be converted between its "
+"`~.Quaternion.asE` and `.EulerRotation`'s `~.EulerRotation.asQ`. "
+"`~.EulerRotation.asD` gives Euler angular rotation in Degrees. Additionally,"
+" `~.EulerRotation.asX` allows you to convert to the `.Transformation` type."
+
+#: ../srcs/gettingstarted.rst:629
+msgid "Transformation"
+msgstr "Transformation"
+
+#: ../srcs/gettingstarted.rst:630
+msgid ""
+"`.Transformation` (`.X`) はトランスフォーメーション情報クラスで、 Maya API の "
+":mayaapi2:`MTransformationMatrix` に似ていますが、もっと洗練されています。"
+msgstr ""
+"`.Transformation` (`.X`) is a transformation information class, similar to "
+"the Maya API's :mayaapi2:`MTransformationMatrix`, but more sophisticated."
+
+#: ../srcs/gettingstarted.rst:633
+msgid ""
+"Mayaのmatrix型アトリビュートは、単なる「マトリックス」か「トランスフォーメーション情報」かの2種類の形式で情報を持てるようになっています。 "
+"cymelのクラスでいうと `.Matrix` か `.Transformation` です。"
+msgstr ""
+"Maya's matrix type attribute can have information in two types of formats: a"
+" simple \"matrix\" or \"transformation information\". In terms of cymel "
+"classes, it is `.Matrix` or `.Transformation`."
+
+#: ../srcs/gettingstarted.rst:636
+msgid ""
+"そして、 `~.Transformation` は、 :mayanode:`transform` ノードと :mayanode:`joint` "
+"ノードのローカルマトリックスに影響を与えるアトリビュートを オブジェクト属性として扱えるようにしつつ、`.Matrix` "
+"の合成・分解操作をサポートします。"
+msgstr ""
+"`~.Transformation` then supports composition and decomposition operations on"
+" `.Matrix` while allowing attributes that affect the local matrix of "
+":mayanode:`transform` and :mayanode:`joint` nodes to be treated as object "
+"attributes."
+
+#: ../srcs/gettingstarted.rst:640
+msgid ""
+"トランスフォーメーションを `.Matrix` として扱うと、元のアトリビュート値は維持されませんが "
+"（translate、rotate、scale、shearには分解できますが、ピボットや複数の回転アトリビュートなどの元の状態の完全な復元はできません）、"
+" `.Transformation` として扱えば、アトリビュートの状態を完全に保持できます。"
+msgstr ""
+"Treating a transformation as a `.Matrix` will not preserve the original "
+"attribute values ​​(you can decompose it into translate, rotate, scale, and "
+"shear, but you will not be able to fully restore the original state of "
+"pivots, multiple rotation attributes, etc.), but treating it as a "
+"`.Transformation` will fully preserve the state of the attributes."
+
+#: ../srcs/gettingstarted.rst:644
+msgid ""
+"なお、2020から追加された offsetParentMatrix はローカルマトリックスには含まれず parentMatrix "
+"に含まれる扱いとなるため、 `.Transformation` のオブジェクト属性としてはサポートされません。"
+msgstr ""
+"In addition, offsetParentMatrix added from 2020 is not included in the local"
+" matrix but is treated as included in parentMatrix, so it is not supported "
+"as an object attribute of `.Transformation`."
+
+#: ../srcs/gettingstarted.rst:647
+msgid "では、その働きを見るために、まず、ノードを1つ作り、アトリビュートを細かく設定します。"
+msgstr ""
+"Now, to see how it works, first create a node and set the attributes in "
+"detail."
+
+#: ../srcs/gettingstarted.rst:659
+msgid "translate、rotate、scale だけでなく rotateOrder や rotateAxis 、ピボットなども設定しました。"
+msgstr ""
+"We configured not only translate, rotate, and scale, but also rotateOrder, "
+"rotateAxis, pivot, etc."
+
+#: ../srcs/gettingstarted.rst:661
+msgid "そして、アトリビュート m と xm をゲットした結果を比べてみます。"
+msgstr "Then, compare the results of getting attributes m and xm."
+
+#: ../srcs/gettingstarted.rst:668
+msgid ""
+"m も xm も同じmatrix型アトリビュートですが、m には単なるマトリックスが出力され、xm にはトランスフォーメーション情報が出力されています。"
+" そして、cymel はそれらをそのまま取得できます。"
+msgstr ""
+"Both m and xm are matrix type attributes, but m outputs a simple matrix and "
+"xm outputs transformation information. And cymel can get them as is."
+
+#: ../srcs/gettingstarted.rst:671
+msgid ""
+"トランスフォーメーション情報を持っているアトリビュートでも単なるマトリックスとして評価することもできます（ :mayanode:`getAttr` "
+"コマンドではそうなります）。 その場合は、明示的に `~.Plug_c.getM` メソッドを使うか、得られた `.Transformation` "
+"の属性 ``m`` を参照します。"
+msgstr ""
+"An attribute that contains transformation information can also be evaluated "
+"as a simple matrix (as the :mayanode:`getAttr` command does). In that case, "
+"use the `~.Plug_c.getM` method explicitly, or refer to the ``m`` attribute "
+"of the resulting `.Transformation`."
+
+#: ../srcs/gettingstarted.rst:679
+msgid ""
+"ノードから `.Transformation` を得るには `~.DagNodeMixin.getX` メソッドも利用できます。 xm "
+"アトリビュートからゲットすることと等しいですが、 `~.DagNodeMixin.getX` ではワールドスペースの値を得ることもできます。"
+msgstr ""
+"You can also use the `~.DagNodeMixin.getX` method to get the "
+"`.Transformation` from a node. Equivalent to getting from the xm attribute, "
+"but you can also get the world space value with `~.DagNodeMixin.getX`."
+
+#: ../srcs/gettingstarted.rst:692
+msgid ""
+"一方、`.Transformation` 情報をセットするには `~.TransformMixin.setX` メソッドが便利です。 それは "
+"`.Transformation` が持っている全ての属性値を、 :mayanode:`transform` や :mayanode:`joint` "
+"ノードのプラグに、そのままセットすることに相当します。"
+msgstr ""
+"On the other hand, the `~.TransformMixin.setX` method is useful for setting "
+"`.Transformation` information. This corresponds to setting all the attribute"
+" values ​​of `.Transformation` to the :mayanode:`transform` or "
+":mayanode:`joint` node plug."
+
+#: ../srcs/gettingstarted.rst:696
+msgid ""
+"たとえば、以下に示すように `~.TransformMixin.setM` "
+"メソッドではマトリックスを完全に一致させることができますが、個々のプラグ値までは一致しません。"
+msgstr ""
+"For example, as shown below, the `~.TransformMixin.setM` method allows you "
+"to match the matrix exactly, but not down to the individual plug values."
+
+#: ../srcs/gettingstarted.rst:717
+msgid ""
+"しかし、 `~.TransformMixin.setX` では、プラグ値を全て一致させることができます。 "
+"プラグ値の完全なコピーができるので、個々の値に誤差もないため、この例では単純に == で比較しています。"
+msgstr ""
+"However, `~.TransformMixin.setX` allows you to match all plug values. Since "
+"we have a complete copy of the plug value, there are no errors in the "
+"individual values, so in this example we simply compare using ==."
+
+#: ../srcs/gettingstarted.rst:738
+msgid ""
+":mayanode:`joint` ノードと :mayanode:`transform` ノードのように、使用できるアトリビュートが異なるノード間でも "
+"`.Transformation` をコピーできます。 :mayanode:`joint` には jointOrient や inverseScale "
+"などの :mayanode:`transform` には無いアトリビュートが追加されている一方、ピボットは変更できません。 shear "
+"は隠されていますが変更可能です（Maya 2019 から 2020.0 まで shear が変更できない問題がありましたが修正されました）。"
+msgstr ""
+"You can also copy `.Transformation` between nodes that have different "
+"available attributes, such as :mayanode:`joint` and :mayanode:`transform` "
+"nodes. :mayanode:`joint` has additional attributes that "
+":mayanode:`transform` does not have, such as jointOrient and inverseScale, "
+"while the pivot cannot be changed. Shear is hidden but modifiable (there was"
+" an issue from Maya 2019 to 2020.0 where shear could not be modified, but "
+"this has been fixed)."
+
+#: ../srcs/gettingstarted.rst:742
+msgid ""
+"以下の例では、これまでと同じ `.Transformation` を :mayanode:`joint` ノードにセットしています。 "
+"ピボットは変更せずに維持しされつつ、マトリックスが一致するように translate 値が調整されているのを確認できます。"
+msgstr ""
+"In the example below, we set the same `.Transformation` on the "
+":mayanode:`joint` node. You can see the translate value being adjusted to "
+"match the matrix while keeping the pivot unchanged."
+
+#: ../srcs/gettingstarted.rst:768
+msgid "Transformation を利用した Matrix の分解"
+msgstr "Matrix decomposition using Transformation"
+
+#: ../srcs/gettingstarted.rst:769
+msgid "これまでの例では `.Transformation` をノードから取得しましたが、もちろん、単なる値として生成することもできます。"
+msgstr ""
+"In the previous examples we retrieved the `.Transformation` from the node, "
+"but of course you could just generate it as a value."
+
+#: ../srcs/gettingstarted.rst:771
+msgid "たとえば、以下のようにコンストラクタに属性値を指定して生成できます。"
+msgstr ""
+"For example, you can generate it by specifying attribute values ​​in the "
+"constructor as shown below."
+
+#: ../srcs/gettingstarted.rst:776
+msgid ""
+"回転情報は `.EulerRotation` ではなく `.Quaternion` で指定することもできます。 以下は最初に内部的に設定される値が "
+"`.Quaternion` になっていますが、結局同じ `.Transformation` を生成していることになります。"
+msgstr ""
+"Rotation information can also be specified with `.Quaternion` instead of "
+"`.EulerRotation`. In the following example, the value initially set "
+"internally is `.Quaternion`, but in the end the same `.Transformation` is "
+"generated."
+
+#: ../srcs/gettingstarted.rst:782
+msgid "また、コンストラクタには `.Matrix` をそのまま渡せます。"
+msgstr "You can also pass `.Matrix` as is to the constructor."
+
+#: ../srcs/gettingstarted.rst:784
+msgid ""
+"それは `~.Matrix.asX` メソッドを使用することと同じです （割愛しますが、属性名を指定せずに `.EulerRotation` や "
+"`.Quaternion` をそのまま指定することも同様に可能です）。"
+msgstr ""
+"It is the same as using the `~.Matrix.asX` method (although I won't mention "
+"it, it is also possible to just specify `.EulerRotation` or `.Quaternion` "
+"without specifying the attribute name)."
+
+#: ../srcs/gettingstarted.rst:787
+msgid "以下の例では、 `~.Matrix` から `.Transformation` を得るとともに、その属性値を参照しています。"
+msgstr ""
+"In the example below, we get `.Transformation` from `~.Matrix` and reference"
+" its attribute value."
+
+#: ../srcs/gettingstarted.rst:801
+msgid ""
+"得られた `.Transformation` から q や r や s や sh や t などの値を得ることができますので、 "
+"この操作はマトリックスをトランスフォーメーション要素に分解することと等しいわけです。"
+msgstr ""
+"Since we can obtain values ​​such as q, r, s, sh, and t from the obtained "
+"`.Transformation`, this operation is equivalent to decomposing the matrix "
+"into transformation elements."
+
+#: ../srcs/gettingstarted.rst:804
+msgid "さらに、進んだ操作として、ピボットなどの補助属性を条件として設定した上で、マトリックスを分解することもできます。"
+msgstr ""
+"As a more advanced operation, you can also condition on auxiliary attributes"
+" such as pivot and then decompose the matrix."
+
+#: ../srcs/gettingstarted.rst:823
+msgid ""
+"上記の例では、最初にピボットや jointOrient などを設定し（コンストラクタの引数で指定することもできます）、最後に matrix "
+"を代入しています。 そして、補助属性とマトリックスから逆算される t と r (または q ) と s と sh が分解されているのです。"
+msgstr ""
+"In the above example, we first set the pivot, jointOrient, etc. (which can "
+"also be specified with constructor arguments), and then assign matrix at the"
+" end. Then, t, r (or q ), s, and sh, which are calculated backwards from the"
+" auxiliary attributes and the matrix, are decomposed."
+
+#: ../srcs/gettingstarted.rst:831
+msgid "アトリビュートとデータタイプのさらなる使用例"
+msgstr "More examples of using attributes and data types"
+
+#: ../srcs/gettingstarted.rst:832
+msgid ""
+"`.Transformation` の例で使用した m や xm などのアトリビュートは出力専用アトリビュートでしたので、 "
+"ダイナミックアトリビュートを使って、もう少し試してみましょう。"
+msgstr ""
+"The attributes like m and xm used in the `.Transformation` example were "
+"output-only attributes, so let's experiment a little more with dynamic "
+"attributes."
+
+#: ../srcs/gettingstarted.rst:835
+msgid ""
+"`.Node` の `~.Node.addAttr` メソッドは :mayacmd:`addAttr` "
+"コマンドを簡単に使用できるようにしたラッパーです。"
+msgstr ""
+"The `~.Node.addAttr` method of `.Node` is a wrapper that makes it easy to "
+"use the :mayacmd:`addAttr` command."
+
+#: ../srcs/gettingstarted.rst:837
+msgid "たとえば、double3 型アトリビュートの追加も、以下のように簡単です。"
+msgstr "For example, adding a double3 type attribute is as simple as:"
+
+#: ../srcs/gettingstarted.rst:843
+msgid "それでは、matrix型アトリビュートを追加してみます。"
+msgstr "Now, let's add a matrix type attribute."
+
+#: ../srcs/gettingstarted.rst:848
+msgid "追加したアトリビュートの初期値は値を返しません（None）。 データ型アトリビュートの初期値は null だからです。"
+msgstr ""
+"The initial value of the added attribute returns no value (None). This is "
+"because the initial value of the data type attribute is null."
+
+#: ../srcs/gettingstarted.rst:851
+msgid "以下のように、 `.Matrix` をセットすれば、その値を返すようになります。"
+msgstr "If you set `.Matrix` as shown below, that value will be returned."
+
+#: ../srcs/gettingstarted.rst:857
+msgid "または、 `.Transformation` をセットしても同様です。"
+msgstr "Alternatively, you can also set `.Transformation`."
+
+#: ../srcs/gettingstarted.rst:863
+msgid "matrix型は、どちらの形式でも値を保持できます。"
+msgstr "The matrix type can hold values ​​in either format."
+
+#: ../srcs/gettingstarted.rst:865
+msgid ""
+"`.Plug` は本来のコマンドでは不可能な `~.Plug.reset` メソッドも持っています（もちろん undo も可能です）。 初期値は "
+"null でしたので、リセットすると null に戻ります（Python では None）。"
+msgstr ""
+"`.Plug` also has a `~.Plug.reset` method which is not possible with the "
+"original command (undo is of course possible). The initial value was null, "
+"so if you reset it, it will return to null (None in Python)."
+
+#: ../srcs/gettingstarted.rst:871
+msgid "そして、実は、 `~.Node.addAttr` の際にデフォルト値を指定することもできます。"
+msgstr ""
+"And, in fact, you can also specify a default value during `~.Node.addAttr`."
+
+#: ../srcs/gettingstarted.rst:873
+msgid ""
+"本来のコマンドでは、デフォルト値の指定は数値型のアトリビュートでしかサポートされていませんが、cymel なら可能です（もちろん undo "
+"も可能です）。"
+msgstr ""
+"In the original command, specifying a default value is only supported for "
+"numeric attributes, but it is possible in cymel (and of course undo is also "
+"possible)."
+
+#: ../srcs/gettingstarted.rst:875
+msgid "以下の例では、デフォルト値に `.Transformation` を指定したアトリビュートを追加しています。"
+msgstr ""
+"The example below adds an attribute with `.Transformation` as its default "
+"value."
+
+#: ../srcs/gettingstarted.rst:892
+msgid "カスタムクラス"
+msgstr "custom class"
+
+#: ../srcs/gettingstarted.rst:893
+msgid "cymel では、標準で備わっているノードやプラグのクラスを継承した独自のクラスを使用することができます。"
+msgstr ""
+"cymel allows you to use your own classes that inherit from the standard node"
+" and plug classes."
+
+#: ../srcs/gettingstarted.rst:899
+msgid "カスタムノードクラス"
+msgstr "custom node class"
+
+#: ../srcs/gettingstarted.rst:900
+msgid ""
+"独自のノードクラスを使用する最も簡単な方法は、そのノードタイプに対応する標準のクラスを継承したクラスを実装し、使用する際はただそれを明示することです。"
+msgstr ""
+"The easiest way to use your own node class is to implement a class that "
+"inherits from the standard class for your node type, and then just use it "
+"explicitly."
+
+#: ../srcs/gettingstarted.rst:902
+msgid "次のコードでは、標準の `.Transform` クラスを継承した ``MyTransform`` クラスを作っています。"
+msgstr ""
+"The following code creates a ``MyTransform`` class that inherits from the "
+"standard ``.Transform`` class."
+
+#: ../srcs/gettingstarted.rst:920
+msgid ""
+"Maya API の :mayaapi2:`MFnTransformation` クラスの持つ Rest Position "
+"機能を利用して、現在のポーズを一時的に保存したり、その状態に戻ったりするメソッドを実装しています。APIのこの機能は、Maya内部では使用されず、シーンファイルにも保存されない、APIレベルの一時的なキャッシュです。"
+" APIでの操作となると通常はアンドゥはできませんが、この実装では cymel の `.docmd` を使用してアンドゥにも対応させています。"
+msgstr ""
+"Using the Rest Position function of the Maya API's "
+":mayaapi2:`MFnTransformation` class, we have implemented a method to "
+"temporarily save the current pose and return to that state. This feature of "
+"the API is a temporary API-level cache that is not used internally by Maya "
+"and is not stored in the scene file. Normally, undo is not possible when "
+"using the API, but this implementation uses cymel's `.docmd` to support "
+"undo."
+
+#: ../srcs/gettingstarted.rst:923
+msgid "以下はこのクラスの使用例です。"
+msgstr "Below is an example of how to use this class."
+
+#: ../srcs/gettingstarted.rst:940
+msgid ""
+"この例では、実装した ``MyTransform`` クラスを明示してインスタンスを得る必要があります。 `.sel` や `.selected` "
+"でカレントセレクションから得たり、親や子の :mayanode:`transform` やコネクションを辿って得られるオブジェジェクトでは通常の "
+"`.Transform` クラスが使用されてしまい ``MyTransform`` クラスが使用されることはありません。"
+msgstr ""
+"In this example, we need to explicitly implement the ``MyTransform`` class "
+"and obtain an instance of it. Objects obtained from the current selection "
+"with `.sel` or `.selected`, or by tracing parent and child "
+":mayanode:`transform` or connections, use the normal `.Transform` class and "
+"never the ``MyTransform`` class."
+
+#: ../srcs/gettingstarted.rst:947
+msgid "検査メソッド付きノードクラスの登録"
+msgstr "Registering a node class with inspection methods"
+
+#: ../srcs/gettingstarted.rst:948
+msgid ""
+"カスタムクラスを明示せずにそのインスタンスを得られるようにするには、そのクラスを `.NodeTypes` (別名: `cm.nt` ) "
+"に登録する必要があります。登録するには `.NodeTypes.registerNodeClass` を使用します。"
+msgstr ""
+"To be able to obtain instances of a custom class without explicitly "
+"mentioning it, you must register the class in `.NodeTypes` (also known as "
+"`cm.nt`). Use `.NodeTypes.registerNodeClass` to register."
+
+#: ../srcs/gettingstarted.rst:950
+msgid ""
+"早速 ``MyTransform`` クラスを登録してみましょう、といきたいところですが、このクラスは :mayanode:`transform` "
+"ノードタイプに対応する標準の `.Transform` クラスを継承したものなので、そのまま登録しようとすると "
+":mayanode:`transform` に対応するクラスが2つになってしまい、その使い分けをどうするかが問題になります。"
+msgstr ""
+"We would like to register the ``MyTransform`` class right away, but this "
+"class inherits the standard `.Transform` class that corresponds to the "
+":mayanode:`transform` node type, so if we try to register it as is, there "
+"will be two classes that correspond to :mayanode:`transform`, and the "
+"problem will be how to use them properly."
+
+#: ../srcs/gettingstarted.rst:952
+msgid ""
+"この問題を解決するには、同じ :mayanode:`transform` タイプでも ``MyTransform`` "
+"を利用すべきかどうでないかを判別するためのタグ情報をノードに実際に追加するようにします。どのようなタグにするかは完全に自由ですが、シーンファイルに保存されることが望ましいので、カスタムアトリビュートを使用することが一般的です。"
+msgstr ""
+"To solve this problem, we can actually add tag information to the node to "
+"determine whether ``MyTransform`` should be used or not, even though it has "
+"the same :mayanode:`transform` type. The tag you use is completely up to "
+"you, but it's usually best to use custom attributes, as they should be "
+"stored in the scene file."
+
+#: ../srcs/gettingstarted.rst:954
+msgid ""
+"クラスでタグを識別する仕組みと、ノードを新規に作成した際にタグを追加する仕組みは、cymel のクラスでサポートされているので、さきほどの "
+"``MyTransform`` クラスに、次の2つのメソッドを追加実装します（これらのメソッドは cyeml "
+"のクラスタシステムで決められているルールです）。"
+msgstr ""
+"The mechanism for identifying tags in a class and the mechanism for adding "
+"tags when creating a new node are supported by the cymel class, so we will "
+"add the following two methods to the ``MyTransform`` class (these methods "
+"are rules determined by the cyeml cluster system)."
+
+#: ../srcs/gettingstarted.rst:973
+msgid ""
+"絶対に必要なのは検査メソッド `_verifyNode <.NodeTypes.registerNodeClass>` のみで、生成メソッド "
+"`~.Node_c.createNode` は実装が推奨されているくらいの位置付けです。"
+msgstr ""
+"Only the verification method `_verifyNode <.NodeTypes.registerNodeClass>` is"
+" absolutely necessary, and the creation method `~.Node_c.createNode` is only"
+" recommended to be implemented."
+
+#: ../srcs/gettingstarted.rst:975
+msgid ""
+"最後に `~.NodeTypes.registerNodeClass` を呼び出して、クラスを cymel "
+"に登録しています。第二引数には、紐付けるノードタイプ名を指定します。"
+msgstr ""
+"Finally, we call `~.NodeTypes.registerNodeClass` to register the class with "
+"cymel. The second argument specifies the node type name to be linked."
+
+#: ../srcs/gettingstarted.rst:977
+msgid ""
+"もし、検査メソッド ``_verifyNode`` を実装していない ``MyTransform`` "
+"クラスを登録しようとすると、ノードタイプの継承関係と完全に一致しないという理由でエラーになります（Maya の "
+":mayanode:`transform` の親タイプは :mayanode:`dagNode` なので、クラスでも `.DagNode` "
+"を直接継承しなければならないため）。"
+msgstr ""
+"If you try to register a ``MyTransform`` class that does not implement the "
+"verification method ``_verifyNode``, you will get an error because the "
+"inheritance relationship of the node types does not exactly match (the "
+"parent type of Maya's :mayanode:`transform` is :mayanode:`dagNode`, so the "
+"class must directly inherit from `.DagNode`)."
+
+#: ../srcs/gettingstarted.rst:979
+msgid ""
+"一方、検査メソッド付きのクラスでは、ノードタイプとの関連付けは厳格でなくても良いので、紐付けるノードタイプは、矛盾さえなければ割と自由に指定できます。たとえば、"
+" :mayanode:`transform` の代わりに :mayanode:`dagNode` や :mayanode:`node` "
+"などを指定して、広範囲のノードタイプに対応させることもできます（その場合は、継承するクラスも `.DagNode` や `.Node` "
+"にすべきですし、この例で実装した機能は :mayaapi2:`MFnTransform` の機能を利用したものなので無理がありますが）。 また、 "
+"`~.NodeTypes.registerNodeClass` を複数回呼び出して、継承関係の無い複数のノードタイプに紐付けることさえできます。"
+msgstr ""
+"On the other hand, for classes with inspection methods, the association with"
+" node types does not have to be strict, so the node types to be linked can "
+"be specified fairly freely as long as there are no conflicts. For example, "
+"instead of :mayanode:`transform` you could specify :mayanode:`dagNode` or "
+":mayanode:`node` to cover a wide range of node types (in that case, the "
+"inherited class should also be `.DagNode` or `.Node`, and the functionality "
+"implemented in this example is :mayaapi2:`MFnTransform` However, it is "
+"impossible because it uses the function of ). You can even call "
+"`~.NodeTypes.registerNodeClass` multiple times to bind multiple non-"
+"inheritance node types."
+
+#: ../srcs/gettingstarted.rst:982
+msgid ""
+"cymel の通常の使用方法として、ノードクラスのインスタンスを得る際に既存の名前を指定しなければ `~.Node_c.createNode` "
+"が発動します。 次のように使用できます。"
+msgstr ""
+"Normal usage of cymel is that when you obtain an instance of a node class, "
+"if you do not specify an existing name, `~.Node_c.createNode` is invoked. "
+"You can use it like this:"
+
+#: ../srcs/gettingstarted.rst:990
+msgid "このように作成したノードは、識別タグ（カスタムアトリビュート）が設定されているので、 `.sel` などで普通に得ることができます。"
+msgstr ""
+"The node created in this way has an identification tag (custom attribute) "
+"set, so it can be obtained normally with `.sel` etc."
+
+#: ../srcs/gettingstarted.rst:995
+msgid ""
+"しかし、先ほどの例のように作成済みのキューブなどには利用できないので、既存の :mayanode:`transform` "
+"にもタグのアトリビュートを追加するメソッドを追加すれば良いです。そのやり方は完全に自由で、システムでも何もサポートされていません。ここでは、次のように "
+"``addClassTag`` クラスメソッドを追加し、先ほどの `~.Node_c.createNode` メソッドでもそれを呼ぶように変更します。 "
+"``_verifyNode`` やその他のメソッドはそのままです。"
+msgstr ""
+"However, as in the previous example, it cannot be used for cubes that have "
+"already been created, so you can also add a method to add tag attributes to "
+"the existing :mayanode:`transform`. You are completely free to do so and "
+"there is no system support. Here, add the ``addClassTag`` class method as "
+"shown below, and change the `~.Node_c.createNode` method from earlier to "
+"call it as well. ``_verifyNode`` and other methods remain the same."
+
+#: ../srcs/gettingstarted.rst:1012
+msgid ""
+"これで以下のようにして既存 :mayanode:`transform` にもタグを追加することで、 ``MyTransform`` "
+"が使用されるようにできます。"
+msgstr ""
+"Now you can add a tag to the existing :mayanode:`transform` as follows, so "
+"that ``MyTransform`` is used."
+
+#: ../srcs/gettingstarted.rst:1023
+msgid "ベーシックノードクラスの登録"
+msgstr "Registering a basic node class"
+
+#: ../srcs/gettingstarted.rst:1024
+msgid ""
+"先ほどの ``MyTransform`` は、標準のクラス `.Transform` が在った上で、それに機能追加したクラスを実装していました。 "
+"しかし、標準のクラスを完全に乗っ取ってしまいたいこともあります。"
+msgstr ""
+"The ``MyTransform`` mentioned earlier had the standard class `.Transform` "
+"and implemented a class that added functionality to it. However, sometimes "
+"you may want to completely take over a standard class."
+
+#: ../srcs/gettingstarted.rst:1027
+msgid "実際は、標準のクラスを乗っ取るというより、標準だと何の機能も実装されていないノードタイプのクラスを自前で実装したいことがあります。"
+msgstr ""
+"Actually, rather than hijacking a standard class, you may want to implement "
+"your own node type class, which does not have any functionality implemented "
+"in the standard."
+
+#: ../srcs/gettingstarted.rst:1029
+msgid ""
+"cymel "
+"では全てのノードタイプに対応したクラスが提供されますが、本当に機能が実装されたクラスはごくわずかで、ほとんどのものは自動生成されるクラスでノードタイプ階層をクラス階層にマップする意義くらいしかありません。"
+" 全てのノードタイプクラスは `cm.nt <.NodeTypes>` "
+"で提供されますが、標準で機能が実装されていないクラスは最初にアクセスした際に自動生成されます。それは、クラスの出自を確認することで判別できます。"
+msgstr ""
+"Cymel provides classes for all node types, but only a few classes actually "
+"implement the functionality, and most of them are automatically generated "
+"classes whose only purpose is to map the node type hierarchy to the class "
+"hierarchy. All node type classes are provided in `cm.nt <.NodeTypes>`, but "
+"classes whose functionality is not implemented by default are automatically "
+"generated when accessed for the first time. You can determine this by "
+"checking the origin of the class."
+
+#: ../srcs/gettingstarted.rst:1043
+msgid ""
+"`cymel.core.typeregistry` に在るのが自動生成されたクラスです。上記の例では `Joint` と `ObjectSet` "
+"がそれにあたります。それらは、ただそのノードタイプに対応したクラスがあるだけで、特別な機能は何も持っていません。 "
+"もちろん、プラグインで追加したノードタイプに対応するクラスも自動生成されますが、当然、何も特別な機能は持ちません。"
+msgstr ""
+"The automatically generated classes are located in "
+"`cymel.core.typeregistry`. In the example above, these are `Joint` and "
+"`ObjectSet`. They don't have any special functionality, just a class for "
+"that node type. Of course, classes corresponding to node types added with "
+"plugins are also automatically generated, but of course they do not have any"
+" special functionality."
+
+#: ../srcs/gettingstarted.rst:1046
+msgid "それらを自分で実装してしまっても良いでしょう。"
+msgstr "You can also implement them yourself."
+
+#: ../srcs/gettingstarted.rst:1048
+msgid ""
+"ノードタイプに一対一で対応させる場合は、検査メソッド ``_verifyNode`` や生成メソッド `~.Node_c.createNode` "
+"は不要です。ただ `~.NodeTypes.registerNodeClass` するだけです。 "
+"ただし、クラス階層が実際のノードタイプ階層と完全に一致している必要があるので、クラスの継承は正確に指定する必要があります。自動で解決されるように記述するには"
+" `~.NodeTypes.parentBasicNodeClass` メソッドの使用が便利です。"
+msgstr ""
+"If there is a one-to-one correspondence between node types, the verification"
+" method ``_verifyNode`` and creation method `~.Node_c.createNode` are not "
+"required. Just `~.NodeTypes.registerNodeClass`. However, class inheritance "
+"must be specified precisely because the class hierarchy must exactly match "
+"the actual node type hierarchy. It is convenient to use the "
+"`~.NodeTypes.parentBasicNodeClass` method to write automatic resolution."
+
+#: ../srcs/gettingstarted.rst:1051
+msgid ""
+"次の例は :mayanode:`objectSet` タイプに対応するクラスの実装例です（あくまでも簡易的な実装で、あまり深くは考えていません）。"
+msgstr ""
+"The following example is an implementation example of a class that "
+"corresponds to the :mayanode:`objectSet` type (this is just a simple "
+"implementation and I haven't thought about it too deeply)."
+
+#: ../srcs/gettingstarted.rst:1073
+msgid "もし、そのノードタイプに対してクラスが既に生成されていたら次のような警告が出力された上で上書き登録されます。"
+msgstr ""
+"If a class has already been generated for that node type, the following "
+"warning will be output and the class will be overwritten and registered."
+
+#: ../srcs/gettingstarted.rst:1079
+msgid ""
+"そのクラスを継承しているクラスが存在するならいったん全て登録抹消されます。それらのノードタイプのクラスも次に評価された際に再生成されますが、生成済みのインスタンスは登録抹消されたクラスのままとなるので気をつけてください。このようなことから、クラスの登録は"
+" Maya 起動後の早い段階でやるのが望ましいといえます。"
+msgstr ""
+"If there are any classes that inherit from that class, they will all be "
+"unregistered. The classes of those node types will also be regenerated the "
+"next time they are evaluated, but be aware that the created instances will "
+"remain as unregistered classes. For this reason, it is recommended to "
+"register classes as early as possible after starting Maya."
+
+#: ../srcs/gettingstarted.rst:1086
+msgid "カスタムプラグクラス"
+msgstr "custom plug class"
+
+#: ../srcs/gettingstarted.rst:1087 ../srcs/gettingstarted.rst:1095
+msgid "(工事中)"
+msgstr "(under construction)"
+
+#: ../srcs/gettingstarted.rst:1094
+msgid "ユーティリティ"
+msgstr "utility"
+
+#: ../srcs/gettingstarted.rst:1102
+msgid "UIコントロールクラス"
+msgstr "UI control class"
+
+#: ../srcs/gettingstarted.rst:1103
+msgid "cymel は、MELの全てのUIコントロールをラップしたクラスを提供します。"
+msgstr "cymel provides classes that wrap all MEL UI controls."
+
+#: ../srcs/gettingstarted.rst:1105
+msgid ""
+"各クラス名は、MELコマンド名の先頭を大文字にした名前になります。 たとえば :mayacmd:`window` なら `.Window` "
+"という具合です。"
+msgstr ""
+"Each class name is the MEL command name with the first letter capitalized. "
+"For example, :mayacmd:`window` is `.Window`."
+
+#: ../srcs/gettingstarted.rst:1108
+msgid ""
+"pymel にとてもよく似ていて、大きな進化はしていません（たとえば with が少し使いやすくなっていたりしますが）。 使い方もほとんど同じです。"
+msgstr ""
+"It's very similar to pymel and hasn't evolved much (for example, with has "
+"become a little easier to use). The usage is almost the same."
+
+#: ../srcs/gettingstarted.rst:1111
+msgid "以下に簡単な使用例を示します。"
+msgstr "A simple usage example is shown below."

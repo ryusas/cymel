@@ -1,0 +1,799 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:2
+msgid "class cymel.core.datatypes.vector.Vector"
+msgstr "class cymel.core.datatypes.vector.Vector"
+
+#: cymel.core.datatypes.vector.Vector:1 of
+msgid "3次元ベクトルクラス。"
+msgstr "3D vector class."
+
+#: cymel.core.datatypes.vector.Vector:3 of
+msgid ""
+"座標と方向ベクトルを Maya API の :mayaapi2:`MPoint` と :mayaapi2:`MVector` "
+"のように使い分ける必要はなく、同じように扱うことができる。"
+msgstr ""
+"There is no need to use coordinates and direction vectors differently like "
+"the Maya API's :mayaapi2:`MPoint` and :mayaapi2:`MVector`; they can be "
+"handled in the same way."
+
+#: cymel.core.datatypes.vector.Vector:7 of
+msgid ""
+":mayaapi2:`MPoint` と同様に、 同次座標を表現可能な w を持つが、 w が 1 の場合は、長さ 3 のシーケンスとして振る舞う。 "
+"その場合、w はインデックス指定では参照できず、 属性としてのみ参照できる。"
+msgstr ""
+":mayaapi2:Like `MPoint`, it has w that can represent homogeneous "
+"coordinates, but if w is 1, it behaves as a sequence of length 3. In that "
+"case, w cannot be referenced by index specification, but only as an "
+"attribute."
+
+#: cymel.core.datatypes.vector.Vector:13 of
+msgid "w が 1 以外の場合は、長さ 4 のシーケンスとして振る舞う。 また、その場合のみ `str` や `repr` で確認できる。"
+msgstr ""
+"If w is not 1, it behaves as a sequence of length 4. Also, only in that case"
+" can you check with `str` or `repr`."
+
+#: cymel.core.datatypes.vector.Vector:16 of
+msgid ""
+"`.Matrix` を乗じると、 :mayaapi2:`MPoint` のように平行移動が可能だが、 :mayaapi2:`MVector` "
+"のように平行移動無しの変換をするには w を 0 に設定せずとも `xform3` メソッドを利用できる。"
+msgstr ""
+"Multiplying by `.Matrix` allows translation like :mayaapi2:`MPoint`, but to "
+"convert without translation like :mayaapi2:`MVector`, you can use the "
+"`xform3` method without setting w to 0."
+
+#: cymel.core.datatypes.vector.Vector:21 of
+msgid "つまり、同次座標表現をしない限り、w は常に 1 で使用すると良い。"
+msgstr ""
+"In other words, unless you use homogeneous coordinate representation, it is "
+"best to always use w as 1."
+
+#: cymel.core.datatypes.vector.Vector:23 of
+msgid "コンストラクタでは以下の値を指定可能。"
+msgstr "The following values ​​can be specified in the constructor."
+
+#: cymel.core.datatypes.vector.Vector:25
+#: cymel.core.datatypes.vector.Vector.abs:5
+#: cymel.core.datatypes.vector.Vector.add:5
+#: cymel.core.datatypes.vector.Vector.cross:7
+#: cymel.core.datatypes.vector.Vector.div:6
+#: cymel.core.datatypes.vector.Vector.ineg:3
+#: cymel.core.datatypes.vector.Vector.mul:5
+#: cymel.core.datatypes.vector.Vector.neg:3
+#: cymel.core.datatypes.vector.Vector.normal:3
+#: cymel.core.datatypes.vector.Vector.orthogonal:5
+#: cymel.core.datatypes.vector.Vector.rotateBy:7
+#: cymel.core.datatypes.vector.Vector.set:5
+#: cymel.core.datatypes.vector.Vector.slerp:12
+#: cymel.core.datatypes.vector.Vector.sub:5
+#: cymel.core.datatypes.vector.Vector.transformAsNormal:5
+#: cymel.core.datatypes.vector.Vector.xform4:7 of
+msgid "`Vector`"
+msgstr "`Vector`"
+
+#: cymel.core.datatypes.vector.Vector:26
+#: cymel.core.datatypes.vector.Vector.set:6 of
+msgid "x, y, z, w"
+msgstr "x, y, z, w"
+
+#: cymel.core.datatypes.vector.Vector:27
+#: cymel.core.datatypes.vector.Vector.set:7 of
+msgid "x, y, z"
+msgstr "x, y, z"
+
+#: cymel.core.datatypes.vector.Vector:28
+#: cymel.core.datatypes.vector.Vector.set:8 of
+msgid "x, y"
+msgstr "x, y"
+
+#: cymel.core.datatypes.vector.Vector:29
+#: cymel.core.datatypes.vector.Vector.set:9 of
+msgid "4値までのシーケンス"
+msgstr "Sequence up to 4 values"
+
+#: cymel.core.datatypes.vector.Vector:32 of
+msgid "w がこのような特殊な振る舞いをするのは、 API 等の他のオブジェクトとの可換性を確保するため。"
+msgstr ""
+"The reason why w behaves in this special way is to ensure interchangeability"
+" with other objects such as APIs."
+
+#: cymel.core.datatypes.vector.Vector:35 of
+msgid ""
+"w に 1 以外を明示しない限り、 :mayaapi2:`MVector` コンストラクタのように長さ 4 の "
+"シーケンスを受け付けないものにも渡すことができる。"
+msgstr ""
+"Unless w is explicitly set to something other than 1, it can also be passed "
+"to something that does not accept sequences of length 4, such as the "
+":mayaapi2:`MVector` constructor."
+
+#: cymel.core.datatypes.vector.Vector:39 of
+msgid ""
+"また、w に 1 以外を明示した場合は、:mayaapi2:`MPoint` や `list` などと交換した際にも、きちんとその情報が継承される。"
+msgstr ""
+"Also, if you specify a value other than 1 for w, that information will be "
+"properly inherited even when exchanging with :mayaapi2:`MPoint` or `list`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`abs <cymel.core.datatypes.vector.Vector.abs>`\\ \\(\\)"
+msgstr ":py:obj:`abs <cymel.core.datatypes.vector.Vector.abs>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.abs:1 of
+msgid "4次元ベクトルの各要素を絶対値にしたベクトルを得る。"
+msgstr ""
+"Obtain a vector with the absolute value of each element of a 4-dimensional "
+"vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`add <cymel.core.datatypes.vector.Vector.add>`\\ \\(v\\)"
+msgstr ":py:obj:`add <cymel.core.datatypes.vector.Vector.add>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.add:1
+#: cymel.core.datatypes.vector.Vector.sub:1 of
+msgid "4次元ベクトルの和を得る。"
+msgstr "Get the sum of 4-dimensional vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`angle <cymel.core.datatypes.vector.Vector.angle>`\\ \\(v\\)"
+msgstr ":py:obj:`angle <cymel.core.datatypes.vector.Vector.angle>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.angle:1 of
+msgid "2つの3次元ベクトルの成す角を得る。"
+msgstr "Find the angle between two 3D vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`cartesianize <cymel.core.datatypes.vector.Vector.cartesianize>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`cartesianize <cymel.core.datatypes.vector.Vector.cartesianize>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.cartesianize:1 of
+msgid "同次座標を直交座標(W=1)に変換する。"
+msgstr "Convert homogeneous coordinates to Cartesian coordinates (W=1)."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`cross <cymel.core.datatypes.vector.Vector.cross>`\\ \\(v\\)"
+msgstr ":py:obj:`cross <cymel.core.datatypes.vector.Vector.cross>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.cross:1 of
+msgid "3次元ベクトルの外積を得る。"
+msgstr "Obtain the cross product of 3D vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`distanceSqTo <cymel.core.datatypes.vector.Vector.distanceSqTo>`\\ "
+"\\(v\\)"
+msgstr ""
+":py:obj:`distanceSqTo <cymel.core.datatypes.vector.Vector.distanceSqTo>`\\ "
+"\\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.distanceSqTo:1 of
+msgid "2つの位置ベクトル間の2乗距離を得る。"
+msgstr "Get the squared distance between two position vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`distanceTo <cymel.core.datatypes.vector.Vector.distanceTo>`\\ "
+"\\(v\\)"
+msgstr ""
+":py:obj:`distanceTo <cymel.core.datatypes.vector.Vector.distanceTo>`\\ "
+"\\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.distanceTo:1 of
+msgid "2つの位置ベクトル間の距離を得る。"
+msgstr "Get the distance between two position vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`div <cymel.core.datatypes.vector.Vector.div>`\\ \\(v\\[\\, pre\\]\\)"
+msgstr ":py:obj:`div <cymel.core.datatypes.vector.Vector.div>`\\ \\(v\\[\\, pre\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.div:1 of
+msgid "4次元ベクトルの商を得る。"
+msgstr "Obtain the quotient of a 4-dimensional vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`dot <cymel.core.datatypes.vector.Vector.dot>`\\ \\(v\\)"
+msgstr ":py:obj:`dot <cymel.core.datatypes.vector.Vector.dot>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.dot:1 of
+msgid "3次元ベクトルの内積を得る。"
+msgstr "Get the dot product of 3D vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`dot4 <cymel.core.datatypes.vector.Vector.dot4>`\\ \\(v\\)"
+msgstr ":py:obj:`dot4 <cymel.core.datatypes.vector.Vector.dot4>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.dot4:1 of
+msgid "4次元ベクトルの内積を得る。"
+msgstr "Obtain the inner product of 4-dimensional vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`dot4r <cymel.core.datatypes.vector.Vector.dot4r>`\\ \\(v\\)"
+msgstr ":py:obj:`dot4r <cymel.core.datatypes.vector.Vector.dot4r>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.dot4r:1 of
+msgid "4次元ベクトルを 4x1 と 1x4 の行列として乗算する。"
+msgstr "Multiply a 4-dimensional vector as a 4x1 and 1x4 matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`findNearestAxis "
+"<cymel.core.datatypes.vector.Vector.findNearestAxis>`\\ \\(\\[asId\\]\\)"
+msgstr ""
+":py:obj:`findNearestAxis "
+"<cymel.core.datatypes.vector.Vector.findNearestAxis>`\\ \\(\\[asId\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.findNearestAxis:1 of
+msgid "方向ベクトルに最も近い X,Y,Z,-X,-Y,-Z 軸方向を得る。"
+msgstr ""
+"Get the X,Y,Z,-X,-Y,-Z axis direction closest to the direction vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`homogenize <cymel.core.datatypes.vector.Vector.homogenize>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`homogenize <cymel.core.datatypes.vector.Vector.homogenize>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.homogenize:1 of
+msgid "有理形式の座標を同次座標に変換する。"
+msgstr "Convert rational form coordinates to homogeneous coordinates."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`iabs <cymel.core.datatypes.vector.Vector.iabs>`\\ \\(\\)"
+msgstr ":py:obj:`iabs <cymel.core.datatypes.vector.Vector.iabs>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.iabs:1 of
+msgid "4次元ベクトルの各要素を絶対値にする。"
+msgstr "Set each element of a 4-dimensional vector to an absolute value."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`iadd <cymel.core.datatypes.vector.Vector.iadd>`\\ \\(v\\)"
+msgstr ":py:obj:`iadd <cymel.core.datatypes.vector.Vector.iadd>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.iadd:1
+#: cymel.core.datatypes.vector.Vector.isub:1 of
+msgid "4次元ベクトルの和をセットする。"
+msgstr "Sets the sum of 4-dimensional vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`idiv <cymel.core.datatypes.vector.Vector.idiv>`\\ \\(v\\[\\, pre\\]\\)"
+msgstr ":py:obj:`idiv <cymel.core.datatypes.vector.Vector.idiv>`\\ \\(v\\[\\, pre\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.idiv:1 of
+msgid "4次元ベクトルの商をセットする。"
+msgstr "Sets the quotient of a 4-dimensional vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`imul <cymel.core.datatypes.vector.Vector.imul>`\\ \\(v\\)"
+msgstr ":py:obj:`imul <cymel.core.datatypes.vector.Vector.imul>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.imul:1 of
+msgid "4次元ベクトルの積をセットする。"
+msgstr "Sets the product of 4-dimensional vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`ineg <cymel.core.datatypes.vector.Vector.ineg>`\\ \\(\\)"
+msgstr ":py:obj:`ineg <cymel.core.datatypes.vector.Vector.ineg>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.ineg:1 of
+msgid "4次元ベクトルの符号反転をセットする。"
+msgstr "Sets the sign inversion of a 4-dimensional vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`isEquivalent <cymel.core.datatypes.vector.Vector.isEquivalent>`\\ "
+"\\(v\\[\\, tol\\]\\)"
+msgstr ""
+":py:obj:`isEquivalent <cymel.core.datatypes.vector.Vector.isEquivalent>`\\ "
+"\\(v\\[\\, tol\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.isEquivalent:1 of
+msgid "ほぼ同値かどうか。"
+msgstr "Is it almost the same value?"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`isParallel <cymel.core.datatypes.vector.Vector.isParallel>`\\ "
+"\\(v\\[\\, tol\\]\\)"
+msgstr ""
+":py:obj:`isParallel <cymel.core.datatypes.vector.Vector.isParallel>`\\ "
+"\\(v\\[\\, tol\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.isParallel:1 of
+msgid "2つの3次元ベクトルが平行かどうか。"
+msgstr "Whether two 3D vectors are parallel."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`isZero <cymel.core.datatypes.vector.Vector.isZero>`\\ \\(\\[tol\\]\\)"
+msgstr ":py:obj:`isZero <cymel.core.datatypes.vector.Vector.isZero>`\\ \\(\\[tol\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.isZero:1 of
+msgid "3次元ベクトルがほぼゼロかどうか。"
+msgstr "Whether the 3D vector is approximately zero."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`isub <cymel.core.datatypes.vector.Vector.isub>`\\ \\(v\\)"
+msgstr ":py:obj:`isub <cymel.core.datatypes.vector.Vector.isub>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`length <cymel.core.datatypes.vector.Vector.length>`\\ \\(\\)"
+msgstr ":py:obj:`length <cymel.core.datatypes.vector.Vector.length>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.length:1 of
+msgid "3次元ベクトルの長さを得る。"
+msgstr "Get the length of a 3D vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`lengthSq <cymel.core.datatypes.vector.Vector.lengthSq>`\\ \\(\\)"
+msgstr ":py:obj:`lengthSq <cymel.core.datatypes.vector.Vector.lengthSq>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.lengthSq:1 of
+msgid "3次元ベクトルの長さの2乗を得る。"
+msgstr "Obtain the square of the length of a 3D vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`maxAxis <cymel.core.datatypes.vector.Vector.maxAxis>`\\ "
+"\\(\\[noSign\\]\\)"
+msgstr ""
+":py:obj:`maxAxis <cymel.core.datatypes.vector.Vector.maxAxis>`\\ "
+"\\(\\[noSign\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.maxAxis:1 of
+msgid "絶対値が最大の要素の軸IDを得る。"
+msgstr "Get the axis ID of the element with the largest absolute value."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`minAxis <cymel.core.datatypes.vector.Vector.minAxis>`\\ "
+"\\(\\[noSign\\]\\)"
+msgstr ""
+":py:obj:`minAxis <cymel.core.datatypes.vector.Vector.minAxis>`\\ "
+"\\(\\[noSign\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.minAxis:1 of
+msgid "絶対値が最小の要素の軸IDを得る。"
+msgstr "Get the axis ID of the element with the smallest absolute value."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`mul <cymel.core.datatypes.vector.Vector.mul>`\\ \\(v\\)"
+msgstr ":py:obj:`mul <cymel.core.datatypes.vector.Vector.mul>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.mul:1 of
+msgid "4次元ベクトルの積を得る。"
+msgstr "Get the product of 4-dimensional vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`neg <cymel.core.datatypes.vector.Vector.neg>`\\ \\(\\)"
+msgstr ":py:obj:`neg <cymel.core.datatypes.vector.Vector.neg>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.neg:1 of
+msgid "4次元ベクトルの符号反転を得る。"
+msgstr "Obtains the sign inversion of a 4-dimensional vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`normal <cymel.core.datatypes.vector.Vector.normal>`\\ \\(\\)"
+msgstr ":py:obj:`normal <cymel.core.datatypes.vector.Vector.normal>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.normal:1 of
+msgid "正規化3次元ベクトルを得る。"
+msgstr "Obtain a normalized 3D vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`normalize <cymel.core.datatypes.vector.Vector.normalize>`\\ \\(\\)"
+msgstr ":py:obj:`normalize <cymel.core.datatypes.vector.Vector.normalize>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.normalize:1 of
+msgid "正規化3次元ベクトルをセットする。"
+msgstr "Set the normalized 3D vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`normalizeIt <cymel.core.datatypes.vector.Vector.normalizeIt>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`normalizeIt <cymel.core.datatypes.vector.Vector.normalizeIt>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`orthogonal <cymel.core.datatypes.vector.Vector.orthogonal>`\\ "
+"\\(vec\\)"
+msgstr ""
+":py:obj:`orthogonal <cymel.core.datatypes.vector.Vector.orthogonal>`\\ "
+"\\(vec\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.orthogonal:1 of
+msgid "指定ベクトルに直交化したベクトルを得る。"
+msgstr "Obtains a vector that is orthogonal to the specified vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`orthogonalize <cymel.core.datatypes.vector.Vector.orthogonalize>`\\"
+" \\(vec\\)"
+msgstr ""
+":py:obj:`orthogonalize <cymel.core.datatypes.vector.Vector.orthogonalize>`\\"
+" \\(vec\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.orthogonalize:1 of
+msgid "指定ベクトルに直交化したベクトルをセットする。"
+msgstr "Sets a vector that is orthogonal to the specified vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`rationalize <cymel.core.datatypes.vector.Vector.rationalize>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`rationalize <cymel.core.datatypes.vector.Vector.rationalize>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.rationalize:1 of
+msgid "同次座標を有利形式に変換する。"
+msgstr "Convert homogeneous coordinates to advantageous form."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`rotateBy <cymel.core.datatypes.vector.Vector.rotateBy>`\\ \\(q\\)"
+msgstr ":py:obj:`rotateBy <cymel.core.datatypes.vector.Vector.rotateBy>`\\ \\(q\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.rotateBy:1 of
+msgid "クォータニオンで回転したベクトルを得る。"
+msgstr "Get a vector rotated by a quaternion."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`rotateTo <cymel.core.datatypes.vector.Vector.rotateTo>`\\ "
+"\\(v\\[\\, factor\\]\\)"
+msgstr ""
+":py:obj:`rotateTo <cymel.core.datatypes.vector.Vector.rotateTo>`\\ "
+"\\(v\\[\\, factor\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.rotateTo:1 of
+msgid "ベクトルを指定方向に向ける最小弧回転を得る。"
+msgstr ""
+"Gets the minimum arc rotation that points a vector in the specified "
+"direction."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`set <cymel.core.datatypes.vector.Vector.set>`\\ \\(\\*args\\)"
+msgstr ":py:obj:`set <cymel.core.datatypes.vector.Vector.set>`\\ \\(\\*args\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.set:1 of
+msgid "他の値をセットする。"
+msgstr "Set other values."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`slerp <cymel.core.datatypes.vector.Vector.slerp>`\\ \\(p0\\, p1\\, "
+"t\\[\\, spin\\]\\)"
+msgstr ""
+":py:obj:`slerp <cymel.core.datatypes.vector.Vector.slerp>`\\ \\(p0\\, p1\\, "
+"t\\[\\, spin\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.slerp:1 of
+msgid "3次元ベクトルを球面線形補間する。"
+msgstr "Performs spherical linear interpolation on 3D vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`sub <cymel.core.datatypes.vector.Vector.sub>`\\ \\(v\\)"
+msgstr ":py:obj:`sub <cymel.core.datatypes.vector.Vector.sub>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ""
+":py:obj:`transformAsNormal "
+"<cymel.core.datatypes.vector.Vector.transformAsNormal>`\\ \\(m\\)"
+msgstr ""
+":py:obj:`transformAsNormal "
+"<cymel.core.datatypes.vector.Vector.transformAsNormal>`\\ \\(m\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.transformAsNormal:1 of
+msgid "法線ベクトルとしてトランスフォームしたベクトルを得る。"
+msgstr "Get the transformed vector as a normal vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`xform3 <cymel.core.datatypes.vector.Vector.xform3>`\\ \\(m\\)"
+msgstr ":py:obj:`xform3 <cymel.core.datatypes.vector.Vector.xform3>`\\ \\(m\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.xform3:1 of
+msgid "3次元ベクトル（方向ベクトル）をトランスフォームする。"
+msgstr "Transform a 3D vector (direction vector)."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+msgid ":py:obj:`xform4 <cymel.core.datatypes.vector.Vector.xform4>`\\ \\(m\\)"
+msgstr ":py:obj:`xform4 <cymel.core.datatypes.vector.Vector.xform4>`\\ \\(m\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:67:<autosummary>:1
+#: cymel.core.datatypes.vector.Vector.xform4:1 of
+msgid "4次元ベクトル（3次元同次座標）をトランスフォームする。"
+msgstr ""
+"Transforms a 4-dimensional vector (3-dimensional homogeneous coordinates)."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:70
+msgid "Attributes:"
+msgstr "Attributes:"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst:90
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: cymel.core.datatypes.vector.Vector.abs:3 of
+msgid "abs 組み込み関数を使用する場合と等価。"
+msgstr "Equivalent to using the abs built-in function."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.vector.Vector.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.core.datatypes.vector.Vector.add:4
+#: cymel.core.datatypes.vector.Vector.sub:4 of
+msgid "もう1方のベクトル"
+msgstr "the other vector"
+
+#: cymel.core.datatypes.vector.Vector.angle:4
+#: cymel.core.datatypes.vector.Vector.cross:6
+#: cymel.core.datatypes.vector.Vector.dot:8
+#: cymel.core.datatypes.vector.Vector.dot4:6
+#: cymel.core.datatypes.vector.Vector.dot4r:4
+#: cymel.core.datatypes.vector.Vector.iadd:4
+#: cymel.core.datatypes.vector.Vector.isub:4 of
+msgid "もう1方のベクトル。"
+msgstr "The other vector."
+
+#: cymel.core.datatypes.vector.Vector.angle:5
+#: cymel.core.datatypes.vector.Vector.distanceSqTo:5
+#: cymel.core.datatypes.vector.Vector.distanceTo:5
+#: cymel.core.datatypes.vector.Vector.dot:9
+#: cymel.core.datatypes.vector.Vector.dot4:7
+#: cymel.core.datatypes.vector.Vector.length:3
+#: cymel.core.datatypes.vector.Vector.lengthSq:3 of
+msgid "`float`"
+msgstr "`float`"
+
+#: cymel.core.datatypes.vector.Vector.cartesianize:3 of
+msgid "(W*x, W*y, W*z, W) が (x, y, z, 1) に変換される。"
+msgstr "(W*x, W*y, W*z, W) is converted to (x, y, z, 1)."
+
+#: cymel.core.datatypes.vector.Vector.cartesianize:5
+#: cymel.core.datatypes.vector.Vector.homogenize:5
+#: cymel.core.datatypes.vector.Vector.iabs:3
+#: cymel.core.datatypes.vector.Vector.iadd:5
+#: cymel.core.datatypes.vector.Vector.idiv:6
+#: cymel.core.datatypes.vector.Vector.imul:5
+#: cymel.core.datatypes.vector.Vector.isub:5
+#: cymel.core.datatypes.vector.Vector.normalize:3
+#: cymel.core.datatypes.vector.Vector.orthogonalize:5
+#: cymel.core.datatypes.vector.Vector.rationalize:5
+#: cymel.core.datatypes.vector.Vector.set:11 of
+msgid "`Vector` (self)"
+msgstr "`Vector` (self)"
+
+#: cymel.core.datatypes.vector.Vector.cross:3 of
+msgid "演算子 ^ と同じ。"
+msgstr "Same as operator ^."
+
+#: cymel.core.datatypes.vector.Vector.distanceSqTo:4
+#: cymel.core.datatypes.vector.Vector.distanceTo:4 of
+msgid "もう1方の位置。"
+msgstr "The other position."
+
+#: cymel.core.datatypes.vector.Vector.div:4
+#: cymel.core.datatypes.vector.Vector.idiv:4 of
+msgid "分母のベクトル、またはスカラー。"
+msgstr "Denominator vector or scalar."
+
+#: cymel.core.datatypes.vector.Vector.div:5
+#: cymel.core.datatypes.vector.Vector.idiv:5 of
+msgid "ゼロ除算を避ける為の許容誤差。"
+msgstr "Tolerance to avoid division by zero."
+
+#: cymel.core.datatypes.vector.Vector.dot:3 of
+msgid "1x3 と 3x1 の行列としての乗算ともいえる。"
+msgstr "It can also be said to be a multiplication of 1x3 and 3x1 matrices."
+
+#: cymel.core.datatypes.vector.Vector.dot:5 of
+msgid "演算子 * と同じ。"
+msgstr "Same as operator *."
+
+#: cymel.core.datatypes.vector.Vector.dot4:3 of
+msgid "1x4 と 4x1 の行列としての乗算ともいえる。"
+msgstr "It can also be said to be a multiplication of 1x4 and 4x1 matrices."
+
+#: cymel.core.datatypes.vector.Vector.dot4r:5 of
+msgid "`.Matrix`"
+msgstr "`.Matrix`"
+
+#: cymel.core.datatypes.vector.Vector.findNearestAxis:3 of
+msgid "殆どゼロベクトルで判定できない場合は None となる。"
+msgstr ""
+"If it cannot be determined because it is almost a zero vector, it will be "
+"None."
+
+#: cymel.core.datatypes.vector.Vector.findNearestAxis:5 of
+msgid "結果をIDで得る。"
+msgstr "Get the result by ID."
+
+#: cymel.core.datatypes.vector.Vector.findNearestAxis:6 of
+msgid "`Vector`, `int` or None"
+msgstr "`Vector`, `int` or None"
+
+#: cymel.core.datatypes.vector.Vector.homogenize:3 of
+msgid "(x, y, z, W) が (W*x, W*y, W*z, W) に変換される。"
+msgstr "(x, y, z, W) is converted to (W*x, W*y, W*z, W)."
+
+#: cymel.core.datatypes.vector.Vector.imul:4
+#: cymel.core.datatypes.vector.Vector.mul:4 of
+msgid "もう1方のベクトル、またはスカラー。"
+msgstr "The other vector or scalar."
+
+#: cymel.core.datatypes.vector.Vector.isEquivalent:4
+#: cymel.core.datatypes.vector.Vector.isParallel:4 of
+msgid "比較するベクトル。"
+msgstr "Vector to compare."
+
+#: cymel.core.datatypes.vector.Vector.isEquivalent:5
+#: cymel.core.datatypes.vector.Vector.isParallel:5
+#: cymel.core.datatypes.vector.Vector.isZero:3 of
+msgid "許容誤差。"
+msgstr "Tolerance."
+
+#: cymel.core.datatypes.vector.Vector.isEquivalent:6
+#: cymel.core.datatypes.vector.Vector.isParallel:6
+#: cymel.core.datatypes.vector.Vector.isZero:4 of
+msgid "`bool`"
+msgstr "`bool`"
+
+#: cymel.core.datatypes.vector.Vector.isEquivalent:9 of
+msgid ""
+":mayaapi2:`MPoint` の isEquivalent とは挙動が異なることに注意。 :mayaapi2:`MPoint` では "
+"`cartesianize` での差の距離が比較されるが、 w=0 の場合に望ましくない結果になるなどの問題がある。 "
+"本メソッドの場合は単純でコストも低い要素ごとの単純比較としている。"
+msgstr ""
+":mayaapi2:Note that the behavior is different from isEquivalent of `MPoint`."
+" :mayaapi2:`MPoint` compares the difference distance in `cartesianize`, but "
+"there are problems such as undesirable results when w=0. In the case of this"
+" method, simple comparison is performed for each element, which is simple "
+"and inexpensive."
+
+#: cymel.core.datatypes.vector.Vector.maxAxis:3
+#: cymel.core.datatypes.vector.Vector.minAxis:3 of
+msgid "符号ビットを含まない軸ID (0～2) を得る。"
+msgstr "Get the axis ID (0-2) without the sign bit."
+
+#: cymel.core.datatypes.vector.Vector.maxAxis:4
+#: cymel.core.datatypes.vector.Vector.minAxis:4 of
+msgid "`int`"
+msgstr "`int`"
+
+#: cymel.core.datatypes.vector.Vector.orthogonal:4
+#: cymel.core.datatypes.vector.Vector.orthogonalize:4 of
+msgid "軸ベクトル。"
+msgstr "Axis vector."
+
+#: cymel.core.datatypes.vector.Vector.rationalize:3 of
+msgid "(W*x, W*y, W*z, W) が (x, y, z, W) に変換される。"
+msgstr "(W*x, W*y, W*z, W) is converted to (x, y, z, W)."
+
+#: cymel.core.datatypes.vector.Vector.rotateBy:3 of
+msgid "演算子 * でクォータニオンを乗じることと同じ。"
+msgstr "Equivalent to multiplying quaternions with the operator *."
+
+#: cymel.core.datatypes.vector.Vector.rotateBy:6 of
+msgid "クォータニオン。"
+msgstr "Quaternion."
+
+#: cymel.core.datatypes.vector.Vector.rotateTo:3 of
+msgid "`.Quaternion` に2つのベクトルを渡して生成することと同じ。"
+msgstr "Same as passing two vectors to `.Quaternion` and generating it."
+
+#: cymel.core.datatypes.vector.Vector.rotateTo:7 of
+msgid "向ける方向。"
+msgstr "Direction to face."
+
+#: cymel.core.datatypes.vector.Vector.rotateTo:8 of
+msgid "完全に向ける量を 1.0 とする回転量。"
+msgstr ""
+"The amount of rotation, with the amount of full orientation being 1.0."
+
+#: cymel.core.datatypes.vector.Vector.rotateTo:9 of
+msgid "`.Quaternion`"
+msgstr "`.Quaternion`"
+
+#: cymel.core.datatypes.vector.Vector.set:3 of
+msgid "コンストラクタと同様に、以下の値を指定可能。"
+msgstr "Similar to the constructor, the following values ​​can be specified."
+
+#: cymel.core.datatypes.vector.Vector.slerp:4 of
+msgid "始点。"
+msgstr "starting point."
+
+#: cymel.core.datatypes.vector.Vector.slerp:6 of
+msgid "終点。"
+msgstr "the last stop."
+
+#: cymel.core.datatypes.vector.Vector.slerp:7 of
+msgid "0.0～1.0の補間係数。範囲外も指定可。"
+msgstr ""
+"Interpolation factor between 0.0 and 1.0. You can also specify outside the "
+"range."
+
+#: cymel.core.datatypes.vector.Vector.slerp:8 of
+msgid "スピン値。 デフォルトの0は最短方向、-1は逆方向、 さらに+1や-1すると余分に周回する。"
+msgstr ""
+"Spin value. The default 0 is the shortest direction, -1 is the opposite "
+"direction, and +1 and -1 make extra laps."
+
+#: cymel.core.datatypes.vector.Vector.transformAsNormal:4
+#: cymel.core.datatypes.vector.Vector.xform4:6 of
+msgid "変換マトリックス。"
+msgstr "transformation matrix."
+
+#: cymel.core.datatypes.vector.Vector.xform4:3 of
+msgid "演算子 * で行列を乗じることと同じ。"
+msgstr "Equivalent to multiplying matrices with the operator *."

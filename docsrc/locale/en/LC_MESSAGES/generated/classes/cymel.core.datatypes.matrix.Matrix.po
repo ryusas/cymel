@@ -1,0 +1,1471 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:2
+msgid "class cymel.core.datatypes.matrix.Matrix"
+msgstr "class cymel.core.datatypes.matrix.Matrix"
+
+#: cymel.core.datatypes.matrix.Matrix:1 of
+msgid "4x4 マトリックスクラス。"
+msgstr "4x4 matrix class."
+
+#: cymel.core.datatypes.matrix.Matrix:3 of
+msgid "コンストラクタでは以下の値を指定可能。"
+msgstr "The following values ​​can be specified in the constructor."
+
+#: cymel.core.datatypes.matrix.Matrix:5
+#: cymel.core.datatypes.matrix.Matrix.adjugate:3
+#: cymel.core.datatypes.matrix.Matrix.as3x3:3
+#: cymel.core.datatypes.matrix.Matrix.asRotationMatrix:3
+#: cymel.core.datatypes.matrix.Matrix.asTranslationMatrix:3
+#: cymel.core.datatypes.matrix.Matrix.asTransposed3x3:3
+#: cymel.core.datatypes.matrix.Matrix.div:9
+#: cymel.core.datatypes.matrix.Matrix.homogenize:3
+#: cymel.core.datatypes.matrix.Matrix.inverse:3
+#: cymel.core.datatypes.matrix.Matrix.makeInverseScaling:6
+#: cymel.core.datatypes.matrix.Matrix.makeInverseShearing:5
+#: cymel.core.datatypes.matrix.Matrix.makeInverseTranslation:5
+#: cymel.core.datatypes.matrix.Matrix.makeRotation:5
+#: cymel.core.datatypes.matrix.Matrix.makeScaling:5
+#: cymel.core.datatypes.matrix.Matrix.makeShearing:5
+#: cymel.core.datatypes.matrix.Matrix.makeTranslation:5
+#: cymel.core.datatypes.matrix.Matrix.mirror:17
+#: cymel.core.datatypes.matrix.Matrix.mul:5
+#: cymel.core.datatypes.matrix.Matrix.set:5
+#: cymel.core.datatypes.matrix.Matrix.transpose:3 of
+msgid "`Matrix`"
+msgstr "`Matrix`"
+
+#: cymel.core.datatypes.matrix.Matrix:6
+#: cymel.core.datatypes.matrix.Matrix.set:6 of
+msgid "16値のシーケンス"
+msgstr "16-value sequence"
+
+#: cymel.core.datatypes.matrix.Matrix:8 of
+msgid "3つの `.Vector` による 3x3 部分の行ベクトル指定。"
+msgstr "Row vector specification of 3x3 part by three `.Vector`."
+
+#: cymel.core.datatypes.matrix.Matrix:10 of
+msgid "追加で4つめの `.Vector` で translate 値の指定。"
+msgstr "Additionally, specify the translate value using the fourth `.Vector`."
+
+#: cymel.core.datatypes.matrix.Matrix:11 of
+msgid "transpose=True オプションの指定で 3x3 部分の転置。"
+msgstr "Transpose the 3x3 part by specifying the transpose=True option."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`addT <cymel.core.datatypes.matrix.Matrix.addT>`\\ \\(v\\)"
+msgstr ":py:obj:`addT <cymel.core.datatypes.matrix.Matrix.addT>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.addTranslation:1 of
+msgid "`addTranslation` の別名。"
+msgstr "Alternative name for `addTranslation`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`addTranslation "
+"<cymel.core.datatypes.matrix.Matrix.addTranslation>`\\ \\(v\\)"
+msgstr ""
+":py:obj:`addTranslation "
+"<cymel.core.datatypes.matrix.Matrix.addTranslation>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.addTranslation:1 of
+msgid "平行移動値を加算する。"
+msgstr "Add the translation value."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`adj <cymel.core.datatypes.matrix.Matrix.adj>`\\ \\(\\)"
+msgstr ":py:obj:`adj <cymel.core.datatypes.matrix.Matrix.adj>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.adjugate:1 of
+msgid "`adjugate` の別名。"
+msgstr "Another name for `adjugate`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`adjoint <cymel.core.datatypes.matrix.Matrix.adjoint>`\\ \\(\\)"
+msgstr ":py:obj:`adjoint <cymel.core.datatypes.matrix.Matrix.adjoint>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`adjointIt <cymel.core.datatypes.matrix.Matrix.adjointIt>`\\ \\(\\)"
+msgstr ":py:obj:`adjointIt <cymel.core.datatypes.matrix.Matrix.adjointIt>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.adjugateIt:1 of
+msgid "`adjugateIt` の別名。"
+msgstr "Alternative name for `adjugateIt`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`adjugate <cymel.core.datatypes.matrix.Matrix.adjugate>`\\ \\(\\)"
+msgstr ":py:obj:`adjugate <cymel.core.datatypes.matrix.Matrix.adjugate>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.adjugate:1 of
+msgid "余因子行列を得る。"
+msgstr "Obtain the cofactor matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`adjugateIt <cymel.core.datatypes.matrix.Matrix.adjugateIt>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`adjugateIt <cymel.core.datatypes.matrix.Matrix.adjugateIt>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.adjugateIt:1 of
+msgid "余因子行列をセットする。"
+msgstr "Set the cofactor matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`as3x3 <cymel.core.datatypes.matrix.Matrix.as3x3>`\\ \\(\\)"
+msgstr ":py:obj:`as3x3 <cymel.core.datatypes.matrix.Matrix.as3x3>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.as3x3:1 of
+msgid "3x3部分以外を初期化した行列を得る。"
+msgstr "Obtain a matrix with all parts other than the 3x3 part initialized."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`asD <cymel.core.datatypes.matrix.Matrix.asD>`\\ \\(\\[order\\]\\)"
+msgstr ":py:obj:`asD <cymel.core.datatypes.matrix.Matrix.asD>`\\ \\(\\[order\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asDegrees:1 of
+msgid "`asDegrees` の別名。"
+msgstr "Alternative name for `asDegrees`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`asDegrees <cymel.core.datatypes.matrix.Matrix.asDegrees>`\\ "
+"\\(\\[order\\]\\)"
+msgstr ""
+":py:obj:`asDegrees <cymel.core.datatypes.matrix.Matrix.asDegrees>`\\ "
+"\\(\\[order\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asDegrees:1 of
+msgid "オイラー角回転を度数法の `list` として得る。"
+msgstr "Obtain the Euler angle rotation as a `list` in degrees."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`asE <cymel.core.datatypes.matrix.Matrix.asE>`\\ \\(\\[order\\]\\)"
+msgstr ":py:obj:`asE <cymel.core.datatypes.matrix.Matrix.asE>`\\ \\(\\[order\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asEulerRotation:1 of
+msgid "`asEulerRotation` の別名。"
+msgstr "Alternative name for `asEulerRotation`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`asEulerRotation "
+"<cymel.core.datatypes.matrix.Matrix.asEulerRotation>`\\ \\(\\[order\\]\\)"
+msgstr ""
+":py:obj:`asEulerRotation "
+"<cymel.core.datatypes.matrix.Matrix.asEulerRotation>`\\ \\(\\[order\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asEulerRotation:1 of
+msgid "オイラー角回転を得る。"
+msgstr "Obtain Euler angle rotation."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`asQ <cymel.core.datatypes.matrix.Matrix.asQ>`\\ \\(\\)"
+msgstr ":py:obj:`asQ <cymel.core.datatypes.matrix.Matrix.asQ>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asQuaternion:1 of
+msgid "`asQuaternion` の別名。"
+msgstr "Alternative name for `asQuaternion`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`asQuaternion <cymel.core.datatypes.matrix.Matrix.asQuaternion>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`asQuaternion <cymel.core.datatypes.matrix.Matrix.asQuaternion>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asQuaternion:1 of
+msgid "クォータニオンを得る。"
+msgstr "Get a quaternion."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`asRM <cymel.core.datatypes.matrix.Matrix.asRM>`\\ \\(\\)"
+msgstr ":py:obj:`asRM <cymel.core.datatypes.matrix.Matrix.asRM>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asRotationMatrix:1 of
+msgid "`asRotationMatrix` の別名。"
+msgstr "Alternative name for `asRotationMatrix`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`asRotationMatrix "
+"<cymel.core.datatypes.matrix.Matrix.asRotationMatrix>`\\ \\(\\)"
+msgstr ""
+":py:obj:`asRotationMatrix "
+"<cymel.core.datatypes.matrix.Matrix.asRotationMatrix>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asRotationMatrix:1 of
+msgid "回転のみの行列を得る。"
+msgstr "Get a rotation-only matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`asS <cymel.core.datatypes.matrix.Matrix.asS>`\\ \\(\\)"
+msgstr ":py:obj:`asS <cymel.core.datatypes.matrix.Matrix.asS>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asScaling:1 of
+msgid "`asScaling` の別名。"
+msgstr "Alternative name for `asScaling`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`asSM <cymel.core.datatypes.matrix.Matrix.asSM>`\\ \\(\\)"
+msgstr ":py:obj:`asSM <cymel.core.datatypes.matrix.Matrix.asSM>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asScalingMatrix:1 of
+msgid "`asScalingMatrix` の別名。"
+msgstr "Alternative name for `asScalingMatrix`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`asScaling <cymel.core.datatypes.matrix.Matrix.asScaling>`\\ \\(\\)"
+msgstr ":py:obj:`asScaling <cymel.core.datatypes.matrix.Matrix.asScaling>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asScaling:1 of
+msgid "スケーリング成分を得る。"
+msgstr "Get the scaling component."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`asScalingMatrix "
+"<cymel.core.datatypes.matrix.Matrix.asScalingMatrix>`\\ \\(\\)"
+msgstr ""
+":py:obj:`asScalingMatrix "
+"<cymel.core.datatypes.matrix.Matrix.asScalingMatrix>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asScalingMatrix:1 of
+msgid "スケーリング成分(scale+shear)のみの行列を得る。"
+msgstr "Obtain a matrix of only the scaling component (scale+shear)."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`asSh <cymel.core.datatypes.matrix.Matrix.asSh>`\\ \\(\\)"
+msgstr ":py:obj:`asSh <cymel.core.datatypes.matrix.Matrix.asSh>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asShearing:1 of
+msgid "`asShearing` の別名。"
+msgstr "Alternative name for `asShearing`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`asShearing <cymel.core.datatypes.matrix.Matrix.asShearing>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`asShearing <cymel.core.datatypes.matrix.Matrix.asShearing>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asShearing:1 of
+msgid "シアー成分を得る。"
+msgstr "Obtain sheer ingredients."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`asT <cymel.core.datatypes.matrix.Matrix.asT>`\\ \\(\\)"
+msgstr ":py:obj:`asT <cymel.core.datatypes.matrix.Matrix.asT>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asTranslation:1 of
+msgid "`asTranslation` の別名。"
+msgstr "Alternative name for `asTranslation`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`asTM <cymel.core.datatypes.matrix.Matrix.asTM>`\\ \\(\\)"
+msgstr ":py:obj:`asTM <cymel.core.datatypes.matrix.Matrix.asTM>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asTranslationMatrix:1 of
+msgid "`asTranslationMatrix` の別名。"
+msgstr "Alternative name for `asTranslationMatrix`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`asTransformation "
+"<cymel.core.datatypes.matrix.Matrix.asTransformation>`\\ \\(\\)"
+msgstr ""
+":py:obj:`asTransformation "
+"<cymel.core.datatypes.matrix.Matrix.asTransformation>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asTransformation:1 of
+msgid "トランスフォーメーションとして得る。"
+msgstr "Get it as a transformation."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`asTranslation <cymel.core.datatypes.matrix.Matrix.asTranslation>`\\"
+" \\(\\)"
+msgstr ""
+":py:obj:`asTranslation <cymel.core.datatypes.matrix.Matrix.asTranslation>`\\"
+" \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asTranslation:1 of
+msgid "平行移動成分を得る。"
+msgstr "Obtain the translational component."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`asTranslationMatrix "
+"<cymel.core.datatypes.matrix.Matrix.asTranslationMatrix>`\\ \\(\\)"
+msgstr ""
+":py:obj:`asTranslationMatrix "
+"<cymel.core.datatypes.matrix.Matrix.asTranslationMatrix>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asTranslationMatrix:1 of
+msgid "平行移動のみの行列を得る。"
+msgstr "Obtain a matrix with only translation."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`asTransposed3x3 "
+"<cymel.core.datatypes.matrix.Matrix.asTransposed3x3>`\\ \\(\\)"
+msgstr ""
+":py:obj:`asTransposed3x3 "
+"<cymel.core.datatypes.matrix.Matrix.asTransposed3x3>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asTransposed3x3:1 of
+msgid "3x3部分は転置、それ以外の部分は初期化した行列を得る。"
+msgstr ""
+"The 3x3 part is transposed, and the other parts are initialized matrices."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`asX <cymel.core.datatypes.matrix.Matrix.asX>`\\ \\(\\)"
+msgstr ":py:obj:`asX <cymel.core.datatypes.matrix.Matrix.asX>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.asTransformation:1 of
+msgid "`asTransformation` の別名。"
+msgstr "Alternative name for `asTransformation`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`axes <cymel.core.datatypes.matrix.Matrix.axes>`\\ \\(\\[transpose\\]\\)"
+msgstr ""
+":py:obj:`axes <cymel.core.datatypes.matrix.Matrix.axes>`\\ "
+"\\(\\[transpose\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.axes:1 of
+msgid "3x3部分の行や列の軸ベクトルを3つ得る。"
+msgstr "Get the three axis vectors of the rows and columns of the 3x3 part."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`axis <cymel.core.datatypes.matrix.Matrix.axis>`\\ \\(i\\[\\, "
+"transpose\\]\\)"
+msgstr ""
+":py:obj:`axis <cymel.core.datatypes.matrix.Matrix.axis>`\\ \\(i\\[\\, "
+"transpose\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.axis:1 of
+msgid "3x3部分の行や列を軸ベクトルとして得る。"
+msgstr "Get the rows and columns of the 3x3 part as axis vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`cofactor <cymel.core.datatypes.matrix.Matrix.cofactor>`\\ \\(i\\, "
+"j\\)"
+msgstr ""
+":py:obj:`cofactor <cymel.core.datatypes.matrix.Matrix.cofactor>`\\ \\(i\\, "
+"j\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.cofactor:1 of
+msgid "指定位置の余因子を得る。"
+msgstr "Get the cofactor at the specified position."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`col <cymel.core.datatypes.matrix.Matrix.col>`\\ \\(i\\)"
+msgstr ":py:obj:`col <cymel.core.datatypes.matrix.Matrix.col>`\\ \\(i\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.column:1 of
+msgid "`column` の別名。"
+msgstr "Alternative name for `column`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`cols <cymel.core.datatypes.matrix.Matrix.cols>`\\ \\(\\)"
+msgstr ":py:obj:`cols <cymel.core.datatypes.matrix.Matrix.cols>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.columns:1 of
+msgid "`columns` の別名。"
+msgstr "Alternative name for `columns`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`column <cymel.core.datatypes.matrix.Matrix.column>`\\ \\(i\\)"
+msgstr ":py:obj:`column <cymel.core.datatypes.matrix.Matrix.column>`\\ \\(i\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.column:1 of
+msgid "列ベクトルを得る。"
+msgstr "Get a column vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`columns <cymel.core.datatypes.matrix.Matrix.columns>`\\ \\(\\)"
+msgstr ":py:obj:`columns <cymel.core.datatypes.matrix.Matrix.columns>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.columns:1 of
+msgid "列ベクトルを4つ全て得る。"
+msgstr "Get all four column vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`det <cymel.core.datatypes.matrix.Matrix.det>`\\ \\(\\)"
+msgstr ":py:obj:`det <cymel.core.datatypes.matrix.Matrix.det>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.det:1 of
+msgid "行列式を得る。"
+msgstr "Get the determinant."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`det2 <cymel.core.datatypes.matrix.Matrix.det2>`\\ \\(\\)"
+msgstr ":py:obj:`det2 <cymel.core.datatypes.matrix.Matrix.det2>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.det2:1 of
+msgid "2x2部分の行列式を得る。"
+msgstr "Get the determinant of the 2x2 part."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`det2x2 <cymel.core.datatypes.matrix.Matrix.det2x2>`\\ \\(\\)"
+msgstr ":py:obj:`det2x2 <cymel.core.datatypes.matrix.Matrix.det2x2>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.det2:1 of
+msgid "`det2` の別名。"
+msgstr "Alternative name for `det2`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`det3 <cymel.core.datatypes.matrix.Matrix.det3>`\\ \\(\\)"
+msgstr ":py:obj:`det3 <cymel.core.datatypes.matrix.Matrix.det3>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.det3:1 of
+msgid "3x3部分の行列式を得る。"
+msgstr "Obtain the determinant of the 3x3 part."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`det3x3 <cymel.core.datatypes.matrix.Matrix.det3x3>`\\ \\(\\)"
+msgstr ":py:obj:`det3x3 <cymel.core.datatypes.matrix.Matrix.det3x3>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.det3:1 of
+msgid "`det3` の別名。"
+msgstr "Alternative name for `det3`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`det4 <cymel.core.datatypes.matrix.Matrix.det4>`\\ \\(\\)"
+msgstr ":py:obj:`det4 <cymel.core.datatypes.matrix.Matrix.det4>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.det:1 of
+msgid "`det` の別名。"
+msgstr "Alternative name for `det`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`det4x4 <cymel.core.datatypes.matrix.Matrix.det4x4>`\\ \\(\\)"
+msgstr ":py:obj:`det4x4 <cymel.core.datatypes.matrix.Matrix.det4x4>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`determinant <cymel.core.datatypes.matrix.Matrix.determinant>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`determinant <cymel.core.datatypes.matrix.Matrix.determinant>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`determinant2 <cymel.core.datatypes.matrix.Matrix.determinant2>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`determinant2 <cymel.core.datatypes.matrix.Matrix.determinant2>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`determinant3 <cymel.core.datatypes.matrix.Matrix.determinant3>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`determinant3 <cymel.core.datatypes.matrix.Matrix.determinant3>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`div <cymel.core.datatypes.matrix.Matrix.div>`\\ \\(m\\[\\, pre\\]\\)"
+msgstr ":py:obj:`div <cymel.core.datatypes.matrix.Matrix.div>`\\ \\(m\\[\\, pre\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.div:1 of
+msgid "マトリックス要素同士を除算する。"
+msgstr "Divide matrix elements together."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`getElem <cymel.core.datatypes.matrix.Matrix.getElem>`\\ \\(row\\, "
+"col\\)"
+msgstr ""
+":py:obj:`getElem <cymel.core.datatypes.matrix.Matrix.getElem>`\\ \\(row\\, "
+"col\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.getElem:1 of
+msgid "指定位置の要素を得る。"
+msgstr "Get the element at the specified position."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`hasNonUniformScaling "
+"<cymel.core.datatypes.matrix.Matrix.hasNonUniformScaling>`\\ \\(\\[tol\\]\\)"
+msgstr ""
+":py:obj:`hasNonUniformScaling "
+"<cymel.core.datatypes.matrix.Matrix.hasNonUniformScaling>`\\ \\(\\[tol\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.hasNonUniformScaling:1 of
+msgid "非一様スケーリングが含まれているかどうか。"
+msgstr "Whether non-uniform scaling is included."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`homogenize <cymel.core.datatypes.matrix.Matrix.homogenize>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`homogenize <cymel.core.datatypes.matrix.Matrix.homogenize>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.homogenize:1 of
+msgid "3x3部分を正規直交化した行列を得る。"
+msgstr "Obtain a matrix obtained by orthonormalizing the 3x3 part."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`homogenizeIt <cymel.core.datatypes.matrix.Matrix.homogenizeIt>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`homogenizeIt <cymel.core.datatypes.matrix.Matrix.homogenizeIt>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.homogenizeIt:1 of
+msgid "3x3部分を正規直交化した行列をセットする。"
+msgstr "Set the matrix obtained by orthonormalizing the 3x3 part."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`idiv <cymel.core.datatypes.matrix.Matrix.idiv>`\\ \\(m\\[\\, pre\\]\\)"
+msgstr ":py:obj:`idiv <cymel.core.datatypes.matrix.Matrix.idiv>`\\ \\(m\\[\\, pre\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.idiv:1 of
+msgid "各要素同士を除算し自身を更新する。"
+msgstr "Divide each element and update itself."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`imul <cymel.core.datatypes.matrix.Matrix.imul>`\\ \\(m\\)"
+msgstr ":py:obj:`imul <cymel.core.datatypes.matrix.Matrix.imul>`\\ \\(m\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.imul:1 of
+msgid "マトリックス要素同士を乗算してセットする。"
+msgstr "Multiply and set matrix elements."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`init3x3 <cymel.core.datatypes.matrix.Matrix.init3x3>`\\ \\(\\)"
+msgstr ":py:obj:`init3x3 <cymel.core.datatypes.matrix.Matrix.init3x3>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.init3x3:1 of
+msgid "3x3 部分を初期化する。"
+msgstr "Initialize the 3x3 part."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`initT <cymel.core.datatypes.matrix.Matrix.initT>`\\ \\(\\)"
+msgstr ":py:obj:`initT <cymel.core.datatypes.matrix.Matrix.initT>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.initTranslation:1 of
+msgid "`initTranslation` の別名。"
+msgstr "Alternative name for `initTranslation`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`initTranslation "
+"<cymel.core.datatypes.matrix.Matrix.initTranslation>`\\ \\(\\)"
+msgstr ""
+":py:obj:`initTranslation "
+"<cymel.core.datatypes.matrix.Matrix.initTranslation>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.initTranslation:1 of
+msgid "4行目の平行移動成分をクリアする。"
+msgstr "Clear the parallel component of the 4th line."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`inverse <cymel.core.datatypes.matrix.Matrix.inverse>`\\ \\(\\)"
+msgstr ":py:obj:`inverse <cymel.core.datatypes.matrix.Matrix.inverse>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.inverse:1 of
+msgid "逆行列を得る。"
+msgstr "Get the inverse of the matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`invertIt <cymel.core.datatypes.matrix.Matrix.invertIt>`\\ \\(\\)"
+msgstr ":py:obj:`invertIt <cymel.core.datatypes.matrix.Matrix.invertIt>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.invertIt:1 of
+msgid "逆行列をセットする。"
+msgstr "Set the inverse matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`isEquivalent <cymel.core.datatypes.matrix.Matrix.isEquivalent>`\\ "
+"\\(m\\[\\, tol\\]\\)"
+msgstr ""
+":py:obj:`isEquivalent <cymel.core.datatypes.matrix.Matrix.isEquivalent>`\\ "
+"\\(m\\[\\, tol\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.isEquivalent:1 of
+msgid "ほぼ同値かどうか。"
+msgstr "Is it almost the same value?"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`isIdentity <cymel.core.datatypes.matrix.Matrix.isIdentity>`\\ "
+"\\(\\[tol\\]\\)"
+msgstr ""
+":py:obj:`isIdentity <cymel.core.datatypes.matrix.Matrix.isIdentity>`\\ "
+"\\(\\[tol\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.isIdentity:1 of
+msgid "ほぼ単位行列かどうか。"
+msgstr "Is it almost a unit matrix?"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`isSingular <cymel.core.datatypes.matrix.Matrix.isSingular>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`isSingular <cymel.core.datatypes.matrix.Matrix.isSingular>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.isSingular:1 of
+msgid "特異行列かどうか。"
+msgstr "Is it a singular matrix?"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`makeInvS <cymel.core.datatypes.matrix.Matrix.makeInvS>`\\ "
+"\\(v\\[\\, pre\\]\\)"
+msgstr ""
+":py:obj:`makeInvS <cymel.core.datatypes.matrix.Matrix.makeInvS>`\\ "
+"\\(v\\[\\, pre\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeInverseScaling:1 of
+msgid "`makeInverseScaling` の別名。"
+msgstr "Alternative name for `makeInverseScaling`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`makeInvSh <cymel.core.datatypes.matrix.Matrix.makeInvSh>`\\ \\(v\\)"
+msgstr ""
+":py:obj:`makeInvSh <cymel.core.datatypes.matrix.Matrix.makeInvSh>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeInverseShearing:1 of
+msgid "`makeInverseShearing` の別名。"
+msgstr "Alternative name for `makeInverseShearing`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`makeInvT <cymel.core.datatypes.matrix.Matrix.makeInvT>`\\ \\(v\\)"
+msgstr ":py:obj:`makeInvT <cymel.core.datatypes.matrix.Matrix.makeInvT>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeInverseTranslation:1 of
+msgid "`makeInverseTranslation` の別名。"
+msgstr "Alternative name for `makeInverseTranslation`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`makeInverseScaling "
+"<cymel.core.datatypes.matrix.Matrix.makeInverseScaling>`\\ \\(v\\[\\, "
+"pre\\]\\)"
+msgstr ""
+":py:obj:`makeInverseScaling "
+"<cymel.core.datatypes.matrix.Matrix.makeInverseScaling>`\\ \\(v\\[\\, "
+"pre\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeInverseScaling:1 of
+msgid "スケーリングの逆行列を作成する。"
+msgstr "Create the inverse scaling matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`makeInverseShearing "
+"<cymel.core.datatypes.matrix.Matrix.makeInverseShearing>`\\ \\(v\\)"
+msgstr ""
+":py:obj:`makeInverseShearing "
+"<cymel.core.datatypes.matrix.Matrix.makeInverseShearing>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeInverseShearing:1 of
+msgid "シアーの逆行列を作成する。"
+msgstr "Create the shear inverse matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`makeInverseTranslation "
+"<cymel.core.datatypes.matrix.Matrix.makeInverseTranslation>`\\ \\(v\\)"
+msgstr ""
+":py:obj:`makeInverseTranslation "
+"<cymel.core.datatypes.matrix.Matrix.makeInverseTranslation>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeInverseTranslation:1 of
+msgid "平行移動の逆行列を作成する。"
+msgstr "Create the inverse translation matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`makeR <cymel.core.datatypes.matrix.Matrix.makeR>`\\ \\(v\\[\\, "
+"order\\]\\)"
+msgstr ""
+":py:obj:`makeR <cymel.core.datatypes.matrix.Matrix.makeR>`\\ \\(v\\[\\, "
+"order\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeRotation:1 of
+msgid "`makeRotation` の別名。"
+msgstr "Alternative name for `makeRotation`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`makeRotation <cymel.core.datatypes.matrix.Matrix.makeRotation>`\\ "
+"\\(v\\[\\, order\\]\\)"
+msgstr ""
+":py:obj:`makeRotation <cymel.core.datatypes.matrix.Matrix.makeRotation>`\\ "
+"\\(v\\[\\, order\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeRotation:1 of
+msgid "オイラー角回転から回転行列を作成する。"
+msgstr "Create a rotation matrix from Euler angle rotation."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`makeS <cymel.core.datatypes.matrix.Matrix.makeS>`\\ \\(v\\)"
+msgstr ":py:obj:`makeS <cymel.core.datatypes.matrix.Matrix.makeS>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeScaling:1 of
+msgid "`makeScaling` の別名。"
+msgstr "Alternative name for `makeScaling`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`makeScaling <cymel.core.datatypes.matrix.Matrix.makeScaling>`\\ "
+"\\(v\\)"
+msgstr ""
+":py:obj:`makeScaling <cymel.core.datatypes.matrix.Matrix.makeScaling>`\\ "
+"\\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeScaling:1 of
+msgid "スケーリング行列を作成する。"
+msgstr "Create a scaling matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`makeSh <cymel.core.datatypes.matrix.Matrix.makeSh>`\\ \\(v\\)"
+msgstr ":py:obj:`makeSh <cymel.core.datatypes.matrix.Matrix.makeSh>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeShearing:1 of
+msgid "`makeShearing` の別名。"
+msgstr "Alternative name for `makeShearing`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`makeShearing <cymel.core.datatypes.matrix.Matrix.makeShearing>`\\ "
+"\\(v\\)"
+msgstr ""
+":py:obj:`makeShearing <cymel.core.datatypes.matrix.Matrix.makeShearing>`\\ "
+"\\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeShearing:1 of
+msgid "シアー行列を作成する。"
+msgstr "Create a shear matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`makeT <cymel.core.datatypes.matrix.Matrix.makeT>`\\ \\(v\\)"
+msgstr ":py:obj:`makeT <cymel.core.datatypes.matrix.Matrix.makeT>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeTranslation:1 of
+msgid "`makeTranslation` の別名。"
+msgstr "Alternative name for `makeTranslation`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`makeTranslation "
+"<cymel.core.datatypes.matrix.Matrix.makeTranslation>`\\ \\(v\\)"
+msgstr ""
+":py:obj:`makeTranslation "
+"<cymel.core.datatypes.matrix.Matrix.makeTranslation>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.makeTranslation:1 of
+msgid "平行移動行列を作成する。"
+msgstr "Create a translation matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`mirror <cymel.core.datatypes.matrix.Matrix.mirror>`\\ "
+"\\(\\[mirrorAxis\\, negAxis\\, t\\]\\)"
+msgstr ""
+":py:obj:`mirror <cymel.core.datatypes.matrix.Matrix.mirror>`\\ "
+"\\(\\[mirrorAxis\\, negAxis\\, t\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.mirror:1 of
+msgid "指定軸方向でミラーしたマトリックスを得る。"
+msgstr "Obtain a matrix mirrored along the specified axis."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`mirrorIt <cymel.core.datatypes.matrix.Matrix.mirrorIt>`\\ "
+"\\(\\[mirrorAxis\\, negAxis\\, t\\]\\)"
+msgstr ""
+":py:obj:`mirrorIt <cymel.core.datatypes.matrix.Matrix.mirrorIt>`\\ "
+"\\(\\[mirrorAxis\\, negAxis\\, t\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.mirrorIt:1 of
+msgid "指定軸方向でミラーしたマトリックスをセットする。"
+msgstr "Sets the mirrored matrix along the specified axis."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`mul <cymel.core.datatypes.matrix.Matrix.mul>`\\ \\(m\\)"
+msgstr ":py:obj:`mul <cymel.core.datatypes.matrix.Matrix.mul>`\\ \\(m\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.mul:1 of
+msgid "マトリックス要素同士を乗算する。"
+msgstr "Multiply matrix elements."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`orthonormalize "
+"<cymel.core.datatypes.matrix.Matrix.orthonormalize>`\\ \\(\\)"
+msgstr ""
+":py:obj:`orthonormalize "
+"<cymel.core.datatypes.matrix.Matrix.orthonormalize>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`orthonormalizeIt "
+"<cymel.core.datatypes.matrix.Matrix.orthonormalizeIt>`\\ \\(\\)"
+msgstr ""
+":py:obj:`orthonormalizeIt "
+"<cymel.core.datatypes.matrix.Matrix.orthonormalizeIt>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`row <cymel.core.datatypes.matrix.Matrix.row>`\\ \\(i\\)"
+msgstr ":py:obj:`row <cymel.core.datatypes.matrix.Matrix.row>`\\ \\(i\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.row:1 of
+msgid "行ベクトルを得る。"
+msgstr "Get a row vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`rows <cymel.core.datatypes.matrix.Matrix.rows>`\\ \\(\\)"
+msgstr ":py:obj:`rows <cymel.core.datatypes.matrix.Matrix.rows>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.rows:1 of
+msgid "行ベクトルを4つ全て得る。"
+msgstr "Get all four row vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`set <cymel.core.datatypes.matrix.Matrix.set>`\\ \\(v\\)"
+msgstr ":py:obj:`set <cymel.core.datatypes.matrix.Matrix.set>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.set:1 of
+msgid "他の値をセットする。"
+msgstr "Set other values."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`setAxes <cymel.core.datatypes.matrix.Matrix.setAxes>`\\ \\(vx\\, "
+"vy\\, vz\\[\\, vt\\, transpose\\]\\)"
+msgstr ""
+":py:obj:`setAxes <cymel.core.datatypes.matrix.Matrix.setAxes>`\\ \\(vx\\, "
+"vy\\, vz\\[\\, vt\\, transpose\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.setAxes:1 of
+msgid "3x3部分の行や列と4行目の平行移動ベクトルをセットする。"
+msgstr ""
+"Set the row and column of the 3x3 part and the translation vector for the "
+"4th row."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`setAxis <cymel.core.datatypes.matrix.Matrix.setAxis>`\\ \\(i\\, "
+"v\\[\\, transpose\\]\\)"
+msgstr ""
+":py:obj:`setAxis <cymel.core.datatypes.matrix.Matrix.setAxis>`\\ \\(i\\, "
+"v\\[\\, transpose\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.setAxis:1 of
+msgid "3x3部分の行や列のベクトルをセットする。"
+msgstr "Set the row and column vectors of the 3x3 part."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`setColumn <cymel.core.datatypes.matrix.Matrix.setColumn>`\\ \\(i\\,"
+" v\\)"
+msgstr ""
+":py:obj:`setColumn <cymel.core.datatypes.matrix.Matrix.setColumn>`\\ \\(i\\,"
+" v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.setColumn:1 of
+msgid "列ベクトルをセットする。"
+msgstr "Set column vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`setColumns <cymel.core.datatypes.matrix.Matrix.setColumns>`\\ "
+"\\(v0\\, v1\\, v2\\, v3\\)"
+msgstr ""
+":py:obj:`setColumns <cymel.core.datatypes.matrix.Matrix.setColumns>`\\ "
+"\\(v0\\, v1\\, v2\\, v3\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.setColumns:1 of
+msgid "列ベクトルを4つ全てセットする。"
+msgstr "Set all four column vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`setElem <cymel.core.datatypes.matrix.Matrix.setElem>`\\ \\(row\\, "
+"col\\, val\\)"
+msgstr ""
+":py:obj:`setElem <cymel.core.datatypes.matrix.Matrix.setElem>`\\ \\(row\\, "
+"col\\, val\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.setElem:1 of
+msgid "指定位置の要素をセットする。"
+msgstr "Sets the element at the specified position."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`setRow <cymel.core.datatypes.matrix.Matrix.setRow>`\\ \\(i\\, v\\)"
+msgstr ":py:obj:`setRow <cymel.core.datatypes.matrix.Matrix.setRow>`\\ \\(i\\, v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.setRow:1 of
+msgid "行ベクトルをセットする。"
+msgstr "Set the row vector."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`setRows <cymel.core.datatypes.matrix.Matrix.setRows>`\\ \\(v0\\, "
+"v1\\, v2\\, v3\\)"
+msgstr ""
+":py:obj:`setRows <cymel.core.datatypes.matrix.Matrix.setRows>`\\ \\(v0\\, "
+"v1\\, v2\\, v3\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.setRows:1 of
+msgid "行ベクトルを4つ全てセットする。"
+msgstr "Set all four row vectors."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`setT <cymel.core.datatypes.matrix.Matrix.setT>`\\ \\(v\\)"
+msgstr ":py:obj:`setT <cymel.core.datatypes.matrix.Matrix.setT>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.setTranslation:1 of
+msgid "`setTranslation` の別名。"
+msgstr "Alternative name for `setTranslation`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`setToIdentity <cymel.core.datatypes.matrix.Matrix.setToIdentity>`\\"
+" \\(\\)"
+msgstr ""
+":py:obj:`setToIdentity <cymel.core.datatypes.matrix.Matrix.setToIdentity>`\\"
+" \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.setToIdentity:1 of
+msgid "単位行列をセットする。"
+msgstr "Set the identity matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`setTranslation "
+"<cymel.core.datatypes.matrix.Matrix.setTranslation>`\\ \\(v\\)"
+msgstr ""
+":py:obj:`setTranslation "
+"<cymel.core.datatypes.matrix.Matrix.setTranslation>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.setTranslation:1 of
+msgid "平行移動値をセットする。"
+msgstr "Set the translation value."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`subT <cymel.core.datatypes.matrix.Matrix.subT>`\\ \\(v\\)"
+msgstr ":py:obj:`subT <cymel.core.datatypes.matrix.Matrix.subT>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.subTranslation:1 of
+msgid "`subTranslation` の別名。"
+msgstr "Alternative name for `subTranslation`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`subTranslation "
+"<cymel.core.datatypes.matrix.Matrix.subTranslation>`\\ \\(v\\)"
+msgstr ""
+":py:obj:`subTranslation "
+"<cymel.core.datatypes.matrix.Matrix.subTranslation>`\\ \\(v\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.subTranslation:1 of
+msgid "平行移動値を減算する。"
+msgstr "Subtract the translation value."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ":py:obj:`transpose <cymel.core.datatypes.matrix.Matrix.transpose>`\\ \\(\\)"
+msgstr ":py:obj:`transpose <cymel.core.datatypes.matrix.Matrix.transpose>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.transpose:1 of
+msgid "転置行列を得る。"
+msgstr "Get the transposed matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+msgid ""
+":py:obj:`transposeIt <cymel.core.datatypes.matrix.Matrix.transposeIt>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`transposeIt <cymel.core.datatypes.matrix.Matrix.transposeIt>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:122:<autosummary>:1
+#: cymel.core.datatypes.matrix.Matrix.transposeIt:1 of
+msgid "転置行列をセットする。"
+msgstr "Set the transposed matrix."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:125
+msgid "Attributes:"
+msgstr "Attributes:"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst:136
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.core.datatypes.matrix.Matrix.addTranslation:4
+#: cymel.core.datatypes.matrix.Matrix.makeInverseTranslation:4
+#: cymel.core.datatypes.matrix.Matrix.makeTranslation:4
+#: cymel.core.datatypes.matrix.Matrix.setTranslation:4
+#: cymel.core.datatypes.matrix.Matrix.subTranslation:4 of
+msgid "平行移動の3次元ベクトル。"
+msgstr "3D vector of translation."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.Matrix.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.core.datatypes.matrix.Matrix.adjugateIt:3
+#: cymel.core.datatypes.matrix.Matrix.homogenizeIt:3
+#: cymel.core.datatypes.matrix.Matrix.imul:5
+#: cymel.core.datatypes.matrix.Matrix.init3x3:8
+#: cymel.core.datatypes.matrix.Matrix.initTranslation:6
+#: cymel.core.datatypes.matrix.Matrix.invertIt:3
+#: cymel.core.datatypes.matrix.Matrix.mirrorIt:17
+#: cymel.core.datatypes.matrix.Matrix.set:8
+#: cymel.core.datatypes.matrix.Matrix.transposeIt:3 of
+msgid "`Matrix` (self)"
+msgstr "`Matrix` (self)"
+
+#: cymel.core.datatypes.matrix.Matrix.asDegrees:3
+#: cymel.core.datatypes.matrix.Matrix.asEulerRotation:3 of
+msgid "得たい回転オーダー。"
+msgstr "The rotating order you want to get."
+
+#: cymel.core.datatypes.matrix.Matrix.asDegrees:4 of
+msgid "`list`"
+msgstr "`list`"
+
+#: cymel.core.datatypes.matrix.Matrix.asDegrees:7 of
+msgid "単位を弧度法で得たい場合は `asEulerRotation` を使用すると良い。"
+msgstr "If you want to obtain the unit in degrees, use `asEulerRotation`."
+
+#: cymel.core.datatypes.matrix.Matrix.asEulerRotation:4 of
+msgid "`.EulerRotation`"
+msgstr "`.EulerRotation`"
+
+#: cymel.core.datatypes.matrix.Matrix.asEulerRotation:7 of
+msgid "`EulerRotation` の単位は弧度法なので、 度数法で得たい場合は `asDegrees` を使用すると良い。"
+msgstr ""
+"The unit of `EulerRotation` is in degree system, so if you want to obtain it"
+" in degree system, you should use `asDegrees`."
+
+#: cymel.core.datatypes.matrix.Matrix.asQuaternion:3 of
+msgid "`.Quaternion`"
+msgstr "`.Quaternion`"
+
+#: cymel.core.datatypes.matrix.Matrix.asScaling:3
+#: cymel.core.datatypes.matrix.Matrix.asShearing:3
+#: cymel.core.datatypes.matrix.Matrix.asTranslation:3
+#: cymel.core.datatypes.matrix.Matrix.axis:10
+#: cymel.core.datatypes.matrix.Matrix.column:4
+#: cymel.core.datatypes.matrix.Matrix.row:4 of
+msgid "`.Vector`"
+msgstr "`.Vector`"
+
+#: cymel.core.datatypes.matrix.Matrix.asScalingMatrix:3 of
+msgid "`Matrix`:"
+msgstr "`Matrix`:"
+
+#: cymel.core.datatypes.matrix.Matrix.asTransformation:3 of
+msgid "`.Transformation`"
+msgstr "`.Transformation`"
+
+#: cymel.core.datatypes.matrix.Matrix.axes:3 of
+msgid "各 `.Vector` の w は 1.0 となる。"
+msgstr "The w of each `.Vector` is 1.0."
+
+#: cymel.core.datatypes.matrix.Matrix.axes:5
+#: cymel.core.datatypes.matrix.Matrix.axis:6 of
+msgid "転置行列の軸ベクトルを得る。 言い換えると False では行ベクトルを True では列ベクトルを得ることになる。"
+msgstr ""
+"Get the axis vector of the transposed matrix. In other words, if it is "
+"False, you will get a row vector, and if it is True, you will get a column "
+"vector."
+
+#: cymel.core.datatypes.matrix.Matrix.axes:9
+#: cymel.core.datatypes.matrix.Matrix.columns:3
+#: cymel.core.datatypes.matrix.Matrix.rows:3 of
+msgid "`tuple`"
+msgstr "`tuple`"
+
+#: cymel.core.datatypes.matrix.Matrix.axis:3 of
+msgid "`.Vector` の w は 1.0 となる。"
+msgstr "w of `.Vector` is 1.0."
+
+#: cymel.core.datatypes.matrix.Matrix.axis:5
+#: cymel.core.datatypes.matrix.Matrix.setAxis:3 of
+msgid "軸指定(0=X, 1=Y, 2=Z)。"
+msgstr "Axis specification (0=X, 1=Y, 2=Z)."
+
+#: cymel.core.datatypes.matrix.Matrix.cofactor:3 of
+msgid "行インデックス。"
+msgstr "Row index."
+
+#: cymel.core.datatypes.matrix.Matrix.cofactor:4 of
+msgid "列インデックス。"
+msgstr "Column index."
+
+#: cymel.core.datatypes.matrix.Matrix.cofactor:5
+#: cymel.core.datatypes.matrix.Matrix.det:3
+#: cymel.core.datatypes.matrix.Matrix.det2:3
+#: cymel.core.datatypes.matrix.Matrix.det3:3
+#: cymel.core.datatypes.matrix.Matrix.getElem:5 of
+msgid "`float`"
+msgstr "`float`"
+
+#: cymel.core.datatypes.matrix.Matrix.column:3
+#: cymel.core.datatypes.matrix.Matrix.setColumn:3 of
+msgid "列インデックス（0～3）。"
+msgstr "Column index (0-3)."
+
+#: cymel.core.datatypes.matrix.Matrix.div:3 of
+msgid "ゼロ除算を避ける為、分母が `.avoidZeroDiv` でフィルタされてから実行される。"
+msgstr ""
+"To avoid division by zero, the denominator is filtered with `.avoidZeroDiv` "
+"before execution."
+
+#: cymel.core.datatypes.matrix.Matrix.div:7 of
+msgid "分母のマトリックス。"
+msgstr "Denominator matrix."
+
+#: cymel.core.datatypes.matrix.Matrix.div:8
+#: cymel.core.datatypes.matrix.Matrix.idiv:7
+#: cymel.core.datatypes.matrix.Matrix.makeInverseScaling:5 of
+msgid "ゼロ除算を避ける為の許容誤差。"
+msgstr "Tolerance to avoid division by zero."
+
+#: cymel.core.datatypes.matrix.Matrix.getElem:3 of
+msgid "行インデックス (0-3)"
+msgstr "Row index (0-3)"
+
+#: cymel.core.datatypes.matrix.Matrix.getElem:4 of
+msgid "列インデックス (0-3)"
+msgstr "Column index (0-3)"
+
+#: cymel.core.datatypes.matrix.Matrix.hasNonUniformScaling:3
+#: cymel.core.datatypes.matrix.Matrix.isEquivalent:5
+#: cymel.core.datatypes.matrix.Matrix.isIdentity:3 of
+msgid "許容誤差。"
+msgstr "Tolerance."
+
+#: cymel.core.datatypes.matrix.Matrix.hasNonUniformScaling:4
+#: cymel.core.datatypes.matrix.Matrix.isEquivalent:6
+#: cymel.core.datatypes.matrix.Matrix.isIdentity:4
+#: cymel.core.datatypes.matrix.Matrix.isSingular:3 of
+msgid "`bool`"
+msgstr "`bool`"
+
+#: cymel.core.datatypes.matrix.Matrix.idiv:3 of
+msgid "ゼロ除算を避ける為、分母が `~.avoidZeroDiv` でフィルタされてから実行される。"
+msgstr ""
+"To avoid division by zero, the denominator is filtered with `~.avoidZeroDiv`"
+" before execution."
+
+#: cymel.core.datatypes.matrix.Matrix.idiv:6 of
+msgid "要素数16個以上のシーケンス。"
+msgstr "A sequence with 16 or more elements."
+
+#: cymel.core.datatypes.matrix.Matrix.imul:4
+#: cymel.core.datatypes.matrix.Matrix.mul:4 of
+msgid "乗じるマトリックス。"
+msgstr "Matrix to multiply."
+
+#: cymel.core.datatypes.matrix.Matrix.init3x3:3 of
+msgid "4x4 全て初期化する場合は `setToIdentity` が利用できる。"
+msgstr "If you want to initialize all 4x4, you can use `setToIdentity`."
+
+#: cymel.core.datatypes.matrix.Matrix.init3x3:5 of
+msgid "平行移動成分のみの行列を新規に得たい場合は `asTranslationMatrix` が利用できる。"
+msgstr ""
+"If you want to obtain a new matrix with only translation components, you can"
+" use `asTranslationMatrix`."
+
+#: cymel.core.datatypes.matrix.Matrix.initTranslation:3 of
+msgid "3x3 以外を初期化したマトリクスを新規に得たい場合は `as3x3` が利用できる。"
+msgstr ""
+"If you want to obtain a new matrix initialized to something other than 3x3, "
+"you can use `as3x3`."
+
+#: cymel.core.datatypes.matrix.Matrix.isEquivalent:4 of
+msgid "比較するマトリックス。"
+msgstr "Matrix to compare."
+
+#: cymel.core.datatypes.matrix.Matrix.makeInverseScaling:4
+#: cymel.core.datatypes.matrix.Matrix.makeScaling:4 of
+msgid "スケール値の3次元ベクトル。"
+msgstr "3D vector of scale values."
+
+#: cymel.core.datatypes.matrix.Matrix.makeInverseShearing:4
+#: cymel.core.datatypes.matrix.Matrix.makeShearing:4 of
+msgid "シアー値 (xy, yz, yx)"
+msgstr "Shear value (xy, yz, yx)"
+
+#: cymel.core.datatypes.matrix.Matrix.makeRotation:3 of
+msgid "各軸の回転角度 (x,y,z) を Radians で。"
+msgstr "The rotation angle (x,y,z) of each axis in Radians."
+
+#: cymel.core.datatypes.matrix.Matrix.makeRotation:4 of
+msgid "回転オーダーを表す整数値。"
+msgstr "An integer value representing the rotation order."
+
+#: cymel.core.datatypes.matrix.Matrix.mirror:3
+#: cymel.core.datatypes.matrix.Matrix.mirrorIt:3 of
+msgid "ミラーする基準軸。 `.AXIS_X` 、 `.AXIS_Y` 、 `.AXIS_Z` のいずれかを指定する。"
+msgstr ""
+"Reference axis to mirror. Specify either `.AXIS_X`, `.AXIS_Y`, or `.AXIS_Z`."
+
+#: cymel.core.datatypes.matrix.Matrix.mirror:6
+#: cymel.core.datatypes.matrix.Matrix.mirrorIt:6 of
+msgid ""
+"行列式（スケール）が反転しないように、 ミラー結果の逆を向けるローカル軸。 `.AXIS_X` 、 `.AXIS_Y` 、 `.AXIS_Z` の他に、"
+" None 、 False 、 True を指定可能。  省略時(True)はミラー基準軸と同じになる。 False では 3x3 部は反転しない。 "
+"None ではミラー結果から全軸を逆に向ける。"
+msgstr ""
+"Local axis to orient the opposite of the mirror result so that the "
+"determinant (scale) is not reversed. In addition to `.AXIS_X`, `.AXIS_Y`, "
+"`.AXIS_Z`, you can specify None, False, and True.  If omitted (True), it "
+"will be the same as the mirror reference axis. If False, the 3x3 part will "
+"not be reversed. None will reverse all axes from the mirror result."
+
+#: cymel.core.datatypes.matrix.Matrix.mirror:7
+#: cymel.core.datatypes.matrix.Matrix.mirrorIt:7 of
+msgid ""
+"行列式（スケール）が反転しないように、 ミラー結果の逆を向けるローカル軸。 `.AXIS_X` 、 `.AXIS_Y` 、 `.AXIS_Z` の他に、"
+" None 、 False 、 True を指定可能。"
+msgstr ""
+"Local axis to orient the opposite of the mirror result so that the "
+"determinant (scale) is not reversed. In addition to `.AXIS_X`, `.AXIS_Y`, "
+"`.AXIS_Z`, you can specify None, False, and True."
+
+#: cymel.core.datatypes.matrix.Matrix.mirror:12
+#: cymel.core.datatypes.matrix.Matrix.mirrorIt:12 of
+msgid "省略時(True)はミラー基準軸と同じになる。 False では 3x3 部は反転しない。 None ではミラー結果から全軸を逆に向ける。"
+msgstr ""
+"If omitted (True), it will be the same as the mirror reference axis. If "
+"False, the 3x3 part will not be reversed. None will reverse all axes from "
+"the mirror result."
+
+#: cymel.core.datatypes.matrix.Matrix.mirror:15
+#: cymel.core.datatypes.matrix.Matrix.mirrorIt:15 of
+msgid "平行移動値（4行目）も反転するかどうか。"
+msgstr "Whether the translation value (4th line) is also inverted."
+
+#: cymel.core.datatypes.matrix.Matrix.row:3
+#: cymel.core.datatypes.matrix.Matrix.setRow:3 of
+msgid "行インデックス（0～3）。"
+msgstr "Row index (0-3)."
+
+#: cymel.core.datatypes.matrix.Matrix.set:3 of
+msgid "コンストラクタと同様に、以下の値を指定可能。"
+msgstr "Similar to the constructor, the following values ​​can be specified."
+
+#: cymel.core.datatypes.matrix.Matrix.setAxes:4 of
+msgid "セットするX軸ベクトル。"
+msgstr "X-axis vector to set."
+
+#: cymel.core.datatypes.matrix.Matrix.setAxes:6 of
+msgid "セットするY軸ベクトル。"
+msgstr "Y-axis vector to set."
+
+#: cymel.core.datatypes.matrix.Matrix.setAxes:8 of
+msgid "セットするZ軸ベクトル。"
+msgstr "Z-axis vector to set."
+
+#: cymel.core.datatypes.matrix.Matrix.setAxes:10 of
+msgid "セットする平行移動ベクトル。 これだけは transpose オプションの影響を受けない。"
+msgstr ""
+"The translation vector to set. Only this is not affected by the transpose "
+"option."
+
+#: cymel.core.datatypes.matrix.Matrix.setAxes:13 of
+msgid ""
+"3x3部分には転置行列の軸ベクトルをセットする。 言い換えると False では行ベクトルを True では列ベクトルをセットすることになる。"
+msgstr ""
+"Set the axis vector of the transposed matrix in the 3x3 part. In other "
+"words, False sets the row vector, True sets the column vector."
+
+#: cymel.core.datatypes.matrix.Matrix.setAxis:5 of
+msgid "セットする軸ベクトル。"
+msgstr "Axis vector to set."
+
+#: cymel.core.datatypes.matrix.Matrix.setAxis:7 of
+msgid "転置行列の軸ベクトルをセットする。 言い換えると False では行ベクトルを True では列ベクトルをセットすることになる。"
+msgstr ""
+"Sets the axis vector of the transposed matrix. In other words, False sets "
+"the row vector, True sets the column vector."
+
+#: cymel.core.datatypes.matrix.Matrix.setColumn:5
+#: cymel.core.datatypes.matrix.Matrix.setRow:5 of
+msgid "セットする4次元ベクトル。"
+msgstr "4-dimensional vector to set."
+
+#: cymel.core.datatypes.matrix.Matrix.setColumns:4 of
+msgid "1列目の4次元ベクトル。"
+msgstr "4-dimensional vector in the first column."
+
+#: cymel.core.datatypes.matrix.Matrix.setColumns:6 of
+msgid "2列目の4次元ベクトル。"
+msgstr "4-dimensional vector in the second column."
+
+#: cymel.core.datatypes.matrix.Matrix.setColumns:8 of
+msgid "3列目の4次元ベクトル。"
+msgstr "4-dimensional vector in the third column."
+
+#: cymel.core.datatypes.matrix.Matrix.setColumns:10 of
+msgid "4列目の4次元ベクトル。"
+msgstr "4-dimensional vector in the 4th column."
+
+#: cymel.core.datatypes.matrix.Matrix.setElem:3 of
+msgid "行を 0 ～ 3 で指定。"
+msgstr "Specify the row from 0 to 3."
+
+#: cymel.core.datatypes.matrix.Matrix.setElem:4 of
+msgid "列を 0 ～ 3 で指定。"
+msgstr "Specify the column from 0 to 3."
+
+#: cymel.core.datatypes.matrix.Matrix.setElem:5 of
+msgid "セットする値。"
+msgstr "Value to set."
+
+#: cymel.core.datatypes.matrix.Matrix.setRows:4 of
+msgid "1行目の4次元ベクトル。"
+msgstr "4-dimensional vector in the first row."
+
+#: cymel.core.datatypes.matrix.Matrix.setRows:6 of
+msgid "2行目の4次元ベクトル。"
+msgstr "4-dimensional vector in the second row."
+
+#: cymel.core.datatypes.matrix.Matrix.setRows:8 of
+msgid "3行目の4次元ベクトル。"
+msgstr "4-dimensional vector in the third row."
+
+#: cymel.core.datatypes.matrix.Matrix.setRows:10 of
+msgid "4行目の4次元ベクトル。"
+msgstr "4-dimensional vector in the 4th row."
+
+#: cymel.core.datatypes.matrix.Matrix.setToIdentity:3 of
+msgid "`self`"
+msgstr "`self`"

@@ -1,0 +1,44 @@
+class cymel.utils.melgvar.MelVar
+================================
+
+.. currentmodule:: cymel.utils.melgvar
+
+
+.. inheritance-diagram:: MelVar
+    :parts: 1
+
+
+
+.. autoclass:: MelVar
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        get
+        has_key
+        items
+        keys
+        values
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: get
+    .. automethod:: has_key
+    .. automethod:: items
+    .. automethod:: keys
+    .. automethod:: values
+
+

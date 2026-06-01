@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:2
+msgid "class cymel.ui.menu.MenuBarLayout"
+msgstr "class cymel.ui.menu.MenuBarLayout"
+
+#: cymel.ui.menu.MenuBarLayout:1 of
+msgid "mel UI の :mayacmd:`menuBarLayout` ラッパークラス。"
+msgstr ":mayacmd:`menuBarLayout` wrapper class for mel UI."
+
+#: cymel.ui.menu.MenuBarLayout:3 of
+msgid "`with` で :mayacmd:`setParent` が行える。"
+msgstr ":mayacmd:`setParent` can be done with `with`."
+
+#: cymel.ui.menu.MenuBarLayout:5 of
+msgid ""
+"Maya 標準コマンドに基づき、 レイアウトされたメニューを得るには `children` ではなく `menus` "
+"などのメソッドを用いなければならない。 とはいえ `.Menu` からは `.Control.parent` でレイアウトを取得出来る。"
+msgstr ""
+"Based on Maya standard commands, you must use methods such as `menus` "
+"instead of `children` to obtain laid out menus. However, you can get the "
+"layout from `.Menu` with `.Control.parent`."
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+msgid ":py:obj:`UICMD <cymel.ui.menu.MenuBarLayout.UICMD>`"
+msgstr ":py:obj:`UICMD <cymel.ui.menu.MenuBarLayout.UICMD>`"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+msgid ":py:obj:`clear <cymel.ui.menu.MenuBarLayout.clear>`\\ \\(\\)"
+msgstr ":py:obj:`clear <cymel.ui.menu.MenuBarLayout.clear>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+#: cymel.ui.menu.MenuBarLayout.clear:1 of
+msgid "子とメニューを全て削除する。"
+msgstr "Delete all children and menus."
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+msgid ":py:obj:`menu <cymel.ui.menu.MenuBarLayout.menu>`\\ \\(\\[idxOrPath\\]\\)"
+msgstr ":py:obj:`menu <cymel.ui.menu.MenuBarLayout.menu>`\\ \\(\\[idxOrPath\\]\\)"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+#: cymel.ui.menu.MenuBarLayout.menu:1 of
+msgid "メニューを得る。"
+msgstr "Get the menu."
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+msgid ":py:obj:`menuNames <cymel.ui.menu.MenuBarLayout.menuNames>`\\ \\(\\)"
+msgstr ":py:obj:`menuNames <cymel.ui.menu.MenuBarLayout.menuNames>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+#: cymel.ui.menu.MenuBarLayout.menuNames:1 of
+msgid "メニューの名前リストを得る。"
+msgstr "Get a list of menu names."
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+msgid ":py:obj:`menus <cymel.ui.menu.MenuBarLayout.menus>`\\ \\(\\)"
+msgstr ":py:obj:`menus <cymel.ui.menu.MenuBarLayout.menus>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+#: cymel.ui.menu.MenuBarLayout.menus:1 of
+msgid "メニューのリストを得る。"
+msgstr "Get a list of menus."
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+msgid ":py:obj:`numMenus <cymel.ui.menu.MenuBarLayout.numMenus>`\\ \\(\\)"
+msgstr ":py:obj:`numMenus <cymel.ui.menu.MenuBarLayout.numMenus>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+#: cymel.ui.menu.MenuBarLayout.numMenus:1 of
+msgid "メニューの数を得る。"
+msgstr "Get the number of menus."
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:38
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.ui.menu.MenuBarLayout.menu:3 of
+msgid "子のインデックス（ゼロオリジン）か、 階層下の相対パス。"
+msgstr "Child index (zero origin) or relative path down the hierarchy."
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.ui.menu.MenuBarLayout.menu:6 of
+msgid "`.Control`"
+msgstr "`.Control`"
+
+#: cymel.ui.menu.MenuBarLayout.menuNames:3 cymel.ui.menu.MenuBarLayout.menus:3
+#: of
+msgid "`list`"
+msgstr "`list`"
+
+#: cymel.ui.menu.MenuBarLayout.numMenus:3 of
+msgid "`int`"
+msgstr "`int`"

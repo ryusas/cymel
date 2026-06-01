@@ -1,0 +1,535 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:2
+msgid "class cymel.utils.optionvar.OptionVar"
+msgstr "class cymel.utils.optionvar.OptionVar"
+
+#: cymel.utils.optionvar.OptionVar:1 of
+msgid ":mayacmd:`optionVar` ラッパークラス。"
+msgstr ":mayacmd:`optionVar` wrapper class."
+
+#: cymel.utils.optionvar.OptionVar:3 of
+msgid "`dict` のような振る舞いをする。"
+msgstr "Behaves like `dict`."
+
+#: cymel.utils.optionvar.OptionVar:5 of
+msgid "特別な対応をせずに、以下のタイプの値を扱うことができる。"
+msgstr ""
+"The following types of values ​​can be handled without special handling."
+
+#: cymel.utils.optionvar.OptionVar:7 of
+msgid "`None` (文字列 '___None___' として保存される)"
+msgstr "`None` (stored as string '___None___')"
+
+#: cymel.utils.optionvar.OptionVar:8 of
+msgid "`bool` (文字列 '___True___' か '___False___' として保存される）"
+msgstr "`bool` (stored as string '___True___' or '___False___')"
+
+#: cymel.utils.optionvar.OptionVar:9 of
+msgid "`int`"
+msgstr "`int`"
+
+#: cymel.utils.optionvar.OptionVar:10 of
+msgid "`float`"
+msgstr "`float`"
+
+#: cymel.utils.optionvar.OptionVar:11 cymel.utils.optionvar.OptionVar.prefix:3
+#: of
+msgid "`str`"
+msgstr "`str`"
+
+#: cymel.utils.optionvar.OptionVar:12 of
+msgid "`int` シーケンス（型の混在は不可）"
+msgstr "`int` sequence (types cannot be mixed)"
+
+#: cymel.utils.optionvar.OptionVar:13 of
+msgid "`float` シーケンス（型の混在は不可）"
+msgstr "`float` sequence (types cannot be mixed)"
+
+#: cymel.utils.optionvar.OptionVar:14 of
+msgid "`str` シーケンス（型の混在は不可）"
+msgstr "`str` sequence (types cannot be mixed)"
+
+#: cymel.utils.optionvar.OptionVar:15 of
+msgid "空のシーケンス"
+msgstr "empty sequence"
+
+#: cymel.utils.optionvar.OptionVar:17 of
+msgid ""
+"さらに、 `setTranslator` で :mayacmd:`optionVar` に セットする値との変換器をセットすることで、 "
+"あらゆるタイプの値を扱えるようにすることも可能。"
+msgstr ""
+"Furthermore, by setting a translator with the value set in "
+":mayacmd:`optionVar` with `setTranslator`, it is possible to handle any type"
+" of value."
+
+#: cymel.utils.optionvar.OptionVar:21 of
+msgid ""
+"任意の接頭辞を指定することで、 :mayacmd:`optionVar` の保存と読み出し時に 接頭辞が付加されるとともに、 "
+"辞書として扱われる範囲を限定することができる。"
+msgstr ""
+"By specifying an arbitrary prefix, the prefix will be added when saving and "
+"reading :mayacmd:`optionVar`, and you can limit the range that is treated as"
+" a dictionary."
+
+#: cymel.utils.optionvar.OptionVar:26 of
+msgid ""
+"また、各値のデフォルト値を指定することも可能。 デフォルト値が指定されていれば、 実際に値が保存されていなくても値を持つようになり、 "
+":mayacmd:`optionVar` の肥大化が抑制される。"
+msgstr ""
+"It is also possible to specify a default value for each value. If a default "
+"value is specified, it will have a value even if it is not actually saved, "
+"and the expansion of :mayacmd:`optionVar` will be suppressed."
+
+#: cymel.utils.optionvar.OptionVar:32 of
+msgid ""
+"ツールなどの開発時は、 そのツール固有の接頭辞を指定し、 一通りのデフォルト値を指定することで、 そのツールのオプション辞書とする使い方を推奨する。"
+msgstr ""
+"When developing a tool, we recommend specifying a prefix unique to that tool"
+" and specifying a set of default values ​​to use it as an options dictionary"
+" for that tool."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar:37
+#: cymel.utils.optionvar.OptionVar.__init__:1 of
+msgid "初期化。"
+msgstr "Initialization."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.utils.optionvar.OptionVar:39
+#: cymel.utils.optionvar.OptionVar.__init__:3 of
+msgid "管理する変数名に付ける任意の接頭辞。"
+msgstr ""
+"An arbitrary prefix to be added to the name of the variable to be managed."
+
+#: cymel.utils.optionvar.OptionVar:41
+#: cymel.utils.optionvar.OptionVar.__init__:5
+#: cymel.utils.optionvar.OptionVar.setDefaults:3 of
+msgid "登録するデフォルト値の辞書。"
+msgstr "Dictionary of default values ​​to register."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`__init__ <cymel.utils.optionvar.OptionVar.__init__>`\\ "
+"\\(\\[prefix\\, defaults\\]\\)"
+msgstr ""
+":py:obj:`__init__ <cymel.utils.optionvar.OptionVar.__init__>`\\ "
+"\\(\\[prefix\\, defaults\\]\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ":py:obj:`clear <cymel.utils.optionvar.OptionVar.clear>`\\ \\(\\)"
+msgstr ":py:obj:`clear <cymel.utils.optionvar.OptionVar.clear>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.clear:1 of
+msgid "全ての値とデフォルト値を削除する。"
+msgstr "Delete all values ​​and default values."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`defaultItems <cymel.utils.optionvar.OptionVar.defaultItems>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`defaultItems <cymel.utils.optionvar.OptionVar.defaultItems>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.defaultItems:1 of
+msgid "デフォルト値を持つキーとその値のペアのリストを得る。"
+msgstr "Get a list of key and value pairs with default values."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ":py:obj:`defaultKeys <cymel.utils.optionvar.OptionVar.defaultKeys>`\\ \\(\\)"
+msgstr ""
+":py:obj:`defaultKeys <cymel.utils.optionvar.OptionVar.defaultKeys>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.defaultKeys:1 of
+msgid "デフォルト値を持つキーのリストを得る。"
+msgstr "Get a list of keys with default values."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`defaultValues <cymel.utils.optionvar.OptionVar.defaultValues>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`defaultValues ​​<cymel.utils.optionvar.OptionVar.defaultValues>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.defaultValues:1 of
+msgid "デフォルト値のリストを得る。"
+msgstr "Get a list of default values."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ":py:obj:`get <cymel.utils.optionvar.OptionVar.get>`\\ \\(key\\[\\, default\\]\\)"
+msgstr ":py:obj:`get <cymel.utils.optionvar.OptionVar.get>`\\ \\(key\\[\\, default\\]\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.get:1 of
+msgid "キーを指定して値を得る。"
+msgstr "Get the value by specifying the key."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`getDefault <cymel.utils.optionvar.OptionVar.getDefault>`\\ "
+"\\(key\\)"
+msgstr ""
+":py:obj:`getDefault <cymel.utils.optionvar.OptionVar.getDefault>`\\ "
+"\\(key\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.getDefault:1 of
+msgid "デフォルト値を得る。"
+msgstr "Get default value."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`hasDefault <cymel.utils.optionvar.OptionVar.hasDefault>`\\ "
+"\\(key\\)"
+msgstr ""
+":py:obj:`hasDefault <cymel.utils.optionvar.OptionVar.hasDefault>`\\ "
+"\\(key\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.hasDefault:1 of
+msgid "デフォルト値を持つキーかどうか。"
+msgstr "Whether the key has a default value."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`hasNonDefaultValue "
+"<cymel.utils.optionvar.OptionVar.hasNonDefaultValue>`\\ \\(key\\)"
+msgstr ""
+":py:obj:`hasNonDefaultValue "
+"<cymel.utils.optionvar.OptionVar.hasNonDefaultValue>`\\ \\(key\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.hasNonDefaultValue:1 of
+msgid "デフォルト値ではない値が保存されているかどうか。"
+msgstr "Whether a value that is not the default value is saved."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ":py:obj:`has_key <cymel.utils.optionvar.OptionVar.has_key>`\\ \\(key\\)"
+msgstr ":py:obj:`has_key <cymel.utils.optionvar.OptionVar.has_key>`\\ \\(key\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ":py:obj:`items <cymel.utils.optionvar.OptionVar.items>`\\ \\(\\)"
+msgstr ":py:obj:`items <cymel.utils.optionvar.OptionVar.items>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.items:1 of
+msgid "セットされているキーと値のペアのリストを得る。"
+msgstr "Get a list of set key-value pairs."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ":py:obj:`keys <cymel.utils.optionvar.OptionVar.keys>`\\ \\(\\)"
+msgstr ":py:obj:`keys <cymel.utils.optionvar.OptionVar.keys>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.keys:1 of
+msgid "セットされているキーのリストを得る。"
+msgstr "Get a list of set keys."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`nonDefaultItems "
+"<cymel.utils.optionvar.OptionVar.nonDefaultItems>`\\ \\(\\)"
+msgstr ""
+":py:obj:`nonDefaultItems "
+"<cymel.utils.optionvar.OptionVar.nonDefaultItems>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.nonDefaultItems:1 of
+msgid "デフォルトでない（実際に保存されている）キーと値のペアのリストを得る。"
+msgstr "Get a list of non-default (actually saved) key-value pairs."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`nonDefaultKeys <cymel.utils.optionvar.OptionVar.nonDefaultKeys>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`nonDefaultKeys <cymel.utils.optionvar.OptionVar.nonDefaultKeys>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.nonDefaultKeys:1 of
+msgid "デフォルトでない（実際に保存されている）キーのリストを得る。"
+msgstr "Get a list of non-default (actually saved) keys."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`nonDefaultValues "
+"<cymel.utils.optionvar.OptionVar.nonDefaultValues>`\\ \\(\\)"
+msgstr ""
+":py:obj:`nonDefaultValues "
+"​​<cymel.utils.optionvar.OptionVar.nonDefaultValues>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.nonDefaultValues:1 of
+msgid "デフォルトでない（実際に保存されている）値のリストを得る。"
+msgstr "Get a list of non-default (actually saved) values."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ":py:obj:`pop <cymel.utils.optionvar.OptionVar.pop>`\\ \\(key\\, \\*args\\)"
+msgstr ":py:obj:`pop <cymel.utils.optionvar.OptionVar.pop>`\\ \\(key\\, \\*args\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.pop:1 of
+msgid "値を取得して削除する。"
+msgstr "Get and delete values."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ":py:obj:`prefix <cymel.utils.optionvar.OptionVar.prefix>`\\ \\(\\)"
+msgstr ":py:obj:`prefix <cymel.utils.optionvar.OptionVar.prefix>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.prefix:1 of
+msgid "接頭辞を得る。"
+msgstr "Get prefix."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`removeDefault <cymel.utils.optionvar.OptionVar.removeDefault>`\\ "
+"\\(key\\)"
+msgstr ""
+":py:obj:`removeDefault <cymel.utils.optionvar.OptionVar.removeDefault>`\\ "
+"\\(key\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.removeDefault:1 of
+msgid "デフォルト値を削除する。"
+msgstr "Delete default values."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ":py:obj:`reset <cymel.utils.optionvar.OptionVar.reset>`\\ \\(key\\)"
+msgstr ":py:obj:`reset <cymel.utils.optionvar.OptionVar.reset>`\\ \\(key\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.reset:1 of
+msgid "指定したキーの値をリセットする。"
+msgstr "Resets the value of the specified key."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`resetAll <cymel.utils.optionvar.OptionVar.resetAll>`\\ "
+"\\(\\[ignores\\]\\)"
+msgstr ""
+":py:obj:`resetAll <cymel.utils.optionvar.OptionVar.resetAll>`\\ "
+"\\(\\[ignores\\]\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.resetAll:1 of
+msgid "全ての値をリセットする。"
+msgstr "Reset all values."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`resetToDefaults "
+"<cymel.utils.optionvar.OptionVar.resetToDefaults>`\\ \\(\\[ignores\\]\\)"
+msgstr ""
+":py:obj:`resetToDefaults "
+"<cymel.utils.optionvar.OptionVar.resetToDefaults>`\\ \\(\\[ignores\\]\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.resetToDefaults:1 of
+msgid "デフォルト値を持つ全ての値をリセットする。"
+msgstr "Reset all values ​​that have default values."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`setDefault <cymel.utils.optionvar.OptionVar.setDefault>`\\ "
+"\\(key\\, val\\)"
+msgstr ""
+":py:obj:`setDefault <cymel.utils.optionvar.OptionVar.setDefault>`\\ "
+"\\(key\\, val\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.setDefault:1 of
+msgid "キーに対するデフォルト値をセットする。"
+msgstr "Set default values ​​for keys."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`setDefaults <cymel.utils.optionvar.OptionVar.setDefaults>`\\ "
+"\\(dic\\)"
+msgstr ""
+":py:obj:`setDefaults <cymel.utils.optionvar.OptionVar.setDefaults>`\\ "
+"\\(dic\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.setDefaults:1 of
+msgid "辞書によってデフォルト値をまとめて登録する。"
+msgstr "Register default values ​​all at once using a dictionary."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ""
+":py:obj:`setTranslator <cymel.utils.optionvar.OptionVar.setTranslator>`\\ "
+"\\(key\\[\\, getter\\_setter\\]\\)"
+msgstr ""
+":py:obj:`setTranslator <cymel.utils.optionvar.OptionVar.setTranslator>`\\ "
+"\\(key\\[\\, getter\\_setter\\]\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.setTranslator:1 of
+msgid ":mayacmd:`optionVar` に保存する値と実際の値の変換器をセットする。"
+msgstr ""
+":mayacmd:Set the converter between the value stored in `optionVar` and the "
+"actual value."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ":py:obj:`update <cymel.utils.optionvar.OptionVar.update>`\\ \\(src\\)"
+msgstr ":py:obj:`update <cymel.utils.optionvar.OptionVar.update>`\\ \\(src\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.update:1 of
+msgid "指定した辞書で値を書き換える。"
+msgstr "Rewrite the value using the specified dictionary."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+msgid ":py:obj:`values <cymel.utils.optionvar.OptionVar.values>`\\ \\(\\)"
+msgstr ":py:obj:`values ​​<cymel.utils.optionvar.OptionVar.values>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:55:<autosummary>:1
+#: cymel.utils.optionvar.OptionVar.values:1 of
+msgid "セットされている値のリストを得る。"
+msgstr "Get a list of set values."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst:58
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.utils.optionvar.OptionVar.defaultItems:3
+#: cymel.utils.optionvar.OptionVar.defaultKeys:3
+#: cymel.utils.optionvar.OptionVar.defaultValues:3
+#: cymel.utils.optionvar.OptionVar.items:6
+#: cymel.utils.optionvar.OptionVar.keys:6
+#: cymel.utils.optionvar.OptionVar.nonDefaultItems:3
+#: cymel.utils.optionvar.OptionVar.nonDefaultKeys:3
+#: cymel.utils.optionvar.OptionVar.nonDefaultValues:3
+#: cymel.utils.optionvar.OptionVar.values:6 of
+msgid "`list`"
+msgstr "`list`"
+
+#: cymel.utils.optionvar.OptionVar.get:3
+#: cymel.utils.optionvar.OptionVar.getDefault:3
+#: cymel.utils.optionvar.OptionVar.hasDefault:3
+#: cymel.utils.optionvar.OptionVar.pop:6
+#: cymel.utils.optionvar.OptionVar.removeDefault:10
+#: cymel.utils.optionvar.OptionVar.reset:6
+#: cymel.utils.optionvar.OptionVar.setDefault:3
+#: cymel.utils.optionvar.OptionVar.setTranslator:3 of
+msgid "キー。"
+msgstr "key."
+
+#: ../srcs/generated/classes/cymel.utils.optionvar.OptionVar.rst
+msgid "戻り値"
+msgstr "return value"
+
+#: cymel.utils.optionvar.OptionVar.get:4 of
+msgid "格納されている値かデフォルト値、又は指定値。"
+msgstr "Stored value, default value, or specified value."
+
+#: cymel.utils.optionvar.OptionVar.getDefault:4 of
+msgid "登録された値。"
+msgstr "Registered value."
+
+#: cymel.utils.optionvar.OptionVar.hasDefault:4
+#: cymel.utils.optionvar.OptionVar.hasNonDefaultValue:3 of
+msgid "`bool`"
+msgstr "`bool`"
+
+#: cymel.utils.optionvar.OptionVar.items:3
+#: cymel.utils.optionvar.OptionVar.keys:3
+#: cymel.utils.optionvar.OptionVar.values:3 of
+msgid "実際の :mayacmd:`optionVar` に記録内容と デフォルト値の連結結果が得られる。"
+msgstr ""
+"You can get the concatenation result of the recorded contents and default "
+"value in the actual :mayacmd:`optionVar`."
+
+#: cymel.utils.optionvar.OptionVar.pop:3 of
+msgid "デフォルト値がセットされたキーの場合は、 デフォルト値も削除される。"
+msgstr ""
+"If a key has a default value set, the default value will also be deleted."
+
+#: cymel.utils.optionvar.OptionVar.pop:7 of
+msgid "格納されていた値かデフォルト値、又は指定値。"
+msgstr "Stored value, default value, or specified value."
+
+#: cymel.utils.optionvar.OptionVar.removeDefault:3 of
+msgid ""
+"現在の値がデフォルト値の場合、 デフォルト値の削除後も現在の値を保持するために、 :mayacmd:`optionVar` の書き込みが行われる。"
+msgstr ""
+"If the current value is the default value, :mayacmd:`optionVar` is written "
+"to retain the current value even after the default value is removed."
+
+#: cymel.utils.optionvar.OptionVar.removeDefault:7 of
+msgid "もし、完全に削除したい場合は、本メソッドではなく、 del や `pop` を使用すべきである。"
+msgstr ""
+"If you want to completely delete it, you should use del or `pop` instead of "
+"this method."
+
+#: cymel.utils.optionvar.OptionVar.reset:3
+#: cymel.utils.optionvar.OptionVar.resetAll:3 of
+msgid "デフォルト値があればその値に、 無ければ値が無い状態になる。"
+msgstr ""
+"If there is a default value, it will be that value; if there is not, there "
+"will be no value."
+
+#: cymel.utils.optionvar.OptionVar.resetAll:6 of
+msgid "接頭辞が未設定の場合は、Mayaの全ての値を削除することになるので、 認められない操作であるとしてエラーになる。"
+msgstr ""
+"If the prefix is ​​not set, all Maya values ​​will be deleted, which will "
+"result in an error as the operation is not allowed."
+
+#: cymel.utils.optionvar.OptionVar.resetAll:9
+#: cymel.utils.optionvar.OptionVar.resetToDefaults:3 of
+msgid "除外するキーのリストやセット。"
+msgstr "A list or set of keys to exclude."
+
+#: cymel.utils.optionvar.OptionVar.setDefault:4 of
+msgid "値。"
+msgstr "value."
+
+#: cymel.utils.optionvar.OptionVar.setTranslator:4 of
+msgid ""
+"getter（保存値を実値に変換）と setter（実値を保存値に変換）のペアを指定する。 省略すると (eval, repr) がセットされる。 "
+"None を指定するとセット済みの変換器を解除する。"
+msgstr ""
+"Specify a pair of getter (converts stored value to actual value) and setter "
+"(converts actual value to stored value). If omitted, (eval, repr) is set. "
+"Specifying None will cancel the set converter."
+
+#: cymel.utils.optionvar.OptionVar.update:3 of
+msgid "ソース辞書。"
+msgstr "Source dictionary."

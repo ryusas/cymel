@@ -1,0 +1,440 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/modules.rst:6
+msgid "モジュールリファレンスマニュアル"
+msgstr "Module reference manual"
+
+#: ../srcs/modules.rst:15
+msgid "Main"
+msgstr "Main"
+
+#: ../srcs/modules.rst:27:<autosummary>:1
+msgid ":py:obj:`cymel.all <cymel.all>`"
+msgstr ":py:obj:`cymel.all <cymel.all>`"
+
+#: ../srcs/modules.rst:27:<autosummary>:1
+msgid "全機能をインポートするための推奨処理。"
+msgstr "Recommended process for importing full functionality."
+
+#: ../srcs/modules.rst:27:<autosummary>:1
+msgid ":py:obj:`cymel.compat_nodetype <cymel.compat_nodetype>`"
+msgstr ":py:obj:`cymel.compat_nodetype <cymel.compat_nodetype>`"
+
+#: ../srcs/modules.rst:27:<autosummary>:1
+msgid "Mayaバージョンによるノードタイプ名変更のサポート。"
+msgstr "Support for renaming node types depending on Maya version."
+
+#: ../srcs/modules.rst:27:<autosummary>:1
+msgid ":py:obj:`cymel.constants <cymel.constants>`"
+msgstr ":py:obj:`cymel.constants <cymel.constants>`"
+
+#: ../srcs/modules.rst:27:<autosummary>:1
+msgid "cymel全体で使用する主な定数。"
+msgstr "Main constants used throughout cymel."
+
+#: ../srcs/modules.rst:27:<autosummary>:1
+msgid ":py:obj:`cymel.initmaya <cymel.initmaya>`"
+msgstr ":py:obj:`cymel.initmaya <cymel.initmaya>`"
+
+#: ../srcs/modules.rst:27:<autosummary>:1
+msgid "スタンドアロン python (mayapy) からの Maya の初期化。"
+msgstr "Initializing Maya from standalone python (mayapy)."
+
+#: ../srcs/modules.rst:27:<autosummary>:1
+msgid ":py:obj:`cymel.main <cymel.main>`"
+msgstr ":py:obj:`cymel.main <cymel.main>`"
+
+#: ../srcs/modules.rst:27:<autosummary>:1
+msgid "UI以外の全機能。"
+msgstr "All functions except UI."
+
+#: ../srcs/modules.rst:27:<autosummary>:1
+msgid ":py:obj:`cymel.ui <cymel.ui>`"
+msgstr ":py:obj:`cymel.ui <cymel.ui>`"
+
+#: ../srcs/modules.rst:27:<autosummary>:1
+msgid "UI系機能。"
+msgstr "UI functions."
+
+#: ../srcs/modules.rst:31
+msgid "CyObjects"
+msgstr "CyObjects"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ""
+":py:obj:`cymel.core.cyobjects.cyobject <cymel.core.cyobjects.cyobject>`"
+msgstr ""
+":py:obj:`cymel.core.cyobjects.cyobject <cymel.core.cyobjects.cyobject>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid "Mayaラッパーオブジェクトの抽象基底クラス。"
+msgstr "Abstract base class for Maya wrapper objects."
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":py:obj:`cymel.core.cyobjects.dagnode <cymel.core.cyobjects.dagnode>`"
+msgstr ":py:obj:`cymel.core.cyobjects.dagnode <cymel.core.cyobjects.dagnode>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":mayanode:`dagNode` ノードタイプラッパークラス。"
+msgstr ":mayanode:`dagNode` Node type wrapper class."
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ""
+":py:obj:`cymel.core.cyobjects.dagnode_c <cymel.core.cyobjects.dagnode_c>`"
+msgstr ""
+":py:obj:`cymel.core.cyobjects.dagnode_c <cymel.core.cyobjects.dagnode_c>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid "`.DagNode` クラスでサポートする機能の中核。"
+msgstr "Core functionality supported by the `.DagNode` class."
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":py:obj:`cymel.core.cyobjects.node <cymel.core.cyobjects.node>`"
+msgstr ":py:obj:`cymel.core.cyobjects.node <cymel.core.cyobjects.node>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":mayanode:`node` ノードタイプラッパークラス。"
+msgstr ":mayanode:`node` Node type wrapper class."
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":py:obj:`cymel.core.cyobjects.node_c <cymel.core.cyobjects.node_c>`"
+msgstr ":py:obj:`cymel.core.cyobjects.node_c <cymel.core.cyobjects.node_c>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid "`.Node` クラスでサポートする機能の中核。"
+msgstr "Core functionality supported by the `.Node` class."
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ""
+":py:obj:`cymel.core.cyobjects.objectref <cymel.core.cyobjects.objectref>`"
+msgstr ""
+":py:obj:`cymel.core.cyobjects.objectref <cymel.core.cyobjects.objectref>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid "`.CyObject` の参照が切れていても再取得が可能な弱参照ラッパー。"
+msgstr ""
+"A weak reference wrapper that allows you to re-obtain the reference to "
+"`.CyObject` even if it is lost."
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":py:obj:`cymel.core.cyobjects.plug <cymel.core.cyobjects.plug>`"
+msgstr ":py:obj:`cymel.core.cyobjects.plug <cymel.core.cyobjects.plug>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid "プラグラッパークラス。"
+msgstr "Plug wrapper class."
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":py:obj:`cymel.core.cyobjects.plug_c <cymel.core.cyobjects.plug_c>`"
+msgstr ":py:obj:`cymel.core.cyobjects.plug_c <cymel.core.cyobjects.plug_c>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid "`.Plug` クラスでサポートする機能の中核。"
+msgstr "Core functionality supported by the `.Plug` class."
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ""
+":py:obj:`cymel.core.cyobjects.reference <cymel.core.cyobjects.reference>`"
+msgstr ""
+":py:obj:`cymel.core.cyobjects.reference <cymel.core.cyobjects.reference>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":mayanode:`reference` ノードタイプラッパークラス。"
+msgstr ":mayanode:`reference` Node type wrapper class."
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":py:obj:`cymel.core.cyobjects.shape <cymel.core.cyobjects.shape>`"
+msgstr ":py:obj:`cymel.core.cyobjects.shape <cymel.core.cyobjects.shape>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":mayanode:`shape` ノードタイプラッパークラス。"
+msgstr ":mayanode:`shape` Node type wrapper class."
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ""
+":py:obj:`cymel.core.cyobjects.transform <cymel.core.cyobjects.transform>`"
+msgstr ""
+":py:obj:`cymel.core.cyobjects.transform <cymel.core.cyobjects.transform>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":mayanode:`transform` ノードタイプラッパークラス。"
+msgstr ":mayanode:`transform` Node type wrapper class."
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ""
+":py:obj:`cymel.core.cyobjects.transform_c "
+"<cymel.core.cyobjects.transform_c>`"
+msgstr ""
+":py:obj:`cymel.core.cyobjects.transform_c "
+"<cymel.core.cyobjects.transform_c>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid "`.Transform` クラスでサポートする機能の中核。"
+msgstr "Core functionality supported by the `.Transform` class."
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ""
+":py:obj:`cymel.core.cyobjects.constraint <cymel.core.cyobjects.constraint>`"
+msgstr ""
+":py:obj:`cymel.core.cyobjects.constraint <cymel.core.cyobjects.constraint>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":mayanode:`constraint`"
+msgstr ":mayanode:`constraint`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":py:obj:`cymel.core.typeinfo <cymel.core.typeinfo>`"
+msgstr ":py:obj:`cymel.core.typeinfo <cymel.core.typeinfo>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid "ノードタイプ情報。"
+msgstr "Node type information."
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid ":py:obj:`cymel.core.typeregistry <cymel.core.typeregistry>`"
+msgstr ":py:obj:`cymel.core.typeregistry <cymel.core.typeregistry>`"
+
+#: ../srcs/modules.rst:53:<autosummary>:1
+msgid "ノードタイプのラッパークラスのマネージャー。"
+msgstr "Manager for wrapper classes for node types."
+
+#: ../srcs/modules.rst:57
+msgid "Data Types"
+msgstr "Data Types"
+
+#: ../srcs/modules.rst:69:<autosummary>:1
+msgid ""
+":py:obj:`cymel.core.datatypes.boundingbox "
+"<cymel.core.datatypes.boundingbox>`"
+msgstr ""
+":py:obj:`cymel.core.datatypes.boundingbox "
+"<cymel.core.datatypes.boundingbox>`"
+
+#: ../srcs/modules.rst:69:<autosummary>:1
+msgid "3Dバウンディングボックスクラス。"
+msgstr "3D bounding box class."
+
+#: ../srcs/modules.rst:69:<autosummary>:1
+msgid ""
+":py:obj:`cymel.core.datatypes.eulerrotation "
+"<cymel.core.datatypes.eulerrotation>`"
+msgstr ""
+":py:obj:`cymel.core.datatypes.eulerrotation "
+"<cymel.core.datatypes.eulerrotation>`"
+
+#: ../srcs/modules.rst:69:<autosummary>:1
+msgid "オイラー角回転クラス。"
+msgstr "Euler angle rotation class."
+
+#: ../srcs/modules.rst:69:<autosummary>:1
+msgid ":py:obj:`cymel.core.datatypes.matrix <cymel.core.datatypes.matrix>`"
+msgstr ":py:obj:`cymel.core.datatypes.matrix <cymel.core.datatypes.matrix>`"
+
+#: ../srcs/modules.rst:69:<autosummary>:1
+msgid "4x4 マトリックスクラス。"
+msgstr "4x4 matrix class."
+
+#: ../srcs/modules.rst:69:<autosummary>:1
+msgid ""
+":py:obj:`cymel.core.datatypes.quaternion <cymel.core.datatypes.quaternion>`"
+msgstr ""
+":py:obj:`cymel.core.datatypes.quaternion <cymel.core.datatypes.quaternion>`"
+
+#: ../srcs/modules.rst:69:<autosummary>:1
+msgid "クォータニオンクラス。"
+msgstr "quaternion class."
+
+#: ../srcs/modules.rst:69:<autosummary>:1
+msgid ""
+":py:obj:`cymel.core.datatypes.transformation "
+"<cymel.core.datatypes.transformation>`"
+msgstr ""
+":py:obj:`cymel.core.datatypes.transformation "
+"<cymel.core.datatypes.transformation>`"
+
+#: ../srcs/modules.rst:69:<autosummary>:1
+msgid "トランスフォーメーション情報クラス。"
+msgstr "Transformation information class."
+
+#: ../srcs/modules.rst:69:<autosummary>:1
+msgid ":py:obj:`cymel.core.datatypes.vector <cymel.core.datatypes.vector>`"
+msgstr ":py:obj:`cymel.core.datatypes.vector <cymel.core.datatypes.vector>`"
+
+#: ../srcs/modules.rst:69:<autosummary>:1
+msgid "3Dベクトルクラス。"
+msgstr "3D vector class."
+
+#: ../srcs/modules.rst:73
+msgid "UI Controls"
+msgstr "UI Controls"
+
+#: ../srcs/modules.rst:85:<autosummary>:1
+msgid ":py:obj:`cymel.ui.control <cymel.ui.control>`"
+msgstr ":py:obj:`cymel.ui.control <cymel.ui.control>`"
+
+#: ../srcs/modules.rst:85:<autosummary>:1
+msgid "mel UI の :mayacmd:`control` ラッパー。"
+msgstr ":mayacmd:`control` wrapper for mel UI."
+
+#: ../srcs/modules.rst:85:<autosummary>:1
+msgid ":py:obj:`cymel.ui.layout <cymel.ui.layout>`"
+msgstr ":py:obj:`cymel.ui.layout <cymel.ui.layout>`"
+
+#: ../srcs/modules.rst:85:<autosummary>:1
+msgid "mel UI の :mayacmd:`layout` ラッパー。"
+msgstr ":mayacmd:`layout` wrapper for mel UI."
+
+#: ../srcs/modules.rst:85:<autosummary>:1
+msgid ":py:obj:`cymel.ui.menu <cymel.ui.menu>`"
+msgstr ":py:obj:`cymel.ui.menu <cymel.ui.menu>`"
+
+#: ../srcs/modules.rst:85:<autosummary>:1
+msgid "mel UI のメニュー系のラッパー。"
+msgstr "Menu wrapper for mel UI."
+
+#: ../srcs/modules.rst:85:<autosummary>:1
+msgid ":py:obj:`cymel.ui.uitemplate <cymel.ui.uitemplate>`"
+msgstr ":py:obj:`cymel.ui.uitemplate <cymel.ui.uitemplate>`"
+
+#: ../srcs/modules.rst:85:<autosummary>:1
+msgid "mel UI の :mayacmd:`uiTemplate` ラッパー。"
+msgstr ":mayacmd:`uiTemplate` wrapper for mel UI."
+
+#: ../srcs/modules.rst:85:<autosummary>:1
+msgid ":py:obj:`cymel.ui.uitypes <cymel.ui.uitypes>`"
+msgstr ":py:obj:`cymel.ui.uitypes <cymel.ui.uitypes>`"
+
+#: ../srcs/modules.rst:85:<autosummary>:1
+msgid "mel UI タイプ情報と、自動生成UIクラス。"
+msgstr "mel UI type information and automatically generated UI classes."
+
+#: ../srcs/modules.rst:85:<autosummary>:1
+msgid ":py:obj:`cymel.ui.window <cymel.ui.window>`"
+msgstr ":py:obj:`cymel.ui.window <cymel.ui.window>`"
+
+#: ../srcs/modules.rst:85:<autosummary>:1
+msgid "mel UI の :mayacmd:`window` ラッパー。"
+msgstr ":mayacmd:`window` wrapper for mel UI."
+
+#: ../srcs/modules.rst:89
+msgid "Utilities"
+msgstr "Utilities"
+
+#: ../srcs/modules.rst:101:<autosummary>:1
+msgid ":py:obj:`cymel.utils.files <cymel.utils.files>`"
+msgstr ":py:obj:`cymel.utils.files <cymel.utils.files>`"
+
+#: ../srcs/modules.rst:101:<autosummary>:1
+msgid "Mayaファイル関連。"
+msgstr "Maya file related."
+
+#: ../srcs/modules.rst:101:<autosummary>:1
+msgid ":py:obj:`cymel.utils.melgvar <cymel.utils.melgvar>`"
+msgstr ":py:obj:`cymel.utils.melgvar <cymel.utils.melgvar>`"
+
+#: ../srcs/modules.rst:101:<autosummary>:1
+msgid "MELグローバル変数ラッパー。"
+msgstr "MEL global variable wrapper."
+
+#: ../srcs/modules.rst:101:<autosummary>:1
+msgid ":py:obj:`cymel.utils.namespace <cymel.utils.namespace>`"
+msgstr ":py:obj:`cymel.utils.namespace <cymel.utils.namespace>`"
+
+#: ../srcs/modules.rst:101:<autosummary>:1
+msgid "Mayaネームスペース。"
+msgstr "Maya namespace."
+
+#: ../srcs/modules.rst:101:<autosummary>:1
+msgid ":py:obj:`cymel.utils.operation <cymel.utils.operation>`"
+msgstr ":py:obj:`cymel.utils.operation <cymel.utils.operation>`"
+
+#: ../srcs/modules.rst:101:<autosummary>:1
+msgid "Maya操作関連。"
+msgstr "Maya operation related."
+
+#: ../srcs/modules.rst:101:<autosummary>:1
+msgid ":py:obj:`cymel.utils.optionvar <cymel.utils.optionvar>`"
+msgstr ":py:obj:`cymel.utils.optionvar <cymel.utils.optionvar>`"
+
+#: ../srcs/modules.rst:101:<autosummary>:1
+msgid ":mayacmd:`optionVar` ラッパー。"
+msgstr ":mayacmd:`optionVar` wrapper."
+
+#: ../srcs/modules.rst:101:<autosummary>:1
+msgid ":py:obj:`cymel.utils.utils <cymel.utils.utils>`"
+msgstr ":py:obj:`cymel.utils.utils <cymel.utils.utils>`"
+
+#: ../srcs/modules.rst:101:<autosummary>:1
+msgid "Maya用の様々なヘルパー。"
+msgstr "Various helpers for Maya."
+
+#: ../srcs/modules.rst:105
+msgid "Utilities (Independent of Maya)"
+msgstr "Utilities (Independent of Maya)"
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid ":py:obj:`cymel.pyutils.finalizer <cymel.pyutils.finalizer>`"
+msgstr ":py:obj:`cymel.pyutils.finalizer <cymel.pyutils.finalizer>`"
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid "任意のオブジェクトが破棄されたときに呼び出されるファイナライザ機能。"
+msgstr "Finalizer function called when any object is destroyed."
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid ":py:obj:`cymel.pyutils.immutables <cymel.pyutils.immutables>`"
+msgstr ":py:obj:`cymel.pyutils.immutables <cymel.pyutils.immutables>`"
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid "簡易的なイミュータブル化ラッパー。"
+msgstr "A simple immutable wrapper."
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid ":py:obj:`cymel.pyutils.ordereddict <cymel.pyutils.ordereddict>`"
+msgstr ":py:obj:`cymel.pyutils.ordereddict <cymel.pyutils.ordereddict>`"
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid "循環参照によるメモリリークが解決された `ordereddict` 。"
+msgstr "`ordereddict` with memory leak due to circular references resolved."
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid ":py:obj:`cymel.pyutils.pyutils <cymel.pyutils.pyutils>`"
+msgstr ":py:obj:`cymel.pyutils.pyutils <cymel.pyutils.pyutils>`"
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid "Mayaに依存しない諸機能。"
+msgstr "Functions that do not depend on Maya."
+
+#: ../srcs/modules.rst:117
+msgid "Indices and tables"
+msgstr "Indices and tables"
+
+#: ../srcs/modules.rst:119
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../srcs/modules.rst:120
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
+
+#: ../srcs/modules.rst:121
+msgid ":ref:`search`"
+msgstr ":ref:`search`"

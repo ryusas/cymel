@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.cyobjects.reference.Reference &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="cymel.core.cyobjects.shape" href="../cymel.core.cyobjects.shape.html" />
+    <link rel="prev" title="cymel.core.cyobjects.reference" href="../cymel.core.cyobjects.reference.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.shape.html" title="cymel.core.cyobjects.shape"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.reference.html" title="cymel.core.cyobjects.reference"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.reference.html" accesskey="U">cymel.core.cyobjects.reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.reference.Reference</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-cyobjects-reference-reference">
+<h1>class cymel.core.cyobjects.reference.Reference<a class="headerlink" href="#class-cymel-core-cyobjects-reference-reference" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-88eace801f6b699d6cfdb5c6616ccc070dde89bf.png" alt="Inheritance diagram of Reference" usemap="#inheritancef0d2d1ae36" class="inheritance graphviz" /></div>
+<map id="inheritancef0d2d1ae36" name="inheritancef0d2d1ae36">
+<area shape="rect" id="node1" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" target="_top" title="Mayaラッパーオブジェクトの抽象基底クラス。" alt="" coords="6,5,78,29"/>
+<area shape="rect" id="node3" href="cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c" target="_top" title="`.Node` クラスでサポートする機能の中核。" alt="" coords="6,44,78,68"/>
+<area shape="rect" id="node2" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" target="_top" title=":mayanode:`node` ノードタイプラッパークラス。" alt="" coords="6,83,78,107"/>
+<area shape="rect" id="node4" href="#cymel.core.cyobjects.reference.Reference" target="_top" title=":mayanode:`reference` ノードタイプラッパークラス。" alt="" coords="5,121,79,145"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.reference.</span></span><span class="sig-name descname"><span class="pre">Reference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a></p>
+<p><a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/reference.html">reference</a> Node type wrapper class.</p>
+<p>Supports node generation when creating a class instance without fixed arguments.</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNS" title="cymel.core.cyobjects.reference.Reference.associatedNS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">associatedNS</span></code></a>()</p></td>
+<td><p>Alias ​​for <a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNamespace" title="cymel.core.cyobjects.reference.Reference.associatedNamespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">associatedNamespace</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNamespace" title="cymel.core.cyobjects.reference.Reference.associatedNamespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">associatedNamespace</span></code></a>()</p></td>
+<td><p>Get the associated namespace.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.byFilename" title="cymel.core.cyobjects.reference.Reference.byFilename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">byFilename</span></code></a>(fname[, all])</p></td>
+<td><p>Get reference node from resolved file name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.children" title="cymel.core.cyobjects.reference.Reference.children"><code class="xref py py-obj docutils literal notranslate"><span class="pre">children</span></code></a>()</p></td>
+<td><p>Get a list of child reference nodes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.containsNode" title="cymel.core.cyobjects.reference.Reference.containsNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">containsNode</span></code></a>​​(node)</p></td>
+<td><p>Does it contain the specified node?</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.containsNodeExactly" title="cymel.core.cyobjects.reference.Reference.containsNodeExactly"><code class="xref py py-obj docutils literal notranslate"><span class="pre">containsNodeExactly</span></code></a>(node)</p></td>
+<td><p>Does it directly contain the specified node?</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editAttrs" title="cymel.core.cyobjects.reference.Reference.editAttrs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">editAttrs</span></code></a>([command, fail, success])</p></td>
+<td><p>Get the list of attribute names for editing commands.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editNodes" title="cymel.core.cyobjects.reference.Reference.editNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">editNodes</span></code></a>([command, fail, success])</p></td>
+<td><p>Get the node list for editing commands.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editPlugs" title="cymel.core.cyobjects.reference.Reference.editPlugs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">editPlugs</span></code></a>([command, fail, success])</p></td>
+<td><p>Get the plug list for editing commands.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editStrings" title="cymel.core.cyobjects.reference.Reference.editStrings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">editStrings</span></code></a>([command, fail, success, namespace])</p></td>
+<td><p>Get a list of editing commands.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.fileName" title="cymel.core.cyobjects.reference.Reference.fileName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fileName</span></code></a>([unresolved, withoutPath, ...])</p></td>
+<td><p>Alias ​​for <a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.filename" title="cymel.core.cyobjects.reference.Reference.filename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filename</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.filename" title="cymel.core.cyobjects.reference.Reference.filename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filename</span></code></a>([unresolved, withoutPath, ...])</p></td>
+<td><p>Get file name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.importReference" title="cymel.core.cyobjects.reference.Reference.importReference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">importReference</span></code></a>()</p></td>
+<td><p>Import references.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isExportEditsFile" title="cymel.core.cyobjects.reference.Reference.isExportEditsFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isExportEditsFile</span></code></a>()</p></td>
+<td><p>Is it a reference edit file (editMA or editMB)?</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isLoaded" title="cymel.core.cyobjects.reference.Reference.isLoaded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isLoaded</span></code></a>()</p></td>
+<td><p>Whether the reference is loaded.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isLocked" title="cymel.core.cyobjects.reference.Reference.isLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isLocked</span></code></a>()</p></td>
+<td><p>Locked or not.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isReferenceLocked" title="cymel.core.cyobjects.reference.Reference.isReferenceLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isReferenceLocked</span></code></a>()</p></td>
+<td><p>Whether the reference is locked.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isRoot" title="cymel.core.cyobjects.reference.Reference.isRoot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRoot</span></code></a>()</p></td>
+<td><p>Whether it is a root reference node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.iterBreadthFirst" title="cymel.core.cyobjects.reference.Reference.iterBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterBreadthFirst</span></code></a>()</p></td>
+<td><p>Iterate breadth-first through the reference hierarchy.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.iterDepthFirst" title="cymel.core.cyobjects.reference.Reference.iterDepthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterDepthFirst</span></code></a>()</p></td>
+<td><p>Depth-first iterates through the reference hierarchy.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.load" title="cymel.core.cyobjects.reference.Reference.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>()</p></td>
+<td><p>Load.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.lockReference" title="cymel.core.cyobjects.reference.Reference.lockReference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lockReference</span></code></a>([val])</p></td>
+<td><p>Lock or unlock a reference.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.nodes" title="cymel.core.cyobjects.reference.Reference.nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodes</span></code></a>()</p></td>
+<td><p>Get a list of included nodes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.parent" title="cymel.core.cyobjects.reference.Reference.parent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></a>()</p></td>
+<td><p>Get the parent reference node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.referenceNode" title="cymel.core.cyobjects.reference.Reference.referenceNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">referenceNode</span></code></a>​​()</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.parent" title="cymel.core.cyobjects.reference.Reference.parent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.removeReference" title="cymel.core.cyobjects.reference.Reference.removeReference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeReference</span></code></a>()</p></td>
+<td><p>Delete references.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.root" title="cymel.core.cyobjects.reference.Reference.root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">root</span></code></a>()</p></td>
+<td><p>Get root reference node.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.unload" title="cymel.core.cyobjects.reference.Reference.unload"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unload</span></code></a>()</p></td>
+<td><p>Unload.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.unlockReference" title="cymel.core.cyobjects.reference.Reference.unlockReference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlockReference</span></code></a>()</p></td>
+<td><p>Unlock references.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.associatedNS">
+<span class="sig-name descname"><span class="pre">associatedNS</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.associatedNS" title="Link to this definition">¶</a></dt>
+<dd><p>Alias ​​for <a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNamespace" title="cymel.core.cyobjects.reference.Reference.associatedNamespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">associatedNamespace</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.associatedNamespace">
+<span class="sig-name descname"><span class="pre">associatedNamespace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.associatedNamespace" title="Link to this definition">¶</a></dt>
+<dd><p>Get the associated namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.utils.namespace.Namespace.html#cymel.utils.namespace.Namespace" title="cymel.utils.namespace.Namespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Namespace</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.byFilename">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">byFilename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.byFilename" title="Link to this definition">¶</a></dt>
+<dd><p>Get reference node from resolved file name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Resolved file name.</p></li>
+<li><p><strong>all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Given a file name without copy number, get a list of all associated files.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Referemce</span></code> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.children">
+<span class="sig-name descname"><span class="pre">children</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.children" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of child reference nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.containsNode">
+<span class="sig-name descname"><span class="pre">containsNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.containsNode" title="Link to this definition">¶</a></dt>
+<dd><p>Does it contain the specified node?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a>) – Node to check.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.containsNodeExactly">
+<span class="sig-name descname"><span class="pre">containsNodeExactly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.containsNodeExactly" title="Link to this definition">¶</a></dt>
+<dd><p>Does it directly contain the specified node?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a>) – Node to check.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.editAttrs">
+<span class="sig-name descname"><span class="pre">editAttrs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.editAttrs" title="Link to this definition">¶</a></dt>
+<dd><p>Get the list of attribute names for editing commands.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Specify the type of command. Valid values ​​are ‘addAttr’, ‘connectAttr’, ‘deleteAttr’, ‘disconnectAttr’, ‘parent’, ‘setAttr’, ‘lock’ and ‘unlock’.</p></li>
+<li><p><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get failed commands.</p></li>
+<li><p><strong>success</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get a successful command.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.editNodes">
+<span class="sig-name descname"><span class="pre">editNodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.editNodes" title="Link to this definition">¶</a></dt>
+<dd><p>Get the node list for editing commands.</p>
+<p>A cymel node object is returned if possible, but if not found a string is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Specify the type of command. Valid values ​​are ‘addAttr’, ‘connectAttr’, ‘deleteAttr’, ‘disconnectAttr’, ‘parent’, ‘setAttr’, ‘lock’ and ‘unlock’.</p></li>
+<li><p><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get failed commands.</p></li>
+<li><p><strong>success</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get a successful command.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.editPlugs">
+<span class="sig-name descname"><span class="pre">editPlugs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.editPlugs" title="Link to this definition">¶</a></dt>
+<dd><p>Get the plug list for editing commands.</p>
+<p>A cymel plug object is returned if possible, but if not found a string is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Specify the type of command. Valid values ​​are ‘addAttr’, ‘connectAttr’, ‘deleteAttr’, ‘disconnectAttr’, ‘parent’, ‘setAttr’, ‘lock’ and ‘unlock’.</p></li>
+<li><p><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get failed commands.</p></li>
+<li><p><strong>success</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get a successful command.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.editStrings">
+<span class="sig-name descname"><span class="pre">editStrings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.editStrings" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of editing commands.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Specify the type of command. Valid values ​​are ‘addAttr’, ‘connectAttr’, ‘deleteAttr’, ‘disconnectAttr’, ‘parent’, ‘setAttr’, ‘lock’ and ‘unlock’.</p></li>
+<li><p><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get failed commands.</p></li>
+<li><p><strong>success</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get a successful command.</p></li>
+<li><p><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to append namespace by reference. The local namespace of the parent reference is appended.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.fileName">
+<span class="sig-name descname"><span class="pre">fileName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unresolved</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">withoutPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">withoutCopyNumber</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.fileName" title="Link to this definition">¶</a></dt>
+<dd><p>Alias ​​for <a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.filename" title="cymel.core.cyobjects.reference.Reference.filename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filename</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.filename">
+<span class="sig-name descname"><span class="pre">filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unresolved</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">withoutPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">withoutCopyNumber</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.filename" title="Link to this definition">¶</a></dt>
+<dd><p>Get file name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>unresolved</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Gets the specified file name as is. The path may contain environment variables or may not actually exist.</p></li>
+<li><p><strong>withoutPath</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Get only the file name without the path.</p></li>
+<li><p><strong>withoutCopyNumber</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Do not include copy numbers added to the second and subsequent files with the same name.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.importReference">
+<span class="sig-name descname"><span class="pre">importReference</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.importReference" title="Link to this definition">¶</a></dt>
+<dd><p>Import references.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.isExportEditsFile">
+<span class="sig-name descname"><span class="pre">isExportEditsFile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isExportEditsFile" title="Link to this definition">¶</a></dt>
+<dd><p>Is it a reference edit file (editMA or editMB)?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.isLoaded">
+<span class="sig-name descname"><span class="pre">isLoaded</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isLoaded" title="Link to this definition">¶</a></dt>
+<dd><p>Whether the reference is loaded.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.isLocked">
+<span class="sig-name descname"><span class="pre">isLocked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isLocked" title="Link to this definition">¶</a></dt>
+<dd><p>Locked or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.isReferenceLocked">
+<span class="sig-name descname"><span class="pre">isReferenceLocked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isReferenceLocked" title="Link to this definition">¶</a></dt>
+<dd><p>Whether the reference is locked.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.isRoot">
+<span class="sig-name descname"><span class="pre">isRoot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.isRoot" title="Link to this definition">¶</a></dt>
+<dd><p>Whether it is a root reference node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.iterBreadthFirst">
+<span class="sig-name descname"><span class="pre">iterBreadthFirst</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.iterBreadthFirst" title="Link to this definition">¶</a></dt>
+<dd><p>Iterate breadth-first through the reference hierarchy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>yield <a class="reference internal" href="#cymel.core.cyobjects.reference.Reference" title="cymel.core.cyobjects.reference.Reference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reference</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.iterDepthFirst">
+<span class="sig-name descname"><span class="pre">iterDepthFirst</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.iterDepthFirst" title="Link to this definition">¶</a></dt>
+<dd><p>Depth-first iterates through the reference hierarchy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>yield <a class="reference internal" href="#cymel.core.cyobjects.reference.Reference" title="cymel.core.cyobjects.reference.Reference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reference</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.load" title="Link to this definition">¶</a></dt>
+<dd><p>Load.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.lockReference">
+<span class="sig-name descname"><span class="pre">lockReference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.lockReference" title="Link to this definition">¶</a></dt>
+<dd><p>Lock or unlock a reference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Lock status value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.nodes">
+<span class="sig-name descname"><span class="pre">nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.nodes" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of included nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.parent" title="Link to this definition">¶</a></dt>
+<dd><p>Get the parent reference node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference" title="cymel.core.cyobjects.reference.Reference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reference</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.referenceNode">
+<span class="sig-name descname"><span class="pre">referenceNode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.referenceNode" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.parent" title="cymel.core.cyobjects.reference.Reference.parent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.removeReference">
+<span class="sig-name descname"><span class="pre">removeReference</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.removeReference" title="Link to this definition">¶</a></dt>
+<dd><p>Delete references.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.root">
+<span class="sig-name descname"><span class="pre">root</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.root" title="Link to this definition">¶</a></dt>
+<dd><p>Get root reference node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference" title="cymel.core.cyobjects.reference.Reference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reference</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.unload">
+<span class="sig-name descname"><span class="pre">unload</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.unload" title="Link to this definition">¶</a></dt>
+<dd><p>Unload.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.reference.Reference.unlockReference">
+<span class="sig-name descname"><span class="pre">unlockReference</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.reference.Reference.unlockReference" title="Link to this definition">¶</a></dt>
+<dd><p>Unlock references.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.cyobjects.reference.Reference</a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference"><code class="docutils literal notranslate"><span class="pre">Reference</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNS"><code class="docutils literal notranslate"><span class="pre">Reference.associatedNS()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.associatedNamespace"><code class="docutils literal notranslate"><span class="pre">Reference.associatedNamespace()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.byFilename"><code class="docutils literal notranslate"><span class="pre">Reference.byFilename()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.children"><code class="docutils literal notranslate"><span class="pre">Reference.children()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.containsNode"><code class="docutils literal notranslate"><span class="pre">Reference.containsNode()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.containsNodeExactly"><code class="docutils literal notranslate"><span class="pre">Reference.containsNodeExactly()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editAttrs"><code class="docutils literal notranslate"><span class="pre">Reference.editAttrs()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editNodes"><code class="docutils literal notranslate"><span class="pre">Reference.editNodes()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editPlugs"><code class="docutils literal notranslate"><span class="pre">Reference.editPlugs()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.editStrings"><code class="docutils literal notranslate"><span class="pre">Reference.editStrings()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.fileName"><code class="docutils literal notranslate"><span class="pre">Reference.fileName()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.filename"><code class="docutils literal notranslate"><span class="pre">Reference.filename()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.importReference"><code class="docutils literal notranslate"><span class="pre">Reference.importReference()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isExportEditsFile"><code class="docutils literal notranslate"><span class="pre">Reference.isExportEditsFile()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isLoaded"><code class="docutils literal notranslate"><span class="pre">Reference.isLoaded()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isLocked"><code class="docutils literal notranslate"><span class="pre">Reference.isLocked()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isReferenceLocked"><code class="docutils literal notranslate"><span class="pre">Reference.isReferenceLocked()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.isRoot"><code class="docutils literal notranslate"><span class="pre">Reference.isRoot()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.iterBreadthFirst"><code class="docutils literal notranslate"><span class="pre">Reference.iterBreadthFirst()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.iterDepthFirst"><code class="docutils literal notranslate"><span class="pre">Reference.iterDepthFirst()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.load"><code class="docutils literal notranslate"><span class="pre">Reference.load()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.lockReference"><code class="docutils literal notranslate"><span class="pre">Reference.lockReference()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.nodes"><code class="docutils literal notranslate"><span class="pre">Reference.nodes()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.parent"><code class="docutils literal notranslate"><span class="pre">Reference.parent()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.referenceNode"><code class="docutils literal notranslate"><span class="pre">Reference.referenceNode()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.removeReference"><code class="docutils literal notranslate"><span class="pre">Reference.removeReference()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.root"><code class="docutils literal notranslate"><span class="pre">Reference.root()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.unload"><code class="docutils literal notranslate"><span class="pre">Reference.unload()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.reference.Reference.unlockReference"><code class="docutils literal notranslate"><span class="pre">Reference.unlockReference()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../cymel.core.cyobjects.reference.html"
+                          title="previous chapter">cymel.core.cyobjects.reference</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../cymel.core.cyobjects.shape.html"
+                          title="next chapter">cymel.core.cyobjects.shape</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.core.cyobjects.reference.Reference.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.shape.html" title="cymel.core.cyobjects.shape"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.reference.html" title="cymel.core.cyobjects.reference"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.reference.html" >cymel.core.cyobjects.reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.reference.Reference</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

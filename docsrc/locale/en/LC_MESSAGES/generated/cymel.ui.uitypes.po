@@ -1,0 +1,853 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:2
+msgid "cymel.ui.uitypes"
+msgstr "cymel.ui.uitypes"
+
+#: cymel.ui.uitypes:1 of
+msgid "mel UI タイプ情報と、自動生成UIクラス。"
+msgstr "mel UI type information and automatically generated UI classes."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:9
+msgid "Classes:"
+msgstr "Classes:"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`AttrColorSliderGrp <cymel.ui.uitypes.AttrColorSliderGrp>`"
+msgstr ":py:obj:`AttrColorSliderGrp <cymel.ui.uitypes.AttrColorSliderGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`attrColorSliderGrp` ラッパークラス。"
+msgstr ":mayacmd:`attrColorSliderGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`AttrControlGrp <cymel.ui.uitypes.AttrControlGrp>`"
+msgstr ":py:obj:`AttrControlGrp <cymel.ui.uitypes.AttrControlGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`attrControlGrp` ラッパークラス。"
+msgstr ":mayacmd:`attrControlGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`AttrEnumOptionMenu <cymel.ui.uitypes.AttrEnumOptionMenu>`"
+msgstr ":py:obj:`AttrEnumOptionMenu <cymel.ui.uitypes.AttrEnumOptionMenu>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`attrEnumOptionMenu` ラッパークラス。"
+msgstr ":mayacmd:`attrEnumOptionMenu` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ""
+":py:obj:`AttrEnumOptionMenuGrp <cymel.ui.uitypes.AttrEnumOptionMenuGrp>`"
+msgstr ""
+":py:obj:`AttrEnumOptionMenuGrp <cymel.ui.uitypes.AttrEnumOptionMenuGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`attrEnumOptionMenuGrp` ラッパークラス。"
+msgstr ":mayacmd:`attrEnumOptionMenuGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`AttrFieldGrp <cymel.ui.uitypes.AttrFieldGrp>`"
+msgstr ":py:obj:`AttrFieldGrp <cymel.ui.uitypes.AttrFieldGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`attrFieldGrp` ラッパークラス。"
+msgstr ":mayacmd:`attrFieldGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`AttrFieldSliderGrp <cymel.ui.uitypes.AttrFieldSliderGrp>`"
+msgstr ":py:obj:`AttrFieldSliderGrp <cymel.ui.uitypes.AttrFieldSliderGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`attrFieldSliderGrp` ラッパークラス。"
+msgstr ":mayacmd:`attrFieldSliderGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ""
+":py:obj:`AttrNavigationControlGrp "
+"<cymel.ui.uitypes.AttrNavigationControlGrp>`"
+msgstr ""
+":py:obj:`AttrNavigationControlGrp "
+"<cymel.ui.uitypes.AttrNavigationControlGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`attrNavigationControlGrp` ラッパークラス。"
+msgstr ":mayacmd:`attrNavigationControlGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`Button <cymel.ui.uitypes.Button>`"
+msgstr ":py:obj:`Button <cymel.ui.uitypes.Button>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`button` ラッパークラス。"
+msgstr ":mayacmd:`button` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`Canvas <cymel.ui.uitypes.Canvas>`"
+msgstr ":py:obj:`Canvas <cymel.ui.uitypes.Canvas>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`canvas` ラッパークラス。"
+msgstr ":mayacmd:`canvas` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ChannelBox <cymel.ui.uitypes.ChannelBox>`"
+msgstr ":py:obj:`ChannelBox <cymel.ui.uitypes.ChannelBox>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`channelBox` ラッパークラス。"
+msgstr ":mayacmd:`channelBox` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`CheckBox <cymel.ui.uitypes.CheckBox>`"
+msgstr ":py:obj:`CheckBox <cymel.ui.uitypes.CheckBox>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`checkBox` ラッパークラス。"
+msgstr ":mayacmd:`checkBox` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`CheckBoxGrp <cymel.ui.uitypes.CheckBoxGrp>`"
+msgstr ":py:obj:`CheckBoxGrp <cymel.ui.uitypes.CheckBoxGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`checkBoxGrp` ラッパークラス。"
+msgstr ":mayacmd:`checkBoxGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ""
+":py:obj:`CmdScrollFieldExecuter <cymel.ui.uitypes.CmdScrollFieldExecuter>`"
+msgstr ""
+":py:obj:`CmdScrollFieldExecuter <cymel.ui.uitypes.CmdScrollFieldExecuter>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`cmdScrollFieldExecuter` ラッパークラス。"
+msgstr ":mayacmd:`cmdScrollFieldExecuter` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ""
+":py:obj:`CmdScrollFieldReporter <cymel.ui.uitypes.CmdScrollFieldReporter>`"
+msgstr ""
+":py:obj:`CmdScrollFieldReporter <cymel.ui.uitypes.CmdScrollFieldReporter>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`cmdScrollFieldReporter` ラッパークラス。"
+msgstr ":mayacmd:`cmdScrollFieldReporter` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`CmdShell <cymel.ui.uitypes.CmdShell>`"
+msgstr ":py:obj:`CmdShell <cymel.ui.uitypes.CmdShell>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`cmdShell` ラッパークラス。"
+msgstr ":mayacmd:`cmdShell` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ColorIndexSliderGrp <cymel.ui.uitypes.ColorIndexSliderGrp>`"
+msgstr ":py:obj:`ColorIndexSliderGrp <cymel.ui.uitypes.ColorIndexSliderGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`colorIndexSliderGrp` ラッパークラス。"
+msgstr ":mayacmd:`colorIndexSliderGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ColorSliderButtonGrp <cymel.ui.uitypes.ColorSliderButtonGrp>`"
+msgstr ""
+":py:obj:`ColorSliderButtonGrp <cymel.ui.uitypes.ColorSliderButtonGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`colorSliderButtonGrp` ラッパークラス。"
+msgstr ":mayacmd:`colorSliderButtonGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ColorSliderGrp <cymel.ui.uitypes.ColorSliderGrp>`"
+msgstr ":py:obj:`ColorSliderGrp <cymel.ui.uitypes.ColorSliderGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`colorSliderGrp` ラッパークラス。"
+msgstr ":mayacmd:`colorSliderGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ColumnLayout <cymel.ui.uitypes.ColumnLayout>`"
+msgstr ":py:obj:`ColumnLayout <cymel.ui.uitypes.ColumnLayout>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`columnLayout` ラッパークラス。"
+msgstr ":mayacmd:`columnLayout` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`CommandLine <cymel.ui.uitypes.CommandLine>`"
+msgstr ":py:obj:`CommandLine <cymel.ui.uitypes.CommandLine>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`commandLine` ラッパークラス。"
+msgstr ":mayacmd:`commandLine` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ComponentBox <cymel.ui.uitypes.ComponentBox>`"
+msgstr ":py:obj:`ComponentBox <cymel.ui.uitypes.ComponentBox>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`componentBox` ラッパークラス。"
+msgstr ":mayacmd:`componentBox` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`FloatField <cymel.ui.uitypes.FloatField>`"
+msgstr ":py:obj:`FloatField <cymel.ui.uitypes.FloatField>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`floatField` ラッパークラス。"
+msgstr ":mayacmd:`floatField` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`FloatFieldGrp <cymel.ui.uitypes.FloatFieldGrp>`"
+msgstr ":py:obj:`FloatFieldGrp <cymel.ui.uitypes.FloatFieldGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`floatFieldGrp` ラッパークラス。"
+msgstr ":mayacmd:`floatFieldGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`FloatScrollBar <cymel.ui.uitypes.FloatScrollBar>`"
+msgstr ":py:obj:`FloatScrollBar <cymel.ui.uitypes.FloatScrollBar>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`floatScrollBar` ラッパークラス。"
+msgstr ":mayacmd:`floatScrollBar` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`FloatSlider <cymel.ui.uitypes.FloatSlider>`"
+msgstr ":py:obj:`FloatSlider <cymel.ui.uitypes.FloatSlider>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`floatSlider` ラッパークラス。"
+msgstr ":mayacmd:`floatSlider` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`FloatSlider2 <cymel.ui.uitypes.FloatSlider2>`"
+msgstr ":py:obj:`FloatSlider2 <cymel.ui.uitypes.FloatSlider2>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`floatSlider2` ラッパークラス。"
+msgstr ":mayacmd:`floatSlider2` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`FloatSliderButtonGrp <cymel.ui.uitypes.FloatSliderButtonGrp>`"
+msgstr ""
+":py:obj:`FloatSliderButtonGrp <cymel.ui.uitypes.FloatSliderButtonGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`floatSliderButtonGrp` ラッパークラス。"
+msgstr ":mayacmd:`floatSliderButtonGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`FloatSliderGrp <cymel.ui.uitypes.FloatSliderGrp>`"
+msgstr ":py:obj:`FloatSliderGrp <cymel.ui.uitypes.FloatSliderGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`floatSliderGrp` ラッパークラス。"
+msgstr ":mayacmd:`floatSliderGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`FlowLayout <cymel.ui.uitypes.FlowLayout>`"
+msgstr ":py:obj:`FlowLayout <cymel.ui.uitypes.FlowLayout>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`flowLayout` ラッパークラス。"
+msgstr ":mayacmd:`flowLayout` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`FormLayout <cymel.ui.uitypes.FormLayout>`"
+msgstr ":py:obj:`FormLayout <cymel.ui.uitypes.FormLayout>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`formLayout` ラッパークラス。"
+msgstr ":mayacmd:`formLayout` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`GradientControl <cymel.ui.uitypes.GradientControl>`"
+msgstr ":py:obj:`GradientControl <cymel.ui.uitypes.GradientControl>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`gradientControl` ラッパークラス。"
+msgstr ":mayacmd:`gradientControl` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ""
+":py:obj:`GradientControlNoAttr <cymel.ui.uitypes.GradientControlNoAttr>`"
+msgstr ""
+":py:obj:`GradientControlNoAttr <cymel.ui.uitypes.GradientControlNoAttr>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`gradientControlNoAttr` ラッパークラス。"
+msgstr ":mayacmd:`gradientControlNoAttr` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`GridLayout <cymel.ui.uitypes.GridLayout>`"
+msgstr ":py:obj:`GridLayout <cymel.ui.uitypes.GridLayout>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`gridLayout` ラッパークラス。"
+msgstr ":mayacmd:`gridLayout` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`HelpLine <cymel.ui.uitypes.HelpLine>`"
+msgstr ":py:obj:`HelpLine <cymel.ui.uitypes.HelpLine>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`helpLine` ラッパークラス。"
+msgstr ":mayacmd:`helpLine` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`IconTextButton <cymel.ui.uitypes.IconTextButton>`"
+msgstr ":py:obj:`IconTextButton <cymel.ui.uitypes.IconTextButton>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`iconTextButton` ラッパークラス。"
+msgstr ":mayacmd:`iconTextButton` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`IconTextCheckBox <cymel.ui.uitypes.IconTextCheckBox>`"
+msgstr ":py:obj:`IconTextCheckBox <cymel.ui.uitypes.IconTextCheckBox>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`iconTextCheckBox` ラッパークラス。"
+msgstr ":mayacmd:`iconTextCheckBox` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`IconTextRadioButton <cymel.ui.uitypes.IconTextRadioButton>`"
+msgstr ":py:obj:`IconTextRadioButton <cymel.ui.uitypes.IconTextRadioButton>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`iconTextRadioButton` ラッパークラス。"
+msgstr ":mayacmd:`iconTextRadioButton` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`IconTextScrollList <cymel.ui.uitypes.IconTextScrollList>`"
+msgstr ":py:obj:`IconTextScrollList <cymel.ui.uitypes.IconTextScrollList>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`iconTextScrollList` ラッパークラス。"
+msgstr ":mayacmd:`iconTextScrollList` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`IconTextStaticLabel <cymel.ui.uitypes.IconTextStaticLabel>`"
+msgstr ":py:obj:`IconTextStaticLabel <cymel.ui.uitypes.IconTextStaticLabel>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`iconTextStaticLabel` ラッパークラス。"
+msgstr ":mayacmd:`iconTextStaticLabel` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`Image <cymel.ui.uitypes.Image>`"
+msgstr ":py:obj:`Image <cymel.ui.uitypes.Image>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`image` ラッパークラス。"
+msgstr ":mayacmd:`image` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`IntField <cymel.ui.uitypes.IntField>`"
+msgstr ":py:obj:`IntField <cymel.ui.uitypes.IntField>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`intField` ラッパークラス。"
+msgstr ":mayacmd:`intField` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`IntFieldGrp <cymel.ui.uitypes.IntFieldGrp>`"
+msgstr ":py:obj:`IntFieldGrp <cymel.ui.uitypes.IntFieldGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`intFieldGrp` ラッパークラス。"
+msgstr ":mayacmd:`intFieldGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`IntScrollBar <cymel.ui.uitypes.IntScrollBar>`"
+msgstr ":py:obj:`IntScrollBar <cymel.ui.uitypes.IntScrollBar>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`intScrollBar` ラッパークラス。"
+msgstr ":mayacmd:`intScrollBar` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`IntSlider <cymel.ui.uitypes.IntSlider>`"
+msgstr ":py:obj:`IntSlider <cymel.ui.uitypes.IntSlider>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`intSlider` ラッパークラス。"
+msgstr ":mayacmd:`intSlider` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`IntSliderGrp <cymel.ui.uitypes.IntSliderGrp>`"
+msgstr ":py:obj:`IntSliderGrp <cymel.ui.uitypes.IntSliderGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`intSliderGrp` ラッパークラス。"
+msgstr ":mayacmd:`intSliderGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`LayerButton <cymel.ui.uitypes.LayerButton>`"
+msgstr ":py:obj:`LayerButton <cymel.ui.uitypes.LayerButton>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`layerButton` ラッパークラス。"
+msgstr ":mayacmd:`layerButton` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`MessageLine <cymel.ui.uitypes.MessageLine>`"
+msgstr ":py:obj:`MessageLine <cymel.ui.uitypes.MessageLine>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`messageLine` ラッパークラス。"
+msgstr ":mayacmd:`messageLine` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`NameField <cymel.ui.uitypes.NameField>`"
+msgstr ":py:obj:`NameField <cymel.ui.uitypes.NameField>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`nameField` ラッパークラス。"
+msgstr ":mayacmd:`nameField` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`NodeTreeLister <cymel.ui.uitypes.NodeTreeLister>`"
+msgstr ":py:obj:`NodeTreeLister <cymel.ui.uitypes.NodeTreeLister>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`nodeTreeLister` ラッパークラス。"
+msgstr ":mayacmd:`nodeTreeLister` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`PalettePort <cymel.ui.uitypes.PalettePort>`"
+msgstr ":py:obj:`PalettePort <cymel.ui.uitypes.PalettePort>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`palettePort` ラッパークラス。"
+msgstr ":mayacmd:`palettePort` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`PaneLayout <cymel.ui.uitypes.PaneLayout>`"
+msgstr ":py:obj:`PaneLayout <cymel.ui.uitypes.PaneLayout>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`paneLayout` ラッパークラス。"
+msgstr ":mayacmd:`paneLayout` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`Picture <cymel.ui.uitypes.Picture>`"
+msgstr ":py:obj:`Picture <cymel.ui.uitypes.Picture>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`picture` ラッパークラス。"
+msgstr ":mayacmd:`picture` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ProgressBar <cymel.ui.uitypes.ProgressBar>`"
+msgstr ":py:obj:`ProgressBar <cymel.ui.uitypes.ProgressBar>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`progressBar` ラッパークラス。"
+msgstr ":mayacmd:`progressBar` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`RadioButton <cymel.ui.uitypes.RadioButton>`"
+msgstr ":py:obj:`RadioButton <cymel.ui.uitypes.RadioButton>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`radioButton` ラッパークラス。"
+msgstr ":mayacmd:`radioButton` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`RadioButtonGrp <cymel.ui.uitypes.RadioButtonGrp>`"
+msgstr ":py:obj:`RadioButtonGrp <cymel.ui.uitypes.RadioButtonGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`radioButtonGrp` ラッパークラス。"
+msgstr ":mayacmd:`radioButtonGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`RangeControl <cymel.ui.uitypes.RangeControl>`"
+msgstr ":py:obj:`RangeControl <cymel.ui.uitypes.RangeControl>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`rangeControl` ラッパークラス。"
+msgstr ":mayacmd:`rangeControl` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`RowColumnLayout <cymel.ui.uitypes.RowColumnLayout>`"
+msgstr ":py:obj:`RowColumnLayout <cymel.ui.uitypes.RowColumnLayout>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`rowColumnLayout` ラッパークラス。"
+msgstr ":mayacmd:`rowColumnLayout` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`RowLayout <cymel.ui.uitypes.RowLayout>`"
+msgstr ":py:obj:`RowLayout <cymel.ui.uitypes.RowLayout>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`rowLayout` ラッパークラス。"
+msgstr ":mayacmd:`rowLayout` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ScriptTable <cymel.ui.uitypes.ScriptTable>`"
+msgstr ":py:obj:`ScriptTable <cymel.ui.uitypes.ScriptTable>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`scriptTable` ラッパークラス。"
+msgstr ":mayacmd:`scriptTable` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ScrollField <cymel.ui.uitypes.ScrollField>`"
+msgstr ":py:obj:`ScrollField <cymel.ui.uitypes.ScrollField>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`scrollField` ラッパークラス。"
+msgstr ":mayacmd:`scrollField` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ScrollLayout <cymel.ui.uitypes.ScrollLayout>`"
+msgstr ":py:obj:`ScrollLayout <cymel.ui.uitypes.ScrollLayout>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`scrollLayout` ラッパークラス。"
+msgstr ":mayacmd:`scrollLayout` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`Separator <cymel.ui.uitypes.Separator>`"
+msgstr ":py:obj:`Separator <cymel.ui.uitypes.Separator>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`separator` ラッパークラス。"
+msgstr ":mayacmd:`separator` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ShelfButton <cymel.ui.uitypes.ShelfButton>`"
+msgstr ":py:obj:`ShelfButton <cymel.ui.uitypes.ShelfButton>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`shelfButton` ラッパークラス。"
+msgstr ":mayacmd:`shelfButton` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ShelfLayout <cymel.ui.uitypes.ShelfLayout>`"
+msgstr ":py:obj:`ShelfLayout <cymel.ui.uitypes.ShelfLayout>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`shelfLayout` ラッパークラス。"
+msgstr ":mayacmd:`shelfLayout` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ShelfTabLayout <cymel.ui.uitypes.ShelfTabLayout>`"
+msgstr ":py:obj:`ShelfTabLayout <cymel.ui.uitypes.ShelfTabLayout>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`shelfTabLayout` ラッパークラス。"
+msgstr ":mayacmd:`shelfTabLayout` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`SoundControl <cymel.ui.uitypes.SoundControl>`"
+msgstr ":py:obj:`SoundControl <cymel.ui.uitypes.SoundControl>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`soundControl` ラッパークラス。"
+msgstr ":mayacmd:`soundControl` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`SwatchDisplayPort <cymel.ui.uitypes.SwatchDisplayPort>`"
+msgstr ":py:obj:`SwatchDisplayPort <cymel.ui.uitypes.SwatchDisplayPort>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`swatchDisplayPort` ラッパークラス。"
+msgstr ":mayacmd:`swatchDisplayPort` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`SwitchTable <cymel.ui.uitypes.SwitchTable>`"
+msgstr ":py:obj:`SwitchTable <cymel.ui.uitypes.SwitchTable>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`switchTable` ラッパークラス。"
+msgstr ":mayacmd:`switchTable` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`SymbolButton <cymel.ui.uitypes.SymbolButton>`"
+msgstr ":py:obj:`SymbolButton <cymel.ui.uitypes.SymbolButton>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`symbolButton` ラッパークラス。"
+msgstr ":mayacmd:`symbolButton` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`SymbolCheckBox <cymel.ui.uitypes.SymbolCheckBox>`"
+msgstr ":py:obj:`SymbolCheckBox <cymel.ui.uitypes.SymbolCheckBox>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`symbolCheckBox` ラッパークラス。"
+msgstr ":mayacmd:`symbolCheckBox` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`TabLayout <cymel.ui.uitypes.TabLayout>`"
+msgstr ":py:obj:`TabLayout <cymel.ui.uitypes.TabLayout>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`tabLayout` ラッパークラス。"
+msgstr ":mayacmd:`tabLayout` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`Text <cymel.ui.uitypes.Text>`"
+msgstr ":py:obj:`Text <cymel.ui.uitypes.Text>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`text` ラッパークラス。"
+msgstr ":mayacmd:`text` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`TextField <cymel.ui.uitypes.TextField>`"
+msgstr ":py:obj:`TextField <cymel.ui.uitypes.TextField>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`textField` ラッパークラス。"
+msgstr ":mayacmd:`textField` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`TextFieldButtonGrp <cymel.ui.uitypes.TextFieldButtonGrp>`"
+msgstr ":py:obj:`TextFieldButtonGrp <cymel.ui.uitypes.TextFieldButtonGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`textFieldButtonGrp` ラッパークラス。"
+msgstr ":mayacmd:`textFieldButtonGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`TextFieldGrp <cymel.ui.uitypes.TextFieldGrp>`"
+msgstr ":py:obj:`TextFieldGrp <cymel.ui.uitypes.TextFieldGrp>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`textFieldGrp` ラッパークラス。"
+msgstr ":mayacmd:`textFieldGrp` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`TextScrollList <cymel.ui.uitypes.TextScrollList>`"
+msgstr ":py:obj:`TextScrollList <cymel.ui.uitypes.TextScrollList>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`textScrollList` ラッパークラス。"
+msgstr ":mayacmd:`textScrollList` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`TimeControl <cymel.ui.uitypes.TimeControl>`"
+msgstr ":py:obj:`TimeControl <cymel.ui.uitypes.TimeControl>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`timeControl` ラッパークラス。"
+msgstr ":mayacmd:`timeControl` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`TimePort <cymel.ui.uitypes.TimePort>`"
+msgstr ":py:obj:`TimePort <cymel.ui.uitypes.TimePort>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`timePort` ラッパークラス。"
+msgstr ":mayacmd:`timePort` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ToolBar <cymel.ui.uitypes.ToolBar>`"
+msgstr ":py:obj:`ToolBar <cymel.ui.uitypes.ToolBar>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`toolBar` ラッパークラス。"
+msgstr ":mayacmd:`toolBar` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`ToolButton <cymel.ui.uitypes.ToolButton>`"
+msgstr ":py:obj:`ToolButton <cymel.ui.uitypes.ToolButton>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`toolButton` ラッパークラス。"
+msgstr ":mayacmd:`toolButton` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`TreeLister <cymel.ui.uitypes.TreeLister>`"
+msgstr ":py:obj:`TreeLister <cymel.ui.uitypes.TreeLister>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`treeLister` ラッパークラス。"
+msgstr ":mayacmd:`treeLister` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`TreeView <cymel.ui.uitypes.TreeView>`"
+msgstr ":py:obj:`TreeView <cymel.ui.uitypes.TreeView>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`treeView` ラッパークラス。"
+msgstr ":mayacmd:`treeView` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`WorkspaceControl <cymel.ui.uitypes.WorkspaceControl>`"
+msgstr ":py:obj:`WorkspaceControl <cymel.ui.uitypes.WorkspaceControl>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`workspaceControl` ラッパークラス。"
+msgstr ":mayacmd:`workspaceControl` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid ":py:obj:`WorkspacePanel <cymel.ui.uitypes.WorkspacePanel>`"
+msgstr ":py:obj:`WorkspacePanel <cymel.ui.uitypes.WorkspacePanel>`"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:106:<autosummary>:1
+msgid "mel の :mayacmd:`workspacePanel` ラッパークラス。"
+msgstr ":mayacmd:`workspacePanel` wrapper class for mel."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:108
+msgid "Functions:"
+msgstr "Functions:"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+msgid ""
+":py:obj:`dumpUIHierarchy <cymel.ui.uitypes.dumpUIHierarchy>`\\ \\(obj\\[\\, "
+"indent\\]\\)"
+msgstr ""
+":py:obj:`dumpUIHierarchy <cymel.ui.uitypes.dumpUIHierarchy>`\\ \\(obj\\[\\, "
+"indent\\]\\)"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+#: cymel.ui.uitypes.dumpUIHierarchy:1 of
+msgid "UI 階層をダンプする。"
+msgstr "Dump the UI hierarchy."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+msgid ""
+":py:obj:`inspectUIInheritance <cymel.ui.uitypes.inspectUIInheritance>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`inspectUIInheritance <cymel.ui.uitypes.inspectUIInheritance>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+#: cymel.ui.uitypes.inspectUIInheritance:1 of
+msgid "MayaのUI型について調べる。"
+msgstr "Find out about Maya's UI types."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+msgid ":py:obj:`registerTypedCls <cymel.ui.uitypes.registerTypedCls>`\\ \\(cls\\)"
+msgstr ":py:obj:`registerTypedCls <cymel.ui.uitypes.registerTypedCls>`\\ \\(cls\\)"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+#: cymel.ui.uitypes.registerTypedCls:1 of
+msgid "UIタイプ(コマンド)名と一対一で関連付けるクラスを登録する。"
+msgstr ""
+"Register a class that has a one-to-one association with the UI type "
+"(command) name."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+msgid ":py:obj:`uiClass <cymel.ui.uitypes.uiClass>`\\ \\(uitype\\)"
+msgstr ":py:obj:`uiClass <cymel.ui.uitypes.uiClass>`\\ \\(uitype\\)"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+#: cymel.ui.uitypes.uiClass:1 of
+msgid "UIタイプ名からクラスを得る。未登録なら生成される。"
+msgstr ""
+"Get class from UI type name. It will be generated if it is not registered."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+msgid ":py:obj:`uiParentClass <cymel.ui.uitypes.uiParentClass>`\\ \\(uitype\\)"
+msgstr ":py:obj:`uiParentClass <cymel.ui.uitypes.uiParentClass>`\\ \\(uitype\\)"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+#: cymel.ui.uitypes.uiParentClass:1 of
+msgid "UIタイプ名から親クラスを得る。未登録なら生成される。"
+msgstr ""
+"Get parent class from UI type name. It will be generated if it is not "
+"registered."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+msgid ":py:obj:`uiSetParent <cymel.ui.uitypes.uiSetParent>`\\ \\(path\\, \\*\\*kwargs\\)"
+msgstr ":py:obj:`uiSetParent <cymel.ui.uitypes.uiSetParent>`\\ \\(path\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+#: cymel.ui.uitypes.uiSetParent:1 of
+msgid "dockControl でパスが変わる事を想定した安全な setParent"
+msgstr "Safe setParent assuming the path changes with dockControl"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+msgid ":py:obj:`uiType <cymel.ui.uitypes.uiType>`\\ \\(name\\)"
+msgstr ":py:obj:`uiType <cymel.ui.uitypes.uiType>`\\ \\(name\\)"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:136:<autosummary>:1
+#: cymel.ui.uitypes.uiType:1 of
+msgid "UIパス名からそのタイプにマッチするコマンド名を得る。"
+msgstr "Gets the command name matching the type from the UI path name."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst:139
+msgid "Functions Details:"
+msgstr "Function Details:"
+
+#: ../srcs/generated/cymel.ui.uitypes.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.ui.uitypes.dumpUIHierarchy:3 of
+msgid "UIオブジェクト。"
+msgstr "UI object."
+
+#: cymel.ui.uitypes.dumpUIHierarchy:4 of
+msgid "インデント文字列。"
+msgstr "Indented string."
+
+#: cymel.ui.uitypes.inspectUIInheritance:3 of
+msgid ""
+"バージョンアップ時などに実行して調べるためのもの。 そして、この出力を元に _UICMD_DICT と _UITYPE_TO_UICMD の定義を書く。"
+msgstr ""
+"This is to be executed and checked when updating the version. Then, write "
+"the definitions of _UICMD_DICT and _UITYPE_TO_UICMD based on this output."
+
+#: cymel.ui.uitypes.inspectUIInheritance:7 of
+msgid "_UICMD_DICT は値が tuple なものについて確定する。"
+msgstr "_UICMD_DICT is determined for tuple values."
+
+#: cymel.ui.uitypes.inspectUIInheritance:8 of
+msgid "_UITYPE_TO_UICMD はそのまま利用。"
+msgstr "_UITYPE_TO_UICMD can be used as is."
+
+#: cymel.ui.uitypes.registerTypedCls:3 of
+msgid "クラス。"
+msgstr "class."
+
+#: cymel.ui.uitypes.uiClass:3 cymel.ui.uitypes.uiParentClass:3 of
+msgid "UIタイプ名。"
+msgstr "UI type name."
+
+#: ../srcs/generated/cymel.ui.uitypes.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.ui.uitypes.uiClass:4 cymel.ui.uitypes.uiParentClass:4 of
+msgid "`type`"
+msgstr "`type`"
+
+#: cymel.ui.uitypes.uiType:3 of
+msgid "UIパス名。"
+msgstr "UI path name."
+
+#: cymel.ui.uitypes.uiType:4 of
+msgid "`str`"
+msgstr "`str`"

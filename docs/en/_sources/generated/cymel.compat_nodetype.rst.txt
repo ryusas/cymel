@@ -1,0 +1,48 @@
+﻿cymel.compat_nodetype
+=====================
+
+.. automodule:: cymel.compat_nodetype
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        CompatNodeTypeMap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Constants:
+
+    
+    .. autodata:: MAYA2026_DELETED_TYPENAMES
+    .. autodata:: MAYA2026_DL_TO_OLD
+
+
+
+
+
+
+
+
+
+

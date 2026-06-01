@@ -1,0 +1,54 @@
+class cymel.core.datatypes.eulerrotation.ImmutableEulerRotation
+===============================================================
+
+.. currentmodule:: cymel.core.datatypes.eulerrotation
+
+
+.. inheritance-diagram:: ImmutableEulerRotation
+    :parts: 1
+
+
+
+.. autoclass:: ImmutableEulerRotation
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        boundIt
+        incrementalRotateBy
+        invertIt
+        reorderIt
+        set
+        setToAlternateSolution
+        setToClosestCut
+        setToClosestSolution
+        setToReverseDirection
+        setValue
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: boundIt
+    .. automethod:: incrementalRotateBy
+    .. automethod:: invertIt
+    .. automethod:: reorderIt
+    .. automethod:: set
+    .. automethod:: setToAlternateSolution
+    .. automethod:: setToClosestCut
+    .. automethod:: setToClosestSolution
+    .. automethod:: setToReverseDirection
+    .. automethod:: setValue
+
+

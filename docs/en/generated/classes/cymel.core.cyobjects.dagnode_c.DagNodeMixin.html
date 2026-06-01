@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.cyobjects.dagnode_c.DagNodeMixin &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="cymel.core.cyobjects.node" href="../cymel.core.cyobjects.node.html" />
+    <link rel="prev" title="cymel.core.cyobjects.dagnode_c" href="../cymel.core.cyobjects.dagnode_c.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.node.html" title="cymel.core.cyobjects.node"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.dagnode_c.html" title="cymel.core.cyobjects.dagnode_c"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.dagnode_c.html" accesskey="U">cymel.core.cyobjects.dagnode_c</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.dagnode_c.DagNodeMixin</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-cyobjects-dagnode-c-dagnodemixin">
+<h1>class cymel.core.cyobjects.dagnode_c.DagNodeMixin<a class="headerlink" href="#class-cymel-core-cyobjects-dagnode-c-dagnodemixin" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-8dfd7f94a54b8c0a5626d5a96ab820fc693a7d77.png" alt="Inheritance diagram of DagNodeMixin" usemap="#inheritance8763eff420" class="inheritance graphviz" /></div>
+<map id="inheritance8763eff420" name="inheritance8763eff420">
+<area shape="rect" id="node1" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin" target="_top" title="`.DagNode` クラスでサポートする機能の中核。" alt="" coords="5,5,96,29"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.dagnode_c.</span></span><span class="sig-name descname"><span class="pre">DagNodeMixin</span></span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Core functionality supported by the <a class="reference internal" href="cymel.core.cyobjects.dagnode.DagNode.html#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a> class.</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.allRoots" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.allRoots"><code class="xref py py-obj docutils literal notranslate"><span class="pre">allRoots</span></code></a>()</p></td>
+<td><p>Get a list of all root nodes that have this node instance under them.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.boundingBox" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.boundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">boundingBox</span></code></a>([ws])</p></td>
+<td><p>Get the bounding box.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.child" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.child"><code class="xref py py-obj docutils literal notranslate"><span class="pre">child</span></code></a>(idx[, shapes, intermediates])</p></td>
+<td><p>Get one child node by index specification.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.children" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.children"><code class="xref py py-obj docutils literal notranslate"><span class="pre">children</span></code></a>([shapes, intermediates])</p></td>
+<td><p>Get list of child nodes on DAG path.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.fullPath" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.fullPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fullPath</span></code></a>()</p></td>
+<td><p>Get the full pathname.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getJOQ" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getJOQ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJOQ</span></code></a>([ws])</p></td>
+<td><p>Get the quaternion up to jointOrient of the node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getM" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getM</span></code></a>([ws, p, inv])</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMatrix</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMatrix</span></code></a>([ws, p, inv])</p></td>
+<td><p>Obtain the transformation matrix of the node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQ" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getQ</span></code></a>([ws, ra, r, jo])</p></td>
+<td><p>Alias ​​for <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getQuaternion</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getQuaternion</span></code></a>([ws, ra, r, jo])</p></td>
+<td><p>Get the rotation quaternion of the node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getS" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getS</span></code></a>([ws])</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getScaling</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getScaling</span></code></a>([ws])</p></td>
+<td><p>Get the node's scaling value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getSh" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getSh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSh</span></code></a>([ws])</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getShearing</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getShearing</span></code></a>([ws])</p></td>
+<td><p>Get the shear value of the node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getT" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getT</span></code></a>([ws, at])</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTranslation</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTransformation</span></code></a>([ws])</p></td>
+<td><p>Get transformation information for a node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTranslation</span></code></a>([ws, at])</p></td>
+<td><p>Get the position of the node.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getX" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getX</span></code></a>([ws])</p></td>
+<td><p>Alias ​​for <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTransformation</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.hasUnderWorldNodes" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.hasUnderWorldNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasUnderWorldNodes</span></code></a>()</p></td>
+<td><p>Whether the shape has underworld nodes (curves on surfaces, etc.).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.inUnderWorld" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.inUnderWorld"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inUnderWorld</span></code></a>()</p></td>
+<td><p>Is it underworld (curve-on-surface, etc.)?</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.instance" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.instance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">instance</span></code></a>(idx)</p></td>
+<td><p>Get instance from instance number.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.instanceIndex" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.instanceIndex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">instanceIndex</span></code></a>()</p></td>
+<td><p>Get the instance number.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.instances" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.instances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">instances</span></code></a>([noSelf])</p></td>
+<td><p>Returns a list of instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAncestorOf</span></code></a>(node[, exact, underWorld])</p></td>
+<td><p>Checks whether the specified node is an upper node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanceable" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanceable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isInstanceable</span></code></a>()</p></td>
+<td><p>Is it instantiable?</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanced" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanced"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isInstanced</span></code></a>([indirect])</p></td>
+<td><p>Whether it is instantiated.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isIntermediateObject" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isIntermediateObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isIntermediateObject</span></code></a>()</p></td>
+<td><p>Is it an intermediate object?</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isParentOf</span></code></a>(node[, exact, underWorld])</p></td>
+<td><p>Checks whether the specified node is a parent.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isRoot" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isRoot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRoot</span></code></a>()</p></td>
+<td><p>Is it a root node?</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isTemplated" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isTemplated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isTemplated</span></code></a>()</p></td>
+<td><p>Templated or not.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isVisible" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isVisible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isVisible</span></code></a>()</p></td>
+<td><p>Gain visibility.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.leaves" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.leaves"><code class="xref py py-obj docutils literal notranslate"><span class="pre">leaves</span></code></a>()</p></td>
+<td><p>Get a list of leaf nodes below the hierarchy.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lengthAndSiblingIndices</span></code></a>()</p></td>
+<td><p>Obtain the number of nodes that make up the DAG path and a pair of sibling index lists.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.numChildren" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.numChildren"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numChildren</span></code></a>([shapes, intermediates])</p></td>
+<td><p>Get the number of child nodes on the DAG path.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.numInstances" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.numInstances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numInstances</span></code></a>([indirect])</p></td>
+<td><p>Get the number of instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.numParents" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.numParents"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numParents</span></code></a>([indirect])</p></td>
+<td><p>Get the number of parent nodes that have this node instance as a child.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.numShapes" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.numShapes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numShapes</span></code></a>([intermediates])</p></td>
+<td><p>Get the number of <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/shape.html">shape</a> nodes that <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> has.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.objectColor" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.objectColor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">objectColor</span></code></a>()</p></td>
+<td><p>Gets the set object color.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.parent" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.parent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></a>([step])</p></td>
+<td><p>Get the parent node along the DAG path.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.parentWorld" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.parentWorld"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parentWorld</span></code></a>()</p></td>
+<td><p>Returns the parent spatial shape in the underworld (curve-on-surface, etc.).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.parents" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.parents"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></a>([indirect])</p></td>
+<td><p>Get a list of parent nodes that have this node instance as a child.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.partialPath" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.partialPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">partialPath</span></code></a>()</p></td>
+<td><p>Get partial path name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pathLength</span></code></a>()</p></td>
+<td><p>Get the length of the DAG full path.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.root" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">root</span></code></a>()</p></td>
+<td><p>Get the root node along the DAG path.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shape</span></code></a>([idx, intermediates])</p></td>
+<td><p>Get the <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/shape.html">shape</a> node.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.shapes" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.shapes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shapes</span></code></a>([intermediates])</p></td>
+<td><p>Get a list of <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/shape.html">shape</a> nodes of <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndex" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">siblingIndex</span></code></a>()</p></td>
+<td><p>Get the index in siblings.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">siblingIndices</span></code></a>()</p></td>
+<td><p>Get the sibling index list of all nodes in the DAG path.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblings" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">siblings</span></code></a>()</p></td>
+<td><p>Returns a list of sibling nodes other than itself.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.transform" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>()</p></td>
+<td><p>Get the <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.underWorldNodes" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.underWorldNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">underWorldNodes</span></code></a>()</p></td>
+<td><p>Get a list of underworld nodes (curves-on-surface, etc.) under a shape.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.useObjectColor" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.useObjectColor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">useObjectColor</span></code></a>()</p></td>
+<td><p>Whether object colors are set to be used.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.allRoots">
+<span class="sig-name descname"><span class="pre">allRoots</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.allRoots" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of all root nodes that have this node instance under them.</p>
+<p>If itself is the root node, the same reference will be returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.boundingBox">
+<span class="sig-name descname"><span class="pre">boundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.boundingBox" title="Link to this definition">¶</a></dt>
+<dd><p>Get the bounding box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether you get it in world space or not.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.boundingbox.BoundingBox.html#cymel.core.datatypes.boundingbox.BoundingBox" title="cymel.core.datatypes.boundingbox.BoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundingBox</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.child">
+<span class="sig-name descname"><span class="pre">child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intermediates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.child" title="Link to this definition">¶</a></dt>
+<dd><p>Get one child node by index specification.</p>
+<p>Since it is not possible to obtain underworld nodes (curve-on-surface, etc.) from a shape, use <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.underWorldNodes" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.underWorldNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">underWorldNodes</span></code></a> in that case.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – index. Depending on the shapes and intermediates options, you may get different results for the same index. If an invalid index is specified, None will be returned instead of an error.</p></li>
+<li><p><strong>shapes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include shapes as well.</p></li>
+<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – When shapes=True, whether to also include intermediate objects.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.cyobjects.dagnode.DagNode.html#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.children">
+<span class="sig-name descname"><span class="pre">children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intermediates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.children" title="Link to this definition">¶</a></dt>
+<dd><p>Get list of child nodes on DAG path.</p>
+<p>Since it is not possible to obtain underworld nodes (curve-on-surface, etc.) from a shape, use <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.underWorldNodes" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.underWorldNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">underWorldNodes</span></code></a> in that case.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shapes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include shapes as well.</p></li>
+<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – When shapes=True, whether to also include intermediate objects.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.fullPath">
+<span class="sig-name descname"><span class="pre">fullPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.fullPath" title="Link to this definition">¶</a></dt>
+<dd><p>Get the full pathname.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getJOQ">
+<span class="sig-name descname"><span class="pre">getJOQ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getJOQ" title="Link to this definition">¶</a></dt>
+<dd><p>Get the quaternion up to jointOrient of the node.</p>
+<p>Same as r=False specification of <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getQuaternion</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether you get it in world space or not.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getM">
+<span class="sig-name descname"><span class="pre">getM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getM" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMatrix</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix">
+<span class="sig-name descname"><span class="pre">getMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix" title="Link to this definition">¶</a></dt>
+<dd><p>Obtain the transformation matrix of the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether you get it in world space or not.</p></li>
+<li><p><strong>p</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get the parent matrix.</p></li>
+<li><p><strong>inv</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to obtain the inverse of the matrix.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQ">
+<span class="sig-name descname"><span class="pre">getQ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQ" title="Link to this definition">¶</a></dt>
+<dd><p>Alias ​​for <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getQuaternion</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion">
+<span class="sig-name descname"><span class="pre">getQuaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion" title="Link to this definition">¶</a></dt>
+<dd><p>Get the rotation quaternion of the node.</p>
+<p>By default, the rotation does not include rotateAxis, so it does not match the decomposition result from the matrix, but it matches the criteria for the rotation direction of the node by Maya’s functions (Local Axis display and constraints).</p>
+<p>If ws=False, the result will be composited from only the three rotation attributes, and the local matrix of the <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/joint.html">joint</a> node will ignore any inverseScale effects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether you get it in world space or not.</p></li>
+<li><p><strong>ra</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include rotateAxis.</p></li>
+<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include rotate.</p></li>
+<li><p><strong>jo</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include jointOrient.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The effects of non-uniform scale and shear up to the parent when ws=True and jointOrient when ws=False are not considered by the <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/xform.html">xform</a> command or <a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MTransformationMatrix.html">MTransformationMatrix</a>, but are taken into account by this method.</p>
+<p>The result of ws=True always matches the Local Axis display in Legacy Viewport, but it may not match the result of orientConstraint or parentConstraint if the upper hierarchy includes non-uniform scale or shear. This is because there is not enough consideration on the constraint side. However, if non-uniform scale is always canceled in segmentScaleCompensate, they will match.</p>
+<p>The result of ws=False is that if there is no non-uniform scale or shear in the upper layer, or if non-uniform scale is always canceled by segmentScaleCompensate, the result of multiplying by the parent’s getQ(ws=True, ra=True) will match getQ(ws=True).</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Combinations of the following options will result in an error.</p>
+<ul class="simple">
+<li><p>ws=False, ra=True, r=False, jo=True</p></li>
+<li><p>ws=True, ra=True, r=False</p></li>
+<li><p>ws=True, ra=True, jo=False</p></li>
+<li><p>ws=True, r=True, jo=False</p></li>
+</ul>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getS">
+<span class="sig-name descname"><span class="pre">getS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getS" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getScaling</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling">
+<span class="sig-name descname"><span class="pre">getScaling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling" title="Link to this definition">¶</a></dt>
+<dd><p>Get the node’s scaling value.</p>
+<p>If ws=False, it is simply derived from the scale attribute, ignoring any inverseScale effects contained in the <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/joint.html">joint</a> node’s local matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether you get it in world space or not.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getSh">
+<span class="sig-name descname"><span class="pre">getSh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getSh" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getShearing</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing">
+<span class="sig-name descname"><span class="pre">getShearing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing" title="Link to this definition">¶</a></dt>
+<dd><p>Get the shear value of the node.</p>
+<p>If ws=False, it is simply derived from the shear attribute, ignoring any inverseScale effects contained in the <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/joint.html">joint</a> node’s local matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether you get it in world space or not.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getT">
+<span class="sig-name descname"><span class="pre">getT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getT" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTranslation</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation">
+<span class="sig-name descname"><span class="pre">getTransformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation" title="Link to this definition">¶</a></dt>
+<dd><p>Get transformation information for a node.</p>
+<p><a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> Same as getting the value of the attribute <code class="docutils literal notranslate"><span class="pre">xm</span></code> on the derived node, but with the option of getting the world space value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether you get it in world space or not.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.transformation.Transformation.html#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation">
+<span class="sig-name descname"><span class="pre">getTranslation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation" title="Link to this definition">¶</a></dt>
+<dd><p>Get the position of the node.</p>
+<p>By default, it is the rotation pivot position, which does not match the decomposition result from the matrix, but matches the reference for the node position by Maya’s functions (Local Axis display position and constraints).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ws</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether you get it in world space or not.</p></li>
+<li><p><strong>at</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Which attribute to get the corresponding position.  - If 0, local origin (parent matrix position). - If it is 1, it is the position of translate. - If 2, rotatePivot position. - 3 is the scalePivot position. - If it is 4 or more, it is the matrix position.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getX">
+<span class="sig-name descname"><span class="pre">getX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getX" title="Link to this definition">¶</a></dt>
+<dd><p>Alias ​​for <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTransformation</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.hasUnderWorldNodes">
+<span class="sig-name descname"><span class="pre">hasUnderWorldNodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.hasUnderWorldNodes" title="Link to this definition">¶</a></dt>
+<dd><p>Whether the shape has underworld nodes (curves on surfaces, etc.).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.inUnderWorld">
+<span class="sig-name descname"><span class="pre">inUnderWorld</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.inUnderWorld" title="Link to this definition">¶</a></dt>
+<dd><p>Is it underworld (curve-on-surface, etc.)?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.instance">
+<span class="sig-name descname"><span class="pre">instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.instance" title="Link to this definition">¶</a></dt>
+<dd><p>Get instance from instance number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Instance number.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.cyobjects.dagnode.DagNode.html#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.instanceIndex">
+<span class="sig-name descname"><span class="pre">instanceIndex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.instanceIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Get the instance number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This number changes dynamically as the sort order changes or the number of instances increases or decreases. Also, the index of the world space plug used will change accordingly.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.instances">
+<span class="sig-name descname"><span class="pre">instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">noSelf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.instances" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a list of instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>noSelf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Avoid including yourself.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf">
+<span class="sig-name descname"><span class="pre">isAncestorOf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">underWorld</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf" title="Link to this definition">¶</a></dt>
+<dd><p>Checks whether the specified node is an upper node.</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isParentOf</span></code></a> can be used to check whether a parent is a direct parent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> (<a class="reference internal" href="cymel.core.cyobjects.dagnode.DagNode.html#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a>) – Node to check.</p></li>
+<li><p><strong>exact</strong> – Whether to make judgments only along the DAG path without considering instance relationships.</p></li>
+<li><p><strong>underWorld</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Also determines the parent shape of the underworld (curve-on-surface).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanceable">
+<span class="sig-name descname"><span class="pre">isInstanceable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanceable" title="Link to this definition">¶</a></dt>
+<dd><p>Is it instantiable?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanced">
+<span class="sig-name descname"><span class="pre">isInstanced</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indirect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanced" title="Link to this definition">¶</a></dt>
+<dd><p>Whether it is instantiated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>indirect</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include points that are not directly instantiated.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isIntermediateObject">
+<span class="sig-name descname"><span class="pre">isIntermediateObject</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isIntermediateObject" title="Link to this definition">¶</a></dt>
+<dd><p>Is it an intermediate object?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf">
+<span class="sig-name descname"><span class="pre">isParentOf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">underWorld</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf" title="Link to this definition">¶</a></dt>
+<dd><p>Checks whether the specified node is a parent.</p>
+<p><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAncestorOf</span></code></a> can be used to check whether a node is a higher-level node that is not limited to a direct parent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> (<a class="reference internal" href="cymel.core.cyobjects.dagnode.DagNode.html#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a>) – Node to check.</p></li>
+<li><p><strong>exact</strong> – Whether to make judgments only along the DAG path without considering instance relationships.</p></li>
+<li><p><strong>underWorld</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Also determines the parent shape of the underworld (curve-on-surface).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isRoot">
+<span class="sig-name descname"><span class="pre">isRoot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isRoot" title="Link to this definition">¶</a></dt>
+<dd><p>Is it a root node?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isTemplated">
+<span class="sig-name descname"><span class="pre">isTemplated</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isTemplated" title="Link to this definition">¶</a></dt>
+<dd><p>Templated or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.isVisible">
+<span class="sig-name descname"><span class="pre">isVisible</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isVisible" title="Link to this definition">¶</a></dt>
+<dd><p>Gain visibility.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.leaves">
+<span class="sig-name descname"><span class="pre">leaves</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.leaves" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of leaf nodes below the hierarchy.</p>
+<p>Descending to underworld nodes (curve-on-surface, etc.) is not allowed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices">
+<span class="sig-name descname"><span class="pre">lengthAndSiblingIndices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices" title="Link to this definition">¶</a></dt>
+<dd><p>Obtain the number of nodes that make up the DAG path and a pair of sibling index lists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(int, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>)</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When used as a key function to sort the node list, it becomes a breadth-first sort of the DAG hierarchy.</p>
+<p>If you do not need sibling order guarantee, use <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pathLength</span></code></a>, and if depth is priority, use <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">siblingIndices</span></code></a>.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.numChildren">
+<span class="sig-name descname"><span class="pre">numChildren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intermediates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.numChildren" title="Link to this definition">¶</a></dt>
+<dd><p>Get the number of child nodes on the DAG path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shapes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include shapes as well.</p></li>
+<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – When shapes=True, whether to also include intermediate objects.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.numInstances">
+<span class="sig-name descname"><span class="pre">numInstances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indirect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.numInstances" title="Link to this definition">¶</a></dt>
+<dd><p>Get the number of instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>indirect</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include points that are not directly instantiated.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.numParents">
+<span class="sig-name descname"><span class="pre">numParents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indirect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.numParents" title="Link to this definition">¶</a></dt>
+<dd><p>Get the number of parent nodes that have this node instance as a child.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>indirect</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Get all parent paths including non-instance points.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.numShapes">
+<span class="sig-name descname"><span class="pre">numShapes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intermediates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.numShapes" title="Link to this definition">¶</a></dt>
+<dd><p>Get the number of <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/shape.html">shape</a> nodes that <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> has.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to also include intermediate objects.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.objectColor">
+<span class="sig-name descname"><span class="pre">objectColor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.objectColor" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the set object color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.parent" title="Link to this definition">¶</a></dt>
+<dd><p>Get the parent node along the DAG path.</p>
+<p>Parent shapes can also be obtained from underworld nodes (such as curve-on-surface).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Number of nodes to go back to. Unlike the <a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MDagPath.html">MDagPath</a> pop of the API, the <a href="#id1"><span class="problematic" id="id2">``</span></a>world’’ nodes that exist between the curve-on-surface and the parent shape and are not visible on the scene are not counted.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.cyobjects.dagnode.DagNode.html#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.parentWorld">
+<span class="sig-name descname"><span class="pre">parentWorld</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.parentWorld" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the parent spatial shape in the underworld (curve-on-surface, etc.).</p>
+<p>This method allows you to obtain the parent surface shape from a curve-on-surface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.cyobjects.shape.Shape.html#cymel.core.cyobjects.shape.Shape" title="cymel.core.cyobjects.shape.Shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Shape</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.parents">
+<span class="sig-name descname"><span class="pre">parents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indirect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.parents" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of parent nodes that have this node instance as a child.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>indirect</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Get all parent paths including non-instance points.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.partialPath">
+<span class="sig-name descname"><span class="pre">partialPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.partialPath" title="Link to this definition">¶</a></dt>
+<dd><p>Get partial path name.</p>
+<p>Same as <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject.name" title="cymel.core.cyobjects.cyobject.CyObject.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength">
+<span class="sig-name descname"><span class="pre">pathLength</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength" title="Link to this definition">¶</a></dt>
+<dd><p>Get the length of the DAG full path.</p>
+<p>This differs from the API’s <a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MDagPath.html">MDagPath</a> length() because the <a href="#id1"><span class="problematic" id="id2">``</span></a>world’’ nodes that exist between the curve-on-surface and the parent shape and are not visible on the scene are not counted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you use a node list as a key function to sort, it will be a breadth-first sort that does not guarantee the sibling order of the DAG hierarchy.</p>
+<p>If you want to guarantee sibling order, use <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lengthAndSiblingIndices</span></code></a>, and if you want depth priority, use <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">siblingIndices</span></code></a>.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.root">
+<span class="sig-name descname"><span class="pre">root</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.root" title="Link to this definition">¶</a></dt>
+<dd><p>Get the root node along the DAG path.</p>
+<p>If itself is the root node, the same reference will be returned.</p>
+<p>Unlike the <a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MDagPath.html">MDagPath</a> dagRoot() API, you get the root node on the scene rather than the invisible <a href="#id1"><span class="problematic" id="id2">``</span></a>world’’ node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.cyobjects.transform.Transform.html#cymel.core.cyobjects.transform.Transform" title="cymel.core.cyobjects.transform.Transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transform</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape">
+<span class="sig-name descname"><span class="pre">shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intermediates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape" title="Link to this definition">¶</a></dt>
+<dd><p>Get the <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/shape.html">shape</a> node.</p>
+<p>If self is a shape, you will get self, and if <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a>, you will get that shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Index of the shape you want to get. Ignored if itself is a shape.  The intermediates option can change what you get for the same index. If an invalid index is specified, None will be returned instead of an error.  Python-like negative indexes can also be specified.</p></li>
+<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to also include intermediate objects.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.cyobjects.shape.Shape.html#cymel.core.cyobjects.shape.Shape" title="cymel.core.cyobjects.shape.Shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Shape</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.shapes">
+<span class="sig-name descname"><span class="pre">shapes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intermediates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.shapes" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/shape.html">shape</a> nodes of <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to also include intermediate objects.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndex">
+<span class="sig-name descname"><span class="pre">siblingIndex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Get the index in siblings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices">
+<span class="sig-name descname"><span class="pre">siblingIndices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices" title="Link to this definition">¶</a></dt>
+<dd><p>Get the sibling index list of all nodes in the DAG path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When used as a key function to sort the node list, it becomes a depth-first sort of the DAG hierarchy.</p>
+<p>For width-first, use <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lengthAndSiblingIndices</span></code></a>; for breadth-first, which does not guarantee sibling order, use <a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pathLength</span></code></a>.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblings">
+<span class="sig-name descname"><span class="pre">siblings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblings" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a list of sibling nodes other than itself.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.transform" title="Link to this definition">¶</a></dt>
+<dd><p>Get the <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> node.</p>
+<dl class="simple">
+<dt>If self is <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a>, self is</dt><dd><p><a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/shape.html">shape</a> gets its parent.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.cyobjects.transform.Transform.html#cymel.core.cyobjects.transform.Transform" title="cymel.core.cyobjects.transform.Transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transform</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.underWorldNodes">
+<span class="sig-name descname"><span class="pre">underWorldNodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.underWorldNodes" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of underworld nodes (curves-on-surface, etc.) under a shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode_c.DagNodeMixin.useObjectColor">
+<span class="sig-name descname"><span class="pre">useObjectColor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.useObjectColor" title="Link to this definition">¶</a></dt>
+<dd><p>Whether object colors are set to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.cyobjects.dagnode_c.DagNodeMixin</a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.allRoots"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.allRoots()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.boundingBox"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.boundingBox()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.child"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.child()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.children"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.children()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.fullPath"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.fullPath()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getJOQ"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.getJOQ()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getM"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.getM()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getMatrix"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.getMatrix()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQ"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.getQ()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getQuaternion"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.getQuaternion()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getS"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.getS()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getScaling"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.getScaling()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getSh"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.getSh()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getShearing"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.getShearing()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getT"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.getT()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTransformation"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.getTransformation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getTranslation"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.getTranslation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getX"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.getX()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.hasUnderWorldNodes"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.hasUnderWorldNodes()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.inUnderWorld"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.inUnderWorld()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.instance"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.instance()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.instanceIndex"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.instanceIndex()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.instances"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.instances()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isAncestorOf"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.isAncestorOf()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanceable"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.isInstanceable()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isInstanced"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.isInstanced()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isIntermediateObject"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.isIntermediateObject()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isParentOf"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.isParentOf()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isRoot"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.isRoot()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isTemplated"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.isTemplated()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.isVisible"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.isVisible()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.leaves"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.leaves()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.lengthAndSiblingIndices()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.numChildren"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.numChildren()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.numInstances"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.numInstances()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.numParents"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.numParents()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.numShapes"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.numShapes()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.objectColor"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.objectColor()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.parent"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.parent()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.parentWorld"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.parentWorld()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.parents"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.parents()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.partialPath"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.partialPath()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.pathLength()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.root"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.root()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.shape"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.shape()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.shapes"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.shapes()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndex"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.siblingIndex()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.siblingIndices()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblings"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.siblings()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.transform"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.transform()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.underWorldNodes"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.underWorldNodes()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode_c.DagNodeMixin.useObjectColor"><code class="docutils literal notranslate"><span class="pre">DagNodeMixin.useObjectColor()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../cymel.core.cyobjects.dagnode_c.html"
+                          title="previous chapter">cymel.core.cyobjects.dagnode_c</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../cymel.core.cyobjects.node.html"
+                          title="next chapter">cymel.core.cyobjects.node</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.node.html" title="cymel.core.cyobjects.node"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.dagnode_c.html" title="cymel.core.cyobjects.dagnode_c"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.dagnode_c.html" >cymel.core.cyobjects.dagnode_c</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.dagnode_c.DagNodeMixin</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

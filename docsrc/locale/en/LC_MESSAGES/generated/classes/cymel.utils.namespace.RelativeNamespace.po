@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.RelativeNamespace.rst:2
+msgid "class cymel.utils.namespace.RelativeNamespace"
+msgstr "class cymel.utils.namespace.RelativeNamespace"
+
+#: cymel.utils.namespace.RelativeNamespace:1 of
+msgid "相対ネームスペースモードを切り替えるコンテキスト。"
+msgstr "Context to switch relative namespace mode."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.RelativeNamespace.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.RelativeNamespace.rst:26:<autosummary>:1
+msgid ""
+":py:obj:`__init__ <cymel.utils.namespace.RelativeNamespace.__init__>`\\ "
+"\\(\\[namespace\\]\\)"
+msgstr ""
+":py:obj:`__init__ <cymel.utils.namespace.RelativeNamespace.__init__>`\\ "
+"\\(\\[namespace\\]\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.RelativeNamespace.rst:29
+msgid "Attributes:"
+msgstr "Attributes:"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.RelativeNamespace.rst:38
+msgid "Methods Details:"
+msgstr "Method Details:"

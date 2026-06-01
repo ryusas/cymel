@@ -1,0 +1,52 @@
+class cymel.ui.menu.Menu
+========================
+
+.. currentmodule:: cymel.ui.menu
+
+
+.. inheritance-diagram:: Menu
+    :parts: 1
+
+
+
+.. autoclass:: Menu
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+        child
+        childNames
+        children
+        clear
+        getCurrent
+        makeCurrent
+        numChildren
+        pop
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+    .. automethod:: child
+    .. automethod:: childNames
+    .. automethod:: children
+    .. automethod:: clear
+    .. automethod:: getCurrent
+    .. automethod:: makeCurrent
+    .. automethod:: numChildren
+    .. automethod:: pop
+
+

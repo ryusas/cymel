@@ -1,0 +1,66 @@
+class cymel.core.datatypes.boundingbox.BoundingBox
+==================================================
+
+.. currentmodule:: cymel.core.datatypes.boundingbox
+
+
+.. inheritance-diagram:: BoundingBox
+    :parts: 1
+
+
+
+.. autoclass:: BoundingBox
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        clear
+        contains
+        cornerPoints
+        depth
+        distanceBetween
+        distanceToPoint
+        expand
+        height
+        intersectedBox
+        intersectedVolume
+        intersectedVolumeOrDistance
+        intersects
+        max
+        min
+        transformUsing
+        width
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: clear
+    .. automethod:: contains
+    .. automethod:: cornerPoints
+    .. automethod:: depth
+    .. automethod:: distanceBetween
+    .. automethod:: distanceToPoint
+    .. automethod:: expand
+    .. automethod:: height
+    .. automethod:: intersectedBox
+    .. automethod:: intersectedVolume
+    .. automethod:: intersectedVolumeOrDistance
+    .. automethod:: intersects
+    .. automethod:: max
+    .. automethod:: min
+    .. automethod:: transformUsing
+    .. automethod:: width
+
+

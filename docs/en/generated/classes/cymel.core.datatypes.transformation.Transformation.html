@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.datatypes.transformation.Transformation &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="cymel.core.datatypes.vector" href="../cymel.core.datatypes.vector.html" />
+    <link rel="prev" title="class cymel.core.datatypes.transformation.ImmutableTransformation" href="cymel.core.datatypes.transformation.ImmutableTransformation.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.vector.html" title="cymel.core.datatypes.vector"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cymel.core.datatypes.transformation.ImmutableTransformation.html" title="class cymel.core.datatypes.transformation.ImmutableTransformation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.transformation.html" accesskey="U">cymel.core.datatypes.transformation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.transformation.Transformation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-datatypes-transformation-transformation">
+<h1>class cymel.core.datatypes.transformation.Transformation<a class="headerlink" href="#class-cymel-core-datatypes-transformation-transformation" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-04cbfd293f50e7f1fbedc9b773aafb4e0ad8d45b.png" alt="Inheritance diagram of Transformation" usemap="#inheritanceaa3e3b71fe" class="inheritance graphviz" /></div>
+<map id="inheritanceaa3e3b71fe" name="inheritanceaa3e3b71fe">
+<area shape="rect" id="node1" href="#cymel.core.datatypes.transformation.Transformation" target="_top" title="トランスフォーメーション情報クラス。" alt="" coords="5,5,100,29"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.datatypes.transformation.Transformation">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.datatypes.transformation.</span></span><span class="sig-name descname"><span class="pre">Transformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.transformation.Transformation" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Transformation information class.</p>
+<p>Maya’s matrix data type attribute can store transformation information in addition to the matrix value itself. This class supports this, and if the plug has data, you can directly <code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code> this object (depending on the information you have, you will get <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a>, <a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a>, or None). You can also <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug.set" title="cymel.core.cyobjects.plug.Plug.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a> this object directly into the plug.</p>
+<p>Furthermore, this class has the functionality to compose transformation elements into a matrix and decompose a matrix into transformation elements. Operations are performed automatically through normal python object attribute access. In addition to attributes such as matrix and quaternion, transformation elements have attributes with exactly the same name and corresponding attributes as the <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> node attributes.</p>
+<p>Each attribute can be accessed by either long or short name, including: The parentheses following the long name represent the short name and value type, respectively.</p>
+<ul>
+<li><p>Basic transformation element attributes</p>
+<p>These allow you to compose a matrix or decompose a matrix into these values.</p>
+<ul class="simple">
+<li><p>translate (t) (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p></li>
+<li><p>rotate (r) (<a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a>)</p></li>
+<li><p>quaternion (q) (<a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>)</p></li>
+<li><p>shear (sh) (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p></li>
+<li><p>scale (s) (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p></li>
+</ul>
+<p>Rotate and quaternion refer to the same element (rotate), but you can set or get it using either method (form).</p>
+</li>
+<li><p>Transformation Qualification Attribute</p>
+<p>Auxiliary attributes that qualify the behavior of the base transformation element.</p>
+<p>It is not possible to directly decompose the matrix into these values, and it is positioned as an auxiliary attribute for decomposition and composition.</p>
+<ul class="simple">
+<li><p>rotateOrder (ro) (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>)</p></li>
+<li><p>segmentScaleCompensate (ssc) (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>)</p></li>
+<li><p>inverseScale (is) (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p></li>
+<li><p>jointOrient (jo) (<a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>)</p></li>
+<li><p>rotateAxis (ra) (<a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>)</p></li>
+<li><p>rotatePivot (rp) (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p></li>
+<li><p>rotatePivotTranslate (rpt) (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p></li>
+<li><p>scalePivot (sp) (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p></li>
+<li><p>scalePivotTranslate (spt) (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p></li>
+</ul>
+<p>rotateOrder is the same as order in rotate (<a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a>), but you can set any rotateOrder and use it to get the rotate of that order.</p>
+<p>The type of jointOrient and rotateAxis is <a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> because it follows the specifications of Maya’s transformation matrix attribute.</p>
+<p>InverseScale’s short name <code class="docutils literal notranslate"><span class="pre">is</span></code> conflicts with python’s <code class="docutils literal notranslate"><span class="pre">is</span></code> if it is not a string, so you can use <code class="docutils literal notranslate"><span class="pre">is_</span></code> instead.</p>
+</li>
+<li><p>matrix attributes</p>
+<p>Combined matrix value.</p>
+<ul class="simple">
+<li><p>matrix (m) (<a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a>)</p></li>
+</ul>
+</li>
+</ul>
+<p>Each attribute value can be freely referenced and set, but it is an immutable value wrapped in <a class="reference internal" href="../cymel.pyutils.immutables.html#cymel.pyutils.immutables.immutable" title="cymel.pyutils.immutables.immutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code></a>. That is, you cannot use methods that modify itself. For example, to reorder <code class="docutils literal notranslate"><span class="pre">r</span></code>, calling <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reorderIt" title="cymel.core.datatypes.eulerrotation.EulerRotation.reorderIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reorderIt</span></code></a> will result in an error, so either set the value obtained by <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reorder" title="cymel.core.datatypes.eulerrotation.EulerRotation.reorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reorder</span></code></a> or set <code class="docutils literal notranslate"><span class="pre">ro</span></code>.</p>
+<p>Setting a base transformation element attribute or a transformation modifier attribute clears the matrix attribute and then calculates the composition when attempting to read the matrix value.</p>
+<p>Setting a matrix attribute clears the base transformation element attributes and then calculates the decomposition when attempting to read the element’s value.</p>
+<p>For example, depending on your purpose, you can decompose the matrix as follows.</p>
+<ul class="simple">
+<li><p>To decompose the matrix according to settings such as pivot and jointOrient, set them all, then set m to obtain the values ​​of t, r(q), sh, and s.</p></li>
+<li><p>To change some of the qualifying attributes without changing the matrix, get m and save it, set the qualifying attributes to change, set m again, and get the values ​​of t, r(q), sh, and s.</p></li>
+</ul>
+<p>Furthermore, it has the following functions:</p>
+<ul class="simple">
+<li><p>You can specify 0 to 1 of the following as arguments to the constructor.</p>
+<ul>
+<li><p><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a></p></li>
+<li><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></p></li>
+<li><p><a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a></p></li>
+<li><p><a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation" title="cymel.core.datatypes.eulerrotation.EulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation</span></code></a></p></li>
+</ul>
+</li>
+<li><p>Attribute values ​​can be specified as long or short names in constructor keyword arguments.</p></li>
+<li><p>When setting an attribute value, you can set the value obtained by <a class="reference internal" href="cymel.core.cyobjects.plug_c.Plug_c.html#cymel.core.cyobjects.plug_c.Plug_c.get" title="cymel.core.cyobjects.plug_c.Plug_c.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a> from <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> without changing it to the original type. For example, the type of the rotateAxis attribute is <a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>, but setting a 3-value <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> of Radians will convert it to a Quaternion appropriately.</p></li>
+<li><p>Can be multiplied by <a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> or <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a>.</p></li>
+<li><p>When evaluated as a sequence, it takes the form of a <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/setAttr.html">setAttr</a> command for a matrix data type attribute.</p></li>
+</ul>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation.asPosition" title="cymel.core.datatypes.transformation.Transformation.asPosition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asPosition</span></code></a>([at])</p></td>
+<td><p>Get the specified reference position.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation.clear" title="cymel.core.datatypes.transformation.Transformation.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>(name)</p></td>
+<td><p>Clear transformation qualification attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation.fromSetAttrCmds" title="cymel.core.datatypes.transformation.Transformation.fromSetAttrCmds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromSetAttrCmds</span></code></a>(lines)</p></td>
+<td><p>Generate from the MEL string list of the <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/setAttr.html">setAttr</a> command.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation.getSetAttrCmds" title="cymel.core.datatypes.transformation.Transformation.getSetAttrCmds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSetAttrCmds</span></code></a>()</p></td>
+<td><p>:mayacmd:Get the MEL string list for the <code class="xref py py-obj docutils literal notranslate"><span class="pre">setAttr</span></code> command.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation.hasValue" title="cymel.core.datatypes.transformation.Transformation.hasValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasValue</span></code></a>(name)</p></td>
+<td><p>Does it have a value for a qualified attribute that is not a default value?</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation.isEquivalent" title="cymel.core.datatypes.transformation.Transformation.isEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isEquivalent</span></code></a>(v[, tol])</p></td>
+<td><p>Whether each attribute value is approximately the same.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.transformation.Transformation.asPosition">
+<span class="sig-name descname"><span class="pre">asPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.transformation.Transformation.asPosition" title="Link to this definition">¶</a></dt>
+<dd><p>Get the specified reference position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>at</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Which attribute to get the corresponding position.  - If it is 0, it is the origin (zero). - If 1, the position of the translate (attribute value itself). - If 2, rotatePivot position. - 3 is the scalePivot position. - If it is 4 or more, it is the matrix position.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.transformation.Transformation.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.transformation.Transformation.clear" title="Link to this definition">¶</a></dt>
+<dd><p>Clear transformation qualification attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Transformation qualified attribute name.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.transformation.Transformation.fromSetAttrCmds">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">fromSetAttrCmds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.transformation.Transformation.fromSetAttrCmds" title="Link to this definition">¶</a></dt>
+<dd><p>Generate from the MEL string list of the <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/setAttr.html">setAttr</a> command.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.transformation.Transformation.getSetAttrCmds">
+<span class="sig-name descname"><span class="pre">getSetAttrCmds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.transformation.Transformation.getSetAttrCmds" title="Link to this definition">¶</a></dt>
+<dd><p>:mayacmd:Get the MEL string list for the <code class="xref py py-obj docutils literal notranslate"><span class="pre">setAttr</span></code> command.</p>
+<p>The attribute name part of the command syntax is “%s”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.transformation.Transformation.hasValue">
+<span class="sig-name descname"><span class="pre">hasValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.transformation.Transformation.hasValue" title="Link to this definition">¶</a></dt>
+<dd><p>Does it have a value for a qualified attribute that is not a default value?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Transformation qualified attribute name.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.transformation.Transformation.isEquivalent">
+<span class="sig-name descname"><span class="pre">isEquivalent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.transformation.Transformation.isEquivalent" title="Link to this definition">¶</a></dt>
+<dd><p>Whether each attribute value is approximately the same.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> – The value to compare. <a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> or <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> can be specified.</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.datatypes.transformation.Transformation</a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation"><code class="docutils literal notranslate"><span class="pre">Transformation</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation.asPosition"><code class="docutils literal notranslate"><span class="pre">Transformation.asPosition()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation.clear"><code class="docutils literal notranslate"><span class="pre">Transformation.clear()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation.fromSetAttrCmds"><code class="docutils literal notranslate"><span class="pre">Transformation.fromSetAttrCmds()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation.getSetAttrCmds"><code class="docutils literal notranslate"><span class="pre">Transformation.getSetAttrCmds()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation.hasValue"><code class="docutils literal notranslate"><span class="pre">Transformation.hasValue()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation.isEquivalent"><code class="docutils literal notranslate"><span class="pre">Transformation.isEquivalent()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cymel.core.datatypes.transformation.ImmutableTransformation.html"
+                          title="previous chapter">class cymel.core.datatypes.transformation.ImmutableTransformation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../cymel.core.datatypes.vector.html"
+                          title="next chapter">cymel.core.datatypes.vector</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.core.datatypes.transformation.Transformation.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.vector.html" title="cymel.core.datatypes.vector"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cymel.core.datatypes.transformation.ImmutableTransformation.html" title="class cymel.core.datatypes.transformation.ImmutableTransformation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.transformation.html" >cymel.core.datatypes.transformation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.transformation.Transformation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

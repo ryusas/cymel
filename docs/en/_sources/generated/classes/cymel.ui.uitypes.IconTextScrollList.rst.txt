@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.IconTextScrollList
+=========================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: IconTextScrollList
+    :parts: 1
+
+
+
+.. autoclass:: IconTextScrollList
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

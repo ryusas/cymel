@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuItem.rst:2
+msgid "class cymel.ui.menu.MenuItem"
+msgstr "class cymel.ui.menu.MenuItem"
+
+#: cymel.ui.menu.MenuItem:1 of
+msgid "mel UI の :mayacmd:`menuItem` ラッパークラス。"
+msgstr ":mayacmd:`menuItem` wrapper class for mel UI."
+
+#: cymel.ui.menu.MenuItem:3 of
+msgid "subMenu=True を指定すると `.SubMenuItem` となる。"
+msgstr "If subMenu=True is specified, it becomes `.SubMenuItem`."
+
+#: cymel.ui.menu.MenuItem:6 of
+msgid ""
+":mayacmd:`menuItem` は :mayacmd:`control` では ないようなのだが、このモジュールでは `.Control` "
+"の派生型としている。"
+msgstr ""
+":mayacmd:`menuItem` does not seem to be :mayacmd:`control`, but in this "
+"module it is a derived type of `.Control`."
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuItem.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuItem.rst:30:<autosummary>:1
+msgid ":py:obj:`UICMD <cymel.ui.menu.MenuItem.UICMD>`"
+msgstr ":py:obj:`UICMD <cymel.ui.menu.MenuItem.UICMD>`"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuItem.rst:33
+msgid "Methods Details:"
+msgstr "Method Details:"

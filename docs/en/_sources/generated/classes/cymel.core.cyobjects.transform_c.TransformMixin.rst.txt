@@ -1,0 +1,58 @@
+class cymel.core.cyobjects.transform_c.TransformMixin
+=====================================================
+
+.. currentmodule:: cymel.core.cyobjects.transform_c
+
+
+.. inheritance-diagram:: TransformMixin
+    :parts: 1
+
+
+
+.. autoclass:: TransformMixin
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        setM
+        setMatrix
+        setQ
+        setQuaternion
+        setS
+        setScaling
+        setSh
+        setShearing
+        setT
+        setTransformation
+        setTranslation
+        setX
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: setM
+    .. automethod:: setMatrix
+    .. automethod:: setQ
+    .. automethod:: setQuaternion
+    .. automethod:: setS
+    .. automethod:: setScaling
+    .. automethod:: setSh
+    .. automethod:: setShearing
+    .. automethod:: setT
+    .. automethod:: setTransformation
+    .. automethod:: setTranslation
+    .. automethod:: setX
+
+

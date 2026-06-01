@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.cyobjects.cyobject.CyObject &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class cymel.core.cyobjects.cyobject.ModuleForSel" href="cymel.core.cyobjects.cyobject.ModuleForSel.html" />
+    <link rel="prev" title="cymel.core.cyobjects.cyobject" href="../cymel.core.cyobjects.cyobject.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.core.cyobjects.cyobject.ModuleForSel.html" title="class cymel.core.cyobjects.cyobject.ModuleForSel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.cyobject.html" title="cymel.core.cyobjects.cyobject"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.cyobject.html" accesskey="U">cymel.core.cyobjects.cyobject</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.cyobject.CyObject</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-cyobjects-cyobject-cyobject">
+<h1>class cymel.core.cyobjects.cyobject.CyObject<a class="headerlink" href="#class-cymel-core-cyobjects-cyobject-cyobject" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-f348ef48735d6fcb33e499b5a57bb848eb8d51b8.png" alt="Inheritance diagram of CyObject" usemap="#inheritance7caf9b3895" class="inheritance graphviz" /></div>
+<map id="inheritance7caf9b3895" name="inheritance7caf9b3895">
+<area shape="rect" id="node1" href="#cymel.core.cyobjects.cyobject.CyObject" target="_top" title="Mayaラッパーオブジェクトの抽象基底クラス。" alt="" coords="5,5,77,29"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.cyobject.</span></span><span class="sig-name descname"><span class="pre">CyObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Abstract base class for Maya wrapper objects.</p>
+<p>Wrapper classes are broadly divided into <a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a> and <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a>.</p>
+<p>By specifying a name to identify an existing node or plug in the scene or a Python API 2.0 object to the <a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> constructor, you can obtain an instance of the appropriate class.</p>
+<p>Node classes are prepared or automatically generated for each node type. The system provides only one type of plug class. You can create custom classes by inheriting any of these classes.</p>
+<p>For node classes, it is convenient to register them in the system with <a class="reference internal" href="cymel.core.typeregistry.NodeTypes.html#cymel.core.typeregistry.NodeTypes.registerNodeClass" title="cymel.core.typeregistry.NodeTypes.registerNodeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodetypes.registerNodeClass</span></code></a>.</p>
+<p>For plug classes, it is convenient to specify the class to be used temporarily using <a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass" title="cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject.setGlobalPlugClass</span></code></a> or <a class="reference internal" href="cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c.setPlugClass" title="cymel.core.cyobjects.node_c.Node_c.setPlugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node.setPlugClass</span></code></a>.</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.byUUID" title="cymel.core.cyobjects.cyobject.CyObject.byUUID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">byUUID</span></code></a>(val[, candidates, py])</p></td>
+<td><p>Get node list from UUID.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a>()</p></td>
+<td><p>Internal handle validity check. If it is invalid, a <a class="reference internal" href="../cymel.core.cyobjects.cyobject.html#cymel.core.cyobjects.cyobject.CymelInvalidHandle" title="cymel.core.cyobjects.cyobject.CymelInvalidHandle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CymelInvalidHandle</span></code></a> error will occur.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.checktype" title="cymel.core.cyobjects.cyobject.CyObject.checktype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checktype</span></code></a>(obj)</p></td>
+<td><p>Checks whether the specified object matches the class.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.globalPlugClass" title="cymel.core.cyobjects.cyobject.CyObject.globalPlugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalPlugClass</span></code></a>()</p></td>
+<td><p>Get the global configuration plug class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.internalData" title="cymel.core.cyobjects.cyobject.CyObject.internalData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">internalData</span></code></a>()</p></td>
+<td><p>Return internal data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.isAlive" title="cymel.core.cyobjects.cyobject.CyObject.isAlive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAlive</span></code></a>()</p></td>
+<td><p>Gets whether an internal handle exists in memory.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.isValid" title="cymel.core.cyobjects.cyobject.CyObject.isValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isValid</span></code></a>()</p></td>
+<td><p>Gets whether the internal handle is in a normal state.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.ls" title="cymel.core.cyobjects.cyobject.CyObject.ls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ls</span></code></a>(*args, **kwargs)</p></td>
+<td><p><a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/ls.html">ls</a> Restricts the results of the command to those that match the class and obtains them as objects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.name" title="cymel.core.cyobjects.cyobject.CyObject.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a>()</p></td>
+<td><p>Get the object's unique name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.name_" title="cymel.core.cyobjects.cyobject.CyObject.name_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name_</span></code></a>()</p></td>
+<td><p>Omit <a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a> to get the object's unique name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.newObject" title="cymel.core.cyobjects.cyobject.CyObject.newObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">newObject</span></code></a>(data)</p></td>
+<td><p>Create an instance with internal data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.node" title="cymel.core.cyobjects.cyobject.CyObject.node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code></a>​​()</p></td>
+<td><p>Get a node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass" title="cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGlobalPlugClass</span></code></a>([pcls])</p></td>
+<td><p>Set the plug class for global settings.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes:</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.CLASS_TYPE">
+<span class="sig-name descname"><span class="pre">CLASS_TYPE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.CLASS_TYPE" title="Link to this definition">¶</a></dt>
+<dd><p>Represents the type of wrapper class (0=CyObject, 1=Node, 2=Plug, -1=ObjectRef)</p>
+</dd></dl>
+
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.byUUID">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">byUUID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">candidates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">py</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.byUUID" title="Link to this definition">¶</a></dt>
+<dd><p>Get node list from UUID.</p>
+<p>The return value is a list since duplicates are possible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>val</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code>) – A single UUID or a list of them. The type of each UUID can be specified as <code class="xref py py-obj docutils literal notranslate"><span class="pre">UUID</span></code> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>.</p></li>
+<li><p><strong>candidates</strong> (<em>iterable</em>) – Specify this when you want to narrow down the candidates in advance when py=True.</p></li>
+<li><p><strong>py</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Obtain it from what is stored in the attribute called uuid instead of Maya standard functionality. For versions below 2016, it is always treated as True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.checkValid">
+<span class="sig-name descname"><span class="pre">checkValid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="Link to this definition">¶</a></dt>
+<dd><p>Internal handle validity check. If it is invalid, a <a class="reference internal" href="../cymel.core.cyobjects.cyobject.html#cymel.core.cyobjects.cyobject.CymelInvalidHandle" title="cymel.core.cyobjects.cyobject.CymelInvalidHandle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CymelInvalidHandle</span></code></a> error will occur.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.checktype">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">checktype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.checktype" title="Link to this definition">¶</a></dt>
+<dd><p>Checks whether the specified object matches the class.</p>
+<p>If a <a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> derived object is specified, it will be returned if it matches, or None if it does not match.</p>
+<p>If you specify any other value (such as a string or a Python API 2.0 object that can be specified to the <a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> constructor), a <a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> derived object of the appropriate type is returned if there is a match, otherwise None is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>obj</strong> – Object to check.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.globalPlugClass">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">globalPlugClass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.globalPlugClass" title="Link to this definition">¶</a></dt>
+<dd><p>Get the global configuration plug class.</p>
+<p>This can be changed with <a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass" title="cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGlobalPlugClass</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.internalData">
+<span class="sig-name descname"><span class="pre">internalData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.internalData" title="Link to this definition">¶</a></dt>
+<dd><p>Return internal data.</p>
+<p>Override to extend internal data in a derived class. In that case, also override the <a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.newObject" title="cymel.core.cyobjects.cyobject.CyObject.newObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">newObject</span></code></a> class method to support extension.</p>
+<p>The internal data is assumed to be a black box, and the extended data must also include the base data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.isAlive">
+<span class="sig-name descname"><span class="pre">isAlive</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.isAlive" title="Link to this definition">¶</a></dt>
+<dd><p>Gets whether an internal handle exists in memory.</p>
+<p>True if the object remains undoable even if it has been deleted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.isValid">
+<span class="sig-name descname"><span class="pre">isValid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.isValid" title="Link to this definition">¶</a></dt>
+<dd><p>Gets whether the internal handle is in a normal state.</p>
+<p>Even if <a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.isAlive" title="cymel.core.cyobjects.cyobject.CyObject.isAlive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAlive</span></code></a> is true, if the object has been deleted, it is considered invalid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.ls">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">ls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.ls" title="Link to this definition">¶</a></dt>
+<dd><p><a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/ls.html">ls</a> Restricts the results of the command to those that match the class and obtains them as objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the object’s unique name.</p>
+<p>Depending on the type of object, you can get the node name, DAG partial path name, plug name containing them, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.name_">
+<span class="sig-name descname"><span class="pre">name_</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.name_" title="Link to this definition">¶</a></dt>
+<dd><p>Omit <a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.checkValid" title="cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkValid</span></code></a> to get the object’s unique name.</p>
+<p>Depending on the type of object, you can get the node name, DAG partial path name, plug name containing them, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.newObject">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">newObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.newObject" title="Link to this definition">¶</a></dt>
+<dd><p>Create an instance with internal data.</p>
+<p>Internal data is assumed to be a black box, and even when overriding this method, the base method must be called to complete the process.</p>
+<p>If you want to extend internal data, also override <a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.internalData" title="cymel.core.cyobjects.cyobject.CyObject.internalData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">internalData</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a>) – Class of instance to generate.</p></li>
+<li><p><strong>data</strong> – Internal data to be set in the instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>指定クラス</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.node">
+<span class="sig-name descname"><span class="pre">node</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.node" title="Link to this definition">¶</a></dt>
+<dd><p>Get a node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a> derived class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">setGlobalPlugClass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pcls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass" title="Link to this definition">¶</a></dt>
+<dd><p>Set the plug class for global settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><em>type</em></a>) – <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> derived class. Clear by specifying None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.cyobjects.cyobject.CyObject</a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject"><code class="docutils literal notranslate"><span class="pre">CyObject</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.CLASS_TYPE"><code class="docutils literal notranslate"><span class="pre">CyObject.CLASS_TYPE</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.byUUID"><code class="docutils literal notranslate"><span class="pre">CyObject.byUUID()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.checkValid"><code class="docutils literal notranslate"><span class="pre">CyObject.checkValid()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.checktype"><code class="docutils literal notranslate"><span class="pre">CyObject.checktype()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.globalPlugClass"><code class="docutils literal notranslate"><span class="pre">CyObject.globalPlugClass()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.internalData"><code class="docutils literal notranslate"><span class="pre">CyObject.internalData()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.isAlive"><code class="docutils literal notranslate"><span class="pre">CyObject.isAlive()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.isValid"><code class="docutils literal notranslate"><span class="pre">CyObject.isValid()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.ls"><code class="docutils literal notranslate"><span class="pre">CyObject.ls()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.name"><code class="docutils literal notranslate"><span class="pre">CyObject.name()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.name_"><code class="docutils literal notranslate"><span class="pre">CyObject.name_()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.newObject"><code class="docutils literal notranslate"><span class="pre">CyObject.newObject()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.node"><code class="docutils literal notranslate"><span class="pre">CyObject.node()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.cyobject.CyObject.setGlobalPlugClass"><code class="docutils literal notranslate"><span class="pre">CyObject.setGlobalPlugClass()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../cymel.core.cyobjects.cyobject.html"
+                          title="previous chapter">cymel.core.cyobjects.cyobject</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cymel.core.cyobjects.cyobject.ModuleForSel.html"
+                          title="next chapter">class cymel.core.cyobjects.cyobject.ModuleForSel</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.core.cyobjects.cyobject.CyObject.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.core.cyobjects.cyobject.ModuleForSel.html" title="class cymel.core.cyobjects.cyobject.ModuleForSel"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.cyobject.html" title="cymel.core.cyobjects.cyobject"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.cyobject.html" >cymel.core.cyobjects.cyobject</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.cyobject.CyObject</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

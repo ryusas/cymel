@@ -1,0 +1,46 @@
+class cymel.core.cyobjects.constraint.Constraint
+================================================
+
+.. currentmodule:: cymel.core.cyobjects.constraint
+
+
+.. inheritance-diagram:: Constraint
+    :parts: 1
+
+
+
+.. autoclass:: Constraint
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        getTargetList
+        getWeight
+        getWeightAliasList
+        getWeightPlugList
+        newObject
+        setWeight
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: getTargetList
+    .. automethod:: getWeight
+    .. automethod:: getWeightAliasList
+    .. automethod:: getWeightPlugList
+    .. automethod:: newObject
+    .. automethod:: setWeight
+
+

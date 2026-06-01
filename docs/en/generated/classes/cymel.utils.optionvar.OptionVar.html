@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.utils.optionvar.OptionVar &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="cymel.utils.utils" href="../cymel.utils.utils.html" />
+    <link rel="prev" title="cymel.utils.optionvar" href="../cymel.utils.optionvar.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.utils.utils.html" title="cymel.utils.utils"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.utils.optionvar.html" title="cymel.utils.optionvar"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.utils.optionvar.html" accesskey="U">cymel.utils.optionvar</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.utils.optionvar.OptionVar</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-utils-optionvar-optionvar">
+<h1>class cymel.utils.optionvar.OptionVar<a class="headerlink" href="#class-cymel-utils-optionvar-optionvar" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-8aff0437ef2ea1f3210a43133580afb2290eeb37.png" alt="Inheritance diagram of OptionVar" usemap="#inheritance83fceec23c" class="inheritance graphviz" /></div>
+<map id="inheritance83fceec23c" name="inheritance83fceec23c">
+<area shape="rect" id="node1" href="#cymel.utils.optionvar.OptionVar" target="_top" title=":mayacmd:`optionVar` ラッパークラス。" alt="" coords="5,5,77,29"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.utils.optionvar.</span></span><span class="sig-name descname"><span class="pre">OptionVar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p><a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/optionVar.html">optionVar</a> wrapper class.</p>
+<p>Behaves like <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a>.</p>
+<p>The following types of values ​​can be handled without special handling.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> (stored as string ‘___None___’)</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> (stored as string ‘___True___’ or ‘___False___’)</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> sequence (types cannot be mixed)</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a> sequence (types cannot be mixed)</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> sequence (types cannot be mixed)</p></li>
+<li><p>empty sequence</p></li>
+</ul>
+<p>Furthermore, by setting a translator with the value set in <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/optionVar.html">optionVar</a> with <a class="reference internal" href="#cymel.utils.optionvar.OptionVar.setTranslator" title="cymel.utils.optionvar.OptionVar.setTranslator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTranslator</span></code></a>, it is possible to handle any type of value.</p>
+<p>By specifying an arbitrary prefix, the prefix will be added when saving and reading <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/optionVar.html">optionVar</a>, and you can limit the range that is treated as a dictionary.</p>
+<p>It is also possible to specify a default value for each value. If a default value is specified, it will have a value even if it is not actually saved, and the expansion of <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/optionVar.html">optionVar</a> will be suppressed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When developing a tool, we recommend specifying a prefix unique to that tool and specifying a set of default values ​​to use it as an options dictionary for that tool.</p>
+</div>
+<p>Initialization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prefix</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – An arbitrary prefix to be added to the name of the variable to be managed.</p></li>
+<li><p><strong>dic</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a>) – Dictionary of default values ​​to register.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.__init__" title="cymel.utils.optionvar.OptionVar.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([prefix, defaults])</p></td>
+<td><p>Initialization.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.clear" title="cymel.utils.optionvar.OptionVar.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>()</p></td>
+<td><p>Delete all values ​​and default values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.defaultItems" title="cymel.utils.optionvar.OptionVar.defaultItems"><code class="xref py py-obj docutils literal notranslate"><span class="pre">defaultItems</span></code></a>()</p></td>
+<td><p>Get a list of key and value pairs with default values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.defaultKeys" title="cymel.utils.optionvar.OptionVar.defaultKeys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">defaultKeys</span></code></a>()</p></td>
+<td><p>Get a list of keys with default values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.defaultValues" title="cymel.utils.optionvar.OptionVar.defaultValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">defaultValues</span> <span class="pre">​​</span></code></a>()</p></td>
+<td><p>Get a list of default values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.get" title="cymel.utils.optionvar.OptionVar.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(key[, default])</p></td>
+<td><p>Get the value by specifying the key.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.getDefault" title="cymel.utils.optionvar.OptionVar.getDefault"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDefault</span></code></a>(key)</p></td>
+<td><p>Get default value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.hasDefault" title="cymel.utils.optionvar.OptionVar.hasDefault"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasDefault</span></code></a>(key)</p></td>
+<td><p>Whether the key has a default value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.hasNonDefaultValue" title="cymel.utils.optionvar.OptionVar.hasNonDefaultValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasNonDefaultValue</span></code></a>(key)</p></td>
+<td><p>Whether a value that is not the default value is saved.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.has_key" title="cymel.utils.optionvar.OptionVar.has_key"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_key</span></code></a>(key)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.items" title="cymel.utils.optionvar.OptionVar.items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">items</span></code></a>()</p></td>
+<td><p>Get a list of set key-value pairs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.keys" title="cymel.utils.optionvar.OptionVar.keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keys</span></code></a>()</p></td>
+<td><p>Get a list of set keys.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.nonDefaultItems" title="cymel.utils.optionvar.OptionVar.nonDefaultItems"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonDefaultItems</span></code></a>()</p></td>
+<td><p>Get a list of non-default (actually saved) key-value pairs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.nonDefaultKeys" title="cymel.utils.optionvar.OptionVar.nonDefaultKeys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonDefaultKeys</span></code></a>()</p></td>
+<td><p>Get a list of non-default (actually saved) keys.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.nonDefaultValues" title="cymel.utils.optionvar.OptionVar.nonDefaultValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonDefaultValues</span> <span class="pre">​​</span></code></a>()</p></td>
+<td><p>Get a list of non-default (actually saved) values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.pop" title="cymel.utils.optionvar.OptionVar.pop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pop</span></code></a>(key, *args)</p></td>
+<td><p>Get and delete values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.prefix" title="cymel.utils.optionvar.OptionVar.prefix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prefix</span></code></a>()</p></td>
+<td><p>Get prefix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.removeDefault" title="cymel.utils.optionvar.OptionVar.removeDefault"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeDefault</span></code></a>(key)</p></td>
+<td><p>Delete default values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.reset" title="cymel.utils.optionvar.OptionVar.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>(key)</p></td>
+<td><p>Resets the value of the specified key.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.resetAll" title="cymel.utils.optionvar.OptionVar.resetAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetAll</span></code></a>([ignores])</p></td>
+<td><p>Reset all values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.resetToDefaults" title="cymel.utils.optionvar.OptionVar.resetToDefaults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetToDefaults</span></code></a>([ignores])</p></td>
+<td><p>Reset all values ​​that have default values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.setDefault" title="cymel.utils.optionvar.OptionVar.setDefault"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setDefault</span></code></a>(key, val)</p></td>
+<td><p>Set default values ​​for keys.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.setDefaults" title="cymel.utils.optionvar.OptionVar.setDefaults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setDefaults</span></code></a>(dic)</p></td>
+<td><p>Register default values ​​all at once using a dictionary.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.setTranslator" title="cymel.utils.optionvar.OptionVar.setTranslator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTranslator</span></code></a>(key[, getter_setter])</p></td>
+<td><p>:mayacmd:Set the converter between the value stored in <code class="xref py py-obj docutils literal notranslate"><span class="pre">optionVar</span></code> and the actual value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.update" title="cymel.utils.optionvar.OptionVar.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>(src)</p></td>
+<td><p>Rewrite the value using the specified dictionary.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.values" title="cymel.utils.optionvar.OptionVar.values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span> <span class="pre">​​</span></code></a>()</p></td>
+<td><p>Get a list of set values.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initialization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prefix</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – An arbitrary prefix to be added to the name of the variable to be managed.</p></li>
+<li><p><strong>dic</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a>) – Dictionary of default values ​​to register.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.clear" title="Link to this definition">¶</a></dt>
+<dd><p>Delete all values ​​and default values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.defaultItems">
+<span class="sig-name descname"><span class="pre">defaultItems</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.defaultItems" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of key and value pairs with default values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.defaultKeys">
+<span class="sig-name descname"><span class="pre">defaultKeys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.defaultKeys" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of keys with default values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.defaultValues">
+<span class="sig-name descname"><span class="pre">defaultValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.defaultValues" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of default values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.get" title="Link to this definition">¶</a></dt>
+<dd><p>Get the value by specifying the key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> – key.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Stored value, default value, or specified value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.getDefault">
+<span class="sig-name descname"><span class="pre">getDefault</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.getDefault" title="Link to this definition">¶</a></dt>
+<dd><p>Get default value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – key.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Registered value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.hasDefault">
+<span class="sig-name descname"><span class="pre">hasDefault</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.hasDefault" title="Link to this definition">¶</a></dt>
+<dd><p>Whether the key has a default value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – key.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.hasNonDefaultValue">
+<span class="sig-name descname"><span class="pre">hasNonDefaultValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.hasNonDefaultValue" title="Link to this definition">¶</a></dt>
+<dd><p>Whether a value that is not the default value is saved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.has_key">
+<span class="sig-name descname"><span class="pre">has_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.has_key" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.items">
+<span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.items" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of set key-value pairs.</p>
+<p>You can get the concatenation result of the recorded contents and default value in the actual <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/optionVar.html">optionVar</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.keys" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of set keys.</p>
+<p>You can get the concatenation result of the recorded contents and default value in the actual <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/optionVar.html">optionVar</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.nonDefaultItems">
+<span class="sig-name descname"><span class="pre">nonDefaultItems</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.nonDefaultItems" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of non-default (actually saved) key-value pairs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.nonDefaultKeys">
+<span class="sig-name descname"><span class="pre">nonDefaultKeys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.nonDefaultKeys" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of non-default (actually saved) keys.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.nonDefaultValues">
+<span class="sig-name descname"><span class="pre">nonDefaultValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.nonDefaultValues" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of non-default (actually saved) values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.pop" title="Link to this definition">¶</a></dt>
+<dd><p>Get and delete values.</p>
+<p>If a key has a default value set, the default value will also be deleted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> – key.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Stored value, default value, or specified value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.prefix">
+<span class="sig-name descname"><span class="pre">prefix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.prefix" title="Link to this definition">¶</a></dt>
+<dd><p>Get prefix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.removeDefault">
+<span class="sig-name descname"><span class="pre">removeDefault</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.removeDefault" title="Link to this definition">¶</a></dt>
+<dd><p>Delete default values.</p>
+<p>If the current value is the default value, <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/optionVar.html">optionVar</a> is written to retain the current value even after the default value is removed.</p>
+<p>If you want to completely delete it, you should use del or <a class="reference internal" href="#cymel.utils.optionvar.OptionVar.pop" title="cymel.utils.optionvar.OptionVar.pop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pop</span></code></a> instead of this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.reset" title="Link to this definition">¶</a></dt>
+<dd><p>Resets the value of the specified key.</p>
+<p>If there is a default value, it will be that value; if there is not, there will be no value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.resetAll">
+<span class="sig-name descname"><span class="pre">resetAll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ignores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.resetAll" title="Link to this definition">¶</a></dt>
+<dd><p>Reset all values.</p>
+<p>If there is a default value, it will be that value; if there is not, there will be no value.</p>
+<p>If the prefix is ​​not set, all Maya values ​​will be deleted, which will result in an error as the operation is not allowed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ignores</strong> (<em>iterable</em>) – A list or set of keys to exclude.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.resetToDefaults">
+<span class="sig-name descname"><span class="pre">resetToDefaults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ignores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.resetToDefaults" title="Link to this definition">¶</a></dt>
+<dd><p>Reset all values ​​that have default values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ignores</strong> (<em>iterable</em>) – A list or set of keys to exclude.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.setDefault">
+<span class="sig-name descname"><span class="pre">setDefault</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.setDefault" title="Link to this definition">¶</a></dt>
+<dd><p>Set default values ​​for keys.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – key.</p></li>
+<li><p><strong>val</strong> – value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.setDefaults">
+<span class="sig-name descname"><span class="pre">setDefaults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.setDefaults" title="Link to this definition">¶</a></dt>
+<dd><p>Register default values ​​all at once using a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dic</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a>) – Dictionary of default values ​​to register.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.setTranslator">
+<span class="sig-name descname"><span class="pre">setTranslator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getter_setter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(&lt;built-in</span> <span class="pre">function</span> <span class="pre">eval&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;built-in</span> <span class="pre">function</span> <span class="pre">repr&gt;)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.setTranslator" title="Link to this definition">¶</a></dt>
+<dd><p>:mayacmd:Set the converter between the value stored in <code class="xref py py-obj docutils literal notranslate"><span class="pre">optionVar</span></code> and the actual value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – key.</p></li>
+<li><p><strong>getter_setter</strong> – Specify a pair of getter (converts stored value to actual value) and setter (converts actual value to stored value). If omitted, (eval, repr) is set. Specifying None will cancel the set converter.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.update" title="Link to this definition">¶</a></dt>
+<dd><p>Rewrite the value using the specified dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>src</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a>) – Source dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.utils.optionvar.OptionVar.values">
+<span class="sig-name descname"><span class="pre">values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.optionvar.OptionVar.values" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of set values.</p>
+<p>You can get the concatenation result of the recorded contents and default value in the actual <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/optionVar.html">optionVar</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.utils.optionvar.OptionVar</a><ul>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar"><code class="docutils literal notranslate"><span class="pre">OptionVar</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.__init__"><code class="docutils literal notranslate"><span class="pre">OptionVar.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.clear"><code class="docutils literal notranslate"><span class="pre">OptionVar.clear()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.defaultItems"><code class="docutils literal notranslate"><span class="pre">OptionVar.defaultItems()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.defaultKeys"><code class="docutils literal notranslate"><span class="pre">OptionVar.defaultKeys()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.defaultValues"><code class="docutils literal notranslate"><span class="pre">OptionVar.defaultValues()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.get"><code class="docutils literal notranslate"><span class="pre">OptionVar.get()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.getDefault"><code class="docutils literal notranslate"><span class="pre">OptionVar.getDefault()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.hasDefault"><code class="docutils literal notranslate"><span class="pre">OptionVar.hasDefault()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.hasNonDefaultValue"><code class="docutils literal notranslate"><span class="pre">OptionVar.hasNonDefaultValue()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.has_key"><code class="docutils literal notranslate"><span class="pre">OptionVar.has_key()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.items"><code class="docutils literal notranslate"><span class="pre">OptionVar.items()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.keys"><code class="docutils literal notranslate"><span class="pre">OptionVar.keys()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.nonDefaultItems"><code class="docutils literal notranslate"><span class="pre">OptionVar.nonDefaultItems()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.nonDefaultKeys"><code class="docutils literal notranslate"><span class="pre">OptionVar.nonDefaultKeys()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.nonDefaultValues"><code class="docutils literal notranslate"><span class="pre">OptionVar.nonDefaultValues()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.pop"><code class="docutils literal notranslate"><span class="pre">OptionVar.pop()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.prefix"><code class="docutils literal notranslate"><span class="pre">OptionVar.prefix()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.removeDefault"><code class="docutils literal notranslate"><span class="pre">OptionVar.removeDefault()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.reset"><code class="docutils literal notranslate"><span class="pre">OptionVar.reset()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.resetAll"><code class="docutils literal notranslate"><span class="pre">OptionVar.resetAll()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.resetToDefaults"><code class="docutils literal notranslate"><span class="pre">OptionVar.resetToDefaults()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.setDefault"><code class="docutils literal notranslate"><span class="pre">OptionVar.setDefault()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.setDefaults"><code class="docutils literal notranslate"><span class="pre">OptionVar.setDefaults()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.setTranslator"><code class="docutils literal notranslate"><span class="pre">OptionVar.setTranslator()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.update"><code class="docutils literal notranslate"><span class="pre">OptionVar.update()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.optionvar.OptionVar.values"><code class="docutils literal notranslate"><span class="pre">OptionVar.values()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../cymel.utils.optionvar.html"
+                          title="previous chapter">cymel.utils.optionvar</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../cymel.utils.utils.html"
+                          title="next chapter">cymel.utils.utils</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.utils.optionvar.OptionVar.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.utils.utils.html" title="cymel.utils.utils"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.utils.optionvar.html" title="cymel.utils.optionvar"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.utils.optionvar.html" >cymel.utils.optionvar</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.utils.optionvar.OptionVar</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+class cymel.pyutils.pyutils.Singleton
+=====================================
+
+.. currentmodule:: cymel.pyutils.pyutils
+
+
+.. inheritance-diagram:: Singleton
+    :parts: 1
+
+
+
+.. autoclass:: Singleton
+    :show-inheritance:
+
+
+
+
+
+
+
+
+
+
+
+

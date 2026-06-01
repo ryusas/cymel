@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Why cymel? &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fb40bcac" />
+    <script src="_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction to cymel" href="gettingstarted.html" />
+    <link rel="prev" title="install" href="installation.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gettingstarted.html" title="Introduction to cymel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="install"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Why cymel?</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="cymel">
+<span id="whycymel"></span><h1>Why cymel?<a class="headerlink" href="#cymel" title="Link to this heading">¶</a></h1>
+<p>The following are the goals of cymel.</p>
+<ul class="simple">
+<li><p>More object-oriented than MEL!</p></li>
+<li><p>Easier than API!</p></li>
+<li><p>Lighter and more nimble than PyMEL!</p></li>
+</ul>
+<p>Making Maya scripting more Python-like was accomplished with pymel (the need for it is described in <a class="reference external" href="https://help.autodesk.com/cloudhelp/2017/ENU/Maya-Tech-Docs/PyMel/why_pymel.html">Why PyMEL?</a>).</p>
+<p>Respecting this point, we will solve the problems of pymel and implement useful functions more easily.</p>
+<ul class="simple">
+<li><p>More comfortable Python scripting</p>
+<ul>
+<li><p>Anyway, lightweight and nimble</p></li>
+<li><p>Fast (even faster once the C++ implementation is complete)</p></li>
+<li><p>Mathematics classes are equipped with useful functions such as rigging.</p></li>
+</ul>
+</li>
+<li><p>Reliable and well behaved</p>
+<ul>
+<li><p>Guarantees that all changes are undoable</p></li>
+<li><p>Do not rewrite Maya settings</p></li>
+<li><p>Do not embed callbacks such as scriptJob or MMessage</p></li>
+<li><p>Designed to not hold networked plugs</p></li>
+<li><p>Recommendation not to maintain plugs that depend on instance numbers</p></li>
+</ul>
+</li>
+<li><p>I don’t aim to wrap everything</p>
+<ul>
+<li><p>does not support components</p></li>
+<li><p>commands do not wrap</p></li>
+<li><p>Do not aim for multi-functionality such as adding functions equivalent to API or commands to many classes.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="installation.html"
+                          title="previous chapter">install</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="gettingstarted.html"
+                          title="next chapter">Introduction to cymel</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/whycymel.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gettingstarted.html" title="Introduction to cymel"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="install"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Why cymel?</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

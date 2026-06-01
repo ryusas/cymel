@@ -1,0 +1,456 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:2
+msgid "class cymel.core.datatypes.transformation.Transformation"
+msgstr "class cymel.core.datatypes.transformation.Transformation"
+
+#: cymel.core.datatypes.transformation.Transformation:1 of
+msgid "トランスフォーメーション情報クラス。"
+msgstr "Transformation information class."
+
+#: cymel.core.datatypes.transformation.Transformation:3 of
+msgid ""
+"Maya の matrix データ型アトリビュートには、 マトリックスの値そのものの他に、 トランスフォーメーション情報をストアすることができる。 "
+"本クラスではそれに対応し、 プラグがデータを持っていれば、 このオブジェクトを直接 `~.Plug.get` することができる （持っている情報に応じて"
+" `.Matrix` や `Transformation` 、あるいは None が得られる）。 また、このオブジェクトをプラグに直接 "
+"`~.Plug.set` することもできる。"
+msgstr ""
+"Maya's matrix data type attribute can store transformation information in "
+"addition to the matrix value itself. This class supports this, and if the "
+"plug has data, you can directly `~.Plug.get` this object (depending on the "
+"information you have, you will get `.Matrix`, `Transformation`, or None). "
+"You can also `~.Plug.set` this object directly into the plug."
+
+#: cymel.core.datatypes.transformation.Transformation:13 of
+msgid ""
+"さらに、本クラスは、 トランスフォーメーション要素をマトリックスに合成したり、 マトリックスからトランスフォーメーション要素に分解したり "
+"する機能を備える。 操作は、通常の python オブジェクトの属性アクセスを通して 自動的に行われる。 matrix や quaternion "
+"といった属性の他に、 トランスフォーメーション要素としては、 :mayanode:`transform` ノードの "
+"アトリビュートとそっくり同じ名前で対応した属性を備えている。"
+msgstr ""
+"Furthermore, this class has the functionality to compose transformation "
+"elements into a matrix and decompose a matrix into transformation elements. "
+"Operations are performed automatically through normal python object "
+"attribute access. In addition to attributes such as matrix and quaternion, "
+"transformation elements have attributes with exactly the same name and "
+"corresponding attributes as the :mayanode:`transform` node attributes."
+
+#: cymel.core.datatypes.transformation.Transformation:24 of
+msgid "各属性はロング名とショート名のどちらででもアクセス可能で、 以下のものがある。 それぞれ、ロング名に続くカッコはショート名と値の型を表す。"
+msgstr ""
+"Each attribute can be accessed by either long or short name, including: The "
+"parentheses following the long name represent the short name and value type,"
+" respectively."
+
+#: cymel.core.datatypes.transformation.Transformation:28 of
+msgid "基本トランスフォーメーション要素属性"
+msgstr "Basic transformation element attributes"
+
+#: cymel.core.datatypes.transformation.Transformation:30 of
+msgid "これらによってマトリックスを合成したり、 マトリックスからこれらの値に分解することができる。"
+msgstr ""
+"These allow you to compose a matrix or decompose a matrix into these values."
+
+#: cymel.core.datatypes.transformation.Transformation:33 of
+msgid "translate (t) (`.Vector`)"
+msgstr "translate (t) (`.Vector`)"
+
+#: cymel.core.datatypes.transformation.Transformation:34 of
+msgid "rotate (r) (`.EulerRotation`)"
+msgstr "rotate (r) (`.EulerRotation`)"
+
+#: cymel.core.datatypes.transformation.Transformation:35 of
+msgid "quaternion (q) (`.Quaternion`)"
+msgstr "quaternion (q) (`.Quaternion`)"
+
+#: cymel.core.datatypes.transformation.Transformation:36 of
+msgid "shear (sh) (`.Vector`)"
+msgstr "shear (sh) (`.Vector`)"
+
+#: cymel.core.datatypes.transformation.Transformation:37 of
+msgid "scale (s) (`.Vector`)"
+msgstr "scale (s) (`.Vector`)"
+
+#: cymel.core.datatypes.transformation.Transformation:39 of
+msgid "rotate と quaternion は同じ要素（rotate）を示すが、 どちらの手段（形式）でもセットやゲットが可能。"
+msgstr ""
+"Rotate and quaternion refer to the same element (rotate), but you can set or"
+" get it using either method (form)."
+
+#: cymel.core.datatypes.transformation.Transformation:42 of
+msgid "トランスフォーメーション修飾属性"
+msgstr "Transformation Qualification Attribute"
+
+#: cymel.core.datatypes.transformation.Transformation:44 of
+msgid "基本トランスフォーメーション要素の働きを修飾する補助属性。"
+msgstr ""
+"Auxiliary attributes that qualify the behavior of the base transformation "
+"element."
+
+#: cymel.core.datatypes.transformation.Transformation:46 of
+msgid "マトリックスからこれらの値に直接分解することはできず、 分解・合成するための補助属性という位置づけである。"
+msgstr ""
+"It is not possible to directly decompose the matrix into these values, and "
+"it is positioned as an auxiliary attribute for decomposition and "
+"composition."
+
+#: cymel.core.datatypes.transformation.Transformation:49 of
+msgid "rotateOrder (ro) (`int`)"
+msgstr "rotateOrder (ro) (`int`)"
+
+#: cymel.core.datatypes.transformation.Transformation:50 of
+msgid "segmentScaleCompensate (ssc) (`bool`)"
+msgstr "segmentScaleCompensate (ssc) (`bool`)"
+
+#: cymel.core.datatypes.transformation.Transformation:51 of
+msgid "inverseScale (is) (`.Vector`)"
+msgstr "inverseScale (is) (`.Vector`)"
+
+#: cymel.core.datatypes.transformation.Transformation:52 of
+msgid "jointOrient (jo) (`.Quaternion`)"
+msgstr "jointOrient (jo) (`.Quaternion`)"
+
+#: cymel.core.datatypes.transformation.Transformation:53 of
+msgid "rotateAxis (ra) (`.Quaternion`)"
+msgstr "rotateAxis (ra) (`.Quaternion`)"
+
+#: cymel.core.datatypes.transformation.Transformation:54 of
+msgid "rotatePivot (rp) (`.Vector`)"
+msgstr "rotatePivot (rp) (`.Vector`)"
+
+#: cymel.core.datatypes.transformation.Transformation:55 of
+msgid "rotatePivotTranslate (rpt) (`.Vector`)"
+msgstr "rotatePivotTranslate (rpt) (`.Vector`)"
+
+#: cymel.core.datatypes.transformation.Transformation:56 of
+msgid "scalePivot (sp) (`.Vector`)"
+msgstr "scalePivot (sp) (`.Vector`)"
+
+#: cymel.core.datatypes.transformation.Transformation:57 of
+msgid "scalePivotTranslate (spt) (`.Vector`)"
+msgstr "scalePivotTranslate (spt) (`.Vector`)"
+
+#: cymel.core.datatypes.transformation.Transformation:59 of
+msgid ""
+"rotateOrder は rotate (`.EulerRotation`) の order と同じものだが、任意の rotateOrder "
+"を設定して、 そのオーダーの rotate を得る目的で使うことができる。"
+msgstr ""
+"rotateOrder is the same as order in rotate (`.EulerRotation`), but you can "
+"set any rotateOrder and use it to get the rotate of that order."
+
+#: cymel.core.datatypes.transformation.Transformation:64 of
+msgid ""
+"jointOrient と rotateAxis のタイプが `.Quaternion` なのは、Maya "
+"のトランスフォーメーションマトリックスアトリビュートの 仕様に準じているためである。"
+msgstr ""
+"The type of jointOrient and rotateAxis is `.Quaternion` because it follows "
+"the specifications of Maya's transformation matrix attribute."
+
+#: cymel.core.datatypes.transformation.Transformation:69 of
+msgid ""
+"inverseScale のショート名 ``is`` は、文字列にしないと python の ``is`` と衝突してしまうので、代わりに "
+"``is_`` を使用することもできる。"
+msgstr ""
+"InverseScale's short name ``is`` conflicts with python's ``is`` if it is not"
+" a string, so you can use ``is_`` instead."
+
+#: cymel.core.datatypes.transformation.Transformation:72 of
+msgid "マトリックス属性"
+msgstr "matrix attributes"
+
+#: cymel.core.datatypes.transformation.Transformation:74 of
+msgid "合成されたマトリックス値。"
+msgstr "Combined matrix value."
+
+#: cymel.core.datatypes.transformation.Transformation:76 of
+msgid "matrix (m) (`.Matrix`)"
+msgstr "matrix (m) (`.Matrix`)"
+
+#: cymel.core.datatypes.transformation.Transformation:78 of
+msgid ""
+"各属性値は、自由に参照したり、セットしたりすることができるが、 `.immutable` でラップされた変更不可な値となっている。 "
+"つまり、それ自身を変更するメソッドを使用することはできない。 たとえば ``r`` をリオーダーするには "
+"`.EulerRotation.reorderIt` を呼ぶとエラーになるので `.EulerRotation.reorder` で得たものを "
+"セットし直すか ``ro`` をセットする。"
+msgstr ""
+"Each attribute value can be freely referenced and set, but it is an "
+"immutable value wrapped in `.immutable`. That is, you cannot use methods "
+"that modify itself. For example, to reorder ``r``, calling "
+"`.EulerRotation.reorderIt` will result in an error, so either set the value "
+"obtained by `.EulerRotation.reorder` or set ``ro``."
+
+#: cymel.core.datatypes.transformation.Transformation:85 of
+msgid ""
+"基本トランスフォーメーション要素属性か トランスフォーメーション修飾属性をセットすると、 マトリックス属性がクリアされ、 "
+"その後、マトリックス値を読み取ろうとする際に合成の計算がされる。"
+msgstr ""
+"Setting a base transformation element attribute or a transformation modifier"
+" attribute clears the matrix attribute and then calculates the composition "
+"when attempting to read the matrix value."
+
+#: cymel.core.datatypes.transformation.Transformation:90 of
+msgid ""
+"マトリックス属性をセットすると、 基本トランスフォーメーション要素属性がクリアされ、 その後、要素の値を読み取ろうとする際に分解の計算がされる。"
+msgstr ""
+"Setting a matrix attribute clears the base transformation element attributes"
+" and then calculates the decomposition when attempting to read the element's"
+" value."
+
+#: cymel.core.datatypes.transformation.Transformation:94 of
+msgid "例えば、目的に応じて以下のようにマトリックスを分解できる。"
+msgstr ""
+"For example, depending on your purpose, you can decompose the matrix as "
+"follows."
+
+#: cymel.core.datatypes.transformation.Transformation:96 of
+msgid ""
+"ピボットや jointOrient などの設定に応じて マトリックスを分解するには、 それらを一通りセットしてから m をセットし、 t, r(q), "
+"sh, s の値を得る。"
+msgstr ""
+"To decompose the matrix according to settings such as pivot and jointOrient,"
+" set them all, then set m to obtain the values ​​of t, r(q), sh, and s."
+
+#: cymel.core.datatypes.transformation.Transformation:101 of
+msgid ""
+"マトリックスを変えずに、一部の修飾属性を変更するには、 m をゲットして退避しておき、 変更する修飾属性をセットし、 m をセットし直し、 t, "
+"r(q), sh, s の値を得る。"
+msgstr ""
+"To change some of the qualifying attributes without changing the matrix, get"
+" m and save it, set the qualifying attributes to change, set m again, and "
+"get the values ​​of t, r(q), sh, and s."
+
+#: cymel.core.datatypes.transformation.Transformation:107 of
+msgid "さらに、以下のような機能を備えている。"
+msgstr "Furthermore, it has the following functions:"
+
+#: cymel.core.datatypes.transformation.Transformation:109 of
+msgid "コンストラクタの引数には以下を0から1個指定できる。"
+msgstr ""
+"You can specify 0 to 1 of the following as arguments to the constructor."
+
+#: cymel.core.datatypes.transformation.Transformation:111 of
+msgid "`Transformation`"
+msgstr "`Transformation`"
+
+#: cymel.core.datatypes.transformation.Transformation:112 of
+msgid "`.Matrix`"
+msgstr "`.Matrix`"
+
+#: cymel.core.datatypes.transformation.Transformation:113 of
+msgid "`.Quaternion`"
+msgstr "`.Quaternion`"
+
+#: cymel.core.datatypes.transformation.Transformation:114 of
+msgid "`.EulerRotation`"
+msgstr "`.EulerRotation`"
+
+#: cymel.core.datatypes.transformation.Transformation:116 of
+msgid "コンストラクタのキーワード引数に、 ロング名やショート名で属性値を指定できる。"
+msgstr ""
+"Attribute values ​​can be specified as long or short names in constructor "
+"keyword arguments."
+
+#: cymel.core.datatypes.transformation.Transformation:119 of
+msgid ""
+"属性値をセットする際は、本来の型に合わせなくても、 `.Plug` から `~.Plug_c.get` した値を そのままセットすることができる。 "
+"例えば、rotateAxis 属性の型は `.Quaternion` だが Radians の 3値の `list` をセットしても、 適切に "
+"Quaternion に変換される。"
+msgstr ""
+"When setting an attribute value, you can set the value obtained by "
+"`~.Plug_c.get` from `.Plug` without changing it to the original type. For "
+"example, the type of the rotateAxis attribute is `.Quaternion`, but setting "
+"a 3-value `list` of Radians will convert it to a Quaternion appropriately."
+
+#: cymel.core.datatypes.transformation.Transformation:127 of
+msgid "`Transformation` か `.Matrix` と乗算できる。"
+msgstr "Can be multiplied by `Transformation` or `.Matrix`."
+
+#: cymel.core.datatypes.transformation.Transformation:130 of
+msgid "シーケンスとして評価すると matrix データ型アトリビュートへの :mayacmd:`setAttr` コマンドの形式になる。"
+msgstr ""
+"When evaluated as a sequence, it takes the form of a :mayacmd:`setAttr` "
+"command for a matrix data type attribute."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:35:<autosummary>:1
+msgid ""
+":py:obj:`asPosition "
+"<cymel.core.datatypes.transformation.Transformation.asPosition>`\\ "
+"\\(\\[at\\]\\)"
+msgstr ""
+":py:obj:`asPosition "
+"<cymel.core.datatypes.transformation.Transformation.asPosition>`\\ "
+"\\(\\[at\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:35:<autosummary>:1
+#: cymel.core.datatypes.transformation.Transformation.asPosition:1 of
+msgid "指定した基準位置を得る。"
+msgstr "Get the specified reference position."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:35:<autosummary>:1
+msgid ""
+":py:obj:`clear <cymel.core.datatypes.transformation.Transformation.clear>`\\"
+" \\(name\\)"
+msgstr ""
+":py:obj:`clear <cymel.core.datatypes.transformation.Transformation.clear>`\\"
+" \\(name\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:35:<autosummary>:1
+#: cymel.core.datatypes.transformation.Transformation.clear:1 of
+msgid "トランスフォーメーション修飾属性をクリアする。"
+msgstr "Clear transformation qualification attributes."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:35:<autosummary>:1
+msgid ""
+":py:obj:`fromSetAttrCmds "
+"<cymel.core.datatypes.transformation.Transformation.fromSetAttrCmds>`\\ "
+"\\(lines\\)"
+msgstr ""
+":py:obj:`fromSetAttrCmds "
+"<cymel.core.datatypes.transformation.Transformation.fromSetAttrCmds>`\\ "
+"\\(lines\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:35:<autosummary>:1
+#: cymel.core.datatypes.transformation.Transformation.fromSetAttrCmds:1 of
+msgid ":mayacmd:`setAttr` コマンドの MEL 文字列リストから生成する。"
+msgstr "Generate from the MEL string list of the :mayacmd:`setAttr` command."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:35:<autosummary>:1
+msgid ""
+":py:obj:`getSetAttrCmds "
+"<cymel.core.datatypes.transformation.Transformation.getSetAttrCmds>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`getSetAttrCmds "
+"<cymel.core.datatypes.transformation.Transformation.getSetAttrCmds>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:35:<autosummary>:1
+#: cymel.core.datatypes.transformation.Transformation.getSetAttrCmds:1 of
+msgid ":mayacmd:`setAttr` コマンドの MEL 文字列リストを得る。"
+msgstr ":mayacmd:Get the MEL string list for the `setAttr` command."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:35:<autosummary>:1
+msgid ""
+":py:obj:`hasValue "
+"<cymel.core.datatypes.transformation.Transformation.hasValue>`\\ \\(name\\)"
+msgstr ""
+":py:obj:`hasValue "
+"<cymel.core.datatypes.transformation.Transformation.hasValue>`\\ \\(name\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:35:<autosummary>:1
+#: cymel.core.datatypes.transformation.Transformation.hasValue:1 of
+msgid "デフォルト値ではない修飾属性の値を持っているかどうか。"
+msgstr ""
+"Does it have a value for a qualified attribute that is not a default value?"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:35:<autosummary>:1
+msgid ""
+":py:obj:`isEquivalent "
+"<cymel.core.datatypes.transformation.Transformation.isEquivalent>`\\ "
+"\\(v\\[\\, tol\\]\\)"
+msgstr ""
+":py:obj:`isEquivalent "
+"<cymel.core.datatypes.transformation.Transformation.isEquivalent>`\\ "
+"\\(v\\[\\, tol\\]\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:35:<autosummary>:1
+#: cymel.core.datatypes.transformation.Transformation.isEquivalent:1 of
+msgid "各属性値がほぼ同値かどうか。"
+msgstr "Whether each attribute value is approximately the same."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst:38
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.core.datatypes.transformation.Transformation.asPosition:3 of
+msgid ""
+"どのアトリビュートに相当する位置を得るか。  - 0 だと原点（ゼロ）。 - 1 だと translate の位置（属性値そのもの）。 - 2 だと "
+"rotatePivot の位置。 - 3 だと scalePivot の位置。 - 4 以上だと matrix の位置。"
+msgstr ""
+"Which attribute to get the corresponding position.  - If it is 0, it is the "
+"origin (zero). - If 1, the position of the translate (attribute value "
+"itself). - If 2, rotatePivot position. - 3 is the scalePivot position. - If "
+"it is 4 or more, it is the matrix position."
+
+#: cymel.core.datatypes.transformation.Transformation.asPosition:4 of
+msgid "どのアトリビュートに相当する位置を得るか。"
+msgstr "Which attribute to get the corresponding position."
+
+#: cymel.core.datatypes.transformation.Transformation.asPosition:6 of
+msgid "0 だと原点（ゼロ）。"
+msgstr "If it is 0, it is the origin (zero)."
+
+#: cymel.core.datatypes.transformation.Transformation.asPosition:7 of
+msgid "1 だと translate の位置（属性値そのもの）。"
+msgstr ""
+"If it is 1, it is the position of the translate (attribute value itself)."
+
+#: cymel.core.datatypes.transformation.Transformation.asPosition:8 of
+msgid "2 だと rotatePivot の位置。"
+msgstr "2 is the rotatePivot position."
+
+#: cymel.core.datatypes.transformation.Transformation.asPosition:9 of
+msgid "3 だと scalePivot の位置。"
+msgstr "3 is the scalePivot position."
+
+#: cymel.core.datatypes.transformation.Transformation.asPosition:10 of
+msgid "4 以上だと matrix の位置。"
+msgstr "If it is 4 or more, it is the matrix position."
+
+#: cymel.core.datatypes.transformation.Transformation.clear:3
+#: cymel.core.datatypes.transformation.Transformation.hasValue:3 of
+msgid "トランスフォーメーション修飾属性名。"
+msgstr "Transformation qualified attribute name."
+
+#: cymel.core.datatypes.transformation.Transformation.getSetAttrCmds:3 of
+#, python-format
+msgid "コマンド構文のアトリビュート名の部分は \"%s\" となる。"
+msgstr "The attribute name part of the command syntax is \"%s\"."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.Transformation.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.core.datatypes.transformation.Transformation.getSetAttrCmds:5 of
+msgid "`list`"
+msgstr "`list`"
+
+#: cymel.core.datatypes.transformation.Transformation.hasValue:4
+#: cymel.core.datatypes.transformation.Transformation.isEquivalent:9 of
+msgid "`bool`"
+msgstr "`bool`"
+
+#: cymel.core.datatypes.transformation.Transformation.isEquivalent:3 of
+msgid "比較する値。 `Transformation` か `.Matrix` を指定可能。"
+msgstr "The value to compare. `Transformation` or `.Matrix` can be specified."
+
+#: cymel.core.datatypes.transformation.Transformation.isEquivalent:8 of
+msgid "許容誤差。"
+msgstr "Tolerance."

@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.constants.rst:2
+msgid "cymel.constants"
+msgstr "cymel.constants"
+
+#: cymel.constants:1 of
+msgid "cymel全体で使用する主な定数。"
+msgstr "Main constants used throughout cymel."
+
+#: cymel.constants:3 of
+msgid "よく使うものに厳選してあるので * で import しても良いかも知れない。"
+msgstr ""
+"It may be a good idea to import it with * as it has been carefully selected "
+"for frequently used items."
+
+#: ../srcs/generated/cymel.constants.rst:28
+msgid "Constants:"
+msgstr "Constants:"
+
+#: cymel.constants.AVOID_ZERO_DIV_PRECISION:1 of
+msgid "Maya では scale=0 を設定しても matrix 値は 1.e-12 くらいで潰れずに保持するようなので、それを意識した極小値。"
+msgstr ""
+"In Maya, even if you set scale=0, the matrix value seems to be maintained at"
+" around 1.e-12 without being crushed, so keep this in mind when setting the "
+"minimum value."
+
+#: cymel.constants.AXIS_NEG_X:1 of
+msgid "-X方向ID。"
+msgstr "-X direction ID."
+
+#: cymel.constants.AXIS_NEG_Y:1 of
+msgid "-Y方向ID。"
+msgstr "-Y direction ID."
+
+#: cymel.constants.AXIS_NEG_Z:1 of
+msgid "-Z方向ID。"
+msgstr "-Z direction ID."
+
+#: cymel.constants.AXIS_X:1 of
+msgid "X軸（+X方向ID） (0)"
+msgstr "X axis (+X direction ID) (0)"
+
+#: cymel.constants.AXIS_Y:1 of
+msgid "Y軸（+X方向ID） (1)"
+msgstr "Y-axis (+X direction ID) (1)"
+
+#: cymel.constants.AXIS_Z:1 of
+msgid "Z軸（+X方向ID） (2)"
+msgstr "Z axis (+X direction ID) (2)"
+
+#: cymel.constants.TO_DEG:1 of
+msgid "Radians を Degrees に変換するための係数。"
+msgstr "Factor for converting Radians to Degrees."
+
+#: cymel.constants.TO_RAD:1 of
+msgid "Degrees を Radians に変換するための係数。"
+msgstr "Factor for converting Degrees to Radians."
+
+#: cymel.constants.XYZ:1 of
+msgid "Rotaion order XYZ (0)"
+msgstr "Rotation order XYZ (0)"
+
+#: cymel.constants.XZY:1 of
+msgid "Rotaion order XZY (3)"
+msgstr "Rotation order XZY (3)"
+
+#: cymel.constants.YXZ:1 of
+msgid "Rotaion order YXZ (4)"
+msgstr "Rotation order YXZ (4)"
+
+#: cymel.constants.YZX:1 of
+msgid "Rotaion order YZX (1)"
+msgstr "Rotation order YZX (1)"
+
+#: cymel.constants.ZXY:1 of
+msgid "Rotaion order ZXY (2)"
+msgstr "Rotation order ZXY (2)"
+
+#: cymel.constants.ZYX:1 of
+msgid "Rotaion order ZYX (5)"
+msgstr "Rotation order ZYX (5)"

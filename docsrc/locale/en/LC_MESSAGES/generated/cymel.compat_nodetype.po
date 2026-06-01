@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.compat_nodetype.rst:2
+msgid "cymel.compat_nodetype"
+msgstr "cymel.compat_nodetype"
+
+#: cymel.compat_nodetype:1 of
+msgid "Mayaバージョンによるノードタイプ名変更のサポート。"
+msgstr "Support for renaming node types depending on Maya version."
+
+#: cymel.compat_nodetype:3 of
+msgid "新旧バージョン互換のために、そのバージョンでの正しい名前を得ることができる。"
+msgstr ""
+"For compatibility between old and new versions, you can get the correct name"
+" for that version."
+
+#: cymel.compat_nodetype:5 of
+msgid ""
+"唯一のインスタンス `compat_nodetype_map` の属性アクセスという形で、 "
+"Mayaノードタイプ名を指定することで、正しい名前の文字列を得られる。"
+msgstr ""
+"You can get the correct name string by specifying the Maya node type name in"
+" the form of an attribute access for the unique instance "
+"`compat_nodetype_map`."
+
+#: cymel.compat_nodetype:8 of
+msgid "基本的には、変更後の新しい名前から、そのバージョンでの正しい名前を得られる"
+msgstr ""
+"Basically, you can get the correct name for that version from the new name "
+"after the change."
+
+#: cymel.compat_nodetype:10 of
+msgid ""
+"ノードタイプ名が変更され、元の名前が別のノードに置き換えられたものを指定すると、 新旧互換性が無いという意味で `AttributeError` となる"
+msgstr ""
+"If you specify a node type whose name has been changed and the original name"
+" has been replaced with another node, an `AttributeError` will occur, "
+"meaning that the old and new types are not compatible."
+
+#: cymel.compat_nodetype:13 of
+msgid "振る舞いの一貫性は欠くものの、 ノードタイプ名が変更され、元の名前が廃止されたものを指定すると、 新しい正しい名前を得られる。"
+msgstr ""
+"Although the behavior is inconsistent, if you specify a node type name that "
+"is changed and the original name is obsolete, you will get the new correct "
+"name."
+
+#: cymel.compat_nodetype:17 of
+msgid "上記いずれにも当てはまらない場合は、指定したものがそのまま得られる。"
+msgstr "If none of the above apply, you will get what you specified as is."
+
+#: ../srcs/generated/cymel.compat_nodetype.rst:9
+msgid "Classes:"
+msgstr "Classes:"
+
+#: ../srcs/generated/cymel.compat_nodetype.rst:33:<autosummary>:1
+msgid ":py:obj:`CompatNodeTypeMap <cymel.compat_nodetype.CompatNodeTypeMap>`"
+msgstr ":py:obj:`CompatNodeTypeMap <cymel.compat_nodetype.CompatNodeTypeMap>`"
+
+#: ../srcs/generated/cymel.compat_nodetype.rst:33:<autosummary>:1
+msgid "Mayaバージョンによるノードタイプ名変更に伴う新旧バージョン互換性確保のための名前変換器。"
+msgstr ""
+"Name converter to ensure compatibility between old and new versions due to "
+"node type name changes depending on Maya version."
+
+#: ../srcs/generated/cymel.compat_nodetype.rst:36
+msgid "Constants:"
+msgstr "Constants:"
+
+#: cymel.compat_nodetype.MAYA2026_DELETED_TYPENAMES:1 of
+msgid "Maya 2026 で廃止されたノードタイプ名のセット。"
+msgstr "A set of node type names that are obsolete in Maya 2026."
+
+#: cymel.compat_nodetype.MAYA2026_DL_TO_OLD:1 of
+msgid "Maya 2026 の DL ノードタイプ名から旧タイプ名への辞書。"
+msgstr "Maya 2026 DL node type name to legacy type name dictionary."

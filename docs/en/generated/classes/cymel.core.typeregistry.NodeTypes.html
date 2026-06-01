@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.typeregistry.NodeTypes &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="cymel.core.datatypes.boundingbox" href="../cymel.core.datatypes.boundingbox.html" />
+    <link rel="prev" title="cymel.core.typeregistry" href="../cymel.core.typeregistry.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.boundingbox.html" title="cymel.core.datatypes.boundingbox"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.typeregistry.html" title="cymel.core.typeregistry"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.typeregistry.html" accesskey="U">cymel.core.typeregistry</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.typeregistry.NodeTypes</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-typeregistry-nodetypes">
+<h1>class cymel.core.typeregistry.NodeTypes<a class="headerlink" href="#class-cymel-core-typeregistry-nodetypes" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-42f8c6a720e0a727f95239cad9b0aec33a9e122e.png" alt="Inheritance diagram of NodeTypes" usemap="#inheritance77628ce2e2" class="inheritance graphviz" /></div>
+<map id="inheritance77628ce2e2" name="inheritance77628ce2e2">
+<area shape="rect" id="node1" href="#cymel.core.typeregistry.NodeTypes" target="_top" title="ノードタイプのラッパークラスのマネージャー。" alt="" coords="5,5,83,29"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.typeregistry.NodeTypes">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.typeregistry.</span></span><span class="sig-name descname"><span class="pre">NodeTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeregistry.NodeTypes" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Manager for wrapper classes for node types.</p>
+<p>The only instance, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nodetypes</span></code>, has been created.</p>
+<p>All node classes can access this attribute.</p>
+<p>Cymel provides wrapper classes for all node types, including plugins, but other than the main node types that are provided in advance for functional implementation, they are automatically generated when needed, such as when accessed for the first time.</p>
+<p>The standard class name provided by the system is the node type name with the first letter capitalized.</p>
+<p>You can also create a custom class by inheriting an existing node class. A custom class can be determined purely by the node type, or it can be determined by some other arbitrary condition.</p>
+<p>Custom classes can be used as is without being registered in the system, but they can also be registered using <a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.registerNodeClass" title="cymel.core.typeregistry.NodeTypes.registerNodeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerNodeClass</span></code></a>. When obtaining an instance, you can obtain the instance by specifying the class directly, but if the class is registered, you can have the class automatically determined by obtaining the instance from <a class="reference internal" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It supports name specification that maintains compatibility between versions, such as changing the node type name in 2026, and it is recommended to always specify a new type name (for example, a name with the suffix <code class="xref py py-obj docutils literal notranslate"><span class="pre">DL</span></code> even before 2026).</p>
+</div>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.basicNodeClass" title="cymel.core.typeregistry.NodeTypes.basicNodeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">basicNodeClass</span></code></a>(nodetype[, nodename])</p></td>
+<td><p>Get a basic class determined only by the node type name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.deregisterNodeClass" title="cymel.core.typeregistry.NodeTypes.deregisterNodeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deregisterNodeClass</span></code></a>(cls[, warn])</p></td>
+<td><p>Delete the registration of a node class and its subclasses.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.parentBasicNodeClass" title="cymel.core.typeregistry.NodeTypes.parentBasicNodeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parentBasicNodeClass</span></code></a>(nodetype[, nodename])</p></td>
+<td><p>Obtain a basic class determined only by the parent type name of the specified node type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.registerNodeClass" title="cymel.core.typeregistry.NodeTypes.registerNodeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerNodeClass</span></code></a>(cls, nodetype)</p></td>
+<td><p>Register a node class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.relatedNodeTypes" title="cymel.core.typeregistry.NodeTypes.relatedNodeTypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">relatedNodeTypes</span></code></a>(cls)</p></td>
+<td><p>Get the tuple of node types associated with the class.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.typeregistry.NodeTypes.basicNodeClass">
+<span class="sig-name descname"><span class="pre">basicNodeClass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeregistry.NodeTypes.basicNodeClass" title="Link to this definition">¶</a></dt>
+<dd><p>Get a basic class determined only by the node type name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Node type name.</p></li>
+<li><p><strong>nodename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – A name that identifies the actual node. Although not required, processing of unknown types is slightly faster if specified.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.typeregistry.NodeTypes.deregisterNodeClass">
+<span class="sig-name descname"><span class="pre">deregisterNodeClass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeregistry.NodeTypes.deregisterNodeClass" title="Link to this definition">¶</a></dt>
+<dd><p>Delete the registration of a node class and its subclasses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a>) – Class to remove registration.</p></li>
+<li><p><strong>warn</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to output a warning message while deleting.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.typeregistry.NodeTypes.parentBasicNodeClass">
+<span class="sig-name descname"><span class="pre">parentBasicNodeClass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeregistry.NodeTypes.parentBasicNodeClass" title="Link to this definition">¶</a></dt>
+<dd><p>Obtain a basic class determined only by the parent type name of the specified node type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Node type name.</p></li>
+<li><p><strong>nodename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – A name that identifies the actual node. Although not required, processing of unknown types is slightly faster if specified.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a> (<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> only if ‘node’ is specified)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.typeregistry.NodeTypes.registerNodeClass">
+<span class="sig-name descname"><span class="pre">registerNodeClass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodetype</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeregistry.NodeTypes.registerNodeClass" title="Link to this definition">¶</a></dt>
+<dd><p>Register a node class.</p>
+<p>Node classes are divided into <strong>classes with a verification method</strong>, which have a static method <code class="docutils literal notranslate"><span class="pre">_verifyNode</span></code> for checking conformance, and <strong>basic classes</strong>, which do not have it.</p>
+<p>The specifications of the static method for compliance testing are as follows.</p>
+<ul>
+<li><p>_verifyNode(mfn, name)</p>
+<p>Assume that an instance of the <a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MFnDependencyNode.html">MFnDependencyNode</a> derived class of Python API 2 (for example, <a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MFnDagNode.html">MFnDagNode</a> for dagNode) and a unique name such as a partial path of the node are passed as arguments, and a Boolean value indicating suitability is returned.</p>
+</li>
+</ul>
+<p>When implementing <code class="docutils literal notranslate"><span class="pre">_verifyNode</span></code>, it is recommended to also override <a class="reference internal" href="cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c.createNode" title="cymel.core.cyobjects.node_c.Node_c.createNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node.createNode</span></code></a> so that the conditions are met when creating a node.</p>
+<p>Basic classes are strictly linked to node types, and either one exists or is automatically generated for every node type, including abstract types. Even when registering a custom class as a basic class, it must inherit from a parent class that does not conflict with the node type. In a class implementation, <a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.parentBasicNodeClass" title="cymel.core.typeregistry.NodeTypes.parentBasicNodeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parentBasicNodeClass</span></code></a> is useful for getting the parent class to inherit from. Conflicting registrations for one node type will result in overwriting registrations, and a warning will be output and all registrations of the old class, including subclasses, will be deleted (there is no harm in overwriting the automatic registrations that the system previously made).</p>
+<p>On the other hand, classes with conformance checking methods do not need to be strictly linked to node types. As long as there is no conflict between class inheritance and the registered node type, you are free to register it as any node type, including abstract types. There is no problem with multiple classes with inspection methods being registered in conflict with one node type, and the same class may be registered with multiple node types. When registered, it is inserted at the beginning of the list managed for each node type, so those registered later have priority.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a>) – Class to register for.</p></li>
+<li><p><strong>nodetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Node type name to link.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.typeregistry.NodeTypes.relatedNodeTypes">
+<span class="sig-name descname"><span class="pre">relatedNodeTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.typeregistry.NodeTypes.relatedNodeTypes" title="Link to this definition">¶</a></dt>
+<dd><p>Get the tuple of node types associated with the class.</p>
+<p>A basic class has one node type, but a custom class with an inspection method can be linked to multiple types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a>) – class.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.typeregistry.NodeTypes</a><ul>
+<li><a class="reference internal" href="#cymel.core.typeregistry.NodeTypes"><code class="docutils literal notranslate"><span class="pre">NodeTypes</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.basicNodeClass"><code class="docutils literal notranslate"><span class="pre">NodeTypes.basicNodeClass()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.deregisterNodeClass"><code class="docutils literal notranslate"><span class="pre">NodeTypes.deregisterNodeClass()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.parentBasicNodeClass"><code class="docutils literal notranslate"><span class="pre">NodeTypes.parentBasicNodeClass()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.registerNodeClass"><code class="docutils literal notranslate"><span class="pre">NodeTypes.registerNodeClass()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.typeregistry.NodeTypes.relatedNodeTypes"><code class="docutils literal notranslate"><span class="pre">NodeTypes.relatedNodeTypes()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../cymel.core.typeregistry.html"
+                          title="previous chapter">cymel.core.typeregistry</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../cymel.core.datatypes.boundingbox.html"
+                          title="next chapter">cymel.core.datatypes.boundingbox</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.core.typeregistry.NodeTypes.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.boundingbox.html" title="cymel.core.datatypes.boundingbox"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.typeregistry.html" title="cymel.core.typeregistry"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.typeregistry.html" >cymel.core.typeregistry</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.typeregistry.NodeTypes</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

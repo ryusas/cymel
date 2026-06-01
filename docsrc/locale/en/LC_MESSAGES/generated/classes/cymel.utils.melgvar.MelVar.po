@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.utils.melgvar.MelVar.rst:2
+msgid "class cymel.utils.melgvar.MelVar"
+msgstr "class cymel.utils.melgvar.MelVar"
+
+#: cymel.utils.melgvar.MelVar:1 of
+msgid "MELグローバル変数ラッパークラス。"
+msgstr "MEL global variable wrapper class."
+
+#: cymel.utils.melgvar.MelVar:3 of
+msgid "`dict` のような振る舞いをする。 唯一のインスタンス `melvar` が生成済み。"
+msgstr "Behaves like `dict`. Only instance `melvar` has been created."
+
+#: cymel.utils.melgvar.MelVar:6 of
+msgid "参照のみが可能で、セットや削除はサポートされない。"
+msgstr "Can only be read, setting or deletion is not supported."
+
+#: ../srcs/generated/classes/cymel.utils.melgvar.MelVar.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.utils.melgvar.MelVar.rst:34:<autosummary>:1
+msgid ":py:obj:`get <cymel.utils.melgvar.MelVar.get>`\\ \\(key\\[\\, default\\]\\)"
+msgstr ":py:obj:`get <cymel.utils.melgvar.MelVar.get>`\\ \\(key\\[\\, default\\]\\)"
+
+#: ../srcs/generated/classes/cymel.utils.melgvar.MelVar.rst:34:<autosummary>:1
+msgid ":py:obj:`has_key <cymel.utils.melgvar.MelVar.has_key>`\\ \\(key\\)"
+msgstr ":py:obj:`has_key <cymel.utils.melgvar.MelVar.has_key>`\\ \\(key\\)"
+
+#: ../srcs/generated/classes/cymel.utils.melgvar.MelVar.rst:34:<autosummary>:1
+msgid ":py:obj:`items <cymel.utils.melgvar.MelVar.items>`\\ \\(\\)"
+msgstr ":py:obj:`items <cymel.utils.melgvar.MelVar.items>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.melgvar.MelVar.rst:34:<autosummary>:1
+msgid ":py:obj:`keys <cymel.utils.melgvar.MelVar.keys>`\\ \\(\\)"
+msgstr ":py:obj:`keys <cymel.utils.melgvar.MelVar.keys>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.melgvar.MelVar.rst:34:<autosummary>:1
+msgid ":py:obj:`values <cymel.utils.melgvar.MelVar.values>`\\ \\(\\)"
+msgstr ":py:obj:`values ​​<cymel.utils.melgvar.MelVar.values>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.melgvar.MelVar.rst:37
+msgid "Methods Details:"
+msgstr "Method Details:"

@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/whycymel.rst:6
+msgid "なぜ cymel ?"
+msgstr "Why cymel?"
+
+#: ../srcs/whycymel.rst:8
+msgid "以下に挙げるのが cymel のゴールです。"
+msgstr "The following are the goals of cymel."
+
+#: ../srcs/whycymel.rst:10
+msgid "MEL よりもオブジェクト指向に！"
+msgstr "More object-oriented than MEL!"
+
+#: ../srcs/whycymel.rst:11
+msgid "API よりも手軽に！"
+msgstr "Easier than API!"
+
+#: ../srcs/whycymel.rst:12
+msgid "PyMEL よりも軽量で軽快に！"
+msgstr "Lighter and more nimble than PyMEL!"
+
+#: ../srcs/whycymel.rst:14
+msgid ""
+"Maya のスクリプティングをより Python らしくすることは pymel で達成されました （その必要性は `Why PyMEL?`__ "
+"に書かれています）。"
+msgstr ""
+"Making Maya scripting more Python-like was accomplished with pymel (the need"
+" for it is described in `Why PyMEL?`__)."
+
+#: ../srcs/whycymel.rst:19
+msgid "その点をリスペクトした上で、 pymel の問題を解決し、便利な機能をより軽快に実現します。"
+msgstr ""
+"Respecting this point, we will solve the problems of pymel and implement "
+"useful functions more easily."
+
+#: ../srcs/whycymel.rst:22
+msgid "もっと快適な Python スクリプティングを"
+msgstr "More comfortable Python scripting"
+
+#: ../srcs/whycymel.rst:24
+msgid "とにかく軽量で軽快に"
+msgstr "Anyway, lightweight and nimble"
+
+#: ../srcs/whycymel.rst:25
+msgid "高速に（C++ 実装が完了すればもっと高速に）"
+msgstr "Fast (even faster once the C++ implementation is complete)"
+
+#: ../srcs/whycymel.rst:26
+msgid "数学クラスには、リギングなどで便利な機能を充実"
+msgstr ""
+"Mathematics classes are equipped with useful functions such as rigging."
+
+#: ../srcs/whycymel.rst:28
+msgid "信頼性高く、お行儀よく"
+msgstr "Reliable and well behaved"
+
+#: ../srcs/whycymel.rst:30
+msgid "全ての変更操作が undo 可能であることを保証"
+msgstr "Guarantees that all changes are undoable"
+
+#: ../srcs/whycymel.rst:31
+msgid "Maya の設定を書き換えない"
+msgstr "Do not rewrite Maya settings"
+
+#: ../srcs/whycymel.rst:32
+msgid "scriptJob や MMessage などのコールバックを埋め込まない"
+msgstr "Do not embed callbacks such as scriptJob or MMessage"
+
+#: ../srcs/whycymel.rst:33
+msgid "Networked Plug を保持しない設計"
+msgstr "Designed to not hold networked plugs"
+
+#: ../srcs/whycymel.rst:34
+msgid "インスタンス番号に依存するプラグを保持しないことの推奨"
+msgstr "Recommendation not to maintain plugs that depend on instance numbers"
+
+#: ../srcs/whycymel.rst:36
+msgid "全てをラップすることは目指さない"
+msgstr "I don't aim to wrap everything"
+
+#: ../srcs/whycymel.rst:38
+msgid "コンポーネントはサポートしない"
+msgstr "does not support components"
+
+#: ../srcs/whycymel.rst:39
+msgid "コマンドはラップしない"
+msgstr "commands do not wrap"
+
+#: ../srcs/whycymel.rst:40
+msgid "多くのクラスに API やコマンド相当の機能をつけるなどの多機能を目指さない"
+msgstr ""
+"Do not aim for multi-functionality such as adding functions equivalent to "
+"API or commands to many classes."

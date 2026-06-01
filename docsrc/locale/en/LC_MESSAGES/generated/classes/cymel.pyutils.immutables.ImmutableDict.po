@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.pyutils.immutables.ImmutableDict.rst:2
+msgid "class cymel.pyutils.immutables.ImmutableDict"
+msgstr "class cymel.pyutils.immutables.ImmutableDict"
+
+#: cymel.pyutils.immutables.ImmutableDict:1 of
+msgid "イミュータブル `dict`"
+msgstr "immutable `dict`"
+
+#: ../srcs/generated/classes/cymel.pyutils.immutables.ImmutableDict.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.pyutils.immutables.ImmutableDict.rst:34:<autosummary>:1
+msgid ""
+":py:obj:`clear <cymel.pyutils.immutables.ImmutableDict.clear>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`clear <cymel.pyutils.immutables.ImmutableDict.clear>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.pyutils.immutables.ImmutableDict.rst:34:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "Remove all items from the dict."
+msgstr "Remove all items from the dict."
+
+#: ../srcs/generated/classes/cymel.pyutils.immutables.ImmutableDict.rst:34:<autosummary>:1
+msgid ":py:obj:`pop <cymel.pyutils.immutables.ImmutableDict.pop>`\\ \\(k\\[\\,d\\]\\)"
+msgstr ":py:obj:`pop <cymel.pyutils.immutables.ImmutableDict.pop>`\\ \\(k\\[\\,d\\]\\)"
+
+#: ../srcs/generated/classes/cymel.pyutils.immutables.ImmutableDict.rst:34:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid ""
+"If the key is not found, return the default if given; otherwise, raise a "
+"KeyError."
+msgstr ""
+"If the key is not found, return the default if given; otherwise, raise a "
+"KeyError."
+
+#: ../srcs/generated/classes/cymel.pyutils.immutables.ImmutableDict.rst:34:<autosummary>:1
+msgid ""
+":py:obj:`popitem <cymel.pyutils.immutables.ImmutableDict.popitem>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`popitem <cymel.pyutils.immutables.ImmutableDict.popitem>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.pyutils.immutables.ImmutableDict.rst:34:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "Remove and return a (key, value) pair as a 2-tuple."
+msgstr "Remove and return a (key, value) pair as a 2-tuple."
+
+#: ../srcs/generated/classes/cymel.pyutils.immutables.ImmutableDict.rst:34:<autosummary>:1
+msgid ""
+":py:obj:`setdefault <cymel.pyutils.immutables.ImmutableDict.setdefault>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`setdefault <cymel.pyutils.immutables.ImmutableDict.setdefault>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.pyutils.immutables.ImmutableDict.rst:34:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "Insert key with a value of default if key is not in the dictionary."
+msgstr "Insert key with a value of default if key is not in the dictionary."
+
+#: ../srcs/generated/classes/cymel.pyutils.immutables.ImmutableDict.rst:34:<autosummary>:1
+msgid ""
+":py:obj:`update <cymel.pyutils.immutables.ImmutableDict.update>`\\ "
+"\\(\\[E\\, \\]\\*\\*F\\)"
+msgstr ""
+":py:obj:`update <cymel.pyutils.immutables.ImmutableDict.update>`\\ "
+"\\(\\[E\\, \\]\\*\\*F\\)"
+
+#: ../srcs/generated/classes/cymel.pyutils.immutables.ImmutableDict.rst:34:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid ""
+"If E is present and has a .keys() method, then does:  for k in E.keys(): "
+"D[k] = E[k] If E is present and lacks a .keys() method, then does:  for k, v"
+" in E: D[k] = v In either case, this is followed by: for k in F:  D[k] = "
+"F[k]"
+msgstr ""
+"If E is present and has a .keys() method, then does: for k in E.keys(): D[k]"
+" = E[k] If E is present and lacks a .keys() method, then does: for k, v in "
+"E: D[k] = v In either case, this is followed by: for k in F: D[k] = F[k]"
+
+#: ../srcs/generated/classes/cymel.pyutils.immutables.ImmutableDict.rst:37
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:3 of
+msgid ""
+"Pairs are returned in LIFO (last-in, first-out) order. Raises KeyError if "
+"the dict is empty."
+msgstr ""
+"Pairs are returned in LIFO (last-in, first-out) order. Raises KeyError if "
+"the dict is empty."
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:3 of
+msgid "Return the value for key if key is in the dictionary, else default."
+msgstr "Return the value for key if key is in the dictionary, else default."

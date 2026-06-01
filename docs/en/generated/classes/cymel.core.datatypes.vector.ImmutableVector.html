@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.datatypes.vector.ImmutableVector &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class cymel.core.datatypes.vector.Vector" href="cymel.core.datatypes.vector.Vector.html" />
+    <link rel="prev" title="cymel.core.datatypes.vector" href="../cymel.core.datatypes.vector.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.core.datatypes.vector.Vector.html" title="class cymel.core.datatypes.vector.Vector"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.vector.html" title="cymel.core.datatypes.vector"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.vector.html" accesskey="U">cymel.core.datatypes.vector</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.vector.ImmutableVector</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-datatypes-vector-immutablevector">
+<h1>class cymel.core.datatypes.vector.ImmutableVector<a class="headerlink" href="#class-cymel-core-datatypes-vector-immutablevector" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-0ef1a8cf0dd8b777765211100973053fbb1cc6f0.png" alt="Inheritance diagram of ImmutableVector" usemap="#inheritancefca603e3b9" class="inheritance graphviz" /></div>
+<map id="inheritancefca603e3b9" name="inheritancefca603e3b9">
+<area shape="rect" id="node1" href="#cymel.core.datatypes.vector.ImmutableVector" target="_top" title="ImmutableVector" alt="" coords="5,44,108,68"/>
+<area shape="rect" id="node2" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" target="_top" title="3次元ベクトルクラス。" alt="" coords="21,5,93,29"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.datatypes.vector.</span></span><span class="sig-name descname"><span class="pre">ImmutableVector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code> wrapper for <a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>.</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.cartesianize" title="cymel.core.datatypes.vector.ImmutableVector.cartesianize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cartesianize</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Convert homogeneous coordinates to Cartesian coordinates (W=1).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.homogenize" title="cymel.core.datatypes.vector.ImmutableVector.homogenize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">homogenize</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Convert rational form coordinates to homogeneous coordinates.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.iabs" title="cymel.core.datatypes.vector.ImmutableVector.iabs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iabs</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set each element of a 4-dimensional vector to an absolute value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.iadd" title="cymel.core.datatypes.vector.ImmutableVector.iadd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iadd</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Sets the sum of 4-dimensional vectors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.idiv" title="cymel.core.datatypes.vector.ImmutableVector.idiv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idiv</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Sets the quotient of a 4-dimensional vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.imul" title="cymel.core.datatypes.vector.ImmutableVector.imul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imul</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Sets the product of 4-dimensional vectors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.ineg" title="cymel.core.datatypes.vector.ImmutableVector.ineg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ineg</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Sets the sign inversion of a 4-dimensional vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.isub" title="cymel.core.datatypes.vector.ImmutableVector.isub"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isub</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Sets the sum of 4-dimensional vectors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.normalize" title="cymel.core.datatypes.vector.ImmutableVector.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set the normalized 3D vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.normalizeIt" title="cymel.core.datatypes.vector.ImmutableVector.normalizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalizeIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set the normalized 3D vector.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.orthogonalize" title="cymel.core.datatypes.vector.ImmutableVector.orthogonalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orthogonalize</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Sets a vector that is orthogonal to the specified vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.rationalize" title="cymel.core.datatypes.vector.ImmutableVector.rationalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rationalize</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Convert homogeneous coordinates to advantageous form.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.set" title="cymel.core.datatypes.vector.ImmutableVector.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set other values.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector.cartesianize">
+<span class="sig-name descname"><span class="pre">cartesianize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector.cartesianize" title="Link to this definition">¶</a></dt>
+<dd><p>Convert homogeneous coordinates to Cartesian coordinates (W=1).</p>
+<p>(W*x, W*y, W*z, W) is converted to (x, y, z, 1).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector.homogenize">
+<span class="sig-name descname"><span class="pre">homogenize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector.homogenize" title="Link to this definition">¶</a></dt>
+<dd><p>Convert rational form coordinates to homogeneous coordinates.</p>
+<p>(x, y, z, W) is converted to (W*x, W*y, W*z, W).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector.iabs">
+<span class="sig-name descname"><span class="pre">iabs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector.iabs" title="Link to this definition">¶</a></dt>
+<dd><p>Set each element of a 4-dimensional vector to an absolute value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector.iadd">
+<span class="sig-name descname"><span class="pre">iadd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector.iadd" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the sum of 4-dimensional vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">Number</span></code>) – The other vector.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector.idiv">
+<span class="sig-name descname"><span class="pre">idiv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector.idiv" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the quotient of a 4-dimensional vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">Number</span></code>) – Denominator vector or scalar.</p></li>
+<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance to avoid division by zero.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector.imul">
+<span class="sig-name descname"><span class="pre">imul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector.imul" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the product of 4-dimensional vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">Number</span></code>) – The other vector or scalar.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector.ineg">
+<span class="sig-name descname"><span class="pre">ineg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector.ineg" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the sign inversion of a 4-dimensional vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector.isub">
+<span class="sig-name descname"><span class="pre">isub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector.isub" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the sum of 4-dimensional vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">Number</span></code>) – The other vector.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector.normalize">
+<span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector.normalize" title="Link to this definition">¶</a></dt>
+<dd><p>Set the normalized 3D vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector.normalizeIt">
+<span class="sig-name descname"><span class="pre">normalizeIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector.normalizeIt" title="Link to this definition">¶</a></dt>
+<dd><p>Set the normalized 3D vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector.orthogonalize">
+<span class="sig-name descname"><span class="pre">orthogonalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector.orthogonalize" title="Link to this definition">¶</a></dt>
+<dd><p>Sets a vector that is orthogonal to the specified vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>vec</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Axis vector.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector.rationalize">
+<span class="sig-name descname"><span class="pre">rationalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector.rationalize" title="Link to this definition">¶</a></dt>
+<dd><p>Convert homogeneous coordinates to advantageous form.</p>
+<p>(W*x, W*y, W*z, W) is converted to (x, y, z, W).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.vector.ImmutableVector.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.ImmutableVector.set" title="Link to this definition">¶</a></dt>
+<dd><p>Set other values.</p>
+<p>Similar to the constructor, the following values ​​can be specified.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p></li>
+<li><p>x, y, z, w</p></li>
+<li><p>x, y, z</p></li>
+<li><p>x, y</p></li>
+<li><p>Sequence up to 4 values</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.datatypes.vector.ImmutableVector</a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector"><code class="docutils literal notranslate"><span class="pre">ImmutableVector</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.cartesianize"><code class="docutils literal notranslate"><span class="pre">ImmutableVector.cartesianize()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.homogenize"><code class="docutils literal notranslate"><span class="pre">ImmutableVector.homogenize()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.iabs"><code class="docutils literal notranslate"><span class="pre">ImmutableVector.iabs()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.iadd"><code class="docutils literal notranslate"><span class="pre">ImmutableVector.iadd()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.idiv"><code class="docutils literal notranslate"><span class="pre">ImmutableVector.idiv()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.imul"><code class="docutils literal notranslate"><span class="pre">ImmutableVector.imul()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.ineg"><code class="docutils literal notranslate"><span class="pre">ImmutableVector.ineg()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.isub"><code class="docutils literal notranslate"><span class="pre">ImmutableVector.isub()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.normalize"><code class="docutils literal notranslate"><span class="pre">ImmutableVector.normalize()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.normalizeIt"><code class="docutils literal notranslate"><span class="pre">ImmutableVector.normalizeIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.orthogonalize"><code class="docutils literal notranslate"><span class="pre">ImmutableVector.orthogonalize()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.rationalize"><code class="docutils literal notranslate"><span class="pre">ImmutableVector.rationalize()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.vector.ImmutableVector.set"><code class="docutils literal notranslate"><span class="pre">ImmutableVector.set()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../cymel.core.datatypes.vector.html"
+                          title="previous chapter">cymel.core.datatypes.vector</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cymel.core.datatypes.vector.Vector.html"
+                          title="next chapter">class cymel.core.datatypes.vector.Vector</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.core.datatypes.vector.ImmutableVector.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.core.datatypes.vector.Vector.html" title="class cymel.core.datatypes.vector.Vector"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.vector.html" title="cymel.core.datatypes.vector"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.vector.html" >cymel.core.datatypes.vector</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.vector.ImmutableVector</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

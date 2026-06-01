@@ -1,0 +1,53 @@
+class cymel.core.cyobjects.objectref.ObjectRef
+==============================================
+
+.. currentmodule:: cymel.core.cyobjects.objectref
+
+
+.. inheritance-diagram:: ObjectRef
+    :parts: 1
+
+
+
+.. autoclass:: ObjectRef
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        internalData
+        newObject
+        node
+        object
+        refclass
+        refdata
+        weakref
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: CLASS_TYPE
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: internalData
+    .. automethod:: newObject
+    .. automethod:: node
+    .. automethod:: object
+    .. automethod:: refclass
+    .. automethod:: refdata
+    .. automethod:: weakref
+
+

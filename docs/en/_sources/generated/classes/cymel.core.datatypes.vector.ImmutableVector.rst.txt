@@ -1,0 +1,60 @@
+class cymel.core.datatypes.vector.ImmutableVector
+=================================================
+
+.. currentmodule:: cymel.core.datatypes.vector
+
+
+.. inheritance-diagram:: ImmutableVector
+    :parts: 1
+
+
+
+.. autoclass:: ImmutableVector
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        cartesianize
+        homogenize
+        iabs
+        iadd
+        idiv
+        imul
+        ineg
+        isub
+        normalize
+        normalizeIt
+        orthogonalize
+        rationalize
+        set
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: cartesianize
+    .. automethod:: homogenize
+    .. automethod:: iabs
+    .. automethod:: iadd
+    .. automethod:: idiv
+    .. automethod:: imul
+    .. automethod:: ineg
+    .. automethod:: isub
+    .. automethod:: normalize
+    .. automethod:: normalizeIt
+    .. automethod:: orthogonalize
+    .. automethod:: rationalize
+    .. automethod:: set
+
+

@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.ImmutableTransformation.rst:2
+msgid "class cymel.core.datatypes.transformation.ImmutableTransformation"
+msgstr "class cymel.core.datatypes.transformation.ImmutableTransformation"
+
+#: cymel.core.datatypes.transformation.ImmutableTransformation:1 of
+msgid "`Transformation` の `immutable` ラッパー。"
+msgstr "`immutable` wrapper for `Transformation`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.ImmutableTransformation.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.ImmutableTransformation.rst:30:<autosummary>:1
+msgid ""
+":py:obj:`clear "
+"<cymel.core.datatypes.transformation.ImmutableTransformation.clear>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`clear "
+"<cymel.core.datatypes.transformation.ImmutableTransformation.clear>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.ImmutableTransformation.rst:30:<autosummary>:1
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:1 of
+msgid "トランスフォーメーション修飾属性をクリアする。"
+msgstr "Clear transformation qualification attributes."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.ImmutableTransformation.rst:33
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.transformation.ImmutableTransformation.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.pyutils.immutables._immutableFunc.<locals>.func:3 of
+msgid "トランスフォーメーション修飾属性名。"
+msgstr "Transformation qualified attribute name."

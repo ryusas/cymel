@@ -1,0 +1,48 @@
+﻿cymel.core.datatypes.transformation
+===================================
+
+.. automodule:: cymel.core.datatypes.transformation
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        ImmutableTransformation
+        Transformation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Aliases:
+
+    
+    .. autodata:: X
+
+
+
+
+
+
+
+
+
+
+
+
+
+

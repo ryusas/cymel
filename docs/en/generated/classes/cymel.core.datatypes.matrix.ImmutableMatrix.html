@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.datatypes.matrix.ImmutableMatrix &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class cymel.core.datatypes.matrix.Matrix" href="cymel.core.datatypes.matrix.Matrix.html" />
+    <link rel="prev" title="cymel.core.datatypes.matrix" href="../cymel.core.datatypes.matrix.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.core.datatypes.matrix.Matrix.html" title="class cymel.core.datatypes.matrix.Matrix"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.matrix.html" title="cymel.core.datatypes.matrix"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.matrix.html" accesskey="U">cymel.core.datatypes.matrix</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.matrix.ImmutableMatrix</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-datatypes-matrix-immutablematrix">
+<h1>class cymel.core.datatypes.matrix.ImmutableMatrix<a class="headerlink" href="#class-cymel-core-datatypes-matrix-immutablematrix" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-d129e14e6fa8464738d0839db24569e625076f11.png" alt="Inheritance diagram of ImmutableMatrix" usemap="#inheritance3670ad9c05" class="inheritance graphviz" /></div>
+<map id="inheritance3670ad9c05" name="inheritance3670ad9c05">
+<area shape="rect" id="node1" href="#cymel.core.datatypes.matrix.ImmutableMatrix" target="_top" title="ImmutableMatrix" alt="" coords="5,44,104,68"/>
+<area shape="rect" id="node2" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" target="_top" title="4x4 マトリックスクラス。" alt="" coords="19,5,91,29"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.datatypes.matrix.</span></span><span class="sig-name descname"><span class="pre">ImmutableMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a></p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">immutable</span></code> wrapper for <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a>.</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addT" title="cymel.core.datatypes.matrix.ImmutableMatrix.addT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addT</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Add the translation value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation" title="cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addTranslation</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Add the translation value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjointIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set the cofactor matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjugateIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set the cofactor matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">homogenizeIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set the matrix obtained by orthonormalizing the 3x3 part.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation" title="cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imulidivsetTranslation</span></code></a>(*args, **kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.init3x3" title="cymel.core.datatypes.matrix.ImmutableMatrix.init3x3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init3x3</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Initialize the 3x3 part.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initT" title="cymel.core.datatypes.matrix.ImmutableMatrix.initT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initT</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Clear the parallel component of the 4th line.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation" title="cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initTranslation</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Clear the parallel component of the 4th line.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.invertIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.invertIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invertIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set the inverse matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mirrorIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Sets the mirrored matrix along the specified axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orthonormalizeIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set the matrix obtained by orthonormalizing the 3x3 part.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.set" title="cymel.core.datatypes.matrix.ImmutableMatrix.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set other values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxes" title="cymel.core.datatypes.matrix.ImmutableMatrix.setAxes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAxes</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set the row and column of the 3x3 part and the translation vector for the 4th row.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxis" title="cymel.core.datatypes.matrix.ImmutableMatrix.setAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAxis</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set the row and column vectors of the 3x3 part.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumn" title="cymel.core.datatypes.matrix.ImmutableMatrix.setColumn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setColumn</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set column vector.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumns" title="cymel.core.datatypes.matrix.ImmutableMatrix.setColumns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setColumns</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set all four column vectors.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setElem" title="cymel.core.datatypes.matrix.ImmutableMatrix.setElem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setElem</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Sets the element at the specified position.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRow" title="cymel.core.datatypes.matrix.ImmutableMatrix.setRow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRow</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set the row vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRows" title="cymel.core.datatypes.matrix.ImmutableMatrix.setRows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRows</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set all four row vectors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setT" title="cymel.core.datatypes.matrix.ImmutableMatrix.setT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setT</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set the translation value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity" title="cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToIdentity</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set the identity matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subT" title="cymel.core.datatypes.matrix.ImmutableMatrix.subT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subT</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Subtract the translation value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation" title="cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subTranslation</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Subtract the translation value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt" title="cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transposeIt</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Set the transposed matrix.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.addT">
+<span class="sig-name descname"><span class="pre">addT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addT" title="Link to this definition">¶</a></dt>
+<dd><p>Add the translation value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 3D vector of translation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation">
+<span class="sig-name descname"><span class="pre">addTranslation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation" title="Link to this definition">¶</a></dt>
+<dd><p>Add the translation value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 3D vector of translation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt">
+<span class="sig-name descname"><span class="pre">adjointIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt" title="Link to this definition">¶</a></dt>
+<dd><p>Set the cofactor matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt">
+<span class="sig-name descname"><span class="pre">adjugateIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt" title="Link to this definition">¶</a></dt>
+<dd><p>Set the cofactor matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt">
+<span class="sig-name descname"><span class="pre">homogenizeIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt" title="Link to this definition">¶</a></dt>
+<dd><p>Set the matrix obtained by orthonormalizing the 3x3 part.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation">
+<span class="sig-name descname"><span class="pre">imulidivsetTranslation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.init3x3">
+<span class="sig-name descname"><span class="pre">init3x3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.init3x3" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize the 3x3 part.</p>
+<p>If you want to initialize all 4x4, you can use <a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity" title="cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setToIdentity</span></code></a>.</p>
+<p>If you want to obtain a new matrix with only translation components, you can use <code class="xref py py-obj docutils literal notranslate"><span class="pre">asTranslationMatrix</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.initT">
+<span class="sig-name descname"><span class="pre">initT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initT" title="Link to this definition">¶</a></dt>
+<dd><p>Clear the parallel component of the 4th line.</p>
+<p>If you want to obtain a new matrix initialized to something other than 3x3, you can use <code class="xref py py-obj docutils literal notranslate"><span class="pre">as3x3</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation">
+<span class="sig-name descname"><span class="pre">initTranslation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation" title="Link to this definition">¶</a></dt>
+<dd><p>Clear the parallel component of the 4th line.</p>
+<p>If you want to obtain a new matrix initialized to something other than 3x3, you can use <code class="xref py py-obj docutils literal notranslate"><span class="pre">as3x3</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.invertIt">
+<span class="sig-name descname"><span class="pre">invertIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.invertIt" title="Link to this definition">¶</a></dt>
+<dd><p>Set the inverse matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt">
+<span class="sig-name descname"><span class="pre">mirrorIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the mirrored matrix along the specified axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mirrorAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Reference axis to mirror. Specify either <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_X" title="cymel.constants.AXIS_X"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_X</span></code></a>, <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_Y" title="cymel.constants.AXIS_Y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_Y</span></code></a>, or <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_Z" title="cymel.constants.AXIS_Z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_Z</span></code></a>.</p></li>
+<li><p><strong>negAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Local axis to orient the opposite of the mirror result so that the determinant (scale) is not reversed. In addition to <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_X" title="cymel.constants.AXIS_X"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_X</span></code></a>, <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_Y" title="cymel.constants.AXIS_Y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_Y</span></code></a>, <a class="reference internal" href="../cymel.constants.html#cymel.constants.AXIS_Z" title="cymel.constants.AXIS_Z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AXIS_Z</span></code></a>, you can specify None, False, and True.  If omitted (True), it will be the same as the mirror reference axis. If False, the 3x3 part will not be reversed. None will reverse all axes from the mirror result.</p></li>
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether the translation value (4th line) is also inverted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt">
+<span class="sig-name descname"><span class="pre">orthonormalizeIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt" title="Link to this definition">¶</a></dt>
+<dd><p>Set the matrix obtained by orthonormalizing the 3x3 part.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.set" title="Link to this definition">¶</a></dt>
+<dd><p>Set other values.</p>
+<p>Similar to the constructor, the following values ​​can be specified.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a></p></li>
+<li><p>16-value sequence</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setAxes">
+<span class="sig-name descname"><span class="pre">setAxes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxes" title="Link to this definition">¶</a></dt>
+<dd><p>Set the row and column of the 3x3 part and the translation vector for the 4th row.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vx</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – X-axis vector to set.</p></li>
+<li><p><strong>vy</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Y-axis vector to set.</p></li>
+<li><p><strong>vz</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Z-axis vector to set.</p></li>
+<li><p><strong>vt</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – The translation vector to set. Only this is not affected by the transpose option.</p></li>
+<li><p><strong>transpose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Set the axis vector of the transposed matrix in the 3x3 part. In other words, False sets the row vector, True sets the column vector.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setAxis">
+<span class="sig-name descname"><span class="pre">setAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxis" title="Link to this definition">¶</a></dt>
+<dd><p>Set the row and column vectors of the 3x3 part.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Axis specification (0=X, 1=Y, 2=Z).</p></li>
+<li><p><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Axis vector to set.</p></li>
+<li><p><strong>transpose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Sets the axis vector of the transposed matrix. In other words, False sets the row vector, True sets the column vector.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setColumn">
+<span class="sig-name descname"><span class="pre">setColumn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumn" title="Link to this definition">¶</a></dt>
+<dd><p>Set column vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Column index (0-3).</p></li>
+<li><p><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 4-dimensional vector to set.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setColumns">
+<span class="sig-name descname"><span class="pre">setColumns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumns" title="Link to this definition">¶</a></dt>
+<dd><p>Set all four column vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v0</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 4-dimensional vector in the first column.</p></li>
+<li><p><strong>v1</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 4-dimensional vector in the second column.</p></li>
+<li><p><strong>v2</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 4-dimensional vector in the third column.</p></li>
+<li><p><strong>v3</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 4-dimensional vector in the 4th column.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setElem">
+<span class="sig-name descname"><span class="pre">setElem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setElem" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the element at the specified position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specify the row from 0 to 3.</p></li>
+<li><p><strong>col</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specify the column from 0 to 3.</p></li>
+<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Value to set.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setRow">
+<span class="sig-name descname"><span class="pre">setRow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRow" title="Link to this definition">¶</a></dt>
+<dd><p>Set the row vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Row index (0-3).</p></li>
+<li><p><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 4-dimensional vector to set.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setRows">
+<span class="sig-name descname"><span class="pre">setRows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRows" title="Link to this definition">¶</a></dt>
+<dd><p>Set all four row vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v0</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 4-dimensional vector in the first row.</p></li>
+<li><p><strong>v1</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 4-dimensional vector in the second row.</p></li>
+<li><p><strong>v2</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 4-dimensional vector in the third row.</p></li>
+<li><p><strong>v3</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 4-dimensional vector in the 4th row.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setT">
+<span class="sig-name descname"><span class="pre">setT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setT" title="Link to this definition">¶</a></dt>
+<dd><p>Set the translation value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 3D vector of translation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity">
+<span class="sig-name descname"><span class="pre">setToIdentity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity" title="Link to this definition">¶</a></dt>
+<dd><p>Set the identity matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">self</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.subT">
+<span class="sig-name descname"><span class="pre">subT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subT" title="Link to this definition">¶</a></dt>
+<dd><p>Subtract the translation value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 3D vector of translation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation">
+<span class="sig-name descname"><span class="pre">subTranslation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation" title="Link to this definition">¶</a></dt>
+<dd><p>Subtract the translation value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 3D vector of translation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt">
+<span class="sig-name descname"><span class="pre">transposeIt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt" title="Link to this definition">¶</a></dt>
+<dd><p>Set the transposed matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> (self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.datatypes.matrix.ImmutableMatrix</a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addT"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.addT()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.addTranslation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.adjointIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.adjugateIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.homogenizeIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.imulidivsetTranslation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.init3x3"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.init3x3()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initT"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.initT()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.initTranslation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.invertIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.invertIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.mirrorIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.orthonormalizeIt()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.set"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.set()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxes"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setAxes()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setAxis"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setAxis()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumn"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setColumn()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setColumns"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setColumns()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setElem"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setElem()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRow"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setRow()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setRows"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setRows()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setT"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setT()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.setToIdentity()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subT"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.subT()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.subTranslation()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt"><code class="docutils literal notranslate"><span class="pre">ImmutableMatrix.transposeIt()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../cymel.core.datatypes.matrix.html"
+                          title="previous chapter">cymel.core.datatypes.matrix</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cymel.core.datatypes.matrix.Matrix.html"
+                          title="next chapter">class cymel.core.datatypes.matrix.Matrix</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.core.datatypes.matrix.Matrix.html" title="class cymel.core.datatypes.matrix.Matrix"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.datatypes.matrix.html" title="cymel.core.datatypes.matrix"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.matrix.html" >cymel.core.datatypes.matrix</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.matrix.ImmutableMatrix</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

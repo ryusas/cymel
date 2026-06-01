@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:2
+msgid "class cymel.ui.uitemplate.UITemplate"
+msgstr "class cymel.ui.uitemplate.UITemplate"
+
+#: cymel.ui.uitemplate.UITemplate:1 of
+msgid "mel UI の :mayacmd:`uiTemplate` ラッパークラス。"
+msgstr ":mayacmd:`uiTemplate` wrapper class for mel UI."
+
+#: cymel.ui.uitemplate.UITemplate:3 of
+msgid "`with` で :mayacmd:`setUITemplate` が行える。"
+msgstr ":mayacmd:`setUITemplate` can be done with `with`."
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+#: cymel.ui.uitemplate.UITemplate:20 cymel.ui.uitemplate.UITemplate.__init__:1
+#: of
+msgid "初期化。"
+msgstr "Initialization."
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.ui.uitemplate.UITemplate:22 cymel.ui.uitemplate.UITemplate.__init__:3
+#: of
+msgid "UIテンプレート名。 省略するか、存在しない名前を指定すると新規生成される。"
+msgstr ""
+"UI template name. If omitted or a name that does not exist is specified, a "
+"new name will be generated."
+
+#: cymel.ui.uitemplate.UITemplate:25 cymel.ui.uitemplate.UITemplate.__init__:6
+#: of
+msgid "既存のUIテンプレート名を指定した場合に、 既存のものを削除して作り直すかどうか。"
+msgstr ""
+"If an existing UI template name is specified, whether to delete the existing"
+" one and recreate it."
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ""
+":py:obj:`__init__ <cymel.ui.uitemplate.UITemplate.__init__>`\\ \\(\\[name\\,"
+" force\\]\\)"
+msgstr ""
+":py:obj:`__init__ <cymel.ui.uitemplate.UITemplate.__init__>`\\ \\(\\[name\\,"
+" force\\]\\)"
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ""
+":py:obj:`define <cymel.ui.uitemplate.UITemplate.define>`\\ \\(uiType\\, "
+"\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`define <cymel.ui.uitemplate.UITemplate.define>`\\ \\(uiType\\, "
+"\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+#: cymel.ui.uitemplate.UITemplate.define:1 of
+msgid "テンプレートにUIオプション値を設定する。"
+msgstr "Set UI option values ​​in templates."
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ":py:obj:`delete <cymel.ui.uitemplate.UITemplate.delete>`\\ \\(\\)"
+msgstr ":py:obj:`delete <cymel.ui.uitemplate.UITemplate.delete>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+#: cymel.ui.uitemplate.UITemplate.delete:1 of
+msgid "このテンプレートを削除する。"
+msgstr "Delete this template."
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ":py:obj:`exists <cymel.ui.uitemplate.UITemplate.exists>`\\ \\(name\\)"
+msgstr ":py:obj:`exists <cymel.ui.uitemplate.UITemplate.exists>`\\ \\(name\\)"
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ":py:obj:`name <cymel.ui.uitemplate.UITemplate.name>`\\ \\(\\)"
+msgstr ":py:obj:`name <cymel.ui.uitemplate.UITemplate.name>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ":py:obj:`pop <cymel.ui.uitemplate.UITemplate.pop>`\\ \\(\\)"
+msgstr ":py:obj:`pop <cymel.ui.uitemplate.UITemplate.pop>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ":py:obj:`push <cymel.ui.uitemplate.UITemplate.push>`\\ \\(\\)"
+msgstr ":py:obj:`push <cymel.ui.uitemplate.UITemplate.push>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:39
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: cymel.ui.uitemplate.UITemplate.define:3 of
+msgid "uiTemplate -defineTemplate 相当の機能"
+msgstr "uiTemplate -defineTemplate equivalent function"
+
+#: cymel.ui.uitemplate.UITemplate.define:5 of
+msgid "cmds の ui 関数、又はオブジェクト。"
+msgstr "cmds ui function or object."
+
+#: cymel.ui.uitemplate.UITemplate.define:6 of
+msgid "uiType関数に渡すテンプレートにするオプション引数"
+msgstr "Optional argument to be the template passed to the uiType function"

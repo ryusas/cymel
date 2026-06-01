@@ -1,0 +1,307 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:2
+msgid "class cymel.utils.namespace.Namespace"
+msgstr "class cymel.utils.namespace.Namespace"
+
+#: cymel.utils.namespace.Namespace:1 of
+msgid "Mayaネームスペースクラス。"
+msgstr "Maya namespace class."
+
+#: cymel.utils.namespace.Namespace:3 of
+msgid "カレントネームスペースを制御するコンテキストとしても使用できる。"
+msgstr "It can also be used as a context to control the current namespace."
+
+#: cymel.utils.namespace.Namespace:5 of
+msgid "文字列の派生クラスなので、通常の文字列のように振る舞う。"
+msgstr ""
+"Since it is a derived class of string, it behaves like a normal string."
+
+#: cymel.utils.namespace.Namespace:7 of
+msgid "それがMayaに実際に存在するかどうかにかかわらず、 インスタンスは生成できる。 そして、カレントにする際などに存在しなければ生成される。"
+msgstr ""
+"An instance can be created whether or not it actually exists in Maya. If it "
+"does not exist, it will be created when making it current."
+
+#: cymel.utils.namespace.Namespace:11 of
+msgid "イミュータブルである文字列としては、 Mayaの相対ネームスペースモード如何にかかわらず、 常に : で始まる絶対名で扱われる。"
+msgstr ""
+"Immutable strings are always treated as absolute names starting with :, "
+"regardless of Maya's relative namespace mode."
+
+#: cymel.utils.namespace.Namespace:16 of
+msgid "カレントネームスペース設定時、 Mayaの相対ネームスペースモードの設定による挙動の違いには注意が必要。"
+msgstr ""
+"When setting the current namespace, be careful about the difference in "
+"behavior depending on Maya's relative namespace mode setting."
+
+#: cymel.utils.namespace.Namespace:19 of
+msgid "ノード生成は、相対ネームスペースモード設定にかかわらず、 カレントネームスペースでの命名となる。"
+msgstr ""
+"Node generation will be named in the current namespace regardless of the "
+"relative namespace mode setting."
+
+#: cymel.utils.namespace.Namespace:22 of
+msgid "ノード名の評価や指定は、相対ネームスペースモード設定が有効でないと、 カレントネームスペース指定の影響はない。"
+msgstr ""
+"Node name evaluation and specification are not affected by current namespace"
+" specification unless the relative namespace mode setting is enabled."
+
+#: cymel.utils.namespace.Namespace:25 of
+msgid ""
+"本クラスにおけるネームスペースのハンドリングは、ノード生成ではないため、 相対名が有効に機能するのは相対ネームスペースモードが有効な場合のみである。"
+msgstr ""
+"Namespace handling in this class is not node generation, so relative names "
+"function effectively only when relative namespace mode is enabled."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`absolute <cymel.utils.namespace.Namespace.absolute>`\\ \\(\\)"
+msgstr ":py:obj:`absolute <cymel.utils.namespace.Namespace.absolute>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.absolute:1 of
+msgid "カレント設定に依存しない絶対名であり、このネームスペースの文字列そのもの。"
+msgstr ""
+"This is an absolute name that does not depend on the current setting, and is"
+" the string itself for this namespace."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ""
+":py:obj:`children <cymel.utils.namespace.Namespace.children>`\\ "
+"\\(\\[internal\\]\\)"
+msgstr ""
+":py:obj:`children <cymel.utils.namespace.Namespace.children>`\\ "
+"\\(\\[internal\\]\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.children:1 of
+msgid "子ネームスペースのリストを得る。"
+msgstr "Get a list of child namespaces."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`create <cymel.utils.namespace.Namespace.create>`\\ \\(\\)"
+msgstr ":py:obj:`create <cymel.utils.namespace.Namespace.create>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.create:1 of
+msgid "ネームスペースを生成する。"
+msgstr "Generate a namespace."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`current <cymel.utils.namespace.Namespace.current>`\\ \\(\\)"
+msgstr ":py:obj:`current <cymel.utils.namespace.Namespace.current>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.current:1 of
+msgid "カレントネームスペースを得る。"
+msgstr "Get the current namespace."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`exists <cymel.utils.namespace.Namespace.exists>`\\ \\(\\)"
+msgstr ":py:obj:`exists <cymel.utils.namespace.Namespace.exists>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.exists:1 of
+msgid "ネームスペースが実際に存在するかどうか。"
+msgstr "Whether the namespace actually exists."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`isCurrent <cymel.utils.namespace.Namespace.isCurrent>`\\ \\(\\)"
+msgstr ":py:obj:`isCurrent <cymel.utils.namespace.Namespace.isCurrent>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.isCurrent:1 of
+msgid "ネームスペースがカレントかどうか。"
+msgstr "Whether the namespace is current."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ""
+":py:obj:`iterBreadthFirst "
+"<cymel.utils.namespace.Namespace.iterBreadthFirst>`\\ \\(\\)"
+msgstr ""
+":py:obj:`iterBreadthFirst "
+"<cymel.utils.namespace.Namespace.iterBreadthFirst>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.iterBreadthFirst:1 of
+msgid "ネームスペース階層を幅優先反復する。"
+msgstr "Iterate breadth-first through the namespace hierarchy."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ""
+":py:obj:`iterDepthFirst <cymel.utils.namespace.Namespace.iterDepthFirst>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`iterDepthFirst <cymel.utils.namespace.Namespace.iterDepthFirst>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.iterDepthFirst:1 of
+msgid "ネームスペース階層を深さ優先反復する。"
+msgstr "Depth-first iterates through the namespace hierarchy."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`ls <cymel.utils.namespace.Namespace.ls>`\\ \\(\\[pattern\\]\\)"
+msgstr ":py:obj:`ls <cymel.utils.namespace.Namespace.ls>`\\ \\(\\[pattern\\]\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.ls:1 of
+msgid "このネームスペース直下のノードのリストを得る。"
+msgstr "Get a list of nodes directly under this namespace."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`name <cymel.utils.namespace.Namespace.name>`\\ \\(\\)"
+msgstr ":py:obj:`name <cymel.utils.namespace.Namespace.name>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.name:1 of
+msgid "Maya の相対ネームスペースモードの影響のもと、相対名を得る。"
+msgstr ""
+"Obtain a relative name under the influence of Maya's relative namespace "
+"mode."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`parent <cymel.utils.namespace.Namespace.parent>`\\ \\(\\)"
+msgstr ":py:obj:`parent <cymel.utils.namespace.Namespace.parent>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.parent:1 of
+msgid "親ネームスペースを得る。"
+msgstr "Get the parent namespace."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`relative <cymel.utils.namespace.Namespace.relative>`\\ \\(\\)"
+msgstr ":py:obj:`relative <cymel.utils.namespace.Namespace.relative>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.relative:1 of
+msgid "カレントネームスペースからの相対名を得る。"
+msgstr "Get the name relative to the current namespace."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ""
+":py:obj:`relativeMode <cymel.utils.namespace.Namespace.relativeMode>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`relativeMode <cymel.utils.namespace.Namespace.relativeMode>`\\ "
+"​​\\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.relativeMode:1 of
+msgid "相対ネームスペースモードが有効かどうか。"
+msgstr "Whether relative namespace mode is enabled."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`setCurrent <cymel.utils.namespace.Namespace.setCurrent>`\\ \\(\\)"
+msgstr ":py:obj:`setCurrent <cymel.utils.namespace.Namespace.setCurrent>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.setCurrent:1 of
+msgid "ネームスペースをカレントにする。存在しない場合は追加される。"
+msgstr "Make the namespace current. It will be added if it does not exist."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ""
+":py:obj:`setRelativeMode "
+"<cymel.utils.namespace.Namespace.setRelativeMode>`\\ \\(state\\)"
+msgstr ""
+":py:obj:`setRelativeMode "
+"<cymel.utils.namespace.Namespace.setRelativeMode>`\\ ​​\\(state\\)"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: cymel.utils.namespace.Namespace.setRelativeMode:1 of
+msgid "相対ネームスペースモードをセットする。"
+msgstr "Set relative namespace mode."
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:47
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.utils.namespace.Namespace.absolute:3
+#: cymel.utils.namespace.Namespace.name:6
+#: cymel.utils.namespace.Namespace.relative:6 of
+msgid "`str`"
+msgstr "`str`"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.utils.namespace.Namespace.children:3 of
+msgid "Mayaのシステムネームスペースを除外しない。"
+msgstr "Do not exclude Maya's system namespace."
+
+#: cymel.utils.namespace.Namespace.children:5
+#: cymel.utils.namespace.Namespace.ls:7 of
+msgid "`list`"
+msgstr "`list`"
+
+#: cymel.utils.namespace.Namespace.current:3 of
+msgid "`Namespace`"
+msgstr "`Namespace`"
+
+#: cymel.utils.namespace.Namespace.exists:3
+#: cymel.utils.namespace.Namespace.relativeMode:3 of
+msgid "`bool`"
+msgstr "`bool`"
+
+#: cymel.utils.namespace.Namespace.iterBreadthFirst:3
+#: cymel.utils.namespace.Namespace.iterDepthFirst:3 of
+msgid "yield `Namespace`"
+msgstr "yield `Namespace`"
+
+#: cymel.utils.namespace.Namespace.ls:3 of
+msgid "名前のパターン。"
+msgstr "name pattern."
+
+#: cymel.utils.namespace.Namespace.ls:5 of
+msgid ":mayacmd:`ls` コマンドのオプションを指定可能。"
+msgstr ":mayacmd:`ls` command options can be specified."
+
+#: cymel.utils.namespace.Namespace.name:3 of
+msgid "相対ネームスペースモードが ON の場合はカレントネームスペースから、 OFF の場合はルートネームスペースからの相対名となる。"
+msgstr ""
+"If relative namespace mode is ON, it will be a relative name from the "
+"current namespace, and if it is OFF, it will be a relative name from the "
+"root namespace."
+
+#: cymel.utils.namespace.Namespace.parent:3 of
+msgid "`Namespace` or None"
+msgstr "`Namespace` or None"
+
+#: cymel.utils.namespace.Namespace.relative:3 of
+msgid "Mayaの相対ネームスペースモードの状態にかかわらず、 常に、カレントネームスペースからの相対名が得られる。"
+msgstr ""
+"Regardless of Maya's relative namespace mode, names are always relative to "
+"the current namespace."
+
+#: cymel.utils.namespace.Namespace.setRelativeMode:3 of
+msgid "有効か無効か。"
+msgstr "Valid or invalid?"

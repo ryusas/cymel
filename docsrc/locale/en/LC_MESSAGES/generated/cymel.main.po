@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.main.rst:2
+msgid "cymel.main"
+msgstr "cymel.main"
+
+#: cymel.main:1 of
+msgid "UI以外の全機能。"
+msgstr "All functions except UI."
+
+#: cymel.main:3 of
+msgid "以下が全て並列に展開され簡単にアクセスできる（ cymel.ui 以外の全て）。"
+msgstr ""
+"All of the following are expanded in parallel and can be easily accessed "
+"(all except cymel.ui)."
+
+#: cymel.main:5 of
+msgid "現在のセレクションを表す `~.ModuleForSel.sel` や `~.ModuleForSel.selection` 。"
+msgstr ""
+"`~.ModuleForSel.sel` or `~.ModuleForSel.selection` representing the current "
+"selection."
+
+#: cymel.main:6 of
+msgid "cymel.core 以下の全て（主要なノードクラスや、データタイプなど）。"
+msgstr "Everything below cymel.core (major node classes, data types, etc.)."
+
+#: cymel.main:7 of
+msgid "全てのノードクラスにアクセス可能な ``nt`` （ `.NodeTypes` のインスタンスの別名）。"
+msgstr ""
+"``nt`` (another name for an instance of `.NodeTypes`) that has access to all"
+" node classes."
+
+#: cymel.main:8 of
+msgid ""
+"Maya新旧バージョン互換のためのノードタイプ名マップ ``cntm`` ( `.CompatNodeTypeMap` のインスタンスの別名）。"
+msgstr ""
+"Node type name map ``cntm`` (another name for instances of "
+"`.CompatNodeTypeMap`) for compatibility with new and old versions of Maya."
+
+#: cymel.main:9 of
+msgid "cymel.constants の全て。"
+msgstr "All about cymel.constants."
+
+#: cymel.main:10 of
+msgid "cymel.pyutils 以下の全て。"
+msgstr "Everything below cymel.pyutils."
+
+#: cymel.main:11 of
+msgid "cymel.utils 以下の全て。"
+msgstr "Everything under cymel.utils."
+
+#: cymel.main:12 of
+msgid "cymel.initmaya の全て。"
+msgstr "Everything about cymel.initmaya."

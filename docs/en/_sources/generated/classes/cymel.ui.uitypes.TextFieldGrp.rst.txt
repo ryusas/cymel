@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.TextFieldGrp
+===================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: TextFieldGrp
+    :parts: 1
+
+
+
+.. autoclass:: TextFieldGrp
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

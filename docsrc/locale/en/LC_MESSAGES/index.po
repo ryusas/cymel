@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/index.rst:3
+msgid "cymel for Maya (Preview Version)"
+msgstr "cymel for Maya (Preview Version)"
+
+#: ../srcs/index.rst:5
+msgid ""
+"Maya のスクリプティングを Python らしく簡潔で直感的なものとするためのオープンソースの Python モジュールです。 pymel__ "
+"に多大な影響を受けて開発されましたが、本家より軽量で軽快なプログラミングを可能とします。"
+msgstr ""
+"An open source Python module that makes Maya scripting as concise and "
+"intuitive as Python. It was developed with great influence from pymel__, but"
+" it allows for lighter and more nimble programming than the original."
+
+#: ../srcs/index.rst:10
+msgid ""
+"cymel の C は C++ の C です。コアは C++ で実装し、高速に動作させることを狙っています。 現在はフル Python "
+"で書かれたプレビュー版ですが、現段階でも非常に軽量です。"
+msgstr ""
+"C in cymel is C in C++. The core is implemented in C++ and aims to run at "
+"high speed. It's currently a preview version written entirely in Python, but"
+" it's still very lightweight."
+
+#: ../srcs/index.rst:13
+msgid ""
+"正式版のコアは C++ 実装に置き換わる予定ですが、その後も Python 版は維持され、常時切替可能にする計画です。 Maya "
+"バージョンアップ時に大きな変更があった場合など、C++ 実装では労力がかかる対応も Python 版は早期に作業を終えられるようにするとともに、 "
+"全てのプラットフォームでバイナリをビルドできなくとも最低限の動作を保証します。"
+msgstr ""
+"The core of the official version will be replaced by a C++ implementation, "
+"but the plan is to maintain the Python version and allow it to be switched "
+"at any time. The Python version allows you to quickly complete tasks that "
+"would require a lot of effort in a C++ implementation, such as when major "
+"changes are made when upgrading Maya, and it also guarantees the minimum "
+"level of operation even if binaries cannot be built on all platforms."
+
+#: ../srcs/index.rst:19
+msgid "Contents"
+msgstr "Contents"
+
+#: ../srcs/index.rst:30
+msgid "Indices and tables"
+msgstr "Indices and tables"
+
+#: ../srcs/index.rst:32
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../srcs/index.rst:33
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
+
+#: ../srcs/index.rst:34
+msgid ":ref:`search`"
+msgstr ":ref:`search`"

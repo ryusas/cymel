@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class cymel.core.cyobjects.plug.Plug &#8212; cymel 0.29.2025111300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
+    <script src="../../_static/documentation_options.js?v=1e19f19f"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="cymel.core.cyobjects.plug_c" href="../cymel.core.cyobjects.plug_c.html" />
+    <link rel="prev" title="cymel.core.cyobjects.plug" href="../cymel.core.cyobjects.plug.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.plug_c.html" title="cymel.core.cyobjects.plug_c"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.plug.html" title="cymel.core.cyobjects.plug"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.plug.html" accesskey="U">cymel.core.cyobjects.plug</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.plug.Plug</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-cymel-core-cyobjects-plug-plug">
+<h1>class cymel.core.cyobjects.plug.Plug<a class="headerlink" href="#class-cymel-core-cyobjects-plug-plug" title="Link to this heading">¶</a></h1>
+<div class="graphviz"><img src="../../_images/inheritance-42dc4da02096c8490cb13d808a66883cc4d167b9.png" alt="Inheritance diagram of Plug" usemap="#inheritance5f9794850f" class="inheritance graphviz" /></div>
+<map id="inheritance5f9794850f" name="inheritance5f9794850f">
+<area shape="rect" id="node1" href="cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" target="_top" title="Mayaラッパーオブジェクトの抽象基底クラス。" alt="" coords="5,5,77,29"/>
+<area shape="rect" id="node3" href="cymel.core.cyobjects.plug_c.Plug_c.html#cymel.core.cyobjects.plug_c.Plug_c" target="_top" title="`.Plug` クラスでサポートする機能の中核。" alt="" coords="5,44,77,68"/>
+<area shape="rect" id="node2" href="#cymel.core.cyobjects.plug.Plug" target="_top" title="プラグラッパークラス。" alt="" coords="5,83,77,107"/>
+</map><dl class="py class">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.plug.</span></span><span class="sig-name descname"><span class="pre">Plug</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="cymel.core.cyobjects.plug_c.Plug_c.html#cymel.core.cyobjects.plug_c.Plug_c" title="cymel.core.cyobjects.plug_c.Plug_c"><code class="xref py py-class docutils literal notranslate"><span class="pre">Plug_c</span></code></a></p>
+<p>Plug wrapper class.</p>
+<p class="rubric">Methods:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.addElement" title="cymel.core.cyobjects.plug.Plug.addElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addElement</span></code></a>([idx])</p></td>
+<td><p>Add multi-attribute elements in an undoable manner.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.animCurve" title="cymel.core.cyobjects.plug.Plug.animCurve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">animCurve</span></code></a>([dk, direct])</p></td>
+<td><p>Get one animCurve connected to the attribute.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.animCurves" title="cymel.core.cyobjects.plug.Plug.animCurves"><code class="xref py py-obj docutils literal notranslate"><span class="pre">animCurves</span></code></a>([dk])</p></td>
+<td><p>Get a list of all animCurves connected to an attribute.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.animLayers" title="cymel.core.cyobjects.plug.Plug.animLayers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">animLayers</span></code></a>([selected, exact])</p></td>
+<td><p>Get a list of animation layer names to which the plug belongs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.belongsToLayer" title="cymel.core.cyobjects.plug.Plug.belongsToLayer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">belongsToLayer</span></code></a>(layer)</p></td>
+<td><p>Whether it is a member of the specified animation layer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.connect" title="cymel.core.cyobjects.plug.Plug.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect</span></code></a>(src[, force, f, lock, l, ...])</p></td>
+<td><p>Connect from the specified plug to this plug.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.connectTo" title="cymel.core.cyobjects.plug.Plug.connectTo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connectTo</span></code></a>(dst, **kwargs)</p></td>
+<td><p>Connect from this plug to the specified plug.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.createAnimCurve" title="cymel.core.cyobjects.plug.Plug.createAnimCurve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createAnimCurve</span></code></a>([unitless, cls])</p></td>
+<td><p>Generate animCurve node according to the attribute type.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.delete" title="cymel.core.cyobjects.plug.Plug.delete"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete</span></code></a>([force])</p></td>
+<td><p>Delete dynamic attributes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.disconnect" title="cymel.core.cyobjects.plug.Plug.disconnect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disconnect</span></code></a>([src, force, f, nextAvailable, na])</p></td>
+<td><p>Disconnect the input connection.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.isMuted" title="cymel.core.cyobjects.plug.Plug.isMuted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMuted</span></code></a>()</p></td>
+<td><p>Whether muted or not.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.iterElements" title="cymel.core.cyobjects.plug.Plug.iterElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterElements</span></code></a>([start, end, step, all, infinite])</p></td>
+<td><p>Iterate over multi-attribute elements.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.iterHierarchy" title="cymel.core.cyobjects.plug.Plug.iterHierarchy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterHierarchy</span></code></a>([evaluate, connected, checker])</p></td>
+<td><p>Iterate under the plug hierarchy (multi-element, compound child).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.layeredPlug" title="cymel.core.cyobjects.plug.Plug.layeredPlug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">layeredPlug</span></code></a>([layer, selected, exact, best, ...])</p></td>
+<td><p>Get surrogate plugs with animation layers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.listEnum" title="cymel.core.cyobjects.plug.Plug.listEnum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listEnum</span></code></a>([reverse])</p></td>
+<td><p>Get a list of enum attribute name/value pairs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.lock" title="cymel.core.cyobjects.plug.Plug.lock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lock</span></code></a>([val, leaf])</p></td>
+<td><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="cymel.core.cyobjects.plug.Plug.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.mute" title="cymel.core.cyobjects.plug.Plug.mute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mute</span></code></a>(**kwargs)</p></td>
+<td><p>Mute.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.pairBlendPlug" title="cymel.core.cyobjects.plug.Plug.pairBlendPlug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairBlendPlug</span></code></a>([in1, in2, cur, inUse, byWeight])</p></td>
+<td><p>:mayanode:Get the input plug for <code class="xref py py-obj docutils literal notranslate"><span class="pre">pairBlend</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.remove" title="cymel.core.cyobjects.plug.Plug.remove"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove</span></code></a>([b, f, force])</p></td>
+<td><p>Delete if itself is a multi-attribute element plug.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeAllElements" title="cymel.core.cyobjects.plug.Plug.removeAllElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeAllElements</span></code></a>([b, f, force])</p></td>
+<td><p>If the plug itself is a multi-attribute multi-plug, delete all its elements.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeElement" title="cymel.core.cyobjects.plug.Plug.removeElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeElement</span></code></a>([idx, b, f, force])</p></td>
+<td><p>Delete multi-attribute elements.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.reset" title="cymel.core.cyobjects.plug.Plug.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>()</p></td>
+<td><p>Reset to default value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.set" title="cymel.core.cyobjects.plug.Plug.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(val[, safe])</p></td>
+<td><p>Set the attribute value in internal units.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setAlias" title="cymel.core.cyobjects.plug.Plug.setAlias"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAlias</span> <span class="pre">​​</span></code></a>([name])</p></td>
+<td><p>Set or delete a plug alias.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setCached" title="cymel.core.cyobjects.plug.Plug.setCached"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCached</span></code></a>(val[, leaf])</p></td>
+<td><p>Set the Caching flag.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setCaching" title="cymel.core.cyobjects.plug.Plug.setCaching"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCaching</span></code></a>(val[, leaf])</p></td>
+<td><p>Set the Caching flag.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setChannelBox" title="cymel.core.cyobjects.plug.Plug.setChannelBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setChannelBox</span></code></a>(val[, leaf])</p></td>
+<td><p>Set whether to output to the channel box even if it is not keyable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setKey" title="cymel.core.cyobjects.plug.Plug.setKey"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setKey</span></code></a>(**kwargs)</p></td>
+<td><p>Set keyframes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setKeyable" title="cymel.core.cyobjects.plug.Plug.setKeyable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setKeyable</span></code></a>(val[, leaf])</p></td>
+<td><p>Set the Keyable flag.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="cymel.core.cyobjects.plug.Plug.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>([val, leaf])</p></td>
+<td><p>lock or unlock.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setu" title="cymel.core.cyobjects.plug.Plug.setu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setu</span></code></a>(val[, safe])</p></td>
+<td><p>Set attribute values ​​for each UI setting.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.toggle" title="cymel.core.cyobjects.plug.Plug.toggle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toggle</span></code></a>()</p></td>
+<td><p>Toggle attribute values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unlock" title="cymel.core.cyobjects.plug.Plug.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>([below, undoable])</p></td>
+<td><p>Unlocks this plug and the plugs above and below (optional) in the hierarchy.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unmute" title="cymel.core.cyobjects.plug.Plug.unmute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unmute</span></code></a>(**kwargs)</p></td>
+<td><p>Unmute.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Method Details:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.addElement">
+<span class="sig-name descname"><span class="pre">addElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.addElement" title="Link to this definition">¶</a></dt>
+<dd><p>Add multi-attribute elements in an undoable manner.</p>
+<p>The presence or absence of the upper layer is also checked, and it is also guaranteed to add and undo parts that do not exist.</p>
+<p>A list of processed plugs arranged from bottom to top is returned (if the plug already exists, it will be an empty list).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specifies the index to check when it is multi. Can be omitted when itself is an element (existence is unknown). The higher rank will be checked regardless of whether it is omitted or not.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.animCurve">
+<span class="sig-name descname"><span class="pre">animCurve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.animCurve" title="Link to this definition">¶</a></dt>
+<dd><p>Get one animCurve connected to the attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dk</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include driven keys as well.</p></li>
+<li><p><strong>direct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get only directly connected animCurves. By default, the optimal animCurve is obtained, taking into account <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/pairBlend.html">pairBlend</a>, <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/mute.html">mute</a>, and the state of the animation layer (layer selection, Solo setting, etc.).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnimCurve</span></code> derived type or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.animCurves">
+<span class="sig-name descname"><span class="pre">animCurves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.animCurves" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of all animCurves connected to an attribute.</p>
+<p>If you have multiple animCurves depending on the animation layer, you will get them all.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dk</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include driven keys as well.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.animLayers">
+<span class="sig-name descname"><span class="pre">animLayers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.animLayers" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of animation layer names to which the plug belongs.</p>
+<p>Similar to when all=True is specified for <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.layeredPlug" title="cymel.core.cyobjects.plug.Plug.layeredPlug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">layeredPlug</span></code></a>, the layers are obtained in descending order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selected</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Limited to selected layers. However, only the base layer is obtained by default regardless of the state.</p></li>
+<li><p><strong>exact</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If selected=True, whether to limit the base layer to the selected state as well.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.belongsToLayer">
+<span class="sig-name descname"><span class="pre">belongsToLayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.belongsToLayer" title="Link to this definition">¶</a></dt>
+<dd><p>Whether it is a member of the specified animation layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>layer</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Animation layer name (either a string or something that evaluates to a string and becomes a node name). The base layer cannot be specified because it has no substance.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nextAvailable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">na</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.connect" title="Link to this definition">¶</a></dt>
+<dd><p>Connect from the specified plug to this plug.</p>
+<p>Full undo is supported in all cases.</p>
+<p>The output side plug is always returned, and if nextAvailable is False, this plug will be returned, and if it is True, it will be the determined element plug.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>src</strong> (<a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a>) – Input source attributes.</p></li>
+<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Connect by avoiding error factors such as other connections or locks.</p></li>
+<li><p><strong>l</strong><strong>|</strong><strong>lock</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Lock after connecting.</p></li>
+<li><p><strong>na</strong><strong>|</strong><strong>nextAvailable</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Connect to the next available index. Can be used not only for isIndexMatters setting. The connected element plug is returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> or None</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although options cannot be specified, similar operations can be performed using the operator &lt;&lt;.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In order to maintain consistency with <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.disconnect" title="cymel.core.cyobjects.plug.Plug.disconnect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disconnect</span></code></a>, the input is specified for the output, and the direction of specification is opposite to that of pymel’s connect. <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.connectTo" title="cymel.core.cyobjects.plug.Plug.connectTo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connectTo</span></code></a> can also be used in the same direction as pymel.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.connectTo">
+<span class="sig-name descname"><span class="pre">connectTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dst</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.connectTo" title="Link to this definition">¶</a></dt>
+<dd><p>Connect from this plug to the specified plug.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dst</strong> (<a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a>) – Attributes to output to.</p></li>
+<li><p><strong>kwargs</strong> – Other <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.connect" title="cymel.core.cyobjects.plug.Plug.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect</span></code></a> options can be specified.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although options cannot be specified, the same operation is possible with the operator &gt;&gt;.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.createAnimCurve">
+<span class="sig-name descname"><span class="pre">createAnimCurve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unitless</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">&lt;class</span> <span class="pre">'cymel.core.cyobjects.cyobject.CyObject'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.createAnimCurve" title="Link to this definition">¶</a></dt>
+<dd><p>Generate animCurve node according to the attribute type.</p>
+<p>Do not connect to attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>unitless</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Generate animCurve for driven keys.</p></li>
+<li><p><strong>cls</strong> – The class of the object you want to get. Normally you can leave it as the default. If you specify <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, you can get the name as is.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnimCurve</span></code> derived type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.delete" title="Link to this definition">¶</a></dt>
+<dd><p>Delete dynamic attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Delete while avoiding error factors such as existing connections or being locked.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.disconnect">
+<span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nextAvailable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">na</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.disconnect" title="Link to this definition">¶</a></dt>
+<dd><p>Disconnect the input connection.</p>
+<p>Full undo is supported in all cases.</p>
+<p>If nextAvailable is False, the disconnected input plug is returned; if nextAvailable is True, a list of output plugs is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>src</strong> (<a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a>) – Input plug to disconnect. Optional.</p></li>
+<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Even if it is locked, disconnect as much as possible to avoid errors (temporarily unlock it and restore it).</p></li>
+<li><p><strong>na</strong><strong>|</strong><strong>nextAvailable</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – When multiplug and src are specified, searches for connected elements and disconnects them. If there is more than one, they are all disconnected and a list of them is returned. Can be used not only for isIndexMatters setting.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although options cannot be specified, similar operations can be performed using the operator //.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.isMuted">
+<span class="sig-name descname"><span class="pre">isMuted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.isMuted" title="Link to this definition">¶</a></dt>
+<dd><p>Whether muted or not.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.iterElements">
+<span class="sig-name descname"><span class="pre">iterElements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">infinite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.iterElements" title="Link to this definition">¶</a></dt>
+<dd><p>Iterate over multi-attribute elements.</p>
+<p>Specify the start, end, and step in the same way as Python’s slice. It is also possible to specify negative numbers for each.</p>
+<p>If all arguments are omitted, all present elements will be iterated over.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specifies the logical index to start with. If you specify a negative number, the last index of the existing element will be set to -1 and the position will be moved backwards. If omitted (None), the starting point of the existing element is used (the minimum index if step is positive, the maximum index if step is negative).</p></li>
+<li><p><strong>end</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specifies the ending logical index. What is actually retrieved is the position one position before this. If you specify a negative number, the last index of the existing element will be set to -1 and the position will be moved backwards. If omitted (None), the position will be one position beyond the end point of the existing element (if step is positive, the minimum index -1, if it is negative, the maximum index +1).</p></li>
+<li><p><strong>step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specify the number of index steps.</p></li>
+<li><p><strong>all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get the element whether it exists or not. If infinite=True, all=True is also considered.</p></li>
+<li><p><strong>infinite</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Gets the element whether it exists or not, ignores end, and iterates infinitely. However, if step is negative, it will not be less than 0. Be careful of infinite loops if step is positive.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.iterHierarchy">
+<span class="sig-name descname"><span class="pre">iterHierarchy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evaluate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">&lt;function</span> <span class="pre">gettrue&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.iterHierarchy" title="Link to this definition">¶</a></dt>
+<dd><p>Iterate under the plug hierarchy (multi-element, compound child).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>evaluate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Evaluate multiplugs when collecting multielements.</p></li>
+<li><p><strong>connected</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – When collecting multiple elements, use connections as the basis.</p></li>
+<li><p><strong>checker</strong> (<em>callable</em>) – Specify a function that receives one plug and returns <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>. It does not descend to the lower layer from the point where it returns False.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.layeredPlug">
+<span class="sig-name descname"><span class="pre">layeredPlug</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">best</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asPair</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowNonLayer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.layeredPlug" title="Link to this definition">¶</a></dt>
+<dd><p>Get surrogate plugs with animation layers.</p>
+<p>By setting allowNonLayer=True, it can also be used as a means to obtain proxy plugs using other mechanisms (assuming <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/pairBlend.html">pairBlend</a> and <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/mute.html">mute</a>) even if the animation layer is not used.</p>
+<p>Examples of option combinations are shown below.</p>
+<ul class="simple">
+<li><p>Get the plug of the top layer it belongs to: Default</p></li>
+<li><p>Get the plug for the target layer when hitting a key in the current state: best=True</p></li>
+<li><p>Get base layer plug: layer=’’</p></li>
+<li><p>Get the plugs of all layers to which the plug belongs: all=True</p></li>
+<li><p>Get the top of the selection layer to which the plug belongs: selected=True</p></li>
+<li><p>Get all selected layers to which the plug belongs: all=True, selected=True</p></li>
+<li><p>Get the plug if it belongs to the specified layer: layer=”layer name”, exact=True</p></li>
+<li><p>If it belongs to the specified layer, search for that plug, otherwise search from the top: layer=”layer name”</p></li>
+<li><p>If it belongs to the specified layer and is selected, get that plug: layer=”layer name”, selected=True, exact=True</p></li>
+<li><p>If it belongs to the specified layer and is selected, search for that plug, otherwise search sequentially: layer=”layer name”, selected=True</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>layer</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Animation layer to search for.  With the default None, the layer to which the plug belongs will be searched from top to bottom. Specifying “” (empty string) is synonymous with specifying a base layer.  If the plug does not belong to the specified layer, the default behavior is to search for the layers it belongs to from the top. In other words, like <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.animLayers" title="cymel.core.cyobjects.plug.Plug.animLayers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">animLayers</span></code></a>, they are obtained in the order of the layer editor.</p></li>
+<li><p><strong>selected</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Limit the search target layers to those in the selected state.  If layer is specified, filter when that layer is selected.  If layer is not specified, the layer is not selected, or the plug is not a member, the sequentially searched layers will be narrowed down to only those that are selected.</p></li>
+<li><p><strong>exact</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Modify layer and selected options.  If the default is False, if the plug is not a member of the specified layer, other layers and base layers will be searched in turn. Also, even if selected is specified, the selected state does not matter for the base layer that is the last result of sequentially searching layers.  Specifying True will result in strict behavior, and when layer is specified, None will be returned if the plug is not a member of it. Also, the selected flag will be checked for the last base layer as a result of sequentially searching layers.</p></li>
+<li><p><strong>best</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Gets the plug for the layer that is the target of keystrokes in its current state.</p></li>
+<li><p><strong>all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If True is specified, the return value will always be <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>.  Changes the behavior when layers are sequentially searched because layer is not specified, the layer is not a member of the specified layer, or the selected flag does not match. With the default False, depending on whether layer is None or “”, either the first found layer or the last base layer plug is returned, with top priority. If you specify True, plugs for all layers searched sequentially (narrowed down by the selected check) will be acquired.</p></li>
+<li><p><strong>asPair</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If set to True, a pair of <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> and its corresponding layer name will be returned.</p></li>
+<li><p><strong>allowNonLayer</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the plug only belongs to the base layer (not layer blended) and other switch-type nodes are sandwiched, you will get that input plug. <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/pairBlend.html">pairBlend</a> and <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/mute.html">mute</a> are assumed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> or (<a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) or their <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.listEnum">
+<span class="sig-name descname"><span class="pre">listEnum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.listEnum" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of enum attribute name/value pairs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Reorder the pairs so that they are (value, name) instead of (name, value).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.lock">
+<span class="sig-name descname"><span class="pre">lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leaf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.lock" title="Link to this definition">¶</a></dt>
+<dd><p>Alternative name for <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="cymel.core.cyobjects.plug.Plug.setLocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLocked</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.mute">
+<span class="sig-name descname"><span class="pre">mute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.mute" title="Link to this definition">¶</a></dt>
+<dd><p>Mute.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.pairBlendPlug">
+<span class="sig-name descname"><span class="pre">pairBlendPlug</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inUse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">byWeight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.pairBlendPlug" title="Link to this definition">¶</a></dt>
+<dd><p>:mayanode:Get the input plug for <code class="xref py py-obj docutils literal notranslate"><span class="pre">pairBlend</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in1</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Get a plug for input 1.</p></li>
+<li><p><strong>in2</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Get a plug for input 2.</p></li>
+<li><p><strong>cur</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Ignore the in1 and in2 specifications and check the currentDriver of pairBlend to get 1 or 2.</p></li>
+<li><p><strong>inUse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Obtain only if the desired input system is used.</p></li>
+<li><p><strong>byWeight</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Ignores all in1, in2, cur, and inUse specifications and checks the mode and weight of pairBlend to get the input tuples being used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> if byWeight is True, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> if in1 and in2 are both True, otherwise a single <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> or None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.remove" title="Link to this definition">¶</a></dt>
+<dd><p>Delete if itself is a multi-attribute element plug.</p>
+<p>It is the same as when no index is specified for <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeElement" title="cymel.core.cyobjects.plug.Plug.removeElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeElement</span></code></a>, but in this case, an error will occur if used in anything other than an element plug.</p>
+<p>Returns the number of removed elements. However, it also includes the number of multi-attribute elements under the attribute hierarchy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Even if there is a connection, it will be deleted without causing an error.</p></li>
+<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Avoid not only connections but also error factors such as locking as much as possible. This option alone also serves as b=True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.removeAllElements">
+<span class="sig-name descname"><span class="pre">removeAllElements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.removeAllElements" title="Link to this definition">¶</a></dt>
+<dd><p>If the plug itself is a multi-attribute multi-plug, delete all its elements.</p>
+<p>This is the same as not specifying an index for <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeElement" title="cymel.core.cyobjects.plug.Plug.removeElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeElement</span></code></a>, but in this case, an error will occur if used with anything other than multi-plug.</p>
+<p>Returns the number of removed elements. However, it also includes the number of multi-attribute elements under the attribute hierarchy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Even if there is a connection, it will be deleted without causing an error.</p></li>
+<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Avoid not only connections but also error factors such as locking as much as possible. This option alone also serves as b=True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.removeElement">
+<span class="sig-name descname"><span class="pre">removeElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.removeElement" title="Link to this definition">¶</a></dt>
+<dd><p>Delete multi-attribute elements.</p>
+<p>Returns the number of removed elements. However, it also includes the number of multi-attribute elements under the attribute hierarchy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specifies the index to be deleted when it is multi. If omitted, if it is an element, it will be deleted, and if it is a multi, all elements will be deleted.</p></li>
+<li><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Even if there is a connection, it will be deleted without causing an error.</p></li>
+<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Avoid not only connections but also error factors such as locking as much as possible. This option alone also serves as b=True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.reset" title="Link to this definition">¶</a></dt>
+<dd><p>Reset to default value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.set" title="Link to this definition">¶</a></dt>
+<dd><p>Set the attribute value in internal units.</p>
+<p>By specifying None, you can also set the data type attribute to Null. Of course undo is also possible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>val</strong> – Value to set.</p></li>
+<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – An error does not occur even if the attribute cannot be set because it is locked. Also, in the case of numerical compounds such as double3, only the places that can be set are set. Returns the number of attributes that failed to set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None or <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.setAlias">
+<span class="sig-name descname"><span class="pre">setAlias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setAlias" title="Link to this definition">¶</a></dt>
+<dd><p>Set or delete a plug alias.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Alias ​​to set. If you specify None or an empty string, the existing settings will be deleted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.setCached">
+<span class="sig-name descname"><span class="pre">setCached</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leaf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setCached" title="Link to this definition">¶</a></dt>
+<dd><p>Set the Caching flag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – True means it is enabled, False means it is disabled.</p></li>
+<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.setCaching">
+<span class="sig-name descname"><span class="pre">setCaching</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leaf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setCaching" title="Link to this definition">¶</a></dt>
+<dd><p>Set the Caching flag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – True means it is enabled, False means it is disabled.</p></li>
+<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.setChannelBox">
+<span class="sig-name descname"><span class="pre">setChannelBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leaf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setChannelBox" title="Link to this definition">¶</a></dt>
+<dd><p>Set whether to output to the channel box even if it is not keyable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – True means it is enabled, False means it is disabled.</p></li>
+<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.setKey">
+<span class="sig-name descname"><span class="pre">setKey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setKey" title="Link to this definition">¶</a></dt>
+<dd><p>Set keyframes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.setKeyable">
+<span class="sig-name descname"><span class="pre">setKeyable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leaf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setKeyable" title="Link to this definition">¶</a></dt>
+<dd><p>Set the Keyable flag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – True means it is enabled, False means it is disabled.</p></li>
+<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.setLocked">
+<span class="sig-name descname"><span class="pre">setLocked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leaf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setLocked" title="Link to this definition">¶</a></dt>
+<dd><p>lock or unlock.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Locks if True, unlocks if False.</p></li>
+<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the case of unlocking, the <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unlock" title="cymel.core.cyobjects.plug.Plug.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a> method is convenient because it can guarantee the upper and lower plug hierarchy.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.setu">
+<span class="sig-name descname"><span class="pre">setu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.setu" title="Link to this definition">¶</a></dt>
+<dd><p>Set attribute values ​​for each UI setting.</p>
+<p>By specifying None, you can also set the data type attribute to Null. Of course undo is also possible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>val</strong> – Value to set.</p></li>
+<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – An error does not occur even if the attribute cannot be set because it is locked. Also, in the case of numerical compounds such as double3, only the places that can be set are set. Returns the number of attributes that failed to set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None or <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.toggle">
+<span class="sig-name descname"><span class="pre">toggle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.toggle" title="Link to this definition">¶</a></dt>
+<dd><p>Toggle attribute values.</p>
+<p>It only sets the negation of the current value, so it works even if the type is not bool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.unlock">
+<span class="sig-name descname"><span class="pre">unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">below</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">undoable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.unlock" title="Link to this definition">¶</a></dt>
+<dd><p>Unlocks this plug and the plugs above and below (optional) in the hierarchy.</p>
+<p>A list of actually unlocked plugs arranged from top to bottom is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>below</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – This will also unlock the lower layers.</p></li>
+<li><p><strong>undoable</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Possibility of undo.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since the lock status is inherited from the upper layer, it is not possible to judge the lower layer without unlocking the upper layer.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.plug.Plug.unmute">
+<span class="sig-name descname"><span class="pre">unmute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.plug.Plug.unmute" title="Link to this definition">¶</a></dt>
+<dd><p>Unmute.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class cymel.core.cyobjects.plug.Plug</a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug"><code class="docutils literal notranslate"><span class="pre">Plug</span></code></a><ul>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.addElement"><code class="docutils literal notranslate"><span class="pre">Plug.addElement()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.animCurve"><code class="docutils literal notranslate"><span class="pre">Plug.animCurve()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.animCurves"><code class="docutils literal notranslate"><span class="pre">Plug.animCurves()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.animLayers"><code class="docutils literal notranslate"><span class="pre">Plug.animLayers()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.belongsToLayer"><code class="docutils literal notranslate"><span class="pre">Plug.belongsToLayer()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.connect"><code class="docutils literal notranslate"><span class="pre">Plug.connect()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.connectTo"><code class="docutils literal notranslate"><span class="pre">Plug.connectTo()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.createAnimCurve"><code class="docutils literal notranslate"><span class="pre">Plug.createAnimCurve()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.delete"><code class="docutils literal notranslate"><span class="pre">Plug.delete()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.disconnect"><code class="docutils literal notranslate"><span class="pre">Plug.disconnect()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.isMuted"><code class="docutils literal notranslate"><span class="pre">Plug.isMuted()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.iterElements"><code class="docutils literal notranslate"><span class="pre">Plug.iterElements()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.iterHierarchy"><code class="docutils literal notranslate"><span class="pre">Plug.iterHierarchy()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.layeredPlug"><code class="docutils literal notranslate"><span class="pre">Plug.layeredPlug()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.listEnum"><code class="docutils literal notranslate"><span class="pre">Plug.listEnum()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.lock"><code class="docutils literal notranslate"><span class="pre">Plug.lock()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.mute"><code class="docutils literal notranslate"><span class="pre">Plug.mute()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.pairBlendPlug"><code class="docutils literal notranslate"><span class="pre">Plug.pairBlendPlug()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.remove"><code class="docutils literal notranslate"><span class="pre">Plug.remove()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeAllElements"><code class="docutils literal notranslate"><span class="pre">Plug.removeAllElements()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.removeElement"><code class="docutils literal notranslate"><span class="pre">Plug.removeElement()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.reset"><code class="docutils literal notranslate"><span class="pre">Plug.reset()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.set"><code class="docutils literal notranslate"><span class="pre">Plug.set()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setAlias"><code class="docutils literal notranslate"><span class="pre">Plug.setAlias()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setCached"><code class="docutils literal notranslate"><span class="pre">Plug.setCached()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setCaching"><code class="docutils literal notranslate"><span class="pre">Plug.setCaching()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setChannelBox"><code class="docutils literal notranslate"><span class="pre">Plug.setChannelBox()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setKey"><code class="docutils literal notranslate"><span class="pre">Plug.setKey()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setKeyable"><code class="docutils literal notranslate"><span class="pre">Plug.setKeyable()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setLocked"><code class="docutils literal notranslate"><span class="pre">Plug.setLocked()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.setu"><code class="docutils literal notranslate"><span class="pre">Plug.setu()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.toggle"><code class="docutils literal notranslate"><span class="pre">Plug.toggle()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unlock"><code class="docutils literal notranslate"><span class="pre">Plug.unlock()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.unmute"><code class="docutils literal notranslate"><span class="pre">Plug.unmute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../cymel.core.cyobjects.plug.html"
+                          title="previous chapter">cymel.core.cyobjects.plug</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../cymel.core.cyobjects.plug_c.html"
+                          title="next chapter">cymel.core.cyobjects.plug_c</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/generated/classes/cymel.core.cyobjects.plug.Plug.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.plug_c.html" title="cymel.core.cyobjects.plug_c"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../cymel.core.cyobjects.plug.html" title="cymel.core.cyobjects.plug"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.29.2025111300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.plug.html" >cymel.core.cyobjects.plug</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.plug.Plug</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

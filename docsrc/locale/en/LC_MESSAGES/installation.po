@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/installation.rst:6 ../srcs/installation.rst:20
+msgid "インストール"
+msgstr "install"
+
+#: ../srcs/installation.rst:9
+msgid "サポート Maya バージョン"
+msgstr "Support Maya version"
+
+#: ../srcs/installation.rst:11
+msgid "cymel Python版は Maya 2015 以降をサポートします。"
+msgstr "The cymel Python version supports Maya 2015 and later."
+
+#: ../srcs/installation.rst:13
+msgid "C++版は Maya 2012 以降をサポートする予定です。"
+msgstr "The C++ version will support Maya 2012 and later."
+
+#: ../srcs/installation.rst:15
+msgid "Maya 2022 の Python 3 でも動作します。"
+msgstr "Also works with Python 3 in Maya 2022."
+
+#: ../srcs/installation.rst:21
+msgid ""
+"`cymel の GitHub リポジトリ`__ をクローンかダウンロードし、 その中の python フォルダ（cymel "
+"という1つのフォルダが含まれています）に Python パスを通すか、 cymel フォルダを既存の Python "
+"パスの通ったフォルダにコピーしてください。"
+msgstr ""
+"Either clone or download the `cymel GitHub repository`__ and put your Python"
+" path in the python folder (it contains one folder called cymel), or copy "
+"the cymel folder to an existing Python path."
+
+#: ../srcs/installation.rst:27
+msgid "cymel フォルダ以下には、cymel の実行に必要な全てのファイルが含まれています。"
+msgstr "The cymel folder contains all the files needed to run cymel."
+
+#: ../srcs/installation.rst:29
+msgid "以上で完了です。"
+msgstr "That's all."
+
+#: ../srcs/installation.rst:34
+msgid "C++ 実装と Python 実装の切り替え"
+msgstr "Switching between C++ and Python implementations"
+
+#: ../srcs/installation.rst:35
+msgid "正式版で対応予定。"
+msgstr "Scheduled to be supported in the official version."

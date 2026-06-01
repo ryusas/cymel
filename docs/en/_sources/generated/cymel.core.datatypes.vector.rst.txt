@@ -1,0 +1,48 @@
+﻿cymel.core.datatypes.vector
+===========================
+
+.. automodule:: cymel.core.datatypes.vector
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        ImmutableVector
+        Vector
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Aliases:
+
+    
+    .. autodata:: V
+
+
+
+
+
+
+
+
+
+
+
+
+
+

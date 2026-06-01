@@ -1,0 +1,36 @@
+class cymel.ui.uitypes.IconTextStaticLabel
+==========================================
+
+.. currentmodule:: cymel.ui.uitypes
+
+
+.. inheritance-diagram:: IconTextStaticLabel
+    :parts: 1
+
+
+
+.. autoclass:: IconTextStaticLabel
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        UICMD
+
+
+
+
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: UICMD
+
+

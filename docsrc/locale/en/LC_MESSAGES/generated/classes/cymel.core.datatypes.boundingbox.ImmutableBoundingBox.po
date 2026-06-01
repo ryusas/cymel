@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.ImmutableBoundingBox.rst:2
+msgid "class cymel.core.datatypes.boundingbox.ImmutableBoundingBox"
+msgstr "class cymel.core.datatypes.boundingbox.ImmutableBoundingBox"
+
+#: cymel.core.datatypes.boundingbox.ImmutableBoundingBox:1 of
+msgid "`BoundingBox` の `immutable` ラッパー。"
+msgstr "`immutable` wrapper for `BoundingBox`."
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.ImmutableBoundingBox.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.ImmutableBoundingBox.rst:32:<autosummary>:1
+msgid ""
+":py:obj:`clear "
+"<cymel.core.datatypes.boundingbox.ImmutableBoundingBox.clear>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`clear "
+"<cymel.core.datatypes.boundingbox.ImmutableBoundingBox.clear>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.ImmutableBoundingBox.rst:32:<autosummary>:1
+msgid ""
+":py:obj:`expand "
+"<cymel.core.datatypes.boundingbox.ImmutableBoundingBox.expand>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`expand "
+"<cymel.core.datatypes.boundingbox.ImmutableBoundingBox.expand>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.ImmutableBoundingBox.rst:32:<autosummary>:1
+msgid ""
+":py:obj:`transformUsing "
+"<cymel.core.datatypes.boundingbox.ImmutableBoundingBox.transformUsing>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`transformUsing "
+"<cymel.core.datatypes.boundingbox.ImmutableBoundingBox.transformUsing>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.boundingbox.ImmutableBoundingBox.rst:35
+msgid "Methods Details:"
+msgstr "Method Details:"

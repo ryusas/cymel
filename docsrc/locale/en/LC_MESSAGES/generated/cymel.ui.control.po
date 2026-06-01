@@ -1,0 +1,40 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.ui.control.rst:2
+msgid "cymel.ui.control"
+msgstr "cymel.ui.control"
+
+#: cymel.ui.control:1 of
+msgid "mel UI の :mayacmd:`control` ラッパー。"
+msgstr ":mayacmd:`control` wrapper for mel UI."
+
+#: ../srcs/generated/cymel.ui.control.rst:9
+msgid "Classes:"
+msgstr "Classes:"
+
+#: ../srcs/generated/cymel.ui.control.rst:14:<autosummary>:1
+msgid ":py:obj:`Control <cymel.ui.control.Control>`"
+msgstr ":py:obj:`Control <cymel.ui.control.Control>`"
+
+#: ../srcs/generated/cymel.ui.control.rst:14:<autosummary>:1
+msgid "mel UI の :mayacmd:`control` ラッパークラス。"
+msgstr ":mayacmd:`control` wrapper class for mel UI."

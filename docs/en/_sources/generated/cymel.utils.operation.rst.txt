@@ -1,0 +1,57 @@
+﻿cymel.utils.operation
+=====================
+
+.. automodule:: cymel.utils.operation
+
+
+
+    .. rubric:: Classes:
+
+    .. autosummary::
+        :toctree: classes
+        :nosignatures:
+    
+        NonUndoable
+        PreserveSelection
+        UndoChunk
+        UndoTransaction
+        WaitCursor
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions:
+
+    .. autosummary::
+    
+        docmd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .. rubric:: Functions Details:
+
+    
+    .. autofunction:: docmd
+
+

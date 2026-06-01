@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.utils.utils.rst:2
+msgid "cymel.utils.utils"
+msgstr "cymel.utils.utils"
+
+#: cymel.utils.utils:1 of
+msgid "Maya用の様々なヘルパー。"
+msgstr "Various helpers for Maya."
+
+#: ../srcs/generated/cymel.utils.utils.rst:17
+msgid "Functions:"
+msgstr "Functions:"
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+msgid ""
+":py:obj:`affectedAttrNames <cymel.utils.utils.affectedAttrNames>`\\ "
+"\\(nodetype\\, attrname\\)"
+msgstr ""
+":py:obj:`affectedAttrNames <cymel.utils.utils.affectedAttrNames>`\\ "
+"\\(nodetype\\, attrname\\)"
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: cymel.utils.utils.affectedAttrNames:1 of
+msgid "ノードタイプ名とアトリビュート名を指定して、それが影響を与える同一ノードのアトリビュート名リストを得る。"
+msgstr ""
+"Given a node type name and attribute name, get a list of attribute names of "
+"the same node that it affects."
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+msgid ""
+":py:obj:`affectingAttrNames <cymel.utils.utils.affectingAttrNames>`\\ "
+"\\(nodetype\\, attrname\\)"
+msgstr ""
+":py:obj:`affectingAttrNames <cymel.utils.utils.affectingAttrNames>`\\ "
+"\\(nodetype\\, attrname\\)"
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: cymel.utils.utils.affectingAttrNames:1 of
+msgid "ノードタイプ名とアトリビュート名を指定して、それが影響を受ける同一ノードのアトリビュート名リストを得る。"
+msgstr ""
+"Given a node type name and an attribute name, get a list of attribute names "
+"for the same node that it affects."
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+msgid ":py:obj:`correctNodeName <cymel.utils.utils.correctNodeName>`\\ \\(name\\)"
+msgstr ":py:obj:`correctNodeName <cymel.utils.utils.correctNodeName>`\\ \\(name\\)"
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: cymel.utils.utils.correctNodeName:1 of
+msgid "任意の名前をネームスペースを含まないノード名として問題ない形に修正する。"
+msgstr "Correct any name into a valid node name without namespace."
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+msgid ""
+":py:obj:`correctNodeNameNS <cymel.utils.utils.correctNodeNameNS>`\\ "
+"\\(name\\)"
+msgstr ""
+":py:obj:`correctNodeNameNS <cymel.utils.utils.correctNodeNameNS>`\\ "
+"\\(name\\)"
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: cymel.utils.utils.correctNodeNameNS:1 of
+msgid "任意の名前をノード名として問題ない形に修正する。ネームスペースを許容。"
+msgstr ""
+"Correct any name into a form that is acceptable as a node name. Allows "
+"namespaces."
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+msgid ""
+":py:obj:`createNode <cymel.utils.utils.createNode>`\\ \\(nodetype\\, "
+"\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`createNode <cymel.utils.utils.createNode>`\\ ​​\\(nodetype\\, "
+"\\*\\*kwargs\\)"
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: cymel.utils.utils.createNode:1 of
+msgid "ノードを生成する。"
+msgstr "Generate a node."
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+msgid ":py:obj:`enablePlugin <cymel.utils.utils.enablePlugin>`\\ \\(name\\[\\, proc\\]\\)"
+msgstr ""
+":py:obj:`enablePlugin <cymel.utils.utils.enablePlugin>`\\ \\(name\\[\\, "
+"proc\\]\\)"
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: cymel.utils.utils.enablePlugin:1 of
+msgid "プラグインを利用可能にする。"
+msgstr "Make the plugin available."
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+msgid ":py:obj:`escapeForMel <cymel.utils.utils.escapeForMel>`\\ \\(s\\)"
+msgstr ":py:obj:`escapeForMel <cymel.utils.utils.escapeForMel>`\\ \\(s\\)"
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: cymel.utils.utils.escapeForMel:1 of
+msgid "melの文字列向けのエスケープをする。"
+msgstr "Escape for mel strings."
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+msgid ""
+":py:obj:`listEnum <cymel.utils.utils.listEnum>`\\ \\(name\\[\\, attrname\\, "
+"reverse\\]\\)"
+msgstr ""
+":py:obj:`listEnum <cymel.utils.utils.listEnum>`\\ \\(name\\[\\, attrname\\, "
+"reverse\\]\\)"
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: cymel.utils.utils.listEnum:1 of
+msgid "enum アトリビュートの名前と値のペアのリストを得る。"
+msgstr "Get a list of enum attribute name/value pairs."
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+msgid ":py:obj:`loadPlugin <cymel.utils.utils.loadPlugin>`\\ \\(name\\)"
+msgstr ":py:obj:`loadPlugin <cymel.utils.utils.loadPlugin>`\\ \\(name\\)"
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: cymel.utils.utils.loadPlugin:1 of
+msgid "プラグインがロードされていなければロードする。"
+msgstr "Load the plugin if it is not loaded."
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+msgid ":py:obj:`makeNiceName <cymel.utils.utils.makeNiceName>`\\ \\(name\\)"
+msgstr ":py:obj:`makeNiceName <cymel.utils.utils.makeNiceName>`\\ \\(name\\)"
+
+#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: cymel.utils.utils.makeNiceName:1 of
+msgid "mixedCase や CamelCase の名前から Maya の Nice Name を得る。"
+msgstr "Get a nice Maya name from a mixedCase or CamelCase name."
+
+#: ../srcs/generated/cymel.utils.utils.rst:51
+msgid "Functions Details:"
+msgstr "Function Details:"
+
+#: ../srcs/generated/cymel.utils.utils.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.utils.utils.affectedAttrNames:3
+#: cymel.utils.utils.affectingAttrNames:3 of
+msgid "ノードタイプ名。"
+msgstr "Node type name."
+
+#: cymel.utils.utils.affectedAttrNames:4
+#: cymel.utils.utils.affectingAttrNames:4 of
+msgid "アトリビュート名。"
+msgstr "Attribute name."
+
+#: ../srcs/generated/cymel.utils.utils.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.utils.utils.affectedAttrNames:5
+#: cymel.utils.utils.affectingAttrNames:5 cymel.utils.utils.listEnum:15 of
+msgid "`list`"
+msgstr "`list`"
+
+#: cymel.utils.utils.correctNodeName:3 cymel.utils.utils.correctNodeNameNS:3
+#: cymel.utils.utils.makeNiceName:3 of
+msgid "任意の名前。"
+msgstr "Any name."
+
+#: cymel.utils.utils.correctNodeName:4 cymel.utils.utils.correctNodeNameNS:4
+#: cymel.utils.utils.escapeForMel:4 cymel.utils.utils.makeNiceName:4 of
+msgid "`str`"
+msgstr "`str`"
+
+#: cymel.utils.utils.createNode:3 of
+msgid ":mayacmd:`createNode` コマンドの置き換えとして機能する。"
+msgstr "Acts as a replacement for the :mayacmd:`createNode` command."
+
+#: cymel.utils.utils.createNode:5 of
+msgid ""
+"`~.compat_nodetype` による新旧バージョン互換のためのノードタイプ名置換がされつつ、 `~.CyObject` が返される。"
+msgstr ""
+"`~.CyObject` is returned while the node type name is replaced by "
+"`~.compat_nodetype` for compatibility between old and new versions."
+
+#: cymel.utils.utils.enablePlugin:3 of
+msgid "プラグインが存在しない場合もエラーにはしたくない場合に利用する。"
+msgstr ""
+"Use this when you do not want an error to occur even if the plugin does not "
+"exist."
+
+#: cymel.utils.utils.enablePlugin:5 of
+msgid "成功したかどうかの `bool` 値が返される。"
+msgstr "Returns a `bool` value indicating success or failure."
+
+#: cymel.utils.utils.enablePlugin:7 of
+msgid ""
+"デフォルトでは `loadPlugin` が呼び出されるので、 プラグインがロードされていなければロードされるが、 "
+"プラグインが存在しない場合はエラーにはならず 同名プラグインの２度目以降の呼び出し時のリトライは抑制される。"
+msgstr ""
+"By default, `loadPlugin` is called, so if the plugin is not loaded, it will "
+"be loaded, but if the plugin does not exist, no error will occur and retries"
+" will be suppressed when the same name plugin is called for the second time "
+"or later."
+
+#: cymel.utils.utils.enablePlugin:12 cymel.utils.utils.loadPlugin:5 of
+msgid "プラグイン名。"
+msgstr "Plugin name."
+
+#: cymel.utils.utils.enablePlugin:13 of
+msgid "プラグインのロードするために利用する関数。 デフォルトでは `loadPlugin` が利用される。"
+msgstr "Function used to load plugins. By default, `loadPlugin` is used."
+
+#: cymel.utils.utils.enablePlugin:16 of
+msgid "`bool`"
+msgstr "`bool`"
+
+#: cymel.utils.utils.escapeForMel:3 of
+msgid "文字列。"
+msgstr "string."
+
+#: cymel.utils.utils.listEnum:3 of
+msgid "スタティックアトリビュートか ダイナミックアトリビュートか によって指定方法が異なる。"
+msgstr ""
+"The specification method differs depending on whether it is a static "
+"attribute or a dynamic attribute."
+
+#: cymel.utils.utils.listEnum:7 of
+msgid "ダイナミックアトリビュートの場合はプラグ名、 スタティックアトリビュートの場合はノードタイプ。"
+msgstr "Plug name for dynamic attributes, node type for static attributes."
+
+#: cymel.utils.utils.listEnum:10 of
+msgid "スタティックアトリビュートの場合のアトリビュート名。"
+msgstr "Attribute name for static attributes."
+
+#: cymel.utils.utils.listEnum:12 of
+msgid "ペアの並び順を入れ替え、 (名前, 値) ではなく (値, 名前) にする。"
+msgstr ""
+"Reorder the pairs so that they are (value, name) instead of (name, value)."
+
+#: cymel.utils.utils.loadPlugin:3 of
+msgid "新規にロードされた場合にのみプラグイン名が返される。"
+msgstr "The plugin name is returned only if newly loaded."
+
+#: cymel.utils.utils.loadPlugin:6 of
+msgid "`str` or None"
+msgstr "`str` or None"
