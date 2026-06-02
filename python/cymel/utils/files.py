@@ -68,7 +68,7 @@ def importSceneFile(fname, namespace=None, prefix=None, **kwargs):
         文字列ではない真値を指定すると、ファイル名から自動決定される。
     :rtype: `str`
     """
-    if not _path_exists(fname):
+    if not (fname.lower().startswith('maya-rsrc:') or _path_exists(fname)):
         # ファイルが無い場合、カレントプロジェクトから読まれるので、厳密にチェックする。
         raise RuntimeError('File not found.')
 
@@ -78,7 +78,7 @@ def importSceneFile(fname, namespace=None, prefix=None, **kwargs):
         else:
             kwargs['ns'] = _path_splitext(_path_basename(fname))[0]
     elif prefix:
-        if isinstance(namespace, BASESTR):
+        if isinstance(prefix, BASESTR):
             kwargs['rpr'] = prefix
         else:
             kwargs['rpr'] = _path_splitext(_path_basename(fname))[0]
@@ -102,7 +102,7 @@ def referenceSceneFile(fname, namespace=None, prefix=None, **kwargs):
         文字列ではない真値を指定すると、ファイル名から自動決定される。
     :rtype: `str`
     """
-    if not _path_exists(fname):
+    if not (fname.lower().startswith('maya-rsrc:') or _path_exists(fname)):
         # ファイルが無い場合、カレントプロジェクトから読まれるので、厳密にチェックする。
         raise RuntimeError('File not found.')
 
@@ -112,7 +112,7 @@ def referenceSceneFile(fname, namespace=None, prefix=None, **kwargs):
         else:
             kwargs['ns'] = _path_splitext(_path_basename(fname))[0]
     elif prefix:
-        if isinstance(namespace, BASESTR):
+        if isinstance(prefix, BASESTR):
             kwargs['rpr'] = prefix
         else:
             kwargs['rpr'] = _path_splitext(_path_basename(fname))[0]
