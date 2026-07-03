@@ -1,0 +1,271 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:2
+msgid "class cymel.core.cyobjects.dagnode.DagNode"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode:1
+msgid ":mayanode:`dagNode` ノードタイプラッパークラス。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode:3
+msgid "固定引数無しでのクラスインスタンス生成時のノード生成をサポート。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+msgid ":py:obj:`commonAncestor <cymel.core.cyobjects.dagnode.DagNode.commonAncestor>`\\ \\(other\\[\\, skipFirst\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.commonAncestor:1
+msgid "指定したノードとの共通の先祖ノードを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+msgid ":py:obj:`findCommonAncestor <cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor>`\\ \\(\\[nodes\\, skipFirst\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor:1
+msgid "指定したDAGノードに共通の先祖ノードを見つける。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+msgid ":py:obj:`hide <cymel.core.cyobjects.dagnode.DagNode.hide>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.hide:1
+msgid "visibility アトリビュートを False にする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+msgid ":py:obj:`iterBreadthFirst <cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst>`\\ \\(\\[shapes\\, intermediates\\, ...\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst:1
+msgid "DAGノードツリーを幅優先反復する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+msgid ":py:obj:`iterDepthFirst <cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst>`\\ \\(\\[shapes\\, intermediates\\, ...\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst:1
+msgid "DAGノードツリーを深さ優先反復する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+msgid ":py:obj:`iterPath <cymel.core.cyobjects.dagnode.DagNode.iterPath>`\\ \\(\\[end\\, includeStart\\, includeEnd\\, ...\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:1
+msgid "DAGパスをたどるイテレータ。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+msgid ":py:obj:`setParent <cymel.core.cyobjects.dagnode.DagNode.setParent>`\\ \\(\\[parent\\, r\\, add\\, avoidJointShear\\, ...\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.setParent:1
+msgid "親ノードを変更する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+msgid ":py:obj:`show <cymel.core.cyobjects.dagnode.DagNode.show>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.show:1
+msgid "visibility アトリビュートを True にする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:36
+msgid "Attributes:"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.TYPE_BITS:1
+msgid "クラスでサポートしているノードの特徴を表す。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:45
+msgid "Methods Details:"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.commonAncestor:3
+msgid "`findCommonAncestor` を [self, other] で呼び出すことと同じ。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.commonAncestor:5
+msgid "比較するDAGノード。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.commonAncestor:7
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor:5
+msgid "指定したノードの親を探索起点とするかどうか。 デフォルトでは指定したノード自身も結果となり得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.commonAncestor:10
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor:8
+msgid "`DagNode` or None"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor:3
+msgid "1つ以上のDAGノード。省略時はカレントセレクション。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst:3
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst:3
+msgid "シェイプも含めるかどうか。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst:4
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst:4
+msgid "インターミディエイトオブジェクトも含めるかどうか。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst:6
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst:6
+msgid "アンダーワールドノード（カーブオンサーフェース等）も含めるかどうか。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst:8
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst:8
+msgid "yeild `DagNode`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:3
+msgid "終点とする DAG ノード。 省略時はルートまでイテレーションする。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:7
+msgid "始点ノードを含めるかどうか。  上昇のみ（始点が終点の子孫）の場合は、 さらに includeTurn も True である必要がある。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:8
+msgid "始点ノードを含めるかどうか。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:10
+msgid "上昇のみ（始点が終点の子孫）の場合は、 さらに includeTurn も True である必要がある。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:13
+msgid "終点ノードを含めるかどうか。  下降のみ（始点が終点の先祖）の場合は、 さらに includeTurn も True である必要がある。  終点省略時はこの指定は無視され、シーン上の最上位ノードまで常に含める。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:14
+msgid "終点ノードを含めるかどうか。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:16
+msgid "下降のみ（始点が終点の先祖）の場合は、 さらに includeTurn も True である必要がある。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:19
+msgid "終点省略時はこの指定は無視され、シーン上の最上位ノードまで常に含める。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:21
+msgid "上昇から下降への折り返し点を含めるかどうか。  折り返し点とは、イテレーション中の最上位に位置するノードのことで、 `commonAncestor` で取得できるものと同じく、始点と終点の共通の先祖である。  下降のみ（始点が終点の先祖）の場合の始点や 上昇のみ（始点が終点の子孫）の場合の終点は、 始点や終点であると同時に折り返し点でもあるという扱いになる。 それらは、includeStart か includeEnd に加えて includeTurn も True でないと取得されない。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:22
+msgid "上昇から下降への折り返し点を含めるかどうか。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:24
+msgid "折り返し点とは、イテレーション中の最上位に位置するノードのことで、 `commonAncestor` で取得できるものと同じく、始点と終点の共通の先祖である。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:27
+msgid "下降のみ（始点が終点の先祖）の場合の始点や 上昇のみ（始点が終点の子孫）の場合の終点は、 始点や終点であると同時に折り返し点でもあるという扱いになる。 それらは、includeStart か includeEnd に加えて includeTurn も True でないと取得されない。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:0
+msgid "戻り値"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:33
+msgid "yield (`DagNode`, `int`)  整数値は次の値をとり、辿っている方向を示す。  * 0 - 下降。 * 1 - 上昇。 * 2 - 上昇から下降への折り返し点（イテレーション中の最上位点）。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:34
+msgid "yield (`DagNode`, `int`)"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:36
+msgid "整数値は次の値をとり、辿っている方向を示す。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:38
+msgid "0 - 下降。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:39
+msgid "1 - 上昇。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:40
+msgid "2 - 上昇から下降への折り返し点（イテレーション中の最上位点）。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:43
+msgid "終点ノード空間の始点ノードのローカルマトリックス配列を得る場合、 デフォルト設定で使用し、 返される整数値が 0 なら inverseMatrix、1 なら matrix を参照すれば良い。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.setParent:3
+msgid "親の `.Transform` や名前。省略すればペアレント解除。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.setParent:5
+msgid "現在のローカル変換を維持するかどうか。 デフォルトではワールド空間で維持される。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.setParent:8
+msgid "移動ではなくパスを追加する（インスタンス）。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.setParent:10
+msgid "このノードが joint で、ワールド姿勢の維持のために shear が必要な場合に、その使用を避けるための transform が 追加されるようにする。 これは本来の Maya の挙動だが、このメソッドのデフォルトでは joint の shear を使用することで transform を追加しない。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.setParent:16
+msgid "このノードが joint の場合に inverseScale 接続・切断の 保守をしない。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.setParent:21
+msgid "2019 全てと 2020.0 では、joint の shear は機能しないため、 avoidJointShear=True を指定しないと姿勢を維持できない場合がある。 この問題は 2020.1 以降はバグとして修正されている。"
+msgstr ""

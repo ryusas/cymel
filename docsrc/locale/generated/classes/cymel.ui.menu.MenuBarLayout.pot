@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:2
+msgid "class cymel.ui.menu.MenuBarLayout"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuBarLayout:1
+msgid "mel UI の :mayacmd:`menuBarLayout` ラッパークラス。"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuBarLayout:3
+msgid "`with` で :mayacmd:`setParent` が行える。"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuBarLayout:5
+msgid "Maya 標準コマンドに基づき、 レイアウトされたメニューを得るには `children` ではなく `menus` などのメソッドを用いなければならない。 とはいえ `.Menu` からは `.Control.parent` でレイアウトを取得出来る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+msgid ":py:obj:`UICMD <cymel.ui.menu.MenuBarLayout.UICMD>`"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+msgid ":py:obj:`clear <cymel.ui.menu.MenuBarLayout.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuBarLayout.clear:1
+msgid "子とメニューを全て削除する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+msgid ":py:obj:`menu <cymel.ui.menu.MenuBarLayout.menu>`\\ \\(\\[idxOrPath\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuBarLayout.menu:1
+msgid "メニューを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+msgid ":py:obj:`menuNames <cymel.ui.menu.MenuBarLayout.menuNames>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuBarLayout.menuNames:1
+msgid "メニューの名前リストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+msgid ":py:obj:`menus <cymel.ui.menu.MenuBarLayout.menus>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuBarLayout.menus:1
+msgid "メニューのリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+msgid ":py:obj:`numMenus <cymel.ui.menu.MenuBarLayout.numMenus>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:35:<autosummary>:1
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuBarLayout.numMenus:1
+msgid "メニューの数を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:38
+msgid "Methods Details:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuBarLayout.menu:3
+msgid "子のインデックス（ゼロオリジン）か、 階層下の相対パス。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuBarLayout.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuBarLayout.menu:6
+msgid "`.Control`"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuBarLayout.menuNames:3
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuBarLayout.menus:3
+msgid "`list`"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuBarLayout.numMenus:3
+msgid "`int`"
+msgstr ""

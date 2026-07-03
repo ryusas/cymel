@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/cymel.utils.optionvar.rst:2
+msgid "cymel.utils.optionvar"
+msgstr ""
+
+#: ../../python/cymel/utils/optionvar.py:docstring of cymel.utils.optionvar:1
+msgid ":mayacmd:`optionVar` ラッパー。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.optionvar.rst:9
+msgid "Classes:"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.optionvar.rst:14:<autosummary>:1
+msgid ":py:obj:`OptionVar <cymel.utils.optionvar.OptionVar>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.optionvar.rst:14:<autosummary>:1
+msgid ":mayacmd:`optionVar` ラッパークラス。"
+msgstr ""

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel.qt.widgets &#8212; cymel 0.31.2026070300 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
+    <script src="../_static/documentation_options.js?v=c67973fb"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/translations.js?v=4755f45a"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="cymel.qt.uifile" href="cymel.qt.uifile.html" />
+    <link rel="prev" title="cymel.qt.binding" href="cymel.qt.binding.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.uifile.html" title="cymel.qt.uifile"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.binding.html" title="cymel.qt.binding"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.31.2026070300 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.qt.widgets</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-cymel.qt.widgets">
+<span id="cymel-qt-widgets"></span><h1>cymel.qt.widgets<a class="headerlink" href="#module-cymel.qt.widgets" title="Link to this heading">¶</a></h1>
+<p>Maya に依存しない Qt ウィジェットヘルパー。</p>
+<p class="rubric">Functions:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.qt.widgets.dumpWidgetHierarchy" title="cymel.qt.widgets.dumpWidgetHierarchy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dumpWidgetHierarchy</span></code></a>([base, indent])</p></td>
+<td><p>ウィジェットの objectName 階層を出力する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.qt.widgets.getDpiScaling" title="cymel.qt.widgets.getDpiScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDpiScaling</span></code></a>([widget])</p></td>
+<td><p>汎用 Qt の論理 DPI スケールを取得する。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.qt.widgets.getFirstTopLevelWindow" title="cymel.qt.widgets.getFirstTopLevelWindow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFirstTopLevelWindow</span></code></a>()</p></td>
+<td><p>表示中の最初のトップレベル QWidget を取得する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.qt.widgets.getWidgetByPathName" title="cymel.qt.widgets.getWidgetByPathName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getWidgetByPathName</span></code></a>(name[, base, separator, ...])</p></td>
+<td><p>objectName のパスからウィジェットまたはレイアウトを検索する。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.qt.widgets.getWidgetFullPathName" title="cymel.qt.widgets.getWidgetFullPathName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getWidgetFullPathName</span></code></a>(widget[, separator])</p></td>
+<td><p>ウィジェットの objectName パスを取得する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.qt.widgets.showAppWindow" title="cymel.qt.widgets.showAppWindow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">showAppWindow</span></code></a>(proc[, deleteOnClose, ...])</p></td>
+<td><p>既存または新規の QApplication 上でウィンドウを生成して表示する。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.qt.widgets.showWindow" title="cymel.qt.widgets.showWindow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">showWindow</span></code></a>(wd[, deleteOnClose])</p></td>
+<td><p>ウィジェットをウィンドウとして表示する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.qt.widgets.unscaleTextFont" title="cymel.qt.widgets.unscaleTextFont"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unscaleTextFont</span></code></a>(textCtl[, height, pixel, ...])</p></td>
+<td><p>固定サイズテキスト用の 逆スケール値と QFont or None を得る。</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Functions Details:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.dumpWidgetHierarchy">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">dumpWidgetHierarchy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.dumpWidgetHierarchy" title="Link to this definition">¶</a></dt>
+<dd><p>ウィジェットの objectName 階層を出力する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>widget</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code>) -- 基点のウィジェット。
+省略時はトップレベルから全てがダンプされる。</p></li>
+<li><p><strong>indent</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- 基点のレベルのインデントスペース。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.getDpiScaling">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">getDpiScaling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.getDpiScaling" title="Link to this definition">¶</a></dt>
+<dd><p>汎用 Qt の論理 DPI スケールを取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.getFirstTopLevelWindow">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">getFirstTopLevelWindow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.getFirstTopLevelWindow" title="Link to this definition">¶</a></dt>
+<dd><p>表示中の最初のトップレベル QWidget を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.getWidgetByPathName">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">getWidgetByPathName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'|'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">includesLayout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.getWidgetByPathName" title="Link to this definition">¶</a></dt>
+<dd><p>objectName のパスからウィジェットまたはレイアウトを検索する。</p>
+<p>指定パスの間に未知のウィジェットが存在する場合も許容され、
+くまなく探索される。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- 基点から下のパス名（基点を含まない）。</p></li>
+<li><p><strong>base</strong> -- 基点のウィジェット。
+省略時はパスの先頭の名前がトップレベルから探される。
+それでも見つからない場合は <a class="reference internal" href="#cymel.qt.widgets.getFirstTopLevelWindow" title="cymel.qt.widgets.getFirstTopLevelWindow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFirstTopLevelWindow</span></code></a>
+で取得されるアプリケーションのメインウィンドウとなる。</p></li>
+<li><p><strong>separator</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- パスの区切り文字。</p></li>
+<li><p><strong>includesLayout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) -- レイアウトマネージャもノードとしてカウントするかどうか。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">QLayout</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.getWidgetFullPathName">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">getWidgetFullPathName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'|'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.getWidgetFullPathName" title="Link to this definition">¶</a></dt>
+<dd><p>ウィジェットの objectName パスを取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>widget</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code>) -- ウィジェット。</p></li>
+<li><p><strong>separator</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- パスの区切り文字。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.showAppWindow">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">showAppWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deleteOnClose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setupRoundingOnNewApp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traceSettings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.showAppWindow" title="Link to this definition">¶</a></dt>
+<dd><p>既存または新規の QApplication 上でウィンドウを生成して表示する。</p>
+<p>QApplication が未初期化なら初期化され、メインループに入りリターンされない。
+組み込み環境下ならメインウィンドウ（やトップレベルウィンドウ）の子となり、
+リターンされる。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>proc</strong> (<em>callable</em>) -- ウィジェット型や関数など、
+ウィジェットを生成するための実行可能オブジェクト。</p></li>
+<li><p><strong>deleteOnClose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) -- 閉じた時に削除されるようにするかどうか。
+WA_DeleteOnClose 属性が上書きセットされる。</p></li>
+<li><p><strong>setupRoundingOnNewApp</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) -- 新規に開くアプリケーションで、且つ
+Qt6 以降で devicePixelRatio が非整数のスクリーンが1つ以上在る場合に、
+HighDpiScaleFactorRoundingPolicy を RoundPreferFloor に設定する。
+QGraphicsView でアンチエイリアスを使用した場合のアーティファクトを
+回避するためである。
+ちなみに、Mayaでは QT_ENABLE_HIGHDPI_SCALING=0 が設定されているため
+devicePixelRatio はすべて 1.0 となり問題は発生しない。</p></li>
+<li><p><strong>traceSettings</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) -- Qtのバージョンやアプリケーションのセッティング等をprint出力する。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.showWindow">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">showWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deleteOnClose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.showWindow" title="Link to this definition">¶</a></dt>
+<dd><p>ウィジェットをウィンドウとして表示する。</p>
+<p>アプリケーションのメインウィンドウや
+既に表示されているトップレベルウィンドウ（最初の一つ）
+が在れば、その子になる。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wd</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code>) -- ウィジェット。</p></li>
+<li><p><strong>deleteOnClose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) -- 閉じた時に削除されるようにするかどうか。
+WA_DeleteOnClose 属性が上書きセットされる。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.unscaleTextFont">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">unscaleTextFont</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">textCtl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.unscaleTextFont" title="Link to this definition">¶</a></dt>
+<dd><p>固定サイズテキスト用の 逆スケール値と QFont or None を得る。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>textCtl</strong> -- サイズの判定に用いるテキスト系コントロール。
+boundingRect, font, setFont メソッドを備えていること。</p></li>
+<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) -- フォントがポイントサイズで指定された場合の基準となる高さを指定する。
+このサイズに合わせるためのスケール値が計算される。
+デフォルトの None は、環境に応じて変わるデフォルト値を意味する。</p></li>
+<li><p><strong>pixel</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- フォントがピクセルサイズで指定された場合の基準となるサイズを指定する。
+このサイズに合わせるためのスケール値が計算される。</p></li>
+</ul>
+</dd>
+<dt class="field-even">Paream callable prepare<a class="reference external" href="https://docs.python.org/3/library/functions.html#callable" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callable</span></code></a> prepare<span class="colon">:</span></dt>
+<dd class="field-even"><p>情報をキャッシュから得られなかった場合に、
+ポイントサイズによる高さを調べる前に準備（仮の描画など）が必要な場合、
+その呼出可能オブジェクトを指定する。</p>
+</dd>
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">QFont</span></code> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel.qt.widgets</a><ul>
+<li><a class="reference internal" href="#cymel.qt.widgets.dumpWidgetHierarchy"><code class="docutils literal notranslate"><span class="pre">dumpWidgetHierarchy()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.getDpiScaling"><code class="docutils literal notranslate"><span class="pre">getDpiScaling()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.getFirstTopLevelWindow"><code class="docutils literal notranslate"><span class="pre">getFirstTopLevelWindow()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.getWidgetByPathName"><code class="docutils literal notranslate"><span class="pre">getWidgetByPathName()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.getWidgetFullPathName"><code class="docutils literal notranslate"><span class="pre">getWidgetFullPathName()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.showAppWindow"><code class="docutils literal notranslate"><span class="pre">showAppWindow()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.showWindow"><code class="docutils literal notranslate"><span class="pre">showWindow()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.unscaleTextFont"><code class="docutils literal notranslate"><span class="pre">unscaleTextFont()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="cymel.qt.binding.html"
+                          title="前の章へ">cymel.qt.binding</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="cymel.qt.uifile.html"
+                          title="次の章へ">cymel.qt.uifile</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.qt.widgets.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.uifile.html" title="cymel.qt.uifile"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.binding.html" title="cymel.qt.binding"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.31.2026070300 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.qt.widgets</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; 著作権 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

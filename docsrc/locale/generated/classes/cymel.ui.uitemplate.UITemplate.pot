@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:2
+msgid "class cymel.ui.uitemplate.UITemplate"
+msgstr ""
+
+#: ../../python/cymel/ui/uitemplate.py:docstring of cymel.ui.uitemplate.UITemplate:1
+msgid "mel UI の :mayacmd:`uiTemplate` ラッパークラス。"
+msgstr ""
+
+#: ../../python/cymel/ui/uitemplate.py:docstring of cymel.ui.uitemplate.UITemplate:3
+msgid "`with` で :mayacmd:`setUITemplate` が行える。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+#: ../../python/cymel/ui/uitemplate.py:docstring of cymel.ui.uitemplate.UITemplate:20
+#: ../../python/cymel/ui/uitemplate.py:docstring of cymel.ui.uitemplate.UITemplate.__init__:1
+msgid "初期化。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/ui/uitemplate.py:docstring of cymel.ui.uitemplate.UITemplate:22
+#: ../../python/cymel/ui/uitemplate.py:docstring of cymel.ui.uitemplate.UITemplate.__init__:3
+msgid "UIテンプレート名。 省略するか、存在しない名前を指定すると新規生成される。"
+msgstr ""
+
+#: ../../python/cymel/ui/uitemplate.py:docstring of cymel.ui.uitemplate.UITemplate:25
+#: ../../python/cymel/ui/uitemplate.py:docstring of cymel.ui.uitemplate.UITemplate.__init__:6
+msgid "既存のUIテンプレート名を指定した場合に、 既存のものを削除して作り直すかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ":py:obj:`__init__ <cymel.ui.uitemplate.UITemplate.__init__>`\\ \\(\\[name\\, force\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ":py:obj:`define <cymel.ui.uitemplate.UITemplate.define>`\\ \\(uiType\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+#: ../../python/cymel/ui/uitemplate.py:docstring of cymel.ui.uitemplate.UITemplate.define:1
+msgid "テンプレートにUIオプション値を設定する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ":py:obj:`delete <cymel.ui.uitemplate.UITemplate.delete>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+#: ../../python/cymel/ui/uitemplate.py:docstring of cymel.ui.uitemplate.UITemplate.delete:1
+msgid "このテンプレートを削除する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ":py:obj:`exists <cymel.ui.uitemplate.UITemplate.exists>`\\ \\(name\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ":py:obj:`name <cymel.ui.uitemplate.UITemplate.name>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ":py:obj:`pop <cymel.ui.uitemplate.UITemplate.pop>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:36:<autosummary>:1
+msgid ":py:obj:`push <cymel.ui.uitemplate.UITemplate.push>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.uitemplate.UITemplate.rst:39
+msgid "Methods Details:"
+msgstr ""
+
+#: ../../python/cymel/ui/uitemplate.py:docstring of cymel.ui.uitemplate.UITemplate.define:3
+msgid "uiTemplate -defineTemplate 相当の機能"
+msgstr ""
+
+#: ../../python/cymel/ui/uitemplate.py:docstring of cymel.ui.uitemplate.UITemplate.define:5
+msgid "cmds の ui 関数、又はオブジェクト。"
+msgstr ""
+
+#: ../../python/cymel/ui/uitemplate.py:docstring of cymel.ui.uitemplate.UITemplate.define:6
+msgid "uiType関数に渡すテンプレートにするオプション引数"
+msgstr ""

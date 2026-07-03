@@ -1,0 +1,29 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.utils.operation.UndoChunk.rst:2
+msgid "class cymel.utils.operation.UndoChunk"
+msgstr ""
+
+#: ../../python/cymel/utils/operation.py:docstring of cymel.utils.operation.UndoChunk:1
+msgid "1つのアンドゥチャンクを作るコンテキスト。"
+msgstr ""
+
+#: ../../python/cymel/utils/operation.py:docstring of cymel.utils.operation.UndoChunk:3
+msgid "インスタンス `undoChunk` が生成済み。"
+msgstr ""

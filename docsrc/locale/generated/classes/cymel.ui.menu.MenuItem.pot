@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuItem.rst:2
+msgid "class cymel.ui.menu.MenuItem"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuItem:1
+msgid "mel UI の :mayacmd:`menuItem` ラッパークラス。"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuItem:3
+msgid "subMenu=True を指定すると `.SubMenuItem` となる。"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.MenuItem:6
+msgid ":mayacmd:`menuItem` は :mayacmd:`control` では ないようなのだが、このモジュールでは `.Control` の派生型としている。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuItem.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuItem.rst:30:<autosummary>:1
+msgid ":py:obj:`UICMD <cymel.ui.menu.MenuItem.UICMD>`"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.MenuItem.rst:33
+msgid "Methods Details:"
+msgstr ""

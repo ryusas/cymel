@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:2
+msgid "cymel.pyutils.immutables"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables:1
+msgid "簡易的なイミュータブル化ラッパー。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:9
+msgid "Classes:"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:19:<autosummary>:1
+msgid ":py:obj:`ImmutableDict <cymel.pyutils.immutables.ImmutableDict>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:19:<autosummary>:1
+msgid "イミュータブル `dict`"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:21
+msgid "Exceptions:"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:29:<autosummary>:1
+msgid ":py:obj:`CymelImmutableError <cymel.pyutils.immutables.CymelImmutableError>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:29:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.CymelImmutableError:1
+msgid "`immutable` ラップされたオブジェクトが書き換えられた。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:31
+msgid "Functions:"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:46:<autosummary>:1
+msgid ":py:obj:`immutable <cymel.pyutils.immutables.immutable>`\\ \\(type\\_or\\_obj\\, \\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:46:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutable:1
+msgid "オブジェクトが変更不可になるラッパーを生成する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:46:<autosummary>:1
+msgid ":py:obj:`immutableType <cymel.pyutils.immutables.immutableType>`\\ \\(cls\\[\\, name\\, module\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:46:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutableType:1
+msgid "オブジェクトが変更不可になるラッパークラスを生成する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:49
+msgid "Constants:"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.OPTIONAL_MUTATOR_DICT:1
+msgid "クラスごとの追加ミューテーターを把握するための辞書。適切なメンテナンスが必要。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:58
+msgid "Exceptions Details:"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:67
+msgid "Functions Details:"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutable:3
+msgid "`immutableType` を呼び出し、 デフォルト設定でラッパークラスを得て、 それでラップした新規インスタンスが返される。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:0
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutable:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutable:13
+msgid "ラップするオブジェクトのクラス、又はインスタンス。 旧スタイルのクラスは非サポート。 インスタンスが指定された場合のラッパーの初期化引数は インスタンス自身となる為、コピーコンストラクタが実装 されている場合にのみ動作する。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutable:19
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutable:21
+msgid "type_or_obj にクラスが指定された場合の初期化引数。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutable:0
+msgid "戻り値"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutable:23
+msgid "ラッパーオブジェクト。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutableType:9
+msgid "ラッパークラスはそのクラス名とともにキャッシュされ再利用される。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutableType:11
+msgid "型ごとに初めて生成されたラッパークラスは、型のみをキーとしてもキャッシュされ、 クラス名が省略された場合には任意の名前としても再利用される。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutableType:14
+msgid "ラッパークラスでは、オブジェクトの属性値を書き換える メソッドがオーバーライドされ、それらがコールされた際に `CymelImmutableError` が送出されるようになる。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutableType:18
+msgid "どのメソッドをオーバーライドすべきかは、特殊メソッドの 有無を検査する事で自動決定されるが、 それだけでは補い切れないクラスに関しては `OPTIONAL_MUTATOR_DICT` 辞書で管理している為、 必要に応じて拡張しなければならない。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutableType:24
+msgid "イミュータブル化する元のクラス。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutableType:26
+msgid "ラッパークラスの名前。 省略時は ``'Immutable元のクラス名'`` となる。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutableType:29
+msgid "ラッパークラスを提供するモジュール名。 __module__ 属性にセットされる。 省略時は、元のクラスの __module__ 属性を引き継ぐ。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.immutables.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutableType:33
+msgid "`type`"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutableType:36
+msgid "name も module も省略した場合は、 指定したクラスで最初に生成された immutable ラッパークラスが 再利用されるため、結果的にどちらも不定となる。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutableType:41
+msgid "`OPTIONAL_MUTATOR_DICT` には、インスタンスを変更する メソッド名をクラスごとに列挙する必要がある。 これは、対応させたいクラスごとに拡張する必要がある事を 意味する。ただし、全てのメソッドについて列挙する必要が あるわけではない。 `OPTIONAL_MUTATOR_DICT` をあえて拡張せずとも、 属性の設定、削除、代入演算子などはデフォルトで封じられる。 あえてメソッド名を列挙する必要があるのは以下のケースである。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutableType:50
+msgid "属性のメソッドを呼び出すメソッド。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables.immutableType:51
+msgid "組み込みやバイナリモジュールで提供される型のメソッド。"
+msgstr ""

@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:2
+msgid "class cymel.ui.control.Control"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control:1
+msgid "mel UI の :mayacmd:`control` ラッパークラス。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`UICMD <cymel.ui.control.Control.UICMD>`"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`call <cymel.ui.control.Control.call>`\\ \\(\\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.call:1
+msgid "コントロールのコマンドを呼び出す。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`delete <cymel.ui.control.Control.delete>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.delete:1
+msgid "このコントロールを削除する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`exists <cymel.ui.control.Control.exists>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.exists:1
+msgid "UIが存在しているかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`get <cymel.ui.control.Control.get>`\\ \\(name\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.get:1
+msgid "コントロールの属性値を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`getCurrent <cymel.ui.control.Control.getCurrent>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.getCurrent:1
+msgid "カレントペアレントを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`getValue <cymel.ui.control.Control.getValue>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.getValue:1
+msgid "値を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`makeWeakCB <cymel.ui.control.Control.makeWeakCB>`\\ \\(name\\, \\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.makeWeakCB:1
+msgid "このインスタンスを参照せずにメソッドを呼び出す関数ラッパーを返す。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`name <cymel.ui.control.Control.name>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.name:1
+msgid "フルパスUI名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`parent <cymel.ui.control.Control.parent>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.parent:1
+msgid "親UIを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`ref <cymel.ui.control.Control.ref>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.ref:1
+msgid "弱参照を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`relativeName <cymel.ui.control.Control.relativeName>`\\ \\(base\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.relativeName:1
+msgid "上位のUIからの相対名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`set <cymel.ui.control.Control.set>`\\ \\(name\\, value\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.set:1
+msgid "コントロールの属性値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`setValue <cymel.ui.control.Control.setValue>`\\ \\(val\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.setValue:1
+msgid "値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`shortName <cymel.ui.control.Control.shortName>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.shortName:1
+msgid "パスを含まないUI名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`type <cymel.ui.control.Control.type>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.type:1
+msgid "UIタイプ名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+msgid ":py:obj:`window <cymel.ui.control.Control.window>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:46:<autosummary>:1
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.window:1
+msgid "UIの属するウィンドウを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:49
+msgid "Methods Details:"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.call:3
+msgid "このメソッドを経ずとも、 オブジェクトを直接呼び出すことも可能。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.call:6
+msgid "コマンドのキーワード引数。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:0
+msgid "戻り値"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.call:7
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.set:5
+msgid "コマンドの戻り値。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.control.Control.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.exists:3
+msgid "`bool`"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.get:3
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.set:3
+msgid "属性名（コマンドオプション名）。"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.get:4
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.set:4
+msgid "属性値（型は属性による）。"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.getCurrent:3
+msgid "`.Control`"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.getValue:3
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.setValue:3
+msgid "UIコントロールごとの違いを吸収する。"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.makeWeakCB:3
+msgid "メソッド名。"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.makeWeakCB:4
+msgid "固定化する引数リスト。"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.makeWeakCB:5
+msgid "固定化するキーワード引数。"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.name:3
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.relativeName:5
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.shortName:3
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.type:3
+msgid "`str`"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.parent:3
+msgid "`.Layout` or `.Menu`"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.relativeName:4
+msgid "基準となる上位のUI。"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.setValue:5
+msgid "セットする値。"
+msgstr ""
+
+#: ../../python/cymel/ui/control.py:docstring of cymel.ui.control.Control.window:3
+msgid "`.Window`"
+msgstr ""

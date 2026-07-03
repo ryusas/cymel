@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.ui.layout.AutoLayout.rst:2
+msgid "class cymel.ui.layout.AutoLayout"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout:1
+msgid "`.FormLayout` に自動レイアウト機能を追加したもの。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.AutoLayout.rst:31:<autosummary>:1
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout:3
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout.__init__:1
+msgid "初期化。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.AutoLayout.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout:5
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout.__init__:3
+msgid "並べる方向。"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout:6
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout.__init__:4
+msgid "コントロール間の空白。"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout:7
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout.__init__:5
+msgid "並び方向に対する幅の両脇のスペース。 省略時は spacing と同じ値となる。"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout:10
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout.__init__:8
+msgid "並びを反転するかどうか。"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout:11
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout.__init__:9
+msgid "均等配置する為の比率。 数に満たない分は自動的で埋められる。"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout:14
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout.__init__:12
+msgid "比率を利用せずに詰めて配置する場合、 伸縮可能とする子のインデックスを指定する。 インデックスは 1 から始まり、 負数の場合は末尾からの意味になる。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.AutoLayout.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.AutoLayout.rst:31:<autosummary>:1
+msgid ":py:obj:`__init__ <cymel.ui.layout.AutoLayout.__init__>`\\ \\(\\[arg0\\, horizontal\\, spacing\\, ...\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.AutoLayout.rst:31:<autosummary>:1
+msgid ":py:obj:`redistribute <cymel.ui.layout.AutoLayout.redistribute>`\\ \\(\\[ratios\\, adjustIndex\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.AutoLayout.rst:31:<autosummary>:1
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout.redistribute:1
+msgid "子のコントロールを再配置する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.AutoLayout.rst:34
+msgid "Methods Details:"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout.redistribute:3
+msgid "配置比率を再指定出来る。"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.AutoLayout.redistribute:4
+msgid "詰めて配置する場合の伸縮可能インデックスを再指定出来る。"
+msgstr ""

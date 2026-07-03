@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cymel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: en <LL@li.org>\n"
@@ -284,157 +284,206 @@ msgid "3Dベクトルクラス。"
 msgstr "3D vector class."
 
 #: ../srcs/modules.rst:73
-msgid "UI Controls"
-msgstr "UI Controls"
-
-#: ../srcs/modules.rst:85:<autosummary>:1
-msgid ":py:obj:`cymel.ui.control <cymel.ui.control>`"
-msgstr ":py:obj:`cymel.ui.control <cymel.ui.control>`"
-
-#: ../srcs/modules.rst:85:<autosummary>:1
-msgid "mel UI の :mayacmd:`control` ラッパー。"
-msgstr ":mayacmd:`control` wrapper for mel UI."
-
-#: ../srcs/modules.rst:85:<autosummary>:1
-msgid ":py:obj:`cymel.ui.layout <cymel.ui.layout>`"
-msgstr ":py:obj:`cymel.ui.layout <cymel.ui.layout>`"
-
-#: ../srcs/modules.rst:85:<autosummary>:1
-msgid "mel UI の :mayacmd:`layout` ラッパー。"
-msgstr ":mayacmd:`layout` wrapper for mel UI."
-
-#: ../srcs/modules.rst:85:<autosummary>:1
-msgid ":py:obj:`cymel.ui.menu <cymel.ui.menu>`"
-msgstr ":py:obj:`cymel.ui.menu <cymel.ui.menu>`"
-
-#: ../srcs/modules.rst:85:<autosummary>:1
-msgid "mel UI のメニュー系のラッパー。"
-msgstr "Menu wrapper for mel UI."
-
-#: ../srcs/modules.rst:85:<autosummary>:1
-msgid ":py:obj:`cymel.ui.uitemplate <cymel.ui.uitemplate>`"
-msgstr ":py:obj:`cymel.ui.uitemplate <cymel.ui.uitemplate>`"
-
-#: ../srcs/modules.rst:85:<autosummary>:1
-msgid "mel UI の :mayacmd:`uiTemplate` ラッパー。"
-msgstr ":mayacmd:`uiTemplate` wrapper for mel UI."
-
-#: ../srcs/modules.rst:85:<autosummary>:1
-msgid ":py:obj:`cymel.ui.uitypes <cymel.ui.uitypes>`"
-msgstr ":py:obj:`cymel.ui.uitypes <cymel.ui.uitypes>`"
-
-#: ../srcs/modules.rst:85:<autosummary>:1
-msgid "mel UI タイプ情報と、自動生成UIクラス。"
-msgstr "mel UI type information and automatically generated UI classes."
-
-#: ../srcs/modules.rst:85:<autosummary>:1
-msgid ":py:obj:`cymel.ui.window <cymel.ui.window>`"
-msgstr ":py:obj:`cymel.ui.window <cymel.ui.window>`"
-
-#: ../srcs/modules.rst:85:<autosummary>:1
-msgid "mel UI の :mayacmd:`window` ラッパー。"
-msgstr ":mayacmd:`window` wrapper for mel UI."
-
-#: ../srcs/modules.rst:89
 msgid "Utilities"
 msgstr "Utilities"
 
-#: ../srcs/modules.rst:101:<autosummary>:1
+#: ../srcs/modules.rst:85:<autosummary>:1
 msgid ":py:obj:`cymel.utils.files <cymel.utils.files>`"
 msgstr ":py:obj:`cymel.utils.files <cymel.utils.files>`"
 
-#: ../srcs/modules.rst:101:<autosummary>:1
+#: ../srcs/modules.rst:85:<autosummary>:1
 msgid "Mayaファイル関連。"
 msgstr "Maya file related."
 
-#: ../srcs/modules.rst:101:<autosummary>:1
+#: ../srcs/modules.rst:85:<autosummary>:1
 msgid ":py:obj:`cymel.utils.melgvar <cymel.utils.melgvar>`"
 msgstr ":py:obj:`cymel.utils.melgvar <cymel.utils.melgvar>`"
 
-#: ../srcs/modules.rst:101:<autosummary>:1
+#: ../srcs/modules.rst:85:<autosummary>:1
 msgid "MELグローバル変数ラッパー。"
 msgstr "MEL global variable wrapper."
 
-#: ../srcs/modules.rst:101:<autosummary>:1
+#: ../srcs/modules.rst:85:<autosummary>:1
 msgid ":py:obj:`cymel.utils.namespace <cymel.utils.namespace>`"
 msgstr ":py:obj:`cymel.utils.namespace <cymel.utils.namespace>`"
 
-#: ../srcs/modules.rst:101:<autosummary>:1
+#: ../srcs/modules.rst:85:<autosummary>:1
 msgid "Mayaネームスペース。"
 msgstr "Maya namespace."
 
-#: ../srcs/modules.rst:101:<autosummary>:1
+#: ../srcs/modules.rst:85:<autosummary>:1
 msgid ":py:obj:`cymel.utils.operation <cymel.utils.operation>`"
 msgstr ":py:obj:`cymel.utils.operation <cymel.utils.operation>`"
 
-#: ../srcs/modules.rst:101:<autosummary>:1
+#: ../srcs/modules.rst:85:<autosummary>:1
 msgid "Maya操作関連。"
 msgstr "Maya operation related."
 
-#: ../srcs/modules.rst:101:<autosummary>:1
+#: ../srcs/modules.rst:85:<autosummary>:1
 msgid ":py:obj:`cymel.utils.optionvar <cymel.utils.optionvar>`"
 msgstr ":py:obj:`cymel.utils.optionvar <cymel.utils.optionvar>`"
 
-#: ../srcs/modules.rst:101:<autosummary>:1
+#: ../srcs/modules.rst:85:<autosummary>:1
 msgid ":mayacmd:`optionVar` ラッパー。"
 msgstr ":mayacmd:`optionVar` wrapper."
 
-#: ../srcs/modules.rst:101:<autosummary>:1
+#: ../srcs/modules.rst:85:<autosummary>:1
 msgid ":py:obj:`cymel.utils.utils <cymel.utils.utils>`"
 msgstr ":py:obj:`cymel.utils.utils <cymel.utils.utils>`"
 
-#: ../srcs/modules.rst:101:<autosummary>:1
+#: ../srcs/modules.rst:85:<autosummary>:1
 msgid "Maya用の様々なヘルパー。"
 msgstr "Various helpers for Maya."
 
-#: ../srcs/modules.rst:105
+#: ../srcs/modules.rst:89
 msgid "Utilities (Independent of Maya)"
 msgstr "Utilities (Independent of Maya)"
 
-#: ../srcs/modules.rst:115:<autosummary>:1
+#: ../srcs/modules.rst:99:<autosummary>:1
 msgid ":py:obj:`cymel.pyutils.finalizer <cymel.pyutils.finalizer>`"
 msgstr ":py:obj:`cymel.pyutils.finalizer <cymel.pyutils.finalizer>`"
 
-#: ../srcs/modules.rst:115:<autosummary>:1
+#: ../srcs/modules.rst:99:<autosummary>:1
 msgid "任意のオブジェクトが破棄されたときに呼び出されるファイナライザ機能。"
 msgstr "Finalizer function called when any object is destroyed."
 
-#: ../srcs/modules.rst:115:<autosummary>:1
+#: ../srcs/modules.rst:99:<autosummary>:1
 msgid ":py:obj:`cymel.pyutils.immutables <cymel.pyutils.immutables>`"
 msgstr ":py:obj:`cymel.pyutils.immutables <cymel.pyutils.immutables>`"
 
-#: ../srcs/modules.rst:115:<autosummary>:1
+#: ../srcs/modules.rst:99:<autosummary>:1
 msgid "簡易的なイミュータブル化ラッパー。"
 msgstr "A simple immutable wrapper."
 
-#: ../srcs/modules.rst:115:<autosummary>:1
+#: ../srcs/modules.rst:99:<autosummary>:1
 msgid ":py:obj:`cymel.pyutils.ordereddict <cymel.pyutils.ordereddict>`"
 msgstr ":py:obj:`cymel.pyutils.ordereddict <cymel.pyutils.ordereddict>`"
 
-#: ../srcs/modules.rst:115:<autosummary>:1
+#: ../srcs/modules.rst:99:<autosummary>:1
 msgid "循環参照によるメモリリークが解決された `ordereddict` 。"
 msgstr "`ordereddict` with memory leak due to circular references resolved."
 
-#: ../srcs/modules.rst:115:<autosummary>:1
+#: ../srcs/modules.rst:99:<autosummary>:1
 msgid ":py:obj:`cymel.pyutils.pyutils <cymel.pyutils.pyutils>`"
 msgstr ":py:obj:`cymel.pyutils.pyutils <cymel.pyutils.pyutils>`"
 
-#: ../srcs/modules.rst:115:<autosummary>:1
+#: ../srcs/modules.rst:99:<autosummary>:1
 msgid "Mayaに依存しない諸機能。"
 msgstr "Functions that do not depend on Maya."
 
-#: ../srcs/modules.rst:117
+#: ../srcs/modules.rst:103
+msgid "UI Controls"
+msgstr "UI Controls"
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid ":py:obj:`cymel.ui.control <cymel.ui.control>`"
+msgstr ":py:obj:`cymel.ui.control <cymel.ui.control>`"
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid "mel UI の :mayacmd:`control` ラッパー。"
+msgstr ":mayacmd:`control` wrapper for mel UI."
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid ":py:obj:`cymel.ui.layout <cymel.ui.layout>`"
+msgstr ":py:obj:`cymel.ui.layout <cymel.ui.layout>`"
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid "mel UI の :mayacmd:`layout` ラッパー。"
+msgstr ":mayacmd:`layout` wrapper for mel UI."
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid ":py:obj:`cymel.ui.menu <cymel.ui.menu>`"
+msgstr ":py:obj:`cymel.ui.menu <cymel.ui.menu>`"
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid "mel UI のメニュー系のラッパー。"
+msgstr "Menu wrapper for mel UI."
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid ":py:obj:`cymel.ui.uitemplate <cymel.ui.uitemplate>`"
+msgstr ":py:obj:`cymel.ui.uitemplate <cymel.ui.uitemplate>`"
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid "mel UI の :mayacmd:`uiTemplate` ラッパー。"
+msgstr ":mayacmd:`uiTemplate` wrapper for mel UI."
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid ":py:obj:`cymel.ui.uitypes <cymel.ui.uitypes>`"
+msgstr ":py:obj:`cymel.ui.uitypes <cymel.ui.uitypes>`"
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid "mel UI タイプ情報と、自動生成UIクラス。"
+msgstr "mel UI type information and automatically generated UI classes."
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid ":py:obj:`cymel.ui.window <cymel.ui.window>`"
+msgstr ":py:obj:`cymel.ui.window <cymel.ui.window>`"
+
+#: ../srcs/modules.rst:115:<autosummary>:1
+msgid "mel UI の :mayacmd:`window` ラッパー。"
+msgstr ":mayacmd:`window` wrapper for mel UI."
+
+#: ../srcs/modules.rst:119
+msgid "Qt Helper"
+msgstr "Qt Helper"
+
+#: ../srcs/modules.rst:130:<autosummary>:1
+#, fuzzy
+msgid ":py:obj:`cymel.qt <cymel.qt>`"
+msgstr ":py:obj:`cymel.ui <cymel.ui>`"
+
+#: ../srcs/modules.rst:130:<autosummary>:1
+msgid "Qt バインディング差分吸収パッケージ。"
+msgstr "Qt binding diff absorption package."
+
+#: ../srcs/modules.rst:130:<autosummary>:1
+#, fuzzy
+msgid ":py:obj:`cymel.qt.binding <cymel.qt.binding>`"
+msgstr ":py:obj:`cymel.ui.window <cymel.ui.window>`"
+
+#: ../srcs/modules.rst:130:<autosummary>:1
+msgid "PySide バインディングの判別と互換エイリアス。"
+msgstr "PySide binding determination and compatibility aliases."
+
+#: ../srcs/modules.rst:130:<autosummary>:1
+#, fuzzy
+msgid ":py:obj:`cymel.qt.widgets <cymel.qt.widgets>`"
+msgstr ":py:obj:`cymel.ui.window <cymel.ui.window>`"
+
+#: ../srcs/modules.rst:130:<autosummary>:1
+msgid "Maya に依存しない Qt ウィジェットヘルパー。"
+msgstr "Maya independent Qt widget helper."
+
+#: ../srcs/modules.rst:130:<autosummary>:1
+#, fuzzy
+msgid ":py:obj:`cymel.qt.uifile <cymel.qt.uifile>`"
+msgstr ":py:obj:`cymel.utils.files <cymel.utils.files>`"
+
+#: ../srcs/modules.rst:130:<autosummary>:1
+msgid "Qt Designer の .ui ファイルヘルパー。"
+msgstr ".ui file helper for Qt Designer."
+
+#: ../srcs/modules.rst:130:<autosummary>:1
+#, fuzzy
+msgid ":py:obj:`cymel.qt.maya <cymel.qt.maya>`"
+msgstr ":py:obj:`cymel.initmaya <cymel.initmaya>`"
+
+#: ../srcs/modules.rst:130:<autosummary>:1
+msgid "Maya UI に関する Qt ヘルパー。"
+msgstr "Qt helpers for Maya UI."
+
+#: ../srcs/modules.rst:132
 msgid "Indices and tables"
 msgstr "Indices and tables"
 
-#: ../srcs/modules.rst:119
+#: ../srcs/modules.rst:134
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
-#: ../srcs/modules.rst:120
+#: ../srcs/modules.rst:135
 msgid ":ref:`modindex`"
 msgstr ":ref:`modindex`"
 
-#: ../srcs/modules.rst:121
+#: ../srcs/modules.rst:136
 msgid ":ref:`search`"
 msgstr ":ref:`search`"

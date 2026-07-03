@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:2
+msgid "class cymel.core.typeregistry.NodeTypes"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes:1
+msgid "ノードタイプのラッパークラスのマネージャー。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes:3
+msgid "唯一のインスタンスである `nodetypes` が生成済み。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes:5
+msgid "全てのノードクラスはこの属性としてアクセスできる。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes:7
+msgid "cymel では、プラグインも含む全てのノードタイプの ラッパークラスが提供されるが、機能実装のために あらかじめ用意されている主要なノードタイプ以外は、 最初にアクセスしたときなどの必要なときに自動生成される。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes:12
+msgid "システムが提供する標準的なクラス名は、 ノードタイプ名の先頭を大文字にした名前となる。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes:15
+msgid "既存のノードクラスを継承してカスタムクラスを作ることもできる。 カスタムクラスはノードタイプのみから純粋に決まるものでも、 その他の任意の条件によって決まるものでも良い。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes:19
+msgid "カスタムクラスは、 システムに登録するなどせずにそのまま利用可能だが、 `registerNodeClass` によって登録することもできる。 インスタンスを得る場合、 そのクラスを直接指定すればインスタンスを得られるが、 クラスが登録してあれば `.CyObject` からインスタンスを得ることで 自動的にクラスを決定させることができる。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes:29
+msgid "2026でのノードタイプ名の変更など、 バージョン間の互換性を維持した名前指定に対応しており、 常に新しいタイプ名 （たとえば、2026未満でも接尾辞 `DL` を付けた名前） での指定が推奨される。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:34:<autosummary>:1
+msgid ":py:obj:`basicNodeClass <cymel.core.typeregistry.NodeTypes.basicNodeClass>`\\ \\(nodetype\\[\\, nodename\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:34:<autosummary>:1
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.basicNodeClass:1
+msgid "ノードタイプ名のみを条件として決まるベーシッククラスを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:34:<autosummary>:1
+msgid ":py:obj:`deregisterNodeClass <cymel.core.typeregistry.NodeTypes.deregisterNodeClass>`\\ \\(cls\\[\\, warn\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:34:<autosummary>:1
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.deregisterNodeClass:1
+msgid "ノードクラスとそのサブクラスの登録を削除する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:34:<autosummary>:1
+msgid ":py:obj:`parentBasicNodeClass <cymel.core.typeregistry.NodeTypes.parentBasicNodeClass>`\\ \\(nodetype\\[\\, nodename\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:34:<autosummary>:1
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.parentBasicNodeClass:1
+msgid "指定ノードタイプの親タイプ名のみを条件として決まるベーシッククラスを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:34:<autosummary>:1
+msgid ":py:obj:`registerNodeClass <cymel.core.typeregistry.NodeTypes.registerNodeClass>`\\ \\(cls\\, nodetype\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:34:<autosummary>:1
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.registerNodeClass:1
+msgid "ノードクラスを登録する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:34:<autosummary>:1
+msgid ":py:obj:`relatedNodeTypes <cymel.core.typeregistry.NodeTypes.relatedNodeTypes>`\\ \\(cls\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:34:<autosummary>:1
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.relatedNodeTypes:1
+msgid "クラスに結び付けられているノードタイプのタプルを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:37
+msgid "Methods Details:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.basicNodeClass:3
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.parentBasicNodeClass:3
+msgid "ノードタイプ名。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.basicNodeClass:4
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.parentBasicNodeClass:4
+msgid "実際のノードを特定する名前。 必須ではないが、指定すると未知のタイプの処理がやや高速。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.typeregistry.NodeTypes.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.basicNodeClass:7
+msgid "`type`"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.deregisterNodeClass:4
+msgid "登録を削除するクラス。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.deregisterNodeClass:5
+msgid "削除しながら警告メッセージを出力するかどうか。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.parentBasicNodeClass:7
+msgid "`type` ('node' を指定した場合のみ `None` となる)"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.registerNodeClass:3
+msgid "ノードクラスは、適合検査のためのスタティックメソッド ``_verifyNode`` を持つ **検査メソッド付きクラス** と、 それを持たない **ベーシッククラス** に分けられる。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.registerNodeClass:7
+msgid "適合検査のためのスタティックメソッドの仕様は以下の通り。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.registerNodeClass:9
+msgid "_verifyNode(mfn, name)"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.registerNodeClass:11
+msgid "引数に、 Python API 2 の :mayaapi2:`MFnDependencyNode` 派生クラスのインスタンス（例えば dagNode なら :mayaapi2:`MFnDagNode` など）と、 ノードのパーシャルパスなどのユニーク名が渡され、 適合の可否を表すブール値を返すものとする。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.registerNodeClass:18
+msgid "``_verifyNode`` を実装した場合、さらに `Node.createNode <.Node_c.createNode>` もオーバーライドして、 ノード生成時に条件を満たすようにすることを推奨する。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.registerNodeClass:23
+msgid "ベーシッククラスは、ノードタイプへの紐付けが厳格で、 抽象タイプも含む全てのノードタイプごとに1つずつ存在するか 自動生成される。 カスタムクラスをベーシッククラスとして登録する場合も、 ノードタイプと矛盾しない親クラスを継承しなければならない。 クラス実装で、継承すべき親クラスを取得するには `parentBasicNodeClass` が便利である。 1つのノードタイプへの競合する登録は上書き登録となり、 警告が出力された上で古いクラスの登録はサブクラスも含めて 全て抹消される（システムが先んじて行った自動登録を上書き してもさして害は無い）。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.registerNodeClass:35
+msgid "一方、適合検査メソッド付きクラスは、 ノードタイプへの紐付けが厳格でなくても問題ない。 クラスの継承と登録するノードタイプに矛盾さえ無ければ、 抽象タイプも含むどのノードタイプに登録するのも自由である。 複数の検査メソッド付きクラスが、1つのノードタイプに競合して 登録されることは問題なく、 また、同じクラスを複数のノードタイプに登録しても構わない。 登録時は、ノードタイプごとに管理されているリストの最初に挿入 されるため、後から登録したものほど優先される。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.registerNodeClass:46
+msgid "登録するクラス。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.registerNodeClass:47
+msgid "紐付けるノードタイプ名。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.relatedNodeTypes:3
+msgid "ベーシッククラスのノードタイプは1つだが、 検査メソッド付きカスタムクラスの場合は 複数タイプへの紐付けも有り得る。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.relatedNodeTypes:8
+msgid "クラス。"
+msgstr ""
+
+#: ../../python/cymel/core/python/typeregistry.py:docstring of cymel.core.typeregistry.NodeTypes.relatedNodeTypes:9
+msgid "`tuple`"
+msgstr ""

@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.compat_nodetype.CompatNodeTypeMap.rst:2
+msgid "class cymel.compat_nodetype.CompatNodeTypeMap"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype.CompatNodeTypeMap:1
+msgid "Mayaバージョンによるノードタイプ名変更に伴う新旧バージョン互換性確保のための名前変換器。"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype.CompatNodeTypeMap:3
+msgid "唯一のインスタンス `compat_nodetype_map` を生成済み。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.compat_nodetype.CompatNodeTypeMap.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.compat_nodetype.CompatNodeTypeMap.rst:31:<autosummary>:1
+msgid ":py:obj:`correctName <cymel.compat_nodetype.CompatNodeTypeMap.correctName>`\\ \\(name\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.compat_nodetype.CompatNodeTypeMap.rst:31:<autosummary>:1
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype.CompatNodeTypeMap.correctName:1
+msgid "正しい名前に補正する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.compat_nodetype.CompatNodeTypeMap.rst:31:<autosummary>:1
+msgid ":py:obj:`futureName <cymel.compat_nodetype.CompatNodeTypeMap.futureName>`\\ \\(name\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.compat_nodetype.CompatNodeTypeMap.rst:31:<autosummary>:1
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype.CompatNodeTypeMap.futureName:1
+msgid "将来の変更後の名前を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.compat_nodetype.CompatNodeTypeMap.rst:34
+msgid "Methods Details:"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype.CompatNodeTypeMap.correctName:3
+msgid "`getattr` ではエラーになる 旧バージョンでは存在しないもの（同名でも意味が変わってしまうものも含まれる） を指定しても、それが存在する新バージョンではエラーにならず、 旧バージョンでは None が返される。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.compat_nodetype.CompatNodeTypeMap.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype.CompatNodeTypeMap.correctName:8
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype.CompatNodeTypeMap.futureName:3
+msgid "ノードタイプ名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.compat_nodetype.CompatNodeTypeMap.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype.CompatNodeTypeMap.correctName:9
+msgid "`str` or `None`"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype.CompatNodeTypeMap.futureName:4
+msgid "`str`"
+msgstr ""

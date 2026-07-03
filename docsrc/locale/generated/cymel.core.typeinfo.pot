@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:2
+msgid "cymel.core.typeinfo"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo:1
+msgid "ノードタイプ情報。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:17
+msgid "Functions:"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:44:<autosummary>:1
+msgid ":py:obj:`dumpNodetypeTree <cymel.core.typeinfo.dumpNodetypeTree>`\\ \\(\\[nodetype\\, writer\\, indent\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:44:<autosummary>:1
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.dumpNodetypeTree:1
+msgid "ノードタイプツリーをダンプする。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:44:<autosummary>:1
+msgid ":py:obj:`getInheritedNodeTypes <cymel.core.typeinfo.getInheritedNodeTypes>`\\ \\(nodetype\\[\\, node\\, asSet\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:44:<autosummary>:1
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.getInheritedNodeTypes:1
+msgid "ノードタイプが継承しているタイプ情報を得る。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:44:<autosummary>:1
+msgid ":py:obj:`getNodetypeTreeDict <cymel.core.typeinfo.getNodetypeTreeDict>`\\ \\(\\[nodetype\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:44:<autosummary>:1
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.getNodetypeTreeDict:1
+msgid "ノードタイプツリーの辞書を得る。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:44:<autosummary>:1
+msgid ":py:obj:`isAbstractType <cymel.core.typeinfo.isAbstractType>`\\ \\(nodetype\\[\\, node\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:44:<autosummary>:1
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.isAbstractType:1
+msgid "ノードタイプが抽象タイプかどうかを得る。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:44:<autosummary>:1
+msgid ":py:obj:`isDerivedNodeType <cymel.core.typeinfo.isDerivedNodeType>`\\ \\(nodetype\\, basetype\\[\\, node\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:44:<autosummary>:1
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.isDerivedNodeType:1
+msgid "ノードタイプが別のノードタイプと同じか派生型かどうかを得る。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:44:<autosummary>:1
+msgid ":py:obj:`iterNodetypeTree <cymel.core.typeinfo.iterNodetypeTree>`\\ \\(\\[nodetype\\, breadthFirst\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:47
+msgid "Functions Details:"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.dumpNodetypeTree:3
+msgid "起点。これ以下をダンプする。"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.dumpNodetypeTree:4
+msgid "ライター。"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.dumpNodetypeTree:5
+msgid "インデント数。"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.getInheritedNodeTypes:3
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.isDerivedNodeType:3
+msgid "キャッシュされているので :mayacmd:`nodeType` コマンドなどで 調べるより、大幅に高速である。"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.getInheritedNodeTypes:6
+msgid "指定タイプ名を含む継承タイプ名全てを得られる。 `tuple` の場合は、昇順に並んでいる。"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.getInheritedNodeTypes:9
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.isAbstractType:13
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.isDerivedNodeType:6
+msgid "ノードタイプ名。"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.getInheritedNodeTypes:10
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.isAbstractType:14
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.isDerivedNodeType:8
+msgid "実際のノードを特定する名前。 必須ではないが、指定すると新規に情報作成される場合にやや高速。"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.getInheritedNodeTypes:13
+msgid "結果を `frozenset` で得る。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.typeinfo.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.getInheritedNodeTypes:14
+msgid "`tuple` or `frozenset`"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.getNodetypeTreeDict:3
+msgid "キーは「ノードタイプ名」、 値は「子タイプ名の `set` 」 となる辞書を得られる。"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.getNodetypeTreeDict:7
+msgid "起点。これ以下の情報を生成する。"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.getNodetypeTreeDict:8
+msgid "`dict`"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.isAbstractType:3
+msgid "キャッシュされているので :mayacmd:`allNodeTypes` コマンドなどで 調べるより、大幅に高速である。"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.isAbstractType:6
+msgid "戻り値は整数で、 0 は抽象タイプではなく、 1 は抽象タイプ、 2 はメタクラス（プラグインインタフェースなどのために存在するが、 実際は本当のノードタイプではない） の意味となる。"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.isAbstractType:17
+msgid "`int`"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.isDerivedNodeType:7
+msgid "チェックするベースタイプ名。"
+msgstr ""
+
+#: ../../python/cymel/core/typeinfo.py:docstring of cymel.core.typeinfo.isDerivedNodeType:11
+msgid "`bool`"
+msgstr ""

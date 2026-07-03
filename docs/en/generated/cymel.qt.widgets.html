@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel.qt.widgets &#8212; cymel 0.31.2026070300 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
+    <script src="../_static/documentation_options.js?v=5f63c855"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cymel.qt.uifile" href="cymel.qt.uifile.html" />
+    <link rel="prev" title="cymel.qt.binding" href="cymel.qt.binding.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.uifile.html" title="cymel.qt.uifile"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.binding.html" title="cymel.qt.binding"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.31.2026070300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.qt.widgets</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-cymel.qt.widgets">
+<span id="cymel-qt-widgets"></span><h1>cymel.qt.widgets<a class="headerlink" href="#module-cymel.qt.widgets" title="Link to this heading">¶</a></h1>
+<p>Maya independent Qt widget helper.</p>
+<p class="rubric">Functions:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.qt.widgets.dumpWidgetHierarchy" title="cymel.qt.widgets.dumpWidgetHierarchy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dumpWidgetHierarchy</span></code></a>([base, indent])</p></td>
+<td><p>Outputs the widget's objectName hierarchy.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.qt.widgets.getDpiScaling" title="cymel.qt.widgets.getDpiScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDpiScaling</span></code></a>([widget])</p></td>
+<td><p>Get the generic Qt logical DPI scale.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.qt.widgets.getFirstTopLevelWindow" title="cymel.qt.widgets.getFirstTopLevelWindow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFirstTopLevelWindow</span></code></a>()</p></td>
+<td><p>Get the first top-level QWidget being displayed.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.qt.widgets.getWidgetByPathName" title="cymel.qt.widgets.getWidgetByPathName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getWidgetByPathName</span></code></a>(name[, base, separator, ...])</p></td>
+<td><p>Find a widget or layout by path of objectName.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.qt.widgets.getWidgetFullPathName" title="cymel.qt.widgets.getWidgetFullPathName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getWidgetFullPathName</span></code></a>(widget[, separator])</p></td>
+<td><p>Get the widget's objectName path.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.qt.widgets.showAppWindow" title="cymel.qt.widgets.showAppWindow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">showAppWindow</span></code></a>(proc[, deleteOnClose, ...])</p></td>
+<td><p>Generate and display a window on an existing or new QApplication.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.qt.widgets.showWindow" title="cymel.qt.widgets.showWindow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">showWindow</span></code></a>(wd[, deleteOnClose])</p></td>
+<td><p>Display the widget as a window.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.qt.widgets.unscaleTextFont" title="cymel.qt.widgets.unscaleTextFont"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unscaleTextFont</span></code></a>(textCtl[, height, pixel, ...])</p></td>
+<td><p>Get the inverse scale value and QFont or None for fixed size text.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Function Details:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.dumpWidgetHierarchy">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">dumpWidgetHierarchy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.dumpWidgetHierarchy" title="Link to this definition">¶</a></dt>
+<dd><p>Outputs the widget’s objectName hierarchy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>widget</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code>) – Base widget. If omitted, everything is dumped from the top level.</p></li>
+<li><p><strong>indent</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Indentation space of base level.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.getDpiScaling">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">getDpiScaling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.getDpiScaling" title="Link to this definition">¶</a></dt>
+<dd><p>Get the generic Qt logical DPI scale.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.getFirstTopLevelWindow">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">getFirstTopLevelWindow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.getFirstTopLevelWindow" title="Link to this definition">¶</a></dt>
+<dd><p>Get the first top-level QWidget being displayed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.getWidgetByPathName">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">getWidgetByPathName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'|'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">includesLayout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.getWidgetByPathName" title="Link to this definition">¶</a></dt>
+<dd><p>Find a widget or layout by path of objectName.</p>
+<p>Unknown widgets that exist between specified paths are also allowed and searched thoroughly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Path name below the base point (not including the base point).</p></li>
+<li><p><strong>base</strong> – Base widget. If omitted, the first name in the path is searched from the top level. If it is still not found, it becomes the main window of the application obtained by <a class="reference internal" href="#cymel.qt.widgets.getFirstTopLevelWindow" title="cymel.qt.widgets.getFirstTopLevelWindow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFirstTopLevelWindow</span></code></a>.</p></li>
+<li><p><strong>separator</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Path delimiter.</p></li>
+<li><p><strong>includesLayout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether layout managers also count as nodes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">QLayout</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.getWidgetFullPathName">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">getWidgetFullPathName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'|'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.getWidgetFullPathName" title="Link to this definition">¶</a></dt>
+<dd><p>Get the widget’s objectName path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>widget</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code>) – widget.</p></li>
+<li><p><strong>separator</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Path delimiter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.showAppWindow">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">showAppWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deleteOnClose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setupRoundingOnNewApp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traceSettings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.showAppWindow" title="Link to this definition">¶</a></dt>
+<dd><p>Generate and display a window on an existing or new QApplication.</p>
+<p>If QApplication is uninitialized, it is initialized, enters the main loop, and does not return. In an embedded environment, it becomes a child of the main window (or top-level window) and is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>proc</strong> (<em>callable</em>) – An executable object, such as a widget type or function, for creating widgets.</p></li>
+<li><p><strong>deleteOnClose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to be deleted when closed. WA_DeleteOnClose attribute is set to override.</p></li>
+<li><p><strong>setupRoundingOnNewApp</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – In a newly opened application, and if there is one or more screens with devicePixelRatio that is a non-integer in Qt6 or later, set HighDpiScaleFactorRoundingPolicy to RoundPreferFloor. This is to avoid artifacts when using anti-aliasing in QGraphicsView. By the way, in Maya, QT_ENABLE_HIGHDPI_SCALING=0 is set, so all devicePixelRatios are 1.0 and no problem occurs.</p></li>
+<li><p><strong>traceSettings</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Print out the Qt version, application settings, etc.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.showWindow">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">showWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deleteOnClose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.showWindow" title="Link to this definition">¶</a></dt>
+<dd><p>Display the widget as a window.</p>
+<p>It becomes a child of the application’s main window or an already visible top-level window (the first one), if one exists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wd</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code>) – widget.</p></li>
+<li><p><strong>deleteOnClose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to be deleted when closed. WA_DeleteOnClose attribute is set to override.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.widgets.unscaleTextFont">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">unscaleTextFont</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">textCtl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.unscaleTextFont" title="Link to this definition">¶</a></dt>
+<dd><p>Get the inverse scale value and QFont or None for fixed size text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>textCtl</strong> – A text control used to determine size. Must have boundingRect, font, and setFont methods.</p></li>
+<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Specifies the reference height when the font is specified in point size. A scale value is calculated to match this size. The default None means a default value that changes depending on the environment.</p></li>
+<li><p><strong>pixel</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specifies the standard size when the font is specified in pixel size. A scale value is calculated to match this size.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Paream callable prepare<a class="reference external" href="https://docs.python.org/3/library/functions.html#callable" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callable</span></code></a> prepare<span class="colon">:</span></dt>
+<dd class="field-even"><p>If information cannot be obtained from the cache and preparation (temporary drawing, etc.) is required before checking the point size height, specify the callable object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">QFont</span></code> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel.qt.widgets</a><ul>
+<li><a class="reference internal" href="#cymel.qt.widgets.dumpWidgetHierarchy"><code class="docutils literal notranslate"><span class="pre">dumpWidgetHierarchy()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.getDpiScaling"><code class="docutils literal notranslate"><span class="pre">getDpiScaling()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.getFirstTopLevelWindow"><code class="docutils literal notranslate"><span class="pre">getFirstTopLevelWindow()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.getWidgetByPathName"><code class="docutils literal notranslate"><span class="pre">getWidgetByPathName()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.getWidgetFullPathName"><code class="docutils literal notranslate"><span class="pre">getWidgetFullPathName()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.showAppWindow"><code class="docutils literal notranslate"><span class="pre">showAppWindow()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.showWindow"><code class="docutils literal notranslate"><span class="pre">showWindow()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.widgets.unscaleTextFont"><code class="docutils literal notranslate"><span class="pre">unscaleTextFont()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cymel.qt.binding.html"
+                          title="previous chapter">cymel.qt.binding</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cymel.qt.uifile.html"
+                          title="next chapter">cymel.qt.uifile</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.qt.widgets.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.uifile.html" title="cymel.qt.uifile"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.binding.html" title="cymel.qt.binding"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.31.2026070300 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.qt.widgets</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

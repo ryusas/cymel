@@ -1,0 +1,412 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:2
+msgid "class cymel.core.cyobjects.reference.Reference"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference:1
+msgid ":mayanode:`reference` ノードタイプラッパークラス。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference:3
+msgid "固定引数無しでのクラスインスタンス生成時のノード生成をサポート。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`associatedNS <cymel.core.cyobjects.reference.Reference.associatedNS>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.associatedNamespace:1
+msgid "`associatedNamespace` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`associatedNamespace <cymel.core.cyobjects.reference.Reference.associatedNamespace>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.associatedNamespace:1
+msgid "関連付けられたネームスペースを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`byFilename <cymel.core.cyobjects.reference.Reference.byFilename>`\\ \\(fname\\[\\, all\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.byFilename:1
+msgid "解決済みのファイル名からリファレンスノードを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`children <cymel.core.cyobjects.reference.Reference.children>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.children:1
+msgid "子リファレンスノードのリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`containsNode <cymel.core.cyobjects.reference.Reference.containsNode>`\\ \\(node\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.containsNode:1
+msgid "指定ノードを含んでいるかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`containsNodeExactly <cymel.core.cyobjects.reference.Reference.containsNodeExactly>`\\ \\(node\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.containsNodeExactly:1
+msgid "指定ノードを直接含んでいるかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`editAttrs <cymel.core.cyobjects.reference.Reference.editAttrs>`\\ \\(\\[command\\, fail\\, success\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editAttrs:1
+msgid "編集コマンドのアトリビュート名リストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`editNodes <cymel.core.cyobjects.reference.Reference.editNodes>`\\ \\(\\[command\\, fail\\, success\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editNodes:1
+msgid "編集コマンドのノードリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`editPlugs <cymel.core.cyobjects.reference.Reference.editPlugs>`\\ \\(\\[command\\, fail\\, success\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editPlugs:1
+msgid "編集コマンドのプラグリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`editStrings <cymel.core.cyobjects.reference.Reference.editStrings>`\\ \\(\\[command\\, fail\\, success\\, namespace\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editStrings:1
+msgid "編集コマンドリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`fileName <cymel.core.cyobjects.reference.Reference.fileName>`\\ \\(\\[unresolved\\, withoutPath\\, ...\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.filename:1
+msgid "`filename` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`filename <cymel.core.cyobjects.reference.Reference.filename>`\\ \\(\\[unresolved\\, withoutPath\\, ...\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.filename:1
+msgid "ファイル名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`importReference <cymel.core.cyobjects.reference.Reference.importReference>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.importReference:1
+msgid "リファレンスをインポートする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`isExportEditsFile <cymel.core.cyobjects.reference.Reference.isExportEditsFile>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.isExportEditsFile:1
+msgid "リファレンス編集ファイル (editMA や editMB) かどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`isLoaded <cymel.core.cyobjects.reference.Reference.isLoaded>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.isLoaded:1
+msgid "リファレンスがロードされているかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`isLocked <cymel.core.cyobjects.reference.Reference.isLocked>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.isLocked:1
+msgid "ロックされているかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`isReferenceLocked <cymel.core.cyobjects.reference.Reference.isReferenceLocked>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.isReferenceLocked:1
+msgid "リファレンスがロックされているかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`isRoot <cymel.core.cyobjects.reference.Reference.isRoot>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.isRoot:1
+msgid "ルートリファレンスノードかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`iterBreadthFirst <cymel.core.cyobjects.reference.Reference.iterBreadthFirst>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.iterBreadthFirst:1
+msgid "リファレンス階層を幅優先反復する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`iterDepthFirst <cymel.core.cyobjects.reference.Reference.iterDepthFirst>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.iterDepthFirst:1
+msgid "リファレンス階層を深さ優先反復する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`load <cymel.core.cyobjects.reference.Reference.load>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.load:1
+msgid "ロードする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`lockReference <cymel.core.cyobjects.reference.Reference.lockReference>`\\ \\(\\[val\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.lockReference:1
+msgid "リファレンスをロック、又はアンロックする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`nodes <cymel.core.cyobjects.reference.Reference.nodes>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.nodes:1
+msgid "含まれているノードのリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`parent <cymel.core.cyobjects.reference.Reference.parent>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.parent:1
+msgid "親リファレンスノードを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`referenceNode <cymel.core.cyobjects.reference.Reference.referenceNode>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.parent:1
+msgid "`parent` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`removeReference <cymel.core.cyobjects.reference.Reference.removeReference>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.removeReference:1
+msgid "リファレンスを削除する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`root <cymel.core.cyobjects.reference.Reference.root>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.root:1
+msgid "ルートリファレンスノードを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`unload <cymel.core.cyobjects.reference.Reference.unload>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.unload:1
+msgid "アンロードする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+msgid ":py:obj:`unlockReference <cymel.core.cyobjects.reference.Reference.unlockReference>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:58:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.unlockReference:1
+msgid "リファレンスをアンロックする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:61
+msgid "Methods Details:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.associatedNamespace:3
+msgid "`.Namespace`"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.reference.Reference.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.byFilename:3
+msgid "解決済みのファイル名。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.byFilename:5
+msgid "コピー番号なしのファイル名を指定して、 それに対応する全てのリストを得る。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.byFilename:8
+msgid "`Referemce` or None"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.children:3
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editAttrs:11
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editNodes:14
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editPlugs:14
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editStrings:14
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.nodes:3
+msgid "`list`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.containsNode:4
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.containsNodeExactly:4
+msgid "チェックするノード。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.containsNode:5
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.containsNodeExactly:5
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.isExportEditsFile:3
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.isLoaded:3
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.isLocked:3
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.isReferenceLocked:3
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.isRoot:3
+msgid "`bool`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editAttrs:3
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editNodes:6
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editPlugs:6
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editStrings:3
+msgid "コマンドの種類を指定する。 有効な値は、'addAttr'、'connectAttr'、'deleteAttr'、'disconnectAttr'、 'parent'、'setAttr'、'lock'、および'unlock'である。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editAttrs:7
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editNodes:10
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editPlugs:10
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editStrings:7
+msgid "失敗したコマンドを得るかどうか。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editAttrs:9
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editNodes:12
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editPlugs:12
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editStrings:9
+msgid "成功したコマンドを得るかどうか。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editNodes:3
+msgid "可能な限り cymel のノードオブジェクトが返されるが、 見つからない場合は文字列のまま返される。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editPlugs:3
+msgid "可能な限り cymel のプラグオブジェクトが返されるが、 見つからない場合は文字列のまま返される。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.editStrings:11
+msgid "リファレンスによるネームスペースを付加するかどうか。 付加されるのは、親リファレンスのローカルネームスペースまで。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.filename:3
+msgid "指定されているファイル名をそのまま得る。 環境変数を含んでいたり、実際は存在しないパスの場合が有り得る。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.filename:6
+msgid "パスを含まないファイル名のみを得る。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.filename:8
+msgid "同名ファイルの2つめ以降に付加されるコピー番号を含めない。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.filename:10
+msgid "`str`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.iterBreadthFirst:3
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.iterDepthFirst:3
+msgid "yield `Reference`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.lockReference:3
+msgid "ロック状態値。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.parent:3
+msgid "`Reference` or None"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/reference.py:docstring of cymel.core.cyobjects.reference.Reference.root:3
+msgid "`Reference`"
+msgstr ""

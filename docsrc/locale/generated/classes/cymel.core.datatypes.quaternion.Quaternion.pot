@@ -1,0 +1,854 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:2
+msgid "class cymel.core.datatypes.quaternion.Quaternion"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion:1
+msgid "クォータニオンクラス。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion:3
+msgid "コンストラクタでは以下の値を指定可能。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion:5
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asBend:9
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRoll:9
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.conjugate:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.div:6
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.exp:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.fromVecW:6
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.inverse:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.log:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV:12
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2:12
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.mul:5
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.normal:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.safelog:5
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.set:5
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.slerp:12
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.slerp0:8
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.squad:16
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.squadPt:9
+msgid "`Quaternion`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion:6
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.set:6
+msgid "x, y, z, w"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion:7
+msgid "4値のシーケンス"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion:8
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.set:8
+msgid "回転軸 (`.Vector`), 角度"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion:9
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.set:9
+msgid "角度, 回転軸 (`.Vector`)"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion:10
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asEulerRotation:8
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.set:10
+msgid "`.EulerRotation`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion:11
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asMatrix:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.set:11
+msgid "`.Matrix`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion:12
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.set:12
+msgid "`.Vector`"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asAA <cymel.core.datatypes.quaternion.Quaternion.asAA>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asAxisAngle:1
+msgid "`asAxisAngle` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asAngle <cymel.core.datatypes.quaternion.Quaternion.asAngle>`\\ \\(\\[naxis\\, bound\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asAngle:1
+msgid "クォータニオンの持つ回転角度を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asAxisAngle <cymel.core.datatypes.quaternion.Quaternion.asAxisAngle>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asAxisAngle:1
+msgid "軸ベクトルと回転角度として得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asBend <cymel.core.datatypes.quaternion.Quaternion.asBend>`\\ \\(\\[reverse\\, aim\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asBend:1
+msgid "ボーン回転とした場合の曲げ成分を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asD <cymel.core.datatypes.quaternion.Quaternion.asD>`\\ \\(\\[order\\, correct\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asDegrees:1
+msgid "`asDegrees` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asDegrees <cymel.core.datatypes.quaternion.Quaternion.asDegrees>`\\ \\(\\[order\\, correct\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asDegrees:1
+msgid "オイラー角回転を度数法の `list` として得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asE <cymel.core.datatypes.quaternion.Quaternion.asE>`\\ \\(\\[order\\, correct\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asEulerRotation:1
+msgid "`asEulerRotation` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asEulerRotation <cymel.core.datatypes.quaternion.Quaternion.asEulerRotation>`\\ \\(\\[order\\, correct\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asEulerRotation:1
+msgid "オイラー角回転として得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asM <cymel.core.datatypes.quaternion.Quaternion.asM>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asMatrix:1
+msgid "`asMatrix` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asMatrix <cymel.core.datatypes.quaternion.Quaternion.asMatrix>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asMatrix:1
+msgid "回転行列として得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asRHV <cymel.core.datatypes.quaternion.Quaternion.asRHV>`\\ \\(\\[reverse\\, aim\\, upv\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRollBendHV:1
+msgid "`asRollBendHV` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asRHV2 <cymel.core.datatypes.quaternion.Quaternion.asRHV2>`\\ \\(\\[axisOri\\, reverse\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2:1
+msgid "`asRollBendHV2` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asRoll <cymel.core.datatypes.quaternion.Quaternion.asRoll>`\\ \\(\\[aim\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRoll:1
+msgid "ボーン回転とした場合の捻り成分を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asRollBendHV <cymel.core.datatypes.quaternion.Quaternion.asRollBendHV>`\\ \\(\\[reverse\\, aim\\, upv\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRollBendHV:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2:1
+msgid "ボーン回転とした場合の、捻り、横曲げ、縦曲げの3つの角度に分離する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asRollBendHV2 <cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2>`\\ \\(\\[axisOri\\, reverse\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asTransformation <cymel.core.datatypes.quaternion.Quaternion.asTransformation>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asTransformation:1
+msgid "トランスフォーメーションとして得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asVecW <cymel.core.datatypes.quaternion.Quaternion.asVecW>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asVecW:1
+msgid "3次元ベクトルとw値を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`asX <cymel.core.datatypes.quaternion.Quaternion.asX>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asTransformation:1
+msgid "`asTransformation` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`conjugate <cymel.core.datatypes.quaternion.Quaternion.conjugate>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.conjugate:1
+msgid "共役クォータニオンを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`conjugateIt <cymel.core.datatypes.quaternion.Quaternion.conjugateIt>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.conjugateIt:1
+msgid "共役クォータニオンをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`div <cymel.core.datatypes.quaternion.Quaternion.div>`\\ \\(v\\[\\, pre\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.div:1
+msgid "4次元ベクトル要素ごとのの商を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`dot <cymel.core.datatypes.quaternion.Quaternion.dot>`\\ \\(q\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.dot:1
+msgid "クォータニオンの内積を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`exp <cymel.core.datatypes.quaternion.Quaternion.exp>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.exp:1
+msgid "対数クォータニオンからクォータニオンを得る。。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`fromVecW <cymel.core.datatypes.quaternion.Quaternion.fromVecW>`\\ \\(vec\\, w\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.fromVecW:1
+msgid "3次元ベクトルとw値からクォータニオンを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`idiv <cymel.core.datatypes.quaternion.Quaternion.idiv>`\\ \\(v\\[\\, pre\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.idiv:1
+msgid "4次元ベクトル要素ごとのの商をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`imul <cymel.core.datatypes.quaternion.Quaternion.imul>`\\ \\(v\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.imul:1
+msgid "4次元ベクトル要素ごとの積をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`inverse <cymel.core.datatypes.quaternion.Quaternion.inverse>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.inverse:1
+msgid "逆クォータニオンを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`invertIt <cymel.core.datatypes.quaternion.Quaternion.invertIt>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.invertIt:1
+msgid "逆クォータニオンをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`isEquivalent <cymel.core.datatypes.quaternion.Quaternion.isEquivalent>`\\ \\(q\\[\\, tol\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isEquivalent:1
+msgid "ほぼ等価かどうか。符号反転は同じ回転姿勢を表すものとして等価とみなす。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`isIdentity <cymel.core.datatypes.quaternion.Quaternion.isIdentity>`\\ \\(\\[tol\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isIdentity:1
+msgid "ほぼ単位クォータニオンかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`isSignedEquivalent <cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent>`\\ \\(q\\[\\, tol\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent:1
+msgid "ほぼ同値かどうか。符号反転は同値とみなさない。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`length <cymel.core.datatypes.quaternion.Quaternion.length>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.length:1
+msgid "クォータニオンの絶対値を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`lengthSq <cymel.core.datatypes.quaternion.Quaternion.lengthSq>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.lengthSq:1
+msgid "クォータニオンの絶対値の2乗を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`log <cymel.core.datatypes.quaternion.Quaternion.log>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.log:1
+msgid "対数クォータニオンを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`makeRHV <cymel.core.datatypes.quaternion.Quaternion.makeRHV>`\\ \\(rhv\\[\\, reverse\\, aim\\, upv\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV:1
+msgid "`makeRollBendHV` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`makeRHV2 <cymel.core.datatypes.quaternion.Quaternion.makeRHV2>`\\ \\(rhv\\[\\, axisOri\\, reverse\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2:1
+msgid "`makeRollBendHV2` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`makeRollBendHV <cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV>`\\ \\(rhv\\[\\, reverse\\, aim\\, upv\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2:1
+msgid "ボーンの捻り、横曲げ、縦曲げの3つの角度からクォータニオンを合成する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`makeRollBendHV2 <cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2>`\\ \\(rhv\\[\\, axisOri\\, reverse\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`mul <cymel.core.datatypes.quaternion.Quaternion.mul>`\\ \\(v\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.mul:1
+msgid "4次元ベクトル要素ごとの積を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`negateIt <cymel.core.datatypes.quaternion.Quaternion.negateIt>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.negateIt:1
+msgid "符号反転クォータニオンをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`normal <cymel.core.datatypes.quaternion.Quaternion.normal>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.normal:1
+msgid "正規化クォータニオンを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`normalize <cymel.core.datatypes.quaternion.Quaternion.normalize>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.normalize:1
+msgid "正規化クォータニオンをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`normalizeIt <cymel.core.datatypes.quaternion.Quaternion.normalizeIt>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`safelog <cymel.core.datatypes.quaternion.Quaternion.safelog>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.safelog:1
+msgid "絶対値が π/2 を超えない対数クォータニオンを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`set <cymel.core.datatypes.quaternion.Quaternion.set>`\\ \\(\\*args\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.set:1
+msgid "他の値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`setAngle <cymel.core.datatypes.quaternion.Quaternion.setAngle>`\\ \\(theta\\[\\, correctAxis\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setAngle:1
+msgid "クォータニオンの持つ回転角度を書き換える。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`setToIdentity <cymel.core.datatypes.quaternion.Quaternion.setToIdentity>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setToIdentity:1
+msgid "単位クォータニオンをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`setToXAxis <cymel.core.datatypes.quaternion.Quaternion.setToXAxis>`\\ \\(angle\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setToXAxis:1
+msgid "X軸回りの回転角度をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`setToYAxis <cymel.core.datatypes.quaternion.Quaternion.setToYAxis>`\\ \\(angle\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setToYAxis:1
+msgid "Y軸回りの回転角度をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`setToZAxis <cymel.core.datatypes.quaternion.Quaternion.setToZAxis>`\\ \\(angle\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setToZAxis:1
+msgid "Z軸回りの回転角度をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`setValue <cymel.core.datatypes.quaternion.Quaternion.setValue>`\\ \\(\\*args\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`setVecW <cymel.core.datatypes.quaternion.Quaternion.setVecW>`\\ \\(vec\\, w\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setVecW:1
+msgid "3次元ベクトルとw値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`slerp <cymel.core.datatypes.quaternion.Quaternion.slerp>`\\ \\(p\\, q\\, t\\[\\, spin\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.slerp:1
+msgid "クォータニオンを球面線形補間する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`slerp0 <cymel.core.datatypes.quaternion.Quaternion.slerp0>`\\ \\(t\\[\\, spin\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.slerp0:1
+msgid "単位クォータニオンと球面線形補間する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`squad <cymel.core.datatypes.quaternion.Quaternion.squad>`\\ \\(p\\, a\\, b\\, q\\, t\\[\\, spin\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.squad:1
+msgid "クォータニオンを球面曲線補間する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+msgid ":py:obj:`squadPt <cymel.core.datatypes.quaternion.Quaternion.squadPt>`\\ \\(q0\\, q1\\, q2\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:81:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.squadPt:1
+msgid "`squad` 用の制御点を計算する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:84
+msgid "Attributes:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:95
+msgid "Methods Details:"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asAngle:3
+msgid "`asAxisAngle` では 0 になるような微小な角度も取得出来るが、 その場合は `asAxisAngle` で得られる軸 （おそらく 0 度扱いの場合は常に (0,0,1) となる） には対応しない。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asAngle:8
+msgid "また、回転軸があらかじめ分かっている場合は 指定した方が精度の良い値を得られる。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asAngle:12
+msgid "回転軸が分かっている場合はそれを指定する。 `asAxisAngle` で得られるベクトルと平行でなければならない。 反転した軸も指定可能で、その場合、反転した角度が得られる。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asAngle:16
+msgid "±π の範囲に収めた角度を得るかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asAngle:18
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.dot:5
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.length:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.lengthSq:3
+msgid "`float`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asAxisAngle:3
+msgid "`.Vector`, `float`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asBend:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRollBendHV:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2:7
+msgid "曲げ・捻りの順番を反転するかどうか。 デフォルトでは、階層上位から見て曲げてから捻るが、 True を指定すると捻ってから曲げる分解になる。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asBend:8
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRoll:8
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRollBendHV:8
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV:9
+msgid "ボーン方向ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asDegrees:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asEulerRotation:3
+msgid "得たい回転オーダー。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asDegrees:4
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asEulerRotation:4
+msgid "得られるオイラー角回転値を再度クォータニオン化したときに 元の符号と一致するように補正する。 不適切な場合に `.EulerRotation.reverseDirection` することと等しい。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asDegrees:8
+msgid "`list`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asDegrees:11
+msgid "単位を弧度法で得たい場合は `asEulerRotation` を使用すると良い。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asDegrees:14
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asEulerRotation:15
+msgid "correct に真を指定して得た値を rotateAxis にセットしようとすると 正常にセットできない場合があるので、その用途では指定すべきではない。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asEulerRotation:11
+msgid "`EulerRotation` の単位は弧度法なので、 度数法で得たい場合は `asDegrees` を使用すると良い。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRoll:3
+msgid "分解の考え方として、曲げてから捻っても、捻ってから曲げても、 同じ値が得られるため `asBend` や `asRollBendHV` のような reverse オプションはない。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRollBendHV:10
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV:11
+msgid "ボーンアップベクトル。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.Quaternion.rst:0
+msgid "戻り値"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRollBendHV:11
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2:11
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2:3
+msgid "[roll, bendH, bendV]"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asRollBendHV2:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2:4
+msgid "基準軸を回転（クォータニオン）で指定する。 その空間のX軸がボーン方向、Y軸がアップ方向に相当する。 デフォルトの None は単位クォータニオンと同じである。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asTransformation:3
+msgid "`.Transformation`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.asVecW:3
+msgid "`.Vector, `float`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.conjugateIt:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.imul:5
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.invertIt:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.negateIt:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.normalize:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.set:14
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setAngle:8
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setToXAxis:4
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setToYAxis:4
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setToZAxis:4
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setVecW:6
+msgid "`Quaternion` (self)"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.div:4
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.idiv:4
+msgid "分母のクォータニオン。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.div:5
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.idiv:5
+msgid "ゼロ除算を避ける為の許容誤差。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.dot:4
+msgid "もう一方のクォータニオン。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.fromVecW:4
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setVecW:4
+msgid "3次元ベクトル"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.fromVecW:5
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setVecW:5
+msgid "w値"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.idiv:6
+msgid "`Vector` (self)"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.imul:4
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.mul:4
+msgid "もう1方のクォータニオン。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isEquivalent:3
+msgid "符号反転を等価とみなしたくない場合は `isSignedEquivalent` を利用すると良い。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isEquivalent:7
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent:7
+msgid "比較するクォータニオン。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isEquivalent:8
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isIdentity:5
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent:8
+msgid "許容誤差。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isEquivalent:9
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isIdentity:6
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent:9
+msgid "`bool`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isEquivalent:12
+msgid ":mayaapi2:`MQuaternion` の isEquivalent では、 2015 未満では符号反転は等価とみなされなかったが、 2015 以降で等価とみなされるように変更された。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isEquivalent:16
+msgid "cymel では現在の API の仕様に合わせ、 どのバージョンでも一貫して等価とみなすようにしている。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isIdentity:3
+msgid "単位クォータニオンと `isSignedEquivalent` で比較することと等しい。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent:3
+msgid "符号反転も等価とみなしたい場合は `isEquivalent` を利用すると良い。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV:4
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.makeRollBendHV2:8
+msgid "曲げ・捻りの順番を反転するかどうか。 デフォルトでは、階層上位から見て曲げてから捻るが、 True を指定すると捻ってから曲げる合成になる。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.safelog:3
+msgid "w < 0 の場合に符号反転したうえで `log` が得られる。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.set:3
+msgid "コンストラクタと同様に、以下の値を指定可能。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.set:7
+msgid "4値までのシーケンス"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setAngle:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setToXAxis:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setToYAxis:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setToZAxis:3
+msgid "角度。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setAngle:4
+msgid "現在の w が負 （πより大きい回転角度を持っている） なら、軸を反転補正させた上での角度をセットする。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.setToIdentity:3
+msgid "`self`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.slerp:4
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.squad:4
+msgid "始点クォータニオン。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.slerp:6
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.squad:10
+msgid "終点クォータニオン。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.slerp:7
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.slerp0:3
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.squad:11
+msgid "0.0～1.0の補間係数。範囲外も指定可。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.slerp:8
+msgid "スピン値。 デフォルトの0は最短方向、-1は逆方向、 さらに+1や-1すると余分に周回する。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.slerp0:4
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.squad:12
+msgid "スピン値。 デフォルトの0は正方向、-1は逆方向、 さらに+1や-1すると余分に周回する。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.squad:6
+msgid "始点側の制御点。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.squad:8
+msgid "終点側の制御点。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.squadPt:4
+msgid "1つめのクォータニオン。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.squadPt:6
+msgid "2つめのクォータニオン。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.Quaternion.squadPt:8
+msgid "3つめのクォータニオン。"
+msgstr ""

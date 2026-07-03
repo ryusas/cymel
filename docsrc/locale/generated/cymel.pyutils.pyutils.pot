@@ -1,0 +1,380 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:2
+msgid "cymel.pyutils.pyutils"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils:1
+msgid "Mayaに依存しない諸機能。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:9
+msgid "Classes:"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:23:<autosummary>:1
+msgid ":py:obj:`Singleton <cymel.pyutils.pyutils.Singleton>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:23:<autosummary>:1
+msgid "シングルトンクラスを作る為のメタクラス。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:25
+msgid "Functions:"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`assembleCodeToCallFunction <cymel.pyutils.pyutils.assembleCodeToCallFunction>`\\ \\(name\\, \\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.assembleCodeToCallFunction:1
+msgid "関数呼び出し用のコード文字列を生成する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`avoidZeroDiv <cymel.pyutils.pyutils.avoidZeroDiv>`\\ \\(v\\[\\, pre\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.avoidZeroDiv:1
+msgid "Maya を模倣したゼロ割を防ぐ為の分母を得る。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`boundAngle <cymel.pyutils.pyutils.boundAngle>`\\ \\(a\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.boundAngle:1
+msgid "角度を±πの範囲におさめる。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`convIntToBaseN <cymel.pyutils.pyutils.convIntToBaseN>`\\ \\(i\\[\\, chars\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.convIntToBaseN:1
+msgid "整数を N 進数表記の文字列に変換する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`donothing <cymel.pyutils.pyutils.donothing>`\\ \\(\\*a\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.donothing:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.ucToStrList:1
+msgid "何もしない。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`execfile <cymel.pyutils.pyutils.execfile>`\\ \\(fname\\[\\, globals\\, locals\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`fround <cymel.pyutils.pyutils.fround>`\\ \\(f\\[\\, ndigits\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.fround:1
+msgid "常にfloat型を返すround。ただし、py2は四捨五入、py3は偶数への丸め(bankers' rounding)という違いはある。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`getTempFilename <cymel.pyutils.pyutils.getTempFilename>`\\ \\(\\[suffix\\, prefix\\, dir\\, n\\, chars\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.getTempFilename:1
+msgid "任意に使えるテンポラリファイル名をフルパスで得る。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`gettrue <cymel.pyutils.pyutils.gettrue>`\\ \\(\\*a\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.gettrue:1
+msgid "常に真。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`incrementName <cymel.pyutils.pyutils.incrementName>`\\ \\(name\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.incrementName:1
+msgid "名前の末尾の数字をインクリメントする。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`insertEnvPath <cymel.pyutils.pyutils.insertEnvPath>`\\ \\(path\\, name\\[\\, index\\, noCheck\\, ...\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertEnvPath:1
+msgid "様々なパス環境変数にパスを追加する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`insertSysPath <cymel.pyutils.pyutils.insertSysPath>`\\ \\(path\\[\\, index\\, noCheck\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertSysPath:1
+msgid "`sys.path` にパスを追加する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`iterTreeBreadthFirst <cymel.pyutils.pyutils.iterTreeBreadthFirst>`\\ \\(nodes\\, proc\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.iterTreeBreadthFirst:1
+msgid "木を幅優先反復する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`iterTreeDepthFirst <cymel.pyutils.pyutils.iterTreeDepthFirst>`\\ \\(nodes\\, proc\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.iterTreeDepthFirst:1
+msgid "木を深さ優先反復する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`parentClasses <cymel.pyutils.pyutils.parentClasses>`\\ \\(cls\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.parentClasses:1
+msgid "親クラスのリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:50:<autosummary>:1
+msgid ":py:obj:`ucToStrList <cymel.pyutils.pyutils.ucToStrList>`\\ \\(xx\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:53
+msgid "Aliases:"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.<lambda>:1
+msgid "`dict` から items リストを得る。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.<lambda>:1
+msgid "`dict` から keys リストを得る。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.<lambda>:1
+msgid "`dict` から values リストを得る。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.<lambda>:1
+msgid "`dict` から dict_items を得る。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.<lambda>:1
+msgid "`dict` から items イテレータを得る。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.<lambda>:1
+msgid "`dict` から keys イテレータを得る。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.<lambda>:1
+msgid "`dict` から values イテレータを得る。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.<lambda>:1
+msgid "`dict` から dict_keys を得る。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.<lambda>:1
+msgid "`dict` から dict_values を得る。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.<lambda>:1
+msgid "list を返す filter (Python 3 には無い)"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.<lambda>:1
+msgid "list を返す map (Python 3 には無い)"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.<lambda>:1
+msgid "list を返す range (Python 2 の標準)"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.<lambda>:1
+msgid "list を返す zip (Python 3 には無い)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:74
+msgid "Constants:"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.IS_WINDOWS:1
+msgid "OS が Windows かどうか。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.MAXINT32:1
+msgid "32bit符号付き整数の最大値。Maya の sys.maxint はこれ（py3 で廃止）。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.MAXINT64:1
+msgid "64bit符号付き整数の最大値。Maya の sys.maxsize はこれ。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.USER_DOC_PATH:1
+msgid "ユーザードキュメントディレクトリ。Unix 系ではホーム、Windows ではマイドキュメントとしている。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:90
+msgid "Functions Details:"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:0
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.convIntToBaseN:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.assembleCodeToCallFunction:3
+msgid "関数名。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.assembleCodeToCallFunction:4
+msgid "引数リスト。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.assembleCodeToCallFunction:5
+msgid "キーワード引数辞書。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.pyutils.rst:0
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.convIntToBaseN:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.assembleCodeToCallFunction:6
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.convIntToBaseN:6
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.getTempFilename:8
+msgid "`str`"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.avoidZeroDiv:3
+msgid "Maya では scale=0 を設定しても matrix が特異値とならないように 0.0 は 1.e-12 くらいでリミットして保持するようなので、それを意識 したリミットを掛けた値を返す。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.avoidZeroDiv:7
+msgid "チェックする値。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.avoidZeroDiv:8
+msgid "最小値。デフォルトは `AVOID_ZERO_DIV_PRECISION` 。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.convIntToBaseN:3
+msgid "桁の文字を 0～N-1 まで並べた文字列。 デフォルトは小文字の16進数。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.getTempFilename:3
+msgid "ファイル名に付ける任意の接頭辞を指定する。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.getTempFilename:4
+msgid "ファイル名に付ける任意の接尾辞を指定する。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.getTempFilename:5
+msgid "ファイルを生成するディレクトリパスを指定する。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.getTempFilename:6
+msgid "ランダムに決まる部分の文字数を指定する。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.getTempFilename:7
+msgid "ランダムに決まる部分に使用される文字。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertEnvPath:3
+msgid "パスが存在せず追加されなかったら 0 、 既にリストに含まれていたら 1 、 新規に追加されたなら 2 が返される。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertEnvPath:7
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertSysPath:7
+msgid "追加するパス。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertEnvPath:8
+msgid "環境変数名。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertEnvPath:9
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertSysPath:8
+msgid "追加する位置。負数であれば末尾に追加、 そうでなければこの位置の手前に挿入される。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertEnvPath:12
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertSysPath:11
+msgid "パスの存在の有無をチェックしない。 デフォルトでは、実際に存在しないパスは追加されない。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertEnvPath:15
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertSysPath:14
+msgid "パスが既に含まれていたら更新しない。 デフォルトでは、既にリストに含まれているパスなら、 一旦それを削除してから追加し直される。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertEnvPath:19
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertSysPath:18
+msgid "`int`"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.insertSysPath:3
+msgid "パスが存在せず追加されなかったら 0 、 既にリストに含まれていて追加し直されたら 1 、 新規に追加されたなら 2 が返される。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.iterTreeBreadthFirst:3
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.iterTreeDepthFirst:3
+msgid "基点ノードリスト。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.iterTreeBreadthFirst:4
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.iterTreeDepthFirst:4
+msgid "子ノード群を得るプロシージャ。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.iterTreeBreadthFirst:7
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.iterTreeDepthFirst:7
+msgid "循環していると無限ループになる。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.parentClasses:4
+msgid "クラス。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.parentClasses:5
+msgid "`list`"
+msgstr ""

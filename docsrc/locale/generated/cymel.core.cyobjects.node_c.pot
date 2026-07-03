@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:2
+msgid "cymel.core.cyobjects.node_c"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:23:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c:1
+msgid "`.Node` クラスでサポートする機能の中核。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:9
+msgid "Classes:"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:23:<autosummary>:1
+msgid ":py:obj:`Node_c <cymel.core.cyobjects.node_c.Node_c>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:25
+msgid "Functions:"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
+msgid ":py:obj:`keyForBreadthFirst <cymel.core.cyobjects.node_c.keyForBreadthFirst>`\\ \\(node\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForBreadthFirst:1
+msgid "ノードリストをDAG階層の幅優先ソートするためのキー関数。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
+msgid ":py:obj:`keyForDepthFirst <cymel.core.cyobjects.node_c.keyForDepthFirst>`\\ \\(node\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForDepthFirst:1
+msgid "ノードリストをDAG階層の深さ優先ソートするためのキー関数。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
+msgid ":py:obj:`keyForPathLength <cymel.core.cyobjects.node_c.keyForPathLength>`\\ \\(node\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForPathLength:1
+msgid "ノードリストをDAGパス長（階層の深さ）でソートするためのキー関数。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:52
+msgid "Functions Details:"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForBreadthFirst:3
+msgid "DAGノードなら `~.DagNodeMixin.lengthAndSiblingIndices` の結果を、そうでなければ 0 と空リストを返す。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForBreadthFirst:7
+msgid "同じパス長のノードの順序が保証されなくて構わないなら、 `keyForPathLength` を利用すると少し処理が軽い。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForBreadthFirst:11
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForDepthFirst:8
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForPathLength:11
+msgid "検査するノード。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForBreadthFirst:0
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForDepthFirst:0
+msgid "ryype"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForBreadthFirst:12
+msgid "(int, `list`)"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForDepthFirst:3
+msgid "DAGノードなら `~.DagNodeMixin.siblingIndices` の結果を、そうでなければ空リストを返す。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForDepthFirst:9
+msgid "`list`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForPathLength:3
+msgid "`keyForBreadthFirst` に似ているが、それよりも単純で、 同じパス長のノードの順序が保証されない。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForPathLength:6
+msgid "DAGノードなら `~.DagNodeMixin.pathLength` の結果を、そうでなければ 0 を返す。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node_c.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForPathLength:12
+msgid "`int`"
+msgstr ""

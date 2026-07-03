@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/cymel.utils.files.rst:2
+msgid "cymel.utils.files"
+msgstr ""
+
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files:1
+msgid "Mayaファイル関連。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:17
+msgid "Functions:"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+msgid ":py:obj:`exportSceneFile <cymel.utils.files.exportSceneFile>`\\ \\(fname\\[\\, sel\\, all\\, ftype\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.exportSceneFile:1
+msgid "シーンファイルをエクスポートする。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+msgid ":py:obj:`importSceneFile <cymel.utils.files.importSceneFile>`\\ \\(fname\\[\\, namespace\\, prefix\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.importSceneFile:1
+msgid "シーンファイルをインポートする。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+msgid ":py:obj:`openSceneFile <cymel.utils.files.openSceneFile>`\\ \\(fname\\[\\, addRecent\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.openSceneFile:1
+msgid "シーンファイルをオープンする。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+msgid ":py:obj:`referenceSceneFile <cymel.utils.files.referenceSceneFile>`\\ \\(fname\\[\\, namespace\\, prefix\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.referenceSceneFile:1
+msgid "シーンファイルをリファレンスする。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+msgid ":py:obj:`saveSceneFile <cymel.utils.files.saveSceneFile>`\\ \\(\\[fname\\, ftype\\, addRecent\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:43:<autosummary>:1
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.saveSceneFile:1
+msgid "シーンファイルをセーブする。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:46
+msgid "Functions Details:"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.exportSceneFile:3
+msgid "シーンファイル名。 ディレクトリが存在しない場合は自動的に生成される。"
+msgstr ""
+
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.exportSceneFile:6
+msgid "all=False の場合に出力するノードの名前やリスト。 省略すると選択されているものがエクスポートされる。"
+msgstr ""
+
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.exportSceneFile:9
+msgid "シーン全体をエクスポートするかどうか。"
+msgstr ""
+
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.exportSceneFile:11
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.saveSceneFile:6
+msgid "ファイルタイプ名。拡張子から推測できる場合は省略可能。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.files.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.exportSceneFile:13
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.importSceneFile:11
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.openSceneFile:7
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.referenceSceneFile:11
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.saveSceneFile:10
+msgid "`str`"
+msgstr ""
+
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.importSceneFile:3
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.openSceneFile:3
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.referenceSceneFile:3
+msgid "シーンファイル名。"
+msgstr ""
+
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.importSceneFile:5
+msgid "インポートしたノードにネームスペースを付加する場合に指定する。 文字列ではない真値を指定すると、ファイル名から自動決定される。"
+msgstr ""
+
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.importSceneFile:8
+msgid "インポートしたノードにプレフィックスを付加する場合に指定する。 文字列ではない真値を指定すると、ファイル名から自動決定される。"
+msgstr ""
+
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.openSceneFile:5
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.saveSceneFile:8
+msgid "Recent Files に追加するかどうか。"
+msgstr ""
+
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.referenceSceneFile:5
+msgid "リファレンスしたノードにネームスペースを付加する場合に指定する。 文字列ではない真値を指定すると、ファイル名から自動決定される。"
+msgstr ""
+
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.referenceSceneFile:8
+msgid "リファレンスしたノードにプレフィックスを付加する場合に指定する。 文字列ではない真値を指定すると、ファイル名から自動決定される。"
+msgstr ""
+
+#: ../../python/cymel/utils/files.py:docstring of cymel.utils.files.saveSceneFile:3
+msgid "シーンファイル名。新規やリネームでなければ省略可能。 ディレクトリが存在しない場合は自動的に生成される。"
+msgstr ""

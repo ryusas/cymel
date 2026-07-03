@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:2
+msgid "class cymel.core.cyobjects.objectref.ObjectRef"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef:1
+msgid "`.CyObject` の参照が切れていても再取得が可能な弱参照ラッパー。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef:3
+msgid "これ自身も `.CyObject` であるため、参照先を得ずとも、 基底でサポートする範囲でオリジナルのようにも振る舞える。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+msgid ":py:obj:`internalData <cymel.core.cyobjects.objectref.ObjectRef.internalData>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.internalData:1
+msgid "内部データを返す。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+msgid ":py:obj:`newObject <cymel.core.cyobjects.objectref.ObjectRef.newObject>`\\ \\(data\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.newObject:1
+msgid "内部データとともにインスタンスを生成する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+msgid ":py:obj:`node <cymel.core.cyobjects.objectref.ObjectRef.node>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.node:1
+msgid "ノードを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+msgid ":py:obj:`object <cymel.core.cyobjects.objectref.ObjectRef.object>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.object:1
+msgid "弱参照が切れていなければオブジェクトを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+msgid ":py:obj:`refclass <cymel.core.cyobjects.objectref.ObjectRef.refclass>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.refclass:1
+msgid "ラップしているオブジェクトのクラスを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+msgid ":py:obj:`refdata <cymel.core.cyobjects.objectref.ObjectRef.refdata>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.refdata:1
+msgid "ラップしているオブジェクトの内部データを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+msgid ":py:obj:`weakref <cymel.core.cyobjects.objectref.ObjectRef.weakref>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:32:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.weakref:1
+msgid "弱参照を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:35
+msgid "Attributes:"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.CLASS_TYPE:1
+msgid "ラッパークラスの種類が `ObjectRef` であることを表す。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:44
+msgid "Methods Details:"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.internalData:3
+msgid "派生クラスで内部データを拡張する場合にオーバーライドする。 その場合、 `newObject` クラスメソッドもオーバーライドし、 拡張に対応させる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.internalData:7
+msgid "内部データはブラックボックスであるものとし、 拡張データでは基底のデータも内包させる必要がある。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.newObject:3
+msgid "内部データはブラックボックスであるものとし、 本メソッドをオーバーライドする場合も、 基底メソッドを呼び出して処理を完遂させなければならない。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.newObject:7
+msgid "内部データを拡張する場合は `internalData` も オーバーライドすること。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.newObject:11
+msgid "生成するインスタンスのクラス。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.newObject:12
+msgid "インスタンスにセットする内部データ。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.objectref.ObjectRef.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.node:3
+msgid "`.Node` 派生クラス"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.object:3
+msgid "`.CyObject`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/objectref.py:docstring of cymel.core.cyobjects.objectref.ObjectRef.weakref:3
+msgid "`weakref.ref`"
+msgstr ""

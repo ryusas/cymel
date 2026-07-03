@@ -67,22 +67,6 @@ Data Types
     cymel.core.datatypes.vector
 
 
-.. _modules-ui:
-
-UI Controls
-=====================================
-.. autosummary::
-    :nosignatures:
-    :toctree: generated/
-
-    cymel.ui.control
-    cymel.ui.layout
-    cymel.ui.menu
-    cymel.ui.uitemplate
-    cymel.ui.uitypes
-    cymel.ui.window
-
-
 .. _modules-utils:
 
 Utilities
@@ -111,6 +95,37 @@ Utilities (Independent of Maya)
     cymel.pyutils.immutables
     cymel.pyutils.ordereddict
     cymel.pyutils.pyutils
+
+
+.. _modules-ui:
+
+UI Controls
+=====================================
+.. autosummary::
+    :nosignatures:
+    :toctree: generated/
+
+    cymel.ui.control
+    cymel.ui.layout
+    cymel.ui.menu
+    cymel.ui.uitemplate
+    cymel.ui.uitypes
+    cymel.ui.window
+
+
+.. _modules-qt-helper:
+
+Qt Helper
+=====================================
+.. autosummary::
+    :nosignatures:
+    :toctree: generated/
+
+    cymel.qt
+    cymel.qt.binding
+    cymel.qt.widgets
+    cymel.qt.uifile
+    cymel.qt.maya
 
 
 Indices and tables

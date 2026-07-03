@@ -3,7 +3,7 @@ u"""
 Qt バインディング差分吸収パッケージ。
 
 ``cymel.qt`` では PySide/shiboken のバインディング差分を吸収する基本名
-``cymel.qt.binding`` だけを公開する。
+:mod:`.binding` だけを公開する。
 ほかの機能はそれぞれ明示 import して利用する。
 """
 from __future__ import absolute_import

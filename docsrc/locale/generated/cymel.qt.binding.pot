@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/cymel.qt.binding.rst:2
+msgid "cymel.qt.binding"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:1
+msgid "PySide バインディングの判別と互換エイリアス。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:3
+msgid "Qt/PySide 由来の名前をそのまま公開するもの。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:5
+msgid "`QtCore`"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:6
+msgid "`QtGui`"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:7
+msgid "`QtWidgets`"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:8
+msgid "`Qt`"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:9
+msgid "`Property`"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:10
+msgid "`Signal`"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:11
+msgid "`Slot`"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:12
+msgid "`QWidget`"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:13
+msgid "`QApplication`"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:15
+msgid "cymel が追加するバインディング情報。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:17
+msgid "`QT_BINDING_NAME` (str): 使用中のバインディング名。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:18
+msgid "`QT_BINDING_VERSION` (str): バインディングのバージョン文字列。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:19
+msgid "`QT_BINDING_VERSION_I` (tuple): バインディングのバージョンを数値タプル化したもの。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:20
+msgid "`QT_VERSION` (str): Qt のバージョン文字列。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:21
+msgid "`QT_VERSION_I` (tuple): Qt のバージョンを数値タプル化したもの。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:22
+msgid "`QT_MAJOR_VERSION` (int): Qt のメジャーバージョン。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:23
+msgid "`qtmodule`: 使用中の PySide モジュール。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:24
+msgid "`uic`: PySide/PySide2 の UI コンパイラモジュール。無い場合は None。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:26
+msgid "shiboken 由来の互換ヘルパー。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:28
+msgid "`wrapInstance`: C++ ポインタを Qt ラッパーに変換する。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:29
+msgid "`unwrapInstance`: Qt ラッパーから C++ ポインタを得る。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:30
+msgid "`isValidWrap`: Qt ラッパーが有効かどうかを返す。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:31
+msgid "`isInvalidWrap`: Qt ラッパーが無効かどうかを返す。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:32
+msgid "`isOwnedByPython`: インスタンスが Python 側に所有されているかどうかを返す。"
+msgstr ""
+
+#: ../../python/cymel/qt/binding.py:docstring of cymel.qt.binding:33
+msgid "`deleteInstance`: Qt ラッパーの対象インスタンスを削除する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.qt.binding.rst:24
+msgid "Aliases:"
+msgstr ""

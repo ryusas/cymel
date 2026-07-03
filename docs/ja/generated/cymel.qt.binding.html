@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel.qt.binding &#8212; cymel 0.31.2026070300 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
+    <script src="../_static/documentation_options.js?v=c67973fb"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/translations.js?v=4755f45a"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="cymel.qt.widgets" href="cymel.qt.widgets.html" />
+    <link rel="prev" title="cymel.qt" href="cymel.qt.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.widgets.html" title="cymel.qt.widgets"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.html" title="cymel.qt"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.31.2026070300 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.qt.binding</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-cymel.qt.binding">
+<span id="cymel-qt-binding"></span><h1>cymel.qt.binding<a class="headerlink" href="#module-cymel.qt.binding" title="Link to this heading">¶</a></h1>
+<p>PySide バインディングの判別と互換エイリアス。</p>
+<p>Qt/PySide 由来の名前をそのまま公開するもの。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QtCore</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QtGui</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QtWidgets</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Qt</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Property</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Signal</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Slot</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QApplication</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>cymel が追加するバインディング情報。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QT_BINDING_NAME</span></code> (str): 使用中のバインディング名。</p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QT_BINDING_VERSION</span></code> (str): バインディングのバージョン文字列。</p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QT_BINDING_VERSION_I</span></code> (tuple): バインディングのバージョンを数値タプル化したもの。</p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QT_VERSION</span></code> (str): Qt のバージョン文字列。</p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QT_VERSION_I</span></code> (tuple): Qt のバージョンを数値タプル化したもの。</p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QT_MAJOR_VERSION</span></code> (int): Qt のメジャーバージョン。</p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">qtmodule</span></code>: 使用中の PySide モジュール。</p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">uic</span></code>: PySide/PySide2 の UI コンパイラモジュール。無い場合は None。</p></li>
+</ul>
+</div></blockquote>
+<p>shiboken 由来の互換ヘルパー。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wrapInstance</span></code>: C++ ポインタを Qt ラッパーに変換する。</p></li>
+<li><p><a class="reference internal" href="#cymel.qt.binding.unwrapInstance" title="cymel.qt.binding.unwrapInstance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unwrapInstance</span></code></a>: Qt ラッパーから C++ ポインタを得る。</p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">isValidWrap</span></code>: Qt ラッパーが有効かどうかを返す。</p></li>
+<li><p><a class="reference internal" href="#cymel.qt.binding.isInvalidWrap" title="cymel.qt.binding.isInvalidWrap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isInvalidWrap</span></code></a>: Qt ラッパーが無効かどうかを返す。</p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">isOwnedByPython</span></code>: インスタンスが Python 側に所有されているかどうかを返す。</p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">deleteInstance</span></code>: Qt ラッパーの対象インスタンスを削除する。</p></li>
+</ul>
+</div></blockquote>
+<p class="rubric">Aliases:</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.qt.binding.isInvalidWrap">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.binding.</span></span><span class="sig-name descname"><span class="pre">isInvalidWrap</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">_initBinding.&lt;locals&gt;._setCommon.&lt;locals&gt;.&lt;lambda&gt;&gt;</span></span><a class="headerlink" href="#cymel.qt.binding.isInvalidWrap" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cymel.qt.binding.unwrapInstance">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.binding.</span></span><span class="sig-name descname"><span class="pre">unwrapInstance</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;function</span> <span class="pre">_initBinding.&lt;locals&gt;._setCommon.&lt;locals&gt;.&lt;lambda&gt;&gt;</span></span><a class="headerlink" href="#cymel.qt.binding.unwrapInstance" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel.qt.binding</a><ul>
+<li><a class="reference internal" href="#cymel.qt.binding.isInvalidWrap"><code class="docutils literal notranslate"><span class="pre">isInvalidWrap</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.binding.unwrapInstance"><code class="docutils literal notranslate"><span class="pre">unwrapInstance</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="cymel.qt.html"
+                          title="前の章へ">cymel.qt</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="cymel.qt.widgets.html"
+                          title="次の章へ">cymel.qt.widgets</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.qt.binding.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.widgets.html" title="cymel.qt.widgets"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.html" title="cymel.qt"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.31.2026070300 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.qt.binding</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; 著作権 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

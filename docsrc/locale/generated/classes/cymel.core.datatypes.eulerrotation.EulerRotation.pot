@@ -1,0 +1,480 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:2
+msgid "class cymel.core.datatypes.eulerrotation.EulerRotation"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation:1
+msgid "オイラー角回転クラス。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation:3
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.bound:3
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.inverse:3
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.makeYawPitch:12
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.reorder:4
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection:5
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.set:5
+msgid "`EulerRotation`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation:4
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.set:6
+msgid "x, y, z, order=XYZ"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation:5
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.set:7
+msgid "3値のシーケンス, order=XYZ"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation:6
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asQuaternion:3
+msgid "`.Quaternion`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation:7
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asMatrix:3
+msgid "`.Matrix`"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`alternateSolution <cymel.core.datatypes.eulerrotation.EulerRotation.alternateSolution>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid "Returns a new `EulerRotation` with a different rotation which is equivalent to this one and has the same rotation order."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`asD <cymel.core.datatypes.eulerrotation.EulerRotation.asD>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asDegrees:1
+msgid "`asDegrees` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`asDegrees <cymel.core.datatypes.eulerrotation.EulerRotation.asDegrees>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asDegrees:1
+msgid "X, Y, Z を度数法の `list` として得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`asM <cymel.core.datatypes.eulerrotation.EulerRotation.asM>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asMatrix:1
+msgid "`asMatrix` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`asMatrix <cymel.core.datatypes.eulerrotation.EulerRotation.asMatrix>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asMatrix:1
+msgid "回転行列として得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`asQ <cymel.core.datatypes.eulerrotation.EulerRotation.asQ>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asQuaternion:1
+msgid "`asQuaternion` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`asQuaternion <cymel.core.datatypes.eulerrotation.EulerRotation.asQuaternion>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asQuaternion:1
+msgid "クォータニオンとして得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`asTransformation <cymel.core.datatypes.eulerrotation.EulerRotation.asTransformation>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asTransformation:1
+msgid "トランスフォーメーションとして得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`asV <cymel.core.datatypes.eulerrotation.EulerRotation.asV>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asVector:1
+msgid "`asVector` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`asVector <cymel.core.datatypes.eulerrotation.EulerRotation.asVector>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asVector:1
+msgid "X, Y, Z をそのままセットした3次元ベクトルを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`asX <cymel.core.datatypes.eulerrotation.EulerRotation.asX>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asTransformation:1
+msgid "`asTransformation` の別名。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`bound <cymel.core.datatypes.eulerrotation.EulerRotation.bound>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.bound:1
+msgid "回転結果を維持しつつ、各軸の角度を±πの範囲におさめた値を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`boundIt <cymel.core.datatypes.eulerrotation.EulerRotation.boundIt>`\\ \\(\\[src\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.boundIt:1
+msgid "回転結果を維持しつつ、各軸の角度を±πの範囲におさめた値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`closestCut <cymel.core.datatypes.eulerrotation.EulerRotation.closestCut>`\\ \\(dst\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.closestCut:1
+msgid "Returns a new `EulerRotation` containing the rotation which is full spin multiples of this one and comes closest to target."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`closestSolution <cymel.core.datatypes.eulerrotation.EulerRotation.closestSolution>`\\ \\(dst\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.closestSolution:1
+msgid "Returns a new `EulerRotation` containing the rotation equivalent to this one which comes closest to target."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`computeAlternateSolution <cymel.core.datatypes.eulerrotation.EulerRotation.computeAlternateSolution>`\\ \\(src\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.computeAlternateSolution:1
+msgid "Returns a rotation equivalent to rot which is not simply a multiple of it."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`computeBound <cymel.core.datatypes.eulerrotation.EulerRotation.computeBound>`\\ \\(src\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.computeBound:1
+msgid "Returns a rotation equivalent to rot but bound within +/- PI."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`computeClosestCut <cymel.core.datatypes.eulerrotation.EulerRotation.computeClosestCut>`\\ \\(src\\, dst\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.computeClosestCut:1
+msgid "Returns the rotation which is full spin multiples of src and comes closest to target."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`computeClosestSolution <cymel.core.datatypes.eulerrotation.EulerRotation.computeClosestSolution>`\\ \\(src\\, dst\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.computeClosestSolution:1
+msgid "Returns the rotation equivalent to src which comes closest to target."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`decompose <cymel.core.datatypes.eulerrotation.EulerRotation.decompose>`\\ \\(m\\, order\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid "Extracts from matrix a valid rotation having the specified rotation order."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`incrementalRotateBy <cymel.core.datatypes.eulerrotation.EulerRotation.incrementalRotateBy>`\\ \\(axis\\, angle\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid "Perform an incremental rotation by the specified axis and angle."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`inverse <cymel.core.datatypes.eulerrotation.EulerRotation.inverse>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.inverse:1
+msgid "逆回転を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`invertIt <cymel.core.datatypes.eulerrotation.EulerRotation.invertIt>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.invertIt:1
+msgid "逆回転をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`isEquivalent <cymel.core.datatypes.eulerrotation.EulerRotation.isEquivalent>`\\ \\(v\\[\\, tol\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.isEquivalent:1
+msgid "ほぼ同値かどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`isGimbalLocked <cymel.core.datatypes.eulerrotation.EulerRotation.isGimbalLocked>`\\ \\(\\[tol\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.isGimbalLocked:1
+msgid "ジンバルロック状態かどうかを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`isZero <cymel.core.datatypes.eulerrotation.EulerRotation.isZero>`\\ \\(\\[tol\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.isZero:1
+msgid "ほぼゼロかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`makeYawPitch <cymel.core.datatypes.eulerrotation.EulerRotation.makeYawPitch>`\\ \\(vec\\[\\, order\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.makeYawPitch:1
+msgid "球面上のベクトルからヨーとピッチの2軸回転を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`orderStr <cymel.core.datatypes.eulerrotation.EulerRotation.orderStr>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.orderStr:1
+msgid "回転オーダーを文字列で得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`reorder <cymel.core.datatypes.eulerrotation.EulerRotation.reorder>`\\ \\(order\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.reorder:1
+msgid "回転結果を維持しつつ、オーダーを変更した値を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`reorderIt <cymel.core.datatypes.eulerrotation.EulerRotation.reorderIt>`\\ \\(order\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.reorderIt:1
+msgid "回転結果を維持しつつ、オーダーを変更した値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`reverseDirection <cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection:1
+msgid "同じ姿勢の逆周り回転を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`set <cymel.core.datatypes.eulerrotation.EulerRotation.set>`\\ \\(\\*args\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.set:1
+msgid "他の値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`setToAlternateSolution <cymel.core.datatypes.eulerrotation.EulerRotation.setToAlternateSolution>`\\ \\(src\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`setToClosestCut <cymel.core.datatypes.eulerrotation.EulerRotation.setToClosestCut>`\\ \\(srcOrDst\\[\\, dst\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`setToClosestSolution <cymel.core.datatypes.eulerrotation.EulerRotation.setToClosestSolution>`\\ \\(srcOrDst\\[\\, dst\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`setToReverseDirection <cymel.core.datatypes.eulerrotation.EulerRotation.setToReverseDirection>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.setToReverseDirection:1
+msgid "同じ姿勢の逆周り回転をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:62:<autosummary>:1
+msgid ":py:obj:`setValue <cymel.core.datatypes.eulerrotation.EulerRotation.setValue>`\\ \\(\\*args\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:65
+msgid "Attributes:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:80
+msgid "Methods Details:"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.alternateSolution:1
+msgid "Returns a new `EulerRotation` with a different rotation which is equivalent to this one and has the same rotation order. Each rotation component will lie within +/- PI."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asDegrees:3
+msgid "`list`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asTransformation:3
+msgid "`.Transformation`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.asVector:3
+msgid "`.Vector`"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.EulerRotation.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.boundIt:4
+msgid "ソース回転。省略時は現在の回転。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.boundIt:5
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.invertIt:3
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.reorderIt:4
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.set:11
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.setToReverseDirection:5
+msgid "`EulerRotation` (self)"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.decompose:1
+msgid "Extracts from matrix a valid rotation having the specified rotation order. Note that this may be just one of several different rotations which could each give rise to the same matrix."
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.incrementalRotateBy:1
+msgid "Perform an incremental rotation by the specified axis and angle. The rotation is broken down and performed in smaller steps so that the angles update properly."
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.isEquivalent:4
+msgid "比較する値。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.isEquivalent:5
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.isGimbalLocked:7
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.isZero:3
+msgid "許容誤差。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.isEquivalent:6
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.isGimbalLocked:8
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.isZero:4
+msgid "`bool`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.isGimbalLocked:3
+msgid "ピッチ回転が±π/2の状態 （ロール軸とヨー軸が重なった状態） をジンバルロックとする。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.makeYawPitch:3
+msgid "基準軸を指定方向へ向けるヨー、ピッチの回転が得られる。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.makeYawPitch:5
+msgid "回転オーダーは、そのまま 初期方向を表す基準軸、ピッチ回転軸、ヨー回転軸 を表す。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.makeYawPitch:10
+msgid "球面上の位置を表す単位ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.makeYawPitch:11
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.reorder:3
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.reorderIt:3
+msgid "回転オーダー。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.orderStr:3
+msgid "`str`"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection:3
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.setToReverseDirection:3
+msgid "`asQuaternion` で得られるクォータニオンが反転する。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.set:3
+msgid "コンストラクタと同様に、以下の値を指定可能。"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.set:8
+msgid "`.Quaternion` (現状のorder維持)"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.EulerRotation.set:9
+msgid "`.Matrix` (現状のorder維持)"
+msgstr ""

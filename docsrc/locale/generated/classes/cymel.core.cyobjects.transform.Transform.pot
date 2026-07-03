@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform.Transform.rst:2
+msgid "class cymel.core.cyobjects.transform.Transform"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/transform.py:docstring of cymel.core.cyobjects.transform.Transform:1
+msgid ":mayanode:`transform` ノードタイプラッパークラス。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/transform.py:docstring of cymel.core.cyobjects.transform.Transform:3
+msgid "固定引数無しでのクラスインスタンス生成時のノード生成をサポート。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform.Transform.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform.Transform.rst:26:<autosummary>:1
+msgid ":py:obj:`addChild <cymel.core.cyobjects.transform.Transform.addChild>`\\ \\(child\\[\\, r\\, add\\, avoidJointShear\\, ...\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform.Transform.rst:26:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/transform.py:docstring of cymel.core.cyobjects.transform.Transform.addChild:1
+msgid "子ノードを追加する。複数指定可能。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform.Transform.rst:29
+msgid "Attributes:"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/transform.py:docstring of cymel.core.cyobjects.transform.Transform.TYPE_BITS:1
+msgid "クラスでサポートしているノードの特徴を表す。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform.Transform.rst:38
+msgid "Methods Details:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.transform.Transform.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/transform.py:docstring of cymel.core.cyobjects.transform.Transform.addChild:3
+msgid "子にするノードの `.DagNode` や名前や、それらのリスト。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/transform.py:docstring of cymel.core.cyobjects.transform.Transform.addChild:5
+msgid "現在のローカル変換を維持するかどうか。 デフォルトではワールド空間で維持される。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/transform.py:docstring of cymel.core.cyobjects.transform.Transform.addChild:8
+msgid "移動ではなくパスを追加する（インスタンス）。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/transform.py:docstring of cymel.core.cyobjects.transform.Transform.addChild:10
+msgid "追加する子が joint で、ワールド姿勢の維持のために shear が必要な場合に、その使用を避けるための transform が 追加されるようにする。 これは本来の Maya の挙動だが、このメソッドのデフォルトでは joint の shear を使用することで transform を追加しない。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/transform.py:docstring of cymel.core.cyobjects.transform.Transform.addChild:16
+msgid "このノードが joint の場合に inverseScale 接続・切断の 保守をしない。"
+msgstr ""

@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:2
+msgid "class cymel.core.cyobjects.constraint.Constraint"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint:1
+msgid ":mayanode:`constraint`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint:3
+msgid "固定引数無しでのクラスインスタンス生成時のノード生成をサポート。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:35:<autosummary>:1
+msgid ":py:obj:`getTargetList <cymel.core.cyobjects.constraint.Constraint.getTargetList>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:35:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint.getTargetList:1
+msgid "Return the list of target objects."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:35:<autosummary>:1
+msgid ":py:obj:`getWeight <cymel.core.cyobjects.constraint.Constraint.getWeight>`\\ \\(\\*targetObjects\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:35:<autosummary>:1
+msgid "Returns the weight value for the specified targetObject(s)."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:35:<autosummary>:1
+msgid ":py:obj:`getWeightAliasList <cymel.core.cyobjects.constraint.Constraint.getWeightAliasList>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:35:<autosummary>:1
+msgid "Returns the names of the attributes that control the weight of the target objects."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:35:<autosummary>:1
+msgid ":py:obj:`getWeightPlugList <cymel.core.cyobjects.constraint.Constraint.getWeightPlugList>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:35:<autosummary>:1
+msgid "Returns the plug that control the weight of the target objects."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:35:<autosummary>:1
+msgid ":py:obj:`newObject <cymel.core.cyobjects.constraint.Constraint.newObject>`\\ \\(data\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:35:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint.newObject:1
+msgid "内部データとともにインスタンスを生成する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:35:<autosummary>:1
+msgid ":py:obj:`setWeight <cymel.core.cyobjects.constraint.Constraint.setWeight>`\\ \\(weight\\, \\*targetObjects\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:35:<autosummary>:1
+msgid "Sets the weight value for the specified targetObject(s)."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:38
+msgid "Methods Details:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint.getWeight:1
+msgid "Returns the weight value for the specified targetObject(s). if targetObjects are not provided, this will get weights of all targets"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.constraint.Constraint.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint.getWeight:4
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint.setWeight:5
+msgid "target nodes of this constraint"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint.getWeightAliasList:1
+msgid "Returns the names of the attributes that control the weight of the target objects. Aliases are returned in the same order as the targets are returned by the targetList flag"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint.getWeightPlugList:1
+msgid "Returns the plug that control the weight of the target objects. Plugs are returned in the same order as the targets are returned by the targetList flag"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint.newObject:3
+msgid "内部データはブラックボックスであるものとし、 本メソッドをオーバーライドする場合も、 基底メソッドを呼び出して処理を完遂させなければならない。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint.newObject:7
+msgid "内部データを拡張する場合は `~.CyObject.internalData` も オーバーライドすること。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint.newObject:11
+msgid "生成するインスタンスのクラス。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint.newObject:12
+msgid "インスタンスにセットする内部データ。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint.setWeight:1
+msgid "Sets the weight value for the specified targetObject(s). if targetObjects are not provided, this will set weights for all targets"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/constraint.py:docstring of cymel.core.cyobjects.constraint.Constraint.setWeight:4
+msgid "weight value to set for given target"
+msgstr ""

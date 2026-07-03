@@ -1,0 +1,29 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 19:03+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/cymel.qt.rst:2
+msgid "cymel.qt"
+msgstr ""
+
+#: ../../python/cymel/qt/__init__.py:docstring of cymel.qt:1
+msgid "Qt バインディング差分吸収パッケージ。"
+msgstr ""
+
+#: ../../python/cymel/qt/__init__.py:docstring of cymel.qt:3
+msgid "``cymel.qt`` では PySide/shiboken のバインディング差分を吸収する基本名 :mod:`.binding` だけを公開する。 ほかの機能はそれぞれ明示 import して利用する。"
+msgstr ""

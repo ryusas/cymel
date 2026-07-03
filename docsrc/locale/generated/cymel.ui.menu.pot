@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/cymel.ui.menu.rst:2
+msgid "cymel.ui.menu"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu:1
+msgid "mel UI のメニュー系のラッパー。"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:9
+msgid "Classes:"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid ":py:obj:`Menu <cymel.ui.menu.Menu>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid "mel UI の :mayacmd:`menu` ラッパークラス。"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid ":py:obj:`MenuBarLayout <cymel.ui.menu.MenuBarLayout>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid "mel UI の :mayacmd:`menuBarLayout` ラッパークラス。"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid ":py:obj:`MenuItem <cymel.ui.menu.MenuItem>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid "mel UI の :mayacmd:`menuItem` ラッパークラス。"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid ":py:obj:`OptionMenu <cymel.ui.menu.OptionMenu>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid "mel UI の :mayacmd:`optionMenu` ラッパークラス。"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid ":py:obj:`OptionMenuGrp <cymel.ui.menu.OptionMenuGrp>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid "mel UI の :mayacmd:`optionMenuGrp` ラッパークラス。"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid ":py:obj:`PopupMenu <cymel.ui.menu.PopupMenu>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid "mel UI の :mayacmd:`popupMenu` ラッパークラス。"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid ":py:obj:`SubMenuItem <cymel.ui.menu.SubMenuItem>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.ui.menu.rst:20:<autosummary>:1
+msgid "`.Menu` として振る舞う :mayacmd:`menuItem` -subMenu のラッパークラス。"
+msgstr ""

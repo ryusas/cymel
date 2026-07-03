@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/cymel.compat_nodetype.rst:2
+msgid "cymel.compat_nodetype"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype:1
+msgid "Mayaバージョンによるノードタイプ名変更のサポート。"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype:3
+msgid "新旧バージョン互換のために、そのバージョンでの正しい名前を得ることができる。"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype:5
+msgid "唯一のインスタンス `compat_nodetype_map` の属性アクセスという形で、 Mayaノードタイプ名を指定することで、正しい名前の文字列を得られる。"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype:8
+msgid "基本的には、変更後の新しい名前から、そのバージョンでの正しい名前を得られる"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype:10
+msgid "ノードタイプ名が変更され、元の名前が別のノードに置き換えられたものを指定すると、 新旧互換性が無いという意味で `AttributeError` となる"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype:13
+msgid "振る舞いの一貫性は欠くものの、 ノードタイプ名が変更され、元の名前が廃止されたものを指定すると、 新しい正しい名前を得られる。"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype:17
+msgid "上記いずれにも当てはまらない場合は、指定したものがそのまま得られる。"
+msgstr ""
+
+#: ../srcs/generated/cymel.compat_nodetype.rst:9
+msgid "Classes:"
+msgstr ""
+
+#: ../srcs/generated/cymel.compat_nodetype.rst:33:<autosummary>:1
+msgid ":py:obj:`CompatNodeTypeMap <cymel.compat_nodetype.CompatNodeTypeMap>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.compat_nodetype.rst:33:<autosummary>:1
+msgid "Mayaバージョンによるノードタイプ名変更に伴う新旧バージョン互換性確保のための名前変換器。"
+msgstr ""
+
+#: ../srcs/generated/cymel.compat_nodetype.rst:36
+msgid "Constants:"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype.MAYA2026_DELETED_TYPENAMES:1
+msgid "Maya 2026 で廃止されたノードタイプ名のセット。"
+msgstr ""
+
+#: ../../python/cymel/compat_nodetype.py:docstring of cymel.compat_nodetype.MAYA2026_DL_TO_OLD:1
+msgid "Maya 2026 の DL ノードタイプ名から旧タイプ名への辞書。"
+msgstr ""

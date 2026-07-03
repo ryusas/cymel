@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cymel.qt.maya &#8212; cymel 0.31.2026070300 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
+    <script src="../_static/documentation_options.js?v=c67973fb"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/translations.js?v=4755f45a"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="prev" title="cymel.qt.uifile" href="cymel.qt.uifile.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.uifile.html" title="cymel.qt.uifile"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.31.2026070300 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.qt.maya</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-cymel.qt.maya">
+<span id="cymel-qt-maya"></span><h1>cymel.qt.maya<a class="headerlink" href="#module-cymel.qt.maya" title="Link to this heading">¶</a></h1>
+<p>Maya UI に関する Qt ヘルパー。</p>
+<p class="rubric">Functions:</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.qt.maya.getDpiScaling" title="cymel.qt.maya.getDpiScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDpiScaling</span></code></a>([widget])</p></td>
+<td><p>Maya UI の DPI スケールを取得する。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.qt.maya.getMainWindow" title="cymel.qt.maya.getMainWindow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMainWindow</span></code></a>()</p></td>
+<td><p>Maya のメインウィンドウを QWidget として取得する。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.qt.maya.getMayaWidget" title="cymel.qt.maya.getMayaWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMayaWidget</span></code></a>([name, uitype, cls])</p></td>
+<td><p>Maya UI 名に対応する Qt ウィジェットを取得する。</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Functions Details:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.maya.getDpiScaling">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.maya.</span></span><span class="sig-name descname"><span class="pre">getDpiScaling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.maya.getDpiScaling" title="Link to this definition">¶</a></dt>
+<dd><p>Maya UI の DPI スケールを取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.maya.getMainWindow">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.maya.</span></span><span class="sig-name descname"><span class="pre">getMainWindow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.maya.getMainWindow" title="Link to this definition">¶</a></dt>
+<dd><p>Maya のメインウィンドウを QWidget として取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cymel.qt.maya.getMayaWidget">
+<span class="sig-prename descclassname"><span class="pre">cymel.qt.maya.</span></span><span class="sig-name descname"><span class="pre">getMayaWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uitype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">&lt;class</span> <span class="pre">'PySide6.QtWidgets.QWidget'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.maya.getMayaWidget" title="Link to this definition">¶</a></dt>
+<dd><p>Maya UI 名に対応する Qt ウィジェットを取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- UI のフルパス名。
+省略した場合はカレントレイアウトとなる。</p></li>
+<li><p><strong>uitype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- <p>name を指定し cls が None でないときに有効。</p>
+<p>分かっていれば、Maya の UI タイプを文字列で指定する。
+'control', 'layout', 'window', 'menuItem'
+のいずれかを指定出来る。</p>
+<p>Windows では layout を control として取得出来たが
+Linux では出来ないことがあった（ものによる）。
+未指定の場合、取得できるまで全タイプが試されるが、
+分かっているなら指定した方が確実。</p>
+</p></li>
+<li><p><strong>cls</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><em>type</em></a>) -- <code class="xref py py-obj docutils literal notranslate"><span class="pre">wrapInstance</span></code> での取得を試みる際に指定するクラス。
+None を指定すると <code class="xref py py-obj docutils literal notranslate"><span class="pre">getWidgetByPathName</span></code> が利用される。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>cls に None を指定しなければ、
+初めに Maya API と <code class="xref py py-obj docutils literal notranslate"><span class="pre">wrapInstance</span></code> を用いた簡易的な手法が試される。
+まれに <code class="xref py py-obj docutils literal notranslate"><span class="pre">wrapInstance</span></code> は <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#OverflowError" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OverflowError</span></code></a> となり、その場合、
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">getWidgetByPathName</span></code> が使用される。
+その場合のクラスは自動的に適切なものに決定される。</p>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cymel.qt.maya</a><ul>
+<li><a class="reference internal" href="#cymel.qt.maya.getDpiScaling"><code class="docutils literal notranslate"><span class="pre">getDpiScaling()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.maya.getMainWindow"><code class="docutils literal notranslate"><span class="pre">getMainWindow()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.qt.maya.getMayaWidget"><code class="docutils literal notranslate"><span class="pre">getMayaWidget()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="cymel.qt.uifile.html"
+                          title="前の章へ">cymel.qt.uifile</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generated/cymel.qt.maya.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="cymel.qt.uifile.html" title="cymel.qt.uifile"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.31.2026070300 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cymel.qt.maya</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; 著作権 2020-2026, ryusas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

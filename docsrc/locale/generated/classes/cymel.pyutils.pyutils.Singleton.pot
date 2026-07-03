@@ -1,0 +1,33 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.pyutils.pyutils.Singleton.rst:2
+msgid "class cymel.pyutils.pyutils.Singleton"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.Singleton:1
+msgid "シングルトンクラスを作る為のメタクラス。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.Singleton:3
+msgid "その型のインスタンスは1つしか生成されなくなる。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.Singleton:5
+msgid "インスタンスが生成されようとする時、同じ型のインスタンスが 既に存在していればそれが返されるだけである。 生成時の引数内容の違いも考慮されずに流用される点には注意が必要。"
+msgstr ""

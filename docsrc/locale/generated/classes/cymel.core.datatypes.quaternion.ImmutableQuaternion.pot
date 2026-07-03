@@ -1,0 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:2
+msgid "class cymel.core.datatypes.quaternion.ImmutableQuaternion"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/quaternion.py:docstring of cymel.core.datatypes.quaternion.ImmutableQuaternion:1
+msgid "`Quaternion` の `immutable` ラッパー。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+msgid ":py:obj:`conjugateIt <cymel.core.datatypes.quaternion.ImmutableQuaternion.conjugateIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "共役クォータニオンをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+msgid ":py:obj:`invertIt <cymel.core.datatypes.quaternion.ImmutableQuaternion.invertIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "逆クォータニオンをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+msgid ":py:obj:`negateIt <cymel.core.datatypes.quaternion.ImmutableQuaternion.negateIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "符号反転クォータニオンをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+msgid ":py:obj:`normalize <cymel.core.datatypes.quaternion.ImmutableQuaternion.normalize>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "正規化クォータニオンをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+msgid ":py:obj:`normalizeIt <cymel.core.datatypes.quaternion.ImmutableQuaternion.normalizeIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+msgid ":py:obj:`set <cymel.core.datatypes.quaternion.ImmutableQuaternion.set>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "他の値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+msgid ":py:obj:`setAngle <cymel.core.datatypes.quaternion.ImmutableQuaternion.setAngle>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "クォータニオンの持つ回転角度を書き換える。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+msgid ":py:obj:`setToIdentity <cymel.core.datatypes.quaternion.ImmutableQuaternion.setToIdentity>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "単位クォータニオンをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+msgid ":py:obj:`setToXAxis <cymel.core.datatypes.quaternion.ImmutableQuaternion.setToXAxis>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "X軸回りの回転角度をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+msgid ":py:obj:`setToYAxis <cymel.core.datatypes.quaternion.ImmutableQuaternion.setToYAxis>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "Y軸回りの回転角度をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+msgid ":py:obj:`setToZAxis <cymel.core.datatypes.quaternion.ImmutableQuaternion.setToZAxis>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "Z軸回りの回転角度をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:41:<autosummary>:1
+msgid ":py:obj:`setValue <cymel.core.datatypes.quaternion.ImmutableQuaternion.setValue>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:44
+msgid "Methods Details:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:4
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:8
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:14
+msgid "`Quaternion` (self)"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "コンストラクタと同様に、以下の値を指定可能。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:5
+msgid "`Quaternion`"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:6
+msgid "x, y, z, w"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:7
+msgid "4値までのシーケンス"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:8
+msgid "回転軸 (`.Vector`), 角度"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:9
+msgid "角度, 回転軸 (`.Vector`)"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:10
+msgid "`.EulerRotation`"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:11
+msgid "`.Matrix`"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:12
+msgid "`.Vector`"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.quaternion.ImmutableQuaternion.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "角度。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:4
+msgid "現在の w が負 （πより大きい回転角度を持っている） なら、軸を反転補正させた上での角度をセットする。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "`self`"
+msgstr ""

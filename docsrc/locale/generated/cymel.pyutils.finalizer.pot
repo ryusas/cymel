@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/cymel.pyutils.finalizer.rst:2
+msgid "cymel.pyutils.finalizer"
+msgstr ""
+
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer:1
+msgid "任意のオブジェクトが破棄されたときに呼び出されるファイナライザ機能。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer:3
+msgid "クラスの特殊メソッド __del__ には以下の問題がある。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer:5
+msgid "__del__ 中の例外は補足できない。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer:6
+msgid "インタプリタが終了する時に呼ばれる事は保証されない。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer:7
+msgid "循環参照がある場合で且つ __del__ が在ると解放されなくなる。 （循環参照があると `gc` は __del__ を呼び出す適切なタイミングを保証出来なくなる為）"
+msgstr ""
+
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer:11
+msgid "__del__ が在ると循環参照の状況で解放されなくなる問題は python 3.4 以降（ :pep:`442` ）で解決されている。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.finalizer.rst:17
+msgid "Functions:"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.finalizer.rst:41:<autosummary>:1
+msgid ":py:obj:`deregisterFinalizer <cymel.pyutils.finalizer.deregisterFinalizer>`\\ \\(key\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.finalizer.rst:41:<autosummary>:1
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer.deregisterFinalizer:1
+msgid "登録済みファイナライザを削除する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.finalizer.rst:41:<autosummary>:1
+msgid ":py:obj:`registerFinalizer <cymel.pyutils.finalizer.registerFinalizer>`\\ \\(obj\\, proc\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.finalizer.rst:41:<autosummary>:1
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer.registerFinalizer:1
+msgid "オブジェクトが破棄された時に呼び出されるプロシージャを登録する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.finalizer.rst:41:<autosummary>:1
+msgid ":py:obj:`trackDestruction <cymel.pyutils.finalizer.trackDestruction>`\\ \\(obj\\[\\, logger\\, maxChars\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.finalizer.rst:41:<autosummary>:1
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer.trackDestruction:1
+msgid "ファイナライザを使って、オブジェクトの削除を簡易にログする。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.finalizer.rst:44
+msgid "Functions Details:"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.finalizer.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer.deregisterFinalizer:3
+msgid "登録時に返されたID。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer.registerFinalizer:3
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer.trackDestruction:3
+msgid "対象のオブジェクト。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer.registerFinalizer:4
+msgid "登録するプロシージャ。"
+msgstr ""
+
+#: ../srcs/generated/cymel.pyutils.finalizer.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer.registerFinalizer:6
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer.trackDestruction:10
+msgid "`int` (ファイナライザID)"
+msgstr ""
+
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer.trackDestruction:4
+msgid "ログ用に `str` を受け取れる任意の実行可能オブジェクト。 省略時は print される。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/finalizer.py:docstring of cymel.pyutils.finalizer.trackDestruction:7
+msgid "ログ出力される repr の文字数がこの数を超える場合に メッセージを調整する。ゼロの場合はその判定をしない。"
+msgstr ""

@@ -1,0 +1,383 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:2
+msgid "class cymel.core.datatypes.matrix.ImmutableMatrix"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/matrix.py:docstring of cymel.core.datatypes.matrix.ImmutableMatrix:1
+msgid "`Matrix` の `immutable` ラッパー。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`addT <cymel.core.datatypes.matrix.ImmutableMatrix.addT>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "平行移動値を加算する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`addTranslation <cymel.core.datatypes.matrix.ImmutableMatrix.addTranslation>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`adjointIt <cymel.core.datatypes.matrix.ImmutableMatrix.adjointIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "余因子行列をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`adjugateIt <cymel.core.datatypes.matrix.ImmutableMatrix.adjugateIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`homogenizeIt <cymel.core.datatypes.matrix.ImmutableMatrix.homogenizeIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "3x3部分を正規直交化した行列をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`imulidivsetTranslation <cymel.core.datatypes.matrix.ImmutableMatrix.imulidivsetTranslation>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`init3x3 <cymel.core.datatypes.matrix.ImmutableMatrix.init3x3>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "3x3 部分を初期化する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`initT <cymel.core.datatypes.matrix.ImmutableMatrix.initT>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "4行目の平行移動成分をクリアする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`initTranslation <cymel.core.datatypes.matrix.ImmutableMatrix.initTranslation>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`invertIt <cymel.core.datatypes.matrix.ImmutableMatrix.invertIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "逆行列をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`mirrorIt <cymel.core.datatypes.matrix.ImmutableMatrix.mirrorIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "指定軸方向でミラーしたマトリックスをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`orthonormalizeIt <cymel.core.datatypes.matrix.ImmutableMatrix.orthonormalizeIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`set <cymel.core.datatypes.matrix.ImmutableMatrix.set>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "他の値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`setAxes <cymel.core.datatypes.matrix.ImmutableMatrix.setAxes>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "3x3部分の行や列と4行目の平行移動ベクトルをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`setAxis <cymel.core.datatypes.matrix.ImmutableMatrix.setAxis>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "3x3部分の行や列のベクトルをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`setColumn <cymel.core.datatypes.matrix.ImmutableMatrix.setColumn>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "列ベクトルをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`setColumns <cymel.core.datatypes.matrix.ImmutableMatrix.setColumns>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "列ベクトルを4つ全てセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`setElem <cymel.core.datatypes.matrix.ImmutableMatrix.setElem>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "指定位置の要素をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`setRow <cymel.core.datatypes.matrix.ImmutableMatrix.setRow>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "行ベクトルをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`setRows <cymel.core.datatypes.matrix.ImmutableMatrix.setRows>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "行ベクトルを4つ全てセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`setT <cymel.core.datatypes.matrix.ImmutableMatrix.setT>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "平行移動値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`setToIdentity <cymel.core.datatypes.matrix.ImmutableMatrix.setToIdentity>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "単位行列をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`subT <cymel.core.datatypes.matrix.ImmutableMatrix.subT>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "平行移動値を減算する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`subTranslation <cymel.core.datatypes.matrix.ImmutableMatrix.subTranslation>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+msgid ":py:obj:`transposeIt <cymel.core.datatypes.matrix.ImmutableMatrix.transposeIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:54:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "転置行列をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:57
+msgid "Methods Details:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:4
+msgid "平行移動の3次元ベクトル。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.matrix.ImmutableMatrix.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:6
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:8
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:17
+msgid "`Matrix` (self)"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "4x4 全て初期化する場合は `setToIdentity` が利用できる。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:5
+msgid "平行移動成分のみの行列を新規に得たい場合は `asTranslationMatrix` が利用できる。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "3x3 以外を初期化したマトリクスを新規に得たい場合は `as3x3` が利用できる。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "ミラーする基準軸。 `.AXIS_X` 、 `.AXIS_Y` 、 `.AXIS_Z` のいずれかを指定する。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:6
+msgid "行列式（スケール）が反転しないように、 ミラー結果の逆を向けるローカル軸。 `.AXIS_X` 、 `.AXIS_Y` 、 `.AXIS_Z` の他に、 None 、 False 、 True を指定可能。  省略時(True)はミラー基準軸と同じになる。 False では 3x3 部は反転しない。 None ではミラー結果から全軸を逆に向ける。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:7
+msgid "行列式（スケール）が反転しないように、 ミラー結果の逆を向けるローカル軸。 `.AXIS_X` 、 `.AXIS_Y` 、 `.AXIS_Z` の他に、 None 、 False 、 True を指定可能。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:12
+msgid "省略時(True)はミラー基準軸と同じになる。 False では 3x3 部は反転しない。 None ではミラー結果から全軸を逆に向ける。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:15
+msgid "平行移動値（4行目）も反転するかどうか。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "コンストラクタと同様に、以下の値を指定可能。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:5
+msgid "`Matrix`"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:6
+msgid "16値のシーケンス"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:4
+msgid "セットするX軸ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:6
+msgid "セットするY軸ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:8
+msgid "セットするZ軸ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:10
+msgid "セットする平行移動ベクトル。 これだけは transpose オプションの影響を受けない。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:13
+msgid "3x3部分には転置行列の軸ベクトルをセットする。 言い換えると False では行ベクトルを True では列ベクトルをセットすることになる。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "軸指定(0=X, 1=Y, 2=Z)。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:5
+msgid "セットする軸ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:7
+msgid "転置行列の軸ベクトルをセットする。 言い換えると False では行ベクトルを True では列ベクトルをセットすることになる。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "列インデックス（0～3）。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:5
+msgid "セットする4次元ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:4
+msgid "1列目の4次元ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:6
+msgid "2列目の4次元ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:8
+msgid "3列目の4次元ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:10
+msgid "4列目の4次元ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "行を 0 ～ 3 で指定。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:4
+msgid "列を 0 ～ 3 で指定。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:5
+msgid "セットする値。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "行インデックス（0～3）。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:4
+msgid "1行目の4次元ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:6
+msgid "2行目の4次元ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:8
+msgid "3行目の4次元ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:10
+msgid "4行目の4次元ベクトル。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "`self`"
+msgstr ""

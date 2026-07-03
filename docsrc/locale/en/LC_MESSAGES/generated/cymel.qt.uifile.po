@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.qt.uifile.rst:2
+msgid "cymel.qt.uifile"
+msgstr "cymel.qt.uifile"
+
+#: cymel.qt.uifile:1 of
+msgid "Qt Designer の .ui ファイルヘルパー。"
+msgstr ".ui file helper for Qt Designer."
+
+#: ../srcs/generated/cymel.qt.uifile.rst:17
+msgid "Functions:"
+msgstr "Functions:"
+
+#: ../srcs/generated/cymel.qt.uifile.rst:39:<autosummary>:1
+msgid ""
+":py:obj:`loadUiType <cymel.qt.uifile.loadUiType>`\\ "
+"\\(ui\\_file\\_name\\[\\, translator\\]\\)"
+msgstr ""
+":py:obj:`loadUiType <cymel.qt.uifile.loadUiType>`\\ "
+"\\(ui\\_file\\_name\\[\\, translator\\]\\)"
+
+#: ../srcs/generated/cymel.qt.uifile.rst:39:<autosummary>:1
+#: cymel.qt.uifile.loadUiType:1 of
+msgid "Qt Designer の .ui ファイルを読み込み、``(form_class, base_class)`` を返す。"
+msgstr ""
+"Loads Qt Designer's .ui file and returns ``(form_class, base_class)``."
+
+#: ../srcs/generated/cymel.qt.uifile.rst:42
+msgid "Functions Details:"
+msgstr "Function Details:"

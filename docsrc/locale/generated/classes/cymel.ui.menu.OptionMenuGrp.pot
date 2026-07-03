@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.ui.menu.OptionMenuGrp.rst:2
+msgid "class cymel.ui.menu.OptionMenuGrp"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.OptionMenuGrp:1
+msgid "mel UI の :mayacmd:`optionMenuGrp` ラッパークラス。"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.OptionMenuGrp:3
+msgid "`with` で :mayacmd:`setParent` が行える。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.OptionMenuGrp.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.OptionMenuGrp.rst:33:<autosummary>:1
+msgid ":py:obj:`UICMD <cymel.ui.menu.OptionMenuGrp.UICMD>`"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.OptionMenuGrp.rst:33:<autosummary>:1
+msgid ":py:obj:`getValue <cymel.ui.menu.OptionMenuGrp.getValue>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.OptionMenuGrp.rst:33:<autosummary>:1
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.OptionMenuGrp.getValue:1
+msgid "値を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.OptionMenuGrp.rst:33:<autosummary>:1
+msgid ":py:obj:`menu <cymel.ui.menu.OptionMenuGrp.menu>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.OptionMenuGrp.rst:33:<autosummary>:1
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.OptionMenuGrp.menu:1
+msgid "`OptionMenu` を取得する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.OptionMenuGrp.rst:33:<autosummary>:1
+msgid ":py:obj:`setValue <cymel.ui.menu.OptionMenuGrp.setValue>`\\ \\(val\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.OptionMenuGrp.rst:33:<autosummary>:1
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.OptionMenuGrp.setValue:1
+msgid "値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.OptionMenuGrp.rst:36
+msgid "Methods Details:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.OptionMenuGrp.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.OptionMenuGrp.getValue:3
+msgid "`int`"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.OptionMenuGrp.menu:3
+msgid "`OptionMenu`"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.menu.OptionMenuGrp.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/ui/menu.py:docstring of cymel.ui.menu.OptionMenuGrp.setValue:3
+msgid "セットする値。"
+msgstr ""

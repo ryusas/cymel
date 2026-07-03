@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/cymel.utils.operation.rst:2
+msgid "cymel.utils.operation"
+msgstr ""
+
+#: ../../python/cymel/utils/operation.py:docstring of cymel.utils.operation:1
+msgid "Maya操作関連。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:9
+msgid "Classes:"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid ":py:obj:`NonUndoable <cymel.utils.operation.NonUndoable>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid "アンドゥ不可で実行するコンテキスト。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid ":py:obj:`PreserveSelection <cymel.utils.operation.PreserveSelection>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid "元の選択状態を復元できるコンテキスト。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid ":py:obj:`UndoChunk <cymel.utils.operation.UndoChunk>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid "1つのアンドゥチャンクを作るコンテキスト。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid ":py:obj:`UndoTransaction <cymel.utils.operation.UndoTransaction>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid "コンテキストで例外が発生した場合にアンドゥするトランザクション。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid ":py:obj:`WaitCursor <cymel.utils.operation.WaitCursor>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:27:<autosummary>:1
+msgid "ウェイトカーソルを表示するコンテキスト。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:29
+msgid "Functions:"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:51:<autosummary>:1
+msgid ":py:obj:`docmd <cymel.utils.operation.docmd>`\\ \\(do\\, undo\\[\\, redo\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:51:<autosummary>:1
+#: ../../python/cymel/utils/operation.py:docstring of cymel.utils.operation.docmd:1
+msgid "任意の callable オブジェクトを与えて undo 可能なコマンドとして実行する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.operation.rst:54
+msgid "Functions Details:"
+msgstr ""
+
+#: ../../python/cymel/utils/operation.py:docstring of cymel.utils.operation.docmd:3
+msgid "そのままだと undo/redo が不可能な処理を undo 可能として実行することが出来る。"
+msgstr ""
+
+#: ../../python/cymel/utils/operation.py:docstring of cymel.utils.operation.docmd:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/utils/operation.py:docstring of cymel.utils.operation.docmd:5
+msgid "最初の実行用の実行可能オブジェクト。"
+msgstr ""
+
+#: ../../python/cymel/utils/operation.py:docstring of cymel.utils.operation.docmd:7
+msgid "undo 用の実行可能オブジェクト。"
+msgstr ""
+
+#: ../../python/cymel/utils/operation.py:docstring of cymel.utils.operation.docmd:9
+msgid "redo 用の実行可能オブジェクト。 省略すると do が使用される。"
+msgstr ""

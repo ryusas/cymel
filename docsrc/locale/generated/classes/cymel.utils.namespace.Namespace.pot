@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:2
+msgid "class cymel.utils.namespace.Namespace"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace:1
+msgid "Mayaネームスペースクラス。"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace:3
+msgid "カレントネームスペースを制御するコンテキストとしても使用できる。"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace:5
+msgid "文字列の派生クラスなので、通常の文字列のように振る舞う。"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace:7
+msgid "それがMayaに実際に存在するかどうかにかかわらず、 インスタンスは生成できる。 そして、カレントにする際などに存在しなければ生成される。"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace:11
+msgid "イミュータブルである文字列としては、 Mayaの相対ネームスペースモード如何にかかわらず、 常に : で始まる絶対名で扱われる。"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace:16
+msgid "カレントネームスペース設定時、 Mayaの相対ネームスペースモードの設定による挙動の違いには注意が必要。"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace:19
+msgid "ノード生成は、相対ネームスペースモード設定にかかわらず、 カレントネームスペースでの命名となる。"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace:22
+msgid "ノード名の評価や指定は、相対ネームスペースモード設定が有効でないと、 カレントネームスペース指定の影響はない。"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace:25
+msgid "本クラスにおけるネームスペースのハンドリングは、ノード生成ではないため、 相対名が有効に機能するのは相対ネームスペースモードが有効な場合のみである。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`absolute <cymel.utils.namespace.Namespace.absolute>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.absolute:1
+msgid "カレント設定に依存しない絶対名であり、このネームスペースの文字列そのもの。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`children <cymel.utils.namespace.Namespace.children>`\\ \\(\\[internal\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.children:1
+msgid "子ネームスペースのリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`create <cymel.utils.namespace.Namespace.create>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.create:1
+msgid "ネームスペースを生成する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`current <cymel.utils.namespace.Namespace.current>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.current:1
+msgid "カレントネームスペースを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`exists <cymel.utils.namespace.Namespace.exists>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.exists:1
+msgid "ネームスペースが実際に存在するかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`isCurrent <cymel.utils.namespace.Namespace.isCurrent>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.isCurrent:1
+msgid "ネームスペースがカレントかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`iterBreadthFirst <cymel.utils.namespace.Namespace.iterBreadthFirst>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.iterBreadthFirst:1
+msgid "ネームスペース階層を幅優先反復する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`iterDepthFirst <cymel.utils.namespace.Namespace.iterDepthFirst>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.iterDepthFirst:1
+msgid "ネームスペース階層を深さ優先反復する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`ls <cymel.utils.namespace.Namespace.ls>`\\ \\(\\[pattern\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.ls:1
+msgid "このネームスペース直下のノードのリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`name <cymel.utils.namespace.Namespace.name>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.name:1
+msgid "Maya の相対ネームスペースモードの影響のもと、相対名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`parent <cymel.utils.namespace.Namespace.parent>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.parent:1
+msgid "親ネームスペースを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`relative <cymel.utils.namespace.Namespace.relative>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.relative:1
+msgid "カレントネームスペースからの相対名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`relativeMode <cymel.utils.namespace.Namespace.relativeMode>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.relativeMode:1
+msgid "相対ネームスペースモードが有効かどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`setCurrent <cymel.utils.namespace.Namespace.setCurrent>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.setCurrent:1
+msgid "ネームスペースをカレントにする。存在しない場合は追加される。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+msgid ":py:obj:`setRelativeMode <cymel.utils.namespace.Namespace.setRelativeMode>`\\ \\(state\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:44:<autosummary>:1
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.setRelativeMode:1
+msgid "相対ネームスペースモードをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:47
+msgid "Methods Details:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.absolute:3
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.name:6
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.relative:6
+msgid "`str`"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.utils.namespace.Namespace.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.children:3
+msgid "Mayaのシステムネームスペースを除外しない。"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.children:5
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.ls:7
+msgid "`list`"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.current:3
+msgid "`Namespace`"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.exists:3
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.relativeMode:3
+msgid "`bool`"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.iterBreadthFirst:3
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.iterDepthFirst:3
+msgid "yield `Namespace`"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.ls:3
+msgid "名前のパターン。"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.ls:5
+msgid ":mayacmd:`ls` コマンドのオプションを指定可能。"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.name:3
+msgid "相対ネームスペースモードが ON の場合はカレントネームスペースから、 OFF の場合はルートネームスペースからの相対名となる。"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.parent:3
+msgid "`Namespace` or None"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.relative:3
+msgid "Mayaの相対ネームスペースモードの状態にかかわらず、 常に、カレントネームスペースからの相対名が得られる。"
+msgstr ""
+
+#: ../../python/cymel/utils/namespace.py:docstring of cymel.utils.namespace.Namespace.setRelativeMode:3
+msgid "有効か無効か。"
+msgstr ""

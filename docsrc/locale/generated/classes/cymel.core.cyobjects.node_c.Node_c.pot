@@ -1,0 +1,864 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:2
+msgid "class cymel.core.cyobjects.node_c.Node_c"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c:1
+msgid "`.Node` クラスでサポートする機能の中核。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c:3
+msgid "固定引数無しでのクラスインスタンス生成時のノード生成をサポート。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`absoluteName <cymel.core.cyobjects.node_c.Node_c.absoluteName>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.absoluteName:1
+msgid "DAGパスを含まないノード名を絶対ネームスペース表記で得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`affectsAnimation <cymel.core.cyobjects.node_c.Node_c.affectsAnimation>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.affectsAnimation:1
+msgid "ノードが「必ずアニメーションに影響を与える」と設定されているかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`classification <cymel.core.cyobjects.node_c.Node_c.classification>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.classification:1
+msgid "ノードタイプの分類名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`classification_ <cymel.core.cyobjects.node_c.Node_c.classification_>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.classification_:1
+msgid "クラスに紐付けられたノードタイプの分類名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`connections <cymel.core.cyobjects.node_c.Node_c.connections>`\\ \\(\\[s\\, d\\, c\\, t\\, et\\, scn\\, source\\, ...\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.connections:1
+msgid "コネクトされているプラグやノードのリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`createNode <cymel.core.cyobjects.node_c.Node_c.createNode>`\\ \\(\\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.createNode:1
+msgid "クラスに関連付けられたタイプのノードを生成する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`destinations <cymel.core.cyobjects.node_c.Node_c.destinations>`\\ \\(\\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.destinations:1
+msgid "unitConversionノードをスキップしつつ、出力先のプラグかノードのリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`destinationsWithConversions <cymel.core.cyobjects.node_c.Node_c.destinationsWithConversions>`\\ \\(\\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.outputs:1
+msgid "`outputs` の別名（unitConversionノードをスキップせずに、出力先のプラグかノードのリストを得る）。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`hasAttr <cymel.core.cyobjects.node_c.Node_c.hasAttr>`\\ \\(name\\[\\, alias\\, shape\\, strict\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.hasAttr:1
+msgid "指定した名前のアトリビュートが在るかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`hasFn <cymel.core.cyobjects.node_c.Node_c.hasFn>`\\ \\(fn\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.hasFn:1
+msgid "指定ファンクションタイプと互換性があるかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`hasUniqueName <cymel.core.cyobjects.node_c.Node_c.hasUniqueName>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.hasUniqueName:1
+msgid "ノード名がユニークであるかどうかを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`inputs <cymel.core.cyobjects.node_c.Node_c.inputs>`\\ \\(\\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.connections:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.inputs:1
+msgid "上流のコネクションを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`isAbstractType <cymel.core.cyobjects.node_c.Node_c.isAbstractType>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isAbstractType:1
+msgid "クラスに紐付けられたノードタイプが抽象タイプかどうかを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`isDagNode <cymel.core.cyobjects.node_c.Node_c.isDagNode>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isDagNode:1
+msgid "DAGノードかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`isDefaultNode <cymel.core.cyobjects.node_c.Node_c.isDefaultNode>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isDefaultNode:1
+msgid "デフォルトノードかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`isFromReferencedFile <cymel.core.cyobjects.node_c.Node_c.isFromReferencedFile>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isFromReferencedFile:1
+msgid "リファレンスファイルのノードかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`isInstanceOf <cymel.core.cyobjects.node_c.Node_c.isInstanceOf>`\\ \\(other\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isInstanceOf:1
+msgid "たとえDAGパスが違っても同一ノードであるかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`isJoint <cymel.core.cyobjects.node_c.Node_c.isJoint>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isJoint:1
+msgid "joint 派生ノードかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`isLocked <cymel.core.cyobjects.node_c.Node_c.isLocked>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isLocked:1
+msgid "ロックされているかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`isRenamable <cymel.core.cyobjects.node_c.Node_c.isRenamable>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isRenamable:1
+msgid "リネーム可能かどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`isShape <cymel.core.cyobjects.node_c.Node_c.isShape>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isShape:1
+msgid "shape 派生ノードかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`isShared <cymel.core.cyobjects.node_c.Node_c.isShared>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isShared:1
+msgid "共有ノードかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`isTrackingEdits <cymel.core.cyobjects.node_c.Node_c.isTrackingEdits>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isTrackingEdits:1
+msgid "`isFromReferencedFile` との違いがよくわからない。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`isTransform <cymel.core.cyobjects.node_c.Node_c.isTransform>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isTransform:1
+msgid "transform 派生ノードかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`isType <cymel.core.cyobjects.node_c.Node_c.isType>`\\ \\(typename\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isType:1
+msgid "指定ノードタイプの派生型かどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`mfn <cymel.core.cyobjects.node_c.Node_c.mfn>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mfn:1
+msgid "Python API 2 のファンクションセットを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`mfn1 <cymel.core.cyobjects.node_c.Node_c.mfn1>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mfn1:1
+msgid "Python API 1 のファンクションセットを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`mfn1_ <cymel.core.cyobjects.node_c.Node_c.mfn1_>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mfn1_:1
+msgid "`~.CyObject.checkValid` を省略して、 Python API 1 のファンクションセットを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`mfn_ <cymel.core.cyobjects.node_c.Node_c.mfn_>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mfn_:1
+msgid "`~.CyObject.checkValid` を省略して、 Python API 2 のファンクションセットを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`mnode <cymel.core.cyobjects.node_c.Node_c.mnode>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mnode:1
+msgid "Python API 2 の :mayaapi2:`MObject` を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`mnode1 <cymel.core.cyobjects.node_c.Node_c.mnode1>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mnode1:1
+msgid "Python API 1 の :mayaapi1:`MObject` を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`mnode1_ <cymel.core.cyobjects.node_c.Node_c.mnode1_>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mnode1_:1
+msgid "`~.CyObject.checkValid` を省略して、 Python API 1 の :mayaapi1:`MObject` を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`mnode_ <cymel.core.cyobjects.node_c.Node_c.mnode_>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mnode_:1
+msgid "`~.CyObject.checkValid` を省略して、 Python API 2 の :mayaapi2:`MObject` を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`mpath <cymel.core.cyobjects.node_c.Node_c.mpath>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mpath:1
+msgid "Python API 2 の :mayaapi2:`MDagPath` を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`mpath1 <cymel.core.cyobjects.node_c.Node_c.mpath1>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mpath1:1
+msgid "Python API 1 の :mayaapi1:`MDagPath` を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`mpath1_ <cymel.core.cyobjects.node_c.Node_c.mpath1_>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mpath1_:1
+msgid "`~.CyObject.checkValid` を省略して、 Python API 1 の :mayaapi1:`MDagPath` を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`mpath_ <cymel.core.cyobjects.node_c.Node_c.mpath_>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mpath_:1
+msgid "`~.CyObject.checkValid` を省略して、 Python API 2 の :mayaapi2:`MDagPath` を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`newObject <cymel.core.cyobjects.node_c.Node_c.newObject>`\\ \\(data\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.newObject:1
+msgid "内部データとともにインスタンスを生成する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`node <cymel.core.cyobjects.node_c.Node_c.node>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.node:1
+msgid "ノードを得る（このオブジェクト自身が得られる）。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`nodeName <cymel.core.cyobjects.node_c.Node_c.nodeName>`\\ \\(\\[removeNamespace\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.nodeName:1
+msgid "DAGパスを含まないノード名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`nodeName_ <cymel.core.cyobjects.node_c.Node_c.nodeName_>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.nodeName_:1
+msgid "`~.CyObject.checkValid` を省略して、DAGパスを含まないノード名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`outputs <cymel.core.cyobjects.node_c.Node_c.outputs>`\\ \\(\\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.connections:5
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.outputs:1
+msgid "下流のコネクションを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`plug <cymel.core.cyobjects.node_c.Node_c.plug>`\\ \\(name\\[\\, pcls\\, strict\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plug:1
+msgid "ノードのアトリビュートを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`plugClass <cymel.core.cyobjects.node_c.Node_c.plugClass>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plugClass:1
+msgid "プラグクラスを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`plug_ <cymel.core.cyobjects.node_c.Node_c.plug_>`\\ \\(name\\[\\, pcls\\, strict\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plug_:1
+msgid "`~.CyObject.checkValid` を省略して、ノードのアトリビュートを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`pluginName <cymel.core.cyobjects.node_c.Node_c.pluginName>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.pluginName:1
+msgid "ノードタイプがプラグインの場合にそのプラグイン名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`pluginName_ <cymel.core.cyobjects.node_c.Node_c.pluginName_>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.pluginName_:1
+msgid "クラスに紐付けられたノードタイプがプラグインの場合にそのプラグイン名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`plugsAffectsWorldSpace <cymel.core.cyobjects.node_c.Node_c.plugsAffectsWorldSpace>`\\ \\(\\[pcls\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plugsAffectsWorldSpace:1
+msgid "ワールド空間出力に影響を与えるプラグのリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`relatedNodeTypes <cymel.core.cyobjects.node_c.Node_c.relatedNodeTypes>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.relatedNodeTypes:1
+msgid "クラスに結び付けられているノードタイプのタプルを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`setPlugClass <cymel.core.cyobjects.node_c.Node_c.setPlugClass>`\\ \\(\\[pcls\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.setPlugClass:1
+msgid "このインスタンスのみに有効なプラグクラスをセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`sources <cymel.core.cyobjects.node_c.Node_c.sources>`\\ \\(\\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.sources:1
+msgid "unitConversionノードをスキップしつつ、入力しているプラグかノードを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`sourcesWithConversions <cymel.core.cyobjects.node_c.Node_c.sourcesWithConversions>`\\ \\(\\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.inputs:1
+msgid "`inputs` の別名（unitConversionノードをスキップせずに、入力しているプラグかノードを得る）。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`thisPlugClass <cymel.core.cyobjects.node_c.Node_c.thisPlugClass>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.thisPlugClass:1
+msgid "このオブジェクトに直接設定されたプラグクラスを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`type <cymel.core.cyobjects.node_c.Node_c.type>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.type:1
+msgid "ノードタイプ名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`typeId <cymel.core.cyobjects.node_c.Node_c.typeId>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.typeId:1
+msgid "ノードタイプの TypeId を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`typeId_ <cymel.core.cyobjects.node_c.Node_c.typeId_>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.typeId_:1
+msgid "クラスに紐付けられたノードタイプの TypeId を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`type_ <cymel.core.cyobjects.node_c.Node_c.type_>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.type_:1
+msgid "クラスに紐付けられたノードタイプ名を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+msgid ":py:obj:`worldSpacePlugs <cymel.core.cyobjects.node_c.Node_c.worldSpacePlugs>`\\ \\(\\[pcls\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:83:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.worldSpacePlugs:1
+msgid "ワールド空間出力プラグのリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:86
+msgid "Attributes:"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.CLASS_TYPE:1
+msgid "ラッパークラスの種類が `.Node` であることを表す。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.TYPE_BITS:1
+msgid "クラスでサポートしているノードの特徴を表す。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:96
+msgid "Methods Details:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.absoluteName:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.classification:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.classification_:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.createNode:6
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.nodeName:7
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.nodeName_:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.pluginName:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.pluginName_:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.type:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.type_:3
+msgid "`str`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.affectsAnimation:3
+msgid "通常のノードは False であり、 評価グラフの作成プロセスにおいて自動的に判断されるが、 :mayanode:`time` や :mayanode:`expression` などの ごく一部のノードでは True となる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.affectsAnimation:8
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.hasAttr:16
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.hasFn:4
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.hasUniqueName:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isDagNode:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isDefaultNode:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isFromReferencedFile:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isInstanceOf:6
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isJoint:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isLocked:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isRenamable:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isShape:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isShared:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isTrackingEdits:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isTransform:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isType:4
+msgid "`bool`"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.node_c.Node_c.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.connections:7
+msgid "コネクト元のプラグもエアで得る。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.connections:9
+msgid "指定したノードタイプに限定する。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.connections:11
+msgid "type指定の場合に、派生タイプを許容せずに 指定タイプとの厳密な一致のみとするかどうか。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.connections:14
+msgid "unitConversion系ノードをスキップするかどうか。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.connections:16
+msgid "コネクト先をプラグではなくノードで得る。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.connections:18
+msgid "結果を1つだけ得る場合にインデックスを指定する。 負数も指定可能。 結果は `list` ではなく単一となる（得られない場合は None ）。 範囲外を指定してもエラーにはならず None となる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.connections:23
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plug:16
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plug_:13
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plugsAffectsWorldSpace:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.worldSpacePlugs:3
+msgid "得たいプラグオブジェクトのクラス。 省略時は `plugClass` で得られる 現在のデフォルトプラグクラスが使用される。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.connections:27
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.destinations:6
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plugsAffectsWorldSpace:7
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.sources:6
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.worldSpacePlugs:7
+msgid "`list`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.createNode:3
+msgid "このメソッド自体は生成されたノードの名前（文字列）が返されるが、 固定引数無しでクラスインスタンスを生成する場合に内部的に呼び出される。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.createNode:9
+msgid "`nodetypes.registerNodeClass <.NodeTypes.registerNodeClass>` で登録するカスタムノードクラスでは、 ``_verifyNode`` メソッドの条件を満たすための処理を追加するために オーバーライドすることを推奨する。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.destinations:3
+msgid "`outputs` に skipConversionNodes=True を指定することと同等であり、 その他のオプションは全て指定可能。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.hasAttr:3
+msgid "`plug` メソッドと同様、 :mayaapi2:`MFnAttribute` の hasAttribute よりも判定基準はゆるく、 ドットから始まるフルパス指定が必要な場合でも省略を許容する。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.hasAttr:7
+msgid "アトリビュート名かパス名。 マルチアトリビュートのインデックスは含めてはならない。 ドットから始まるフルパス表記も指定可能。 エイリアス名も指定可能。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.hasAttr:12
+msgid "エイリアス名を認める。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.hasAttr:13
+msgid "シェイプからも探す。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.hasAttr:14
+msgid "先頭ドットが指定されてもトップレベル以外のユニーク名のアトリビュートなら許容する。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.hasFn:3
+msgid ":mayaapi2:`MFn` タイプ。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.inputs:3
+msgid "`connections` に s=True, d=False を指定することと同等であり、 その他のオプションも全て指定可能。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isAbstractType:3
+msgid "戻り値は整数で、 0 は抽象タイプではなく、 1 は抽象タイプ、 2 はメタクラス（プラグインインタフェースなどのために存在するが、 実際は本当のノードタイプではない） の意味となる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isAbstractType:10
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.typeId:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.typeId_:3
+msgid "`int`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isAbstractType:13
+msgid "適合検査メソッド付きノードクラスの場合は、 継承しているベーシッククラスに紐付けられたノードタイプについての結果となる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isInstanceOf:3
+msgid "`.DagNode` 派生クラスの インスタンスでなければ == による比較と同じである。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.isType:3
+msgid "ノードタイプ名。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mfn:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mfn_:3
+msgid ":mayaapi2:`MFnDependencyNode` の派生"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mfn1:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mfn1_:3
+msgid ":mayaapi1:`MFnDependencyNode` の派生"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mnode:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mnode_:3
+msgid ":mayaapi2:`MObject`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mnode1:3
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mnode1_:3
+msgid ":mayaapi1:`MObject`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mpath:3
+msgid "得られる :mayaapi2:`MDagPath` は内部データの複製であるため、 書き換えても問題ない。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mpath:6
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mpath1:6
+msgid "DAGパスをサポートするクラスのインスタンスでなくても、 実際のノードがDAGノードなら得ることができる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mpath:9
+msgid ":mayaapi2:`MDagPath` or None"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mpath1:3
+msgid "得られる :mayaapi1:`MDagPath` は内部データの複製であるため、 書き換えても問題ない。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mpath1:9
+msgid ":mayaapi1:`MDagPath` or None"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mpath1_:3
+msgid ":mayaapi1:`MDagPath`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.mpath_:3
+msgid ":mayaapi2:`MDagPath`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.newObject:3
+msgid "内部データはブラックボックスであるものとし、 本メソッドをオーバーライドする場合も、 基底メソッドを呼び出して処理を完遂させなければならない。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.newObject:7
+msgid "内部データを拡張する場合は `~.CyObject.internalData` も オーバーライドすること。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.newObject:11
+msgid "生成するインスタンスのクラス。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.newObject:12
+msgid "インスタンスにセットする内部データ。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.node:3
+msgid "`.Node` 派生クラス"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.nodeName:3
+msgid "得られる名前は、 Maya の相対ネームスペースモードの影響を受ける。 常に絶対ネームスペースで得たい場合には `absoluteName` が利用できる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.nodeName:6
+msgid "ネームスペースを含めない。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.outputs:3
+msgid "`connections` に s=False, d=True を指定することと同等であり、 その他のオプションも全て指定可能。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plug:3
+msgid "Python属性としても同じように取得できるが、 Pythonの名前と衝突する場合のためにこのメソッドがある。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plug:6
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plug_:3
+msgid "`hasAttribute` メソッドと同様、 :mayaapi2:`MFnAttribute` の attribute よりも判定基準はゆるく、 ドットから始まるフルパス指定が必要な場合でも省略を許容する。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plug:10
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plug_:7
+msgid "アトリビュートを特定する名前。 単一の名前に限らず、コンパウンド階層や マルチインデックスも混在して指定できる。 ドットから始まるフルパス表記も指定可能。 エイリアス名も指定可能。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plug:20
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plug_:17
+msgid "先頭ドットが指定されてもトップレベル以外のユニーク名のアトリビュートなら許容される。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plug:22
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plug_:19
+msgid "`.Plug`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plugClass:3
+msgid "これは、 `setPlugClass` や `.CyObject.setGlobalPlugClass` で変更可能。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.plugClass:7
+msgid "`type`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.relatedNodeTypes:3
+msgid "`.NodeTypes.relatedNodeTypes` をクラスメソッドとして 呼び出せるようにしたもの。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.relatedNodeTypes:6
+msgid "ベーシッククラスのノードタイプは1つだが、 検査メソッド付きカスタムクラスの場合は 複数タイプへの紐付けも有り得る。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.relatedNodeTypes:10
+msgid "`tuple`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.setPlugClass:3
+msgid "`.Plug` 派生クラス。 None を指定するとクリアする。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.sources:3
+msgid "`inputs` に skipConversionNodes=True を指定することと同等であり、 その他のオプションは全て指定可能。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.thisPlugClass:3
+msgid "未設定なら None が返される。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.thisPlugClass:5
+msgid "これは、 `setPlugClass` で変更可能。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.Node_c.thisPlugClass:7
+msgid "`type` or None"
+msgstr ""

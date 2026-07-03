@@ -1,0 +1,282 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/cymel.initmaya.rst:2
+msgid "cymel.initmaya"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya:1
+msgid "スタンドアロン python (mayapy) からの Maya の初期化。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya:3
+msgid "cymel 内の Maya に依存するモジュールがインポートされる際に `initialize` がデフォルト設定で呼び出されるため、 このモジュールを明示的に使用する必要はほとんどないが、 初期化プロセスをカスタマイズしたい場合などに利用できる。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:17
+msgid "Functions:"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+msgid ":py:obj:`addCymelPluginsPathToAllowedlist <cymel.initmaya.addCymelPluginsPathToAllowedlist>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.addCymelPluginsPathToAllowedlist:1
+msgid "Maya 2022以降のUIモードの場合に、cymelのプラグインパスを信頼リストに追加する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+msgid ":py:obj:`callUserSetupMel <cymel.initmaya.callUserSetupMel>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.callUserSetupMel:1
+msgid "``userSetup.mel`` を呼び出す。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+msgid ":py:obj:`getUserPrefsDir <cymel.initmaya.getUserPrefsDir>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.getUserPrefsDir:1
+msgid "ユーザープリファレンスディレクトリのパスを得る。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+msgid ":py:obj:`initApiImmutables <cymel.initmaya.initApiImmutables>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initApiImmutables:1
+msgid "Maya API の数学クラスを `.immutable` ラップのための定義をする。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+msgid ":py:obj:`initAutoPlugins <cymel.initmaya.initAutoPlugins>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initAutoPlugins:1
+msgid "オートロード設定のされたプラグインをロードする。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+msgid ":py:obj:`initCymelPluginsPath <cymel.initmaya.initCymelPluginsPath>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initCymelPluginsPath:1
+msgid "cymel が同梱する Maya プラグインのパスを設定する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+msgid ":py:obj:`initMaya <cymel.initmaya.initMaya>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMaya:1
+msgid "Maya が初期化済みなら False を、未初期化なら初期化して True を返す。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+msgid ":py:obj:`initMels <cymel.initmaya.initMels>`\\ \\(\\[userPrefs\\, startup\\, plugins\\, ...\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMels:1
+msgid "各種初期化MELを呼び出す（source する）。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+msgid ":py:obj:`initialize <cymel.initmaya.initialize>`\\ \\(\\[mels\\, plugins\\, userSetup\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:1
+msgid "必要な初期化を全て行う。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+msgid ":py:obj:`isMayaInitialized <cymel.initmaya.isMayaInitialized>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:40:<autosummary>:1
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.isMayaInitialized:1
+msgid "Maya が初期化済みかどうか。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:43
+msgid "Constants:"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.IS_UIMODE:1
+msgid "MayaがUIモードかどうか。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.MAYA_PRODUCT_VERSION:1
+msgid "別々に存在できるMayaバージョン名（ '2020' や '2016.5' など）。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.MAYA_VERSION:1
+msgid "Mayaバージョンを表すタプル。アップデートを判別できるのは2017以降。 (majorVersion, minorVersion, patchVersion)"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.MAYA_VERSION_STR:1
+msgid "Mayaバージョンの表記。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:59
+msgid "Functions Details:"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.addCymelPluginsPathToAllowedlist:3
+msgid "userSetup.py から呼び出すことで、ユーザー確認を経ずにそれを行うことができる。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.callUserSetupMel:3
+msgid "Mayaの仕様に合わせ、バージョンによって挙動が異なる。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.callUserSetupMel:5
+msgid "2020までは、MELパス上に存在する ``userSetup.mel`` のうち最優先の1つのみが呼び出されるが、 それより後のバージョンでは全てがパス順に呼び出される。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.getUserPrefsDir:3
+msgid "`str`"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initAutoPlugins:3
+msgid "以下を呼び出すことと同じ。::"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initCymelPluginsPath:3
+msgid "繰り返し呼び出しても重複して設定されることはない。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMaya:3
+msgid "いずれにせよ、 `MAYA_VERSION` などの cymel の定数は初期化される。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMaya:6
+msgid "初期化時に、パス上の全ての ``userSetup.py`` が呼び出されるが、 ``userSetup.mel`` は呼び出されない。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMaya:9
+msgid "繰り返し呼び出しても問題はない。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMaya:11
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.isMayaInitialized:3
+msgid "`bool`"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMels:3
+msgid "Maya の設定に依存する処理をしないなら、呼び出さなくても問題はない。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMels:5
+msgid "一度呼び出したMELは繰り返し呼び出さないので、 この関数を繰り返し呼び出しても問題はない。"
+msgstr ""
+
+#: ../srcs/generated/cymel.initmaya.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMels:8
+msgid "ユーザープリファレンスに関連するMELを呼び出すかどうか。 plugins=True のときは True になる。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMels:12
+msgid "initStartup.mel を呼び出すかどうか。 plugins=True のときは True になる。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMels:16
+msgid "プラグインをオートロードするかどうか。  プラグインは、シーンの requires で動的に解決されるし、 バッチ処理で必要な場合は明示的にロードするようにすべきであり、 処理負荷も大きいので、デフォルトでは False としている。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMels:17
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:26
+msgid "プラグインをオートロードするかどうか。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMels:19
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:28
+msgid "プラグインは、シーンの requires で動的に解決されるし、 バッチ処理で必要な場合は明示的にロードするようにすべきであり、 処理負荷も大きいので、デフォルトでは False としている。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMels:23
+msgid "ネームドコマンドを生成するかどうか。 ホットキーに mel コードを結びつけるための概念であるため、 UI が無ければ通常は不要なはずだが、処理負荷は大きくはないため、 pymelに倣いデフォルトは True としてる。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:3
+msgid "以下が行われる。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:5
+msgid "`initCymelPluginsPath`"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:7
+msgid "`initMaya` (既に初期化済みなら False となり何もされない)"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:9
+msgid "初期化されたら、さらに"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:11
+msgid "mels=True なら `initMels` (plugins=plugins)"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:12
+msgid "mels=False で plugins=True なら `initAutoPlugins`"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:13
+msgid "userSetup=True なら `callUserSetupMel`"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:15
+msgid "`initApiImmutables`"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:17
+msgid "初期化済みなら何もされないので、 繰り返し呼び出しても問題はない。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:20
+msgid "`initMaya` が True のときに `initMels` を呼び出すかどうか。 Maya の設定に依存する処理をしないなら、呼び出さなくても問題はないため、 デフォルトでは False としている。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:25
+msgid ":param `bool` plugins"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:32
+msgid ":param `bool` userSetup"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initialize:33
+msgid "`initMaya` が True のときに `callUserSetupMel` を呼び出すかどうか。"
+msgstr ""

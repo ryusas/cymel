@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.shape.Shape.rst:2
+msgid "class cymel.core.cyobjects.shape.Shape"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/shape.py:docstring of cymel.core.cyobjects.shape.Shape:1
+msgid ":mayanode:`shape` ノードタイプラッパークラス。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/shape.py:docstring of cymel.core.cyobjects.shape.Shape:3
+msgid "固定引数無しでのクラスインスタンス生成時のノード生成をサポート。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.shape.Shape.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.shape.Shape.rst:26:<autosummary>:1
+msgid ":py:obj:`createNode <cymel.core.cyobjects.shape.Shape.createNode>`\\ \\(\\[ttype\\, tparent\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.shape.Shape.rst:26:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/shape.py:docstring of cymel.core.cyobjects.shape.Shape.createNode:1
+msgid "クラスに関連付けられたタイプのシェイプノードを生成する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.shape.Shape.rst:29
+msgid "Attributes:"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/shape.py:docstring of cymel.core.cyobjects.shape.Shape.TYPE_BITS:1
+msgid "クラスでサポートしているノードの特徴を表す。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.shape.Shape.rst:38
+msgid "Methods Details:"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/shape.py:docstring of cymel.core.cyobjects.shape.Shape.createNode:3
+msgid "このメソッド自体は生成されたノードの名前（文字列）が返されるが、 固定引数無しでクラスインスタンスを生成する場合に内部的に呼び出される。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/shape.py:docstring of cymel.core.cyobjects.shape.Shape.createNode:6
+msgid "基底メソッドに対して、 :mayanode:`shape` 向けに :mayanode:`transform` ノードの制御が追加されている。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/shape.py:docstring of cymel.core.cyobjects.shape.Shape.createNode:10
+msgid "parent(またはp)オプションが指定された場合は、 基底メソッドがそのまま呼び出されるが、 そうでない場合は、ノード名は :mayanode:`transform` ノードに付けられ、シェイプ名はそこから自動的に決められる。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.shape.Shape.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/shape.py:docstring of cymel.core.cyobjects.shape.Shape.createNode:15
+msgid "parent(またはp)オプションが指定されない場合に シェイプの親として同時生成される :mayanode:`transform` 系ノードのタイプ名を指定する。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/shape.py:docstring of cymel.core.cyobjects.shape.Shape.createNode:19
+msgid "parent(またはp)オプションが指定されない場合に 同時生成される transform の親を指定できる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/shape.py:docstring of cymel.core.cyobjects.shape.Shape.createNode:22
+msgid ":mayacmd:`createNode` コマンドのその他のオプションを指定可能。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.shape.Shape.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/shape.py:docstring of cymel.core.cyobjects.shape.Shape.createNode:24
+msgid "`str`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/shape.py:docstring of cymel.core.cyobjects.shape.Shape.createNode:27
+msgid "`nodetypes.registerNodeClass <.NodeTypes.registerNodeClass>` で登録するカスタムノードクラスでは、 ``_verifyNode`` メソッドの条件を満たすための処理を追加するために オーバーライドすることを推奨する。"
+msgstr ""

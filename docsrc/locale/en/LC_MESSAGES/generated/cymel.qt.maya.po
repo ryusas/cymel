@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.qt.maya.rst:2
+msgid "cymel.qt.maya"
+msgstr "cymel.qt.maya"
+
+#: cymel.qt.maya:1 of
+msgid "Maya UI に関する Qt ヘルパー。"
+msgstr "Qt helpers for Maya UI."
+
+#: ../srcs/generated/cymel.qt.maya.rst:17
+msgid "Functions:"
+msgstr "Functions:"
+
+#: ../srcs/generated/cymel.qt.maya.rst:41:<autosummary>:1
+msgid ":py:obj:`getDpiScaling <cymel.qt.maya.getDpiScaling>`\\ \\(\\[widget\\]\\)"
+msgstr ":py:obj:`getDpiScaling <cymel.qt.maya.getDpiScaling>`\\ \\(\\[widget\\]\\)"
+
+#: ../srcs/generated/cymel.qt.maya.rst:41:<autosummary>:1
+#: cymel.qt.maya.getDpiScaling:1 of
+msgid "Maya UI の DPI スケールを取得する。"
+msgstr "Get the DPI scale for Maya UI."
+
+#: ../srcs/generated/cymel.qt.maya.rst:41:<autosummary>:1
+msgid ":py:obj:`getMainWindow <cymel.qt.maya.getMainWindow>`\\ \\(\\)"
+msgstr ":py:obj:`getMainWindow <cymel.qt.maya.getMainWindow>`\\ \\(\\)"
+
+#: ../srcs/generated/cymel.qt.maya.rst:41:<autosummary>:1
+#: cymel.qt.maya.getMainWindow:1 of
+msgid "Maya のメインウィンドウを QWidget として取得する。"
+msgstr "Get Maya's main window as a QWidget."
+
+#: ../srcs/generated/cymel.qt.maya.rst:41:<autosummary>:1
+msgid ""
+":py:obj:`getMayaWidget <cymel.qt.maya.getMayaWidget>`\\ \\(\\[name\\, "
+"uitype\\, cls\\]\\)"
+msgstr ""
+":py:obj:`getMayaWidget <cymel.qt.maya.getMayaWidget>`\\ \\(\\[name\\, "
+"uitype\\, cls\\]\\)"
+
+#: ../srcs/generated/cymel.qt.maya.rst:41:<autosummary>:1
+#: cymel.qt.maya.getMayaWidget:1 of
+msgid "Maya UI 名に対応する Qt ウィジェットを取得する。"
+msgstr "Get Qt widget corresponding to Maya UI name."
+
+#: ../srcs/generated/cymel.qt.maya.rst:44
+msgid "Functions Details:"
+msgstr "Function Details:"
+
+#: ../srcs/generated/cymel.qt.maya.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.qt.maya.getDpiScaling:3 of
+msgid "`float`"
+msgstr "`float`"
+
+#: cymel.qt.maya.getMainWindow:3 cymel.qt.maya.getMayaWidget:23 of
+msgid "`QWidget`"
+msgstr "`QWidget`"
+
+#: ../srcs/generated/cymel.qt.maya.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.qt.maya.getMayaWidget:3 of
+msgid "UI のフルパス名。 省略した場合はカレントレイアウトとなる。"
+msgstr "Full pathname of the UI. If omitted, the current layout will be used."
+
+#: cymel.qt.maya.getMayaWidget:7 of
+msgid ""
+"name を指定し cls が None でないときに有効。  分かっていれば、Maya の UI タイプを文字列で指定する。 'control', "
+"'layout', 'window', 'menuItem' のいずれかを指定出来る。  Windows では layout を control "
+"として取得出来たが Linux では出来ないことがあった（ものによる）。 未指定の場合、取得できるまで全タイプが試されるが、 "
+"分かっているなら指定した方が確実。"
+msgstr ""
+"Valid when name is specified and cls is not None.  If known, specify Maya's "
+"UI type as a string. You can specify 'control', 'layout', 'window', or "
+"'menuItem'.  On Windows, I was able to get the layout as a control, but on "
+"Linux I was unable to do so (depending on the situation). If not specified, "
+"all types will be tried until one is obtained, but if you know it, it is "
+"safer to specify it."
+
+#: cymel.qt.maya.getMayaWidget:8 of
+msgid "name を指定し cls が None でないときに有効。"
+msgstr "Valid when name is specified and cls is not None."
+
+#: cymel.qt.maya.getMayaWidget:10 of
+msgid ""
+"分かっていれば、Maya の UI タイプを文字列で指定する。 'control', 'layout', 'window', 'menuItem' "
+"のいずれかを指定出来る。"
+msgstr ""
+"If known, specify Maya's UI type as a string. You can specify 'control', "
+"'layout', 'window', or 'menuItem'."
+
+#: cymel.qt.maya.getMayaWidget:14 of
+msgid ""
+"Windows では layout を control として取得出来たが Linux では出来ないことがあった（ものによる）。 "
+"未指定の場合、取得できるまで全タイプが試されるが、 分かっているなら指定した方が確実。"
+msgstr ""
+"On Windows, I was able to get the layout as a control, but on Linux I was "
+"unable to do so (depending on the situation). If not specified, all types "
+"will be tried until one is obtained, but if you know it, it is safer to "
+"specify it."
+
+#: cymel.qt.maya.getMayaWidget:19 of
+msgid ""
+"`wrapInstance` での取得を試みる際に指定するクラス。 None を指定すると `getWidgetByPathName` が利用される。"
+msgstr ""
+"Class to specify when attempting to retrieve with `wrapInstance`. If None is"
+" specified, `getWidgetByPathName` will be used."
+
+#: cymel.qt.maya.getMayaWidget:26 of
+msgid ""
+"cls に None を指定しなければ、 初めに Maya API と `wrapInstance` を用いた簡易的な手法が試される。 まれに "
+"`wrapInstance` は `OverflowError` となり、その場合、 `getWidgetByPathName` が使用される。 "
+"その場合のクラスは自動的に適切なものに決定される。"
+msgstr ""
+"If cls is not set to None, a simpler method using the Maya API and "
+"`wrapInstance` will be tried first. In rare cases, `wrapInstance` will "
+"result in `OverflowError`, in which case `getWidgetByPathName` will be used."
+" In that case, the appropriate class will be automatically determined."

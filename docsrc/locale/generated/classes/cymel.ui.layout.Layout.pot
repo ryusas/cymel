@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:2
+msgid "class cymel.ui.layout.Layout"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout:1
+msgid "mel UI の :mayacmd:`layout` ラッパークラス。"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout:3
+msgid "`with` で :mayacmd:`setParent` が行える。 この挙動は pymel より改善している （pymel では、必ず親に戻ってしまい元の状態には戻らない）。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+msgid ":py:obj:`UICMD <cymel.ui.layout.Layout.UICMD>`"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+msgid ":py:obj:`child <cymel.ui.layout.Layout.child>`\\ \\(\\[idxOrPath\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.child:1
+msgid "階層下のコントロールを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+msgid ":py:obj:`childNames <cymel.ui.layout.Layout.childNames>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.childNames:1
+msgid "子の名前リストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+msgid ":py:obj:`children <cymel.ui.layout.Layout.children>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.children:1
+msgid "子のリストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+msgid ":py:obj:`clear <cymel.ui.layout.Layout.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.clear:1
+msgid "子を全て削除する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+msgid ":py:obj:`delete <cymel.ui.layout.Layout.delete>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.delete:1
+msgid "このレイアウトを削除する。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+msgid ":py:obj:`exists <cymel.ui.layout.Layout.exists>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.exists:1
+msgid "UIが存在しているかどうか。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+msgid ":py:obj:`makeCurrent <cymel.ui.layout.Layout.makeCurrent>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.makeCurrent:1
+msgid "これをカレントペアレントにする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+msgid ":py:obj:`numChildren <cymel.ui.layout.Layout.numChildren>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.numChildren:1
+msgid "子の数を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+msgid ":py:obj:`pop <cymel.ui.layout.Layout.pop>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:39:<autosummary>:1
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.pop:1
+msgid "カレントペアレントを一つ上に移動させる。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:42
+msgid "Methods Details:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.child:3
+msgid "子のインデックス（ゼロオリジン）か、 階層下の相対パス。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.ui.layout.Layout.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.child:6
+msgid "`.Control`"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.childNames:3
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.children:3
+msgid "`list`"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.exists:3
+msgid "`bool`"
+msgstr ""
+
+#: ../../python/cymel/ui/layout.py:docstring of cymel.ui.layout.Layout.numChildren:3
+msgid "`int`"
+msgstr ""

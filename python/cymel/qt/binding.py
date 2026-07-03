@@ -1,6 +1,38 @@
 # -*- coding: utf-8 -*-
 u"""
 PySide バインディングの判別と互換エイリアス。
+
+Qt/PySide 由来の名前をそのまま公開するもの。
+
+  - `QtCore`
+  - `QtGui`
+  - `QtWidgets`
+  - `Qt`
+  - `Property`
+  - `Signal`
+  - `Slot`
+  - `QWidget`
+  - `QApplication`
+
+cymel が追加するバインディング情報。
+
+  - `QT_BINDING_NAME` (str): 使用中のバインディング名。
+  - `QT_BINDING_VERSION` (str): バインディングのバージョン文字列。
+  - `QT_BINDING_VERSION_I` (tuple): バインディングのバージョンを数値タプル化したもの。
+  - `QT_VERSION` (str): Qt のバージョン文字列。
+  - `QT_VERSION_I` (tuple): Qt のバージョンを数値タプル化したもの。
+  - `QT_MAJOR_VERSION` (int): Qt のメジャーバージョン。
+  - `qtmodule`: 使用中の PySide モジュール。
+  - `uic`: PySide/PySide2 の UI コンパイラモジュール。無い場合は None。
+
+shiboken 由来の互換ヘルパー。
+
+  - `wrapInstance`: C++ ポインタを Qt ラッパーに変換する。
+  - `unwrapInstance`: Qt ラッパーから C++ ポインタを得る。
+  - `isValidWrap`: Qt ラッパーが有効かどうかを返す。
+  - `isInvalidWrap`: Qt ラッパーが無効かどうかを返す。
+  - `isOwnedByPython`: インスタンスが Python 側に所有されているかどうかを返す。
+  - `deleteInstance`: Qt ラッパーの対象インスタンスを削除する。
 """
 from __future__ import absolute_import
 from __future__ import division

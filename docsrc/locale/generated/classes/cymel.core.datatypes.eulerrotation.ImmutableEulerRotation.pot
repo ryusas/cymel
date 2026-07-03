@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:2
+msgid "class cymel.core.datatypes.eulerrotation.ImmutableEulerRotation"
+msgstr ""
+
+#: ../../python/cymel/core/datatypes/python/eulerrotation.py:docstring of cymel.core.datatypes.eulerrotation.ImmutableEulerRotation:1
+msgid "`EulerRotation` の `immutable` ラッパー。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+msgid ":py:obj:`boundIt <cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.boundIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "回転結果を維持しつつ、各軸の角度を±πの範囲におさめた値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+msgid ":py:obj:`incrementalRotateBy <cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.incrementalRotateBy>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+msgid "Perform an incremental rotation by the specified axis and angle."
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+msgid ":py:obj:`invertIt <cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.invertIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "逆回転をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+msgid ":py:obj:`reorderIt <cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.reorderIt>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "回転結果を維持しつつ、オーダーを変更した値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+msgid ":py:obj:`set <cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.set>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "他の値をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+msgid ":py:obj:`setToAlternateSolution <cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.setToAlternateSolution>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+msgid ":py:obj:`setToClosestCut <cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.setToClosestCut>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+msgid ":py:obj:`setToClosestSolution <cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.setToClosestSolution>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+msgid ":py:obj:`setToReverseDirection <cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.setToReverseDirection>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "同じ姿勢の逆周り回転をセットする。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:39:<autosummary>:1
+msgid ":py:obj:`setValue <cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.setValue>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:42
+msgid "Methods Details:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:4
+msgid "ソース回転。省略時は現在の回転。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.datatypes.eulerrotation.ImmutableEulerRotation.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:4
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:5
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:11
+msgid "`EulerRotation` (self)"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:1
+msgid "Perform an incremental rotation by the specified axis and angle. The rotation is broken down and performed in smaller steps so that the angles update properly."
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "回転オーダー。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "コンストラクタと同様に、以下の値を指定可能。"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:5
+msgid "`EulerRotation`"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:6
+msgid "x, y, z, order=XYZ"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:7
+msgid "3値のシーケンス, order=XYZ"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:8
+msgid "`.Quaternion` (現状のorder維持)"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:9
+msgid "`.Matrix` (現状のorder維持)"
+msgstr ""
+
+#: ../../python/cymel/pyutils/immutables.py:docstring of cymel.pyutils.immutables._immutableFunc.<locals>.func:3
+msgid "`asQuaternion` で得られるクォータニオンが反転する。"
+msgstr ""

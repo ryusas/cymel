@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.rst:2
+msgid "class cymel.core.cyobjects.cyobject.ModuleForSel"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel:1
+msgid "現在のセレクションを反映させるプロパティを追加するモジュールクラス。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.rst:28:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel:3
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.__init__:1
+msgid "既存モジュール名を指定して置き換える。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.rst:28:<autosummary>:1
+msgid ":py:obj:`__init__ <cymel.core.cyobjects.cyobject.ModuleForSel.__init__>`\\ \\(name\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.rst:28:<autosummary>:1
+msgid ":py:obj:`selected <cymel.core.cyobjects.cyobject.ModuleForSel.selected>`\\ \\(\\[sel\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.rst:28:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.selected:1
+msgid "セレクションから `CyObject` リストを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.rst:28:<autosummary>:1
+msgid ":py:obj:`selobj <cymel.core.cyobjects.cyobject.ModuleForSel.selobj>`\\ \\(\\[i\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.rst:28:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.selobj:1
+msgid "現在選択されている i 番目の `.CyObject` を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.rst:31
+msgid "Attributes:"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.sel:1
+msgid "現在選択されている最初の `.CyObject` を得るプロパティ。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.sel:3
+msgid "`selobj` を引数無し(i=0)で呼び出すこととほぼ等しいが、 何も選択されていない状態だと None となり、エラーにはならない。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.sel:6
+msgid "`.CyObject` or None"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.selection:1
+msgid "現在選択されている `.CyObject` のリストを得るプロパティ。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.selection:3
+msgid "`selected` を引数無しで呼び出すことと等しい。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.rst:41
+msgid "Methods Details:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.selected:3
+msgid "セレクション情報。 省略時は現在のセレクションから取得される。  1つの文字列か `.CyObject` を指定すると、それが `list` 化されて得られる。  API2 の :mayaapi2:`MSelectionList` も指定できる。  シーケンスを指定すると、 セレクションとして解釈された上で `CyObject` リストが得られる。 シーケンス内は文字列か `CyObject` を混在できる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.selected:4
+msgid "セレクション情報。 省略時は現在のセレクションから取得される。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.selected:7
+msgid "1つの文字列か `.CyObject` を指定すると、それが `list` 化されて得られる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.selected:9
+msgid "API2 の :mayaapi2:`MSelectionList` も指定できる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.selected:11
+msgid "シーケンスを指定すると、 セレクションとして解釈された上で `CyObject` リストが得られる。 シーケンス内は文字列か `CyObject` を混在できる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.selected:14
+msgid "その他に :mayacmd:`ls` コマンドのオプションを指定可能。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.selected:16
+msgid "`list`"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.selobj:3
+msgid "参照するセレクションインデックス。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/python/cyobject.py:docstring of cymel.core.cyobjects.cyobject.ModuleForSel.selobj:4
+msgid "`.CyObject`"
+msgstr ""

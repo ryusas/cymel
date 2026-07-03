@@ -1,0 +1,284 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/cymel.qt.widgets.rst:2
+msgid "cymel.qt.widgets"
+msgstr "cymel.qt.widgets"
+
+#: cymel.qt.widgets:1 of
+msgid "Maya に依存しない Qt ウィジェットヘルパー。"
+msgstr "Maya independent Qt widget helper."
+
+#: ../srcs/generated/cymel.qt.widgets.rst:17
+msgid "Functions:"
+msgstr "Functions:"
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+msgid ""
+":py:obj:`dumpWidgetHierarchy <cymel.qt.widgets.dumpWidgetHierarchy>`\\ "
+"\\(\\[base\\, indent\\]\\)"
+msgstr ""
+":py:obj:`dumpWidgetHierarchy <cymel.qt.widgets.dumpWidgetHierarchy>`\\ "
+"\\(\\[base\\, indent\\]\\)"
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+#: cymel.qt.widgets.dumpWidgetHierarchy:1 of
+msgid "ウィジェットの objectName 階層を出力する。"
+msgstr "Outputs the widget's objectName hierarchy."
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+msgid ":py:obj:`getDpiScaling <cymel.qt.widgets.getDpiScaling>`\\ \\(\\[widget\\]\\)"
+msgstr ":py:obj:`getDpiScaling <cymel.qt.widgets.getDpiScaling>`\\ \\(\\[widget\\]\\)"
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+#: cymel.qt.widgets.getDpiScaling:1 of
+msgid "汎用 Qt の論理 DPI スケールを取得する。"
+msgstr "Get the generic Qt logical DPI scale."
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+msgid ""
+":py:obj:`getFirstTopLevelWindow <cymel.qt.widgets.getFirstTopLevelWindow>`\\"
+" \\(\\)"
+msgstr ""
+":py:obj:`getFirstTopLevelWindow <cymel.qt.widgets.getFirstTopLevelWindow>`\\"
+" \\(\\)"
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+#: cymel.qt.widgets.getFirstTopLevelWindow:1 of
+msgid "表示中の最初のトップレベル QWidget を取得する。"
+msgstr "Get the first top-level QWidget being displayed."
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+msgid ""
+":py:obj:`getWidgetByPathName <cymel.qt.widgets.getWidgetByPathName>`\\ "
+"\\(name\\[\\, base\\, separator\\, ...\\]\\)"
+msgstr ""
+":py:obj:`getWidgetByPathName <cymel.qt.widgets.getWidgetByPathName>`\\ "
+"\\(name\\[\\, base\\, separator\\, ...\\]\\)"
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+#: cymel.qt.widgets.getWidgetByPathName:1 of
+msgid "objectName のパスからウィジェットまたはレイアウトを検索する。"
+msgstr "Find a widget or layout by path of objectName."
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+msgid ""
+":py:obj:`getWidgetFullPathName <cymel.qt.widgets.getWidgetFullPathName>`\\ "
+"\\(widget\\[\\, separator\\]\\)"
+msgstr ""
+":py:obj:`getWidgetFullPathName <cymel.qt.widgets.getWidgetFullPathName>`\\ "
+"\\(widget\\[\\, separator\\]\\)"
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+#: cymel.qt.widgets.getWidgetFullPathName:1 of
+msgid "ウィジェットの objectName パスを取得する。"
+msgstr "Get the widget's objectName path."
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+msgid ""
+":py:obj:`showAppWindow <cymel.qt.widgets.showAppWindow>`\\ \\(proc\\[\\, "
+"deleteOnClose\\, ...\\]\\)"
+msgstr ""
+":py:obj:`showAppWindow <cymel.qt.widgets.showAppWindow>`\\ \\(proc\\[\\, "
+"deleteOnClose\\, ...\\]\\)"
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+#: cymel.qt.widgets.showAppWindow:1 of
+msgid "既存または新規の QApplication 上でウィンドウを生成して表示する。"
+msgstr "Generate and display a window on an existing or new QApplication."
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+msgid ""
+":py:obj:`showWindow <cymel.qt.widgets.showWindow>`\\ \\(wd\\[\\, "
+"deleteOnClose\\]\\)"
+msgstr ""
+":py:obj:`showWindow <cymel.qt.widgets.showWindow>`\\ \\(wd\\[\\, "
+"deleteOnClose\\]\\)"
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+#: cymel.qt.widgets.showWindow:1 of
+msgid "ウィジェットをウィンドウとして表示する。"
+msgstr "Display the widget as a window."
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+msgid ""
+":py:obj:`unscaleTextFont <cymel.qt.widgets.unscaleTextFont>`\\ "
+"\\(textCtl\\[\\, height\\, pixel\\, ...\\]\\)"
+msgstr ""
+":py:obj:`unscaleTextFont <cymel.qt.widgets.unscaleTextFont>`\\ "
+"\\(textCtl\\[\\, height\\, pixel\\, ...\\]\\)"
+
+#: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
+#: cymel.qt.widgets.unscaleTextFont:1 of
+msgid "固定サイズテキスト用の 逆スケール値と QFont or None を得る。"
+msgstr "Get the inverse scale value and QFont or None for fixed size text."
+
+#: ../srcs/generated/cymel.qt.widgets.rst:49
+msgid "Functions Details:"
+msgstr "Function Details:"
+
+#: ../srcs/generated/cymel.qt.widgets.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.qt.widgets.dumpWidgetHierarchy:4 of
+msgid "基点のウィジェット。 省略時はトップレベルから全てがダンプされる。"
+msgstr "Base widget. If omitted, everything is dumped from the top level."
+
+#: cymel.qt.widgets.dumpWidgetHierarchy:7 of
+msgid "基点のレベルのインデントスペース。"
+msgstr "Indentation space of base level."
+
+#: ../srcs/generated/cymel.qt.widgets.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.qt.widgets.getDpiScaling:3 of
+msgid "`float`"
+msgstr "`float`"
+
+#: cymel.qt.widgets.getFirstTopLevelWindow:3 cymel.qt.widgets.showAppWindow:23
+#: of
+msgid "`QWidget`"
+msgstr "`QWidget`"
+
+#: cymel.qt.widgets.getWidgetByPathName:3 of
+msgid "指定パスの間に未知のウィジェットが存在する場合も許容され、 くまなく探索される。"
+msgstr ""
+"Unknown widgets that exist between specified paths are also allowed and "
+"searched thoroughly."
+
+#: cymel.qt.widgets.getWidgetByPathName:6 of
+msgid "基点から下のパス名（基点を含まない）。"
+msgstr "Path name below the base point (not including the base point)."
+
+#: cymel.qt.widgets.getWidgetByPathName:8 of
+msgid ""
+"基点のウィジェット。 省略時はパスの先頭の名前がトップレベルから探される。 それでも見つからない場合は `getFirstTopLevelWindow`"
+" で取得されるアプリケーションのメインウィンドウとなる。"
+msgstr ""
+"Base widget. If omitted, the first name in the path is searched from the top"
+" level. If it is still not found, it becomes the main window of the "
+"application obtained by `getFirstTopLevelWindow`."
+
+#: cymel.qt.widgets.getWidgetByPathName:13
+#: cymel.qt.widgets.getWidgetFullPathName:5 of
+msgid "パスの区切り文字。"
+msgstr "Path delimiter."
+
+#: cymel.qt.widgets.getWidgetByPathName:15 of
+msgid "レイアウトマネージャもノードとしてカウントするかどうか。"
+msgstr "Whether layout managers also count as nodes."
+
+#: cymel.qt.widgets.getWidgetByPathName:17 of
+msgid "`QWidget` or `QLayout`"
+msgstr "`QWidget` or `QLayout`"
+
+#: cymel.qt.widgets.getWidgetFullPathName:4 cymel.qt.widgets.showWindow:8 of
+msgid "ウィジェット。"
+msgstr "widget."
+
+#: cymel.qt.widgets.getWidgetFullPathName:6 of
+msgid "`str`"
+msgstr "`str`"
+
+#: cymel.qt.widgets.showAppWindow:3 of
+msgid ""
+"QApplication が未初期化なら初期化され、メインループに入りリターンされない。 "
+"組み込み環境下ならメインウィンドウ（やトップレベルウィンドウ）の子となり、 リターンされる。"
+msgstr ""
+"If QApplication is uninitialized, it is initialized, enters the main loop, "
+"and does not return. In an embedded environment, it becomes a child of the "
+"main window (or top-level window) and is returned."
+
+#: cymel.qt.widgets.showAppWindow:7 of
+msgid "ウィジェット型や関数など、 ウィジェットを生成するための実行可能オブジェクト。"
+msgstr ""
+"An executable object, such as a widget type or function, for creating "
+"widgets."
+
+#: cymel.qt.widgets.showAppWindow:10 cymel.qt.widgets.showWindow:9 of
+msgid "閉じた時に削除されるようにするかどうか。 WA_DeleteOnClose 属性が上書きセットされる。"
+msgstr ""
+"Whether to be deleted when closed. WA_DeleteOnClose attribute is set to "
+"override."
+
+#: cymel.qt.widgets.showAppWindow:13 of
+msgid ""
+"新規に開くアプリケーションで、且つ Qt6 以降で devicePixelRatio が非整数のスクリーンが1つ以上在る場合に、 "
+"HighDpiScaleFactorRoundingPolicy を RoundPreferFloor に設定する。 QGraphicsView "
+"でアンチエイリアスを使用した場合のアーティファクトを 回避するためである。 ちなみに、Mayaでは "
+"QT_ENABLE_HIGHDPI_SCALING=0 が設定されているため devicePixelRatio はすべて 1.0 "
+"となり問題は発生しない。"
+msgstr ""
+"In a newly opened application, and if there is one or more screens with "
+"devicePixelRatio that is a non-integer in Qt6 or later, set "
+"HighDpiScaleFactorRoundingPolicy to RoundPreferFloor. This is to avoid "
+"artifacts when using anti-aliasing in QGraphicsView. By the way, in Maya, "
+"QT_ENABLE_HIGHDPI_SCALING=0 is set, so all devicePixelRatios are 1.0 and no "
+"problem occurs."
+
+#: cymel.qt.widgets.showAppWindow:21 of
+msgid "Qtのバージョンやアプリケーションのセッティング等をprint出力する。"
+msgstr "Print out the Qt version, application settings, etc."
+
+#: cymel.qt.widgets.showWindow:3 of
+msgid "アプリケーションのメインウィンドウや 既に表示されているトップレベルウィンドウ（最初の一つ） が在れば、その子になる。"
+msgstr ""
+"It becomes a child of the application's main window or an already visible "
+"top-level window (the first one), if one exists."
+
+#: cymel.qt.widgets.unscaleTextFont:3 of
+msgid "サイズの判定に用いるテキスト系コントロール。 boundingRect, font, setFont メソッドを備えていること。"
+msgstr ""
+"A text control used to determine size. Must have boundingRect, font, and "
+"setFont methods."
+
+#: cymel.qt.widgets.unscaleTextFont:6 of
+msgid ""
+"フォントがポイントサイズで指定された場合の基準となる高さを指定する。 このサイズに合わせるためのスケール値が計算される。 デフォルトの None "
+"は、環境に応じて変わるデフォルト値を意味する。"
+msgstr ""
+"Specifies the reference height when the font is specified in point size. A "
+"scale value is calculated to match this size. The default None means a "
+"default value that changes depending on the environment."
+
+#: cymel.qt.widgets.unscaleTextFont:10 of
+msgid "フォントがピクセルサイズで指定された場合の基準となるサイズを指定する。 このサイズに合わせるためのスケール値が計算される。"
+msgstr ""
+"Specifies the standard size when the font is specified in pixel size. A "
+"scale value is calculated to match this size."
+
+#: cymel.qt.widgets.unscaleTextFont of
+msgid "paream `callable` prepare"
+msgstr "paream `callable` prepare"
+
+#: cymel.qt.widgets.unscaleTextFont:14 of
+msgid ""
+"情報をキャッシュから得られなかった場合に、 ポイントサイズによる高さを調べる前に準備（仮の描画など）が必要な場合、 その呼出可能オブジェクトを指定する。"
+msgstr ""
+"If information cannot be obtained from the cache and preparation (temporary "
+"drawing, etc.) is required before checking the point size height, specify "
+"the callable object."
+
+#: cymel.qt.widgets.unscaleTextFont:17 of
+msgid "`float`, `QFont` or None"
+msgstr "`float`, `QFont` or None"
