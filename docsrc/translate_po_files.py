@@ -77,33 +77,34 @@ def translate_po_file(translator_obj, po_file_path, is_custom=False):
 
     modified = False
     count = 0
-    total_untranslated = sum(1 for entry in po if not entry.msgstr and not entry.obsolete)
+    targets = [
+        entry for entry in po
+        if entry.msgid and not entry.obsolete and (not entry.msgstr or 'fuzzy' in entry.flags)
+    ]
+    total_targets = len(targets)
     
-    if total_untranslated == 0:
+    if total_targets == 0:
         print("  All entries already translated.", flush=True)
         return
 
-    print("  Found {} untranslated entries.".format(total_untranslated), flush=True)
+    print("  Found {} untranslated or fuzzy entries.".format(total_targets), flush=True)
 
-    for entry in po:
-        if entry.obsolete:
-            continue
-        
-        # If msgstr is empty, we need to translate
-        if not entry.msgstr:
-            original = entry.msgid
-            if original:
-                count += 1
-                print("  [{}/{}] Translating: {}".format(count, total_untranslated, original.replace('\n', ' ')[:50]), flush=True)
-                
-                # Perform translation
-                translated = translate_text(translator_obj, original, is_custom=is_custom)
-                entry.msgstr = translated
-                modified = True
-                
-                # Be gentle to the API to avoid rate limiting ONLY for the free translator
-                if not is_custom:
-                    time.sleep(0.2)
+    for entry in targets:
+        original = entry.msgid
+        if original:
+            count += 1
+            print("  [{}/{}] Translating: {}".format(count, total_targets, original.replace('\n', ' ')[:50]), flush=True)
+            
+            # Perform translation
+            translated = translate_text(translator_obj, original, is_custom=is_custom)
+            entry.msgstr = translated
+            if translated and translated != original and 'fuzzy' in entry.flags:
+                entry.flags.remove('fuzzy')
+            modified = True
+            
+            # Be gentle to the API to avoid rate limiting ONLY for the free translator
+            if not is_custom:
+                time.sleep(0.2)
 
     if modified:
         try:

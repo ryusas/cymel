@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cymel \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 19:03+0900\n"
+"POT-Creation-Date: 2026-07-03 19:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,5 +25,9 @@ msgid "Qt バインディング差分吸収パッケージ。"
 msgstr ""
 
 #: ../../python/cymel/qt/__init__.py:docstring of cymel.qt:3
-msgid "``cymel.qt`` では PySide/shiboken のバインディング差分を吸収する基本名 :mod:`.binding` だけを公開する。 ほかの機能はそれぞれ明示 import して利用する。"
+msgid "``cymel.qt`` 直下には PySide/shiboken のバインディング差分を吸収するモジュール :mod:`.binding` だけを公開する。"
+msgstr ""
+
+#: ../../python/cymel/qt/__init__.py:docstring of cymel.qt:5
+msgid "ほかの機能はそれぞれ明示的にインポートして利用する。"
 msgstr ""
