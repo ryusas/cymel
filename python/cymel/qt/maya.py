@@ -141,7 +141,7 @@ if IS_MAYA_UI_ENABLED:
         return _MAYA_DPI_SCALE
 
     getDpiScaling.__doc__ = _doc
-
     _MAYA_DPI_SCALE = 0
+    _widgets.getDpiScaling = getDpiScaling
 
     del _doc
