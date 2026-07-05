@@ -108,6 +108,7 @@ UI Controls
     cymel.ui.control
     cymel.ui.layout
     cymel.ui.menu
+    cymel.ui.optionbox
     cymel.ui.uitemplate
     cymel.ui.uitypes
     cymel.ui.window

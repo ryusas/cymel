@@ -24,6 +24,7 @@
         createNode
         enablePlugin
         escapeForMel
+        getDpiScaling
         listEnum
         loadPlugin
         makeNiceName
@@ -56,6 +57,7 @@
     .. autofunction:: createNode
     .. autofunction:: enablePlugin
     .. autofunction:: escapeForMel
+    .. autofunction:: getDpiScaling
     .. autofunction:: listEnum
     .. autofunction:: loadPlugin
     .. autofunction:: makeNiceName

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cymel \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"POT-Creation-Date: 2026-07-05 23:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,43 +28,30 @@ msgstr ""
 msgid "Functions:"
 msgstr ""
 
-#: ../srcs/generated/cymel.qt.maya.rst:41:<autosummary>:1
-msgid ":py:obj:`getDpiScaling <cymel.qt.maya.getDpiScaling>`\\ \\(\\[widget\\]\\)"
-msgstr ""
-
-#: ../srcs/generated/cymel.qt.maya.rst:41:<autosummary>:1
-#: ../../python/cymel/qt/maya.py:docstring of cymel.qt.maya.getDpiScaling:1
-msgid "Maya UI の DPI スケールを取得する。"
-msgstr ""
-
-#: ../srcs/generated/cymel.qt.maya.rst:41:<autosummary>:1
+#: ../srcs/generated/cymel.qt.maya.rst:40:<autosummary>:1
 msgid ":py:obj:`getMainWindow <cymel.qt.maya.getMainWindow>`\\ \\(\\)"
 msgstr ""
 
-#: ../srcs/generated/cymel.qt.maya.rst:41:<autosummary>:1
+#: ../srcs/generated/cymel.qt.maya.rst:40:<autosummary>:1
 #: ../../python/cymel/qt/maya.py:docstring of cymel.qt.maya.getMainWindow:1
 msgid "Maya のメインウィンドウを QWidget として取得する。"
 msgstr ""
 
-#: ../srcs/generated/cymel.qt.maya.rst:41:<autosummary>:1
+#: ../srcs/generated/cymel.qt.maya.rst:40:<autosummary>:1
 msgid ":py:obj:`getMayaWidget <cymel.qt.maya.getMayaWidget>`\\ \\(\\[name\\, uitype\\, cls\\]\\)"
 msgstr ""
 
-#: ../srcs/generated/cymel.qt.maya.rst:41:<autosummary>:1
+#: ../srcs/generated/cymel.qt.maya.rst:40:<autosummary>:1
 #: ../../python/cymel/qt/maya.py:docstring of cymel.qt.maya.getMayaWidget:1
 msgid "Maya UI 名に対応する Qt ウィジェットを取得する。"
 msgstr ""
 
-#: ../srcs/generated/cymel.qt.maya.rst:44
+#: ../srcs/generated/cymel.qt.maya.rst:43
 msgid "Functions Details:"
 msgstr ""
 
 #: ../srcs/generated/cymel.qt.maya.rst:0
 msgid "戻り値の型"
-msgstr ""
-
-#: ../../python/cymel/qt/maya.py:docstring of cymel.qt.maya.getDpiScaling:3
-msgid "`float`"
 msgstr ""
 
 #: ../../python/cymel/qt/maya.py:docstring of cymel.qt.maya.getMainWindow:3

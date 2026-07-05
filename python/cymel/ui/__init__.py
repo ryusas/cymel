@@ -13,6 +13,7 @@ from .layout import *
 from .window import *
 from .menu import *
 from .uitemplate import *
+from .optionbox import *
 
 control.Layout = Layout
 control.Window = Window

@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.qt.widgets &#8212; cymel 0.31.2026070300 documentation</title>
+    <title>cymel.qt.widgets &#8212; cymel 0.32.2026070500 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
-    <script src="../_static/documentation_options.js?v=5f63c855"></script>
+    <script src="../_static/documentation_options.js?v=41971f50"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="cymel.qt.binding.html" title="cymel.qt.binding"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.31.2026070300 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.32.2026070500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.qt.widgets</a></li> 
       </ul>
@@ -54,7 +54,7 @@
 <td><p>Outputs the widget's objectName hierarchy.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.qt.widgets.getDpiScaling" title="cymel.qt.widgets.getDpiScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDpiScaling</span></code></a>([widget])</p></td>
-<td><p>Get the generic Qt logical DPI scale.</p></td>
+<td><p>Get Qt's logical DPI scale.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.qt.widgets.getFirstTopLevelWindow" title="cymel.qt.widgets.getFirstTopLevelWindow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFirstTopLevelWindow</span></code></a>()</p></td>
 <td><p>Get the first top-level QWidget being displayed.</p></td>
@@ -94,10 +94,13 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cymel.qt.widgets.getDpiScaling">
 <span class="sig-prename descclassname"><span class="pre">cymel.qt.widgets.</span></span><span class="sig-name descname"><span class="pre">getDpiScaling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.qt.widgets.getDpiScaling" title="Link to this definition">¶</a></dt>
-<dd><p>Get the generic Qt logical DPI scale.</p>
+<dd><p>Get Qt’s logical DPI scale.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>widget</strong> – However, in the case of Maya UI, it is ignored and becomes a fixed value, but in Qt5 or higher, instead of Maya, when you specify a widget, you get the scaling value of the screen on which it is displayed.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -278,7 +281,7 @@
         <li class="right" >
           <a href="cymel.qt.binding.html" title="cymel.qt.binding"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.31.2026070300 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.32.2026070500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.qt.widgets</a></li> 
       </ul>

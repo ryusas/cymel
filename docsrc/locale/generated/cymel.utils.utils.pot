@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cymel \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"POT-Creation-Date: 2026-07-05 23:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,97 +28,106 @@ msgstr ""
 msgid "Functions:"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`affectedAttrNames <cymel.utils.utils.affectedAttrNames>`\\ \\(nodetype\\, attrname\\)"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.affectedAttrNames:1
 msgid "ノードタイプ名とアトリビュート名を指定して、それが影響を与える同一ノードのアトリビュート名リストを得る。"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`affectingAttrNames <cymel.utils.utils.affectingAttrNames>`\\ \\(nodetype\\, attrname\\)"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.affectingAttrNames:1
 msgid "ノードタイプ名とアトリビュート名を指定して、それが影響を受ける同一ノードのアトリビュート名リストを得る。"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`correctNodeName <cymel.utils.utils.correctNodeName>`\\ \\(name\\)"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.correctNodeName:1
 msgid "任意の名前をネームスペースを含まないノード名として問題ない形に修正する。"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`correctNodeNameNS <cymel.utils.utils.correctNodeNameNS>`\\ \\(name\\)"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.correctNodeNameNS:1
 msgid "任意の名前をノード名として問題ない形に修正する。ネームスペースを許容。"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`createNode <cymel.utils.utils.createNode>`\\ \\(nodetype\\, \\*\\*kwargs\\)"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.createNode:1
 msgid "ノードを生成する。"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`enablePlugin <cymel.utils.utils.enablePlugin>`\\ \\(name\\[\\, proc\\]\\)"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.enablePlugin:1
 msgid "プラグインを利用可能にする。"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`escapeForMel <cymel.utils.utils.escapeForMel>`\\ \\(s\\)"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.escapeForMel:1
 msgid "melの文字列向けのエスケープをする。"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
+msgid ":py:obj:`getDpiScaling <cymel.utils.utils.getDpiScaling>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
+#: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.getDpiScaling:1
+msgid "Maya UI の DPI スケールを取得する。"
+msgstr ""
+
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`listEnum <cymel.utils.utils.listEnum>`\\ \\(name\\[\\, attrname\\, reverse\\]\\)"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.listEnum:1
 msgid "enum アトリビュートの名前と値のペアのリストを得る。"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`loadPlugin <cymel.utils.utils.loadPlugin>`\\ \\(name\\)"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.loadPlugin:1
 msgid "プラグインがロードされていなければロードする。"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`makeNiceName <cymel.utils.utils.makeNiceName>`\\ \\(name\\)"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.makeNiceName:1
 msgid "mixedCase や CamelCase の名前から Maya の Nice Name を得る。"
 msgstr ""
 
-#: ../srcs/generated/cymel.utils.utils.rst:51
+#: ../srcs/generated/cymel.utils.utils.rst:52
 msgid "Functions Details:"
 msgstr ""
 
@@ -194,6 +203,10 @@ msgstr ""
 
 #: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.escapeForMel:3
 msgid "文字列。"
+msgstr ""
+
+#: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.getDpiScaling:3
+msgid "`float`"
 msgstr ""
 
 #: ../../python/cymel/utils/utils.py:docstring of cymel.utils.utils.listEnum:3

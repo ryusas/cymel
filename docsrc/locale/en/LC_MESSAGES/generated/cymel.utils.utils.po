@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cymel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"POT-Creation-Date: 2026-07-05 23:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: en <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgstr "Various helpers for Maya."
 msgid "Functions:"
 msgstr "Functions:"
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ""
 ":py:obj:`affectedAttrNames <cymel.utils.utils.affectedAttrNames>`\\ "
 "\\(nodetype\\, attrname\\)"
@@ -39,14 +39,14 @@ msgstr ""
 ":py:obj:`affectedAttrNames <cymel.utils.utils.affectedAttrNames>`\\ "
 "\\(nodetype\\, attrname\\)"
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: cymel.utils.utils.affectedAttrNames:1 of
 msgid "ノードタイプ名とアトリビュート名を指定して、それが影響を与える同一ノードのアトリビュート名リストを得る。"
 msgstr ""
 "Given a node type name and attribute name, get a list of attribute names of "
 "the same node that it affects."
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ""
 ":py:obj:`affectingAttrNames <cymel.utils.utils.affectingAttrNames>`\\ "
 "\\(nodetype\\, attrname\\)"
@@ -54,23 +54,23 @@ msgstr ""
 ":py:obj:`affectingAttrNames <cymel.utils.utils.affectingAttrNames>`\\ "
 "\\(nodetype\\, attrname\\)"
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: cymel.utils.utils.affectingAttrNames:1 of
 msgid "ノードタイプ名とアトリビュート名を指定して、それが影響を受ける同一ノードのアトリビュート名リストを得る。"
 msgstr ""
 "Given a node type name and an attribute name, get a list of attribute names "
 "for the same node that it affects."
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`correctNodeName <cymel.utils.utils.correctNodeName>`\\ \\(name\\)"
 msgstr ":py:obj:`correctNodeName <cymel.utils.utils.correctNodeName>`\\ \\(name\\)"
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: cymel.utils.utils.correctNodeName:1 of
 msgid "任意の名前をネームスペースを含まないノード名として問題ない形に修正する。"
 msgstr "Correct any name into a valid node name without namespace."
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ""
 ":py:obj:`correctNodeNameNS <cymel.utils.utils.correctNodeNameNS>`\\ "
 "\\(name\\)"
@@ -78,14 +78,14 @@ msgstr ""
 ":py:obj:`correctNodeNameNS <cymel.utils.utils.correctNodeNameNS>`\\ "
 "\\(name\\)"
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: cymel.utils.utils.correctNodeNameNS:1 of
 msgid "任意の名前をノード名として問題ない形に修正する。ネームスペースを許容。"
 msgstr ""
 "Correct any name into a form that is acceptable as a node name. Allows "
 "namespaces."
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ""
 ":py:obj:`createNode <cymel.utils.utils.createNode>`\\ \\(nodetype\\, "
 "\\*\\*kwargs\\)"
@@ -93,32 +93,42 @@ msgstr ""
 ":py:obj:`createNode <cymel.utils.utils.createNode>`\\ ​​\\(nodetype\\, "
 "\\*\\*kwargs\\)"
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: cymel.utils.utils.createNode:1 of
 msgid "ノードを生成する。"
 msgstr "Generate a node."
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`enablePlugin <cymel.utils.utils.enablePlugin>`\\ \\(name\\[\\, proc\\]\\)"
 msgstr ""
 ":py:obj:`enablePlugin <cymel.utils.utils.enablePlugin>`\\ \\(name\\[\\, "
 "proc\\]\\)"
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: cymel.utils.utils.enablePlugin:1 of
 msgid "プラグインを利用可能にする。"
 msgstr "Make the plugin available."
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`escapeForMel <cymel.utils.utils.escapeForMel>`\\ \\(s\\)"
 msgstr ":py:obj:`escapeForMel <cymel.utils.utils.escapeForMel>`\\ \\(s\\)"
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: cymel.utils.utils.escapeForMel:1 of
 msgid "melの文字列向けのエスケープをする。"
 msgstr "Escape for mel strings."
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
+#, fuzzy
+msgid ":py:obj:`getDpiScaling <cymel.utils.utils.getDpiScaling>`\\ \\(\\)"
+msgstr ":py:obj:`getDpiScaling <cymel.utils.utils.getDpiScaling>`\\ \\(\\)"
+
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
+#: cymel.utils.utils.getDpiScaling:1 of
+msgid "Maya UI の DPI スケールを取得する。"
+msgstr "Get the DPI scale for Maya UI."
+
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ""
 ":py:obj:`listEnum <cymel.utils.utils.listEnum>`\\ \\(name\\[\\, attrname\\, "
 "reverse\\]\\)"
@@ -126,30 +136,30 @@ msgstr ""
 ":py:obj:`listEnum <cymel.utils.utils.listEnum>`\\ \\(name\\[\\, attrname\\, "
 "reverse\\]\\)"
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: cymel.utils.utils.listEnum:1 of
 msgid "enum アトリビュートの名前と値のペアのリストを得る。"
 msgstr "Get a list of enum attribute name/value pairs."
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`loadPlugin <cymel.utils.utils.loadPlugin>`\\ \\(name\\)"
 msgstr ":py:obj:`loadPlugin <cymel.utils.utils.loadPlugin>`\\ \\(name\\)"
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: cymel.utils.utils.loadPlugin:1 of
 msgid "プラグインがロードされていなければロードする。"
 msgstr "Load the plugin if it is not loaded."
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 msgid ":py:obj:`makeNiceName <cymel.utils.utils.makeNiceName>`\\ \\(name\\)"
 msgstr ":py:obj:`makeNiceName <cymel.utils.utils.makeNiceName>`\\ \\(name\\)"
 
-#: ../srcs/generated/cymel.utils.utils.rst:48:<autosummary>:1
+#: ../srcs/generated/cymel.utils.utils.rst:49:<autosummary>:1
 #: cymel.utils.utils.makeNiceName:1 of
 msgid "mixedCase や CamelCase の名前から Maya の Nice Name を得る。"
 msgstr "Get a nice Maya name from a mixedCase or CamelCase name."
 
-#: ../srcs/generated/cymel.utils.utils.rst:51
+#: ../srcs/generated/cymel.utils.utils.rst:52
 msgid "Functions Details:"
 msgstr "Function Details:"
 
@@ -232,6 +242,11 @@ msgstr "`bool`"
 #: cymel.utils.utils.escapeForMel:3 of
 msgid "文字列。"
 msgstr "string."
+
+#: cymel.utils.utils.getDpiScaling:3 of
+#, fuzzy
+msgid "`float`"
+msgstr "`float`"
 
 #: cymel.utils.utils.listEnum:3 of
 msgid "スタティックアトリビュートか ダイナミックアトリビュートか によって指定方法が異なる。"

@@ -1,0 +1,138 @@
+﻿class cymel.ui.optionbox.OptionBox
+==================================
+
+.. currentmodule:: cymel.ui.optionbox
+
+
+.. inheritance-diagram:: OptionBox
+    :parts: 1
+
+
+
+.. autoclass:: OptionBox
+    :show-inheritance:
+
+
+
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        __init__
+        addMenu
+        assembleCodeToEcho
+        assemblePyCode
+        assemblePyCodeWithArgs
+        checkMayaVersion
+        createContents
+        createLayout
+        currentTabId
+        execPyCode
+        execPyCodeFromUI
+        execute
+        get
+        getLayout
+        getValidUIInstance
+        get_
+        get_instance
+        growUpWindowSize
+        isTabReady
+        isUIAlive
+        keyToExec
+        keyToStore
+        load
+        loadOptions
+        makeWeakCB
+        melCB
+        onChanged
+        perform
+        ref
+        reset
+        resetOptions
+        save
+        saveOptions
+        set
+        set_
+        show
+        showHelp
+        title
+        updateState
+
+
+
+
+
+    .. rubric:: Attributes:
+
+    
+    .. autoattribute:: APPLY_BUTTON_LABEL
+    .. autoattribute:: BRIEF
+    .. autoattribute:: BUTTON_LABEL
+    .. autoattribute:: CLOSE_BUTTON_LABEL
+    .. autoattribute:: COMMAND_DEFAULTS
+    .. autoattribute:: COMMAND_LABEL
+    .. autoattribute:: DEFAULTS
+    .. autoattribute:: DEFAULT_TAB_INDEX
+    .. autoattribute:: DEFUNCT_KEYS
+    .. autoattribute:: HELP_URL
+    .. autoattribute:: INIT_HEIGHT
+    .. autoattribute:: INIT_WIDTH
+    .. autoattribute:: MIN_HEIGHT
+    .. autoattribute:: MIN_WIDTH
+    .. autoattribute:: NO_RESETS
+    .. autoattribute:: OPT_PREFIX
+    .. autoattribute:: SHOW_ERROR_DIALOG
+    .. autoattribute:: SKIP_DEFAULT_VALUES
+    .. autoattribute:: SUPPORTED_VERSION
+    .. autoattribute:: TAB_LABELS
+    .. autoattribute:: TOOL_NAME
+    .. autoattribute:: TOOL_VERSION
+
+
+
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: __init__
+    .. automethod:: addMenu
+    .. automethod:: assembleCodeToEcho
+    .. automethod:: assemblePyCode
+    .. automethod:: assemblePyCodeWithArgs
+    .. automethod:: checkMayaVersion
+    .. automethod:: createContents
+    .. automethod:: createLayout
+    .. automethod:: currentTabId
+    .. automethod:: execPyCode
+    .. automethod:: execPyCodeFromUI
+    .. automethod:: execute
+    .. automethod:: get
+    .. automethod:: getLayout
+    .. automethod:: getValidUIInstance
+    .. automethod:: get_
+    .. automethod:: get_instance
+    .. automethod:: growUpWindowSize
+    .. automethod:: isTabReady
+    .. automethod:: isUIAlive
+    .. automethod:: keyToExec
+    .. automethod:: keyToStore
+    .. automethod:: load
+    .. automethod:: loadOptions
+    .. automethod:: makeWeakCB
+    .. automethod:: melCB
+    .. automethod:: onChanged
+    .. automethod:: perform
+    .. automethod:: ref
+    .. automethod:: reset
+    .. automethod:: resetOptions
+    .. automethod:: save
+    .. automethod:: saveOptions
+    .. automethod:: set
+    .. automethod:: set_
+    .. automethod:: show
+    .. automethod:: showHelp
+    .. automethod:: title
+    .. automethod:: updateState
+
+

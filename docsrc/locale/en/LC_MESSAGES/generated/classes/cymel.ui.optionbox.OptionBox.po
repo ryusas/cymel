@@ -1,0 +1,995 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020-2026, ryusas
+# This file is distributed under the same license as the cymel package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version:  cymel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-05 23:32+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:2
+msgid "class cymel.ui.optionbox.OptionBox"
+msgstr "class cymel.ui.optionbox.OptionBox"
+
+#: cymel.ui.optionbox.OptionBox:1 of
+msgid "オプションボックス作成のための抽象基底クラス。"
+msgstr "Abstract base class for creating option boxes."
+
+#: cymel.ui.optionbox.OptionBox:3 of
+msgid ""
+"オプションボックスを開発する場合は、このクラスを継承し、 ツール名、オプション接頭辞、デフォルト値などのクラス属性を定義したうえで、 UI "
+"構築と値のロード/セーブ、および実行コード生成を実装する。"
+msgstr ""
+"When developing an option box, inherit this class, define class "
+"attributes such as tool name, option prefix, and default value, and then "
+"implement UI construction, value loading/saving, and execution code "
+"generation."
+
+#: cymel.ui.optionbox.OptionBox:7 of
+msgid "最小構成の例::"
+msgstr "Example of minimal configuration::"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:18
+msgid "Methods:"
+msgstr "Methods:"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`__init__ <cymel.ui.optionbox.OptionBox.__init__>`\\ \\(\\)"
+msgstr ":py:obj:`__init__ <cymel.ui.optionbox.OptionBox.__init__>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`addMenu <cymel.ui.optionbox.OptionBox.addMenu>`\\ "
+"\\(\\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`addMenu <cymel.ui.optionbox.OptionBox.addMenu>`\\ "
+"\\(\\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.addMenu:1 of
+msgid "option box のメニューバーにメニューを追加する。"
+msgstr "Add a menu to the option box's menu bar."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`assembleCodeToEcho "
+"<cymel.ui.optionbox.OptionBox.assembleCodeToEcho>`\\ \\(\\[pyCode\\]\\)"
+msgstr ""
+":py:obj:`assembleCodeToEcho "
+"<cymel.ui.optionbox.OptionBox.assembleCodeToEcho>`\\ \\(\\[pyCode\\]\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.assembleCodeToEcho:1 of
+msgid "エコー用のコマンド文字列を得る。"
+msgstr "Get command string for echo."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`assemblePyCode <cymel.ui.optionbox.OptionBox.assemblePyCode>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`assemblePyCode <cymel.ui.optionbox.OptionBox.assemblePyCode>`\\ "
+"​​\\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.assemblePyCode:1 of
+msgid "実行用 Python コードを生成して返す。"
+msgstr "Generate and return Python code for execution."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`assemblePyCodeWithArgs "
+"<cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs>`\\ \\(\\[modName\\,"
+" funcName\\, ...\\]\\)"
+msgstr ""
+":py:obj:`assemblePyCodeWithArgs "
+"<cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs>`\\ \\(\\[modName\\,"
+" funcName\\, ...\\]\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:1 of
+msgid "実行用 Python コードを生成するためのヘルパー。"
+msgstr "Helper for generating Python code for execution."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`checkMayaVersion "
+"<cymel.ui.optionbox.OptionBox.checkMayaVersion>`\\ \\(\\)"
+msgstr ""
+":py:obj:`checkMayaVersion "
+"<cymel.ui.optionbox.OptionBox.checkMayaVersion>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.checkMayaVersion:1 of
+msgid "Maya バージョンをチェックし、非サポートならエラーにする。"
+msgstr "Check Maya version and error if unsupported."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`createContents <cymel.ui.optionbox.OptionBox.createContents>`\\ "
+"\\(tabId\\)"
+msgstr ""
+":py:obj:`createContents <cymel.ui.optionbox.OptionBox.createContents>`\\ "
+"\\(tabId\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.createContents:1 of
+msgid "タブ内の UI コントロールを生成する。"
+msgstr "Generate UI controls within the tab."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`createLayout <cymel.ui.optionbox.OptionBox.createLayout>`\\ "
+"\\(tabId\\)"
+msgstr ""
+":py:obj:`createLayout <cymel.ui.optionbox.OptionBox.createLayout>`\\ "
+"\\(tabId\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.createLayout:1 of
+msgid "タブ内のレイアウトを生成する。"
+msgstr "Generate the layout within the tab."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`currentTabId <cymel.ui.optionbox.OptionBox.currentTabId>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`currentTabId <cymel.ui.optionbox.OptionBox.currentTabId>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.currentTabId:1 of
+msgid "カレントタブインデックスを得る。"
+msgstr "Get the current tab index."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`execPyCode <cymel.ui.optionbox.OptionBox.execPyCode>`\\ "
+"\\(pyCode\\[\\, echo\\, addQueue\\]\\)"
+msgstr ""
+":py:obj:`execPyCode <cymel.ui.optionbox.OptionBox.execPyCode>`\\ "
+"​​\\(pyCode\\[\\, echo\\, addQueue\\]\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.execPyCode:1 of
+msgid "指定した Python コードを実行する。"
+msgstr "Executes the specified Python code."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`execPyCodeFromUI "
+"<cymel.ui.optionbox.OptionBox.execPyCodeFromUI>`\\ \\(code\\, \\*dummy\\)"
+msgstr ""
+":py:obj:`execPyCodeFromUI "
+"<cymel.ui.optionbox.OptionBox.execPyCodeFromUI>`\\ \\(code\\, \\*dummy\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.execPyCodeFromUI:1 of
+msgid "UI コールバックから指定した Python コードを実行する。"
+msgstr "Execute specified Python code from a UI callback."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`execute <cymel.ui.optionbox.OptionBox.execute>`\\ \\(\\[echo\\, "
+"addQueue\\]\\)"
+msgstr ""
+":py:obj:`execute <cymel.ui.optionbox.OptionBox.execute>`\\ \\(\\[echo\\, "
+"addQueue\\]\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.execute:1 of
+msgid "現在の設定でコマンドを実行する。"
+msgstr "Execute a command with the current settings."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`get <cymel.ui.optionbox.OptionBox.get>`\\ \\(key\\)"
+msgstr ":py:obj:`get <cymel.ui.optionbox.OptionBox.get>`\\ \\(key\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.get:1 of
+msgid "保持している値を取得する。"
+msgstr "Get the held value."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`getLayout <cymel.ui.optionbox.OptionBox.getLayout>`\\ "
+"\\(\\[tabId\\]\\)"
+msgstr ""
+":py:obj:`getLayout <cymel.ui.optionbox.OptionBox.getLayout>`\\ "
+"\\(\\[tabId\\]\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.getLayout:1 of
+msgid "指定 ID のレイアウトを得る。"
+msgstr "Get the layout of the specified ID."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`getValidUIInstance "
+"<cymel.ui.optionbox.OptionBox.getValidUIInstance>`\\ \\(\\)"
+msgstr ""
+":py:obj:`getValidUIInstance "
+"<cymel.ui.optionbox.OptionBox.getValidUIInstance>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.getValidUIInstance:1 of
+msgid "現在有効な UI を持つインスタンスを得る。"
+msgstr "Get an instance with the currently active UI."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`get_ <cymel.ui.optionbox.OptionBox.get_>`\\ \\(rawkey\\)"
+msgstr ":py:obj:`get_ <cymel.ui.optionbox.OptionBox.get_>`\\ \\(rawkey\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.get_:1 of
+msgid "保存用キーを指定して値を取得する。"
+msgstr "Get the value by specifying the storage key."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`get_instance <cymel.ui.optionbox.OptionBox.get_instance>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`get_instance <cymel.ui.optionbox.OptionBox.get_instance>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.get_instance:1 of
+msgid "現在保持されているシングルトンインスタンスを得る。"
+msgstr "Get the currently held singleton instance."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`growUpWindowSize "
+"<cymel.ui.optionbox.OptionBox.growUpWindowSize>`\\ \\(\\[tabId\\, fitW\\,"
+" fitH\\, addW\\]\\)"
+msgstr ""
+":py:obj:`growUpWindowSize "
+"<cymel.ui.optionbox.OptionBox.growUpWindowSize>`\\ \\(\\[tabId\\, fitW\\,"
+" fitH\\, addW\\]\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.growUpWindowSize:1 of
+msgid "ウィンドウサイズがタブにとって十分でなければリサイズする。"
+msgstr "If the window size is not large enough for the tab, resize it."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`isTabReady <cymel.ui.optionbox.OptionBox.isTabReady>`\\ "
+"\\(tabId\\)"
+msgstr ""
+":py:obj:`isTabReady <cymel.ui.optionbox.OptionBox.isTabReady>`\\ "
+"\\(tabId\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.isTabReady:1 of
+msgid "タブの中身が生成済みなら :mayacmd:`setParent` して ``True`` を返す。"
+msgstr ""
+"If the contents of the tab have been generated, :mayacmd:`setParent` "
+"returns ``True``."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`isUIAlive <cymel.ui.optionbox.OptionBox.isUIAlive>`\\ \\(\\)"
+msgstr ":py:obj:`isUIAlive <cymel.ui.optionbox.OptionBox.isUIAlive>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.isUIAlive:1 of
+msgid "表示した option box UI が存在しているかどうか。"
+msgstr "Whether the displayed option box UI exists."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`keyToExec <cymel.ui.optionbox.OptionBox.keyToExec>`\\ \\(key\\)"
+msgstr ":py:obj:`keyToExec <cymel.ui.optionbox.OptionBox.keyToExec>`\\ \\(key\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.keyToExec:1 of
+msgid "保存用キーを実行用キーへ変換する。"
+msgstr "Convert a storage key to an execution key."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`keyToStore <cymel.ui.optionbox.OptionBox.keyToStore>`\\ \\(key\\)"
+msgstr ":py:obj:`keyToStore <cymel.ui.optionbox.OptionBox.keyToStore>`\\ \\(key\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.keyToStore:1 of
+msgid "実行用キーを保存用キーへ変換する。"
+msgstr "Convert execution key to storage key."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`load <cymel.ui.optionbox.OptionBox.load>`\\ \\(\\)"
+msgstr ":py:obj:`load <cymel.ui.optionbox.OptionBox.load>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.load:1 of
+msgid "オプション値を UI にロードする。"
+msgstr "Load option values ​​into the UI."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`loadOptions <cymel.ui.optionbox.OptionBox.loadOptions>`\\ "
+"\\(\\[tabId\\]\\)"
+msgstr ""
+":py:obj:`loadOptions <cymel.ui.optionbox.OptionBox.loadOptions>`\\ "
+"\\(\\[tabId\\]\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.loadOptions:1 of
+msgid "保存されたオプション値を UI にセットする。"
+msgstr "Set saved option values ​​in the UI."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`makeWeakCB <cymel.ui.optionbox.OptionBox.makeWeakCB>`\\ "
+"\\(name\\, \\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`makeWeakCB <cymel.ui.optionbox.OptionBox.makeWeakCB>`\\ "
+"\\(name\\, \\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.makeWeakCB:1 of
+msgid "このインスタンスを強参照しないメソッドコールバックを得る。"
+msgstr "Get a method callback that does not strongly refer to this instance."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`melCB <cymel.ui.optionbox.OptionBox.melCB>`\\ "
+"\\(method\\_name\\, \\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`melCB <cymel.ui.optionbox.OptionBox.melCB>`\\ "
+"\\(method\\_name\\, \\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.melCB:1 of
+msgid "このシングルトンインスタンスのメソッドを呼び出すコールバック文字列を得る。"
+msgstr "Gets a callback string that calls a method on this singleton instance."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`onChanged <cymel.ui.optionbox.OptionBox.onChanged>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+":py:obj:`onChanged <cymel.ui.optionbox.OptionBox.onChanged>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.onChanged:1 of
+msgid "汎用的に使える UI のチェンジコールバック。"
+msgstr "A general-purpose UI change callback."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`perform <cymel.ui.optionbox.OptionBox.perform>`\\ \\(cmdi\\)"
+msgstr ":py:obj:`perform <cymel.ui.optionbox.OptionBox.perform>`\\ \\(cmdi\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.perform:1 of
+msgid "Maya 標準 option box から呼び出される入口。"
+msgstr "Entrance called from the Maya standard option box."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`ref <cymel.ui.optionbox.OptionBox.ref>`\\ \\(\\)"
+msgstr ":py:obj:`ref <cymel.ui.optionbox.OptionBox.ref>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.ref:1 of
+msgid "弱参照を得る。"
+msgstr "Get a weak reference."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`reset <cymel.ui.optionbox.OptionBox.reset>`\\ \\(\\)"
+msgstr ":py:obj:`reset <cymel.ui.optionbox.OptionBox.reset>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.reset:1 of
+msgid "オプション値をリセットして UI を更新する。"
+msgstr "Reset option values ​​and update the UI."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`resetOptions <cymel.ui.optionbox.OptionBox.resetOptions>`\\ "
+"\\(\\)"
+msgstr ""
+":py:obj:`resetOptions <cymel.ui.optionbox.OptionBox.resetOptions>`\\ "
+"\\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.resetOptions:1 of
+msgid "保持しているオプション値をデフォルトにリセットする。"
+msgstr "Resets retained option values ​​to default."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`save <cymel.ui.optionbox.OptionBox.save>`\\ \\(\\)"
+msgstr ":py:obj:`save <cymel.ui.optionbox.OptionBox.save>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.save:1 of
+msgid "UI の状態をオプション値として保存する。"
+msgstr "Save UI state as an option value."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`saveOptions <cymel.ui.optionbox.OptionBox.saveOptions>`\\ "
+"\\(\\[tabId\\]\\)"
+msgstr ""
+":py:obj:`saveOptions <cymel.ui.optionbox.OptionBox.saveOptions>`\\ "
+"\\(\\[tabId\\]\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.saveOptions:1 of
+msgid "UI から値を読み取って保存する。"
+msgstr "Read and save values ​​from the UI."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`set <cymel.ui.optionbox.OptionBox.set>`\\ \\(key\\, val\\)"
+msgstr ":py:obj:`set <cymel.ui.optionbox.OptionBox.set>`\\ \\(key\\, val\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.set:1 of
+msgid "値を保存する。"
+msgstr "Save the value."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`set_ <cymel.ui.optionbox.OptionBox.set_>`\\ \\(rawkey\\, val\\)"
+msgstr ":py:obj:`set_ <cymel.ui.optionbox.OptionBox.set_>`\\ \\(rawkey\\, val\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.set_:1 of
+msgid "保存用キーを指定して値を保存する。"
+msgstr "Save the value by specifying the save key."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`show <cymel.ui.optionbox.OptionBox.show>`\\ \\(\\)"
+msgstr ":py:obj:`show <cymel.ui.optionbox.OptionBox.show>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.show:1 of
+msgid "option box を表示する。"
+msgstr "Show option box."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`showHelp <cymel.ui.optionbox.OptionBox.showHelp>`\\ \\(\\*args\\)"
+msgstr ":py:obj:`showHelp <cymel.ui.optionbox.OptionBox.showHelp>`\\ \\(\\*args\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.showHelp:1 of
+msgid "`HELP_URL` を表示する。"
+msgstr "Display `HELP_URL`."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ":py:obj:`title <cymel.ui.optionbox.OptionBox.title>`\\ \\(\\)"
+msgstr ":py:obj:`title <cymel.ui.optionbox.OptionBox.title>`\\ \\(\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.title:1 of
+msgid "ウィンドウタイトルを返す。"
+msgstr "Returns the window title."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+msgid ""
+":py:obj:`updateState <cymel.ui.optionbox.OptionBox.updateState>`\\ "
+"\\(\\[tabId\\]\\)"
+msgstr ""
+":py:obj:`updateState <cymel.ui.optionbox.OptionBox.updateState>`\\ "
+"\\(\\[tabId\\]\\)"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:64:<autosummary>:1
+#: cymel.ui.optionbox.OptionBox.updateState:1 of
+msgid "UI の有効/無効などの状態を更新する。"
+msgstr "Update the state of the UI, such as enable/disable."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:67
+msgid "Attributes:"
+msgstr "Attributes:"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst:97
+msgid "Methods Details:"
+msgstr "Method Details:"
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.ui.optionbox.OptionBox.addMenu:3 of
+msgid ":mayacmd:`menu` コマンドに渡す引数。"
+msgstr "Arguments to pass to the :mayacmd:`menu` command."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.ui.optionbox.OptionBox.addMenu:4
+#: cymel.ui.optionbox.OptionBox.assembleCodeToEcho:5
+#: cymel.ui.optionbox.OptionBox.assemblePyCode:6
+#: cymel.ui.optionbox.OptionBox.createLayout:9
+#: cymel.ui.optionbox.OptionBox.execPyCode:6
+#: cymel.ui.optionbox.OptionBox.execute:9
+#: cymel.ui.optionbox.OptionBox.keyToExec:5
+#: cymel.ui.optionbox.OptionBox.keyToStore:8
+#: cymel.ui.optionbox.OptionBox.melCB:9 cymel.ui.optionbox.OptionBox.title:5 of
+msgid "`str`"
+msgstr "`str`"
+
+#: cymel.ui.optionbox.OptionBox.assembleCodeToEcho:3 of
+msgid "エコーしたい Python コード。省略時は `assemblePyCode` が呼ばれる。"
+msgstr "The Python code you want to echo. If omitted, `assemblePyCode` is called."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCode:3 of
+msgid ""
+"派生クラスで必ず実装する。`assemblePyCodeWithArgs` を使うと、 optionVar "
+"に保存された値から関数呼び出しや引数リストを組み立てられる。"
+msgstr ""
+"Must be implemented in derived classes. `assemblePyCodeWithArgs` allows "
+"you to assemble a function call or argument list from the values ​​stored"
+" in optionVar."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:3 of
+msgid "以下の順で引数が組み立てられる。"
+msgstr "Arguments are assembled in the following order."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:5 of
+msgid "`args` で指定された値が位置引数になる。"
+msgstr "The value specified by `args` becomes a positional argument."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:6 of
+msgid "`argKeys` で指定されたキーの保存値が位置引数として追加される。"
+msgstr ""
+"The stored value of the key specified by `argKeys` is added as a "
+"positional argument."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:7 of
+msgid "`kwargs` で指定された値がキーワード引数になる。"
+msgstr "The value specified by `kwargs` becomes the keyword argument."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:8 of
+msgid "内部の optionVar からキーワード引数を自動収集する。"
+msgstr "Automatically collect keyword arguments from internal optionVar."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:10 of
+msgid ""
+"`SKIP_DEFAULT_VALUES` が ``True`` の場合は、デフォルト値と同じ値は "
+"自動収集されない。`COMMAND_DEFAULTS` を使うと、実行コマンド側の デフォルト値が保存用 `DEFAULTS` "
+"と異なる場合の比較値を指定できる。"
+msgstr ""
+"If `SKIP_DEFAULT_VALUES` is ``True``, values ​​that are the same as "
+"default values ​​will not be automatically collected. `COMMAND_DEFAULTS` "
+"allows you to specify comparison values ​​when the default value on the "
+"executed command side is different from the saved `DEFAULTS`."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:14 of
+msgid "自動収集では次の条件を考慮する。"
+msgstr "Automatic collection considers the following conditions:"
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:16 of
+msgid "`kwargs` に直接指定されたキーは重複収集しない。"
+msgstr "Duplicate keys specified directly in `kwargs` are not collected."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:17 of
+msgid "`argKeys` に指定されたキーはキーワード引数としては収集しない。"
+msgstr "Keys specified in `argKeys` are not collected as keyword arguments."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:18 of
+msgid "`ignoreKeys` に含まれるキーは収集しない。"
+msgstr "Do not collect keys contained in `ignoreKeys`."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:19 of
+msgid "`qualifyKeys` が指定された場合は、そのキーだけを収集する。"
+msgstr "If `qualifyKeys` is specified, only those keys will be collected."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:21 of
+msgid "関数を含むモジュール名。`funcName` と共に指定すると ``import module; module.func(...)`` 形式を返す。"
+msgstr ""
+"Module name containing the function. When specified with `funcName`, "
+"returns the ``import module; module.func(...)`` format."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:24 of
+msgid "呼び出す関数名。省略した場合は引数リスト部分だけを返す。"
+msgstr ""
+"Function name to call. If omitted, only the argument list part is "
+"returned."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:26 of
+msgid "直接指定する位置引数の値。"
+msgstr "The value of a positional argument that you specify directly."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:27 of
+msgid "直接指定するキーワード引数の値。"
+msgstr "The value of the keyword argument specified directly."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:28 of
+msgid "optionVar から位置引数として取り出すキー。"
+msgstr "The key to retrieve from optionVar as a positional argument."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:29 of
+msgid "自動収集から除外する実行用キー。"
+msgstr "Execution keys to exclude from automatic collection."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:30 of
+msgid "自動収集の対象にする実行用キー。"
+msgstr "Execution keys to be automatically collected."
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:31 of
+msgid "``True`` の場合はコード文字列ではなくキーワード引数辞書を返す。"
+msgstr ""
+"If ``True``, return the keyword argument dictionary instead of the code "
+"string."
+
+#: ../srcs/generated/classes/cymel.ui.optionbox.OptionBox.rst
+msgid "戻り値"
+msgstr "return value"
+
+#: cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs:33 of
+msgid "Python コード文字列、またはキーワード引数辞書。"
+msgstr "A Python code string or keyword argument dictionary."
+
+#: cymel.ui.optionbox.OptionBox.checkMayaVersion:3 of
+msgid "`SUPPORTED_VERSION` には ``(2024,)`` のようなタプルか、 旧互換の数値を指定できる。"
+msgstr ""
+"`SUPPORTED_VERSION` can be a tuple such as ``(2024,)`` or a backward-"
+"compatible number."
+
+#: cymel.ui.optionbox.OptionBox.createContents:3 of
+msgid ""
+"派生クラスで必ず実装する。呼び出し時には対象タブのレイアウトが :mayacmd:`setParent` "
+"済みであり、未生成のタブが初めて表示された時に 一度だけ呼ばれる。"
+msgstr ""
+"Must be implemented in derived classes. When called, the layout of the "
+"target tab has been set by :mayacmd:`setParent`, and it is called only "
+"once when an ungenerated tab is displayed for the first time."
+
+#: cymel.ui.optionbox.OptionBox.createContents:7
+#: cymel.ui.optionbox.OptionBox.createLayout:7 of
+msgid "1 から始まるタブインデックス。タブを使わない場合は 0。"
+msgstr "Tab index starting from 1. 0 if tabs are not used."
+
+#: cymel.ui.optionbox.OptionBox.createLayout:3 of
+msgid ""
+"`TAB_LABELS` に ``None`` や空値を指定してタブレイアウトを使わない場合は、 `tabId` には 0 "
+"が渡される。基底の実装は :mayacmd:`columnLayout` だが、派生クラスで任意のレイアウトに置き換えられる。"
+msgstr ""
+"If you do not use tab layout by specifying ``None`` or a blank value for "
+"`TAB_LABELS`, 0 is passed to `tabId`. The base implementation is "
+":mayacmd:`columnLayout`, but it can be replaced with any layout in a "
+"derived class."
+
+#: cymel.ui.optionbox.OptionBox.currentTabId:3 of
+msgid "タブレイアウトを使っていない場合は 0 を返す。"
+msgstr "Returns 0 if tab layout is not used."
+
+#: cymel.ui.optionbox.OptionBox.currentTabId:5 of
+msgid "`int`"
+msgstr "`int`"
+
+#: cymel.ui.optionbox.OptionBox.execPyCode:3
+#: cymel.ui.optionbox.OptionBox.execPyCodeFromUI:5 of
+msgid "実行する Python コード。"
+msgstr "Python code to run."
+
+#: cymel.ui.optionbox.OptionBox.execPyCode:4 of
+msgid "実行コードを標準出力へ表示するかどうか。"
+msgstr "Whether to display executed code to standard output."
+
+#: cymel.ui.optionbox.OptionBox.execPyCode:5 of
+msgid "RecentCommandQueue に追加するかどうか。"
+msgstr "Whether to add to RecentCommandQueue."
+
+#: cymel.ui.optionbox.OptionBox.execPyCodeFromUI:3 of
+msgid "コールバックから渡される余分な引数は無視される。"
+msgstr "Extra arguments passed from the callback are ignored."
+
+#: cymel.ui.optionbox.OptionBox.execute:3 of
+msgid "実行コードを標準出力へ表示するかどうか。 表示される文字列は Python コードそのもの。"
+msgstr ""
+"Whether to display executed code to standard output. The displayed string"
+" is the Python code itself."
+
+#: cymel.ui.optionbox.OptionBox.execute:6 of
+msgid ""
+"Maya の RecentCommandQueue に追加するかどうか。 リピート実行から呼ぶ場合は二重登録を避けるため ``False`` "
+"にする。"
+msgstr ""
+"Whether to add to Maya's RecentCommandQueue. When calling from repeat "
+"execution, set it to ``False`` to avoid double registration."
+
+#: cymel.ui.optionbox.OptionBox.get:3 of
+msgid "`keyToStore` で保存用キーへ変換した後、`get_` に処理を委譲する。"
+msgstr ""
+"After converting to a storage key with `keyToStore`, delegate the "
+"processing to `get_`."
+
+#: cymel.ui.optionbox.OptionBox.get:5 cymel.ui.optionbox.OptionBox.set:5 of
+msgid "実行用キー。"
+msgstr "Execution key."
+
+#: cymel.ui.optionbox.OptionBox.get:6 cymel.ui.optionbox.OptionBox.get_:7 of
+msgid "保存されている値。"
+msgstr "Saved value."
+
+#: cymel.ui.optionbox.OptionBox.getLayout:3 of
+msgid "1 から始まるタブインデックス。省略時はカレントタブ。 タブレイアウトを使わない場合は 0。"
+msgstr ""
+"Tab index starting from 1. If omitted, the current tab. 0 if tab layout "
+"is not used."
+
+#: cymel.ui.optionbox.OptionBox.getLayout:6 of
+msgid "`str` or None"
+msgstr "`str` or None"
+
+#: cymel.ui.optionbox.OptionBox.getValidUIInstance:3 of
+msgid "このクラスと派生クラスを深さ優先で調べ、 生存中の option box UI を持つ最初のインスタンスを返す。"
+msgstr ""
+"A depth-first walk through this class and its derived classes, returning "
+"the first instance with a living option box UI."
+
+#: cymel.ui.optionbox.OptionBox.getValidUIInstance:6
+#: cymel.ui.optionbox.OptionBox.get_instance:3 of
+msgid "`OptionBox` or None"
+msgstr "`OptionBox` or None"
+
+#: cymel.ui.optionbox.OptionBox.get_:3 of
+msgid ""
+"値の取得をカスタマイズしたい場合に派生クラスでオーバーライドする。 標準では内部の "
+":class:`~cymel.utils.optionvar.OptionVar` からそのまま返す。"
+msgstr ""
+"Override in a derived class if you want to customize value acquisition. "
+"By default, it is returned as is from the internal "
+":class:`~cymel.utils.optionvar.OptionVar`."
+
+#: cymel.ui.optionbox.OptionBox.get_:6 cymel.ui.optionbox.OptionBox.set_:6 of
+msgid "`keyToStore` で変換された後のキー。"
+msgstr "The key after being converted with `keyToStore`."
+
+#: cymel.ui.optionbox.OptionBox.growUpWindowSize:3 of
+msgid "多くの場合、UI 構築後に呼ぶ。`fitW` や `fitH` を ``True`` にすると、 小さくなる方向の調整も行う。"
+msgstr ""
+"Often called after UI construction. Setting `fitW` or `fitH` to ``True`` "
+"will also make adjustments in the direction of decreasing."
+
+#: cymel.ui.optionbox.OptionBox.growUpWindowSize:6 of
+msgid "1 から始まるタブインデックス。省略時はカレントタブ。"
+msgstr "Tab index starting from 1. If omitted, the current tab."
+
+#: cymel.ui.optionbox.OptionBox.growUpWindowSize:8 of
+msgid "幅が小さくなる場合もリサイズする。"
+msgstr "Resize even if the width becomes smaller."
+
+#: cymel.ui.optionbox.OptionBox.growUpWindowSize:9 of
+msgid "高さが小さくなる場合もリサイズする。"
+msgstr "Resize if the height becomes smaller."
+
+#: cymel.ui.optionbox.OptionBox.growUpWindowSize:10 of
+msgid "計算された幅へ追加するピクセル数。"
+msgstr "Number of pixels to add to the calculated width."
+
+#: cymel.ui.optionbox.OptionBox.isTabReady:3 of
+msgid "`loadOptions` や `saveOptions` で、まだ表示されていない遅延生成タブを 誤って操作しないために利用する。"
+msgstr ""
+"Use `loadOptions` and `saveOptions` to avoid accidentally operating "
+"delayed tabs that are not displayed yet."
+
+#: cymel.ui.optionbox.OptionBox.isTabReady:6 of
+msgid "1 から始まるタブインデックス。"
+msgstr "Tab index starting from 1."
+
+#: cymel.ui.optionbox.OptionBox.isTabReady:7
+#: cymel.ui.optionbox.OptionBox.isUIAlive:6 of
+msgid "`bool`"
+msgstr "`bool`"
+
+#: cymel.ui.optionbox.OptionBox.isUIAlive:3 of
+msgid "option box が閉じられたり他ツールに差し替えられたりした後に、 別途保持しているインスタンスから UI の生存を確認できる。"
+msgstr ""
+"After the option box is closed or replaced with another tool, you can "
+"check the survival of the UI from the separately maintained instance."
+
+#: cymel.ui.optionbox.OptionBox.keyToExec:3 of
+msgid "`keyToStore` で変換された後の保存用キー。"
+msgstr "The storage key after being converted with `keyToStore`."
+
+#: cymel.ui.optionbox.OptionBox.keyToExec:4 of
+msgid "コマンド実行に使う通常のキー。"
+msgstr "Regular keys used to execute commands."
+
+#: cymel.ui.optionbox.OptionBox.keyToStore:3 of
+msgid ""
+"コマンド実行時の引数名と :class:`~cymel.utils.optionvar.OptionVar` "
+"に保存するキー名を分けたい場合に、`keyToExec` と対でオーバーライドする。"
+msgstr ""
+"Override in pair with `keyToExec` if you want to separate the argument "
+"name when executing a command and the key name saved in "
+":class:`~cymel.utils.optionvar.OptionVar`."
+
+#: cymel.ui.optionbox.OptionBox.keyToStore:6 of
+msgid "コマンド実行にも使われる通常のキー。"
+msgstr "Regular keys that are also used to execute commands."
+
+#: cymel.ui.optionbox.OptionBox.keyToStore:7 of
+msgid "`OptionVar` に保存するキー。"
+msgstr "Key to save in `OptionVar`."
+
+#: cymel.ui.optionbox.OptionBox.load:3 of
+msgid ""
+"現在の option box レイアウトを :mayacmd:`setParent` したうえで、 `loadOptions` と "
+"`updateState` を呼ぶ。"
+msgstr ""
+":mayacmd:`setParent` the current option box layout, then call "
+"`loadOptions` and `updateState`."
+
+#: cymel.ui.optionbox.OptionBox.loadOptions:3
+#: cymel.ui.optionbox.OptionBox.saveOptions:3 of
+msgid "派生クラスで必ず実装する。`tabId` が ``None`` の場合は、 生成済みの全タブを対象にすることを想定している。"
+msgstr ""
+"Must be implemented in derived classes. If `tabId` is ``None``, it is "
+"assumed that all generated tabs will be targeted."
+
+#: cymel.ui.optionbox.OptionBox.loadOptions:6
+#: cymel.ui.optionbox.OptionBox.saveOptions:6
+#: cymel.ui.optionbox.OptionBox.updateState:6 of
+msgid "1 から始まるタブインデックス。``None`` の場合は全体。"
+msgstr "Tab index starting from 1. If ``None``, then whole."
+
+#: cymel.ui.optionbox.OptionBox.makeWeakCB:3 of
+msgid "UI コールバックに直接 bound method を渡すとインスタンス寿命が延びるため、 弱参照経由で対象メソッドを呼ぶ関数を返す。"
+msgstr ""
+"Passing a bound method directly to a UI callback extends the instance "
+"lifetime, so return a function that calls the target method via a weak "
+"reference."
+
+#: cymel.ui.optionbox.OptionBox.makeWeakCB:6
+#: cymel.ui.optionbox.OptionBox.melCB:6 of
+msgid "呼び出すメソッド名。"
+msgstr "Method name to call."
+
+#: cymel.ui.optionbox.OptionBox.makeWeakCB:7 of
+msgid "メソッドへ渡す固定位置引数。"
+msgstr "Fixed positional arguments passed to the method."
+
+#: cymel.ui.optionbox.OptionBox.makeWeakCB:8 of
+msgid "メソッドへ渡す固定キーワード引数。"
+msgstr "Fixed keyword arguments passed to the method."
+
+#: cymel.ui.optionbox.OptionBox.melCB:3 of
+msgid ""
+"Maya 標準 option box の一部コールバックは、Python 関数や Python コードを直接セットすると安定しないため、MEL "
+"側から設定する文字列を返す。"
+msgstr ""
+"Some of the Maya standard option box callbacks return strings that are "
+"set from the MEL side, as it is not stable if you set them directly to "
+"Python functions or Python code."
+
+#: cymel.ui.optionbox.OptionBox.melCB:7 of
+msgid "メソッドへ渡す追加位置引数。"
+msgstr "Additional positional arguments to pass to the method."
+
+#: cymel.ui.optionbox.OptionBox.melCB:8 of
+msgid "メソッドへ渡す追加キーワード引数。"
+msgstr "Additional keyword arguments to pass to the method."
+
+#: cymel.ui.optionbox.OptionBox.onChanged:3 of
+msgid "デフォルトでは `updateState` を呼ぶ。"
+msgstr "By default it calls `updateState`."
+
+#: cymel.ui.optionbox.OptionBox.perform:3 of
+msgid "0 なら現在の設定で実行、1 なら option box を開く、 2 なら現在の設定で実行される Python コード文字列を返す。"
+msgstr ""
+"0 to run with the current settings, 1 to open an option box, 2 to return "
+"a string of Python code to be run with the current settings."
+
+#: cymel.ui.optionbox.OptionBox.perform:6 of
+msgid "実行時またはコード取得時はコマンド文字列。表示時は空文字列。"
+msgstr "Command string at runtime or code capture. Empty string when displayed."
+
+#: cymel.ui.optionbox.OptionBox.ref:3 of
+msgid "`weakref.ref`"
+msgstr "`weakref.ref`"
+
+#: cymel.ui.optionbox.OptionBox.reset:3 of
+msgid ""
+"`NO_RESETS` の値を未保存状態で失わないように、まず `saveOptions` を呼び、 その後 "
+"`resetOptions`、`loadOptions`、`updateState` の順で処理する。"
+msgstr ""
+"To avoid losing the `NO_RESETS` value in an unsaved state, call "
+"`saveOptions` first, then process `resetOptions`, `loadOptions`, and "
+"`updateState` in that order."
+
+#: cymel.ui.optionbox.OptionBox.resetOptions:3 of
+msgid "`NO_RESETS` に指定したキーは対象外になる。"
+msgstr "Keys specified as `NO_RESETS` will be excluded."
+
+#: cymel.ui.optionbox.OptionBox.save:3 of
+msgid ""
+"現在の option box レイアウトを :mayacmd:`setParent` したうえで、 `updateState` と "
+"`saveOptions` を呼ぶ。数値フィールド編集中に Apply された場合などを考慮し、保存前に状態更新を行う。"
+msgstr ""
+":mayacmd:`setParent` the current option box layout, then call "
+"`updateState` and `saveOptions`. Update the status before saving, "
+"considering the case where it is applied while editing a numeric field."
+
+#: cymel.ui.optionbox.OptionBox.set:3 of
+msgid "`keyToStore` で保存用キーへ変換した後、`set_` に処理を委譲する。"
+msgstr ""
+"After converting it to a storage key with `keyToStore`, delegate the "
+"processing to `set_`."
+
+#: cymel.ui.optionbox.OptionBox.set:6 cymel.ui.optionbox.OptionBox.set_:7 of
+msgid "保存する値。"
+msgstr "Value to save."
+
+#: cymel.ui.optionbox.OptionBox.set_:3 of
+msgid ""
+"値の保存をカスタマイズしたい場合に派生クラスでオーバーライドする。 標準では内部の "
+":class:`~cymel.utils.optionvar.OptionVar` にそのまま渡す。"
+msgstr ""
+"Override in a derived class if you want to customize value storage. By "
+"default, it is passed as is to the internal "
+":class:`~cymel.utils.optionvar.OptionVar`."
+
+#: cymel.ui.optionbox.OptionBox.show:3 of
+msgid ""
+"既に UI が存在していれば、そのウィンドウを前面に出す。 未生成の場合は Maya 標準の option box 領域を取得し、タブ、 "
+"ボタン、メニューコールバックを設定する。"
+msgstr ""
+"If the UI already exists, bring that window to the front. If not "
+"generated, obtains Maya's standard option box area and sets tabs, "
+"buttons, and menu callbacks."
+
+#: cymel.ui.optionbox.OptionBox.showHelp:3 of
+msgid ""
+"Maya の :mayacmd:`showHelp` を優先し、失敗した場合は Python 標準の :mod:`webbrowser` "
+"にフォールバックする。"
+msgstr ""
+"Gives priority to Maya's :mayacmd:`showHelp`, and if it fails, falls back"
+" to the Python standard :mod:`webbrowser`."
+
+#: cymel.ui.optionbox.OptionBox.title:3 of
+msgid "オーバーライドすることで任意に変更できる。"
+msgstr "You can change it arbitrarily by overriding it."
+
+#: cymel.ui.optionbox.OptionBox.updateState:3 of
+msgid "必要な場合だけ派生クラスで実装する。`tabId` が ``None`` の場合は、 生成済みの全タブを対象にすることを想定している。"
+msgstr ""
+"Implement it in a derived class only when necessary. If `tabId` is "
+"``None``, it is assumed that all generated tabs will be targeted."
+
+#~ msgid ""
+#~ ":py:obj:`getOptionVar "
+#~ "<cymel.ui.optionbox.OptionBox.getOptionVar>`\\ "
+#~ "\\(\\[extPrefix\\]\\)"
+#~ msgstr ""
+#~ ":py:obj:`getOptionVar "
+#~ "<cymel.ui.optionbox.OptionBox.getOptionVar>`\\ "
+#~ "\\(\\[extPrefix\\]\\)"
+
+#~ msgid "適切な接頭辞で生成された `OptionVar` を得る。"
+#~ msgstr "Get a generated `OptionVar` with the appropriate prefix."
+
+#~ msgid ""
+#~ "`extPrefix` を省略すると、この option box が管理しているメインの"
+#~ " `OptionVar` が返される。追加 prefix を指定すると、 "
+#~ "``OPT_PREFIX + extPrefix`` を prefix "
+#~ "とする別の `OptionVar` を返す。"
+#~ msgstr ""
+#~ "If `extPrefix` is omitted, the main "
+#~ "`OptionVar` managed by this option box"
+#~ " is returned. If an additional prefix"
+#~ " is ​​specified, returns another "
+#~ "`OptionVar` with prefix ``OPT_PREFIX + "
+#~ "extPrefix``."
+
+#~ msgid "追加接頭辞。通常は ``.`` で終わる文字列を指定する。"
+#~ msgstr "Additional prefix. Normally specify a string ending in ``.``."
+
+#~ msgid "`~cymel.utils.optionvar.OptionVar`"
+#~ msgstr "`~cymel.utils.optionvar.OptionVar`"
+

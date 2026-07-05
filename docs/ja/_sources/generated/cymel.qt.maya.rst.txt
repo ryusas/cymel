@@ -17,7 +17,6 @@
 
     .. autosummary::
     
-        getDpiScaling
         getMainWindow
         getMayaWidget
 
@@ -42,7 +41,6 @@
     .. rubric:: Functions Details:
 
     
-    .. autofunction:: getDpiScaling
     .. autofunction:: getMainWindow
     .. autofunction:: getMayaWidget
 

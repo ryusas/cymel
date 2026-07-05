@@ -17,8 +17,8 @@ from .binding import (
 
 __all__ = [
     'getFirstTopLevelWindow', 'showWindow', 'showAppWindow',
-    'getDpiScaling', 'unscaleTextFont', 'getWidgetByPathName',
-    'dumpWidgetHierarchy', 'getWidgetFullPathName',
+    'getWidgetByPathName', 'dumpWidgetHierarchy', 'getWidgetFullPathName',
+    'getDpiScaling', 'unscaleTextFont',
 ]
 
 _QApp_instance = QApplication.instance
@@ -244,12 +244,38 @@ def getWidgetFullPathName(widget, separator='|'):
 #------------------------------------------------------------------------------
 def getDpiScaling(widget=None):
     u"""
-    汎用 Qt の論理 DPI スケールを取得する。
+    Qt の論理 DPI スケールを取得する。
 
+    :param widget:
+        ただし、Maya UI の場合は無視され固定値となるが、
+        Maya ではなく Qt5 以上なら、ウィジェットを指定すると、
+        それが表示されているスクリーンのスケーリング値が得られる。
     :rtype: `float`
     """
-    app = _QApp_instance()
-    if QT_MAJOR_VERSION >= 5:
+    return _QApp_instance().desktop().logicalDpiX() / 96.
+
+try:
+    import maya.cmds as _mayacmds
+    _IS_MAYA_UI_ENABLED = not _mayacmds.about(b=True)
+except:
+    _IS_MAYA_UI_ENABLED = False
+
+if _IS_MAYA_UI_ENABLED:
+    from ..utils import getDpiScaling as _getDpiScaling
+
+    _doc = getDpiScaling.__doc__
+
+    def getDpiScaling(widget=None):
+        return _getDpiScaling()
+
+    getDpiScaling.__doc__ = _doc
+    del _doc
+
+elif QT_MAJOR_VERSION >= 5:
+    _doc = getDpiScaling.__doc__
+
+    def getDpiScaling(widget=None):
+        app = _QApp_instance()
         if widget:
             wnd = widget.windowHandle()
             if wnd:
@@ -260,10 +286,12 @@ def getDpiScaling(widget=None):
             idx = app.desktop().screenNumber(QtGui.QCursor().pos())
             return app.screens()[idx].logicalDotsPerInch() / 96.
         return app.primaryScreen().logicalDotsPerInch() / 96.
-    return app.desktop().logicalDpiX() / 96.
+
+    getDpiScaling.__doc__ = _doc
+    del _doc
 
 
-
+#------------------------------------------------------------------------------
 def unscaleTextFont(textCtl, height=None, pixel=11, prepare=None):
     u"""
     固定サイズテキスト用の 逆スケール値と QFont or None を得る。

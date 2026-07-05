@@ -26,6 +26,8 @@ __all__ = [
     'affectingAttrNames',
 
     'listEnum',
+
+    'getDpiScaling',
 ]
 
 _createNode = cmds.createNode
@@ -267,3 +269,20 @@ def _enumItemRev(item, _idx):
 # 名前に = が含まれている場合を考慮し split ではなく正規表現を使う。
 _RE_ENUM_DESC_match = re.compile(r'(.+?)(=(\d+))?$').match
 
+
+#------------------------------------------------------------------------------
+def getDpiScaling():
+    u"""
+    Maya UI の DPI スケールを取得する。
+
+    :rtype: `float`
+    """
+    global _MAYA_DPI_SCALE
+    if not _MAYA_DPI_SCALE:
+        try:
+            _MAYA_DPI_SCALE = cmds.mayaDpiSetting(q=True, rsv=True)
+        except Exception:
+            _MAYA_DPI_SCALE = 1.
+    return _MAYA_DPI_SCALE
+
+_MAYA_DPI_SCALE = 0

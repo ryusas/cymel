@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.utils.utils &#8212; cymel 0.31.2026070300 documentation</title>
+    <title>cymel.utils.utils &#8212; cymel 0.32.2026070500 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
-    <script src="../_static/documentation_options.js?v=5f63c855"></script>
+    <script src="../_static/documentation_options.js?v=41971f50"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="classes/cymel.utils.optionvar.OptionVar.html" title="class cymel.utils.optionvar.OptionVar"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.31.2026070300 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.32.2026070500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.utils.utils</a></li> 
       </ul>
@@ -71,13 +71,16 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.escapeForMel" title="cymel.utils.utils.escapeForMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">escapeForMel</span></code></a>(s)</p></td>
 <td><p>Escape for mel strings.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.listEnum" title="cymel.utils.utils.listEnum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listEnum</span></code></a>(name[, attrname, reverse])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.getDpiScaling" title="cymel.utils.utils.getDpiScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDpiScaling</span></code></a>()</p></td>
+<td><p>Get the DPI scale for Maya UI.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.listEnum" title="cymel.utils.utils.listEnum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listEnum</span></code></a>(name[, attrname, reverse])</p></td>
 <td><p>Get a list of enum attribute name/value pairs.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.loadPlugin" title="cymel.utils.utils.loadPlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadPlugin</span></code></a>(name)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.loadPlugin" title="cymel.utils.utils.loadPlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadPlugin</span></code></a>(name)</p></td>
 <td><p>Load the plugin if it is not loaded.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.utils.utils.makeNiceName" title="cymel.utils.utils.makeNiceName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeNiceName</span></code></a>(name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.utils.utils.makeNiceName" title="cymel.utils.utils.makeNiceName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeNiceName</span></code></a>(name)</p></td>
 <td><p>Get a nice Maya name from a mixedCase or CamelCase name.</p></td>
 </tr>
 </tbody>
@@ -188,6 +191,17 @@
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="cymel.utils.utils.getDpiScaling">
+<span class="sig-prename descclassname"><span class="pre">cymel.utils.utils.</span></span><span class="sig-name descname"><span class="pre">getDpiScaling</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.getDpiScaling" title="Link to this definition">¶</a></dt>
+<dd><p>Get the DPI scale for Maya UI.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="cymel.utils.utils.listEnum">
 <span class="sig-prename descclassname"><span class="pre">cymel.utils.utils.</span></span><span class="sig-name descname"><span class="pre">listEnum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.utils.listEnum" title="Link to this definition">¶</a></dt>
 <dd><p>Get a list of enum attribute name/value pairs.</p>
@@ -255,6 +269,7 @@
 <li><a class="reference internal" href="#cymel.utils.utils.createNode"><code class="docutils literal notranslate"><span class="pre">createNode()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.utils.utils.enablePlugin"><code class="docutils literal notranslate"><span class="pre">enablePlugin()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.utils.utils.escapeForMel"><code class="docutils literal notranslate"><span class="pre">escapeForMel()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.utils.utils.getDpiScaling"><code class="docutils literal notranslate"><span class="pre">getDpiScaling()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.utils.utils.listEnum"><code class="docutils literal notranslate"><span class="pre">listEnum()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.utils.utils.loadPlugin"><code class="docutils literal notranslate"><span class="pre">loadPlugin()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.utils.utils.makeNiceName"><code class="docutils literal notranslate"><span class="pre">makeNiceName()</span></code></a></li>
@@ -309,7 +324,7 @@
         <li class="right" >
           <a href="classes/cymel.utils.optionvar.OptionVar.html" title="class cymel.utils.optionvar.OptionVar"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.31.2026070300 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.32.2026070500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.utils.utils</a></li> 
       </ul>

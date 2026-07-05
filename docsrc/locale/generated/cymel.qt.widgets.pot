@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cymel \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"POT-Creation-Date: 2026-07-05 23:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
 #: ../../python/cymel/qt/widgets.py:docstring of cymel.qt.widgets.getDpiScaling:1
-msgid "汎用 Qt の論理 DPI スケールを取得する。"
+msgid "Qt の論理 DPI スケールを取得する。"
 msgstr ""
 
 #: ../srcs/generated/cymel.qt.widgets.rst:46:<autosummary>:1
@@ -116,11 +116,15 @@ msgstr ""
 msgid "基点のレベルのインデントスペース。"
 msgstr ""
 
+#: ../../python/cymel/qt/widgets.py:docstring of cymel.qt.widgets.getDpiScaling:3
+msgid "ただし、Maya UI の場合は無視され固定値となるが、 Maya ではなく Qt5 以上なら、ウィジェットを指定すると、 それが表示されているスクリーンのスケーリング値が得られる。"
+msgstr ""
+
 #: ../srcs/generated/cymel.qt.widgets.rst:0
 msgid "戻り値の型"
 msgstr ""
 
-#: ../../python/cymel/qt/widgets.py:docstring of cymel.qt.widgets.getDpiScaling:3
+#: ../../python/cymel/qt/widgets.py:docstring of cymel.qt.widgets.getDpiScaling:7
 msgid "`float`"
 msgstr ""
 

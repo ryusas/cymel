@@ -6,31 +6,28 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-from ..initmaya import IS_UIMODE as IS_MAYA_UI_ENABLED
 from . import widgets as _widgets
 from .binding import QWidget, wrapInstance
 
 __all__ = [
-    'IS_MAYA_UI_ENABLED', 'getMainWindow', 'getMayaWidget', 'getDpiScaling',
+    'IS_MAYA_UI_ENABLED', 'getMainWindow', 'getMayaWidget',
 ]
 
+IS_MAYA_UI_ENABLED = _widgets._IS_MAYA_UI_ENABLED
+
 if IS_MAYA_UI_ENABLED:
-    try:
-        from maya.OpenMayaUI import MQtUtil as _MQtUtil
-        import maya.cmds as _mayacmds
-        _mayacmds_setParent = _mayacmds.setParent
-        _MAYA_FIND_FUNCS = (
-            ('control', _MQtUtil.findControl),
-            ('layout', _MQtUtil.findLayout),
-            ('window', _MQtUtil.findWindow),
-            ('menuItem', _MQtUtil.findMenuItem),
-        )
-        _MAYA_FIND_FUNC_DICT_get = dict(_MAYA_FIND_FUNCS).get
+    from maya.OpenMayaUI import MQtUtil as _MQtUtil
+    import maya.cmds as _mayacmds
+    _mayacmds_setParent = _mayacmds.setParent
+    _MAYA_FIND_FUNCS = (
+        ('control', _MQtUtil.findControl),
+        ('layout', _MQtUtil.findLayout),
+        ('window', _MQtUtil.findWindow),
+        ('menuItem', _MQtUtil.findMenuItem),
+    )
+    _MAYA_FIND_FUNC_DICT_get = dict(_MAYA_FIND_FUNCS).get
 
-        from ..pyutils import LONG
-
-    except (ImportError, AttributeError):
-        IS_MAYA_UI_ENABLED = False
+    from ..pyutils import LONG
 
 
 def getMainWindow():
@@ -76,15 +73,6 @@ def getMayaWidget(name=None, uitype=None, cls=QWidget):
     """
 
 
-def getDpiScaling(widget=None):
-    u"""
-    Maya UI の DPI スケールを取得する。
-
-    :rtype: `float`
-    """
-    return _widgets.getDpiScaling(widget)
-
-
 if IS_MAYA_UI_ENABLED:
     _doc = getMainWindow.__doc__
 
@@ -127,21 +115,5 @@ if IS_MAYA_UI_ENABLED:
         return _widgets.getWidgetByPathName(name)
 
     getMayaWidget.__doc__ = _doc
-
-
-    _doc = getDpiScaling.__doc__
-
-    def getDpiScaling(widget=None):
-        global _MAYA_DPI_SCALE
-        if not _MAYA_DPI_SCALE:
-            try:
-                _MAYA_DPI_SCALE = _mayacmds.mayaDpiSetting(q=True, rsv=True)
-            except Exception:
-                _MAYA_DPI_SCALE = 1.
-        return _MAYA_DPI_SCALE
-
-    getDpiScaling.__doc__ = _doc
-    _MAYA_DPI_SCALE = 0
-    _widgets.getDpiScaling = getDpiScaling
 
     del _doc
