@@ -20,21 +20,16 @@
     
         __init__
         addMenu
-        assembleCodeToEcho
         assemblePyCode
         assemblePyCodeWithArgs
-        checkMayaVersion
         createContents
         createLayout
         currentTabId
-        execPyCode
-        execPyCodeFromUI
         execute
         get
         getLayout
         getValidUIInstance
         get_
-        get_instance
         growUpWindowSize
         isTabReady
         isUIAlive
@@ -43,7 +38,6 @@
         load
         loadOptions
         makeWeakCB
-        melCB
         onChanged
         perform
         ref
@@ -66,10 +60,8 @@
 
     
     .. autoattribute:: APPLY_BUTTON_LABEL
-    .. autoattribute:: BRIEF
     .. autoattribute:: BUTTON_LABEL
     .. autoattribute:: CLOSE_BUTTON_LABEL
-    .. autoattribute:: COMMAND_DEFAULTS
     .. autoattribute:: COMMAND_LABEL
     .. autoattribute:: DEFAULTS
     .. autoattribute:: DEFAULT_TAB_INDEX
@@ -82,7 +74,6 @@
     .. autoattribute:: NO_RESETS
     .. autoattribute:: OPT_PREFIX
     .. autoattribute:: SHOW_ERROR_DIALOG
-    .. autoattribute:: SKIP_DEFAULT_VALUES
     .. autoattribute:: SUPPORTED_VERSION
     .. autoattribute:: TAB_LABELS
     .. autoattribute:: TOOL_NAME
@@ -97,21 +88,16 @@
     
     .. automethod:: __init__
     .. automethod:: addMenu
-    .. automethod:: assembleCodeToEcho
     .. automethod:: assemblePyCode
     .. automethod:: assemblePyCodeWithArgs
-    .. automethod:: checkMayaVersion
     .. automethod:: createContents
     .. automethod:: createLayout
     .. automethod:: currentTabId
-    .. automethod:: execPyCode
-    .. automethod:: execPyCodeFromUI
     .. automethod:: execute
     .. automethod:: get
     .. automethod:: getLayout
     .. automethod:: getValidUIInstance
     .. automethod:: get_
-    .. automethod:: get_instance
     .. automethod:: growUpWindowSize
     .. automethod:: isTabReady
     .. automethod:: isUIAlive
@@ -120,7 +106,6 @@
     .. automethod:: load
     .. automethod:: loadOptions
     .. automethod:: makeWeakCB
-    .. automethod:: melCB
     .. automethod:: onChanged
     .. automethod:: perform
     .. automethod:: ref

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cymel \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"POT-Creation-Date: 2026-07-06 15:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,4 +30,21 @@ msgstr ""
 
 #: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.Singleton:5
 msgid "インスタンスが生成されようとする時、同じ型のインスタンスが 既に存在していればそれが返されるだけである。 生成時の引数内容の違いも考慮されずに流用される点には注意が必要。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.pyutils.pyutils.Singleton.rst:18
+msgid "Methods:"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.pyutils.pyutils.Singleton.rst:30:<autosummary>:1
+msgid ":py:obj:`get_instance <cymel.pyutils.pyutils.Singleton.get_instance>`\\ \\(\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.pyutils.pyutils.Singleton.rst:30:<autosummary>:1
+#: ../../python/cymel/pyutils/pyutils.py:docstring of cymel.pyutils.pyutils.Singleton.get_instance:1
+msgid "インスタンスを得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.pyutils.pyutils.Singleton.rst:33
+msgid "Methods Details:"
 msgstr ""

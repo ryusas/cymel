@@ -1,4 +1,4 @@
-class cymel.pyutils.pyutils.Singleton
+﻿class cymel.pyutils.pyutils.Singleton
 =====================================
 
 .. currentmodule:: cymel.pyutils.pyutils
@@ -14,6 +14,11 @@ class cymel.pyutils.pyutils.Singleton
 
 
 
+    .. rubric:: Methods:
+
+    .. autosummary::
+    
+        get_instance
 
 
 
@@ -21,5 +26,11 @@ class cymel.pyutils.pyutils.Singleton
 
 
 
+
+
+    .. rubric:: Methods Details:
+
+    
+    .. automethod:: get_instance
 
 

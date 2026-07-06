@@ -2,7 +2,7 @@
 u"""
 オプションボックスフレームワーク。
 
-Maya 標準の option box を Python から構築するための基底クラスを提供する。
+Maya 標準のオプションボックスを Python から構築するための基底クラスを提供する。
 """
 from __future__ import absolute_import
 from __future__ import division
@@ -54,6 +54,9 @@ class OptionBox(with_metaclass(Singleton, object)):
     ツール名、オプション接頭辞、デフォルト値などのクラス属性を定義したうえで、
     UI 構築と値のロード/セーブ、および実行コード生成を実装する。
 
+    オプション値は :class:`~cymel.utils.optionvar.OptionVar` に保存され、
+    その値はインスタンスに作られる `optionvar` 属性から読み書きできる。
+
     最小構成の例::
 
         import cymel.ui as cmu
@@ -62,7 +65,7 @@ class OptionBox(with_metaclass(Singleton, object)):
             TOOL_NAME = 'Test'
             TOOL_VERSION = '1.0.0'
             BUTTON_LABEL = 'Test'
-            OPT_PREFIX = TOOL_NAME + '.'
+            OPT_PREFIX = 'Test.'
             DEFAULTS = dict(foo=False, bar=1.0)
 
             def assemblePyCode(self):
@@ -92,83 +95,30 @@ class OptionBox(with_metaclass(Singleton, object)):
         # MyOptionBox().perform(2)  # Retrieve the command string to be executed using the current settings.
 
     """
-    TOOL_NAME = 'Abstract'
-    OPT_PREFIX = ''
-    TOOL_VERSION = '0.0.0'
-    BRIEF = ''
-    COMMAND_LABEL = ''
-    HELP_URL = ''
-    SUPPORTED_VERSION = (8, 5)
+    TOOL_NAME = 'Abstract'  # ツール名。
+    TOOL_VERSION = '0.0.0'  #: ツールバージョン。
+    OPT_PREFIX = ''  #: :class:`~cymel.utils.optionvar.OptionVar` の接頭辞。
+    COMMAND_LABEL = ''  #: RecentCommandQueue に追加される名前。省略時は `TOOL_NAME` 。
+    HELP_URL = ''  #: ヘルプドキュメントのURL。
+    SUPPORTED_VERSION = (8, 5)  #: Mayaの最低サポートバージョン。
 
-    BUTTON_LABEL = 'Execute'
-    APPLY_BUTTON_LABEL = None
-    CLOSE_BUTTON_LABEL = None
+    BUTTON_LABEL = 'Execute'  #: "Apply and Close" ボタンのラベル。
+    APPLY_BUTTON_LABEL = None  #: "Apply" ボタンのラベル。
+    CLOSE_BUTTON_LABEL = None  #: "Close" ボタンのラベル。
 
-    TAB_LABELS = ('Main',)
-    DEFAULT_TAB_INDEX = 1
-    DEFAULTS = {}
-    NO_RESETS = tuple()
-    DEFUNCT_KEYS = tuple()
-    SKIP_DEFAULT_VALUES = True
-    COMMAND_DEFAULTS = {}
+    TAB_LABELS = ('Main',)  #: タブレイアウトのラベルリスト。
+    DEFAULT_TAB_INDEX = 1  #: 最初に開くタブの番号。
 
-    MIN_WIDTH = None
-    MIN_HEIGHT = None
-    INIT_WIDTH = False
-    INIT_HEIGHT = False
-    SHOW_ERROR_DIALOG = False
+    DEFAULTS = {}  #: :class:`~cymel.utils.optionvar.OptionVar` のデフォルト値辞書。
+    DEFUNCT_KEYS = tuple()  #: 廃止されたオプション名のリスト。必要に応じてoptionVarから削除される。
+    NO_RESETS = tuple()  #: リセット対象外とするオプション名リスト。
 
-    @classmethod
-    def get_instance(cls):
-        u"""
-        現在保持されているシングルトンインスタンスを得る。
+    SHOW_ERROR_DIALOG = False  #: エラーを捕捉してダイアログを出すかどうか。
 
-        :rtype: `OptionBox` or None
-        """
-        ref = getattr(cls, '_singleton_ref', None)
-        return ref() if ref else None
-
-    @classmethod
-    def getValidUIInstance(cls):
-        u"""
-        現在有効な UI を持つインスタンスを得る。
-
-        このクラスと派生クラスを深さ優先で調べ、
-        生存中の option box UI を持つ最初のインスタンスを返す。
-
-        :rtype: `OptionBox` or None
-        """
-        for subcls in iterTreeDepthFirst([cls], lambda c: c.__subclasses__()):
-            obj = subcls.get_instance()
-            if obj and obj.isUIAlive():
-                return obj
-
-    @classmethod
-    def _mel_ui_call(cls, method_name, *args, **kwargs):
-        obj = cls.get_instance()
-        if obj:
-            getattr(obj, method_name)(*args, **kwargs)
-
-    @classmethod
-    def melCB(cls, method_name, *args, **kwargs):
-        u"""
-        このシングルトンインスタンスのメソッドを呼び出すコールバック文字列を得る。
-
-        Maya 標準 option box の一部コールバックは、Python 関数や Python
-        コードを直接セットすると安定しないため、MEL 側から設定する文字列を返す。
-
-        :param `str` method_name: 呼び出すメソッド名。
-        :param args: メソッドへ渡す追加位置引数。
-        :param kwargs: メソッドへ渡す追加キーワード引数。
-        :rtype: `str`
-        """
-        values = [repr(method_name)]
-        values.extend([repr(x) for x in args])
-        values.extend(['%s=%r' % (k, v) for k, v in kwargs.items()])
-        modname = cls.__module__
-        code = 'import %s; %s.%s._mel_ui_call(%s)' % (
-            modname, modname, cls.__name__, ', '.join(values))
-        return 'python(\\"' + _escapeForMel(code) + '\\")'
+    INIT_WIDTH = False  #: 初回に `growUpWindowSize` で幅をフィットさせるかどうか。
+    INIT_HEIGHT = False  #: 初回に `growUpWindowSize` で高さをフィットさせるかどうか。
+    MIN_WIDTH = None  #: `growUpWindowSize` におけるウィンドウの最小幅。
+    MIN_HEIGHT = None  #: `growUpWindowSize` におけるウィンドウの最小高。
 
     def __init__(self):
         def finalizer(r):
@@ -204,21 +154,22 @@ class OptionBox(with_metaclass(Singleton, object)):
 
     def perform(self, cmdi):
         u"""
-        Maya 標準 option box から呼び出される入口。
+        Maya 標準オプションボックスから呼び出される入口。
 
         :param `int` cmdi:
-            0 なら現在の設定で実行、1 なら option box を開く、
+            0 なら現在の設定で実行、
+            1 ならオプションボックスを開く、
             2 なら現在の設定で実行される Python コード文字列を返す。
         :returns:
             実行時またはコード取得時はコマンド文字列。表示時は空文字列。
         """
         if cmdi == 0:
-            return self.execute(echo=True)
+            return self.execute()
         if cmdi == 1:
             self.show()
             return ''
         if cmdi == 2:
-            return self.assembleCodeToEcho()
+            return self.assemblePyCode()
 
     def assemblePyCode(self):
         u"""
@@ -230,30 +181,6 @@ class OptionBox(with_metaclass(Singleton, object)):
         :rtype: `str`
         """
         raise NotImplementedError('assemblePyCode')
-
-    def title(self):
-        u"""
-        ウィンドウタイトルを返す。
-
-        オーバーライドすることで任意に変更できる。
-
-        :rtype: `str`
-        """
-        return self.TOOL_NAME + ' (v.' + self.TOOL_VERSION + ') Options'
-
-    def createLayout(self, tabId):
-        u"""
-        タブ内のレイアウトを生成する。
-
-        `TAB_LABELS` に ``None`` や空値を指定してタブレイアウトを使わない場合は、
-        `tabId` には 0 が渡される。基底の実装は :mayacmd:`columnLayout`
-        だが、派生クラスで任意のレイアウトに置き換えられる。
-
-        :param `int` tabId:
-            1 から始まるタブインデックス。タブを使わない場合は 0。
-        :rtype: `str`
-        """
-        return cmds.columnLayout(adjustableColumn=True)
 
     def createContents(self, tabId):
         u"""
@@ -303,6 +230,30 @@ class OptionBox(with_metaclass(Singleton, object)):
             1 から始まるタブインデックス。``None`` の場合は全体。
         """
 
+    def title(self):
+        u"""
+        ウィンドウタイトルを返す。
+
+        オーバーライドすることで任意に変更できる。
+
+        :rtype: `str`
+        """
+        return self.TOOL_NAME + ' (v.' + self.TOOL_VERSION + ') Options'
+
+    def createLayout(self, tabId):
+        u"""
+        タブ内のレイアウトを生成する。
+
+        `TAB_LABELS` に ``None`` や空値を指定してタブレイアウトを使わない場合は、
+        `tabId` には 0 が渡される。基底の実装は :mayacmd:`columnLayout`
+        だが、派生クラスで任意のレイアウトに置き換えられる。
+
+        :param `int` tabId:
+            1 から始まるタブインデックス。タブを使わない場合は 0。
+        :rtype: `str`
+        """
+        return cmds.columnLayout(adjustableColumn=True)
+
     def keyToStore(self, key):
         u"""
         実行用キーを保存用キーへ変換する。
@@ -334,17 +285,7 @@ class OptionBox(with_metaclass(Singleton, object)):
         """
         self.updateState()
 
-    def assembleCodeToEcho(self, pyCode=None):
-        u"""
-        エコー用のコマンド文字列を得る。
-
-        :param `str` pyCode:
-            エコーしたい Python コード。省略時は `assemblePyCode` が呼ばれる。
-        :rtype: `str`
-        """
-        return pyCode or self.assemblePyCode()
-
-    def execute(self, echo=False, addQueue=True):
+    def execute(self, echo=True, addQueue=True):
         u"""
         現在の設定でコマンドを実行する。
 
@@ -354,82 +295,50 @@ class OptionBox(with_metaclass(Singleton, object)):
         :param `bool` addQueue:
             Maya の RecentCommandQueue に追加するかどうか。
             リピート実行から呼ぶ場合は二重登録を避けるため ``False`` にする。
-        :rtype: `str`
         """
-        self.checkMayaVersion()
-        return self.execPyCode(self.assemblePyCode(), echo, addQueue)
+        self._checkMayaVersion()
 
-    def execPyCode(self, pyCode, echo=False, addQueue=True):
-        u"""
-        指定した Python コードを実行する。
-
-        :param `str` pyCode: 実行する Python コード。
-        :param `bool` echo: 実行コードを標準出力へ表示するかどうか。
-        :param `bool` addQueue: RecentCommandQueue に追加するかどうか。
-        :rtype: `str`
-        """
-        if not pyCode:
-            return ''
+        code = self.assemblePyCode()
+        if not code:
+            return
 
         if echo:
-            print(pyCode)
+            print(code)
 
+        # exec ではなく eval して MEL のように Result がログされることを試みたが、
+        # Python のメニューコールバックが握りつぶすので、無駄な努力はやめた。
         if IS_UIMODE:
             if self.SHOW_ERROR_DIALOG:
                 try:
-                    exec(pyCode)
+                    exec(code)
                 except Exception as err:
                     _confirmException(err)
                     raise
             else:
-                exec(pyCode)
+                exec(code)
 
             if addQueue:
                 self._addToRecentCommandQueue()
         else:
-            exec(pyCode)
-
-        return pyCode
+            exec(code)
 
     def _addToRecentCommandQueue(self):
         cls = type(self)
-        cmd = 'python("import %s; %s.%s().execute(addQueue=False)")' % (
+        cmd = 'python("import %s; %s.%s().execute(echo=False, addQueue=False)")' % (
             cls.__module__, cls.__module__, cls.__name__)
-        label = self.COMMAND_LABEL or self.TOOL_NAME or self.BRIEF or cmd
+        label = self.COMMAND_LABEL or self.TOOL_NAME or cmd
         mel.eval('addToRecentCommandQueue("%s", "%s")' % (
             _escapeForMel(cmd), _escapeForMel(label)))
 
-    def execPyCodeFromUI(self, code, *dummy):
-        u"""
-        UI コールバックから指定した Python コードを実行する。
-
-        コールバックから渡される余分な引数は無視される。
-
-        :param `str` code: 実行する Python コード。
-        """
-        self.execPyCode(code, echo=True)
-
-    def isUIAlive(self):
-        u"""
-        表示した option box UI が存在しているかどうか。
-
-        option box が閉じられたり他ツールに差し替えられたりした後に、
-        別途保持しているインスタンスから UI の生存を確認できる。
-
-        :rtype: `bool`
-        """
-        layout = self._tab_layout or self._custom_layout
-        return bool(layout and cmds.layout(layout, ex=True))
-
     def show(self):
         u"""
-        option box を表示する。
+        オプションボックスを表示する。
 
         既に UI が存在していれば、そのウィンドウを前面に出す。
-        未生成の場合は Maya 標準の option box 領域を取得し、タブ、
+        未生成の場合は Maya 標準のオプションボックス領域を取得し、タブ、
         ボタン、メニューコールバックを設定する。
         """
-        self.checkMayaVersion()
+        self._checkMayaVersion()
 
         layout = self._tab_layout or self._custom_layout
         if layout and cmds.layout(layout, ex=True):
@@ -471,12 +380,12 @@ class OptionBox(with_metaclass(Singleton, object)):
         #   mel か python の cmds のどちらからセットしたかで決まるようなので、mel.eval でセットする。
         codes = [
             'button("-e", "-l","%s", "-c","%s", getOptionBoxApplyBtn())' % (
-                _escapeForMel(self.BUTTON_LABEL), self.melCB('_onApply')),
-            'button("-e", "-c","%s", getOptionBoxSaveBtn())' % self.melCB('_onSave'),
-            'button("-e", "-c","%s", getOptionBoxResetBtn())' % self.melCB('_onReset'),
+                _escapeForMel(self.BUTTON_LABEL), self._melCB('_onApply')),
+            'button("-e", "-c","%s", getOptionBoxSaveBtn())' % self._melCB('_onSave'),
+            'button("-e", "-c","%s", getOptionBoxResetBtn())' % self._melCB('_onReset'),
             'setOptionBoxTitle("%s")' % _escapeForMel(self.title()),
             'menuItem("-e", "-l","Help on %s Options", "-c","%s", getOptionBoxHelpItem())' % (
-                _escapeForMel(self.TOOL_NAME), self.melCB('showHelp')),
+                _escapeForMel(self.TOOL_NAME), self._melCB('showHelp')),
             'showOptionBox()',
         ]
         if self.APPLY_BUTTON_LABEL is not None:
@@ -512,7 +421,9 @@ class OptionBox(with_metaclass(Singleton, object)):
 
     def growUpWindowSize(self, tabId=None, fitW=False, fitH=False, addW=0):
         u"""
-        ウィンドウサイズがタブにとって十分でなければリサイズする。
+        `show` で呼ばれるウィンドウのリサイズ処理。
+
+        ウィンドウサイズがタブにとって十分でなければリサイズされる。
 
         多くの場合、UI 構築後に呼ぶ。`fitW` や `fitH` を ``True`` にすると、
         小さくなる方向の調整も行う。
@@ -545,7 +456,7 @@ class OptionBox(with_metaclass(Singleton, object)):
         elif fitH or wndH < height:
             cmds.window(wnd, e=True, h=height)
 
-    def checkMayaVersion(self):
+    def _checkMayaVersion(self):
         u"""
         Maya バージョンをチェックし、非サポートならエラーにする。
 
@@ -553,9 +464,14 @@ class OptionBox(with_metaclass(Singleton, object)):
         旧互換の数値を指定できる。
         """
         if _isUnsupportedMayaVersion(self.SUPPORTED_VERSION):
-            raise RuntimeError(
-                'Sorry, this tool supports maya version ' +
-                str(self.SUPPORTED_VERSION) + ' or later.')
+            try:
+                raise RuntimeError(
+                    'Sorry, this tool supports maya version ' +
+                    str(self.SUPPORTED_VERSION) + ' or later.')
+            except Exception as err:
+                if self.SHOW_ERROR_DIALOG:
+                    _confirmException(err)
+                raise
 
     def resetOptions(self):
         u"""
@@ -613,7 +529,8 @@ class OptionBox(with_metaclass(Singleton, object)):
 
     def assemblePyCodeWithArgs(
             self, modName=None, funcName=None, args=None, kwargs=None,
-            argKeys=None, ignoreKeys=None, qualifyKeys=None, asDict=False):
+            argKeys=None, ignoreKeys=None, qualifyKeys=None, asDict=False,
+            skipDefaultValues=True, commandDefaults=EMPTY_DICT):
         u"""
         実行用 Python コードを生成するためのヘルパー。
 
@@ -624,12 +541,9 @@ class OptionBox(with_metaclass(Singleton, object)):
         3. `kwargs` で指定された値がキーワード引数になる。
         4. 内部の optionVar からキーワード引数を自動収集する。
 
-        `SKIP_DEFAULT_VALUES` が ``True`` の場合は、デフォルト値と同じ値は
-        自動収集されない。`COMMAND_DEFAULTS` を使うと、実行コマンド側の
-        デフォルト値が保存用 `DEFAULTS` と異なる場合の比較値を指定できる。
-
         自動収集では次の条件を考慮する。
 
+        * `skipDefaultValues` が True だと、デフォルト値と同じ値は収集されない。
         * `kwargs` に直接指定されたキーは重複収集しない。
         * `argKeys` に指定されたキーはキーワード引数としては収集しない。
         * `ignoreKeys` に含まれるキーは収集しない。
@@ -647,6 +561,11 @@ class OptionBox(with_metaclass(Singleton, object)):
         :param container qualifyKeys: 自動収集の対象にする実行用キー。
         :param `bool` asDict:
             ``True`` の場合はコード文字列ではなくキーワード引数辞書を返す。
+        :param `bool` skipDefaultValues:
+            ``True`` の場合はデフォルト値と同じ値は自動収集されない。
+        :param `dict` commandDefaults:
+            skipDefaultValues=True のとき、実行コマンド側のデフォルト値が
+            保存用 `DEFAULTS` と異なる場合の比較値を指定できる。
         :returns: Python コード文字列、またはキーワード引数辞書。
         """
         kwargs = kwargs.copy() if kwargs else {}
@@ -656,7 +575,7 @@ class OptionBox(with_metaclass(Singleton, object)):
             ignoreKeys.update(argKeys)
         qualifyKeys = set(qualifyKeys) if qualifyKeys else None
 
-        for rawkey in self._commandOptionKeys():
+        for rawkey in self._commandOptionKeys(skipDefaultValues, commandDefaults):
             if self.optionvar.hasDefault(rawkey):
                 key = self.keyToExec(rawkey)
                 if key not in ignoreKeys and (qualifyKeys is None or key in qualifyKeys):
@@ -674,15 +593,15 @@ class OptionBox(with_metaclass(Singleton, object)):
 
         argCode = ', '.join(codeArgs)
         if funcName:
+            code = '%s(%s)' % (funcName, argCode)
             if modName and modName != '__main__':
-                return 'import %s; %s.%s(%s)' % (modName, modName, funcName, argCode)
-            return '%s(%s)' % (funcName, argCode)
+                return 'import %s; %s.%s' % (modName, modName, code)
+            return code
         return argCode
 
-    def _commandOptionKeys(self):
+    def _commandOptionKeys(self, skipDefaultValues, commandDefaults):
         optvar = self.optionvar
-        if self.SKIP_DEFAULT_VALUES:
-            commandDefaults = self.COMMAND_DEFAULTS
+        if skipDefaultValues:
             if commandDefaults:
                 keys = [
                     key for key, val in optvar.items()
@@ -772,7 +691,7 @@ class OptionBox(with_metaclass(Singleton, object)):
 
     def _onApply(self, *args):
         self.save()
-        self.execute(True)
+        self.execute()
 
     def _onSave(self, *args):
         self.save()
@@ -784,7 +703,7 @@ class OptionBox(with_metaclass(Singleton, object)):
         u"""
         オプション値を UI にロードする。
 
-        現在の option box レイアウトを :mayacmd:`setParent` したうえで、
+        現在のオプションボックスレイアウトを :mayacmd:`setParent` したうえで、
         `loadOptions` と `updateState` を呼ぶ。
         """
         cmds.setParent(self._tab_layout or self._custom_layout)
@@ -795,7 +714,7 @@ class OptionBox(with_metaclass(Singleton, object)):
         u"""
         UI の状態をオプション値として保存する。
 
-        現在の option box レイアウトを :mayacmd:`setParent` したうえで、
+        現在のオプションボックスレイアウトを :mayacmd:`setParent` したうえで、
         `updateState` と `saveOptions` を呼ぶ。数値フィールド編集中に
         Apply された場合などを考慮し、保存前に状態更新を行う。
         """
@@ -818,7 +737,7 @@ class OptionBox(with_metaclass(Singleton, object)):
 
     def addMenu(self, **kwargs):
         u"""
-        option box のメニューバーにメニューを追加する。
+        オプションボックスのメニューバーにメニューを追加する。
 
         :param kwargs: :mayacmd:`menu` コマンドに渡す引数。
         :rtype: `str`
@@ -876,6 +795,61 @@ class OptionBox(with_metaclass(Singleton, object)):
                 if win:
                     getattr(win, name)(*aa, **kk)
         return _func
+
+    def isUIAlive(self):
+        u"""
+        表示したオプションボックス UI が存在しているかどうか。
+
+        オプションボックスが閉じられたり他ツールに差し替えられたりした後に、
+        別途保持しているインスタンスから UI の生存を確認できる。
+
+        :rtype: `bool`
+        """
+        layout = self._tab_layout or self._custom_layout
+        return bool(layout and cmds.layout(layout, ex=True))
+
+    @classmethod
+    def getValidUIInstance(cls):
+        u"""
+        現在有効な UI を持つインスタンスを得る。
+
+        このクラスと派生クラスを深さ優先で調べ、
+        生存中のオプションボックス UI を持つ最初のインスタンスを返す。
+
+        :rtype: `OptionBox` or None
+        """
+        for subcls in iterTreeDepthFirst([cls], lambda c: c.__subclasses__()):
+            obj = subcls.get_instance()
+            if obj and obj.isUIAlive():
+                return obj
+
+    @classmethod
+    def _mel_ui_call(cls, method_name, *args, **kwargs):
+        obj = cls.get_instance()
+        if obj:
+            getattr(obj, method_name)(*args, **kwargs)
+
+    @classmethod
+    def _melCB(cls, method_name, *args, **kwargs):
+        u"""
+        このシングルトンインスタンスのメソッドを呼び出すコールバック文字列を得る。
+
+        Maya 標準オプションボックスの一部コールバックは、Python 関数や Python
+        コードを直接セットすると安定しないため、MEL 側から設定する文字列を返す。
+
+        :param `str` method_name: 呼び出すメソッド名。
+        :param args: メソッドへ渡す追加位置引数。
+        :param kwargs: メソッドへ渡す追加キーワード引数。
+        :rtype: `str`
+        """
+        values = [repr(method_name)]
+        values.extend([repr(x) for x in args])
+        values.extend(['%s=%r' % (k, v) for k, v in kwargs.items()])
+        modname = cls.__module__
+        code = 'import %s; %s.%s._mel_ui_call(%s)' % (
+            modname, modname, cls.__name__, ', '.join(values))
+        return 'python(\\"' + _escapeForMel(code) + '\\")'
+
 
 def _isUnsupportedMayaVersion(version):
     if isinstance(version, tuple):

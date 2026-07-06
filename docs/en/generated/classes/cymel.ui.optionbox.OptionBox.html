@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.ui.optionbox.OptionBox &#8212; cymel 0.32.2026070500 documentation</title>
+    <title>class cymel.ui.optionbox.OptionBox &#8212; cymel 0.33.2026070600 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
-    <script src="../../_static/documentation_options.js?v=41971f50"></script>
+    <script src="../../_static/documentation_options.js?v=8cc11a35"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="../cymel.ui.optionbox.html" title="cymel.ui.optionbox"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.32.2026070500 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.33.2026070600 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.ui.optionbox.html" accesskey="U">cymel.ui.optionbox</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.ui.optionbox.OptionBox</a></li> 
@@ -56,6 +56,7 @@
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Abstract base class for creating option boxes.</p>
 <p>When developing an option box, inherit this class, define class attributes such as tool name, option prefix, and default value, and then implement UI construction, value loading/saving, and execution code generation.</p>
+<p>Option values ​​are stored in <a class="reference internal" href="cymel.utils.optionvar.OptionVar.html#cymel.utils.optionvar.OptionVar" title="cymel.utils.optionvar.OptionVar"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptionVar</span></code></a>, and the values ​​can be read and written from the <code class="xref py py-obj docutils literal notranslate"><span class="pre">optionvar</span></code> attribute created on the instance.</p>
 <p>Example of minimal configuration:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cymel.ui</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cmu</span>
 
@@ -63,7 +64,7 @@
     <span class="n">TOOL_NAME</span> <span class="o">=</span> <span class="s1">&#39;Test&#39;</span>
     <span class="n">TOOL_VERSION</span> <span class="o">=</span> <span class="s1">&#39;1.0.0&#39;</span>
     <span class="n">BUTTON_LABEL</span> <span class="o">=</span> <span class="s1">&#39;Test&#39;</span>
-    <span class="n">OPT_PREFIX</span> <span class="o">=</span> <span class="n">TOOL_NAME</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span>
+    <span class="n">OPT_PREFIX</span> <span class="o">=</span> <span class="s1">&#39;Test.&#39;</span>
     <span class="n">DEFAULTS</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">foo</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bar</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">assemblePyCode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -100,19 +101,13 @@
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.addMenu" title="cymel.ui.optionbox.OptionBox.addMenu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addMenu</span></code></a>(**kwargs)</p></td>
-<td><p>Add a menu to the option box's menu bar.</p></td>
+<td><p>Add a menu to the options box menu bar.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.assembleCodeToEcho" title="cymel.ui.optionbox.OptionBox.assembleCodeToEcho"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assembleCodeToEcho</span></code></a>([pyCode])</p></td>
-<td><p>Get command string for echo.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.assemblePyCode" title="cymel.ui.optionbox.OptionBox.assemblePyCode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assemblePyCode</span></code></a>​​()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.assemblePyCode" title="cymel.ui.optionbox.OptionBox.assemblePyCode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assemblePyCode</span></code></a>​​()</p></td>
 <td><p>Generate and return Python code for execution.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs" title="cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assemblePyCodeWithArgs</span></code></a>([modName, funcName, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs" title="cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assemblePyCodeWithArgs</span></code></a>([modName, funcName, ...])</p></td>
 <td><p>Helper for generating Python code for execution.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.checkMayaVersion" title="cymel.ui.optionbox.OptionBox.checkMayaVersion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkMayaVersion</span></code></a>()</p></td>
-<td><p>Check Maya version and error if unsupported.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.createContents" title="cymel.ui.optionbox.OptionBox.createContents"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createContents</span></code></a>(tabId)</p></td>
 <td><p>Generate UI controls within the tab.</p></td>
@@ -122,12 +117,6 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.currentTabId" title="cymel.ui.optionbox.OptionBox.currentTabId"><code class="xref py py-obj docutils literal notranslate"><span class="pre">currentTabId</span></code></a>()</p></td>
 <td><p>Get the current tab index.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.execPyCode" title="cymel.ui.optionbox.OptionBox.execPyCode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">execPyCode</span></code></a>​​(pyCode[, echo, addQueue])</p></td>
-<td><p>Executes the specified Python code.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.execPyCodeFromUI" title="cymel.ui.optionbox.OptionBox.execPyCodeFromUI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">execPyCodeFromUI</span></code></a>(code, *dummy)</p></td>
-<td><p>Execute specified Python code from a UI callback.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.execute" title="cymel.ui.optionbox.OptionBox.execute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">execute</span></code></a>([echo, addQueue])</p></td>
 <td><p>Execute a command with the current settings.</p></td>
@@ -144,41 +133,35 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.get_" title="cymel.ui.optionbox.OptionBox.get_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_</span></code></a>(rawkey)</p></td>
 <td><p>Get the value by specifying the storage key.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.get_instance" title="cymel.ui.optionbox.OptionBox.get_instance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_instance</span></code></a>()</p></td>
-<td><p>Get the currently held singleton instance.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.growUpWindowSize" title="cymel.ui.optionbox.OptionBox.growUpWindowSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">growUpWindowSize</span></code></a>([tabId, fitW, fitH, addW])</p></td>
+<td><p>Window resizing process called by <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.show" title="cymel.ui.optionbox.OptionBox.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.growUpWindowSize" title="cymel.ui.optionbox.OptionBox.growUpWindowSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">growUpWindowSize</span></code></a>([tabId, fitW, fitH, addW])</p></td>
-<td><p>If the window size is not large enough for the tab, resize it.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.isTabReady" title="cymel.ui.optionbox.OptionBox.isTabReady"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isTabReady</span></code></a>(tabId)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.isTabReady" title="cymel.ui.optionbox.OptionBox.isTabReady"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isTabReady</span></code></a>(tabId)</p></td>
 <td><p>If the contents of the tab have been generated, <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/setParent.html">setParent</a> returns <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.isUIAlive" title="cymel.ui.optionbox.OptionBox.isUIAlive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isUIAlive</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.isUIAlive" title="cymel.ui.optionbox.OptionBox.isUIAlive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isUIAlive</span></code></a>()</p></td>
 <td><p>Whether the displayed option box UI exists.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.keyToExec" title="cymel.ui.optionbox.OptionBox.keyToExec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyToExec</span></code></a>(key)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.keyToExec" title="cymel.ui.optionbox.OptionBox.keyToExec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyToExec</span></code></a>(key)</p></td>
 <td><p>Convert a storage key to an execution key.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.keyToStore" title="cymel.ui.optionbox.OptionBox.keyToStore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyToStore</span></code></a>(key)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.keyToStore" title="cymel.ui.optionbox.OptionBox.keyToStore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyToStore</span></code></a>(key)</p></td>
 <td><p>Convert execution key to storage key.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.load" title="cymel.ui.optionbox.OptionBox.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.load" title="cymel.ui.optionbox.OptionBox.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>()</p></td>
 <td><p>Load option values ​​into the UI.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.loadOptions" title="cymel.ui.optionbox.OptionBox.loadOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadOptions</span></code></a>([tabId])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.loadOptions" title="cymel.ui.optionbox.OptionBox.loadOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadOptions</span></code></a>([tabId])</p></td>
 <td><p>Set saved option values ​​in the UI.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.makeWeakCB" title="cymel.ui.optionbox.OptionBox.makeWeakCB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeWeakCB</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.makeWeakCB" title="cymel.ui.optionbox.OptionBox.makeWeakCB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeWeakCB</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Get a method callback that does not strongly refer to this instance.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.melCB" title="cymel.ui.optionbox.OptionBox.melCB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">melCB</span></code></a>(method_name, *args, **kwargs)</p></td>
-<td><p>Gets a callback string that calls a method on this singleton instance.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.onChanged" title="cymel.ui.optionbox.OptionBox.onChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">onChanged</span></code></a>(*args, **kwargs)</p></td>
 <td><p>A general-purpose UI change callback.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.perform" title="cymel.ui.optionbox.OptionBox.perform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">perform</span></code></a>(cmdi)</p></td>
-<td><p>Entrance called from the Maya standard option box.</p></td>
+<td><p>Entrance called from the Maya standard options box.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.ref" title="cymel.ui.optionbox.OptionBox.ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ref</span></code></a>()</p></td>
 <td><p>Get a weak reference.</p></td>
@@ -219,102 +202,104 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.APPLY_BUTTON_LABEL">
 <span class="sig-name descname"><span class="pre">APPLY_BUTTON_LABEL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.APPLY_BUTTON_LABEL" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.BRIEF">
-<span class="sig-name descname"><span class="pre">BRIEF</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.BRIEF" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>“Apply” button label.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.BUTTON_LABEL">
 <span class="sig-name descname"><span class="pre">BUTTON_LABEL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Execute'</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.BUTTON_LABEL" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>“Apply and Close” button label.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.CLOSE_BUTTON_LABEL">
 <span class="sig-name descname"><span class="pre">CLOSE_BUTTON_LABEL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.CLOSE_BUTTON_LABEL" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.COMMAND_DEFAULTS">
-<span class="sig-name descname"><span class="pre">COMMAND_DEFAULTS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.COMMAND_DEFAULTS" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>“Close” button label.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.COMMAND_LABEL">
 <span class="sig-name descname"><span class="pre">COMMAND_LABEL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.COMMAND_LABEL" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Name added to RecentCommandQueue. If omitted, <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.TOOL_NAME" title="cymel.ui.optionbox.OptionBox.TOOL_NAME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TOOL_NAME</span></code></a>.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.DEFAULTS">
 <span class="sig-name descname"><span class="pre">DEFAULTS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.DEFAULTS" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p><a class="reference internal" href="cymel.utils.optionvar.OptionVar.html#cymel.utils.optionvar.OptionVar" title="cymel.utils.optionvar.OptionVar"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptionVar</span></code></a> default value dictionary.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.DEFAULT_TAB_INDEX">
 <span class="sig-name descname"><span class="pre">DEFAULT_TAB_INDEX</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.DEFAULT_TAB_INDEX" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>The number of the first tab to open.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.DEFUNCT_KEYS">
 <span class="sig-name descname"><span class="pre">DEFUNCT_KEYS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.DEFUNCT_KEYS" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>List of obsolete option names. Removed from optionVar if necessary.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.HELP_URL">
 <span class="sig-name descname"><span class="pre">HELP_URL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.HELP_URL" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Help documentation URL.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.INIT_HEIGHT">
 <span class="sig-name descname"><span class="pre">INIT_HEIGHT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.INIT_HEIGHT" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Whether to fit the height with <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.growUpWindowSize" title="cymel.ui.optionbox.OptionBox.growUpWindowSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">growUpWindowSize</span></code></a> the first time.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.INIT_WIDTH">
 <span class="sig-name descname"><span class="pre">INIT_WIDTH</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.INIT_WIDTH" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Whether to fit the width with <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.growUpWindowSize" title="cymel.ui.optionbox.OptionBox.growUpWindowSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">growUpWindowSize</span></code></a> the first time.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.MIN_HEIGHT">
 <span class="sig-name descname"><span class="pre">MIN_HEIGHT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.MIN_HEIGHT" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>The minimum height of the window in <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.growUpWindowSize" title="cymel.ui.optionbox.OptionBox.growUpWindowSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">growUpWindowSize</span></code></a>.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.MIN_WIDTH">
 <span class="sig-name descname"><span class="pre">MIN_WIDTH</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.MIN_WIDTH" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>The minimum width of the window in <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.growUpWindowSize" title="cymel.ui.optionbox.OptionBox.growUpWindowSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">growUpWindowSize</span></code></a>.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.NO_RESETS">
 <span class="sig-name descname"><span class="pre">NO_RESETS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.NO_RESETS" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>List of option names to be excluded from reset.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.OPT_PREFIX">
 <span class="sig-name descname"><span class="pre">OPT_PREFIX</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.OPT_PREFIX" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Prefix for <a class="reference internal" href="cymel.utils.optionvar.OptionVar.html#cymel.utils.optionvar.OptionVar" title="cymel.utils.optionvar.OptionVar"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptionVar</span></code></a>.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.SHOW_ERROR_DIALOG">
 <span class="sig-name descname"><span class="pre">SHOW_ERROR_DIALOG</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.SHOW_ERROR_DIALOG" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.SKIP_DEFAULT_VALUES">
-<span class="sig-name descname"><span class="pre">SKIP_DEFAULT_VALUES</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.SKIP_DEFAULT_VALUES" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Whether to catch errors and display dialogs.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.SUPPORTED_VERSION">
 <span class="sig-name descname"><span class="pre">SUPPORTED_VERSION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(8,</span> <span class="pre">5)</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.SUPPORTED_VERSION" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Minimum supported version of Maya.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.TAB_LABELS">
 <span class="sig-name descname"><span class="pre">TAB_LABELS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('Main',)</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.TAB_LABELS" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Tab layout label list.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.TOOL_NAME">
@@ -324,7 +309,8 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.TOOL_VERSION">
 <span class="sig-name descname"><span class="pre">TOOL_VERSION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'0.0.0'</span></span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.TOOL_VERSION" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>tool version.</p>
+</dd></dl>
 
 <p class="rubric">Method Details:</p>
 <dl class="py method">
@@ -335,24 +321,10 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.addMenu">
 <span class="sig-name descname"><span class="pre">addMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.addMenu" title="Link to this definition">¶</a></dt>
-<dd><p>Add a menu to the option box’s menu bar.</p>
+<dd><p>Add a menu to the options box menu bar.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>kwargs</strong> – Arguments to pass to the <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/menu.html">menu</a> command.</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.assembleCodeToEcho">
-<span class="sig-name descname"><span class="pre">assembleCodeToEcho</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pyCode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.assembleCodeToEcho" title="Link to this definition">¶</a></dt>
-<dd><p>Get command string for echo.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>pyCode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – The Python code you want to echo. If omitted, <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.assemblePyCode" title="cymel.ui.optionbox.OptionBox.assemblePyCode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assemblePyCode</span></code></a> is called.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
@@ -374,7 +346,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs">
-<span class="sig-name descname"><span class="pre">assemblePyCodeWithArgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funcName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">argKeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignoreKeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualifyKeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asDict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">assemblePyCodeWithArgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funcName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">argKeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignoreKeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualifyKeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asDict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skipDefaultValues</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commandDefaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs" title="Link to this definition">¶</a></dt>
 <dd><p>Helper for generating Python code for execution.</p>
 <p>Arguments are assembled in the following order.</p>
 <ol class="arabic simple">
@@ -383,9 +355,9 @@
 <li><p>The value specified by <code class="xref py py-obj docutils literal notranslate"><span class="pre">kwargs</span></code> becomes the keyword argument.</p></li>
 <li><p>Automatically collect keyword arguments from internal optionVar.</p></li>
 </ol>
-<p>If <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.SKIP_DEFAULT_VALUES" title="cymel.ui.optionbox.OptionBox.SKIP_DEFAULT_VALUES"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SKIP_DEFAULT_VALUES</span></code></a> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, values ​​that are the same as default values ​​will not be automatically collected. <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.COMMAND_DEFAULTS" title="cymel.ui.optionbox.OptionBox.COMMAND_DEFAULTS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">COMMAND_DEFAULTS</span></code></a> allows you to specify comparison values ​​when the default value on the executed command side is different from the saved <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.DEFAULTS" title="cymel.ui.optionbox.OptionBox.DEFAULTS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEFAULTS</span></code></a>.</p>
 <p>Automatic collection considers the following conditions:</p>
 <ul class="simple">
+<li><p>If <code class="xref py py-obj docutils literal notranslate"><span class="pre">skipDefaultValues</span></code> is True, values ​​that are the same as default values ​​will not be collected.</p></li>
 <li><p>Duplicate keys specified directly in <code class="xref py py-obj docutils literal notranslate"><span class="pre">kwargs</span></code> are not collected.</p></li>
 <li><p>Keys specified in <code class="xref py py-obj docutils literal notranslate"><span class="pre">argKeys</span></code> are not collected as keyword arguments.</p></li>
 <li><p>Do not collect keys contained in <code class="xref py py-obj docutils literal notranslate"><span class="pre">ignoreKeys</span></code>.</p></li>
@@ -402,19 +374,14 @@
 <li><p><strong>ignoreKeys</strong> (<em>container</em>) – Execution keys to exclude from automatic collection.</p></li>
 <li><p><strong>qualifyKeys</strong> (<em>container</em>) – Execution keys to be automatically collected.</p></li>
 <li><p><strong>asDict</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, return the keyword argument dictionary instead of the code string.</p></li>
+<li><p><strong>skipDefaultValues</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the same value as the default value will not be automatically collected.</p></li>
+<li><p><strong>commandDefaults</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a>) – When skipDefaultValues=True, you can specify the comparison value when the default value on the execution command side is different from the storage <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.DEFAULTS" title="cymel.ui.optionbox.OptionBox.DEFAULTS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEFAULTS</span></code></a>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A Python code string or keyword argument dictionary.</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.checkMayaVersion">
-<span class="sig-name descname"><span class="pre">checkMayaVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.checkMayaVersion" title="Link to this definition">¶</a></dt>
-<dd><p>Check Maya version and error if unsupported.</p>
-<p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.SUPPORTED_VERSION" title="cymel.ui.optionbox.OptionBox.SUPPORTED_VERSION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SUPPORTED_VERSION</span></code></a> can be a tuple such as <code class="docutils literal notranslate"><span class="pre">(2024,)</span></code> or a backward-compatible number.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -457,38 +424,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.execPyCode">
-<span class="sig-name descname"><span class="pre">execPyCode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pyCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">echo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addQueue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.execPyCode" title="Link to this definition">¶</a></dt>
-<dd><p>Executes the specified Python code.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pyCode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Python code to run.</p></li>
-<li><p><strong>echo</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to display executed code to standard output.</p></li>
-<li><p><strong>addQueue</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to add to RecentCommandQueue.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.execPyCodeFromUI">
-<span class="sig-name descname"><span class="pre">execPyCodeFromUI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">dummy</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.execPyCodeFromUI" title="Link to this definition">¶</a></dt>
-<dd><p>Execute specified Python code from a UI callback.</p>
-<p>Extra arguments passed from the callback are ignored.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Python code to run.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.execute">
-<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">echo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addQueue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.execute" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">echo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addQueue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.execute" title="Link to this definition">¶</a></dt>
 <dd><p>Execute a command with the current settings.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -496,9 +433,6 @@
 <li><p><strong>echo</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to display executed code to standard output. The displayed string is the Python code itself.</p></li>
 <li><p><strong>addQueue</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to add to Maya’s RecentCommandQueue. When calling from repeat execution, set it to <code class="docutils literal notranslate"><span class="pre">False</span></code> to avoid double registration.</p></li>
 </ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -536,7 +470,7 @@
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.getValidUIInstance">
 <span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">getValidUIInstance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.getValidUIInstance" title="Link to this definition">¶</a></dt>
 <dd><p>Get an instance with the currently active UI.</p>
-<p>A depth-first walk through this class and its derived classes, returning the first instance with a living option box UI.</p>
+<p>A depth-first walk through this class and its derived classes, returning the first instance with a live option box UI.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox" title="cymel.ui.optionbox.OptionBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OptionBox</span></code></a> or None</p>
@@ -560,20 +494,10 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.get_instance">
-<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">get_instance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.get_instance" title="Link to this definition">¶</a></dt>
-<dd><p>Get the currently held singleton instance.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox" title="cymel.ui.optionbox.OptionBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OptionBox</span></code></a> or None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.growUpWindowSize">
 <span class="sig-name descname"><span class="pre">growUpWindowSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tabId</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitH</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.growUpWindowSize" title="Link to this definition">¶</a></dt>
-<dd><p>If the window size is not large enough for the tab, resize it.</p>
+<dd><p>Window resizing process called by <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.show" title="cymel.ui.optionbox.OptionBox.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>.</p>
+<p>If the window size is not large enough for the tab, it will be resized.</p>
 <p>Often called after UI construction. Setting <code class="xref py py-obj docutils literal notranslate"><span class="pre">fitW</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">fitH</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code> will also make adjustments in the direction of decreasing.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -688,25 +612,6 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.melCB">
-<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">melCB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.melCB" title="Link to this definition">¶</a></dt>
-<dd><p>Gets a callback string that calls a method on this singleton instance.</p>
-<p>Some of the Maya standard option box callbacks return strings that are set from the MEL side, as it is not stable if you set them directly to Python functions or Python code.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>method_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Method name to call.</p></li>
-<li><p><strong>args</strong> – Additional positional arguments to pass to the method.</p></li>
-<li><p><strong>kwargs</strong> – Additional keyword arguments to pass to the method.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.onChanged">
 <span class="sig-name descname"><span class="pre">onChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.onChanged" title="Link to this definition">¶</a></dt>
 <dd><p>A general-purpose UI change callback.</p>
@@ -716,10 +621,10 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.perform">
 <span class="sig-name descname"><span class="pre">perform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmdi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.perform" title="Link to this definition">¶</a></dt>
-<dd><p>Entrance called from the Maya standard option box.</p>
+<dd><p>Entrance called from the Maya standard options box.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>cmdi</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – 0 to run with the current settings, 1 to open an option box, 2 to return a string of Python code to be run with the current settings.</p>
+<dd class="field-odd"><p><strong>cmdi</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – 0 to run with the current settings, 1 to open the option box, 2 to return a string of Python code to be run with the current settings.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Command string at runtime or code capture. Empty string when displayed.</p>
@@ -805,7 +710,7 @@
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox.show">
 <span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.show" title="Link to this definition">¶</a></dt>
 <dd><p>Show option box.</p>
-<p>If the UI already exists, bring that window to the front. If not generated, obtains Maya’s standard option box area and sets tabs, buttons, and menu callbacks.</p>
+<p>If the UI already exists, bring that window to the front. If not generated, obtains the Maya standard option box area and sets tabs, buttons, and menu callbacks.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -856,10 +761,8 @@
 <li><a class="reference internal" href="#">class cymel.ui.optionbox.OptionBox</a><ul>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox"><code class="docutils literal notranslate"><span class="pre">OptionBox</span></code></a><ul>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.APPLY_BUTTON_LABEL"><code class="docutils literal notranslate"><span class="pre">OptionBox.APPLY_BUTTON_LABEL</span></code></a></li>
-<li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.BRIEF"><code class="docutils literal notranslate"><span class="pre">OptionBox.BRIEF</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.BUTTON_LABEL"><code class="docutils literal notranslate"><span class="pre">OptionBox.BUTTON_LABEL</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.CLOSE_BUTTON_LABEL"><code class="docutils literal notranslate"><span class="pre">OptionBox.CLOSE_BUTTON_LABEL</span></code></a></li>
-<li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.COMMAND_DEFAULTS"><code class="docutils literal notranslate"><span class="pre">OptionBox.COMMAND_DEFAULTS</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.COMMAND_LABEL"><code class="docutils literal notranslate"><span class="pre">OptionBox.COMMAND_LABEL</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.DEFAULTS"><code class="docutils literal notranslate"><span class="pre">OptionBox.DEFAULTS</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.DEFAULT_TAB_INDEX"><code class="docutils literal notranslate"><span class="pre">OptionBox.DEFAULT_TAB_INDEX</span></code></a></li>
@@ -872,28 +775,22 @@
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.NO_RESETS"><code class="docutils literal notranslate"><span class="pre">OptionBox.NO_RESETS</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.OPT_PREFIX"><code class="docutils literal notranslate"><span class="pre">OptionBox.OPT_PREFIX</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.SHOW_ERROR_DIALOG"><code class="docutils literal notranslate"><span class="pre">OptionBox.SHOW_ERROR_DIALOG</span></code></a></li>
-<li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.SKIP_DEFAULT_VALUES"><code class="docutils literal notranslate"><span class="pre">OptionBox.SKIP_DEFAULT_VALUES</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.SUPPORTED_VERSION"><code class="docutils literal notranslate"><span class="pre">OptionBox.SUPPORTED_VERSION</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.TAB_LABELS"><code class="docutils literal notranslate"><span class="pre">OptionBox.TAB_LABELS</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.TOOL_NAME"><code class="docutils literal notranslate"><span class="pre">OptionBox.TOOL_NAME</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.TOOL_VERSION"><code class="docutils literal notranslate"><span class="pre">OptionBox.TOOL_VERSION</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.__init__"><code class="docutils literal notranslate"><span class="pre">OptionBox.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.addMenu"><code class="docutils literal notranslate"><span class="pre">OptionBox.addMenu()</span></code></a></li>
-<li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.assembleCodeToEcho"><code class="docutils literal notranslate"><span class="pre">OptionBox.assembleCodeToEcho()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.assemblePyCode"><code class="docutils literal notranslate"><span class="pre">OptionBox.assemblePyCode()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.assemblePyCodeWithArgs"><code class="docutils literal notranslate"><span class="pre">OptionBox.assemblePyCodeWithArgs()</span></code></a></li>
-<li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.checkMayaVersion"><code class="docutils literal notranslate"><span class="pre">OptionBox.checkMayaVersion()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.createContents"><code class="docutils literal notranslate"><span class="pre">OptionBox.createContents()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.createLayout"><code class="docutils literal notranslate"><span class="pre">OptionBox.createLayout()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.currentTabId"><code class="docutils literal notranslate"><span class="pre">OptionBox.currentTabId()</span></code></a></li>
-<li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.execPyCode"><code class="docutils literal notranslate"><span class="pre">OptionBox.execPyCode()</span></code></a></li>
-<li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.execPyCodeFromUI"><code class="docutils literal notranslate"><span class="pre">OptionBox.execPyCodeFromUI()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.execute"><code class="docutils literal notranslate"><span class="pre">OptionBox.execute()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.get"><code class="docutils literal notranslate"><span class="pre">OptionBox.get()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.getLayout"><code class="docutils literal notranslate"><span class="pre">OptionBox.getLayout()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.getValidUIInstance"><code class="docutils literal notranslate"><span class="pre">OptionBox.getValidUIInstance()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.get_"><code class="docutils literal notranslate"><span class="pre">OptionBox.get_()</span></code></a></li>
-<li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.get_instance"><code class="docutils literal notranslate"><span class="pre">OptionBox.get_instance()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.growUpWindowSize"><code class="docutils literal notranslate"><span class="pre">OptionBox.growUpWindowSize()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.isTabReady"><code class="docutils literal notranslate"><span class="pre">OptionBox.isTabReady()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.isUIAlive"><code class="docutils literal notranslate"><span class="pre">OptionBox.isUIAlive()</span></code></a></li>
@@ -902,7 +799,6 @@
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.load"><code class="docutils literal notranslate"><span class="pre">OptionBox.load()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.loadOptions"><code class="docutils literal notranslate"><span class="pre">OptionBox.loadOptions()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.makeWeakCB"><code class="docutils literal notranslate"><span class="pre">OptionBox.makeWeakCB()</span></code></a></li>
-<li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.melCB"><code class="docutils literal notranslate"><span class="pre">OptionBox.melCB()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.onChanged"><code class="docutils literal notranslate"><span class="pre">OptionBox.onChanged()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.perform"><code class="docutils literal notranslate"><span class="pre">OptionBox.perform()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.ref"><code class="docutils literal notranslate"><span class="pre">OptionBox.ref()</span></code></a></li>
@@ -969,7 +865,7 @@
         <li class="right" >
           <a href="../cymel.ui.optionbox.html" title="cymel.ui.optionbox"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.32.2026070500 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.33.2026070600 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.ui.optionbox.html" >cymel.ui.optionbox</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.ui.optionbox.OptionBox</a></li> 

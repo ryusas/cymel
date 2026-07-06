@@ -239,11 +239,11 @@ class Singleton(type):
     """
     def __new__(metacls, clsname, bases, attrs):
         cls = type.__new__(metacls, clsname, bases, attrs)
-        cls._singleton_ref = None
+        cls.__singleton_ref = None
         return cls
 
     def __call__(cls, *args, **kwargs):
-        ref = cls._singleton_ref
+        ref = cls.__singleton_ref
         if ref:
             ref = ref()
             if ref is not None:
@@ -251,15 +251,21 @@ class Singleton(type):
         ref = type.__call__(cls, *args, **kwargs)
 
         def _finalize(ref):
-            cls._singleton_ref = None
+            cls.__singleton_ref = None
             if _wref_dict:  # モジュール削除時に None になる場合があるので。
                 del _wref_dict[key]
 
         # 弱参照に簡単にアクセス出来るようにする為に参照を保持。
         key = id(cls)
-        cls._singleton_ref = _wref(ref, _finalize)
-        _wref_dict[key] = cls._singleton_ref  # 弱参照をクラス外で保持しないとファイナライザが呼ばれない場合がある。
+        cls.__singleton_ref = _wref(ref, _finalize)
+        _wref_dict[key] = cls.__singleton_ref  # 弱参照をクラス外で保持しないとファイナライザが呼ばれない場合がある。
         return ref
+
+    def get_instance(cls):
+        u"""
+        インスタンスを得る。
+        """
+        return cls.__singleton_ref and cls.__singleton_ref()
 
 
 #------------------------------------------------------------------------------
