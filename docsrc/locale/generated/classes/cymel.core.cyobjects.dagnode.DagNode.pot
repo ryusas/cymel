@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cymel \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"POT-Creation-Date: 2026-07-21 21:45+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,79 +32,88 @@ msgstr ""
 msgid "Methods:"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 msgid ":py:obj:`commonAncestor <cymel.core.cyobjects.dagnode.DagNode.commonAncestor>`\\ \\(other\\[\\, skipFirst\\]\\)"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 #: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.commonAncestor:1
 msgid "指定したノードとの共通の先祖ノードを得る。"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 msgid ":py:obj:`findCommonAncestor <cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor>`\\ \\(\\[nodes\\, skipFirst\\]\\)"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 #: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor:1
 msgid "指定したDAGノードに共通の先祖ノードを見つける。"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
+msgid ":py:obj:`findTopNodes <cymel.core.cyobjects.dagnode.DagNode.findTopNodes>`\\ \\(nodes\\[\\, getParent\\, includeNone\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.findTopNodes:1
+msgid "指定したDAGノード群から最上位のノード群を得る。"
+msgstr ""
+
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 msgid ":py:obj:`hide <cymel.core.cyobjects.dagnode.DagNode.hide>`\\ \\(\\)"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 #: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.hide:1
 msgid "visibility アトリビュートを False にする。"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 msgid ":py:obj:`iterBreadthFirst <cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst>`\\ \\(\\[shapes\\, intermediates\\, ...\\]\\)"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 #: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst:1
 msgid "DAGノードツリーを幅優先反復する。"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 msgid ":py:obj:`iterDepthFirst <cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst>`\\ \\(\\[shapes\\, intermediates\\, ...\\]\\)"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 #: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst:1
 msgid "DAGノードツリーを深さ優先反復する。"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 msgid ":py:obj:`iterPath <cymel.core.cyobjects.dagnode.DagNode.iterPath>`\\ \\(\\[end\\, includeStart\\, includeEnd\\, ...\\]\\)"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 #: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterPath:1
 msgid "DAGパスをたどるイテレータ。"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 msgid ":py:obj:`setParent <cymel.core.cyobjects.dagnode.DagNode.setParent>`\\ \\(\\[parent\\, r\\, add\\, avoidJointShear\\, ...\\]\\)"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 #: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.setParent:1
 msgid "親ノードを変更する。"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 msgid ":py:obj:`show <cymel.core.cyobjects.dagnode.DagNode.show>`\\ \\(\\)"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:33:<autosummary>:1
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:34:<autosummary>:1
 #: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.show:1
 msgid "visibility アトリビュートを True にする。"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:36
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:37
 msgid "Attributes:"
 msgstr ""
 
@@ -112,7 +121,7 @@ msgstr ""
 msgid "クラスでサポートしているノードの特徴を表す。"
 msgstr ""
 
-#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:45
+#: ../srcs/generated/classes/cymel.core.cyobjects.dagnode.DagNode.rst:46
 msgid "Methods Details:"
 msgstr ""
 
@@ -144,6 +153,30 @@ msgstr ""
 
 #: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor:3
 msgid "1つ以上のDAGノード。省略時はカレントセレクション。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.findTopNodes:3
+msgid "指定ノード間に先祖・子孫関係がある場合、子孫を除外する。 インスタンスの全パスは考慮せず、各ノードが保持する DAGパスに沿って判定する。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.findTopNodes:7
+msgid "結果の順序は入力順となり、同じDAGパスの重複は最初の1つだけが 残る。空の入力には空のリストを返す。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.findTopNodes:10
+msgid "DAGノード群。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.findTopNodes:11
+msgid "最上位の指定ノードではなく、その親を結果とするかどうか。 親同士も同じ規則で集約され、デフォルトでは親の無いノードは 除外される。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.findTopNodes:15
+msgid "getParent=True の場合に、親の無いシーン最上位ノードを None として結果に含めるかどうか。複数の None は1つに集約される。 getParent=False の場合は結果に影響しない。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.findTopNodes:19
+msgid "`list` 通常は `DagNode` のリスト。 getParent=True かつ includeNone=True の場合のみ None を含み得る。"
 msgstr ""
 
 #: ../../python/cymel/core/cyobjects/dagnode.py:docstring of cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst:3

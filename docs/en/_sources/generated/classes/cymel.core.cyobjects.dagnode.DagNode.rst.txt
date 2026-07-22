@@ -1,4 +1,4 @@
-class cymel.core.cyobjects.dagnode.DagNode
+﻿class cymel.core.cyobjects.dagnode.DagNode
 ==========================================
 
 .. currentmodule:: cymel.core.cyobjects.dagnode
@@ -20,6 +20,7 @@ class cymel.core.cyobjects.dagnode.DagNode
     
         commonAncestor
         findCommonAncestor
+        findTopNodes
         hide
         iterBreadthFirst
         iterDepthFirst
@@ -45,6 +46,7 @@ class cymel.core.cyobjects.dagnode.DagNode
     
     .. automethod:: commonAncestor
     .. automethod:: findCommonAncestor
+    .. automethod:: findTopNodes
     .. automethod:: hide
     .. automethod:: iterBreadthFirst
     .. automethod:: iterDepthFirst

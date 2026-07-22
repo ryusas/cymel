@@ -73,6 +73,98 @@ class TestCyObjects(unittest.TestCase):
         # Use without registration.
         self.assertTrue(type(cm.sel) is MyTransform)
 
+    def test_DagNode_findTopNodes(self):
+        cmds.file(f=True, new=True)
+
+        cmds.createNode('transform', n='rootA')
+        cmds.createNode('transform', n='childA', p='rootA')
+        cmds.createNode('transform', n='grandchildA', p='childA')
+        cmds.createNode('transform', n='siblingA', p='rootA')
+        cmds.createNode('transform', n='rootB')
+        cmds.createNode('transform', n='childB', p='rootB')
+
+        rootA = cm.O('|rootA')
+        childA = cm.O('|rootA|childA')
+        grandchildA = cm.O('|rootA|childA|grandchildA')
+        siblingA = cm.O('|rootA|siblingA')
+        rootB = cm.O('|rootB')
+        childB = cm.O('|rootB|childB')
+
+        findTopNodes = cm.nt.DagNode.findTopNodes
+        self.assertEqual(findTopNodes([]), [])
+        self.assertEqual(findTopNodes((childA,)), [childA])
+        self.assertEqual(
+            findTopNodes(x for x in (childB, siblingA)),
+            [childB, siblingA])
+        self.assertEqual(
+            findTopNodes((childB, grandchildA, siblingA)),
+            [childB, grandchildA, siblingA])
+        self.assertEqual(
+            findTopNodes((grandchildA, childA, rootA, rootB)),
+            [rootA, rootB])
+        self.assertEqual(
+            findTopNodes((rootB, grandchildA, rootA)),
+            [rootB, rootA])
+        self.assertEqual(
+            findTopNodes((grandchildA, childA, childA, grandchildA)),
+            [childA])
+        self.assertEqual(findTopNodes((rootA,), getParent=True), [])
+        self.assertEqual(
+            findTopNodes((x for x in (childA, siblingA)), getParent=True),
+            [rootA])
+        self.assertEqual(
+            findTopNodes(
+                (grandchildA, siblingA, childB), getParent=True),
+            [rootA, rootB])
+        self.assertEqual(
+            findTopNodes(
+                (childB, grandchildA, siblingA), getParent=True),
+            [rootB, rootA])
+        self.assertEqual(
+            findTopNodes([], getParent=True, includeNone=True), [])
+        self.assertEqual(
+            findTopNodes((rootA,), getParent=True, includeNone=True),
+            [None])
+        self.assertEqual(
+            findTopNodes(
+                (rootA, rootB), getParent=True, includeNone=True),
+            [None])
+        self.assertEqual(
+            findTopNodes(
+                (x for x in (rootA, childB)),
+                getParent=True, includeNone=True),
+            [None, rootB])
+        self.assertEqual(
+            findTopNodes(
+                (childB, rootA), getParent=True, includeNone=True),
+            [rootB, None])
+        self.assertEqual(
+            findTopNodes((rootA, childB), includeNone=True),
+            [rootA, childB])
+
+        cmds.createNode('transform', n='instanceParentA')
+        cmds.createNode('transform', n='instanceParentB')
+        cmds.createNode('transform', n='instanceChild', p='instanceParentA')
+        cmds.parent('|instanceParentA|instanceChild', 'instanceParentB', add=True)
+        instanceParentA = cm.O('|instanceParentA')
+        instanceChildA = cm.O('|instanceParentA|instanceChild')
+        instanceChildB = cm.O('|instanceParentB|instanceChild')
+
+        self.assertEqual(
+            findTopNodes((instanceParentA, instanceChildA)),
+            [instanceParentA])
+        self.assertEqual(
+            findTopNodes((instanceParentA, instanceChildB)),
+            [instanceParentA, instanceChildB])
+        self.assertEqual(
+            findTopNodes(
+                (instanceChildA, instanceChildB), getParent=True),
+            [instanceParentA, cm.O('|instanceParentB')])
+        self.assertEqual(
+            findTopNodes(
+                (instanceParentA, instanceChildB), getParent=True),
+            [cm.O('|instanceParentB')])
+
 
 #------------------------------------------------------------------------------
 def suite():

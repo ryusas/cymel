@@ -193,6 +193,51 @@ class DagNode(DagNodeMixin, nodetypes.parentBasicNodeClass('dagNode')):
                 yield node
 
     @staticmethod
+    def findTopNodes(nodes, getParent=False, includeNone=False):
+        u"""
+        指定したDAGノード群から最上位のノード群を得る。
+
+        指定ノード間に先祖・子孫関係がある場合、子孫を除外する。
+        インスタンスの全パスは考慮せず、各ノードが保持する
+        DAGパスに沿って判定する。
+
+        結果の順序は入力順となり、同じDAGパスの重複は最初の1つだけが
+        残る。空の入力には空のリストを返す。
+
+        :param `iterable` nodes: DAGノード群。
+        :param `bool` getParent:
+            最上位の指定ノードではなく、その親を結果とするかどうか。
+            親同士も同じ規則で集約され、デフォルトでは親の無いノードは
+            除外される。
+        :param `bool` includeNone:
+            getParent=True の場合に、親の無いシーン最上位ノードを
+            None として結果に含めるかどうか。複数の None は1つに集約される。
+            getParent=False の場合は結果に影響しない。
+        :rtype: `list`
+            通常は `DagNode` のリスト。
+            getParent=True かつ includeNone=True の場合のみ None を含み得る。
+        """
+        def find(nodes):
+            nodeSet = set()
+            add = nodeSet.add
+            unique = [x for x in nodes if x not in nodeSet and not add(x)]
+
+            def isTop(node):
+                node = node.parent()
+                while node is not None and node not in nodeSet:
+                    node = node.parent()
+                return node is None
+            return [x for x in unique if x is None or isTop(x)]
+
+        result = find(nodes)
+        if not getParent:
+            return result
+        result = [x.parent() for x in result]
+        if not includeNone:
+            result = [x for x in result if x is not None]
+        return find(result)
+
+    @staticmethod
     def findCommonAncestor(nodes=None, skipFirst=False):
         u"""
         指定したDAGノードに共通の先祖ノードを見つける。
