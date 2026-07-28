@@ -238,6 +238,34 @@ class DagNode(DagNodeMixin, nodetypes.parentBasicNodeClass('dagNode')):
         return find(result)
 
     @staticmethod
+    def findLeafNodes(nodes):
+        u"""
+        指定したDAGノード群から指定集合内leafとなるノード群を得る。
+
+        指定ノード間に先祖・子孫関係がある場合、先祖を除外する。
+        インスタンスの全パスは考慮せず、各ノードが保持する
+        DAGパスに沿って判定する。
+
+        結果の順序は入力順となり、同じDAGパスの重複は最初の1つだけが得られる。
+        空の入力には空のリストを返す。
+
+        :param `iterable` nodes: DAGノード群。
+        :rtype: `DagNode` のリスト。
+        """
+        nodeSet = set()
+        add = nodeSet.add
+        unique = [x for x in nodes if x not in nodeSet and not add(x)]
+        nonLeaf = set()
+
+        for node in unique:
+            node = node.parent()
+            while node is not None and node not in nodeSet:
+                node = node.parent()
+            if node is not None:
+                nonLeaf.add(node)
+        return [x for x in unique if x not in nonLeaf]
+
+    @staticmethod
     def findCommonAncestor(nodes=None, skipFirst=False):
         u"""
         指定したDAGノードに共通の先祖ノードを見つける。
