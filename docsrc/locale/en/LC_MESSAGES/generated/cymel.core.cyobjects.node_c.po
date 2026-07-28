@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cymel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"POT-Creation-Date: 2026-07-28 21:29+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: en <LL@li.org>\n"
@@ -50,10 +50,9 @@ msgstr ""
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
 #: cymel.core.cyobjects.node_c.keyForBreadthFirst:1 of
-msgid "ノードリストをDAG階層の幅優先ソートするためのキー関数。"
+msgid "DAGノードリストをDAG階層の幅優先ソートするためのキー関数。"
 msgstr ""
-"Key function for breadth-first sorting of the node list in the DAG "
-"hierarchy."
+"Key function for breadth-first sorting of DAG node list in DAG hierarchy."
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
 msgid ""
@@ -65,8 +64,9 @@ msgstr ""
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
 #: cymel.core.cyobjects.node_c.keyForDepthFirst:1 of
-msgid "ノードリストをDAG階層の深さ優先ソートするためのキー関数。"
-msgstr "Key function for sorting the node list by DAG hierarchy depth first."
+msgid "DAGノードリストをDAG階層の深さ優先ソートするためのキー関数。"
+msgstr ""
+"Key function for sorting the DAG node list by DAG hierarchy depth first."
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
 msgid ""
@@ -78,9 +78,9 @@ msgstr ""
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
 #: cymel.core.cyobjects.node_c.keyForPathLength:1 of
-msgid "ノードリストをDAGパス長（階層の深さ）でソートするためのキー関数。"
+msgid "DAGノードリストをDAGパス長（階層の深さ）でソートするためのキー関数。"
 msgstr ""
-"Key function to sort the node list by DAG path length (hierarchy depth)."
+"Key function to sort DAG node list by DAG path length (hierarchy depth)."
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst:52
 msgid "Functions Details:"
@@ -88,11 +88,12 @@ msgstr "Function Details:"
 
 #: cymel.core.cyobjects.node_c.keyForBreadthFirst:3 of
 msgid ""
-"DAGノードなら `~.DagNodeMixin.lengthAndSiblingIndices` の結果を、そうでなければ 0 と空リストを返す。"
+"`DagNode` 派生オブジェクトなら `~.DagNodeMixin.lengthAndSiblingIndices` の結果を、そうでなければ 0"
+" と空リストを返す。"
 msgstr ""
-"If it is a DAG node, it returns the result of "
-"`~.DagNodeMixin.lengthAndSiblingIndices`, otherwise it returns 0 and an "
-"empty list."
+"If it is a `DagNode` derived object, returns the result of "
+"`~.DagNodeMixin.lengthAndSiblingIndices`, otherwise returns 0 and an empty "
+"list."
 
 #: cymel.core.cyobjects.node_c.keyForBreadthFirst:7 of
 msgid "同じパス長のノードの順序が保証されなくて構わないなら、 `keyForPathLength` を利用すると少し処理が軽い。"
@@ -120,10 +121,11 @@ msgid "(int, `list`)"
 msgstr "(int, `list`)"
 
 #: cymel.core.cyobjects.node_c.keyForDepthFirst:3 of
-msgid "DAGノードなら `~.DagNodeMixin.siblingIndices` の結果を、そうでなければ空リストを返す。"
+msgid ""
+"`DagNode` 派生オブジェクトなら `~.DagNodeMixin.siblingIndices` の結果を、そうでなければ空リストを返す。"
 msgstr ""
-"Returns the result of `~.DagNodeMixin.siblingIndices` if it is a DAG node, "
-"otherwise returns an empty list."
+"Returns the result of `~.DagNodeMixin.siblingIndices` if it is a `DagNode` "
+"derived object, otherwise returns an empty list."
 
 #: cymel.core.cyobjects.node_c.keyForDepthFirst:9 of
 msgid "`list`"
@@ -136,10 +138,10 @@ msgstr ""
 "ordering of nodes with the same path length."
 
 #: cymel.core.cyobjects.node_c.keyForPathLength:6 of
-msgid "DAGノードなら `~.DagNodeMixin.pathLength` の結果を、そうでなければ 0 を返す。"
+msgid "`DagNode` 派生オブジェクトなら `~.DagNodeMixin.pathLength` の結果を、そうでなければ 0 を返す。"
 msgstr ""
-"Returns the result of `~.DagNodeMixin.pathLength` if it is a DAG node, "
-"otherwise returns 0."
+"Returns the result of `~.DagNodeMixin.pathLength` if it is a `DagNode` "
+"derived object, otherwise returns 0."
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst
 msgid "戻り値の型"

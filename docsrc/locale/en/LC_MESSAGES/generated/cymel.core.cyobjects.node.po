@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cymel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-01 20:04+0900\n"
+"POT-Creation-Date: 2026-07-28 21:29+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: en <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "cymel.core.cyobjects.node"
 msgstr "cymel.core.cyobjects.node"
 
-#: ../srcs/generated/cymel.core.cyobjects.node.rst:14:<autosummary>:1
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:23:<autosummary>:1
 #: cymel.core.cyobjects.node:1 of
 msgid ":mayanode:`node` ノードタイプラッパークラス。"
 msgstr ":mayanode:`node` Node type wrapper class."
@@ -32,6 +32,105 @@ msgstr ":mayanode:`node` Node type wrapper class."
 msgid "Classes:"
 msgstr "Classes:"
 
-#: ../srcs/generated/cymel.core.cyobjects.node.rst:14:<autosummary>:1
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:23:<autosummary>:1
 msgid ":py:obj:`Node <cymel.core.cyobjects.node.Node>`"
 msgstr ":py:obj:`Node <cymel.core.cyobjects.node.Node>`"
+
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:25
+msgid "Functions:"
+msgstr "Functions:"
+
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:47:<autosummary>:1
+#, fuzzy
+msgid ""
+":py:obj:`sort <cymel.core.cyobjects.node.sort>`\\ \\(objects\\[\\, "
+"inPlace\\, key\\]\\)"
+msgstr ""
+":py:obj:`sort <cymel.core.cyobjects.node.sort>`\\ \\(objects\\[\\, "
+"inPlace\\, key\\]\\)"
+
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:47:<autosummary>:1
+#: cymel.core.cyobjects.node.sort:1 of
+msgid "オブジェクトリストをソートする。"
+msgstr "Sort the object list."
+
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:50
+msgid "Functions Details:"
+msgstr "Function Details:"
+
+#: cymel.core.cyobjects.node.sort:3 of
+msgid ""
+"基本的には cymel の `DagNode` 派生オブジェクトリストを想定するが、 どのようなものが紛れていてもエラーにはならず、順序が保証される。"
+msgstr ""
+"Basically, a list of objects derived from cymel's `DagNode` is assumed, but "
+"even if something is mixed up, it will not cause an error and the order will"
+" be guaranteed."
+
+#: cymel.core.cyobjects.node.sort:6 of
+msgid "`Plug` が紛れていても、DAGノードとプラグ名の複合ソートになる。"
+msgstr ""
+"Even if `Plug` is mixed up, it will be a composite sort of DAG node and plug"
+" name."
+
+#: cymel.core.cyobjects.node.sort:8 of
+msgid ""
+"気軽に使える呼び出し口として用意したもので、 ソートするものが `DagNode` のリストであることが前提なら、 標準の `sorted` や "
+"`sort` メソッドを直接使用して `key` 関数を 指定する方が効率が良い。"
+msgstr ""
+"It is provided as an easy-to-use caller, and if the object to be sorted is a"
+" list of `DagNode`, it is more efficient to use the standard `sorted` or "
+"`sort` method directly and specify the `key` function."
+
+#: ../srcs/generated/cymel.core.cyobjects.node.rst
+msgid "パラメータ"
+msgstr "parameters"
+
+#: cymel.core.cyobjects.node.sort:13 of
+msgid "ソートするリスト。"
+msgstr "List to be sorted."
+
+#: cymel.core.cyobjects.node.sort:14 of
+msgid "渡したリスト自体をソートするかどうか。"
+msgstr "Whether to sort the passed list itself."
+
+#: cymel.core.cyobjects.node.sort:15 of
+msgid ""
+"ソートのキー関数の基本となる関数。 要素が `DagNode` 派生オブジェクトであるとして、 この関数の評価と `str` と `id` "
+"が合成されてキーとなる。  `keyForDepthFirst` (DAGノードの深さ優先)、 `keyForBreadthFirst` "
+"(DAGノードの幅優先)、 `keyForPathLength` (単なるDAGノードの階層の深さで同じパス長のノードは等価) のいずれかを指定できる。"
+" デフォルトは幅優先。"
+msgstr ""
+"Function that is the basis of the key function for sorting. Assuming that "
+"the element is a `DagNode` derived object, the evaluation of this function "
+"and `str` and `id` are combined to form the key.  You can specify either "
+"`keyForDepthFirst` (DAG node depth is given priority), `keyForBreadthFirst` "
+"(DAG node breadth is given priority), or `keyForPathLength` (nodes with the "
+"same path length are equivalent simply by the depth of the DAG node "
+"hierarchy). Default is width first."
+
+#: cymel.core.cyobjects.node.sort:16 of
+msgid ""
+"ソートのキー関数の基本となる関数。 要素が `DagNode` 派生オブジェクトであるとして、 この関数の評価と `str` と `id` "
+"が合成されてキーとなる。"
+msgstr ""
+"Function that is the basis of the key function for sorting. Assuming that "
+"the element is a `DagNode` derived object, the evaluation of this function "
+"and `str` and `id` are combined to form the key."
+
+#: cymel.core.cyobjects.node.sort:20 of
+msgid ""
+"`keyForDepthFirst` (DAGノードの深さ優先)、 `keyForBreadthFirst` (DAGノードの幅優先)、 "
+"`keyForPathLength` (単なるDAGノードの階層の深さで同じパス長のノードは等価) のいずれかを指定できる。 デフォルトは幅優先。"
+msgstr ""
+"You can specify either `keyForDepthFirst` (DAG node depth is given "
+"priority), `keyForBreadthFirst` (DAG node breadth is given priority), or "
+"`keyForPathLength` (nodes with the same path length are equivalent simply by"
+" the depth of the DAG node hierarchy). Default is width first."
+
+#: ../srcs/generated/cymel.core.cyobjects.node.rst
+msgid "戻り値の型"
+msgstr "return type"
+
+#: cymel.core.cyobjects.node.sort:25 of
+msgid "`list`"
+msgstr "`list`"

@@ -20,6 +20,7 @@
     
         commonAncestor
         findCommonAncestor
+        findLeafNodes
         findTopNodes
         hide
         iterBreadthFirst
@@ -46,6 +47,7 @@
     
     .. automethod:: commonAncestor
     .. automethod:: findCommonAncestor
+    .. automethod:: findLeafNodes
     .. automethod:: findTopNodes
     .. automethod:: hide
     .. automethod:: iterBreadthFirst

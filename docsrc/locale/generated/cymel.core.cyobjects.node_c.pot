@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cymel \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"POT-Creation-Date: 2026-07-28 21:29+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
 #: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForBreadthFirst:1
-msgid "ノードリストをDAG階層の幅優先ソートするためのキー関数。"
+msgid "DAGノードリストをDAG階層の幅優先ソートするためのキー関数。"
 msgstr ""
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
 #: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForDepthFirst:1
-msgid "ノードリストをDAG階層の深さ優先ソートするためのキー関数。"
+msgid "DAGノードリストをDAG階層の深さ優先ソートするためのキー関数。"
 msgstr ""
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst:49:<autosummary>:1
 #: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForPathLength:1
-msgid "ノードリストをDAGパス長（階層の深さ）でソートするためのキー関数。"
+msgid "DAGノードリストをDAGパス長（階層の深さ）でソートするためのキー関数。"
 msgstr ""
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst:52
@@ -69,7 +69,7 @@ msgid "Functions Details:"
 msgstr ""
 
 #: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForBreadthFirst:3
-msgid "DAGノードなら `~.DagNodeMixin.lengthAndSiblingIndices` の結果を、そうでなければ 0 と空リストを返す。"
+msgid "`DagNode` 派生オブジェクトなら `~.DagNodeMixin.lengthAndSiblingIndices` の結果を、そうでなければ 0 と空リストを返す。"
 msgstr ""
 
 #: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForBreadthFirst:7
@@ -96,7 +96,7 @@ msgid "(int, `list`)"
 msgstr ""
 
 #: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForDepthFirst:3
-msgid "DAGノードなら `~.DagNodeMixin.siblingIndices` の結果を、そうでなければ空リストを返す。"
+msgid "`DagNode` 派生オブジェクトなら `~.DagNodeMixin.siblingIndices` の結果を、そうでなければ空リストを返す。"
 msgstr ""
 
 #: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForDepthFirst:9
@@ -108,7 +108,7 @@ msgid "`keyForBreadthFirst` に似ているが、それよりも単純で、 同
 msgstr ""
 
 #: ../../python/cymel/core/cyobjects/python/node_c.py:docstring of cymel.core.cyobjects.node_c.keyForPathLength:6
-msgid "DAGノードなら `~.DagNodeMixin.pathLength` の結果を、そうでなければ 0 を返す。"
+msgid "`DagNode` 派生オブジェクトなら `~.DagNodeMixin.pathLength` の結果を、そうでなければ 0 を返す。"
 msgstr ""
 
 #: ../srcs/generated/cymel.core.cyobjects.node_c.rst:0

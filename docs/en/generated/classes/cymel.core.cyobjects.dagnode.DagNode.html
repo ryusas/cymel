@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.cyobjects.dagnode.DagNode &#8212; cymel 0.34.2026072100 documentation</title>
+    <title>class cymel.core.cyobjects.dagnode.DagNode &#8212; cymel 0.35.2026072800 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
-    <script src="../../_static/documentation_options.js?v=61ba9724"></script>
+    <script src="../../_static/documentation_options.js?v=770e58b9"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.dagnode.html" title="cymel.core.cyobjects.dagnode"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.34.2026072100 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.dagnode.html" accesskey="U">cymel.core.cyobjects.dagnode</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.dagnode.DagNode</a></li> 
@@ -69,25 +69,28 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor" title="cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">findCommonAncestor</span></code></a>([nodes, skipFirst])</p></td>
 <td><p>Find common ancestor nodes of the specified DAG node.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findTopNodes" title="cymel.core.cyobjects.dagnode.DagNode.findTopNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">findTopNodes</span></code></a>(nodes[, getParent, includeNone])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findLeafNodes" title="cymel.core.cyobjects.dagnode.DagNode.findLeafNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">findLeafNodes</span></code></a>(nodes)</p></td>
+<td><p>Obtain the node group that will be the leaf in the specified set from the specified DAG node group.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findTopNodes" title="cymel.core.cyobjects.dagnode.DagNode.findTopNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">findTopNodes</span></code></a>(nodes[, getParent, includeNone])</p></td>
 <td><p>Get the top nodes from the specified DAG nodes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.hide" title="cymel.core.cyobjects.dagnode.DagNode.hide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hide</span></code></a>​​()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.hide" title="cymel.core.cyobjects.dagnode.DagNode.hide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hide</span></code></a>​​()</p></td>
 <td><p>Set visibility attribute to False.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst" title="cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterBreadthFirst</span></code></a>([shapes, intermediates, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst" title="cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterBreadthFirst</span></code></a>([shapes, intermediates, ...])</p></td>
 <td><p>Breadth-first iterates through the DAG node tree.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst" title="cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterDepthFirst</span></code></a>([shapes, intermediates, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst" title="cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterDepthFirst</span></code></a>([shapes, intermediates, ...])</p></td>
 <td><p>Depth-first iterates through the DAG node tree.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterPath" title="cymel.core.cyobjects.dagnode.DagNode.iterPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterPath</span></code></a>([end, includeStart, includeEnd, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterPath" title="cymel.core.cyobjects.dagnode.DagNode.iterPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterPath</span></code></a>([end, includeStart, includeEnd, ...])</p></td>
 <td><p>Iterator that follows the DAG path.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.setParent" title="cymel.core.cyobjects.dagnode.DagNode.setParent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParent</span></code></a>([parent, r, add, avoidJointShear, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.setParent" title="cymel.core.cyobjects.dagnode.DagNode.setParent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParent</span></code></a>([parent, r, add, avoidJointShear, ...])</p></td>
 <td><p>Change parent node.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.show" title="cymel.core.cyobjects.dagnode.DagNode.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.show" title="cymel.core.cyobjects.dagnode.DagNode.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>()</p></td>
 <td><p>Set visibility attribute to True.</p></td>
 </tr>
 </tbody>
@@ -131,6 +134,22 @@
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode.DagNode.findLeafNodes">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">findLeafNodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode.DagNode.findLeafNodes" title="Link to this definition">¶</a></dt>
+<dd><p>Obtain the node group that will be the leaf in the specified set from the specified DAG node group.</p>
+<p>If there is an ancestor/descendant relationship between the specified nodes, exclude the ancestors. The entire path of the instance is not considered, and the judgment is made along the DAG path held by each node.</p>
+<p>The results are in the order of input, and only the first duplicate of the same DAG path will be obtained. Returns an empty list on empty input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nodes</strong> (<em>iterable</em>) – DAG node group.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of <a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -266,6 +285,7 @@
 <li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.TYPE_BITS"><code class="docutils literal notranslate"><span class="pre">DagNode.TYPE_BITS</span></code></a></li>
 <li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.commonAncestor"><code class="docutils literal notranslate"><span class="pre">DagNode.commonAncestor()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor"><code class="docutils literal notranslate"><span class="pre">DagNode.findCommonAncestor()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findLeafNodes"><code class="docutils literal notranslate"><span class="pre">DagNode.findLeafNodes()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findTopNodes"><code class="docutils literal notranslate"><span class="pre">DagNode.findTopNodes()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.hide"><code class="docutils literal notranslate"><span class="pre">DagNode.hide()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst"><code class="docutils literal notranslate"><span class="pre">DagNode.iterBreadthFirst()</span></code></a></li>
@@ -326,7 +346,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.dagnode.html" title="cymel.core.cyobjects.dagnode"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.34.2026072100 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.dagnode.html" >cymel.core.cyobjects.dagnode</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.dagnode.DagNode</a></li> 

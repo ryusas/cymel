@@ -27,6 +27,7 @@ from .cyobject import (
     _newNodePlug,
     _node4ArgsByMPlug,
     _newNodeObjByMPath,
+    BIT_DAGNODE,
     BIT_TRANSFORM,
 )
 from .objectref import _getObjectRef
@@ -1063,9 +1064,9 @@ def _searchShapeCache(cache, key, mnode):
 #------------------------------------------------------------------------------
 def keyForDepthFirst(node):
     u"""
-    ノードリストをDAG階層の深さ優先ソートするためのキー関数。
+    DAGノードリストをDAG階層の深さ優先ソートするためのキー関数。
 
-    DAGノードなら
+    `DagNode` 派生オブジェクトなら
     `~.DagNodeMixin.siblingIndices`
     の結果を、そうでなければ空リストを返す。
 
@@ -1073,14 +1074,19 @@ def keyForDepthFirst(node):
     :param node: 検査するノード。
     :ryype: `list`
     """
-    return node.siblingIndices() if node.isDagNode() else []
+    # DagNode のメソッドを使うため上位の抽象タイプを除外しなければならず isDagNode() は使えない。
+    try:
+        node = node.node()
+        return node.siblingIndices() if node.TYPE_BITS & BIT_DAGNODE else []
+    except:
+        return []
 
 
 def keyForBreadthFirst(node):
     u"""
-    ノードリストをDAG階層の幅優先ソートするためのキー関数。
+    DAGノードリストをDAG階層の幅優先ソートするためのキー関数。
 
-    DAGノードなら
+    `DagNode` 派生オブジェクトなら
     `~.DagNodeMixin.lengthAndSiblingIndices`
     の結果を、そうでなければ 0 と空リストを返す。
 
@@ -1091,17 +1097,22 @@ def keyForBreadthFirst(node):
     :param node: 検査するノード。
     :ryype: (int, `list`)
     """
-    return node.lengthAndSiblingIndices() if node.isDagNode() else (0, [])
+    # DagNode のメソッドを使うため上位の抽象タイプを除外しなければならず isDagNode() は使えない。
+    try:
+        node = node.node()
+        return node.lengthAndSiblingIndices() if node.TYPE_BITS & BIT_DAGNODE else (0, [])
+    except:
+        return (0, [])
 
 
 def keyForPathLength(node):
     u"""
-    ノードリストをDAGパス長（階層の深さ）でソートするためのキー関数。
+    DAGノードリストをDAGパス長（階層の深さ）でソートするためのキー関数。
 
     `keyForBreadthFirst` に似ているが、それよりも単純で、
     同じパス長のノードの順序が保証されない。
 
-    DAGノードなら
+    `DagNode` 派生オブジェクトなら
     `~.DagNodeMixin.pathLength`
     の結果を、そうでなければ 0 を返す。
 
@@ -1109,5 +1120,10 @@ def keyForPathLength(node):
     :param node: 検査するノード。
     :rtype: `int`
     """
-    return node.pathLength() if node.isDagNode() else 0
+    # DagNode のメソッドを使うため上位の抽象タイプを除外しなければならず isDagNode() は使えない。
+    try:
+        node = node.node()
+        return node.pathLength() if node.TYPE_BITS & BIT_DAGNODE else 0
+    except:
+        return 0
 

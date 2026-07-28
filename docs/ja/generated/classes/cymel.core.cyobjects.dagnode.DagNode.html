@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.cyobjects.dagnode.DagNode &#8212; cymel 0.34.2026072100 ドキュメント</title>
+    <title>class cymel.core.cyobjects.dagnode.DagNode &#8212; cymel 0.35.2026072800 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
-    <script src="../../_static/documentation_options.js?v=f8a02c8a"></script>
+    <script src="../../_static/documentation_options.js?v=ee14e317"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/translations.js?v=4755f45a"></script>
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.dagnode.html" title="cymel.core.cyobjects.dagnode"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.34.2026072100 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.dagnode.html" accesskey="U">cymel.core.cyobjects.dagnode</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.dagnode.DagNode</a></li> 
@@ -70,25 +70,28 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor" title="cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">findCommonAncestor</span></code></a>([nodes, skipFirst])</p></td>
 <td><p>指定したDAGノードに共通の先祖ノードを見つける。</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findTopNodes" title="cymel.core.cyobjects.dagnode.DagNode.findTopNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">findTopNodes</span></code></a>(nodes[, getParent, includeNone])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findLeafNodes" title="cymel.core.cyobjects.dagnode.DagNode.findLeafNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">findLeafNodes</span></code></a>(nodes)</p></td>
+<td><p>指定したDAGノード群から指定集合内leafとなるノード群を得る。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findTopNodes" title="cymel.core.cyobjects.dagnode.DagNode.findTopNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">findTopNodes</span></code></a>(nodes[, getParent, includeNone])</p></td>
 <td><p>指定したDAGノード群から最上位のノード群を得る。</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.hide" title="cymel.core.cyobjects.dagnode.DagNode.hide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hide</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.hide" title="cymel.core.cyobjects.dagnode.DagNode.hide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hide</span></code></a>()</p></td>
 <td><p>visibility アトリビュートを False にする。</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst" title="cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterBreadthFirst</span></code></a>([shapes, intermediates, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst" title="cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterBreadthFirst</span></code></a>([shapes, intermediates, ...])</p></td>
 <td><p>DAGノードツリーを幅優先反復する。</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst" title="cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterDepthFirst</span></code></a>([shapes, intermediates, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst" title="cymel.core.cyobjects.dagnode.DagNode.iterDepthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterDepthFirst</span></code></a>([shapes, intermediates, ...])</p></td>
 <td><p>DAGノードツリーを深さ優先反復する。</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterPath" title="cymel.core.cyobjects.dagnode.DagNode.iterPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterPath</span></code></a>([end, includeStart, includeEnd, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterPath" title="cymel.core.cyobjects.dagnode.DagNode.iterPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iterPath</span></code></a>([end, includeStart, includeEnd, ...])</p></td>
 <td><p>DAGパスをたどるイテレータ。</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.setParent" title="cymel.core.cyobjects.dagnode.DagNode.setParent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParent</span></code></a>([parent, r, add, avoidJointShear, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.setParent" title="cymel.core.cyobjects.dagnode.DagNode.setParent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParent</span></code></a>([parent, r, add, avoidJointShear, ...])</p></td>
 <td><p>親ノードを変更する。</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.show" title="cymel.core.cyobjects.dagnode.DagNode.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.show" title="cymel.core.cyobjects.dagnode.DagNode.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>()</p></td>
 <td><p>visibility アトリビュートを True にする。</p></td>
 </tr>
 </tbody>
@@ -134,6 +137,25 @@
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cymel.core.cyobjects.dagnode.DagNode.findLeafNodes">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">findLeafNodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.dagnode.DagNode.findLeafNodes" title="Link to this definition">¶</a></dt>
+<dd><p>指定したDAGノード群から指定集合内leafとなるノード群を得る。</p>
+<p>指定ノード間に先祖・子孫関係がある場合、先祖を除外する。
+インスタンスの全パスは考慮せず、各ノードが保持する
+DAGパスに沿って判定する。</p>
+<p>結果の順序は入力順となり、同じDAGパスの重複は最初の1つだけが得られる。
+空の入力には空のリストを返す。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nodes</strong> (<em>iterable</em>) -- DAGノード群。</p>
+</dd>
+<dt class="field-even">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a> のリスト。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -311,6 +333,7 @@ avoidJointShear=True を指定しないと姿勢を維持できない場合が�
 <li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.TYPE_BITS"><code class="docutils literal notranslate"><span class="pre">DagNode.TYPE_BITS</span></code></a></li>
 <li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.commonAncestor"><code class="docutils literal notranslate"><span class="pre">DagNode.commonAncestor()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findCommonAncestor"><code class="docutils literal notranslate"><span class="pre">DagNode.findCommonAncestor()</span></code></a></li>
+<li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findLeafNodes"><code class="docutils literal notranslate"><span class="pre">DagNode.findLeafNodes()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.findTopNodes"><code class="docutils literal notranslate"><span class="pre">DagNode.findTopNodes()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.hide"><code class="docutils literal notranslate"><span class="pre">DagNode.hide()</span></code></a></li>
 <li><a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.iterBreadthFirst"><code class="docutils literal notranslate"><span class="pre">DagNode.iterBreadthFirst()</span></code></a></li>
@@ -371,7 +394,7 @@ avoidJointShear=True を指定しないと姿勢を維持できない場合が�
         <li class="right" >
           <a href="../cymel.core.cyobjects.dagnode.html" title="cymel.core.cyobjects.dagnode"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.34.2026072100 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.dagnode.html" >cymel.core.cyobjects.dagnode</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.dagnode.DagNode</a></li> 

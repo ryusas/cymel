@@ -21,6 +21,11 @@
 
 
 
+    .. rubric:: Functions:
+
+    .. autosummary::
+    
+        sort
 
 
 
@@ -38,5 +43,11 @@
 
 
 
+
+
+    .. rubric:: Functions Details:
+
+    
+    .. autofunction:: sort
 
 

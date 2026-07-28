@@ -11,13 +11,13 @@ from ...common import *
 from ...utils.namespace import _wrapNS, _mayaNS
 from ...utils.operation import undoChunk
 from ..typeregistry import nodetypes, _FIX_SLOTS
-from .node_c import Node_c
+from .node_c import Node_c, keyForBreadthFirst
 from .cyobject import (
     CyObject, UUID_ATTR_NAME,
     IS_SUPPORTING_NON_UNIQUE_ATTR_NAMES,
 )
 
-__all__ = ['Node']
+__all__ = ['Node', 'sort']
 
 _delete = cmds.delete
 _lockNode = cmds.lockNode
@@ -686,4 +686,41 @@ _COMPLEX_AT_TYPENAME_SET = frozenset([
     'matrix',
     'fltMatrix',
 ])
+
+
+#------------------------------------------------------------------------------
+def sort(objects, inPlace=False, key=keyForBreadthFirst):
+    u"""
+    オブジェクトリストをソートする。
+
+    基本的には cymel の `DagNode` 派生オブジェクトリストを想定するが、
+    どのようなものが紛れていてもエラーにはならず、順序が保証される。
+
+    `Plug` が紛れていても、DAGノードとプラグ名の複合ソートになる。
+
+    気軽に使える呼び出し口として用意したもので、
+    ソートするものが `DagNode` のリストであることが前提なら、
+    標準の `sorted` や `sort` メソッドを直接使用して `key` 関数を
+    指定する方が効率が良い。
+
+    :param `list`: ソートするリスト。
+    :param `bool` inPlace: 渡したリスト自体をソートするかどうか。
+    :param key:
+        ソートのキー関数の基本となる関数。
+        要素が `DagNode` 派生オブジェクトであるとして、
+        この関数の評価と `str` と `id` が合成されてキーとなる。
+
+        `keyForDepthFirst` (DAGノードの深さ優先)、
+        `keyForBreadthFirst` (DAGノードの幅優先)、
+        `keyForPathLength` (単なるDAGノードの階層の深さで同じパス長のノードは等価)
+        のいずれかを指定できる。
+        デフォルトは幅優先。
+    :rtype: `list`
+    """
+    proc = lambda x: (key(x), str(x), id(x))
+    if inPlace:
+        objects.sort(key=proc)
+        return objects
+    else:
+        return sorted(objects, key=proc)
 

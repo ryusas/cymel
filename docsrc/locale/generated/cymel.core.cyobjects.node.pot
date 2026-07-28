@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cymel \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"POT-Creation-Date: 2026-07-28 21:29+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "cymel.core.cyobjects.node"
 msgstr ""
 
-#: ../srcs/generated/cymel.core.cyobjects.node.rst:14:<autosummary>:1
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:23:<autosummary>:1
 #: ../../python/cymel/core/cyobjects/node.py:docstring of cymel.core.cyobjects.node:1
 msgid ":mayanode:`node` ノードタイプラッパークラス。"
 msgstr ""
@@ -29,6 +29,67 @@ msgstr ""
 msgid "Classes:"
 msgstr ""
 
-#: ../srcs/generated/cymel.core.cyobjects.node.rst:14:<autosummary>:1
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:23:<autosummary>:1
 msgid ":py:obj:`Node <cymel.core.cyobjects.node.Node>`"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:25
+msgid "Functions:"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:47:<autosummary>:1
+msgid ":py:obj:`sort <cymel.core.cyobjects.node.sort>`\\ \\(objects\\[\\, inPlace\\, key\\]\\)"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:47:<autosummary>:1
+#: ../../python/cymel/core/cyobjects/node.py:docstring of cymel.core.cyobjects.node.sort:1
+msgid "オブジェクトリストをソートする。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:50
+msgid "Functions Details:"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/node.py:docstring of cymel.core.cyobjects.node.sort:3
+msgid "基本的には cymel の `DagNode` 派生オブジェクトリストを想定するが、 どのようなものが紛れていてもエラーにはならず、順序が保証される。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/node.py:docstring of cymel.core.cyobjects.node.sort:6
+msgid "`Plug` が紛れていても、DAGノードとプラグ名の複合ソートになる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/node.py:docstring of cymel.core.cyobjects.node.sort:8
+msgid "気軽に使える呼び出し口として用意したもので、 ソートするものが `DagNode` のリストであることが前提なら、 標準の `sorted` や `sort` メソッドを直接使用して `key` 関数を 指定する方が効率が良い。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/node.py:docstring of cymel.core.cyobjects.node.sort:13
+msgid "ソートするリスト。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/node.py:docstring of cymel.core.cyobjects.node.sort:14
+msgid "渡したリスト自体をソートするかどうか。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/node.py:docstring of cymel.core.cyobjects.node.sort:15
+msgid "ソートのキー関数の基本となる関数。 要素が `DagNode` 派生オブジェクトであるとして、 この関数の評価と `str` と `id` が合成されてキーとなる。  `keyForDepthFirst` (DAGノードの深さ優先)、 `keyForBreadthFirst` (DAGノードの幅優先)、 `keyForPathLength` (単なるDAGノードの階層の深さで同じパス長のノードは等価) のいずれかを指定できる。 デフォルトは幅優先。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/node.py:docstring of cymel.core.cyobjects.node.sort:16
+msgid "ソートのキー関数の基本となる関数。 要素が `DagNode` 派生オブジェクトであるとして、 この関数の評価と `str` と `id` が合成されてキーとなる。"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/node.py:docstring of cymel.core.cyobjects.node.sort:20
+msgid "`keyForDepthFirst` (DAGノードの深さ優先)、 `keyForBreadthFirst` (DAGノードの幅優先)、 `keyForPathLength` (単なるDAGノードの階層の深さで同じパス長のノードは等価) のいずれかを指定できる。 デフォルトは幅優先。"
+msgstr ""
+
+#: ../srcs/generated/cymel.core.cyobjects.node.rst:0
+msgid "戻り値の型"
+msgstr ""
+
+#: ../../python/cymel/core/cyobjects/node.py:docstring of cymel.core.cyobjects.node.sort:25
+msgid "`list`"
 msgstr ""

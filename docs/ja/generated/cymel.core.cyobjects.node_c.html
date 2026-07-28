@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.core.cyobjects.node_c &#8212; cymel 0.34.2026072100 ドキュメント</title>
+    <title>cymel.core.cyobjects.node_c &#8212; cymel 0.35.2026072800 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
-    <script src="../_static/documentation_options.js?v=f8a02c8a"></script>
+    <script src="../_static/documentation_options.js?v=ee14e317"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/translations.js?v=4755f45a"></script>
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="classes/cymel.core.cyobjects.node.Node.html" title="class cymel.core.cyobjects.node.Node"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.34.2026072100 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.core.cyobjects.node_c</a></li> 
       </ul>
@@ -60,13 +60,13 @@
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.keyForBreadthFirst" title="cymel.core.cyobjects.node_c.keyForBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForBreadthFirst</span></code></a>(node)</p></td>
-<td><p>ノードリストをDAG階層の幅優先ソートするためのキー関数。</p></td>
+<td><p>DAGノードリストをDAG階層の幅優先ソートするためのキー関数。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.keyForDepthFirst" title="cymel.core.cyobjects.node_c.keyForDepthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForDepthFirst</span></code></a>(node)</p></td>
-<td><p>ノードリストをDAG階層の深さ優先ソートするためのキー関数。</p></td>
+<td><p>DAGノードリストをDAG階層の深さ優先ソートするためのキー関数。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.keyForPathLength" title="cymel.core.cyobjects.node_c.keyForPathLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForPathLength</span></code></a>(node)</p></td>
-<td><p>ノードリストをDAGパス長（階層の深さ）でソートするためのキー関数。</p></td>
+<td><p>DAGノードリストをDAGパス長（階層の深さ）でソートするためのキー関数。</p></td>
 </tr>
 </tbody>
 </table>
@@ -74,8 +74,8 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.node_c.keyForBreadthFirst">
 <span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.node_c.</span></span><span class="sig-name descname"><span class="pre">keyForBreadthFirst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.keyForBreadthFirst" title="Link to this definition">¶</a></dt>
-<dd><p>ノードリストをDAG階層の幅優先ソートするためのキー関数。</p>
-<p>DAGノードなら
+<dd><p>DAGノードリストをDAG階層の幅優先ソートするためのキー関数。</p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code> 派生オブジェクトなら
 <a class="reference internal" href="classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html#cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lengthAndSiblingIndices</span></code></a>
 の結果を、そうでなければ 0 と空リストを返す。</p>
 <p>同じパス長のノードの順序が保証されなくて構わないなら、
@@ -93,8 +93,8 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.node_c.keyForDepthFirst">
 <span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.node_c.</span></span><span class="sig-name descname"><span class="pre">keyForDepthFirst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.keyForDepthFirst" title="Link to this definition">¶</a></dt>
-<dd><p>ノードリストをDAG階層の深さ優先ソートするためのキー関数。</p>
-<p>DAGノードなら
+<dd><p>DAGノードリストをDAG階層の深さ優先ソートするためのキー関数。</p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code> 派生オブジェクトなら
 <a class="reference internal" href="classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">siblingIndices</span></code></a>
 の結果を、そうでなければ空リストを返す。</p>
 <dl class="field-list simple">
@@ -110,10 +110,10 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.node_c.keyForPathLength">
 <span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.node_c.</span></span><span class="sig-name descname"><span class="pre">keyForPathLength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.keyForPathLength" title="Link to this definition">¶</a></dt>
-<dd><p>ノードリストをDAGパス長（階層の深さ）でソートするためのキー関数。</p>
+<dd><p>DAGノードリストをDAGパス長（階層の深さ）でソートするためのキー関数。</p>
 <p><a class="reference internal" href="#cymel.core.cyobjects.node_c.keyForBreadthFirst" title="cymel.core.cyobjects.node_c.keyForBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForBreadthFirst</span></code></a> に似ているが、それよりも単純で、
 同じパス長のノードの順序が保証されない。</p>
-<p>DAGノードなら
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code> 派生オブジェクトなら
 <a class="reference internal" href="classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html#cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pathLength</span></code></a>
 の結果を、そうでなければ 0 を返す。</p>
 <dl class="field-list simple">
@@ -193,7 +193,7 @@
         <li class="right" >
           <a href="classes/cymel.core.cyobjects.node.Node.html" title="class cymel.core.cyobjects.node.Node"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.34.2026072100 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.core.cyobjects.node_c</a></li> 
       </ul>

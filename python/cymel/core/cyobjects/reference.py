@@ -9,7 +9,7 @@ from __future__ import print_function
 from ...common import *
 from ..typeregistry import nodetypes, _FIX_SLOTS
 from ...utils.namespace import _mayaNS, RelativeNamespace
-from .cyobject import CyObject
+from .cyobject import CyObject, BIT_DAGNODE
 import maya.api.OpenMaya as _api2
 import itertools
 
@@ -254,7 +254,7 @@ class Reference(nodetypes.parentBasicNodeClass('reference')):
             """
             results = _safe_call(_referenceQuery, None, self, n=True, dp=True) or EMPTY_TUPLE
             results = [CyObject(x) for x in results]
-            results.extend(_from_iterable([x.instances(True) for x in results if x.isDagNode()]))
+            results.extend(_from_iterable([x.instances(True) for x in results if x.TYPE_BITS & BIT_DAGNODE]))
             return results
 
         def containsNode(self, node):
@@ -271,7 +271,8 @@ class Reference(nodetypes.parentBasicNodeClass('reference')):
             except:
                 return False
 
-            if node.isDagNode():
+            # DagNode のメソッドを使うため上位の抽象タイプを除外しなければならず isDagNode() は使えない。
+            if node.TYPE_BITS & BIT_DAGNODE:
                 if node.instanceIndex():
                     node = node.instance(0)
                 name = node.name_()
@@ -294,7 +295,8 @@ class Reference(nodetypes.parentBasicNodeClass('reference')):
             if not names:
                 return False
 
-            if node.isDagNode():
+            # DagNode のメソッドを使うため上位の抽象タイプを除外しなければならず isDagNode() は使えない。
+            if node.TYPE_BITS & BIT_DAGNODE:
                 if node.instanceIndex():
                     node = node.instance(0)
                 name = node.name_()

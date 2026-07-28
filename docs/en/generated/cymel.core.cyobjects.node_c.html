@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.core.cyobjects.node_c &#8212; cymel 0.34.2026072100 documentation</title>
+    <title>cymel.core.cyobjects.node_c &#8212; cymel 0.35.2026072800 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
-    <script src="../_static/documentation_options.js?v=61ba9724"></script>
+    <script src="../_static/documentation_options.js?v=770e58b9"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="classes/cymel.core.cyobjects.node.Node.html" title="class cymel.core.cyobjects.node.Node"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.34.2026072100 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.core.cyobjects.node_c</a></li> 
       </ul>
@@ -59,13 +59,13 @@
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.keyForBreadthFirst" title="cymel.core.cyobjects.node_c.keyForBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForBreadthFirst</span></code></a>(node)</p></td>
-<td><p>Key function for breadth-first sorting of the node list in the DAG hierarchy.</p></td>
+<td><p>Key function for breadth-first sorting of DAG node list in DAG hierarchy.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.keyForDepthFirst" title="cymel.core.cyobjects.node_c.keyForDepthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForDepthFirst</span></code></a>(node)</p></td>
-<td><p>Key function for sorting the node list by DAG hierarchy depth first.</p></td>
+<td><p>Key function for sorting the DAG node list by DAG hierarchy depth first.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.cyobjects.node_c.keyForPathLength" title="cymel.core.cyobjects.node_c.keyForPathLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForPathLength</span></code></a>(node)</p></td>
-<td><p>Key function to sort the node list by DAG path length (hierarchy depth).</p></td>
+<td><p>Key function to sort DAG node list by DAG path length (hierarchy depth).</p></td>
 </tr>
 </tbody>
 </table>
@@ -73,8 +73,8 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.node_c.keyForBreadthFirst">
 <span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.node_c.</span></span><span class="sig-name descname"><span class="pre">keyForBreadthFirst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.keyForBreadthFirst" title="Link to this definition">¶</a></dt>
-<dd><p>Key function for breadth-first sorting of the node list in the DAG hierarchy.</p>
-<p>If it is a DAG node, it returns the result of <a class="reference internal" href="classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html#cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lengthAndSiblingIndices</span></code></a>, otherwise it returns 0 and an empty list.</p>
+<dd><p>Key function for breadth-first sorting of DAG node list in DAG hierarchy.</p>
+<p>If it is a <code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code> derived object, returns the result of <a class="reference internal" href="classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html#cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.lengthAndSiblingIndices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lengthAndSiblingIndices</span></code></a>, otherwise returns 0 and an empty list.</p>
 <p>If you don’t mind that the order of nodes with the same path length is not guaranteed, using <a class="reference internal" href="#cymel.core.cyobjects.node_c.keyForPathLength" title="cymel.core.cyobjects.node_c.keyForPathLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForPathLength</span></code></a> will make processing a little easier.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -89,8 +89,8 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.node_c.keyForDepthFirst">
 <span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.node_c.</span></span><span class="sig-name descname"><span class="pre">keyForDepthFirst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.keyForDepthFirst" title="Link to this definition">¶</a></dt>
-<dd><p>Key function for sorting the node list by DAG hierarchy depth first.</p>
-<p>Returns the result of <a class="reference internal" href="classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">siblingIndices</span></code></a> if it is a DAG node, otherwise returns an empty list.</p>
+<dd><p>Key function for sorting the DAG node list by DAG hierarchy depth first.</p>
+<p>Returns the result of <a class="reference internal" href="classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html#cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.siblingIndices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">siblingIndices</span></code></a> if it is a <code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code> derived object, otherwise returns an empty list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="classes/cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a>) – Node to inspect.</p>
@@ -104,9 +104,9 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cymel.core.cyobjects.node_c.keyForPathLength">
 <span class="sig-prename descclassname"><span class="pre">cymel.core.cyobjects.node_c.</span></span><span class="sig-name descname"><span class="pre">keyForPathLength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.cyobjects.node_c.keyForPathLength" title="Link to this definition">¶</a></dt>
-<dd><p>Key function to sort the node list by DAG path length (hierarchy depth).</p>
+<dd><p>Key function to sort DAG node list by DAG path length (hierarchy depth).</p>
 <p>Similar to <a class="reference internal" href="#cymel.core.cyobjects.node_c.keyForBreadthFirst" title="cymel.core.cyobjects.node_c.keyForBreadthFirst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForBreadthFirst</span></code></a>, but simpler and does not guarantee the ordering of nodes with the same path length.</p>
-<p>Returns the result of <a class="reference internal" href="classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html#cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pathLength</span></code></a> if it is a DAG node, otherwise returns 0.</p>
+<p>Returns the result of <a class="reference internal" href="classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html#cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.pathLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pathLength</span></code></a> if it is a <code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code> derived object, otherwise returns 0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="classes/cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a>) – Node to inspect.</p>
@@ -184,7 +184,7 @@
         <li class="right" >
           <a href="classes/cymel.core.cyobjects.node.Node.html" title="class cymel.core.cyobjects.node.Node"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.34.2026072100 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.core.cyobjects.node_c</a></li> 
       </ul>
