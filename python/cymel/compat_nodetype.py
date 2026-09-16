@@ -36,8 +36,8 @@ except:
 # NOTE: 2026 では多くの汎用ノードの doubleLinear 型が double 型となり、ノードタイプ名に DL が付けられた。
 # - 元のノードタイプ名の多くは double 版として存続している。
 # - 元のノードタイプ名で廃止されたものは以下の3点。
-#   - addDoubleLinear -> addDL になり add が追加された
-#   - multDoubleLinear -> multDL になり mult が追加された
+#   - addDoubleLinear -> addDL になり double 版は追加されなかった
+#   - multDoubleLinear -> multDL になり double 版は追加されなかった
 #   - pointMatrixMult -> pointMatrixMultDL になり double 版は追加されなかった
 #
 MAYA2026_DL_TO_OLD = {
@@ -45,6 +45,7 @@ MAYA2026_DL_TO_OLD = {
     'acosDL': 'acos',
     'addDL': 'addDoubleLinear',
     'angleBetweenDL': 'angleBetween',
+    #'animBlendNodeAdditiveDL': 'animBlendNodeAdditiveDL',  # 古くからunitless版とDL版があり、この変更とは無関係。
     'asinDL': 'asin',
     'atan2DL': 'atan2',
     'atanDL': 'atan',
