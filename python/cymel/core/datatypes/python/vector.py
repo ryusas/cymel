@@ -22,6 +22,8 @@ _XYZ_AXES = (AXIS_X, AXIS_Y, AXIS_Z)
 _TOLERANCE = _MV.kTolerance
 _MP_Zero = _MP.kOrigin
 
+_2PI = PI + PI
+
 
 #------------------------------------------------------------------------------
 class Vector(object):
@@ -869,7 +871,7 @@ class Vector(object):
         else:
             angle = acos(dot)
             s = 1. / sin(angle)  # 1. / sqrt(1. - dot * dot)
-            ta = t * angle + spin * PI
+            ta = t * (angle + spin * _2PI)
             t = s * sin(ta)
             s *= sin(angle - ta)
 
