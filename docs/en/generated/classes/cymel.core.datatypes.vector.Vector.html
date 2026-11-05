@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.datatypes.vector.Vector &#8212; cymel 0.35.2026072800 documentation</title>
+    <title>class cymel.core.datatypes.vector.Vector &#8212; cymel 0.37.2026110500 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
-    <script src="../../_static/documentation_options.js?v=770e58b9"></script>
+    <script src="../../_static/documentation_options.js?v=4499b16a"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="cymel.core.datatypes.vector.ImmutableVector.html" title="class cymel.core.datatypes.vector.ImmutableVector"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.vector.html" accesskey="U">cymel.core.datatypes.vector</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.vector.Vector</a></li> 
@@ -53,11 +53,11 @@
 </map><dl class="py class">
 <dt class="sig sig-object py" id="cymel.core.datatypes.vector.Vector">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.datatypes.vector.</span></span><span class="sig-name descname"><span class="pre">Vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.vector.Vector" title="Link to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#object" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>3D vector class.</p>
 <p>There is no need to use coordinates and direction vectors differently like the Maya API’s <a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MPoint.html">MPoint</a> and <a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MVector.html">MVector</a>; they can be handled in the same way.</p>
 <p>:mayaapi2:Like <code class="xref py py-obj docutils literal notranslate"><span class="pre">MPoint</span></code>, it has w that can represent homogeneous coordinates, but if w is 1, it behaves as a sequence of length 3. In that case, w cannot be referenced by index specification, but only as an attribute.</p>
-<p>If w is not 1, it behaves as a sequence of length 4. Also, only in that case can you check with <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/functions.html#repr" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">repr</span></code></a>.</p>
+<p>If w is not 1, it behaves as a sequence of length 4. Also, only in that case can you check with <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#repr" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">repr</span></code></a>.</p>
 <p>Multiplying by <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> allows translation like <a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MPoint.html">MPoint</a>, but to convert without translation like <a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MVector.html">MVector</a>, you can use the <a class="reference internal" href="#cymel.core.datatypes.vector.Vector.xform3" title="cymel.core.datatypes.vector.Vector.xform3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xform3</span></code></a> method without setting w to 0.</p>
 <p>In other words, unless you use homogeneous coordinate representation, it is best to always use w as 1.</p>
 <p>The following values ​​can be specified in the constructor.</p>
@@ -72,7 +72,7 @@
 <p class="admonition-title">Note</p>
 <p>The reason why w behaves in this special way is to ensure interchangeability with other objects such as APIs.</p>
 <p>Unless w is explicitly set to something other than 1, it can also be passed to something that does not accept sequences of length 4, such as the <a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MVector.html">MVector</a> constructor.</p>
-<p>Also, if you specify a value other than 1 for w, that information will be properly inherited even when exchanging with <a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MPoint.html">MPoint</a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>.</p>
+<p>Also, if you specify a value other than 1 for w, that information will be properly inherited even when exchanging with <a class="extlink-mayaapi2 reference external" href="http://docs.autodesk.com/MAYAUL/2013/ENU/Maya-API-Documentation/python-api/MPoint.html">MPoint</a> or <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>.</p>
 </div>
 <p class="rubric">Methods:</p>
 <table class="autosummary longtable docutils align-default">
@@ -302,7 +302,7 @@
 <dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – The other vector.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -343,7 +343,7 @@
 <dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – The other position.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -357,7 +357,7 @@
 <dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – The other position.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -370,7 +370,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">Number</span></code>) – Denominator vector or scalar.</p></li>
-<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance to avoid division by zero.</p></li>
+<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Tolerance to avoid division by zero.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -390,7 +390,7 @@
 <dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – The other vector.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -405,7 +405,7 @@
 <dd class="field-odd"><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – The other vector.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -431,10 +431,10 @@
 <p>If it cannot be determined because it is almost a zero vector, it will be None.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>asId</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Get the result by ID.</p>
+<dd class="field-odd"><p><strong>asId</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Get the result by ID.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> or None</p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> or None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -484,7 +484,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">Number</span></code>) – Denominator vector or scalar.</p></li>
-<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance to avoid division by zero.</p></li>
+<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Tolerance to avoid division by zero.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -526,11 +526,11 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Vector to compare.</p></li>
-<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance.</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Tolerance.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -547,11 +547,11 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Vector to compare.</p></li>
-<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance.</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Tolerance.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -562,10 +562,10 @@
 <dd><p>Whether the 3D vector is approximately zero.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance.</p>
+<dd class="field-odd"><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Tolerance.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -590,7 +590,7 @@
 <dd><p>Get the length of a 3D vector.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -601,7 +601,7 @@
 <dd><p>Obtain the square of the length of a 3D vector.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -612,10 +612,10 @@
 <dd><p>Get the axis ID of the element with the largest absolute value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>noSign</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Get the axis ID (0-2) without the sign bit.</p>
+<dd class="field-odd"><p><strong>noSign</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Get the axis ID (0-2) without the sign bit.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -626,10 +626,10 @@
 <dd><p>Get the axis ID of the element with the smallest absolute value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>noSign</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Get the axis ID (0-2) without the sign bit.</p>
+<dd class="field-odd"><p><strong>noSign</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Get the axis ID (0-2) without the sign bit.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -756,7 +756,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Direction to face.</p></li>
-<li><p><strong>factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The amount of rotation, with the amount of full orientation being 1.0.</p></li>
+<li><p><strong>factor</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – The amount of rotation, with the amount of full orientation being 1.0.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -793,8 +793,8 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>p0</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – starting point.</p></li>
 <li><p><strong>p1</strong> (<a class="reference internal" href="#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – the last stop.</p></li>
-<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Interpolation factor between 0.0 and 1.0. You can also specify outside the range.</p></li>
-<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Spin value. The default 0 is the shortest direction, -1 is the opposite direction, and +1 and -1 make extra laps.</p></li>
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Interpolation factor between 0.0 and 1.0. You can also specify outside the range.</p></li>
+<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Spin value. The default 0 is the shortest direction, -1 is the opposite direction, and +1 and -1 make extra laps.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -975,7 +975,7 @@
         <li class="right" >
           <a href="cymel.core.datatypes.vector.ImmutableVector.html" title="class cymel.core.datatypes.vector.ImmutableVector"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.vector.html" >cymel.core.datatypes.vector</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.vector.Vector</a></li> 
@@ -983,7 +983,7 @@
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>

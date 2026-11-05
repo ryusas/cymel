@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.compat_nodetype &#8212; cymel 0.35.2026072800 documentation</title>
+    <title>cymel.compat_nodetype &#8212; cymel 0.37.2026110500 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
-    <script src="../_static/documentation_options.js?v=770e58b9"></script>
+    <script src="../_static/documentation_options.js?v=4499b16a"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="cymel.all.html" title="cymel.all"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.compat_nodetype</a></li> 
       </ul>
@@ -51,7 +51,7 @@
 <p>You can get the correct name string by specifying the Maya node type name in the form of an attribute access for the unique instance <code class="xref py py-obj docutils literal notranslate"><span class="pre">compat_nodetype_map</span></code>.</p>
 <ul class="simple">
 <li><p>Basically, you can get the correct name for that version from the new name after the change.</p></li>
-<li><p>If you specify a node type whose name has been changed and the original name has been replaced with another node, an <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AttributeError" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeError</span></code></a> will occur, meaning that the old and new types are not compatible.</p></li>
+<li><p>If you specify a node type whose name has been changed and the original name has been replaced with another node, an <a class="reference external" href="https://docs.python.org/3/builtins/exceptions.html#AttributeError" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeError</span></code></a> will occur, meaning that the old and new types are not compatible.</p></li>
 <li><p>Although the behavior is inconsistent, if you specify a node type name that is changed and the original name is obsolete, you will get the new correct name.</p></li>
 <li><p>If none of the above apply, you will get what you specified as is.</p></li>
 </ul>
@@ -142,14 +142,14 @@
         <li class="right" >
           <a href="cymel.all.html" title="cymel.all"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.compat_nodetype</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>

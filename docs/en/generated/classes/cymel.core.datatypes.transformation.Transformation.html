@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.datatypes.transformation.Transformation &#8212; cymel 0.35.2026072800 documentation</title>
+    <title>class cymel.core.datatypes.transformation.Transformation &#8212; cymel 0.37.2026110500 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
-    <script src="../../_static/documentation_options.js?v=770e58b9"></script>
+    <script src="../../_static/documentation_options.js?v=4499b16a"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="cymel.core.datatypes.transformation.ImmutableTransformation.html" title="class cymel.core.datatypes.transformation.ImmutableTransformation"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.transformation.html" accesskey="U">cymel.core.datatypes.transformation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.transformation.Transformation</a></li> 
@@ -53,7 +53,7 @@
 </map><dl class="py class">
 <dt class="sig sig-object py" id="cymel.core.datatypes.transformation.Transformation">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.datatypes.transformation.</span></span><span class="sig-name descname"><span class="pre">Transformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.transformation.Transformation" title="Link to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#object" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Transformation information class.</p>
 <p>Maya’s matrix data type attribute can store transformation information in addition to the matrix value itself. This class supports this, and if the plug has data, you can directly <code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code> this object (depending on the information you have, you will get <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a>, <a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a>, or None). You can also <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug.set" title="cymel.core.cyobjects.plug.Plug.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a> this object directly into the plug.</p>
 <p>Furthermore, this class has the functionality to compose transformation elements into a matrix and decompose a matrix into transformation elements. Operations are performed automatically through normal python object attribute access. In addition to attributes such as matrix and quaternion, transformation elements have attributes with exactly the same name and corresponding attributes as the <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> node attributes.</p>
@@ -74,8 +74,8 @@
 <p>Auxiliary attributes that qualify the behavior of the base transformation element.</p>
 <p>It is not possible to directly decompose the matrix into these values, and it is positioned as an auxiliary attribute for decomposition and composition.</p>
 <ul class="simple">
-<li><p>rotateOrder (ro) (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>)</p></li>
-<li><p>segmentScaleCompensate (ssc) (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>)</p></li>
+<li><p>rotateOrder (ro) (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>)</p></li>
+<li><p>segmentScaleCompensate (ssc) (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>)</p></li>
 <li><p>inverseScale (is) (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p></li>
 <li><p>jointOrient (jo) (<a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>)</p></li>
 <li><p>rotateAxis (ra) (<a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>)</p></li>
@@ -114,7 +114,7 @@
 </ul>
 </li>
 <li><p>Attribute values ​​can be specified as long or short names in constructor keyword arguments.</p></li>
-<li><p>When setting an attribute value, you can set the value obtained by <a class="reference internal" href="cymel.core.cyobjects.plug_c.Plug_c.html#cymel.core.cyobjects.plug_c.Plug_c.get" title="cymel.core.cyobjects.plug_c.Plug_c.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a> from <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> without changing it to the original type. For example, the type of the rotateAxis attribute is <a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>, but setting a 3-value <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> of Radians will convert it to a Quaternion appropriately.</p></li>
+<li><p>When setting an attribute value, you can set the value obtained by <a class="reference internal" href="cymel.core.cyobjects.plug_c.Plug_c.html#cymel.core.cyobjects.plug_c.Plug_c.get" title="cymel.core.cyobjects.plug_c.Plug_c.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a> from <a class="reference internal" href="cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> without changing it to the original type. For example, the type of the rotateAxis attribute is <a class="reference internal" href="cymel.core.datatypes.quaternion.Quaternion.html#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>, but setting a 3-value <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> of Radians will convert it to a Quaternion appropriately.</p></li>
 <li><p>Can be multiplied by <a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> or <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a>.</p></li>
 <li><p>When evaluated as a sequence, it takes the form of a <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/setAttr.html">setAttr</a> command for a matrix data type attribute.</p></li>
 </ul>
@@ -148,7 +148,7 @@
 <dd><p>Get the specified reference position.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>at</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Which attribute to get the corresponding position.  - If it is 0, it is the origin (zero). - If 1, the position of the translate (attribute value itself). - If 2, rotatePivot position. - 3 is the scalePivot position. - If it is 4 or more, it is the matrix position.</p>
+<dd class="field-odd"><p><strong>at</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Which attribute to get the corresponding position.  - If it is 0, it is the origin (zero). - If 1, the position of the translate (attribute value itself). - If 2, rotatePivot position. - 3 is the scalePivot position. - If it is 4 or more, it is the matrix position.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -159,7 +159,7 @@
 <dd><p>Clear transformation qualification attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Transformation qualified attribute name.</p>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) – Transformation qualified attribute name.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -177,7 +177,7 @@
 <p>The attribute name part of the command syntax is “%s”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -188,10 +188,10 @@
 <dd><p>Does it have a value for a qualified attribute that is not a default value?</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Transformation qualified attribute name.</p>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) – Transformation qualified attribute name.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -204,11 +204,11 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>v</strong> – The value to compare. <a class="reference internal" href="#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> or <a class="reference internal" href="cymel.core.datatypes.matrix.Matrix.html#cymel.core.datatypes.matrix.Matrix" title="cymel.core.datatypes.matrix.Matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Matrix</span></code></a> can be specified.</p></li>
-<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance.</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Tolerance.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -288,7 +288,7 @@
         <li class="right" >
           <a href="cymel.core.datatypes.transformation.ImmutableTransformation.html" title="class cymel.core.datatypes.transformation.ImmutableTransformation"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.transformation.html" >cymel.core.datatypes.transformation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.transformation.Transformation</a></li> 
@@ -296,7 +296,7 @@
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>

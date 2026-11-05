@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.datatypes.quaternion.Quaternion &#8212; cymel 0.35.2026072800 documentation</title>
+    <title>class cymel.core.datatypes.quaternion.Quaternion &#8212; cymel 0.37.2026110500 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
-    <script src="../../_static/documentation_options.js?v=770e58b9"></script>
+    <script src="../../_static/documentation_options.js?v=4499b16a"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html" title="class cymel.core.datatypes.quaternion.ImmutableQuaternion"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" accesskey="U">cymel.core.datatypes.quaternion</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.quaternion.Quaternion</a></li> 
@@ -53,7 +53,7 @@
 </map><dl class="py class">
 <dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.core.datatypes.quaternion.</span></span><span class="sig-name descname"><span class="pre">Quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion" title="Link to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#object" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>quaternion class.</p>
 <p>The following values ​​can be specified in the constructor.</p>
 <ul class="simple">
@@ -85,7 +85,7 @@
 <td><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="cymel.core.datatypes.quaternion.Quaternion.asDegrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asDegrees</span></code></a>([order, correct])</p></td>
-<td><p>Obtain the Euler angle rotation as a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> in degrees.</p></td>
+<td><p>Obtain the Euler angle rotation as a <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> in degrees.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asE" title="cymel.core.datatypes.quaternion.Quaternion.asE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asE</span></code></a>([order, correct])</p></td>
 <td><p>Alternative name for <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asEulerRotation" title="cymel.core.datatypes.quaternion.Quaternion.asEulerRotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asEulerRotation</span></code></a>.</p></td>
@@ -272,11 +272,11 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>naxis</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – If you know the rotation axis, specify it. It must be parallel to the vector given by <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.asAxisAngle" title="cymel.core.datatypes.quaternion.Quaternion.asAxisAngle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asAxisAngle</span></code></a>. A reversed axis can also be specified, in which case the reversed angle will be obtained.</p></li>
-<li><p><strong>bound</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to obtain angles within ±π.</p></li>
+<li><p><strong>bound</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to obtain angles within ±π.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -287,7 +287,7 @@
 <dd><p>Obtain as axis vector and rotation angle.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -299,7 +299,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, the decomposition is performed by bending and then twisting when viewed from the top of the hierarchy, but if you specify True, the decomposition is performed by twisting and then bending.</p></li>
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, the decomposition is performed by bending and then twisting when viewed from the top of the hierarchy, but if you specify True, the decomposition is performed by twisting and then bending.</p></li>
 <li><p><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Bone direction vector.</p></li>
 </ul>
 </dd>
@@ -318,16 +318,16 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="cymel.core.datatypes.quaternion.Quaternion.asDegrees">
 <span class="sig-name descname"><span class="pre">asDegrees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.core.datatypes.quaternion.Quaternion.asDegrees" title="Link to this definition">¶</a></dt>
-<dd><p>Obtain the Euler angle rotation as a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> in degrees.</p>
+<dd><p>Obtain the Euler angle rotation as a <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> in degrees.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – The rotating order you want to get.</p></li>
-<li><p><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – When the obtained Euler angle rotation value is requaternized, it is corrected so that it matches the original sign. Equivalent to <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reverseDirection</span></code></a> when inappropriate.</p></li>
+<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – The rotating order you want to get.</p></li>
+<li><p><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – When the obtained Euler angle rotation value is requaternized, it is corrected so that it matches the original sign. Equivalent to <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reverseDirection</span></code></a> when inappropriate.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -353,8 +353,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – The rotating order you want to get.</p></li>
-<li><p><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – When the obtained Euler angle rotation value is requaternized, it is corrected so that it matches the original sign. Equivalent to <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reverseDirection</span></code></a> when inappropriate.</p></li>
+<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – The rotating order you want to get.</p></li>
+<li><p><strong>correct</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – When the obtained Euler angle rotation value is requaternized, it is corrected so that it matches the original sign. Equivalent to <a class="reference internal" href="cymel.core.datatypes.eulerrotation.EulerRotation.html#cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection" title="cymel.core.datatypes.eulerrotation.EulerRotation.reverseDirection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EulerRotation.reverseDirection</span></code></a> when inappropriate.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -422,7 +422,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, the decomposition is performed by bending and then twisting when viewed from the top of the hierarchy, but if you specify True, the decomposition is performed by twisting and then bending.</p></li>
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, the decomposition is performed by bending and then twisting when viewed from the top of the hierarchy, but if you specify True, the decomposition is performed by twisting and then bending.</p></li>
 <li><p><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Bone direction vector.</p></li>
 <li><p><strong>upv</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Bone up vector.</p></li>
 </ul>
@@ -441,7 +441,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>axisOri</strong> – Specify the reference axis as a rotation (quaternion). The X-axis of that space corresponds to the bone direction, and the Y-axis corresponds to the up direction. The default None is equivalent to a unit quaternion.</p></li>
-<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, the decomposition is performed by bending and then twisting when viewed from the top of the hierarchy, but if you specify True, the decomposition is performed by twisting and then bending.</p></li>
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, the decomposition is performed by bending and then twisting when viewed from the top of the hierarchy, but if you specify True, the decomposition is performed by twisting and then bending.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -508,7 +508,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Denominator quaternion.</p></li>
-<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance to avoid division by zero.</p></li>
+<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Tolerance to avoid division by zero.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -526,7 +526,7 @@
 <dd class="field-odd"><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – The other quaternion.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -550,7 +550,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>vec</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 3d vector</p></li>
-<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – w value</p></li>
+<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – w value</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -567,7 +567,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>v</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Denominator quaternion.</p></li>
-<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance to avoid division by zero.</p></li>
+<li><p><strong>pre</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Tolerance to avoid division by zero.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -621,11 +621,11 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – The quaternion to compare.</p></li>
-<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance.</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Tolerance.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -642,10 +642,10 @@
 <p>Equivalent to comparing a unit quaternion with <a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent" title="cymel.core.datatypes.quaternion.Quaternion.isSignedEquivalent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isSignedEquivalent</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance.</p>
+<dd class="field-odd"><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Tolerance.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -659,11 +659,11 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – The quaternion to compare.</p></li>
-<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Tolerance.</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Tolerance.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -674,7 +674,7 @@
 <dd><p>Get the absolute value of a quaternion.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -685,7 +685,7 @@
 <dd><p>Obtains the square of the absolute value of a quaternion.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -721,7 +721,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>rhv</strong> – [roll, bendH, bendV]</p></li>
-<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, it bends and then twists when viewed from the top of the hierarchy, but if you specify True, the composition will twist and then bend.</p></li>
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, it bends and then twists when viewed from the top of the hierarchy, but if you specify True, the composition will twist and then bend.</p></li>
 <li><p><strong>aim</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Bone direction vector.</p></li>
 <li><p><strong>upv</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – Bone up vector.</p></li>
 </ul>
@@ -741,7 +741,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>rhv</strong> – [roll, bendH, bendV]</p></li>
 <li><p><strong>axisOri</strong> – Specify the reference axis as a rotation (quaternion). The X-axis of that space corresponds to the bone direction, and the Y-axis corresponds to the up direction. The default None is equivalent to a unit quaternion.</p></li>
-<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, it bends and then twists when viewed from the top of the hierarchy, but if you specify True, the composition will twist and then bend.</p></li>
+<li><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to reverse the order of bending/twisting. By default, it bends and then twists when viewed from the top of the hierarchy, but if you specify True, the composition will twist and then bend.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -849,8 +849,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>theta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – angle.</p></li>
-<li><p><strong>correctAxis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the current w is negative (has a rotation angle greater than π), set the angle after inverting the axis.</p></li>
+<li><p><strong>theta</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – angle.</p></li>
+<li><p><strong>correctAxis</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – If the current w is negative (has a rotation angle greater than π), set the angle after inverting the axis.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -876,7 +876,7 @@
 <dd><p>Set the rotation angle around the X axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – angle.</p>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – angle.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
@@ -890,7 +890,7 @@
 <dd><p>Set the rotation angle around the Y axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – angle.</p>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – angle.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
@@ -904,7 +904,7 @@
 <dd><p>Set the rotation angle around the Z axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – angle.</p>
+<dd class="field-odd"><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – angle.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a> (self)</p>
@@ -942,7 +942,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>vec</strong> (<a class="reference internal" href="cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – 3d vector</p></li>
-<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – w value</p></li>
+<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – w value</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -960,8 +960,8 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>p</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Starting quaternion.</p></li>
 <li><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Terminal quaternion.</p></li>
-<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Interpolation factor between 0.0 and 1.0. You can also specify outside the range.</p></li>
-<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Spin value. The default 0 is the shortest direction, -1 is the opposite direction, and +1 and -1 make extra laps.</p></li>
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Interpolation factor between 0.0 and 1.0. You can also specify outside the range.</p></li>
+<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Spin value. The default 0 is the shortest direction, -1 is the opposite direction, and +1 and -1 make extra laps.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -977,8 +977,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Interpolation factor between 0.0 and 1.0. You can also specify outside the range.</p></li>
-<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Spin value. The default 0 means forward direction, -1 means backward direction, and +1 or -1 means extra laps.</p></li>
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Interpolation factor between 0.0 and 1.0. You can also specify outside the range.</p></li>
+<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Spin value. The default 0 means forward direction, -1 means backward direction, and +1 or -1 means extra laps.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -998,8 +998,8 @@
 <li><p><strong>a</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Control point on the starting point side.</p></li>
 <li><p><strong>b</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Control point on the end point side.</p></li>
 <li><p><strong>q</strong> (<a class="reference internal" href="#cymel.core.datatypes.quaternion.Quaternion" title="cymel.core.datatypes.quaternion.Quaternion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quaternion</span></code></a>) – Terminal quaternion.</p></li>
-<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Interpolation factor between 0.0 and 1.0. You can also specify outside the range.</p></li>
-<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Spin value. The default 0 means forward direction, -1 means backward direction, and +1 or -1 means extra laps.</p></li>
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Interpolation factor between 0.0 and 1.0. You can also specify outside the range.</p></li>
+<li><p><strong>spin</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Spin value. The default 0 means forward direction, -1 means backward direction, and +1 or -1 means extra laps.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -1154,7 +1154,7 @@
         <li class="right" >
           <a href="cymel.core.datatypes.quaternion.ImmutableQuaternion.html" title="class cymel.core.datatypes.quaternion.ImmutableQuaternion"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.datatypes.quaternion.html" >cymel.core.datatypes.quaternion</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.datatypes.quaternion.Quaternion</a></li> 
@@ -1162,7 +1162,7 @@
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>

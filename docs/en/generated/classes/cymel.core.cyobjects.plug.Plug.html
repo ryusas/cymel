@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.cyobjects.plug.Plug &#8212; cymel 0.35.2026072800 documentation</title>
+    <title>class cymel.core.cyobjects.plug.Plug &#8212; cymel 0.37.2026110500 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
-    <script src="../../_static/documentation_options.js?v=770e58b9"></script>
+    <script src="../../_static/documentation_options.js?v=4499b16a"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.plug.html" title="cymel.core.cyobjects.plug"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.plug.html" accesskey="U">cymel.core.cyobjects.plug</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.plug.Plug</a></li> 
@@ -173,10 +173,10 @@
 <p>A list of processed plugs arranged from bottom to top is returned (if the plug already exists, it will be an empty list).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specifies the index to check when it is multi. Can be omitted when itself is an element (existence is unknown). The higher rank will be checked regardless of whether it is omitted or not.</p>
+<dd class="field-odd"><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Specifies the index to check when it is multi. Can be omitted when itself is an element (existence is unknown). The higher rank will be checked regardless of whether it is omitted or not.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -188,8 +188,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>dk</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include driven keys as well.</p></li>
-<li><p><strong>direct</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get only directly connected animCurves. By default, the optimal animCurve is obtained, taking into account <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/pairBlend.html">pairBlend</a>, <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/mute.html">mute</a>, and the state of the animation layer (layer selection, Solo setting, etc.).</p></li>
+<li><p><strong>dk</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to include driven keys as well.</p></li>
+<li><p><strong>direct</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to get only directly connected animCurves. By default, the optimal animCurve is obtained, taking into account <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/pairBlend.html">pairBlend</a>, <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/mute.html">mute</a>, and the state of the animation layer (layer selection, Solo setting, etc.).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -205,10 +205,10 @@
 <p>If you have multiple animCurves depending on the animation layer, you will get them all.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>dk</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include driven keys as well.</p>
+<dd class="field-odd"><p><strong>dk</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to include driven keys as well.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -221,12 +221,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>selected</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Limited to selected layers. However, only the base layer is obtained by default regardless of the state.</p></li>
-<li><p><strong>exact</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If selected=True, whether to limit the base layer to the selected state as well.</p></li>
+<li><p><strong>selected</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Limited to selected layers. However, only the base layer is obtained by default regardless of the state.</p></li>
+<li><p><strong>exact</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – If selected=True, whether to limit the base layer to the selected state as well.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -237,10 +237,10 @@
 <dd><p>Whether it is a member of the specified animation layer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>layer</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Animation layer name (either a string or something that evaluates to a string and becomes a node name). The base layer cannot be specified because it has no substance.</p>
+<dd class="field-odd"><p><strong>layer</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) – Animation layer name (either a string or something that evaluates to a string and becomes a node name). The base layer cannot be specified because it has no substance.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -255,9 +255,9 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>src</strong> (<a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a>) – Input source attributes.</p></li>
-<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Connect by avoiding error factors such as other connections or locks.</p></li>
-<li><p><strong>l</strong><strong>|</strong><strong>lock</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Lock after connecting.</p></li>
-<li><p><strong>na</strong><strong>|</strong><strong>nextAvailable</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Connect to the next available index. Can be used not only for isIndexMatters setting. The connected element plug is returned.</p></li>
+<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Connect by avoiding error factors such as other connections or locks.</p></li>
+<li><p><strong>l</strong><strong>|</strong><strong>lock</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Lock after connecting.</p></li>
+<li><p><strong>na</strong><strong>|</strong><strong>nextAvailable</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Connect to the next available index. Can be used not only for isIndexMatters setting. The connected element plug is returned.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -303,8 +303,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>unitless</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Generate animCurve for driven keys.</p></li>
-<li><p><strong>cls</strong> – The class of the object you want to get. Normally you can leave it as the default. If you specify <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, you can get the name as is.</p></li>
+<li><p><strong>unitless</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Generate animCurve for driven keys.</p></li>
+<li><p><strong>cls</strong> – The class of the object you want to get. Normally you can leave it as the default. If you specify <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, you can get the name as is.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -319,7 +319,7 @@
 <dd><p>Delete dynamic attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Delete while avoiding error factors such as existing connections or being locked.</p>
+<dd class="field-odd"><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Delete while avoiding error factors such as existing connections or being locked.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -334,12 +334,12 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>src</strong> (<a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a>) – Input plug to disconnect. Optional.</p></li>
-<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Even if it is locked, disconnect as much as possible to avoid errors (temporarily unlock it and restore it).</p></li>
-<li><p><strong>na</strong><strong>|</strong><strong>nextAvailable</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – When multiplug and src are specified, searches for connected elements and disconnects them. If there is more than one, they are all disconnected and a list of them is returned. Can be used not only for isIndexMatters setting.</p></li>
+<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Even if it is locked, disconnect as much as possible to avoid errors (temporarily unlock it and restore it).</p></li>
+<li><p><strong>na</strong><strong>|</strong><strong>nextAvailable</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – When multiplug and src are specified, searches for connected elements and disconnects them. If there is more than one, they are all disconnected and a list of them is returned. Can be used not only for isIndexMatters setting.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> or <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -363,11 +363,11 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specifies the logical index to start with. If you specify a negative number, the last index of the existing element will be set to -1 and the position will be moved backwards. If omitted (None), the starting point of the existing element is used (the minimum index if step is positive, the maximum index if step is negative).</p></li>
-<li><p><strong>end</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specifies the ending logical index. What is actually retrieved is the position one position before this. If you specify a negative number, the last index of the existing element will be set to -1 and the position will be moved backwards. If omitted (None), the position will be one position beyond the end point of the existing element (if step is positive, the minimum index -1, if it is negative, the maximum index +1).</p></li>
-<li><p><strong>step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specify the number of index steps.</p></li>
-<li><p><strong>all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to get the element whether it exists or not. If infinite=True, all=True is also considered.</p></li>
-<li><p><strong>infinite</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Gets the element whether it exists or not, ignores end, and iterates infinitely. However, if step is negative, it will not be less than 0. Be careful of infinite loops if step is positive.</p></li>
+<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Specifies the logical index to start with. If you specify a negative number, the last index of the existing element will be set to -1 and the position will be moved backwards. If omitted (None), the starting point of the existing element is used (the minimum index if step is positive, the maximum index if step is negative).</p></li>
+<li><p><strong>end</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Specifies the ending logical index. What is actually retrieved is the position one position before this. If you specify a negative number, the last index of the existing element will be set to -1 and the position will be moved backwards. If omitted (None), the position will be one position beyond the end point of the existing element (if step is positive, the minimum index -1, if it is negative, the maximum index +1).</p></li>
+<li><p><strong>step</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Specify the number of index steps.</p></li>
+<li><p><strong>all</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to get the element whether it exists or not. If infinite=True, all=True is also considered.</p></li>
+<li><p><strong>infinite</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Gets the element whether it exists or not, ignores end, and iterates infinitely. However, if step is negative, it will not be less than 0. Be careful of infinite loops if step is positive.</p></li>
 </ul>
 </dd>
 </dl>
@@ -380,9 +380,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>evaluate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Evaluate multiplugs when collecting multielements.</p></li>
-<li><p><strong>connected</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – When collecting multiple elements, use connections as the basis.</p></li>
-<li><p><strong>checker</strong> (<em>callable</em>) – Specify a function that receives one plug and returns <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>. It does not descend to the lower layer from the point where it returns False.</p></li>
+<li><p><strong>evaluate</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Evaluate multiplugs when collecting multielements.</p></li>
+<li><p><strong>connected</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – When collecting multiple elements, use connections as the basis.</p></li>
+<li><p><strong>checker</strong> (<em>callable</em>) – Specify a function that receives one plug and returns <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>. It does not descend to the lower layer from the point where it returns False.</p></li>
 </ul>
 </dd>
 </dl>
@@ -409,17 +409,17 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>layer</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Animation layer to search for.  With the default None, the layer to which the plug belongs will be searched from top to bottom. Specifying “” (empty string) is synonymous with specifying a base layer.  If the plug does not belong to the specified layer, the default behavior is to search for the layers it belongs to from the top. In other words, like <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.animLayers" title="cymel.core.cyobjects.plug.Plug.animLayers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">animLayers</span></code></a>, they are obtained in the order of the layer editor.</p></li>
-<li><p><strong>selected</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Limit the search target layers to those in the selected state.  If layer is specified, filter when that layer is selected.  If layer is not specified, the layer is not selected, or the plug is not a member, the sequentially searched layers will be narrowed down to only those that are selected.</p></li>
-<li><p><strong>exact</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Modify layer and selected options.  If the default is False, if the plug is not a member of the specified layer, other layers and base layers will be searched in turn. Also, even if selected is specified, the selected state does not matter for the base layer that is the last result of sequentially searching layers.  Specifying True will result in strict behavior, and when layer is specified, None will be returned if the plug is not a member of it. Also, the selected flag will be checked for the last base layer as a result of sequentially searching layers.</p></li>
-<li><p><strong>best</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Gets the plug for the layer that is the target of keystrokes in its current state.</p></li>
-<li><p><strong>all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If True is specified, the return value will always be <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>.  Changes the behavior when layers are sequentially searched because layer is not specified, the layer is not a member of the specified layer, or the selected flag does not match. With the default False, depending on whether layer is None or “”, either the first found layer or the last base layer plug is returned, with top priority. If you specify True, plugs for all layers searched sequentially (narrowed down by the selected check) will be acquired.</p></li>
-<li><p><strong>asPair</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If set to True, a pair of <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> and its corresponding layer name will be returned.</p></li>
-<li><p><strong>allowNonLayer</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the plug only belongs to the base layer (not layer blended) and other switch-type nodes are sandwiched, you will get that input plug. <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/pairBlend.html">pairBlend</a> and <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/mute.html">mute</a> are assumed.</p></li>
+<li><p><strong>layer</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) – Animation layer to search for.  With the default None, the layer to which the plug belongs will be searched from top to bottom. Specifying “” (empty string) is synonymous with specifying a base layer.  If the plug does not belong to the specified layer, the default behavior is to search for the layers it belongs to from the top. In other words, like <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug.animLayers" title="cymel.core.cyobjects.plug.Plug.animLayers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">animLayers</span></code></a>, they are obtained in the order of the layer editor.</p></li>
+<li><p><strong>selected</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Limit the search target layers to those in the selected state.  If layer is specified, filter when that layer is selected.  If layer is not specified, the layer is not selected, or the plug is not a member, the sequentially searched layers will be narrowed down to only those that are selected.</p></li>
+<li><p><strong>exact</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Modify layer and selected options.  If the default is False, if the plug is not a member of the specified layer, other layers and base layers will be searched in turn. Also, even if selected is specified, the selected state does not matter for the base layer that is the last result of sequentially searching layers.  Specifying True will result in strict behavior, and when layer is specified, None will be returned if the plug is not a member of it. Also, the selected flag will be checked for the last base layer as a result of sequentially searching layers.</p></li>
+<li><p><strong>best</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Gets the plug for the layer that is the target of keystrokes in its current state.</p></li>
+<li><p><strong>all</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – If True is specified, the return value will always be <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>.  Changes the behavior when layers are sequentially searched because layer is not specified, the layer is not a member of the specified layer, or the selected flag does not match. With the default False, depending on whether layer is None or “”, either the first found layer or the last base layer plug is returned, with top priority. If you specify True, plugs for all layers searched sequentially (narrowed down by the selected check) will be acquired.</p></li>
+<li><p><strong>asPair</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – If set to True, a pair of <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> and its corresponding layer name will be returned.</p></li>
+<li><p><strong>allowNonLayer</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – If the plug only belongs to the base layer (not layer blended) and other switch-type nodes are sandwiched, you will get that input plug. <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/pairBlend.html">pairBlend</a> and <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/mute.html">mute</a> are assumed.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> or (<a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) or their <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> or (<a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a>, <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) or their <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -430,10 +430,10 @@
 <dd><p>Get a list of enum attribute name/value pairs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Reorder the pairs so that they are (value, name) instead of (name, value).</p>
+<dd class="field-odd"><p><strong>reverse</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Reorder the pairs so that they are (value, name) instead of (name, value).</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -457,15 +457,15 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>in1</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Get a plug for input 1.</p></li>
-<li><p><strong>in2</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Get a plug for input 2.</p></li>
-<li><p><strong>cur</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Ignore the in1 and in2 specifications and check the currentDriver of pairBlend to get 1 or 2.</p></li>
-<li><p><strong>inUse</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Obtain only if the desired input system is used.</p></li>
-<li><p><strong>byWeight</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Ignores all in1, in2, cur, and inUse specifications and checks the mode and weight of pairBlend to get the input tuples being used.</p></li>
+<li><p><strong>in1</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Get a plug for input 1.</p></li>
+<li><p><strong>in2</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Get a plug for input 2.</p></li>
+<li><p><strong>cur</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Ignore the in1 and in2 specifications and check the currentDriver of pairBlend to get 1 or 2.</p></li>
+<li><p><strong>inUse</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Obtain only if the desired input system is used.</p></li>
+<li><p><strong>byWeight</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Ignores all in1, in2, cur, and inUse specifications and checks the mode and weight of pairBlend to get the input tuples being used.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> if byWeight is True, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> if in1 and in2 are both True, otherwise a single <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> or None.</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> if byWeight is True, <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> if in1 and in2 are both True, otherwise a single <a class="reference internal" href="#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> or None.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -479,12 +479,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Even if there is a connection, it will be deleted without causing an error.</p></li>
-<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Avoid not only connections but also error factors such as locking as much as possible. This option alone also serves as b=True.</p></li>
+<li><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Even if there is a connection, it will be deleted without causing an error.</p></li>
+<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Avoid not only connections but also error factors such as locking as much as possible. This option alone also serves as b=True.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -498,12 +498,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Even if there is a connection, it will be deleted without causing an error.</p></li>
-<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Avoid not only connections but also error factors such as locking as much as possible. This option alone also serves as b=True.</p></li>
+<li><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Even if there is a connection, it will be deleted without causing an error.</p></li>
+<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Avoid not only connections but also error factors such as locking as much as possible. This option alone also serves as b=True.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -516,13 +516,13 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specifies the index to be deleted when it is multi. If omitted, if it is an element, it will be deleted, and if it is a multi, all elements will be deleted.</p></li>
-<li><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Even if there is a connection, it will be deleted without causing an error.</p></li>
-<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Avoid not only connections but also error factors such as locking as much as possible. This option alone also serves as b=True.</p></li>
+<li><p><strong>idx</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Specifies the index to be deleted when it is multi. If omitted, if it is an element, it will be deleted, and if it is a multi, all elements will be deleted.</p></li>
+<li><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Even if there is a connection, it will be deleted without causing an error.</p></li>
+<li><p><strong>f</strong><strong>|</strong><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Avoid not only connections but also error factors such as locking as much as possible. This option alone also serves as b=True.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -542,11 +542,11 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>val</strong> – Value to set.</p></li>
-<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – An error does not occur even if the attribute cannot be set because it is locked. Also, in the case of numerical compounds such as double3, only the places that can be set are set. Returns the number of attributes that failed to set.</p></li>
+<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – An error does not occur even if the attribute cannot be set because it is locked. Also, in the case of numerical compounds such as double3, only the places that can be set are set. Returns the number of attributes that failed to set.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None or <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p>None or <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -557,7 +557,7 @@
 <dd><p>Set or delete a plug alias.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Alias ​​to set. If you specify None or an empty string, the existing settings will be deleted.</p>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) – Alias ​​to set. If you specify None or an empty string, the existing settings will be deleted.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -569,8 +569,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – True means it is enabled, False means it is disabled.</p></li>
-<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
+<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – True means it is enabled, False means it is disabled.</p></li>
+<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
 </ul>
 </dd>
 </dl>
@@ -583,8 +583,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – True means it is enabled, False means it is disabled.</p></li>
-<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
+<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – True means it is enabled, False means it is disabled.</p></li>
+<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
 </ul>
 </dd>
 </dl>
@@ -597,8 +597,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – True means it is enabled, False means it is disabled.</p></li>
-<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
+<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – True means it is enabled, False means it is disabled.</p></li>
+<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
 </ul>
 </dd>
 </dl>
@@ -617,8 +617,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – True means it is enabled, False means it is disabled.</p></li>
-<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
+<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – True means it is enabled, False means it is disabled.</p></li>
+<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
 </ul>
 </dd>
 </dl>
@@ -631,8 +631,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Locks if True, unlocks if False.</p></li>
-<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
+<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Locks if True, unlocks if False.</p></li>
+<li><p><strong>leaf</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – If the plug is a compound and is set to True, the plug will not be processed, but the leaves of the compound hierarchy will be found and processed together.</p></li>
 </ul>
 </dd>
 </dl>
@@ -651,11 +651,11 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>val</strong> – Value to set.</p></li>
-<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – An error does not occur even if the attribute cannot be set because it is locked. Also, in the case of numerical compounds such as double3, only the places that can be set are set. Returns the number of attributes that failed to set.</p></li>
+<li><p><strong>safe</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – An error does not occur even if the attribute cannot be set because it is locked. Also, in the case of numerical compounds such as double3, only the places that can be set are set. Returns the number of attributes that failed to set.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None or <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p>None or <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -667,7 +667,7 @@
 <p>It only sets the negation of the current value, so it works even if the type is not bool.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -680,12 +680,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>below</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – This will also unlock the lower layers.</p></li>
-<li><p><strong>undoable</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Possibility of undo.</p></li>
+<li><p><strong>below</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – This will also unlock the lower layers.</p></li>
+<li><p><strong>undoable</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Possibility of undo.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -803,7 +803,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.plug.html" title="cymel.core.cyobjects.plug"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.plug.html" >cymel.core.cyobjects.plug</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.plug.Plug</a></li> 
@@ -811,7 +811,7 @@
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>

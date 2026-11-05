@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.pyutils.finalizer &#8212; cymel 0.35.2026072800 documentation</title>
+    <title>cymel.pyutils.finalizer &#8212; cymel 0.37.2026110500 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
-    <script src="../_static/documentation_options.js?v=770e58b9"></script>
+    <script src="../_static/documentation_options.js?v=4499b16a"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="cymel.utils.utils.html" title="cymel.utils.utils"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.pyutils.finalizer</a></li> 
       </ul>
@@ -51,7 +51,7 @@
 <ul class="simple">
 <li><p>Exceptions in __del__ cannot be caught.</p></li>
 <li><p>It is not guaranteed to be called when the interpreter terminates.</p></li>
-<li><p>If there is a circular reference and __del__ is present, it will not be released. (Because if there is a circular reference, <a class="reference external" href="https://docs.python.org/3/library/gc.html#module-gc" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gc</span></code></a> cannot guarantee the right time to call __del__)</p></li>
+<li><p>If there is a circular reference and __del__ is present, it will not be released. (Because if there is a circular reference, <a class="reference external" href="https://docs.python.org/3/library/gc.html#module-gc" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gc</span></code></a> cannot guarantee the right time to call __del__)</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -78,7 +78,7 @@
 <dd><p>Delete a registered finalizer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – ID returned during registration.</p>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – ID returned during registration.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -95,7 +95,7 @@
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (finalizer ID)</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (finalizer ID)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -108,12 +108,12 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>obj</strong> – Target object.</p></li>
-<li><p><strong>logger</strong> – Any executable that can accept <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> for logging. If omitted, it will be printed.</p></li>
-<li><p><strong>maxChars</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Adjust messages if the number of characters in the logged repr exceeds this number. If it is zero, no judgment is made.</p></li>
+<li><p><strong>logger</strong> – Any executable that can accept <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> for logging. If omitted, it will be printed.</p></li>
+<li><p><strong>maxChars</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Adjust messages if the number of characters in the logged repr exceeds this number. If it is zero, no judgment is made.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (finalizer ID)</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (finalizer ID)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -185,14 +185,14 @@
         <li class="right" >
           <a href="cymel.utils.utils.html" title="cymel.utils.utils"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.pyutils.finalizer</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>

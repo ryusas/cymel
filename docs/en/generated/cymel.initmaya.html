@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.initmaya &#8212; cymel 0.35.2026072800 documentation</title>
+    <title>cymel.initmaya &#8212; cymel 0.37.2026110500 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
-    <script src="../_static/documentation_options.js?v=770e58b9"></script>
+    <script src="../_static/documentation_options.js?v=4499b16a"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="cymel.constants.html" title="cymel.constants"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.initmaya</a></li> 
       </ul>
@@ -98,13 +98,13 @@
 
 <dl class="py data">
 <dt class="sig sig-object py" id="cymel.initmaya.MAYA_VERSION">
-<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">MAYA_VERSION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(2027,</span> <span class="pre">1,</span> <span class="pre">0)</span></span><a class="headerlink" href="#cymel.initmaya.MAYA_VERSION" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">MAYA_VERSION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(2027,</span> <span class="pre">2,</span> <span class="pre">0)</span></span><a class="headerlink" href="#cymel.initmaya.MAYA_VERSION" title="Link to this definition">¶</a></dt>
 <dd><p>A tuple representing the Maya version. Updates can be detected from 2017 onwards. (majorVersion, minorVersion, patchVersion)</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="cymel.initmaya.MAYA_VERSION_STR">
-<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">MAYA_VERSION_STR</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'2027.1'</span></span><a class="headerlink" href="#cymel.initmaya.MAYA_VERSION_STR" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">MAYA_VERSION_STR</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'2027.2'</span></span><a class="headerlink" href="#cymel.initmaya.MAYA_VERSION_STR" title="Link to this definition">¶</a></dt>
 <dd><p>Maya version notation.</p>
 </dd></dl>
 
@@ -130,7 +130,7 @@
 <dd><p>Get the path of the user preferences directory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -167,7 +167,7 @@
 <p>There is no problem even if you call it repeatedly.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -181,10 +181,10 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>userPrefs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to call MEL related to user preferences. Set to True when plugins=True.</p></li>
-<li><p><strong>startup</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to call initStartup.mel. Set to True when plugins=True.</p></li>
-<li><p><strong>plugins</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to autoload plugins.  Plugins are dynamically resolved using the scene’s requires statement, and if they are needed in batch processing, they should be explicitly loaded, and the processing load is large, so this is set to False by default.</p></li>
-<li><p><strong>namedCommand</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to generate named commands. Since this is a concept for connecting mel code to hotkeys, it should normally be unnecessary if there is no UI, but since the processing load is not large, the default is set to True, following pymel.</p></li>
+<li><p><strong>userPrefs</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to call MEL related to user preferences. Set to True when plugins=True.</p></li>
+<li><p><strong>startup</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to call initStartup.mel. Set to True when plugins=True.</p></li>
+<li><p><strong>plugins</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to autoload plugins.  Plugins are dynamically resolved using the scene’s requires statement, and if they are needed in batch processing, they should be explicitly loaded, and the processing load is large, so this is set to False by default.</p></li>
+<li><p><strong>namedCommand</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to generate named commands. Since this is a concept for connecting mel code to hotkeys, it should normally be unnecessary if there is no UI, but since the processing load is not large, the default is set to True, following pymel.</p></li>
 </ul>
 </dd>
 </dl>
@@ -210,14 +210,14 @@
 <p>If it has been initialized, nothing will be done, so there is no problem in calling it repeatedly.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>mels</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to call <a class="reference internal" href="#cymel.initmaya.initMels" title="cymel.initmaya.initMels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMels</span></code></a> when <a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> is True. If you do not perform processing that depends on Maya settings, there is no problem even if you do not call it, so it is set to False by default.</p>
+<dd class="field-odd"><p><strong>mels</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to call <a class="reference internal" href="#cymel.initmaya.initMels" title="cymel.initmaya.initMels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMels</span></code></a> when <a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> is True. If you do not perform processing that depends on Maya settings, there is no problem even if you do not call it, so it is set to False by default.</p>
 </dd>
 </dl>
 <dl>
-<dt>:param <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> plugins</dt><dd><p>Whether to autoload plugins.</p>
+<dt>:param <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> plugins</dt><dd><p>Whether to autoload plugins.</p>
 <p>Plugins are dynamically resolved using the scene’s requires statement, and if they are needed in batch processing, they should be explicitly loaded, and the processing load is large, so this is set to False by default.</p>
 </dd>
-<dt>:param <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> userSetup</dt><dd><p>Whether to call <a class="reference internal" href="#cymel.initmaya.callUserSetupMel" title="cymel.initmaya.callUserSetupMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callUserSetupMel</span></code></a> when <a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> is True.</p>
+<dt>:param <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a> userSetup</dt><dd><p>Whether to call <a class="reference internal" href="#cymel.initmaya.callUserSetupMel" title="cymel.initmaya.callUserSetupMel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callUserSetupMel</span></code></a> when <a class="reference internal" href="#cymel.initmaya.initMaya" title="cymel.initmaya.initMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initMaya</span></code></a> is True.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -228,7 +228,7 @@
 <dd><p>Whether Maya has been initialized.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -311,14 +311,14 @@
         <li class="right" >
           <a href="cymel.constants.html" title="cymel.constants"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.initmaya</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>

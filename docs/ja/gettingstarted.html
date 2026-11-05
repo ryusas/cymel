@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel入門 &#8212; cymel 0.35.2026072800 ドキュメント</title>
+    <title>cymel入門 &#8212; cymel 0.37.2026110500 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fb40bcac" />
-    <script src="_static/documentation_options.js?v=ee14e317"></script>
+    <script src="_static/documentation_options.js?v=dd830ac4"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/translations.js?v=4755f45a"></script>
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="whycymel.html" title="なぜ cymel ?"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">cymel 0.35.2026072800 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cymel 0.37.2026110500 ドキュメント</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel入門</a></li> 
       </ul>
     </div>  
@@ -84,33 +84,33 @@ cymel では、あえてそこまではやらず、ごく最低限のことに�
 <p>全てのノードクラスは <a class="reference internal" href="generated/classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> を基底クラスとし、ノードタイプのツリーに沿って継承されています。
 ノードをラップしたオブジェクトを得るには <a class="reference internal" href="generated/classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> コンストラクタを利用するのが簡単です。</p>
 <p>たとえば、以下のようにノード名を指定します。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">CyObject</span><span class="p">(</span><span class="s1">&#39;persp&#39;</span><span class="p">)</span>
-<span class="go">Transform(&#39;persp&#39;)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">CyObject</span><span class="p">(</span><span class="s1">'persp'</span><span class="p">)</span>
+<span class="go">Transform('persp')</span>
 </pre></div>
 </div>
 <p>pymel をご存知なら PyNode に相当するのが <a class="reference internal" href="generated/classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> です。</p>
 <p><a class="reference internal" href="generated/classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> には、別名 <a class="reference internal" href="generated/cymel.core.cyobjects.cyobject.html#cymel.core.cyobjects.cyobject.O" title="cymel.core.cyobjects.cyobject.O"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O</span></code></a> でもアクセスできます。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">&#39;persp&#39;</span><span class="p">)</span>
-<span class="go">Transform(&#39;persp&#39;)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">'persp'</span><span class="p">)</span>
+<span class="go">Transform('persp')</span>
 </pre></div>
 </div>
 <p>選択されているノードの場合はもっと簡単です。</p>
 <p>選択ノードを1つ得るには <a class="reference internal" href="generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.html#cymel.core.cyobjects.cyobject.ModuleForSel.sel" title="cymel.core.cyobjects.cyobject.ModuleForSel.sel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sel</span></code></a> を使います（複数選択されていても最初の1つとなります）。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="s1">&#39;persp&#39;</span><span class="p">,</span> <span class="s1">&#39;side&#39;</span><span class="p">])</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="s1">'persp'</span><span class="p">,</span> <span class="s1">'side'</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span>
-<span class="go">Transform(&#39;persp&#39;)</span>
+<span class="go">Transform('persp')</span>
 </pre></div>
 </div>
 <p>または <a class="reference internal" href="generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.html#cymel.core.cyobjects.cyobject.ModuleForSel.selobj" title="cymel.core.cyobjects.cyobject.ModuleForSel.selobj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selobj</span></code></a> 関数ではインデックスを指定できます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">selobj</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="go">Transform(&#39;side&#39;)</span>
+<span class="go">Transform('side')</span>
 </pre></div>
 </div>
 <p>選択されているものをすべて得るには <a class="reference internal" href="generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.html#cymel.core.cyobjects.cyobject.ModuleForSel.selection" title="cymel.core.cyobjects.cyobject.ModuleForSel.selection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selection</span></code></a> か、または pymel 風に <a class="reference internal" href="generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.html#cymel.core.cyobjects.cyobject.ModuleForSel.selected" title="cymel.core.cyobjects.cyobject.ModuleForSel.selected"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selected</span></code></a> 関数を使います。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">selection</span>
-<span class="go">[Transform(&#39;persp&#39;), Transform(&#39;side&#39;)]</span>
+<span class="go">[Transform('persp'), Transform('side')]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">selected</span><span class="p">()</span>
-<span class="go">[Transform(&#39;persp&#39;), Transform(&#39;side&#39;)]</span>
+<span class="go">[Transform('persp'), Transform('side')]</span>
 </pre></div>
 </div>
 </section>
@@ -120,40 +120,40 @@ cymel では、あえてそこまではやらず、ごく最低限のことに�
 （ごく一部の代表的なノードクラスは <a class="reference internal" href="generated/cymel.main.html#module-cymel.main" title="cymel.main"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cm</span></code></a> からでもアクセスできます）。
 クラス名は、ノードタイプ名の先頭を大文字にした名前となります。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Joint</span>
-<span class="go">&lt;class &#39;cymel.core.typeregistry.Joint&#39;&gt;</span>
+<span class="go">&lt;class 'cymel.core.typeregistry.Joint'&gt;</span>
 </pre></div>
 </div>
 <p>ノードクラスに既存ノードの名前を指定しないと、新規にノードが生成されます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Joint</span><span class="p">()</span>
-<span class="go">Joint(&#39;joint1&#39;)</span>
+<span class="go">Joint('joint1')</span>
 </pre></div>
 </div>
 <p>これには <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/createNode.html">createNode</a> コマンドのオプション引数を指定できます。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Joint</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;foo#&#39;</span><span class="p">)</span>
-<span class="go">Joint(&#39;foo1&#39;)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Joint</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">'foo#'</span><span class="p">)</span>
+<span class="go">Joint('foo1')</span>
 </pre></div>
 </div>
 <p>また、ノードクラスは <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/ls.html">ls</a> コマンドのラッパーとしても機能します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Joint</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
-<span class="go">[Joint(&#39;foo1&#39;), Joint(&#39;joint1&#39;)]</span>
+<span class="go">[Joint('foo1'), Joint('joint1')]</span>
 </pre></div>
 </div>
 <p><a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/ls.html">ls</a> コマンドに -type オプションが自動的に指定された結果を得られますが、その他のオプション引数は自由に指定できます。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Joint</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s1">&#39;foo*&#39;</span><span class="p">)</span>
-<span class="go">[Joint(&#39;foo1&#39;)]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Joint</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s1">'foo*'</span><span class="p">)</span>
+<span class="go">[Joint('foo1')]</span>
 </pre></div>
 </div>
 </section>
 <section id="gettingstarted-nodes-class">
 <span id="id5"></span><h3>ノードクラスを明示したオブジェクト取得<a class="headerlink" href="#gettingstarted-nodes-class" title="Link to this heading">¶</a></h3>
 <p>既存のノード名を指定してラッパーオブジェクトを得るとき <a class="reference internal" href="generated/classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> ではないノードクラスを直接指定することもできます。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Joint</span><span class="p">(</span><span class="s1">&#39;foo1&#39;</span><span class="p">)</span>
-<span class="go">Joint(&#39;foo1&#39;)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Joint</span><span class="p">(</span><span class="s1">'foo1'</span><span class="p">)</span>
+<span class="go">Joint('foo1')</span>
 </pre></div>
 </div>
 <p>このとき、互換性のある（継承している）クラスなら全て指定できます（上位になるほど抽象的になり、サポートされる機能が少なくなります）。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="s1">&#39;foo1&#39;</span><span class="p">)</span>
-<span class="go">Transform(&#39;foo1&#39;)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="s1">'foo1'</span><span class="p">)</span>
+<span class="go">Transform('foo1')</span>
 </pre></div>
 </div>
 <p>ただし、互換性のないクラスを指定するとエラーになります。
@@ -163,25 +163,25 @@ cymel では、あえてそこまではやらず、ごく最低限のことに�
 たとえば、 <a class="reference internal" href="generated/classes/cymel.core.cyobjects.dagnode.DagNode.html#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a> 派生クラスは DAGパスを含んでいるため、同一ノードのインスタンスでもパスが異なれば違うものとして扱われます。
 しかし、より抽象的な <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a> インスタンスとして扱えば、DAGパスは含まれないため、同じものになります。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">f</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">u&#39;untitled&#39;</span>
+<span class="go">u'untitled'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">polyCube</span><span class="p">()</span>
-<span class="go">[u&#39;pCube1&#39;, u&#39;polyCube1&#39;]</span>
+<span class="go">[u'pCube1', u'polyCube1']</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
-<span class="go">[u&#39;pCube2&#39;]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">&#39;pCube1|pCubeShape1&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">&#39;pCube2|pCubeShape1&#39;</span><span class="p">)</span>
+<span class="go">[u'pCube2']</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">'pCube1|pCubeShape1'</span><span class="p">)</span> <span class="o">==</span> <span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">'pCube2|pCubeShape1'</span><span class="p">)</span>
 <span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s1">&#39;pCube1|pCubeShape1&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">cm</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s1">&#39;pCube2|pCubeShape1&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s1">'pCube1|pCubeShape1'</span><span class="p">)</span> <span class="o">==</span> <span class="n">cm</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s1">'pCube2|pCubeShape1'</span><span class="p">)</span>
 <span class="go">True</span>
 </pre></div>
 </div>
 <p>あるノードがあるノードタイプの派生タイプかどうかを調べたい場合、以下のように Python の insinstance が利用できると思われるかもしれません。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">&#39;initialShadingGroup&#39;</span><span class="p">),</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">ObjectSet</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">'initialShadingGroup'</span><span class="p">),</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">ObjectSet</span><span class="p">)</span>
 <span class="go">True</span>
 </pre></div>
 </div>
 <p>しかし、先に説明したように、抽象的なノードクラスを明示してそのインスタンスを取得できるということは、
 以下のように isinstance ではノードタイプを厳密に判別できないことにもなります。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s1">&#39;initialShadingGroup&#39;</span><span class="p">),</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">ObjectSet</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s1">'initialShadingGroup'</span><span class="p">),</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">ObjectSet</span><span class="p">)</span>
 <span class="go">False</span>
 </pre></div>
 </div>
@@ -191,9 +191,9 @@ isinstance でタイプ判別ができるという前提は既に崩れている
 pymel も然りです。</p>
 <p>そこで、確実にノードタイプを判別するには、
 isinstance ではなく、以下のように <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c.isType" title="cymel.core.cyobjects.node_c.Node_c.isType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isType</span></code></a> か <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c.hasFn" title="cymel.core.cyobjects.node_c.Node_c.hasFn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasFn</span></code></a> メソッドを利用してください。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s1">&#39;initialShadingGroup&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">isType</span><span class="p">(</span><span class="s1">&#39;objectSet&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s1">'initialShadingGroup'</span><span class="p">)</span><span class="o">.</span><span class="n">isType</span><span class="p">(</span><span class="s1">'objectSet'</span><span class="p">)</span>
 <span class="go">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s1">&#39;initialShadingGroup&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">hasFn</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">MFn</span><span class="o">.</span><span class="n">kSet</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s1">'initialShadingGroup'</span><span class="p">)</span><span class="o">.</span><span class="n">hasFn</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">MFn</span><span class="o">.</span><span class="n">kSet</span><span class="p">)</span>
 <span class="go">True</span>
 </pre></div>
 </div>
@@ -211,56 +211,56 @@ isinstance は有用です。
 <a class="reference internal" href="generated/classes/cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> は <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a> と同様に、基底クラス <a class="reference internal" href="generated/classes/cymel.core.cyobjects.cyobject.CyObject.html#cymel.core.cyobjects.cyobject.CyObject" title="cymel.core.cyobjects.cyobject.CyObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyObject</span></code></a> の派生型です。</p>
 <p>ショート名でもロング名でも同じものが得られます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">f</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">u&#39;untitled&#39;</span>
+<span class="go">u'untitled'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span><span class="o">.</span><span class="n">t</span>
-<span class="go">Plug(&#39;transform1.t&#39;)</span>
+<span class="go">Plug('transform1.t')</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span><span class="o">.</span><span class="n">translate</span>
-<span class="go">Plug(&#39;transform1.t&#39;)</span>
+<span class="go">Plug('transform1.t')</span>
 </pre></div>
 </div>
 <p>また、MELコマンドの場合と同様に、
 <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> から <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/shape.html">shape</a> のアトリビュートに直接アクセスもできます。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">&#39;persp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">focalLength</span>
-<span class="go">Plug(&#39;perspShape.fl&#39;)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">'persp'</span><span class="p">)</span><span class="o">.</span><span class="n">focalLength</span>
+<span class="go">Plug('perspShape.fl')</span>
 </pre></div>
 </div>
 <p>アトリビュート名は、まれに Pythonのキーワードや、ノードオブジェクトのメソッド名などと衝突する場合もあります。
 そういった場合のために <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c.plug" title="cymel.core.cyobjects.node_c.Node_c.plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plug</span></code></a> メソッドでもアクセスできます。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span><span class="o">.</span><span class="n">plug</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
-<span class="go">Plug(&#39;transform1.t&#39;)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span><span class="o">.</span><span class="n">plug</span><span class="p">(</span><span class="s1">'t'</span><span class="p">)</span>
+<span class="go">Plug('transform1.t')</span>
 </pre></div>
 </div>
 <p>コンパウンドアトリビュートから子アトリビュートを得ることもできますが、
 ノードから直接得ることもできます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">tx</span>
-<span class="go">Plug(&#39;transform1.tx&#39;)</span>
+<span class="go">Plug('transform1.tx')</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span><span class="o">.</span><span class="n">tx</span>
-<span class="go">Plug(&#39;transform1.tx&#39;)</span>
+<span class="go">Plug('transform1.tx')</span>
 </pre></div>
 </div>
 <p>しかし、コンパウンドのマルチの場合、いきなり子プラグを得るとインデックスが未解決となってしまいます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">f</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">u&#39;untitled&#39;</span>
+<span class="go">u'untitled'</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">polyCube</span><span class="p">()</span>
-<span class="go">[u&#39;pCube1&#39;, u&#39;polyCube1&#39;]</span>
+<span class="go">[u'pCube1', u'polyCube1']</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span><span class="o">.</span><span class="n">shape</span><span class="p">())</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span><span class="o">.</span><span class="n">gcl</span>
-<span class="go">Plug(&#39;pCubeShape1.iog[-1].og[-1].gcl&#39;)</span>
+<span class="go">Plug('pCubeShape1.iog[-1].og[-1].gcl')</span>
 </pre></div>
 </div>
 <p>そういった複雑なケースでは、マルチ要素を解決しながらコンパウンドを下っていけます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span><span class="o">.</span><span class="n">iog</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">og</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">gcl</span>
-<span class="go">Plug(&#39;pCubeShape1.iog[0].og[0].gcl&#39;)</span>
+<span class="go">Plug('pCubeShape1.iog[0].og[0].gcl')</span>
 </pre></div>
 </div>
 <p>他にも様々な方法でアクセスできます。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span><span class="o">.</span><span class="n">plug</span><span class="p">(</span><span class="s1">&#39;iog[0].og[0].gcl&#39;</span><span class="p">)</span>
-<span class="go">Plug(&#39;pCubeShape1.iog[0].og[0].gcl&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">&#39;pCubeShape1.iog[0].og[0].gcl&#39;</span><span class="p">)</span>
-<span class="go">Plug(&#39;pCubeShape1.iog[0].og[0].gcl&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">&#39;.iog[0].og[0].gcl&#39;</span><span class="p">)</span>
-<span class="go">Plug(&#39;pCubeShape1.iog[0].og[0].gcl&#39;)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span><span class="o">.</span><span class="n">plug</span><span class="p">(</span><span class="s1">'iog[0].og[0].gcl'</span><span class="p">)</span>
+<span class="go">Plug('pCubeShape1.iog[0].og[0].gcl')</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">'pCubeShape1.iog[0].og[0].gcl'</span><span class="p">)</span>
+<span class="go">Plug('pCubeShape1.iog[0].og[0].gcl')</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="s1">'.iog[0].og[0].gcl'</span><span class="p">)</span>
+<span class="go">Plug('pCubeShape1.iog[0].og[0].gcl')</span>
 </pre></div>
 </div>
 </section>
@@ -303,15 +303,15 @@ isinstance は有用です。
 <p>また、接続を調べるには <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a> の <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c.inputs" title="cymel.core.cyobjects.node_c.Node_c.inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputs</span></code></a> や <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c.outputs" title="cymel.core.cyobjects.node_c.Node_c.outputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputs</span></code></a> 、
 <a class="reference internal" href="generated/classes/cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug" title="cymel.core.cyobjects.plug.Plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code></a> の <a class="reference internal" href="generated/classes/cymel.core.cyobjects.plug_c.Plug_c.html#cymel.core.cyobjects.plug_c.Plug_c.inputs" title="cymel.core.cyobjects.plug_c.Plug_c.inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputs</span></code></a> や <a class="reference internal" href="generated/classes/cymel.core.cyobjects.plug_c.Plug_c.html#cymel.core.cyobjects.plug_c.Plug_c.outputs" title="cymel.core.cyobjects.plug_c.Plug_c.outputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputs</span></code></a> メソッドが利用できます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">f</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">'a'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">'b'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">t</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="o">.</span><span class="n">t</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">isSource</span><span class="p">(),</span> <span class="n">a</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">isDestination</span><span class="p">()</span>
 <span class="go">(True, False)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">isSource</span><span class="p">(),</span> <span class="n">b</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">isDestination</span><span class="p">()</span>
 <span class="go">(False, True)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">inputs</span><span class="p">(</span><span class="n">asPair</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">[(Plug(&#39;b.t&#39;), Plug(&#39;a.t&#39;))]</span>
+<span class="go">[(Plug('b.t'), Plug('a.t'))]</span>
 </pre></div>
 </div>
 <p><a class="reference internal" href="generated/classes/cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug.connect" title="cymel.core.cyobjects.plug.Plug.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect</span></code></a> メソッドは pymel と指定順序が逆なので注意してください。
@@ -319,10 +319,10 @@ isinstance は有用です。
 <p>そのため、演算子は <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code> よりも <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code> の利用を推奨します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">r</span><span class="p">)</span>  <span class="c1"># b.r &lt;&lt; a.r</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">inputs</span><span class="p">()</span>
-<span class="go">[Plug(&#39;a.r&#39;)]</span>
+<span class="go">[Plug('a.r')]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="n">a</span><span class="o">.</span><span class="n">s</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">s</span><span class="o">.</span><span class="n">inputs</span><span class="p">()</span>
-<span class="go">[Plug(&#39;a.s&#39;)]</span>
+<span class="go">[Plug('a.s')]</span>
 </pre></div>
 </div>
 <p>切断は <code class="docutils literal notranslate"><span class="pre">//</span></code> や <a class="reference internal" href="generated/classes/cymel.core.cyobjects.plug.Plug.html#cymel.core.cyobjects.plug.Plug.disconnect" title="cymel.core.cyobjects.plug.Plug.disconnect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disconnect</span></code></a> メソッドで行えます。</p>
@@ -346,7 +346,7 @@ DAGパスと矛盾のないインデックスが Maya によって自動補完�
 cymel でもその仕様を踏襲し、ワールドスペースプラグは要素にしないで扱うことを推奨します。</p>
 <p>以下は使用例で、ロケータをインスタンスコピーし、その worldPosition をインデックス指定せずに参照しています。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">f</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Locator</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Locator</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">'a'</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="n">cmds</span><span class="o">.</span><span class="n">instance</span><span class="p">(</span><span class="n">a</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">set</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
@@ -441,7 +441,7 @@ API では、位置を表すか方向を表すかで2種類を使いわける必
 <p><a class="reference internal" href="generated/classes/cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> は w を持っていますが、それがデフォルトの 1.0 である限り、長さ 3 のシーケンスとして振る舞います。
 よって、4次元ベクトル値としては扱いにくいですが、3次元ベクトル値としては扱いやすいものになっています。</p>
 <p>たとえば、double3型アトリビュートの値に直接セットすることができます。
-ゲットで得られるのは <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> ですが、そこからすぐに <a class="reference internal" href="generated/classes/cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> にすることもできます。</p>
+ゲットで得られるのは <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> ですが、そこからすぐに <a class="reference internal" href="generated/classes/cymel.core.datatypes.vector.Vector.html#cymel.core.datatypes.vector.Vector" title="cymel.core.datatypes.vector.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a> にすることもできます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">V</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
@@ -457,7 +457,7 @@ API では、位置を表すか方向を表すかで2種類を使いわける必
 <p>以下は、ローカルマトリックスを取得する例です。
 プラグから得ることでも <a class="reference internal" href="generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getM" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getM</span></code></a> を使用することでも、同じものが得られます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">f</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">'a'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">set</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">setu</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">s</span><span class="o">.</span><span class="n">set</span><span class="p">((</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">))</span>
@@ -469,7 +469,7 @@ API では、位置を表すか方向を表すかで2種類を使いわける必
 </div>
 <p>以下は、ワールドマトリックスを取得する例です。
 <a class="reference external" href="#gettingstarted-plugs-worldspace">既に説明済み</a> ですが、 wm にはインデックスを指定しないことが推奨されます。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">a</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">'b'</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">a</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">set</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">set</span><span class="p">((</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
@@ -479,7 +479,7 @@ API では、位置を表すか方向を表すかで2種類を使いわける必
 </pre></div>
 </div>
 <p>以下は <a class="reference internal" href="generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.html#cymel.core.cyobjects.transform_c.TransformMixin.setM" title="cymel.core.cyobjects.transform_c.TransformMixin.setM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setM</span></code></a> の使用例です。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">'c'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">setM</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">getM</span><span class="p">(</span><span class="n">ws</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 <span class="go">Matrix(((0.365467, 0.560012, 1.41804, 0), (1.25209, -0.335616, -0.121765, 0), (0.0174783, 1.19128, -0.622367, 0), (5.45326, 10.6063, 11.3845, 1)))</span>
@@ -594,7 +594,7 @@ cymelのクラスでいうと <a class="reference internal" href="generated/clas
 <a class="reference internal" href="generated/classes/cymel.core.datatypes.transformation.Transformation.html#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> のオブジェクト属性としてはサポートされません。</p>
 <p>では、その働きを見るために、まず、ノードを1つ作り、アトリビュートを細かく設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">f</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">'a'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">set</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">rp</span><span class="o">.</span><span class="n">set</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">setu</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
@@ -624,7 +624,7 @@ cymelのクラスでいうと <a class="reference internal" href="generated/clas
 </div>
 <p>ノードから <a class="reference internal" href="generated/classes/cymel.core.datatypes.transformation.Transformation.html#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> を得るには <a class="reference internal" href="generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getX" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getX</span></code></a> メソッドも利用できます。
 xm アトリビュートからゲットすることと等しいですが、 <a class="reference internal" href="generated/classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html#cymel.core.cyobjects.dagnode_c.DagNodeMixin.getX" title="cymel.core.cyobjects.dagnode_c.DagNodeMixin.getX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getX</span></code></a> ではワールドスペースの値を得ることもできます。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">a</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">'b'</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">a</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">set</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">set</span><span class="p">((</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">xm</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
@@ -639,7 +639,7 @@ xm アトリビュートからゲットすることと等しいですが、 <a c
 それは <a class="reference internal" href="generated/classes/cymel.core.datatypes.transformation.Transformation.html#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> が持っている全ての属性値を、
 <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> や <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/joint.html">joint</a> ノードのプラグに、そのままセットすることに相当します。</p>
 <p>たとえば、以下に示すように <a class="reference internal" href="generated/classes/cymel.core.cyobjects.transform_c.TransformMixin.html#cymel.core.cyobjects.transform_c.TransformMixin.setM" title="cymel.core.cyobjects.transform_c.TransformMixin.setM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setM</span></code></a> メソッドではマトリックスを完全に一致させることができますが、個々のプラグ値までは一致しません。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">'c'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">setM</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">getM</span><span class="p">())</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="o">.</span><span class="n">isEquivalent</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
 <span class="go">True</span>
@@ -685,7 +685,7 @@ xm アトリビュートからゲットすることと等しいですが、 <a c
 shear は隠されていますが変更可能です（Maya 2019 から 2020.0 まで shear が変更できない問題がありましたが修正されました）。</p>
 <p>以下の例では、これまでと同じ <a class="reference internal" href="generated/classes/cymel.core.datatypes.transformation.Transformation.html#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> を <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/joint.html">joint</a> ノードにセットしています。
 ピボットは変更せずに維持しされつつ、マトリックスが一致するように translate 値が調整されているのを確認できます。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Joint</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Joint</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">'d'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">setX</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">getX</span><span class="p">())</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="o">.</span><span class="n">isEquivalent</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
 <span class="go">True</span>
@@ -768,12 +768,12 @@ shear は隠されていますが変更可能です（Maya 2019 から 2020.0 �
 <p><a class="reference internal" href="generated/classes/cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node" title="cymel.core.cyobjects.node.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a> の <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node.addAttr" title="cymel.core.cyobjects.node.Node.addAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addAttr</span></code></a> メソッドは <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/addAttr.html">addAttr</a> コマンドを簡単に使用できるようにしたラッパーです。</p>
 <p>たとえば、double3 型アトリビュートの追加も、以下のように簡単です。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">f</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span><span class="s1">&#39;testrot&#39;</span><span class="p">,</span> <span class="s1">&#39;double3&#39;</span><span class="p">,</span> <span class="s1">&#39;doubleAngle&#39;</span><span class="p">,</span> <span class="n">cb</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">'a'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span><span class="s1">'testrot'</span><span class="p">,</span> <span class="s1">'double3'</span><span class="p">,</span> <span class="s1">'doubleAngle'</span><span class="p">,</span> <span class="n">cb</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>それでは、matrix型アトリビュートを追加してみます。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;matrix&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'matrix'</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">foo</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -801,7 +801,7 @@ shear は隠されていますが変更可能です（Maya 2019 から 2020.0 �
 <p>そして、実は、 <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node.Node.html#cymel.core.cyobjects.node.Node.addAttr" title="cymel.core.cyobjects.node.Node.addAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addAttr</span></code></a> の際にデフォルト値を指定することもできます。</p>
 <p>本来のコマンドでは、デフォルト値の指定は数値型のアトリビュートでしかサポートされていませんが、cymel なら可能です（もちろん undo も可能です）。</p>
 <p>以下の例では、デフォルト値に <a class="reference internal" href="generated/classes/cymel.core.datatypes.transformation.Transformation.html#cymel.core.datatypes.transformation.Transformation" title="cymel.core.datatypes.transformation.Transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformation</span></code></a> を指定したアトリビュートを追加しています。</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;matrix&#39;</span><span class="p">,</span> <span class="n">dv</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">X</span><span class="p">())</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span><span class="s1">'bar'</span><span class="p">,</span> <span class="s1">'matrix'</span><span class="p">,</span> <span class="n">dv</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">X</span><span class="p">())</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">bar</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 <span class="go">Transformation(s=Vector(1.000000, 1.000000, 1.000000), sh=Vector(0.000000, 0.000000, 0.000000), r=EulerRotation(0, 0, 0, XYZ), t=Vector(0.000000, 0.000000, 0.000000))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">bar</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">M</span><span class="p">())</span>
@@ -866,17 +866,17 @@ APIでの操作となると通常はアンドゥはできませんが、この�
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyTransform</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span><span class="p">):</span>
     <span class="nd">@staticmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">_verifyNode</span><span class="p">(</span><span class="n">mfn</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">mfn</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s1">&#39;myNodeTag&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mfn</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s1">'myNodeTag'</span><span class="p">)</span>
 
     <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">createNode</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">nodename</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">MyTransform</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="n">cmds</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span><span class="n">nodename</span><span class="p">,</span> <span class="n">ln</span><span class="o">=</span><span class="s1">&#39;myNodeTag&#39;</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">cmds</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span><span class="n">nodename</span><span class="p">,</span> <span class="n">ln</span><span class="o">=</span><span class="s1">'myNodeTag'</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="s1">'message'</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">nodename</span>
 
     <span class="c1"># (実装済みのメソッドが続きます)</span>
 
-<span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">registerNodeClass</span><span class="p">(</span><span class="n">MyTransform</span><span class="p">,</span> <span class="s1">&#39;transform&#39;</span><span class="p">)</span>
+<span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">registerNodeClass</span><span class="p">(</span><span class="n">MyTransform</span><span class="p">,</span> <span class="s1">'transform'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>絶対に必要なのは検査メソッド <a class="reference internal" href="generated/classes/cymel.core.typeregistry.NodeTypes.html#cymel.core.typeregistry.NodeTypes.registerNodeClass" title="cymel.core.typeregistry.NodeTypes.registerNodeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_verifyNode</span></code></a> のみで、生成メソッド <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c.createNode" title="cymel.core.cyobjects.node_c.Node_c.createNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createNode</span></code></a> は実装が推奨されているくらいの位置付けです。</p>
@@ -887,14 +887,14 @@ APIでの操作となると通常はアンドゥはできませんが、この�
 <p>cymel の通常の使用方法として、ノードクラスのインスタンスを得る際に既存の名前を指定しなければ <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c.createNode" title="cymel.core.cyobjects.node_c.Node_c.createNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createNode</span></code></a> が発動します。
 次のように使用できます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MyTransform</span><span class="p">()</span>
-<span class="go"># Result: MyTransform(&#39;myTransform1&#39;) #</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">MyTransform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
-<span class="go"># Result: MyTransform(&#39;foo&#39;) #</span>
+<span class="go"># Result: MyTransform('myTransform1') #</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">MyTransform</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">'foo'</span><span class="p">)</span>
+<span class="go"># Result: MyTransform('foo') #</span>
 </pre></div>
 </div>
 <p>このように作成したノードは、識別タグ（カスタムアトリビュート）が設定されているので、 <a class="reference internal" href="generated/classes/cymel.core.cyobjects.cyobject.ModuleForSel.html#cymel.core.cyobjects.cyobject.ModuleForSel.sel" title="cymel.core.cyobjects.cyobject.ModuleForSel.sel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sel</span></code></a> などで普通に得ることができます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span>
-<span class="go"># Result: MyTransform(&#39;foo&#39;) #</span>
+<span class="go"># Result: MyTransform('foo') #</span>
 </pre></div>
 </div>
 <p>しかし、先ほどの例のように作成済みのキューブなどには利用できないので、既存の <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> にもタグのアトリビュートを追加するメソッドを追加すれば良いです。そのやり方は完全に自由で、システムでも何もサポートされていません。ここでは、次のように <code class="docutils literal notranslate"><span class="pre">addClassTag</span></code> クラスメソッドを追加し、先ほどの <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c.createNode" title="cymel.core.cyobjects.node_c.Node_c.createNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createNode</span></code></a> メソッドでもそれを呼ぶように変更します。 <code class="docutils literal notranslate"><span class="pre">_verifyNode</span></code> やその他のメソッドはそのままです。</p>
@@ -907,7 +907,7 @@ APIでの操作となると通常はアンドゥはできませんが、この�
 
     <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">addClassTag</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">nodename</span><span class="p">):</span>
-        <span class="n">cmds</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span><span class="n">nodename</span><span class="p">,</span> <span class="n">ln</span><span class="o">=</span><span class="s1">&#39;myNodeTag&#39;</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">cmds</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span><span class="n">nodename</span><span class="p">,</span> <span class="n">ln</span><span class="o">=</span><span class="s1">'myNodeTag'</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="s1">'message'</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="c1"># (実装済みのメソッドが続きます)</span>
 </pre></div>
@@ -915,7 +915,7 @@ APIでの操作となると通常はアンドゥはできませんが、この�
 <p>これで以下のようにして既存 <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/transform.html">transform</a> にもタグを追加することで、 <code class="docutils literal notranslate"><span class="pre">MyTransform</span></code> が使用されるようにできます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MyTransform</span><span class="o">.</span><span class="n">addClassTag</span><span class="p">(</span><span class="n">cmds</span><span class="o">.</span><span class="n">polyCube</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">sel</span>
-<span class="go"># Result: MyTransform(&#39;pCube1&#39;) #</span>
+<span class="go"># Result: MyTransform('pCube1') #</span>
 </pre></div>
 </div>
 </section>
@@ -927,15 +927,15 @@ APIでの操作となると通常はアンドゥはできませんが、この�
 <p>cymel では全てのノードタイプに対応したクラスが提供されますが、本当に機能が実装されたクラスはごくわずかで、ほとんどのものは自動生成されるクラスでノードタイプ階層をクラス階層にマップする意義くらいしかありません。
 全てのノードタイプクラスは <a class="reference internal" href="generated/classes/cymel.core.typeregistry.NodeTypes.html#cymel.core.typeregistry.NodeTypes" title="cymel.core.typeregistry.NodeTypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cm.nt</span></code></a> で提供されますが、標準で機能が実装されていないクラスは最初にアクセスした際に自動生成されます。それは、クラスの出自を確認することで判別できます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">DagNode</span>
-<span class="go"># Result: &lt;class &#39;cymel.core.cyobjects.dagnode.DagNode&#39;&gt; #</span>
+<span class="go"># Result: &lt;class 'cymel.core.cyobjects.dagnode.DagNode'&gt; #</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Transform</span>
-<span class="go"># Result: &lt;class &#39;cymel.core.cyobjects.transform.Transform&#39;&gt; #</span>
+<span class="go"># Result: &lt;class 'cymel.core.cyobjects.transform.Transform'&gt; #</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Shape</span>
-<span class="go"># Result: &lt;class &#39;cymel.core.cyobjects.shape.Shape&#39;&gt; #</span>
+<span class="go"># Result: &lt;class 'cymel.core.cyobjects.shape.Shape'&gt; #</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">Joint</span>
-<span class="go"># Result: &lt;class &#39;cymel.core.typeregistry.Joint&#39;&gt; #</span>
+<span class="go"># Result: &lt;class 'cymel.core.typeregistry.Joint'&gt; #</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">ObjectSet</span>
-<span class="go"># Result: &lt;class &#39;cymel.core.typeregistry.ObjectSet&#39;&gt; #</span>
+<span class="go"># Result: &lt;class 'cymel.core.typeregistry.ObjectSet'&gt; #</span>
 </pre></div>
 </div>
 <p><a class="reference internal" href="generated/cymel.core.typeregistry.html#module-cymel.core.typeregistry" title="cymel.core.typeregistry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cymel.core.typeregistry</span></code></a> に在るのが自動生成されたクラスです。上記の例では <code class="xref py py-obj docutils literal notranslate"><span class="pre">Joint</span></code> と <code class="xref py py-obj docutils literal notranslate"><span class="pre">ObjectSet</span></code> がそれにあたります。それらは、ただそのノードタイプに対応したクラスがあるだけで、特別な機能は何も持っていません。
@@ -944,7 +944,7 @@ APIでの操作となると通常はアンドゥはできませんが、この�
 <p>ノードタイプに一対一で対応させる場合は、検査メソッド <code class="docutils literal notranslate"><span class="pre">_verifyNode</span></code> や生成メソッド <a class="reference internal" href="generated/classes/cymel.core.cyobjects.node_c.Node_c.html#cymel.core.cyobjects.node_c.Node_c.createNode" title="cymel.core.cyobjects.node_c.Node_c.createNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createNode</span></code></a> は不要です。ただ <a class="reference internal" href="generated/classes/cymel.core.typeregistry.NodeTypes.html#cymel.core.typeregistry.NodeTypes.registerNodeClass" title="cymel.core.typeregistry.NodeTypes.registerNodeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerNodeClass</span></code></a> するだけです。
 ただし、クラス階層が実際のノードタイプ階層と完全に一致している必要があるので、クラスの継承は正確に指定する必要があります。自動で解決されるように記述するには <a class="reference internal" href="generated/classes/cymel.core.typeregistry.NodeTypes.html#cymel.core.typeregistry.NodeTypes.parentBasicNodeClass" title="cymel.core.typeregistry.NodeTypes.parentBasicNodeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parentBasicNodeClass</span></code></a> メソッドの使用が便利です。</p>
 <p>次の例は <a class="extlink-mayanode reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/Nodes/objectSet.html">objectSet</a> タイプに対応するクラスの実装例です（あくまでも簡易的な実装で、あまり深くは考えていません）。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ObjectSet</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">parentBasicNodeClass</span><span class="p">(</span><span class="s1">&#39;objectSet&#39;</span><span class="p">)):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ObjectSet</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">parentBasicNodeClass</span><span class="p">(</span><span class="s1">'objectSet'</span><span class="p">)):</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">cmds</span><span class="o">.</span><span class="n">sets</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">im</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
 
@@ -960,11 +960,11 @@ APIでの操作となると通常はアンドゥはできませんが、この�
     <span class="k">def</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">items</span><span class="p">):</span>
         <span class="n">cmds</span><span class="o">.</span><span class="n">sets</span><span class="p">(</span><span class="o">*</span><span class="n">items</span><span class="p">,</span> <span class="n">rm</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
 
-<span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">registerNodeClass</span><span class="p">(</span><span class="n">ObjectSet</span><span class="p">,</span> <span class="s1">&#39;objectSet&#39;</span><span class="p">)</span>
+<span class="n">cm</span><span class="o">.</span><span class="n">nt</span><span class="o">.</span><span class="n">registerNodeClass</span><span class="p">(</span><span class="n">ObjectSet</span><span class="p">,</span> <span class="s1">'objectSet'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>もし、そのノードタイプに対してクラスが既に生成されていたら次のような警告が出力された上で上書き登録されます。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Warning: node class deregistered: &lt;class &#39;cymel.core.typeregistry.ObjectSet&#39;&gt; #</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Warning: node class deregistered: &lt;class 'cymel.core.typeregistry.ObjectSet'&gt; #</span>
 </pre></div>
 </div>
 <p>そのクラスを継承しているクラスが存在するならいったん全て登録抹消されます。それらのノードタイプのクラスも次に評価された際に再生成されますが、生成済みのインスタンスは登録抹消されたクラスのままとなるので気をつけてください。このようなことから、クラスの登録は Maya 起動後の早い段階でやるのが望ましいといえます。</p>
@@ -989,9 +989,9 @@ APIでの操作となると通常はアンドゥはできませんが、この�
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cymel.ui</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cmu</span>
 <span class="k">with</span> <span class="n">cmu</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span> <span class="k">as</span> <span class="n">wnd</span><span class="p">:</span>
     <span class="k">with</span> <span class="n">cmu</span><span class="o">.</span><span class="n">AutoLayout</span><span class="p">():</span>
-        <span class="n">cmu</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
-        <span class="n">cmu</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
-        <span class="n">cmu</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="s1">&#39;baz&#39;</span><span class="p">)</span>
+        <span class="n">cmu</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="s1">'foo'</span><span class="p">)</span>
+        <span class="n">cmu</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="s1">'bar'</span><span class="p">)</span>
+        <span class="n">cmu</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="s1">'baz'</span><span class="p">)</span>
 <span class="n">wnd</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1096,13 +1096,13 @@ APIでの操作となると通常はアンドゥはできませんが、この�
         <li class="right" >
           <a href="whycymel.html" title="なぜ cymel ?"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">cymel 0.35.2026072800 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cymel 0.37.2026110500 ドキュメント</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel入門</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
     &#169; 著作権 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>

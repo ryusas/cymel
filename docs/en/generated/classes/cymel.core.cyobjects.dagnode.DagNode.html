@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.core.cyobjects.dagnode.DagNode &#8212; cymel 0.35.2026072800 documentation</title>
+    <title>class cymel.core.cyobjects.dagnode.DagNode &#8212; cymel 0.37.2026110500 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
-    <script src="../../_static/documentation_options.js?v=770e58b9"></script>
+    <script src="../../_static/documentation_options.js?v=4499b16a"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.dagnode.html" title="cymel.core.cyobjects.dagnode"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.dagnode.html" accesskey="U">cymel.core.cyobjects.dagnode</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.dagnode.DagNode</a></li> 
@@ -112,7 +112,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>other</strong> (<a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><em>DagNode</em></a>) – DAG node to compare.</p></li>
-<li><p><strong>skipFirst</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to use the parent of the specified node as the search starting point. By default, the specified node itself can also be a result.</p></li>
+<li><p><strong>skipFirst</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to use the parent of the specified node as the search starting point. By default, the specified node itself can also be a result.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -129,7 +129,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodes</strong> (<em>iterable</em>) – One or more DAG nodes. If omitted, current selection.</p></li>
-<li><p><strong>skipFirst</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to use the parent of the specified node as the search starting point. By default, the specified node itself can also be a result.</p></li>
+<li><p><strong>skipFirst</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to use the parent of the specified node as the search starting point. By default, the specified node itself can also be a result.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -164,12 +164,12 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodes</strong> (<em>iterable</em>) – DAG node group.</p></li>
-<li><p><strong>getParent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether the result is its parent rather than the topmost specified node. Parents are also aggregated using the same rules, and nodes without parents are excluded by default.</p></li>
-<li><p><strong>includeNone</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include orphaned scene top nodes as None in the results if getParent=True. Multiple Nones are aggregated into one. If getParent=False, it has no effect on the result.</p></li>
+<li><p><strong>getParent</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether the result is its parent rather than the topmost specified node. Parents are also aggregated using the same rules, and nodes without parents are excluded by default.</p></li>
+<li><p><strong>includeNone</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to include orphaned scene top nodes as None in the results if getParent=True. Multiple Nones are aggregated into one. If getParent=False, it has no effect on the result.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> Usually a list of <code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNodes</span></code>. May contain None only if getParent=True and includeNone=True.</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> Usually a list of <code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNodes</span></code>. May contain None only if getParent=True and includeNone=True.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -187,9 +187,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>shapes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include shapes as well.</p></li>
-<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to also include intermediate objects.</p></li>
-<li><p><strong>underWorld</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include underworld nodes (curve-on-surface, etc.).</p></li>
+<li><p><strong>shapes</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to include shapes as well.</p></li>
+<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to also include intermediate objects.</p></li>
+<li><p><strong>underWorld</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to include underworld nodes (curve-on-surface, etc.).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -205,9 +205,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>shapes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include shapes as well.</p></li>
-<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to also include intermediate objects.</p></li>
-<li><p><strong>underWorld</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include underworld nodes (curve-on-surface, etc.).</p></li>
+<li><p><strong>shapes</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to include shapes as well.</p></li>
+<li><p><strong>intermediates</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to also include intermediate objects.</p></li>
+<li><p><strong>underWorld</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to include underworld nodes (curve-on-surface, etc.).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -224,13 +224,13 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>end</strong> – DAG node to end at. If omitted, iterates up to the root.</p></li>
-<li><p><strong>includeStart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Whether to include the starting node.  If only ascending (the start point is a descendant of the end point), includeTurn must also be True.</p></li>
-<li><p><strong>includeEnd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Whether to include the end node.  If only descending (the start point is an ancestor of the end point), includeTurn must also be True.  If the end point is omitted, this specification is ignored, and the highest node on the scene is always included.</p></li>
-<li><p><strong>includeTurn</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to include the turning point from rise to fall.  The wrapping point is the topmost node in the iteration, the common ancestor of the start and end points, similar to what you can get with <a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.commonAncestor" title="cymel.core.cyobjects.dagnode.DagNode.commonAncestor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">commonAncestor</span></code></a>.  The starting point when only descending (the starting point is an ancestor of the ending point) and the ending point when only ascending (the starting point is a descendant of the ending point) are treated as both the starting point and the ending point, as well as the turning point. They will only be retrieved if includeStart or includeEnd and includeTurn are also True.</p></li>
+<li><p><strong>includeStart</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Whether to include the starting node.  If only ascending (the start point is a descendant of the end point), includeTurn must also be True.</p></li>
+<li><p><strong>includeEnd</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Whether to include the end node.  If only descending (the start point is an ancestor of the end point), includeTurn must also be True.  If the end point is omitted, this specification is ignored, and the highest node on the scene is always included.</p></li>
+<li><p><strong>includeTurn</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to include the turning point from rise to fall.  The wrapping point is the topmost node in the iteration, the common ancestor of the start and end points, similar to what you can get with <a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode.commonAncestor" title="cymel.core.cyobjects.dagnode.DagNode.commonAncestor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">commonAncestor</span></code></a>.  The starting point when only descending (the starting point is an ancestor of the ending point) and the ending point when only ascending (the starting point is a descendant of the ending point) are treated as both the starting point and the ending point, as well as the turning point. They will only be retrieved if includeStart or includeEnd and includeTurn are also True.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>yield (<a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) The integer value takes on the next value and indicates the direction being followed.  * 0 - descending. * 1 - Rise. * 2 - Turnaround point from rise to fall (highest point in the iteration).</p>
+<dd class="field-even"><p>yield (<a class="reference internal" href="#cymel.core.cyobjects.dagnode.DagNode" title="cymel.core.cyobjects.dagnode.DagNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code></a>, <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) The integer value takes on the next value and indicates the direction being followed.  * 0 - descending. * 1 - Rise. * 2 - Turnaround point from rise to fall (highest point in the iteration).</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -247,10 +247,10 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>parent</strong> – Parent <a class="reference internal" href="cymel.core.cyobjects.transform.Transform.html#cymel.core.cyobjects.transform.Transform" title="cymel.core.cyobjects.transform.Transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transform</span></code></a> or name. If omitted, the parent will be canceled.</p></li>
-<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to keep the current local transformation. By default it is maintained in world space.</p></li>
-<li><p><strong>add</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Add path instead of move (instance).</p></li>
-<li><p><strong>avoidJointShear</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If this node is a joint and requires shear to maintain world pose, a transform will be added to avoid its use. This is the original behavior of Maya, but the default of this method is to use the shear of the joint and not add a transform.</p></li>
-<li><p><strong>unmaintainIS</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – If this node is a joint, inverseScale connection/disconnection is not maintained.</p></li>
+<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to keep the current local transformation. By default it is maintained in world space.</p></li>
+<li><p><strong>add</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Add path instead of move (instance).</p></li>
+<li><p><strong>avoidJointShear</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – If this node is a joint and requires shear to maintain world pose, a transform will be added to avoid its use. This is the original behavior of Maya, but the default of this method is to use the shear of the joint and not add a transform.</p></li>
+<li><p><strong>unmaintainIS</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – If this node is a joint, inverseScale connection/disconnection is not maintained.</p></li>
 </ul>
 </dd>
 </dl>
@@ -346,7 +346,7 @@
         <li class="right" >
           <a href="../cymel.core.cyobjects.dagnode.html" title="cymel.core.cyobjects.dagnode"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >Module reference manual</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.core.cyobjects.dagnode.html" >cymel.core.cyobjects.dagnode</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.core.cyobjects.dagnode.DagNode</a></li> 
@@ -354,7 +354,7 @@
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>

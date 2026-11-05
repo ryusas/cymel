@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.qt.widgets &#8212; cymel 0.35.2026072800 documentation</title>
+    <title>cymel.qt.widgets &#8212; cymel 0.37.2026110500 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
-    <script src="../_static/documentation_options.js?v=770e58b9"></script>
+    <script src="../_static/documentation_options.js?v=4499b16a"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="cymel.qt.binding.html" title="cymel.qt.binding"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.qt.widgets</a></li> 
       </ul>
@@ -85,7 +85,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>widget</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code>) – Base widget. If omitted, everything is dumped from the top level.</p></li>
-<li><p><strong>indent</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Indentation space of base level.</p></li>
+<li><p><strong>indent</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) – Indentation space of base level.</p></li>
 </ul>
 </dd>
 </dl>
@@ -100,7 +100,7 @@
 <dd class="field-odd"><p><strong>widget</strong> – However, in the case of Maya UI, it is ignored and becomes a fixed value, but in Qt5 or higher, instead of Maya, when you specify a widget, you get the scaling value of the screen on which it is displayed.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -124,10 +124,10 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Path name below the base point (not including the base point).</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) – Path name below the base point (not including the base point).</p></li>
 <li><p><strong>base</strong> – Base widget. If omitted, the first name in the path is searched from the top level. If it is still not found, it becomes the main window of the application obtained by <a class="reference internal" href="#cymel.qt.widgets.getFirstTopLevelWindow" title="cymel.qt.widgets.getFirstTopLevelWindow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFirstTopLevelWindow</span></code></a>.</p></li>
-<li><p><strong>separator</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Path delimiter.</p></li>
-<li><p><strong>includesLayout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether layout managers also count as nodes.</p></li>
+<li><p><strong>separator</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) – Path delimiter.</p></li>
+<li><p><strong>includesLayout</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether layout managers also count as nodes.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -144,11 +144,11 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>widget</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code>) – widget.</p></li>
-<li><p><strong>separator</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Path delimiter.</p></li>
+<li><p><strong>separator</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) – Path delimiter.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -162,9 +162,9 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>proc</strong> (<em>callable</em>) – An executable object, such as a widget type or function, for creating widgets.</p></li>
-<li><p><strong>deleteOnClose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to be deleted when closed. WA_DeleteOnClose attribute is set to override.</p></li>
-<li><p><strong>setupRoundingOnNewApp</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – In a newly opened application, and if there is one or more screens with devicePixelRatio that is a non-integer in Qt6 or later, set HighDpiScaleFactorRoundingPolicy to RoundPreferFloor. This is to avoid artifacts when using anti-aliasing in QGraphicsView. By the way, in Maya, QT_ENABLE_HIGHDPI_SCALING=0 is set, so all devicePixelRatios are 1.0 and no problem occurs.</p></li>
-<li><p><strong>traceSettings</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Print out the Qt version, application settings, etc.</p></li>
+<li><p><strong>deleteOnClose</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to be deleted when closed. WA_DeleteOnClose attribute is set to override.</p></li>
+<li><p><strong>setupRoundingOnNewApp</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – In a newly opened application, and if there is one or more screens with devicePixelRatio that is a non-integer in Qt6 or later, set HighDpiScaleFactorRoundingPolicy to RoundPreferFloor. This is to avoid artifacts when using anti-aliasing in QGraphicsView. By the way, in Maya, QT_ENABLE_HIGHDPI_SCALING=0 is set, so all devicePixelRatios are 1.0 and no problem occurs.</p></li>
+<li><p><strong>traceSettings</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Print out the Qt version, application settings, etc.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -182,7 +182,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>wd</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code>) – widget.</p></li>
-<li><p><strong>deleteOnClose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to be deleted when closed. WA_DeleteOnClose attribute is set to override.</p></li>
+<li><p><strong>deleteOnClose</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to be deleted when closed. WA_DeleteOnClose attribute is set to override.</p></li>
 </ul>
 </dd>
 </dl>
@@ -196,15 +196,15 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>textCtl</strong> – A text control used to determine size. Must have boundingRect, font, and setFont methods.</p></li>
-<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Specifies the reference height when the font is specified in point size. A scale value is calculated to match this size. The default None means a default value that changes depending on the environment.</p></li>
-<li><p><strong>pixel</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Specifies the standard size when the font is specified in pixel size. A scale value is calculated to match this size.</p></li>
+<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a>) – Specifies the reference height when the font is specified in point size. A scale value is calculated to match this size. The default None means a default value that changes depending on the environment.</p></li>
+<li><p><strong>pixel</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – Specifies the standard size when the font is specified in pixel size. A scale value is calculated to match this size.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Paream callable prepare<a class="reference external" href="https://docs.python.org/3/library/functions.html#callable" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callable</span></code></a> prepare<span class="colon">:</span></dt>
+<dt class="field-even">Paream callable prepare<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#callable" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callable</span></code></a> prepare<span class="colon">:</span></dt>
 <dd class="field-even"><p>If information cannot be obtained from the cache and preparation (temporary drawing, etc.) is required before checking the point size height, specify the callable object.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">QFont</span></code> or None</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">QFont</span></code> or None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -281,14 +281,14 @@
         <li class="right" >
           <a href="cymel.qt.binding.html" title="cymel.qt.binding"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.qt.widgets</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>

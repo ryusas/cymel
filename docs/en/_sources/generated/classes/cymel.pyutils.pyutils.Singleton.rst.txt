@@ -1,4 +1,4 @@
-﻿class cymel.pyutils.pyutils.Singleton
+class cymel.pyutils.pyutils.Singleton
 =====================================
 
 .. currentmodule:: cymel.pyutils.pyutils

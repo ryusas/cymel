@@ -1,4 +1,4 @@
-﻿class cymel.ui.optionbox.OptionBox
+class cymel.ui.optionbox.OptionBox
 ==================================
 
 .. currentmodule:: cymel.ui.optionbox

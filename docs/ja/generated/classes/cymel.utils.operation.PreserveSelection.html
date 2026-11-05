@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.utils.operation.PreserveSelection &#8212; cymel 0.35.2026072800 ドキュメント</title>
+    <title>class cymel.utils.operation.PreserveSelection &#8212; cymel 0.37.2026110500 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
-    <script src="../../_static/documentation_options.js?v=ee14e317"></script>
+    <script src="../../_static/documentation_options.js?v=dd830ac4"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/translations.js?v=4755f45a"></script>
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="cymel.utils.operation.NonUndoable.html" title="class cymel.utils.operation.NonUndoable"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.utils.operation.html" accesskey="U">cymel.utils.operation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.utils.operation.PreserveSelection</a></li> 
@@ -54,27 +54,27 @@
 </map><dl class="py class">
 <dt class="sig sig-object py" id="cymel.utils.operation.PreserveSelection">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.utils.operation.</span></span><span class="sig-name descname"><span class="pre">PreserveSelection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nocmd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.utils.operation.PreserveSelection" title="Link to this definition">¶</a></dt>
-<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#object" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>元の選択状態を復元できるコンテキスト。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">maya.cmds</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cmds</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">cymel.main</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cm</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">Transform</span><span class="p">()</span>
-<span class="go">Transform(&#39;transform1&#39;)</span>
+<span class="go">Transform('transform1')</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span><span class="o">.</span><span class="n">Transform</span><span class="p">()</span>
-<span class="go">Transform(&#39;transform2&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="s1">&#39;transform*&#39;</span><span class="p">,</span> <span class="s1">&#39;persp&#39;</span><span class="p">])</span>
+<span class="go">Transform('transform2')</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="s1">'transform*'</span><span class="p">,</span> <span class="s1">'persp'</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">cm</span><span class="o">.</span><span class="n">PreserveSelection</span><span class="p">():</span>
-<span class="gp">... </span>    <span class="n">cmds</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;transform2&#39;</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="n">cmds</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;side&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">cmds</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">'transform2'</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">cmds</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">'side'</span><span class="p">)</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cmds</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">sl</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">[u&#39;transform1&#39;, u&#39;persp&#39;]</span>
+<span class="go">[u'transform1', u'persp']</span>
 </pre></div>
 </div>
 <p>初期化。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>nocmd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) -- コンテキストから抜ける際のセレクション復元処理を
+<dd class="field-odd"><p><strong>nocmd</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) -- コンテキストから抜ける際のセレクション復元処理を
 コマンドキューを消費せずに行うかどうか。</p>
 </dd>
 </dl>
@@ -99,7 +99,7 @@
 <dd><p>初期化。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>nocmd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) -- コンテキストから抜ける際のセレクション復元処理を
+<dd class="field-odd"><p><strong>nocmd</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) -- コンテキストから抜ける際のセレクション復元処理を
 コマンドキューを消費せずに行うかどうか。</p>
 </dd>
 </dl>
@@ -176,7 +176,7 @@
         <li class="right" >
           <a href="cymel.utils.operation.NonUndoable.html" title="class cymel.utils.operation.NonUndoable"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.utils.operation.html" >cymel.utils.operation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.utils.operation.PreserveSelection</a></li> 
@@ -184,7 +184,7 @@
     </div>
     <div class="footer" role="contentinfo">
     &#169; 著作権 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>

@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.pyutils.finalizer &#8212; cymel 0.35.2026072800 ドキュメント</title>
+    <title>cymel.pyutils.finalizer &#8212; cymel 0.37.2026110500 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
-    <script src="../_static/documentation_options.js?v=ee14e317"></script>
+    <script src="../_static/documentation_options.js?v=dd830ac4"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/translations.js?v=4755f45a"></script>
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="cymel.utils.utils.html" title="cymel.utils.utils"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">モジュールリファレンスマニュアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.pyutils.finalizer</a></li> 
       </ul>
@@ -53,7 +53,7 @@
 <li><p>__del__ 中の例外は補足できない。</p></li>
 <li><p>インタプリタが終了する時に呼ばれる事は保証されない。</p></li>
 <li><p>循環参照がある場合で且つ __del__ が在ると解放されなくなる。
-（循環参照があると <a class="reference external" href="https://docs.python.org/3/library/gc.html#module-gc" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gc</span></code></a> は __del__ を呼び出す適切なタイミングを保証出来なくなる為）</p></li>
+（循環参照があると <a class="reference external" href="https://docs.python.org/3/library/gc.html#module-gc" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gc</span></code></a> は __del__ を呼び出す適切なタイミングを保証出来なくなる為）</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
@@ -81,7 +81,7 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
 <dd><p>登録済みファイナライザを削除する。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- 登録時に返されたID。</p>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) -- 登録時に返されたID。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -98,7 +98,7 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -111,14 +111,14 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>obj</strong> -- 対象のオブジェクト。</p></li>
-<li><p><strong>logger</strong> -- ログ用に <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> を受け取れる任意の実行可能オブジェクト。
+<li><p><strong>logger</strong> -- ログ用に <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> を受け取れる任意の実行可能オブジェクト。
 省略時は print される。</p></li>
-<li><p><strong>maxChars</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- ログ出力される repr の文字数がこの数を超える場合に
+<li><p><strong>maxChars</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) -- ログ出力される repr の文字数がこの数を超える場合に
 メッセージを調整する。ゼロの場合はその判定をしない。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> (ファイナライザID)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -190,14 +190,14 @@ python 3.4 以降（ <span class="target" id="index-0"></span><a class="pep refe
         <li class="right" >
           <a href="cymel.utils.utils.html" title="cymel.utils.utils"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.pyutils.finalizer</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
     &#169; 著作権 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>

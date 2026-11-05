@@ -431,6 +431,11 @@ def _initMayaStandalone():
     import maya.standalone as _maya_standalone
     _maya_standalone.initialize(name='cymel')
 
+    # nodeGraphEditorInfo などの UI 系ノードタイプは ExplorerSlice が登録するため、
+    # Maya のスタートアップ (initialPlugins.mel) と同様にここで読み込んでおく。
+    import maya.cmds as cmds
+    cmds.dynamicLoad('libExplorerSlice.so')
+
     # Python終了時の uninitialize の呼び出しを設定。
     uninitialize = getattr(_maya_standalone, 'uninitialize', None)
     if uninitialize:

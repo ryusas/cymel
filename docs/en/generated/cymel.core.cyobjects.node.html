@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.core.cyobjects.node &#8212; cymel 0.35.2026072800 documentation</title>
+    <title>cymel.core.cyobjects.node &#8212; cymel 0.37.2026110500 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
-    <script src="../_static/documentation_options.js?v=770e58b9"></script>
+    <script src="../_static/documentation_options.js?v=4499b16a"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html" title="class cymel.core.cyobjects.dagnode_c.DagNodeMixin"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.core.cyobjects.node</a></li> 
       </ul>
@@ -70,17 +70,17 @@
 <dd><p>Sort the object list.</p>
 <p>Basically, a list of objects derived from cymel’s <code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code> is assumed, but even if something is mixed up, it will not cause an error and the order will be guaranteed.</p>
 <p>Even if <code class="xref py py-obj docutils literal notranslate"><span class="pre">Plug</span></code> is mixed up, it will be a composite sort of DAG node and plug name.</p>
-<p>It is provided as an easy-to-use caller, and if the object to be sorted is a list of <code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code>, it is more efficient to use the standard <a class="reference external" href="https://docs.python.org/3/library/functions.html#sorted" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sorted</span></code></a> or <a class="reference internal" href="#cymel.core.cyobjects.node.sort" title="cymel.core.cyobjects.node.sort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sort</span></code></a> method directly and specify the <code class="xref py py-obj docutils literal notranslate"><span class="pre">key</span></code> function.</p>
+<p>It is provided as an easy-to-use caller, and if the object to be sorted is a list of <code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code>, it is more efficient to use the standard <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#sorted" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sorted</span></code></a> or <a class="reference internal" href="#cymel.core.cyobjects.node.sort" title="cymel.core.cyobjects.node.sort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sort</span></code></a> method directly and specify the <code class="xref py py-obj docutils literal notranslate"><span class="pre">key</span></code> function.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>list</strong> – List to be sorted.</p></li>
-<li><p><strong>inPlace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to sort the passed list itself.</p></li>
-<li><p><strong>key</strong> – Function that is the basis of the key function for sorting. Assuming that the element is a <code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code> derived object, the evaluation of this function and <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> and <a class="reference external" href="https://docs.python.org/3/library/functions.html#id" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id</span></code></a> are combined to form the key.  You can specify either <code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForDepthFirst</span></code> (DAG node depth is given priority), <code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForBreadthFirst</span></code> (DAG node breadth is given priority), or <code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForPathLength</span></code> (nodes with the same path length are equivalent simply by the depth of the DAG node hierarchy). Default is width first.</p></li>
+<li><p><strong>inPlace</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to sort the passed list itself.</p></li>
+<li><p><strong>key</strong> – Function that is the basis of the key function for sorting. Assuming that the element is a <code class="xref py py-obj docutils literal notranslate"><span class="pre">DagNode</span></code> derived object, the evaluation of this function and <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> and <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#id" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id</span></code></a> are combined to form the key.  You can specify either <code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForDepthFirst</span></code> (DAG node depth is given priority), <code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForBreadthFirst</span></code> (DAG node breadth is given priority), or <code class="xref py py-obj docutils literal notranslate"><span class="pre">keyForPathLength</span></code> (nodes with the same path length are equivalent simply by the depth of the DAG node hierarchy). Default is width first.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -150,14 +150,14 @@
         <li class="right" >
           <a href="classes/cymel.core.cyobjects.dagnode_c.DagNodeMixin.html" title="class cymel.core.cyobjects.dagnode_c.DagNodeMixin"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.35.2026072800 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.core.cyobjects.node</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>

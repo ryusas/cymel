@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class cymel.ui.optionbox.OptionBox &#8212; cymel 0.35.2026072800 ドキュメント</title>
+    <title>class cymel.ui.optionbox.OptionBox &#8212; cymel 0.37.2026110500 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fb40bcac" />
-    <script src="../../_static/documentation_options.js?v=ee14e317"></script>
+    <script src="../../_static/documentation_options.js?v=dd830ac4"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/translations.js?v=4755f45a"></script>
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="../cymel.ui.optionbox.html" title="cymel.ui.optionbox"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.ui.optionbox.html" accesskey="U">cymel.ui.optionbox</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.ui.optionbox.OptionBox</a></li> 
@@ -54,7 +54,7 @@
 </map><dl class="py class">
 <dt class="sig sig-object py" id="cymel.ui.optionbox.OptionBox">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cymel.ui.optionbox.</span></span><span class="sig-name descname"><span class="pre">OptionBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox" title="Link to this definition">¶</a></dt>
-<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#object" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>オプションボックス作成のための抽象基底クラス。</p>
 <p>オプションボックスを開発する場合は、このクラスを継承し、
 ツール名、オプション接頭辞、デフォルト値などのクラス属性を定義したうえで、
@@ -65,33 +65,33 @@ UI 構築と値のロード/セーブ、および実行コード生成を実装�
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cymel.ui</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cmu</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">MyOptionBox</span><span class="p">(</span><span class="n">cmu</span><span class="o">.</span><span class="n">OptionBox</span><span class="p">):</span>
-    <span class="n">TOOL_NAME</span> <span class="o">=</span> <span class="s1">&#39;Test&#39;</span>
-    <span class="n">TOOL_VERSION</span> <span class="o">=</span> <span class="s1">&#39;1.0.0&#39;</span>
-    <span class="n">BUTTON_LABEL</span> <span class="o">=</span> <span class="s1">&#39;Test&#39;</span>
-    <span class="n">OPT_PREFIX</span> <span class="o">=</span> <span class="s1">&#39;Test.&#39;</span>
+    <span class="n">TOOL_NAME</span> <span class="o">=</span> <span class="s1">'Test'</span>
+    <span class="n">TOOL_VERSION</span> <span class="o">=</span> <span class="s1">'1.0.0'</span>
+    <span class="n">BUTTON_LABEL</span> <span class="o">=</span> <span class="s1">'Test'</span>
+    <span class="n">OPT_PREFIX</span> <span class="o">=</span> <span class="s1">'Test.'</span>
     <span class="n">DEFAULTS</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">foo</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bar</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">assemblePyCode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s1">&#39;print(dict(</span><span class="si">%s</span><span class="s1">))&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">assemblePyCodeWithArgs</span><span class="p">()</span>
+        <span class="k">return</span> <span class="s1">'print(dict(</span><span class="si">%s</span><span class="s1">))'</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">assemblePyCodeWithArgs</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">createContents</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tabId</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">tabId</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">cmu</span><span class="o">.</span><span class="n">CheckBoxGrp</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">ncb</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">l1</span><span class="o">=</span><span class="s1">&#39;Foo&#39;</span><span class="p">,</span> <span class="n">cc</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">onChanged</span><span class="p">)</span>
-            <span class="n">cmu</span><span class="o">.</span><span class="n">FloatFieldGrp</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="s1">&#39;Bar&#39;</span><span class="p">)</span>
+            <span class="n">cmu</span><span class="o">.</span><span class="n">CheckBoxGrp</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="n">ncb</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">l1</span><span class="o">=</span><span class="s1">'Foo'</span><span class="p">,</span> <span class="n">cc</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">onChanged</span><span class="p">)</span>
+            <span class="n">cmu</span><span class="o">.</span><span class="n">FloatFieldGrp</span><span class="p">(</span><span class="s1">'bar'</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="s1">'Bar'</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">loadOptions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tabId</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">tabId</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">tabId</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">isTabReady</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">cmu</span><span class="o">.</span><span class="n">Control</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">))</span>
-            <span class="n">cmu</span><span class="o">.</span><span class="n">Control</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">))</span>
+            <span class="n">cmu</span><span class="o">.</span><span class="n">Control</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">))</span>
+            <span class="n">cmu</span><span class="o">.</span><span class="n">Control</span><span class="p">(</span><span class="s1">'bar'</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'bar'</span><span class="p">))</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">saveOptions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tabId</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">tabId</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">tabId</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">isTabReady</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">cmu</span><span class="o">.</span><span class="n">Control</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getValue</span><span class="p">())</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">cmu</span><span class="o">.</span><span class="n">Control</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getValue</span><span class="p">())</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="n">cmu</span><span class="o">.</span><span class="n">Control</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">)</span><span class="o">.</span><span class="n">getValue</span><span class="p">())</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'bar'</span><span class="p">,</span> <span class="n">cmu</span><span class="o">.</span><span class="n">Control</span><span class="p">(</span><span class="s1">'bar'</span><span class="p">)</span><span class="o">.</span><span class="n">getValue</span><span class="p">())</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">updateState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tabId</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">tabId</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">tabId</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">isTabReady</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">cmu</span><span class="o">.</span><span class="n">Control</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;enable&#39;</span><span class="p">,</span> <span class="n">cmu</span><span class="o">.</span><span class="n">Control</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getValue</span><span class="p">())</span>
+            <span class="n">cmu</span><span class="o">.</span><span class="n">Control</span><span class="p">(</span><span class="s1">'bar'</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'enable'</span><span class="p">,</span> <span class="n">cmu</span><span class="o">.</span><span class="n">Control</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">)</span><span class="o">.</span><span class="n">getValue</span><span class="p">())</span>
 
 <span class="c1"># MyOptionBox().perform(0)  # Execute the command using the current settings.</span>
 <span class="c1"># MyOptionBox().perform(1)  # Open the Options box.</span>
@@ -331,7 +331,7 @@ UI 構築と値のロード/セーブ、および実行コード生成を実装�
 <dd class="field-odd"><p><strong>kwargs</strong> -- <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/menu.html">menu</a> コマンドに渡す引数。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -344,7 +344,7 @@ UI 構築と値のロード/セーブ、および実行コード生成を実装�
 optionVar に保存された値から関数呼び出しや引数リストを組み立てられる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -371,17 +371,17 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>modName</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- 関数を含むモジュール名。<code class="xref py py-obj docutils literal notranslate"><span class="pre">funcName</span></code> と共に指定すると
+<li><p><strong>modName</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) -- 関数を含むモジュール名。<code class="xref py py-obj docutils literal notranslate"><span class="pre">funcName</span></code> と共に指定すると
 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">module;</span> <span class="pre">module.func(...)</span></code> 形式を返す。</p></li>
-<li><p><strong>funcName</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- 呼び出す関数名。省略した場合は引数リスト部分だけを返す。</p></li>
+<li><p><strong>funcName</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) -- 呼び出す関数名。省略した場合は引数リスト部分だけを返す。</p></li>
 <li><p><strong>args</strong> (<em>iterable</em>) -- 直接指定する位置引数の値。</p></li>
-<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a>) -- 直接指定するキーワード引数の値。</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="(in Python v3.15)"><em>dict</em></a>) -- 直接指定するキーワード引数の値。</p></li>
 <li><p><strong>argKeys</strong> (<em>iterable</em>) -- optionVar から位置引数として取り出すキー。</p></li>
 <li><p><strong>ignoreKeys</strong> (<em>container</em>) -- 自動収集から除外する実行用キー。</p></li>
 <li><p><strong>qualifyKeys</strong> (<em>container</em>) -- 自動収集の対象にする実行用キー。</p></li>
-<li><p><strong>asDict</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合はコード文字列ではなくキーワード引数辞書を返す。</p></li>
-<li><p><strong>skipDefaultValues</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合はデフォルト値と同じ値は自動収集されない。</p></li>
-<li><p><strong>commandDefaults</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a>) -- skipDefaultValues=True のとき、実行コマンド側のデフォルト値が
+<li><p><strong>asDict</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合はコード文字列ではなくキーワード引数辞書を返す。</p></li>
+<li><p><strong>skipDefaultValues</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合はデフォルト値と同じ値は自動収集されない。</p></li>
+<li><p><strong>commandDefaults</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="(in Python v3.15)"><em>dict</em></a>) -- skipDefaultValues=True のとき、実行コマンド側のデフォルト値が
 保存用 <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.DEFAULTS" title="cymel.ui.optionbox.OptionBox.DEFAULTS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEFAULTS</span></code></a> と異なる場合の比較値を指定できる。</p></li>
 </ul>
 </dd>
@@ -400,7 +400,7 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 一度だけ呼ばれる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- 1 から始まるタブインデックス。タブを使わない場合は 0。</p>
+<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) -- 1 から始まるタブインデックス。タブを使わない場合は 0。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -414,10 +414,10 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 だが、派生クラスで任意のレイアウトに置き換えられる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- 1 から始まるタブインデックス。タブを使わない場合は 0。</p>
+<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) -- 1 から始まるタブインデックス。タブを使わない場合は 0。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -429,7 +429,7 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 <p>タブレイアウトを使っていない場合は 0 を返す。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -441,9 +441,9 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>echo</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) -- 実行コードを標準出力へ表示するかどうか。
+<li><p><strong>echo</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) -- 実行コードを標準出力へ表示するかどうか。
 表示される文字列は Python コードそのもの。</p></li>
-<li><p><strong>addQueue</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) -- Maya の RecentCommandQueue に追加するかどうか。
+<li><p><strong>addQueue</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) -- Maya の RecentCommandQueue に追加するかどうか。
 リピート実行から呼ぶ場合は二重登録を避けるため <code class="docutils literal notranslate"><span class="pre">False</span></code> にする。</p></li>
 </ul>
 </dd>
@@ -457,7 +457,7 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 <p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.keyToStore" title="cymel.ui.optionbox.OptionBox.keyToStore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyToStore</span></code></a> で保存用キーへ変換した後、<a class="reference internal" href="#cymel.ui.optionbox.OptionBox.get_" title="cymel.ui.optionbox.OptionBox.get_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_</span></code></a> に処理を委譲する。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- 実行用キー。</p>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) -- 実行用キー。</p>
 </dd>
 <dt class="field-even">戻り値<span class="colon">:</span></dt>
 <dd class="field-even"><p>保存されている値。</p>
@@ -471,11 +471,11 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 <dd><p>指定 ID のレイアウトを得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- 1 から始まるタブインデックス。省略時はカレントタブ。
+<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) -- 1 から始まるタブインデックス。省略時はカレントタブ。
 タブレイアウトを使わない場合は 0。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or None</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -501,7 +501,7 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 標準では内部の <a class="reference internal" href="cymel.utils.optionvar.OptionVar.html#cymel.utils.optionvar.OptionVar" title="cymel.utils.optionvar.OptionVar"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptionVar</span></code></a> からそのまま返す。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rawkey</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.keyToStore" title="cymel.ui.optionbox.OptionBox.keyToStore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyToStore</span></code></a> で変換された後のキー。</p>
+<dd class="field-odd"><p><strong>rawkey</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) -- <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.keyToStore" title="cymel.ui.optionbox.OptionBox.keyToStore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyToStore</span></code></a> で変換された後のキー。</p>
 </dd>
 <dt class="field-even">戻り値<span class="colon">:</span></dt>
 <dd class="field-even"><p>保存されている値。</p>
@@ -519,10 +519,10 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- 1 から始まるタブインデックス。省略時はカレントタブ。</p></li>
-<li><p><strong>fitW</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) -- 幅が小さくなる場合もリサイズする。</p></li>
-<li><p><strong>fitH</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) -- 高さが小さくなる場合もリサイズする。</p></li>
-<li><p><strong>addW</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- 計算された幅へ追加するピクセル数。</p></li>
+<li><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) -- 1 から始まるタブインデックス。省略時はカレントタブ。</p></li>
+<li><p><strong>fitW</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) -- 幅が小さくなる場合もリサイズする。</p></li>
+<li><p><strong>fitH</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) -- 高さが小さくなる場合もリサイズする。</p></li>
+<li><p><strong>addW</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) -- 計算された幅へ追加するピクセル数。</p></li>
 </ul>
 </dd>
 </dl>
@@ -536,10 +536,10 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 誤って操作しないために利用する。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- 1 から始まるタブインデックス。</p>
+<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) -- 1 から始まるタブインデックス。</p>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -552,7 +552,7 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 別途保持しているインスタンスから UI の生存を確認できる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -563,13 +563,13 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 <dd><p>保存用キーを実行用キーへ変換する。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.keyToStore" title="cymel.ui.optionbox.OptionBox.keyToStore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyToStore</span></code></a> で変換された後の保存用キー。</p>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) -- <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.keyToStore" title="cymel.ui.optionbox.OptionBox.keyToStore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyToStore</span></code></a> で変換された後の保存用キー。</p>
 </dd>
 <dt class="field-even">戻り値<span class="colon">:</span></dt>
 <dd class="field-even"><p>コマンド実行に使う通常のキー。</p>
 </dd>
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -582,13 +582,13 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 に保存するキー名を分けたい場合に、<a class="reference internal" href="#cymel.ui.optionbox.OptionBox.keyToExec" title="cymel.ui.optionbox.OptionBox.keyToExec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyToExec</span></code></a> と対でオーバーライドする。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- コマンド実行にも使われる通常のキー。</p>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) -- コマンド実行にも使われる通常のキー。</p>
 </dd>
 <dt class="field-even">戻り値<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">OptionVar</span></code> に保存するキー。</p>
 </dd>
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -609,7 +609,7 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 生成済みの全タブを対象にすることを想定している。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- 1 から始まるタブインデックス。<code class="docutils literal notranslate"><span class="pre">None</span></code> の場合は全体。</p>
+<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) -- 1 から始まるタブインデックス。<code class="docutils literal notranslate"><span class="pre">None</span></code> の場合は全体。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -623,7 +623,7 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- 呼び出すメソッド名。</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) -- 呼び出すメソッド名。</p></li>
 <li><p><strong>args</strong> -- メソッドへ渡す固定位置引数。</p></li>
 <li><p><strong>kwargs</strong> -- メソッドへ渡す固定キーワード引数。</p></li>
 </ul>
@@ -647,7 +647,7 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 <dd><p>Maya 標準オプションボックスから呼び出される入口。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>cmdi</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- 0 なら現在の設定で実行、
+<dd class="field-odd"><p><strong>cmdi</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) -- 0 なら現在の設定で実行、
 1 ならオプションボックスを開く、
 2 なら現在の設定で実行される Python コード文字列を返す。</p>
 </dd>
@@ -663,7 +663,7 @@ optionVar に保存された値から関数呼び出しや引数リストを組�
 <dd><p>弱参照を得る。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/weakref.html#weakref.ref" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weakref.ref</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/weakref.html#weakref.ref" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weakref.ref</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -700,7 +700,7 @@ Apply された場合などを考慮し、保存前に状態更新を行う。</
 生成済みの全タブを対象にすることを想定している。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- 1 から始まるタブインデックス。<code class="docutils literal notranslate"><span class="pre">None</span></code> の場合は全体。</p>
+<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) -- 1 から始まるタブインデックス。<code class="docutils literal notranslate"><span class="pre">None</span></code> の場合は全体。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -713,7 +713,7 @@ Apply された場合などを考慮し、保存前に状態更新を行う。</
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- 実行用キー。</p></li>
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) -- 実行用キー。</p></li>
 <li><p><strong>val</strong> -- 保存する値。</p></li>
 </ul>
 </dd>
@@ -729,7 +729,7 @@ Apply された場合などを考慮し、保存前に状態更新を行う。</
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>rawkey</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) -- <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.keyToStore" title="cymel.ui.optionbox.OptionBox.keyToStore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyToStore</span></code></a> で変換された後のキー。</p></li>
+<li><p><strong>rawkey</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a>) -- <a class="reference internal" href="#cymel.ui.optionbox.OptionBox.keyToStore" title="cymel.ui.optionbox.OptionBox.keyToStore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyToStore</span></code></a> で変換された後のキー。</p></li>
 <li><p><strong>val</strong> -- 保存する値。</p></li>
 </ul>
 </dd>
@@ -750,7 +750,7 @@ Apply された場合などを考慮し、保存前に状態更新を行う。</
 <span class="sig-name descname"><span class="pre">showHelp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cymel.ui.optionbox.OptionBox.showHelp" title="Link to this definition">¶</a></dt>
 <dd><p><a class="reference internal" href="#cymel.ui.optionbox.OptionBox.HELP_URL" title="cymel.ui.optionbox.OptionBox.HELP_URL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HELP_URL</span></code></a> を表示する。</p>
 <p>Maya の <a class="extlink-mayacmd reference external" href="https://download.autodesk.com/global/docs/maya2013/en_US/CommandsPython/showHelp.html">showHelp</a> を優先し、失敗した場合は
-Python 標準の <a class="reference external" href="https://docs.python.org/3/library/webbrowser.html#module-webbrowser" title="(in Python v3.14)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">webbrowser</span></code></a> にフォールバックする。</p>
+Python 標準の <a class="reference external" href="https://docs.python.org/3/library/webbrowser.html#module-webbrowser" title="(in Python v3.15)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">webbrowser</span></code></a> にフォールバックする。</p>
 </dd></dl>
 
 <dl class="py method">
@@ -760,7 +760,7 @@ Python 標準の <a class="reference external" href="https://docs.python.org/3/l
 <p>オーバーライドすることで任意に変更できる。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -773,7 +773,7 @@ Python 標準の <a class="reference external" href="https://docs.python.org/3/l
 生成済みの全タブを対象にすることを想定している。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) -- 1 から始まるタブインデックス。<code class="docutils literal notranslate"><span class="pre">None</span></code> の場合は全体。</p>
+<dd class="field-odd"><p><strong>tabId</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) -- 1 から始まるタブインデックス。<code class="docutils literal notranslate"><span class="pre">None</span></code> の場合は全体。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -899,7 +899,7 @@ Python 標準の <a class="reference external" href="https://docs.python.org/3/l
         <li class="right" >
           <a href="../cymel.ui.optionbox.html" title="cymel.ui.optionbox"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.35.2026072800 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">cymel 0.37.2026110500 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../modules.html" >モジュールリファレンスマニュアル</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../cymel.ui.optionbox.html" >cymel.ui.optionbox</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">class cymel.ui.optionbox.OptionBox</a></li> 
@@ -907,7 +907,7 @@ Python 標準の <a class="reference external" href="https://docs.python.org/3/l
     </div>
     <div class="footer" role="contentinfo">
     &#169; 著作権 2020-2026, ryusas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
   </body>
 </html>
