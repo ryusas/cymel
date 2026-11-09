@@ -186,8 +186,8 @@ _allNodeTypes_ia = _get_allNodeTypes_ia()
 del _get_allNodeTypes_ia
 
 
-if MAYA_VERSION < (2016, 5):
-    # allNodeTypes コマンドの返す情報の間違いの修正。
+if MAYA_VERSION < (2019,):
+    # allNodeTypes コマンドの返す情報の間違いの修正（2018 まで先頭の T が欠けた名前を返す）。
     def _bugFixedAllNodeTypes():
         u"""
         :mayacmd:`allNodeTypes` コマンドによって全ノードタイプ情報を得る。
@@ -205,6 +205,12 @@ if MAYA_VERSION < (2016, 5):
     ])
     _FIXED_TYPE_DESCS = frozenset([('T' + x) for x in _WRONG_TYPE_DESCS])
 
+else:
+    # allNodeTypes コマンドによって全ノードタイプ情報を得る。
+    # バージョンによって list か set かは不定とする。
+    _bugFixedAllNodeTypes = _allNodeTypes_ia
+
+if MAYA_VERSION < (2016, 5):
     def _metaTypesForBug():
         u"""
         :mayanode:`node` タイプ情報をクエリできないMayaバージョンのために、メタタイプのリストを得る。
@@ -259,11 +265,6 @@ if MAYA_VERSION < (2016, 5):
 
     _META_TYPES_FOR_BUG = None
 
-else:
-    # allNodeTypes コマンドによって全ノードタイプ情報を得る。
-    # バージョンによって list か set かは不定とする。
-    _bugFixedAllNodeTypes = _allNodeTypes_ia
-
 _FIXED_NODETYPE_INHERIT_INFO = {
     'node': ('node',),
 
@@ -281,7 +282,9 @@ _FIXED_NODETYPE_INHERIT_INFO = {
     'lattice': (
         'lattice', 'controlPoint', 'deformableShape', 'geometryShape',
         'shape', 'dagNode', 'entity', 'containerBase', 'node'),
-    'file': ('file', 'texture2d', 'node'),
+    'file': (
+        ('file', 'texture2d', 'shadingDependNode', 'node')
+        if MAYA_VERSION >= (2013,) else ('file', 'texture2d', 'node')),
 }
 
 
