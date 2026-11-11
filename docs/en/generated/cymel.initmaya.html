@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cymel.initmaya &#8212; cymel 0.37.2026110500 documentation</title>
+    <title>cymel.initmaya &#8212; cymel 0.39.2026111100 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb40bcac" />
-    <script src="../_static/documentation_options.js?v=4499b16a"></script>
+    <script src="../_static/documentation_options.js?v=c723ab83"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="cymel.constants.html" title="cymel.constants"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.39.2026111100 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" accesskey="U">Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.initmaya</a></li> 
       </ul>
@@ -128,6 +128,10 @@
 <dt class="sig sig-object py" id="cymel.initmaya.getUserPrefsDir">
 <span class="sig-prename descclassname"><span class="pre">cymel.initmaya.</span></span><span class="sig-name descname"><span class="pre">getUserPrefsDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cymel.initmaya.getUserPrefsDir" title="Link to this definition">¶</a></dt>
 <dd><p>Get the path of the user preferences directory.</p>
+<p>バージョンのディレクトリ名は 64bit の 2015 以前では <code class="docutils literal notranslate"><span class="pre">2015-x64</span></code> のようになる。
+英語以外の UI 言語では、Maya は言語ごとのディレクトリ（例えば <code class="docutils literal notranslate"><span class="pre">2027/ja_JP/prefs</span></code>）を使う。</p>
+<p>Maya が初期化済みなら Maya に問い合わせる。
+未初期化なら <code class="xref py py-obj docutils literal notranslate"><span class="pre">_mayaVersionDirName</span></code> と <code class="xref py py-obj docutils literal notranslate"><span class="pre">_mayaUILanguage</span></code> で推定する。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
@@ -182,7 +186,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>userPrefs</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to call MEL related to user preferences. Set to True when plugins=True.</p></li>
-<li><p><strong>startup</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to call initStartup.mel. Set to True when plugins=True.</p></li>
+<li><p><strong>startup</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – initialStartup.mel を呼び出すかどうか。
+plugins=True のときは True になる。</p></li>
 <li><p><strong>plugins</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to autoload plugins.  Plugins are dynamically resolved using the scene’s requires statement, and if they are needed in batch processing, they should be explicitly loaded, and the processing load is large, so this is set to False by default.</p></li>
 <li><p><strong>namedCommand</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><em>bool</em></a>) – Whether to generate named commands. Since this is a concept for connecting mel code to hotkeys, it should normally be unnecessary if there is no UI, but since the processing load is not large, the default is set to True, following pymel.</p></li>
 </ul>
@@ -311,7 +316,7 @@
         <li class="right" >
           <a href="cymel.constants.html" title="cymel.constants"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.37.2026110500 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cymel 0.39.2026111100 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../modules.html" >Module reference manual</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cymel.initmaya</a></li> 
       </ul>

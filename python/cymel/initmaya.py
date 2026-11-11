@@ -15,6 +15,7 @@ import sys
 import os
 import os.path as _os_path
 import re
+import locale
 from .pyutils import (
     IS_WINDOWS as _IS_WINDOWS,
     USER_DOC_PATH as _USER_DOC_PATH,
@@ -141,23 +142,136 @@ def isMayaInitialized():
     return True
 
 
-if _IS_WINDOWS:
-    def getUserPrefsDir():
-        u"""
-        ユーザープリファレンスディレクトリのパスを得る。
+def getUserPrefsDir():
+    u"""
+    ユーザープリファレンスディレクトリのパスを得る。
 
-        :rtype: `str`
+    バージョンのディレクトリ名は 64bit の 2015 以前では ``2015-x64`` のようになる。
+    英語以外の UI 言語では、Maya は言語ごとのディレクトリ（例えば ``2027/ja_JP/prefs``）を使う。
+
+    Maya が初期化済みなら Maya に問い合わせる。
+    未初期化なら `_mayaVersionDirName` と `_mayaUILanguage` で推定する。
+
+    :rtype: `str`
+    """
+    if isMayaInitialized():
+        import maya.cmds as cmds
+        return cmds.internalVar(userPrefDir=True).rstrip('/')
+    ver = MAYA_PRODUCT_VERSION or _mayaProductVersion()
+    path = _os_path_join(_initMayaAppDir(), _mayaVersionDirName(ver))
+    lang = _mayaUILanguage(ver)
+    if lang != 'en_US':
+        path = _os_path_join(path, lang)
+    path = _os_path_join(path, 'prefs')
+    if _IS_WINDOWS:
+        path = path.replace('\\', '/')
+    return path
+
+
+def _mayaVersionDirName(ver, is_x64=sys.maxsize > 0xffffffff):
+    u"""
+    ユーザーディレクトリ（ ``MAYA_APP_DIR`` ）の下のバージョンのディレクトリ名を得る。
+
+    64bit の Maya 2015 以前は ``-x64`` が付く（Windows と Linux で確認）。
+
+    :param `str` ver: `MAYA_PRODUCT_VERSION` の値（ '2012' や '2016.5' など）。
+    :param `bool` is_x64: 64ビット環境かどうか。省略時はその環境に基づく。
+    :rtype: `str`
+    """
+    if is_x64 and float(ver) < 2016.:
+        return ver + '-x64'
+    return ver
+
+
+def _mayaUILanguage(ver):
+    u"""
+    Maya 未初期化時に、Maya の UI 言語（ 'en_US' や 'ja_JP' など）を推定する。
+
+    Windows の Maya 2012～2027（システムロケールは日本語）の実測に基づく。
+
+    - ``MAYA_UI_LANGUAGE`` が ``en_US`` なら英語。
+    - 2014 以前は、 ``MAYA_UI_LANGUAGE`` が翻訳のある言語（ ``zh_CN`` など）ならその言語。
+      2015 以降は ``en_US`` 以外の指定は効かない。
+    - それ以外（未設定、翻訳の無い言語）はシステムロケールの言語。
+    - 翻訳の有無はインストールの ``resources/l10n/<言語>`` で決まり、無ければ英語になる（Linux 版には翻訳が無い）。
+
+    :param `str` ver: `MAYA_PRODUCT_VERSION` の値。
+    :rtype: `str`
+    """
+    def hasTranslation(lang):
+        # 言語ごとに調べる（Maya の場所だけを一度求めて使い回す）。
+        if not _mayaLoc:
+            _mayaLoc.append(_findMayaLocation())
+        return not _mayaLoc[0] or _os_path_isdir(_os_path_join(_mayaLoc[0], 'resources', 'l10n', lang))
+    _mayaLoc = []
+
+    lang = os.environ.get('MAYA_UI_LANGUAGE')
+    if lang == 'en_US' or (lang and float(ver) < 2015. and hasTranslation(lang)):
+        return lang
+    lang = _systemLocaleLanguage()
+    if lang == 'en_US' or (lang and hasTranslation(lang)):
+        return lang
+    return 'en_US'
+
+
+if _IS_WINDOWS:
+    # Windows では、システムロケール（Unicode 対応ではないプログラムの言語）の ANSI コードページから、
+    # Maya に翻訳がある言語だけを判別する（ctypes を使わず、プロセスのロケールも変えない）。
+    # Windows の getlocale はユーザーのロケールを 'Japanese_Japan' の形で返すので使わない。
+    def _systemLocaleLanguage():
+        u"""
+        システムロケールの言語（ 'ja_JP' など）を得る。得られなければ None を返す。
+
+        :rtype: `str` or None
         """
-        return _os_path_join(_initMayaAppDir(), MAYA_PRODUCT_VERSION, 'prefs').replace('\\', '/')
+        # Python 3.11 以降の getencoding は UTF-8 モードに左右されない。
+        getencoding = getattr(locale, 'getencoding', None)
+        encoding = getencoding() if getencoding else locale.getpreferredencoding(False)
+        if encoding.lower().replace('-', '') == 'utf8':
+            # Python 3.7～3.10 の UTF-8 モードでは得られないので、C ロケールのコードページを使う。
+            encoding = _defaultLocale()[1] or ''
+            if encoding.isdigit():
+                encoding = 'cp' + encoding
+        return _WINDOWS_CODEPAGE_TO_LANGUAGE.get(encoding.lower())
+
+    #: Windows の ANSI コードページと、Maya に翻訳がある言語の対応。
+    _WINDOWS_CODEPAGE_TO_LANGUAGE = {
+        'cp932': 'ja_JP',
+        'cp936': 'zh_CN',
+    }
 
 else:
-    def getUserPrefsDir():
+    def _systemLocaleLanguage():
         u"""
-        ユーザープリファレンスディレクトリのパスを得る。
+        システムロケールの言語（ 'ja_JP' など）を得る。得られなければ None を返す。
 
-        :rtype: `str`
+        :rtype: `str` or None
         """
-        return _os_path_join(_initMayaAppDir(), MAYA_PRODUCT_VERSION, 'prefs')
+        return _defaultLocale()[0]
+
+
+def _defaultLocale():
+    u"""
+    環境で決まる既定の C ロケールの (言語, エンコーディング) を得る。得られなければ (None, None) を返す。
+
+    getdefaultlocale は Python 3.11 で非推奨になったので setlocale と getlocale を使い、
+    setlocale が使えない場合だけ getdefaultlocale を使う。
+    setlocale はプロセス全体の設定を変えるので、必ず元に戻す。
+
+    :rtype: `tuple`
+    """
+    try:
+        saved = locale.setlocale(locale.LC_ALL)
+        try:
+            locale.setlocale(locale.LC_ALL, '')
+            return locale.getlocale()
+        finally:
+            locale.setlocale(locale.LC_ALL, saved)
+    except Exception:
+        try:
+            return locale.getdefaultlocale()
+        except Exception:
+            return None, None
 
 
 def initMaya():
@@ -197,7 +311,7 @@ def initMels(userPrefs=True, startup=True, plugins=False, namedCommand=True):
         plugins=True のときは True になる。
 
     :param `bool` startup:
-        initStartup.mel を呼び出すかどうか。
+        initialStartup.mel を呼び出すかどうか。
         plugins=True のときは True になる。
 
     :param `bool` plugins:
@@ -407,17 +521,27 @@ def _initMayaLocation():
     u"""
     環境変数 MAYA_LOCATION を設定する。
     """
-    # mayapy であれば MAYA_LOCATION は設定されている。
+    return _findMayaLocation(True)
+
+
+def _findMayaLocation(setenv=False):
+    u"""
+    Maya のインストールディレクトリを得る。
+
+    :param `bool` setenv: 環境変数も設定するかどうか。
+    :rtype: `str`
+    """
+    # mayapy であれば MAYA_LOCATION は設定されているが、有効な環境かどうかも調べる。
     path = os.environ.get('MAYA_LOCATION')
     if path and _os_path_isdir(_os_path_join(path, 'scripts/AETemplates')):
-        # mayapy だけ抜き出した無効な環境でないかも調べている。
         return path
 
     # maya モジュールのパスは通っているものとして、そこから MAYA_LOCATION を推定。
     import maya
     path = _os_path_normpath(_os_path_join(_os_path_dirname(maya.__file__), '../../../..'))
-    print('# Set MAYA_LOCATION: ' + path)
-    os.environ['MAYA_LOCATION'] = path
+    if setenv:
+        print('# Set MAYA_LOCATION: ' + path)
+        os.environ['MAYA_LOCATION'] = path
     return path
 
 
@@ -481,6 +605,34 @@ def _is2021orLater():
 #                pass
 
 
+def _mayaProductVersion():
+    u"""
+    `MAYA_PRODUCT_VERSION` の値を得る。MAYA_API_VERSION は Maya 初期化前から参照できる。
+    """
+    from maya.OpenMaya import MAYA_API_VERSION
+    if MAYA_API_VERSION >= 20180000:
+        # 2018 以降は .5 を想定しない。
+        return str(MAYA_API_VERSION // 10000)
+
+    # .5 があるバージョンは次の通り:
+    #   2016.5 = 2016 Ext2
+    #   2013.5 = 2013 Ext
+    #   2011.5 = 2011 SAP
+    v = MAYA_API_VERSION // 10
+    if v == 20165:
+        return '2016.5'
+    elif v == 20135:
+        return '2013.5'
+    # 2011.5 は MAYA_API_VERSION でも about(v=True) でも判別できないが非サポートなので問題ない。
+    #if v == 2011:
+    #    try:
+    #        if re.search(r'.+/(\d+(?:\.\d+)?)', str(cmds.internalVar(upd=True))).group(1) == '2011.5':
+    #            v = '2011.5'
+    #    except:
+    #        pass
+    return str(v // 10)
+
+
 def _initCymelConstants():
     u"""
     Mayaの状態を表す cymel の定数を初期化する。
@@ -492,30 +644,7 @@ def _initCymelConstants():
     import maya.cmds as cmds
     _about = cmds.about
 
-    from maya.OpenMaya import MAYA_API_VERSION
-    if MAYA_API_VERSION >= 20180000:
-        # 2018 以降は .5 を想定しない。
-        MAYA_PRODUCT_VERSION = str(MAYA_API_VERSION // 10000)
-    else:
-        # .5 があるバージョンは次の通り:
-        #   2016.5 = 2016 Ext2
-        #   2013.5 = 2013 Ext
-        #   2011.5 = 2011 SAP
-        v = MAYA_API_VERSION // 10
-        if v == 20165:
-            MAYA_PRODUCT_VERSION = '2016.5'
-        elif v == 20135:
-            MAYA_PRODUCT_VERSION = '2013.5'
-        else:
-            v //= 10
-            # 2011.5 は MAYA_API_VERSION でも about(v=True) でも判別できないが非サポートなので問題ない。
-            #if v == 2011:
-            #    try:
-            #        if re.search(r'.+/(\d+(?:\.\d+)?)', str(cmds.internalVar(upd=True))).group(1) == '2011.5':
-            #            v = '2011.5'
-            #    except:
-            #        pass
-            MAYA_PRODUCT_VERSION = str(v)
+    MAYA_PRODUCT_VERSION = _mayaProductVersion()
 
     try:
         # 2019.1 以降で利用できるオプション。

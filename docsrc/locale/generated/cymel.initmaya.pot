@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cymel \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 18:43+0900\n"
+"POT-Creation-Date: 2026-11-11 15:34+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -158,11 +158,19 @@ msgstr ""
 msgid "2020までは、MELパス上に存在する ``userSetup.mel`` のうち最優先の1つのみが呼び出されるが、 それより後のバージョンでは全てがパス順に呼び出される。"
 msgstr ""
 
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.getUserPrefsDir:3
+msgid "バージョンのディレクトリ名は 64bit の 2015 以前では ``2015-x64`` のようになる。 英語以外の UI 言語では、Maya は言語ごとのディレクトリ（例えば ``2027/ja_JP/prefs``）を使う。"
+msgstr ""
+
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.getUserPrefsDir:6
+msgid "Maya が初期化済みなら Maya に問い合わせる。 未初期化なら `_mayaVersionDirName` と `_mayaUILanguage` で推定する。"
+msgstr ""
+
 #: ../srcs/generated/cymel.initmaya.rst:0
 msgid "戻り値の型"
 msgstr ""
 
-#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.getUserPrefsDir:3
+#: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.getUserPrefsDir:9
 msgid "`str`"
 msgstr ""
 
@@ -208,7 +216,7 @@ msgid "ユーザープリファレンスに関連するMELを呼び出すかど�
 msgstr ""
 
 #: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMels:12
-msgid "initStartup.mel を呼び出すかどうか。 plugins=True のときは True になる。"
+msgid "initialStartup.mel を呼び出すかどうか。 plugins=True のときは True になる。"
 msgstr ""
 
 #: ../../python/cymel/initmaya.py:docstring of cymel.initmaya.initMels:16
