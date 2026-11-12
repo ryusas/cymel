@@ -8,6 +8,7 @@ from __future__ import print_function
 
 from ...common import *
 from ..typeregistry import nodetypes, _FIX_SLOTS
+from ..typeinfo import getInheritedNodeTypes as _getInheritedNodeTypes
 from .cyobject import CyObject
 
 __all__ = ['Constraint']
@@ -24,7 +25,7 @@ class Constraint(nodetypes.parentBasicNodeClass('constraint')):
     @classmethod
     def newObject(cls, data):
         obj = super(Constraint, cls).newObject(data)
-        obj._cmd = getattr(cmds, obj.type())
+        obj._cmd = _findConstraintCmd(obj.type())
         return obj
 
     def _getTargetList(self):
@@ -95,6 +96,29 @@ class Constraint(nodetypes.parentBasicNodeClass('constraint')):
             if targetObjects:
                 return self._cmd(targetObjects + [self.name_()], q=True, weight=True)
             return targetObjects
+
+
+def _findConstraintCmd(typename):
+    """Return the command that handles the given constraint node type.
+
+    Some derived types such as lookAt have no command of the same name,
+    so the inherited types are searched from the nearest one
+    (e.g. lookAt -> aimConstraint).
+
+    :param `str` typename: Node type name.
+    :rtype: callable or None
+    """
+    if typename in _CONSTRAINT_CMD_DICT:
+        return _CONSTRAINT_CMD_DICT[typename]
+    cmd = None
+    for typ in _getInheritedNodeTypes(typename):
+        cmd = getattr(cmds, typ, None)
+        if cmd:
+            break
+    _CONSTRAINT_CMD_DICT[typename] = cmd
+    return cmd
+
+_CONSTRAINT_CMD_DICT = {}  #: Cache of the command for each constraint node type.
 
 
 nodetypes.registerNodeClass(Constraint, 'constraint')
