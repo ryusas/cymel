@@ -10,6 +10,7 @@ import sys
 import unittest
 import cymel.main as cm
 import maya.cmds as cmds
+import maya.mel as mel
 
 
 class TestConstraints(unittest.TestCase):
@@ -39,6 +40,24 @@ class TestConstraints(unittest.TestCase):
         self.assertEqual(
             conObj.getWeight(),
             []
+        )
+
+    def test_Constraint_lookAt_node_can_initialize_without_same_name_command(self):
+        # given
+        cmds.select(cmds.camera()[0])
+        mel.eval('cameraMakeNode 2 ""')
+
+        # when
+        conObj = cm.O('camera1_group')
+
+        # then
+        self.assertIsInstance(
+            conObj,
+            cm.nt.Constraint
+        )
+        self.assertListEqual(
+            conObj.getTargetList(),
+            [cm.nt.Transform('camera1_aim')]
         )
 
     def test_Constraint(self):
